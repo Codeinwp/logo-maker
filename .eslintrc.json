@@ -1,0 +1,33 @@
+{
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+        "ecmaVersion": 2018,
+        "sourceType": "module"
+    },
+    "plugins": ["@typescript-eslint", "react-hooks"],
+    "extends": [
+        "plugin:react/recommended",
+        "plugin:@typescript-eslint/recommended",
+        "standard",
+        "prettier",
+        "prettier/@typescript-eslint",
+        "prettier/babel",
+        "prettier/flowtype",
+        "prettier/react",
+        "prettier/standard"
+    ],
+    "rules": {
+        "react-hooks/rules-of-hooks": "error",
+        "react-hooks/exhaustive-deps": "warn",
+        "react/prop-types": "off",
+        "no-use-before-define": "off",
+        "no-undef": "off",
+        "@typescript-eslint/no-use-before-define": ["error"]
+    },
+    "settings": {
+        "react": {
+            "pragma": "React",
+            "version": "detect"
+        }
+    }
+}
