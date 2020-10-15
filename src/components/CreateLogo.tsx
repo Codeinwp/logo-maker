@@ -1,7 +1,8 @@
 import * as React from "react"
-import { Svg, SVG } from "@svgdotjs/svg.js"
+import { SVG } from "@svgdotjs/svg.js"
+import { alignLogoRight, moveToCenter } from "./utility"
 
-type CreateLogoProps = {
+type CreateLogoPropsComponent = {
     imageSize?: {
         width: number
         height: number
@@ -20,8 +21,8 @@ const logoPath =
 
 const defaultProps = {
     imageSize: {
-        width: 300,
-        height: 300,
+        width: 600,
+        height: 600,
     },
     logoDim: {
         width: 100,
@@ -32,134 +33,39 @@ const defaultProps = {
     sloganFontSize: 25,
 }
 
-const CreateLogo: React.FunctionComponent<CreateLogoProps> = (
-    props: CreateLogoProps = defaultProps
+const CreateLogo: React.FunctionComponent<CreateLogoPropsComponent> = (
+    props: CreateLogoPropsComponent
 ) => {
     React.useEffect(() => {
         /*
-            Constants
-        */
-        const imageSize = {
-            width: 300,
-            height: 300,
-        }
-
-        const logoDim = {
-            width: 100,
-            height: 100,
-        }
-
-        const titleFontSize = 40
-
-        const sloganFontSize = 25
-
-        /*
             Create the SVG parent
         */
+        const imageSize = props.imageSize || defaultProps.imageSize
+        const logoDim = props.logoDim || defaultProps.logoDim
+        const logoSVGPath = props.logoSVGPath || defaultProps.logoSVGPath
+        const titleFontSize = props.titleFontSize || defaultProps.titleFontSize
+        const sloganFontSize = props.sloganFontSize || defaultProps.sloganFontSize
+
         const draw = SVG()
             .addTo("#logo-maker")
-            .size(300, 300)
-            .viewbox(0, 0, imageSize.width, imageSize.height)
+            .size(imageSize.width, imageSize.width)
+            .viewbox(0, 0, imageSize.width, imageSize.width)
 
-        /*
-            Add the logo's SVG
-        */
-        const logo = SVG().addTo(draw).svg(logoPath)
-        const svgRawDim = logo.bbox() // get the natural dimension to calculate the viewbox
-
-        logo.viewbox(0, 0, svgRawDim.width, svgRawDim.height).size(logoDim.width, logoDim.height)
-
-        /*
-            Add the title's SVG
-        */
-        const title = draw
-            .text("Optimole")
-            .font({ fill: "#f06", family: "Inconsolata", size: titleFontSize })
-            .move(0, 0)
-        const titleDim = title.rbox(draw)
-
-        /*
-            Add the slogan's SVG
-        */
-        const slogan = draw
-            .text("The Best Image Optimizer")
-            .font({ fill: "#f06", family: "Inconsolata", size: sloganFontSize })
-            .move(0, 0)
-        const sloganDim = slogan.rbox(draw)
-
-        /*
-            Align the elements
-        */
-
-        // the elements are vertically stacked,
-        // so the width of the container is equal with the width of the largest element
-        // and the height is the sum of all the element's height
-        const widthContainer = Math.max(logoDim.width, titleDim.width, sloganDim.width)
-        const heightContainer = logoDim.height + titleDim.height + sloganDim.height
-        const cx = widthContainer / 2
-        const cy = heightContainer / 2
-
-        const xOffsetToCenter = imageSize.width / 2 - cx
-        const yOffsetToCenter = imageSize.height / 2 - cy
-
-        logo.move(cx - 100 / 2 + xOffsetToCenter, yOffsetToCenter)
-        title.move(cx - titleDim.width / 2 + xOffsetToCenter, logoDim.height + yOffsetToCenter)
-        slogan.move(
-            cx - sloganDim.width / 2 + xOffsetToCenter,
-            logoDim.height + titleDim.height + yOffsetToCenter
+        moveToCenter(
+            imageSize,
+            alignLogoRight(
+                {
+                    logoDim,
+                    logoSVGPath,
+                    titleFontSize,
+                    sloganFontSize,
+                },
+                draw
+            )
         )
-
-        console.log(logoDim, titleDim, sloganDim)
-    }, [])
+    }, [props])
 
     return <div className="bg-orange-600" id="logo-maker"></div>
 }
-
-const createAndCalculatePositons = (props: CreateLogoProps, draw: Svg) => {
-    const { imageSize, logoDim, logoSVGPath, titleFontSize, sloganFontSize } = props
-    /*
-          Add the logo's SVG
-    */
-
-    const logo = SVG().addTo(draw).svg(logoSVGPath!)
-    const svgRawDim = logo.bbox() // get the natural dimension to calculate the viewbox
-
-    logo.viewbox(0, 0, svgRawDim.width, svgRawDim.height).size(logoDim.width, logoDim.height)
-
-    /*
-           Add the title's SVG
-       */
-    const title = draw
-        .text("Optimole")
-        .font({ fill: "#f06", family: "Inconsolata", size: titleFontSize })
-        .move(0, 0)
-    const titleDim = title.rbox(draw)
-
-    /*
-           Add the slogan's SVG
-       */
-    const slogan = draw
-        .text("The Best Image Optimizer")
-        .font({ fill: "#f06", family: "Inconsolata", size: sloganFontSize })
-        .move(0, 0)
-    const sloganDim = slogan.rbox(draw)
-
-    /*
-           Align the elements
-       */
-
-    // the elements are vertically stacked,
-    // so the width of the container is equal with the width of the largest element
-    // and the height is the sum of all the element's height
-    const widthContainer = Math.max(logoDim.width, titleDim.width, sloganDim.width)
-    const heightContainer = logoDim.height + titleDim.height + sloganDim.height
-    const cx = widthContainer / 2
-    const cy = heightContainer / 2
-
-    const xOffsetToCenter = imageSize.width / 2 - cx
-    const yOffsetToCenter = imageSize.height / 2 - cy
-}
-
-const alignLogoTop = () => {}
 
 export default CreateLogo
