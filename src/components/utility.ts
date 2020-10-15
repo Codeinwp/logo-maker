@@ -140,7 +140,7 @@ export const alignLogoLeft = (props: AlignProps, draw: Svg) : ContainerData => {
 
     logo.move(0, cy - logoDim.height / 2)
     title.move(logoDim.width + ctx - titleDim.width / 2, cy - (cty - titleDim.height / 2) - titleDim.height / 2)
-    slogan.move(logoDim.width + ctx - sloganDim.width / 2, cy - (cty - titleDim.height / 2) - sloganDim.height / 2 + titleDim.height)
+    slogan.move(logoDim.width + ctx - sloganDim.width / 2, cy + (cty - sloganDim.height / 2) - sloganDim.height / 2 + titleDim.height)
 
     return {
         containerPos: {
@@ -208,7 +208,7 @@ export const alignLogoRight = (props: AlignProps, draw: Svg) : ContainerData => 
 
     logo.move(textContainerWidth, cy - logoDim.height / 2)
     title.move(ctx - titleDim.width / 2, cy - (cty - titleDim.height / 2) - titleDim.height / 2)
-    slogan.move(ctx - sloganDim.width / 2, cy - (cty - titleDim.height / 2) - sloganDim.height / 2 + titleDim.height)
+    slogan.move(ctx - sloganDim.width / 2, cy + (cty - sloganDim.height / 2) - sloganDim.height / 2)
 
     return {
         containerPos: {

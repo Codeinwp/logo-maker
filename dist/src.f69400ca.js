@@ -40067,7 +40067,7 @@ var alignLogoLeft = function alignLogoLeft(props, draw) {
   var cty = textContainerHeight / 2;
   logo.move(0, cy - logoDim.height / 2);
   title.move(logoDim.width + ctx - titleDim.width / 2, cy - (cty - titleDim.height / 2) - titleDim.height / 2);
-  slogan.move(logoDim.width + ctx - sloganDim.width / 2, cy - (cty - titleDim.height / 2) - sloganDim.height / 2 + titleDim.height);
+  slogan.move(logoDim.width + ctx - sloganDim.width / 2, cy + (cty - sloganDim.height / 2) - sloganDim.height / 2 + titleDim.height);
   return {
     containerPos: {
       x: 0,
@@ -40137,7 +40137,7 @@ var alignLogoRight = function alignLogoRight(props, draw) {
   var cty = textContainerHeight / 2;
   logo.move(textContainerWidth, cy - logoDim.height / 2);
   title.move(ctx - titleDim.width / 2, cy - (cty - titleDim.height / 2) - titleDim.height / 2);
-  slogan.move(ctx - sloganDim.width / 2, cy - (cty - titleDim.height / 2) - sloganDim.height / 2 + titleDim.height);
+  slogan.move(ctx - sloganDim.width / 2, cy + (cty - sloganDim.height / 2) - sloganDim.height / 2);
   return {
     containerPos: {
       x: 0,
@@ -40314,7 +40314,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55826" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "56409" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
