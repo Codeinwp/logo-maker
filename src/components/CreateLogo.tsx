@@ -27,8 +27,8 @@ const logoPath = `<svg width="172" height="135" viewBox="0 0 172 135" fill="none
 
 const defaultProps = {
     imageSize: {
-        width: 600,
-        height: 600,
+        width: 300,
+        height: 300,
     },
     logoDim: {
         width: 100,
@@ -42,36 +42,40 @@ const defaultProps = {
 const CreateLogo: React.FunctionComponent<CreateLogoPropsComponent> = (
     props: CreateLogoPropsComponent
 ) => {
+    const divRef = React.useRef<HTMLDivElement>(null)
+
     React.useEffect(() => {
-        /*
+        if (divRef.current) {
+            /*
                 Create the SVG parent
                 */
-        const imageSize = props.imageSize || defaultProps.imageSize
-        const logoDim = props.logoDim || defaultProps.logoDim
-        const logoSVG = props.logoSVG || defaultProps.logoSVGPath
-        const titleFontSize = props.titleFontSize || defaultProps.titleFontSize
-        const sloganFontSize = props.sloganFontSize || defaultProps.sloganFontSize
+            const imageSize = props.imageSize || defaultProps.imageSize
+            const logoDim = props.logoDim || defaultProps.logoDim
+            const logoSVG = props.logoSVG || defaultProps.logoSVGPath
+            const titleFontSize = props.titleFontSize || defaultProps.titleFontSize
+            const sloganFontSize = props.sloganFontSize || defaultProps.sloganFontSize
 
-        const draw = SVG()
-            .addTo("#logo-maker")
-            .size(imageSize.width, imageSize.width)
-            .viewbox(0, 0, imageSize.width, imageSize.width)
+            const draw = SVG()
+                .addTo(divRef.current)
+                .size(200, 200)
+                .viewbox(0, 0, imageSize.width, imageSize.height)
 
-        moveToCenter(
-            imageSize,
-            alignLogoTop(
-                {
-                    logoDim,
-                    logoSVG,
-                    titleFontSize,
-                    sloganFontSize,
-                },
-                draw
+            moveToCenter(
+                imageSize,
+                alignLogoTop(
+                    {
+                        logoDim,
+                        logoSVG,
+                        titleFontSize,
+                        sloganFontSize,
+                    },
+                    draw
+                )
             )
-        )
+        }
     }, [props])
 
-    return <div className="bg-orange-600" id="logo-maker"></div>
+    return <div ref={divRef} className="bg-orange-600"></div>
 }
 
 export default CreateLogo
