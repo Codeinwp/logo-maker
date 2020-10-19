@@ -4,6 +4,10 @@ import { moveToCenter } from "./utility"
 import { alignLogoTop } from "./alignFunctions"
 
 type CreateLogoPropsComponent = {
+    containerSize?: {
+        width: number
+        height: number
+    }
     imageSize?: {
         width: number
         height: number
@@ -13,8 +17,24 @@ type CreateLogoPropsComponent = {
         height: number
     }
     logoSVG?: string
-    titleFontSize?: number
-    sloganFontSize?: number
+    title?: string
+    slogan?: string
+    style?: {
+        backgroundColor?: string
+        title?: {
+            color?: string
+            fontSize?: number
+            fontFamily?: string
+        }
+        slogan?: {
+            color?: string
+            fontSize?: number
+            fontFamily?: string
+        }
+        logo?: {
+            stroke?: string
+        }
+    }
 }
 
 const logoPath = `<svg width="172" height="135" viewBox="0 0 172 135" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -26,6 +46,10 @@ const logoPath = `<svg width="172" height="135" viewBox="0 0 172 135" fill="none
     `
 
 const defaultProps = {
+    containerSize: {
+        width: 200,
+        height: 200,
+    },
     imageSize: {
         width: 300,
         height: 300,
@@ -34,9 +58,25 @@ const defaultProps = {
         width: 100,
         height: 100,
     },
-    logoSVGPath: logoPath,
-    titleFontSize: 40,
-    sloganFontSize: 25,
+    logoSVG: logoPath,
+    title: "Default title",
+    slogan: "Default slogan",
+    style: {
+        backgroundColor: "#f00",
+        title: {
+            color: "#0f0",
+            fontSize: 40,
+            fontFamily: "Helvetica",
+        },
+        slogan: {
+            color: "#00f",
+            fontSize: 25,
+            fontFamily: "Helvetica",
+        },
+        logo: {
+            stroke: "blue",
+        },
+    },
 }
 
 const CreateLogo: React.FunctionComponent<CreateLogoPropsComponent> = (
@@ -49,16 +89,37 @@ const CreateLogo: React.FunctionComponent<CreateLogoPropsComponent> = (
             /*
                 Create the SVG parent
                 */
+            const containerSize = props.containerSize || defaultProps.containerSize
             const imageSize = props.imageSize || defaultProps.imageSize
             const logoDim = props.logoDim || defaultProps.logoDim
-            const logoSVG = props.logoSVG || defaultProps.logoSVGPath
-            const titleFontSize = props.titleFontSize || defaultProps.titleFontSize
-            const sloganFontSize = props.sloganFontSize || defaultProps.sloganFontSize
+            const logoSVG = props.logoSVG || defaultProps.logoSVG
+            const title = props.title || defaultProps.title
+            const slogan = props.slogan || defaultProps.slogan
+            const style = {
+                backgroundColor:
+                    props?.style?.backgroundColor || defaultProps.style.backgroundColor,
+                title: {
+                    color: props?.style?.title?.color || defaultProps.style.title.color,
+                    fontSize: props?.style?.title?.fontSize || defaultProps.style.title.fontSize,
+                    fontFamily:
+                        props?.style?.title?.fontFamily || defaultProps.style.title.fontFamily,
+                },
+                slogan: {
+                    color: props?.style?.slogan?.color || defaultProps.style.slogan.color,
+                    fontSize: props?.style?.slogan?.fontSize || defaultProps.style.slogan.fontSize,
+                    fontFamily:
+                        props?.style?.slogan?.fontFamily || defaultProps.style.slogan.fontFamily,
+                },
+                logo: {
+                    stroke: props?.style?.logo?.stroke || defaultProps.style.logo.stroke,
+                },
+            }
 
             const draw = SVG()
                 .addTo(divRef.current)
-                .size(200, 200)
+                .size(containerSize.width, containerSize.height)
                 .viewbox(0, 0, imageSize.width, imageSize.height)
+                .css("background-color", style.backgroundColor)
 
             moveToCenter(
                 imageSize,
@@ -66,8 +127,9 @@ const CreateLogo: React.FunctionComponent<CreateLogoPropsComponent> = (
                     {
                         logoDim,
                         logoSVG,
-                        titleFontSize,
-                        sloganFontSize,
+                        title,
+                        slogan,
+                        style,
                     },
                     draw
                 )

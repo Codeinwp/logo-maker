@@ -39978,8 +39978,9 @@ var _svg = require("@svgdotjs/svg.js");
 var alignLogoTop = function alignLogoTop(props, draw) {
   var logoDim = props.logoDim,
       logoSVG = props.logoSVG,
-      titleFontSize = props.titleFontSize,
-      sloganFontSize = props.sloganFontSize;
+      titleText = props.title,
+      sloganText = props.slogan,
+      style = props.style;
   /*
         Add the logo's SVG
   */
@@ -39987,25 +39988,25 @@ var alignLogoTop = function alignLogoTop(props, draw) {
   var logo = (0, _svg.SVG)().addTo(draw).svg(logoSVG);
   var svgRawDim = logo.bbox(); // get the natural dimension to calculate the viewbox
 
-  logo.viewbox(0, 0, svgRawDim.width, svgRawDim.height).size(logoDim.width, logoDim.height);
+  logo.viewbox(0, 0, svgRawDim.width, svgRawDim.height).size(logoDim.width, logoDim.height).css('stroke', style.logo.stroke);
   /*
          Add the title's SVG
      */
 
-  var title = draw.text("Optimole").font({
-    fill: "#0f0",
-    family: "Inconsolata",
-    size: titleFontSize
+  var title = draw.text(titleText).font({
+    fill: style.title.color,
+    family: style.title.fontFamily,
+    size: style.title.fontSize
   }).move(0, 0);
   var titleDim = title.rbox(draw);
   /*
          Add the slogan's SVG
      */
 
-  var slogan = draw.text("The Best Image Optimizer").font({
-    fill: "#0f0",
-    family: "Inconsolata",
-    size: sloganFontSize
+  var slogan = draw.text(sloganText).font({
+    fill: style.slogan.color,
+    family: style.slogan.fontFamily,
+    size: style.slogan.fontSize
   }).move(0, 0);
   var sloganDim = slogan.rbox(draw);
   /*
@@ -40044,34 +40045,35 @@ exports.alignLogoTop = alignLogoTop;
 var alignLogoLeft = function alignLogoLeft(props, draw) {
   var logoDim = props.logoDim,
       logoSVG = props.logoSVG,
-      titleFontSize = props.titleFontSize,
-      sloganFontSize = props.sloganFontSize;
+      titleText = props.title,
+      sloganText = props.slogan,
+      style = props.style;
   /*
         Add the logo's SVG
   */
 
-  var logo = (0, _svg.SVG)().addTo(draw).svg(logoSVG);
+  var logo = (0, _svg.SVG)().addTo(draw).svg(logoSVG).css('background-color', style.backgroundColor);
   var svgRawDim = logo.bbox(); // get the natural dimension to calculate the viewbox
 
-  logo.viewbox(0, 0, svgRawDim.width, svgRawDim.height).size(logoDim.width, logoDim.height);
+  logo.viewbox(0, 0, svgRawDim.width, svgRawDim.height).size(logoDim.width, logoDim.height).css('stroke', style.logo.stroke);
   /*
          Add the title's SVG
      */
 
-  var title = draw.text("Optimole").font({
-    fill: "#0f0",
-    family: "Inconsolata",
-    size: titleFontSize
+  var title = draw.text(titleText).font({
+    fill: style.title.color,
+    family: style.title.fontFamily,
+    size: style.title.fontSize
   }).move(0, 0);
   var titleDim = title.rbox(draw);
   /*
          Add the slogan's SVG
      */
 
-  var slogan = draw.text("The Best Image Optimizer").font({
-    fill: "#0f0",
-    family: "Inconsolata",
-    size: sloganFontSize
+  var slogan = draw.text(sloganText).font({
+    fill: style.slogan.color,
+    family: style.slogan.fontFamily,
+    size: style.slogan.fontSize
   }).move(0, 0);
   var sloganDim = slogan.rbox(draw);
   /*
@@ -40114,34 +40116,35 @@ exports.alignLogoLeft = alignLogoLeft;
 var alignLogoRight = function alignLogoRight(props, draw) {
   var logoDim = props.logoDim,
       logoSVG = props.logoSVG,
-      titleFontSize = props.titleFontSize,
-      sloganFontSize = props.sloganFontSize;
+      titleText = props.title,
+      sloganText = props.slogan,
+      style = props.style;
   /*
         Add the logo's SVG
   */
 
-  var logo = (0, _svg.SVG)().addTo(draw).svg(logoSVG);
+  var logo = (0, _svg.SVG)().addTo(draw).svg(logoSVG).css('background-color', style.backgroundColor);
   var svgRawDim = logo.bbox(); // get the natural dimension to calculate the viewbox
 
-  logo.viewbox(0, 0, svgRawDim.width, svgRawDim.height).size(logoDim.width, logoDim.height);
+  logo.viewbox(0, 0, svgRawDim.width, svgRawDim.height).size(logoDim.width, logoDim.height).css('stroke', style.logo.stroke);
   /*
          Add the title's SVG
      */
 
-  var title = draw.text("Optimole").font({
-    fill: "#0f0",
-    family: "Inconsolata",
-    size: titleFontSize
+  var title = draw.text(titleText).font({
+    fill: style.title.color,
+    family: style.title.fontFamily,
+    size: style.title.fontSize
   }).move(0, 0);
   var titleDim = title.rbox(draw);
   /*
          Add the slogan's SVG
      */
 
-  var slogan = draw.text("The Best Image Optimizer").font({
-    fill: "#0f0",
-    family: "Inconsolata",
-    size: sloganFontSize
+  var slogan = draw.text(sloganText).font({
+    fill: style.slogan.color,
+    family: style.slogan.fontFamily,
+    size: style.slogan.fontSize
   }).move(0, 0);
   var sloganDim = slogan.rbox(draw);
   /*
@@ -40202,6 +40205,10 @@ function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj;
 
 var logoPath = "<svg width=\"172\" height=\"135\" viewBox=\"0 0 172 135\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n    <path d=\"M171.985 72.1159L171.971 71.8837C171.971 71.753 171.942 71.6224 171.912 71.4917C171.883 71.3321 171.839 71.1724 171.781 71.0272L151.179 22.1224C154.669 20.8159 157.165 17.4627 157.165 13.5433C157.165 8.49172 153.033 4.36914 147.938 4.36914C142.842 4.36914 138.71 8.47721 138.71 13.5433C138.71 15.532 139.367 17.3756 140.447 18.8853H31.3046C32.3997 17.3756 33.0421 15.532 33.0421 13.5433C33.0421 8.49172 28.91 4.36914 23.8143 4.36914C18.7185 4.36914 14.5864 8.46269 14.5864 13.5288C14.5864 17.5208 17.1708 20.903 20.748 22.1659L0.175212 71.0127C0.029202 71.3756 -0.014601 71.753 0.029202 72.1159C0.014601 72.3046 0 72.5079 0 72.6966C0 85.8192 10.7463 96.503 23.9457 96.503C37.145 96.503 47.8913 85.8192 47.8913 72.6966C47.8913 72.4933 47.8767 72.3046 47.8621 72.1014L47.8475 71.8691C47.8475 71.7385 47.8183 71.6079 47.7891 71.4772C47.7599 71.3175 47.7161 71.1579 47.6577 71.0127L27.5375 23.2256H144.419L124.284 71.0127C124.138 71.3756 124.094 71.753 124.138 72.1159C124.123 72.3046 124.109 72.5079 124.109 72.6966C124.109 85.8192 134.855 96.503 148.054 96.503C161.254 96.503 172 85.8192 172 72.6966C172 72.4933 171.985 72.3046 171.985 72.1159ZM166.51 69.7788H129.555L148.04 25.9256L166.51 69.7788ZM147.923 8.70946C150.595 8.70946 152.77 10.8724 152.77 13.5288C152.77 16.1853 150.595 18.3482 147.923 18.3482C145.251 18.3482 143.075 16.1853 143.075 13.5288C143.075 10.8724 145.251 8.70946 147.923 8.70946ZM18.9667 13.5288C18.9667 10.8724 21.1423 8.70946 23.8143 8.70946C26.4862 8.70946 28.6618 10.8724 28.6618 13.5288C28.6618 16.1853 26.4862 18.3482 23.8143 18.3482C21.1423 18.3482 18.9667 16.1853 18.9667 13.5288ZM23.9165 25.9256L42.4014 69.7788H5.44618L23.9165 25.9256ZM23.9457 92.1482C13.6374 92.1482 5.16876 84.1933 4.43871 74.1337H43.4672C42.7226 84.1933 34.254 92.1482 23.9457 92.1482ZM148.054 92.1482C137.746 92.1482 129.277 84.1933 128.533 74.1337H167.561C166.831 84.1933 158.363 92.1482 148.054 92.1482Z\" fill=\"#323232\"/>\n    <path d=\"M62.0544 13.7904H110.238C111.45 13.7904 112.428 12.8178 112.428 11.613C112.428 10.4081 111.45 9.43555 110.238 9.43555H62.0544C60.8425 9.43555 59.8643 10.4081 59.8643 11.613C59.8643 12.8178 60.8425 13.7904 62.0544 13.7904Z\" fill=\"#323232\"/>\n    <path d=\"M137.98 130.645H102.207V30.4837H111.858C111.289 31.5725 110.968 32.8063 110.968 34.1128C110.968 38.5112 114.574 42.0966 118.998 42.0966C123.422 42.0966 127.029 38.5112 127.029 34.1128C127.029 30.7305 124.897 27.8273 121.889 26.6805C121.51 26.3321 121.013 26.1289 120.458 26.1289H51.8337C51.2788 26.1289 50.7824 26.3321 50.4028 26.6805C47.395 27.8273 45.2632 30.7305 45.2632 34.1128C45.2632 38.5112 48.8697 42.0966 53.2938 42.0966C57.7179 42.0966 61.3243 38.5112 61.3243 34.1128C61.3243 32.8063 61.0031 31.5725 60.4337 30.4837H70.085V130.645H34.3125C33.1006 130.645 32.1223 131.618 32.1223 132.822C32.1223 134.027 33.1006 135 34.3125 135H137.98C139.192 135 140.17 134.027 140.17 132.822C140.17 131.618 139.192 130.645 137.98 130.645ZM97.8269 130.645H92.9648V30.4837H97.8269V130.645ZM88.5844 130.645H83.7223V30.4837H88.5844V130.645ZM118.998 37.7418C116.983 37.7418 115.348 36.116 115.348 34.1128C115.348 32.1095 116.983 30.4837 118.998 30.4837C121.013 30.4837 122.649 32.1095 122.649 34.1128C122.649 36.116 121.013 37.7418 118.998 37.7418ZM56.944 34.1128C56.944 36.116 55.3087 37.7418 53.2938 37.7418C51.2788 37.7418 49.6435 36.116 49.6435 34.1128C49.6435 32.1095 51.2788 30.4837 53.2938 30.4837C55.3087 30.4837 56.944 32.1095 56.944 34.1128ZM74.4653 30.4837H79.3274V130.645H74.4653V30.4837Z\" fill=\"#323232\"/>\n    <path d=\"M69.3549 4.35484H102.937C104.149 4.35484 105.127 3.38226 105.127 2.17742C105.127 0.972581 104.149 0 102.937 0H69.3549C68.1431 0 67.1648 0.972581 67.1648 2.17742C67.1648 3.38226 68.1431 4.35484 69.3549 4.35484Z\" fill=\"#323232\"/>\n    </svg>\n    ";
 var defaultProps = {
+  containerSize: {
+    width: 200,
+    height: 200
+  },
   imageSize: {
     width: 300,
     height: 300
@@ -40210,29 +40217,65 @@ var defaultProps = {
     width: 100,
     height: 100
   },
-  logoSVGPath: logoPath,
-  titleFontSize: 40,
-  sloganFontSize: 25
+  logoSVG: logoPath,
+  title: "Default title",
+  slogan: "Default slogan",
+  style: {
+    backgroundColor: "#f00",
+    title: {
+      color: "#0f0",
+      fontSize: 40,
+      fontFamily: "Helvetica"
+    },
+    slogan: {
+      color: "#00f",
+      fontSize: 25,
+      fontFamily: "Helvetica"
+    },
+    logo: {
+      stroke: "blue"
+    }
+  }
 };
 
 var CreateLogo = function CreateLogo(props) {
   var divRef = React.useRef(null);
   React.useEffect(function () {
+    var _a, _b, _c, _d, _e, _f, _g, _h, _j, _k, _l, _m, _o, _p, _q;
+
     if (divRef.current) {
       /*
           Create the SVG parent
           */
+      var containerSize = props.containerSize || defaultProps.containerSize;
       var imageSize = props.imageSize || defaultProps.imageSize;
       var logoDim = props.logoDim || defaultProps.logoDim;
-      var logoSVG = props.logoSVG || defaultProps.logoSVGPath;
-      var titleFontSize = props.titleFontSize || defaultProps.titleFontSize;
-      var sloganFontSize = props.sloganFontSize || defaultProps.sloganFontSize;
-      var draw = (0, _svg.SVG)().addTo(divRef.current).size(200, 200).viewbox(0, 0, imageSize.width, imageSize.height);
+      var logoSVG = props.logoSVG || defaultProps.logoSVG;
+      var title = props.title || defaultProps.title;
+      var slogan = props.slogan || defaultProps.slogan;
+      var style = {
+        backgroundColor: ((_a = props === null || props === void 0 ? void 0 : props.style) === null || _a === void 0 ? void 0 : _a.backgroundColor) || defaultProps.style.backgroundColor,
+        title: {
+          color: ((_c = (_b = props === null || props === void 0 ? void 0 : props.style) === null || _b === void 0 ? void 0 : _b.title) === null || _c === void 0 ? void 0 : _c.color) || defaultProps.style.title.color,
+          fontSize: ((_e = (_d = props === null || props === void 0 ? void 0 : props.style) === null || _d === void 0 ? void 0 : _d.title) === null || _e === void 0 ? void 0 : _e.fontSize) || defaultProps.style.title.fontSize,
+          fontFamily: ((_g = (_f = props === null || props === void 0 ? void 0 : props.style) === null || _f === void 0 ? void 0 : _f.title) === null || _g === void 0 ? void 0 : _g.fontFamily) || defaultProps.style.title.fontFamily
+        },
+        slogan: {
+          color: ((_j = (_h = props === null || props === void 0 ? void 0 : props.style) === null || _h === void 0 ? void 0 : _h.slogan) === null || _j === void 0 ? void 0 : _j.color) || defaultProps.style.slogan.color,
+          fontSize: ((_l = (_k = props === null || props === void 0 ? void 0 : props.style) === null || _k === void 0 ? void 0 : _k.slogan) === null || _l === void 0 ? void 0 : _l.fontSize) || defaultProps.style.slogan.fontSize,
+          fontFamily: ((_o = (_m = props === null || props === void 0 ? void 0 : props.style) === null || _m === void 0 ? void 0 : _m.slogan) === null || _o === void 0 ? void 0 : _o.fontFamily) || defaultProps.style.slogan.fontFamily
+        },
+        logo: {
+          stroke: ((_q = (_p = props === null || props === void 0 ? void 0 : props.style) === null || _p === void 0 ? void 0 : _p.logo) === null || _q === void 0 ? void 0 : _q.stroke) || defaultProps.style.logo.stroke
+        }
+      };
+      var draw = (0, _svg.SVG)().addTo(divRef.current).size(containerSize.width, containerSize.height).viewbox(0, 0, imageSize.width, imageSize.height).css("background-color", style.backgroundColor);
       (0, _utility.moveToCenter)(imageSize, (0, _alignFunctions.alignLogoTop)({
         logoDim: logoDim,
         logoSVG: logoSVG,
-        titleFontSize: titleFontSize,
-        sloganFontSize: sloganFontSize
+        title: title,
+        slogan: slogan,
+        style: style
       }, draw));
     }
   }, [props]);
@@ -40500,36 +40543,6 @@ var Application = function Application() {
   return _react.default.createElement("div", {
     className: "flex flex-col items-center justify-center text-white bg-gradient-to-br from-gray-600 via-teal-700 to-gray-800"
   }, _react.default.createElement("div", {
-    className: "flex items-center animate-bounce"
-  }, _react.default.createElement("svg", {
-    viewBox: "0 0 64 64",
-    className: "w-32 fill-current text-indigo-500"
-  }, _react.default.createElement("path", {
-    d: "M52.275 22.147a63.008 63.008 0 0 0-2.025-.637c.112-.462.212-.925.313-1.387 1.537-7.45.524-13.437-2.888-15.412-3.287-1.888-8.65.075-14.075 4.8-.538.462-1.063.95-1.563 1.437-.337-.325-.687-.65-1.037-.962-5.688-5.05-11.387-7.175-14.8-5.188-3.275 1.9-4.25 7.537-2.875 14.587.138.7.288 1.388.463 2.088-.8.224-1.588.474-2.325.737C4.788 24.522 0 28.172 0 31.947c0 3.9 5.1 7.812 12.037 10.187.563.187 1.125.375 1.7.537a45.04 45.04 0 0 0-.5 2.25c-1.312 6.937-.287 12.437 2.988 14.324 3.375 1.95 9.05-.05 14.575-4.887.438-.387.875-.787 1.312-1.212.55.537 1.125 1.05 1.7 1.55 5.35 4.6 10.638 6.462 13.9 4.574 3.375-1.95 4.475-7.862 3.05-15.061a52.467 52.467 0 0 0-.374-1.688c.4-.112.787-.237 1.175-.362C58.775 39.772 64 35.909 64 31.947c0-3.787-4.925-7.462-11.725-9.8zM35.362 11.536c4.65-4.05 8.988-5.638 10.963-4.5 2.112 1.212 2.925 6.112 1.6 12.55a20.19 20.19 0 0 1-.287 1.249 63.994 63.994 0 0 0-8.413-1.325 63.153 63.153 0 0 0-5.325-6.637c.488-.463.962-.9 1.462-1.337zM20.9 38.434a86.067 86.067 0 0 0 1.975 3.237 56.605 56.605 0 0 1-5.8-.937c.55-1.8 1.238-3.662 2.038-5.562a82.583 82.583 0 0 0 1.787 3.262zm-3.787-15.037c1.8-.4 3.712-.725 5.7-.975a73.891 73.891 0 0 0-1.925 3.175 73.904 73.904 0 0 0-1.776 3.25 59.594 59.594 0 0 1-2-5.45zm3.425 8.612a78.537 78.537 0 0 1 2.674-5.074 75.374 75.374 0 0 1 3.05-4.863A78.408 78.408 0 0 1 32 21.86c1.95 0 3.875.075 5.737.212a87.325 87.325 0 0 1 3.038 4.838 85.138 85.138 0 0 1 2.712 5.05 82.936 82.936 0 0 1-2.7 5.1 85.374 85.374 0 0 1-3.024 4.874c-1.863.137-3.8.2-5.763.2-1.962 0-3.863-.063-5.7-.175a76.007 76.007 0 0 1-5.762-9.95zm22.574 6.4a86.342 86.342 0 0 0 1.825-3.337c.8 1.812 1.5 3.65 2.113 5.537-1.938.437-3.9.775-5.875 1a83.722 83.722 0 0 0 1.938-3.2zm1.8-9.562c-.587-1.1-1.187-2.2-1.812-3.275a81.255 81.255 0 0 0-1.913-3.15c2.013.25 3.938.588 5.738 1a55.315 55.315 0 0 1-2.012 5.425zM32.026 14.785a54.888 54.888 0 0 1 3.7 4.475 81.997 81.997 0 0 0-7.438 0 63.146 63.146 0 0 1 3.738-4.475zm-14.5-7.662c2.1-1.225 6.763.525 11.675 4.875.313.275.625.575.95.875a63.504 63.504 0 0 0-5.362 6.637c-2.826.25-5.625.688-8.4 1.3-.163-.637-.3-1.287-.438-1.937-1.175-6.05-.4-10.612 1.575-11.75zm-3.062 32.949a31.894 31.894 0 0 1-1.55-.488c-2.663-.837-5.688-2.162-7.876-3.9a5.609 5.609 0 0 1-2.35-3.737c0-2.287 3.95-5.212 9.65-7.2.713-.25 1.438-.475 2.163-.687a66.462 66.462 0 0 0 3.063 7.95 68.322 68.322 0 0 0-3.1 8.062zM29.038 52.32a22.88 22.88 0 0 1-7.05 4.412 5.533 5.533 0 0 1-4.413.163c-1.987-1.15-2.813-5.563-1.688-11.5.138-.7.288-1.4.463-2.087 2.8.6 5.625 1.012 8.487 1.225a65.963 65.963 0 0 0 5.4 6.674c-.4.388-.8.763-1.2 1.113zm3.062-3.037a59.114 59.114 0 0 1-3.788-4.538c1.2.05 2.438.075 3.688.075 1.288 0 2.55-.025 3.8-.087a53.904 53.904 0 0 1-3.7 4.55zm16.337 3.75a5.555 5.555 0 0 1-2.062 3.912c-1.987 1.15-6.225-.35-10.8-4.275-.525-.45-1.05-.938-1.588-1.438a61.833 61.833 0 0 0 5.276-6.7 61.623 61.623 0 0 0 8.525-1.312c.125.513.237 1.025.337 1.525.612 2.7.712 5.512.313 8.287zm2.276-13.437c-.35.112-.7.225-1.063.325a63.494 63.494 0 0 0-3.188-7.975 63.177 63.177 0 0 0 3.063-7.862c.65.187 1.275.387 1.875.587 5.825 2 9.913 4.975 9.913 7.25 0 2.45-4.363 5.612-10.6 7.675zM32 37.722a5.724 5.724 0 0 0 5.725-5.725A5.724 5.724 0 0 0 32 26.272a5.724 5.724 0 0 0-5.725 5.725A5.724 5.724 0 0 0 32 37.722z"
-  })), _react.default.createElement("span", {
-    className: "text-6xl pl-5 pr-2"
-  }, "+"), _react.default.createElement("svg", {
-    className: "w-32 fill-current text-indigo-500",
-    viewBox: "0 0 64 64",
-    xmlns: "http://www.w3.org/2000/svg"
-  }, _react.default.createElement("path", {
-    d: "M13.5 11.1C15.3 3.9 19.8.3 27 .3c10.8 0 12.15 8.1 17.55 9.45 3.6.9 6.75-.45 9.45-4.05-1.8 7.2-6.3 10.8-13.5 10.8-10.8 0-12.15-8.1-17.55-9.45-3.6-.9-6.75.45-9.45 4.05zM0 27.3c1.8-7.2 6.3-10.8 13.5-10.8 10.8 0 12.15 8.1 17.55 9.45 3.6.9 6.75-.45 9.45-4.05-1.8 7.2-6.3 10.8-13.5 10.8-10.8 0-12.15-8.1-17.55-9.45-3.6-.9-6.75.45-9.45 4.05z",
-    transform: "translate(5 16)"
-  }))), _react.default.createElement("p", {
-    className: "mt-6 tracking-wide"
-  }, "Edit ", _react.default.createElement("code", null, "src/App.jsx"), " and save to reload adfadfasdf - asdfasdfasd."), _react.default.createElement("div", {
-    className: "mt-4 flex justify-center"
-  }, _react.default.createElement("a", {
-    className: "bg-indigo-500 hover:bg-indigo-600 text-white py-2 px-4 rounded",
-    href: "https://reactjs.org",
-    target: "_blank",
-    rel: "noopener noreferrer"
-  }, "Learn React"), _react.default.createElement("a", {
-    className: "ml-4 bg-indigo-500 hover:bg-indigo-600 text-white py-2 px-4 rounded",
-    href: "https://tailwindcss.com",
-    target: "_blank",
-    rel: "noopener noreferrer"
-  }, "Learn Tailwind")), _react.default.createElement("div", {
     className: "grid gap-4 grid-cols-3"
   }, renderLogoList()));
 };
@@ -40563,7 +40576,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58134" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "64229" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

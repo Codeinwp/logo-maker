@@ -20,12 +20,28 @@ export type AlignProps = {
         height: number
     }
     logoSVG: string
-    titleFontSize: number
-    sloganFontSize: number
+    title: string
+    slogan: string
+    style: {
+        backgroundColor: string
+        title: {
+            color: string
+            fontSize: number
+            fontFamily: string
+        }
+        slogan: {
+            color: string
+            fontSize: number
+            fontFamily: string
+        }
+        logo: {
+            stroke: string
+        }
+    }
 }
 
 export const alignLogoTop = (props: AlignProps, draw: Svg) : ContainerData => {
-    const { logoDim, logoSVG, titleFontSize, sloganFontSize } = props
+    const { logoDim, logoSVG, title: titleText, slogan: sloganText, style } = props
     
     /*
           Add the logo's SVG
@@ -34,14 +50,14 @@ export const alignLogoTop = (props: AlignProps, draw: Svg) : ContainerData => {
     const logo = SVG().addTo(draw).svg(logoSVG)
     const svgRawDim = logo.bbox() // get the natural dimension to calculate the viewbox
 
-    logo.viewbox(0, 0, svgRawDim.width, svgRawDim.height).size(logoDim.width, logoDim.height)
+    logo.viewbox(0, 0, svgRawDim.width, svgRawDim.height).size(logoDim.width, logoDim.height).css('stroke', style.logo.stroke)
 
     /*
            Add the title's SVG
        */
     const title = draw
-        .text("Optimole")
-        .font({ fill: "#0f0", family: "Inconsolata", size: titleFontSize })
+        .text(titleText)
+        .font({ fill: style.title.color, family: style.title.fontFamily, size: style.title.fontSize })
         .move(0, 0)
     const titleDim = title.rbox(draw)
 
@@ -49,8 +65,8 @@ export const alignLogoTop = (props: AlignProps, draw: Svg) : ContainerData => {
            Add the slogan's SVG
        */
     const slogan = draw
-        .text("The Best Image Optimizer")
-        .font({ fill: "#0f0", family: "Inconsolata", size: sloganFontSize })
+        .text(sloganText)
+        .font({ fill: style.slogan.color, family: style.slogan.fontFamily, size: style.slogan.fontSize })
         .move(0, 0)
     const sloganDim = slogan.rbox(draw)
 
@@ -88,23 +104,23 @@ export const alignLogoTop = (props: AlignProps, draw: Svg) : ContainerData => {
 }
 
 export const alignLogoLeft = (props: AlignProps, draw: Svg) : ContainerData => {
-    const { logoDim, logoSVG, titleFontSize, sloganFontSize } = props
+    const { logoDim, logoSVG, title: titleText, slogan: sloganText, style } = props
     
     /*
           Add the logo's SVG
     */
 
-    const logo = SVG().addTo(draw).svg(logoSVG)
+    const logo = SVG().addTo(draw).svg(logoSVG).css('background-color', style.backgroundColor)
     const svgRawDim = logo.bbox() // get the natural dimension to calculate the viewbox
 
-    logo.viewbox(0, 0, svgRawDim.width, svgRawDim.height).size(logoDim.width, logoDim.height)
+    logo.viewbox(0, 0, svgRawDim.width, svgRawDim.height).size(logoDim.width, logoDim.height).css('stroke', style.logo.stroke)
 
     /*
            Add the title's SVG
        */
     const title = draw
-        .text("Optimole")
-        .font({ fill: "#0f0", family: "Inconsolata", size: titleFontSize })
+        .text(titleText)
+        .font({ fill: style.title.color, family: style.title.fontFamily, size: style.title.fontSize })
         .move(0, 0)
     const titleDim = title.rbox(draw)
 
@@ -112,8 +128,8 @@ export const alignLogoLeft = (props: AlignProps, draw: Svg) : ContainerData => {
            Add the slogan's SVG
        */
     const slogan = draw
-        .text("The Best Image Optimizer")
-        .font({ fill: "#0f0", family: "Inconsolata", size: sloganFontSize })
+        .text(sloganText)
+        .font({ fill: style.slogan.color, family: style.slogan.fontFamily, size: style.slogan.fontSize })
         .move(0, 0)
     const sloganDim = slogan.rbox(draw)
 
@@ -156,23 +172,23 @@ export const alignLogoLeft = (props: AlignProps, draw: Svg) : ContainerData => {
 }
 
 export const alignLogoRight = (props: AlignProps, draw: Svg) : ContainerData => {
-    const { logoDim, logoSVG, titleFontSize, sloganFontSize } = props
+    const { logoDim, logoSVG, title: titleText, slogan: sloganText, style } = props
     
     /*
           Add the logo's SVG
     */
 
-    const logo = SVG().addTo(draw).svg(logoSVG)
+    const logo = SVG().addTo(draw).svg(logoSVG).css('background-color', style.backgroundColor)
     const svgRawDim = logo.bbox() // get the natural dimension to calculate the viewbox
 
-    logo.viewbox(0, 0, svgRawDim.width, svgRawDim.height).size(logoDim.width, logoDim.height)
+    logo.viewbox(0, 0, svgRawDim.width, svgRawDim.height).size(logoDim.width, logoDim.height).css('stroke', style.logo.stroke)
 
     /*
            Add the title's SVG
        */
     const title = draw
-        .text("Optimole")
-        .font({ fill: "#0f0", family: "Inconsolata", size: titleFontSize })
+        .text(titleText)
+        .font({ fill: style.title.color, family: style.title.fontFamily, size: style.title.fontSize })
         .move(0, 0)
     const titleDim = title.rbox(draw)
 
@@ -180,8 +196,8 @@ export const alignLogoRight = (props: AlignProps, draw: Svg) : ContainerData => 
            Add the slogan's SVG
        */
     const slogan = draw
-        .text("The Best Image Optimizer")
-        .font({ fill: "#0f0", family: "Inconsolata", size: sloganFontSize })
+        .text(sloganText)
+        .font({ fill: style.slogan.color, family: style.slogan.fontFamily, size: style.slogan.fontSize })
         .move(0, 0)
     const sloganDim = slogan.rbox(draw)
 
