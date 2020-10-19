@@ -40203,7 +40203,7 @@ function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return 
 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 
-var logoPath = "<svg width=\"172\" height=\"135\" viewBox=\"0 0 172 135\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n    <path d=\"M171.985 72.1159L171.971 71.8837C171.971 71.753 171.942 71.6224 171.912 71.4917C171.883 71.3321 171.839 71.1724 171.781 71.0272L151.179 22.1224C154.669 20.8159 157.165 17.4627 157.165 13.5433C157.165 8.49172 153.033 4.36914 147.938 4.36914C142.842 4.36914 138.71 8.47721 138.71 13.5433C138.71 15.532 139.367 17.3756 140.447 18.8853H31.3046C32.3997 17.3756 33.0421 15.532 33.0421 13.5433C33.0421 8.49172 28.91 4.36914 23.8143 4.36914C18.7185 4.36914 14.5864 8.46269 14.5864 13.5288C14.5864 17.5208 17.1708 20.903 20.748 22.1659L0.175212 71.0127C0.029202 71.3756 -0.014601 71.753 0.029202 72.1159C0.014601 72.3046 0 72.5079 0 72.6966C0 85.8192 10.7463 96.503 23.9457 96.503C37.145 96.503 47.8913 85.8192 47.8913 72.6966C47.8913 72.4933 47.8767 72.3046 47.8621 72.1014L47.8475 71.8691C47.8475 71.7385 47.8183 71.6079 47.7891 71.4772C47.7599 71.3175 47.7161 71.1579 47.6577 71.0127L27.5375 23.2256H144.419L124.284 71.0127C124.138 71.3756 124.094 71.753 124.138 72.1159C124.123 72.3046 124.109 72.5079 124.109 72.6966C124.109 85.8192 134.855 96.503 148.054 96.503C161.254 96.503 172 85.8192 172 72.6966C172 72.4933 171.985 72.3046 171.985 72.1159ZM166.51 69.7788H129.555L148.04 25.9256L166.51 69.7788ZM147.923 8.70946C150.595 8.70946 152.77 10.8724 152.77 13.5288C152.77 16.1853 150.595 18.3482 147.923 18.3482C145.251 18.3482 143.075 16.1853 143.075 13.5288C143.075 10.8724 145.251 8.70946 147.923 8.70946ZM18.9667 13.5288C18.9667 10.8724 21.1423 8.70946 23.8143 8.70946C26.4862 8.70946 28.6618 10.8724 28.6618 13.5288C28.6618 16.1853 26.4862 18.3482 23.8143 18.3482C21.1423 18.3482 18.9667 16.1853 18.9667 13.5288ZM23.9165 25.9256L42.4014 69.7788H5.44618L23.9165 25.9256ZM23.9457 92.1482C13.6374 92.1482 5.16876 84.1933 4.43871 74.1337H43.4672C42.7226 84.1933 34.254 92.1482 23.9457 92.1482ZM148.054 92.1482C137.746 92.1482 129.277 84.1933 128.533 74.1337H167.561C166.831 84.1933 158.363 92.1482 148.054 92.1482Z\" fill=\"#323232\"/>\n    <path d=\"M62.0544 13.7904H110.238C111.45 13.7904 112.428 12.8178 112.428 11.613C112.428 10.4081 111.45 9.43555 110.238 9.43555H62.0544C60.8425 9.43555 59.8643 10.4081 59.8643 11.613C59.8643 12.8178 60.8425 13.7904 62.0544 13.7904Z\" fill=\"#323232\"/>\n    <path d=\"M137.98 130.645H102.207V30.4837H111.858C111.289 31.5725 110.968 32.8063 110.968 34.1128C110.968 38.5112 114.574 42.0966 118.998 42.0966C123.422 42.0966 127.029 38.5112 127.029 34.1128C127.029 30.7305 124.897 27.8273 121.889 26.6805C121.51 26.3321 121.013 26.1289 120.458 26.1289H51.8337C51.2788 26.1289 50.7824 26.3321 50.4028 26.6805C47.395 27.8273 45.2632 30.7305 45.2632 34.1128C45.2632 38.5112 48.8697 42.0966 53.2938 42.0966C57.7179 42.0966 61.3243 38.5112 61.3243 34.1128C61.3243 32.8063 61.0031 31.5725 60.4337 30.4837H70.085V130.645H34.3125C33.1006 130.645 32.1223 131.618 32.1223 132.822C32.1223 134.027 33.1006 135 34.3125 135H137.98C139.192 135 140.17 134.027 140.17 132.822C140.17 131.618 139.192 130.645 137.98 130.645ZM97.8269 130.645H92.9648V30.4837H97.8269V130.645ZM88.5844 130.645H83.7223V30.4837H88.5844V130.645ZM118.998 37.7418C116.983 37.7418 115.348 36.116 115.348 34.1128C115.348 32.1095 116.983 30.4837 118.998 30.4837C121.013 30.4837 122.649 32.1095 122.649 34.1128C122.649 36.116 121.013 37.7418 118.998 37.7418ZM56.944 34.1128C56.944 36.116 55.3087 37.7418 53.2938 37.7418C51.2788 37.7418 49.6435 36.116 49.6435 34.1128C49.6435 32.1095 51.2788 30.4837 53.2938 30.4837C55.3087 30.4837 56.944 32.1095 56.944 34.1128ZM74.4653 30.4837H79.3274V130.645H74.4653V30.4837Z\" fill=\"#323232\"/>\n    <path d=\"M69.3549 4.35484H102.937C104.149 4.35484 105.127 3.38226 105.127 2.17742C105.127 0.972581 104.149 0 102.937 0H69.3549C68.1431 0 67.1648 0.972581 67.1648 2.17742C67.1648 3.38226 68.1431 4.35484 69.3549 4.35484Z\" fill=\"#323232\"/>\n    </svg>\n    ";
+var logoPath = "<svg width=\"172\" height=\"135\" viewBox=\"0 0 172 135\" xmlns=\"http://www.w3.org/2000/svg\">\n    <path d=\"M171.985 72.1159L171.971 71.8837C171.971 71.753 171.942 71.6224 171.912 71.4917C171.883 71.3321 171.839 71.1724 171.781 71.0272L151.179 22.1224C154.669 20.8159 157.165 17.4627 157.165 13.5433C157.165 8.49172 153.033 4.36914 147.938 4.36914C142.842 4.36914 138.71 8.47721 138.71 13.5433C138.71 15.532 139.367 17.3756 140.447 18.8853H31.3046C32.3997 17.3756 33.0421 15.532 33.0421 13.5433C33.0421 8.49172 28.91 4.36914 23.8143 4.36914C18.7185 4.36914 14.5864 8.46269 14.5864 13.5288C14.5864 17.5208 17.1708 20.903 20.748 22.1659L0.175212 71.0127C0.029202 71.3756 -0.014601 71.753 0.029202 72.1159C0.014601 72.3046 0 72.5079 0 72.6966C0 85.8192 10.7463 96.503 23.9457 96.503C37.145 96.503 47.8913 85.8192 47.8913 72.6966C47.8913 72.4933 47.8767 72.3046 47.8621 72.1014L47.8475 71.8691C47.8475 71.7385 47.8183 71.6079 47.7891 71.4772C47.7599 71.3175 47.7161 71.1579 47.6577 71.0127L27.5375 23.2256H144.419L124.284 71.0127C124.138 71.3756 124.094 71.753 124.138 72.1159C124.123 72.3046 124.109 72.5079 124.109 72.6966C124.109 85.8192 134.855 96.503 148.054 96.503C161.254 96.503 172 85.8192 172 72.6966C172 72.4933 171.985 72.3046 171.985 72.1159ZM166.51 69.7788H129.555L148.04 25.9256L166.51 69.7788ZM147.923 8.70946C150.595 8.70946 152.77 10.8724 152.77 13.5288C152.77 16.1853 150.595 18.3482 147.923 18.3482C145.251 18.3482 143.075 16.1853 143.075 13.5288C143.075 10.8724 145.251 8.70946 147.923 8.70946ZM18.9667 13.5288C18.9667 10.8724 21.1423 8.70946 23.8143 8.70946C26.4862 8.70946 28.6618 10.8724 28.6618 13.5288C28.6618 16.1853 26.4862 18.3482 23.8143 18.3482C21.1423 18.3482 18.9667 16.1853 18.9667 13.5288ZM23.9165 25.9256L42.4014 69.7788H5.44618L23.9165 25.9256ZM23.9457 92.1482C13.6374 92.1482 5.16876 84.1933 4.43871 74.1337H43.4672C42.7226 84.1933 34.254 92.1482 23.9457 92.1482ZM148.054 92.1482C137.746 92.1482 129.277 84.1933 128.533 74.1337H167.561C166.831 84.1933 158.363 92.1482 148.054 92.1482Z\"  />\n    <path d=\"M62.0544 13.7904H110.238C111.45 13.7904 112.428 12.8178 112.428 11.613C112.428 10.4081 111.45 9.43555 110.238 9.43555H62.0544C60.8425 9.43555 59.8643 10.4081 59.8643 11.613C59.8643 12.8178 60.8425 13.7904 62.0544 13.7904Z\"  />\n    <path d=\"M137.98 130.645H102.207V30.4837H111.858C111.289 31.5725 110.968 32.8063 110.968 34.1128C110.968 38.5112 114.574 42.0966 118.998 42.0966C123.422 42.0966 127.029 38.5112 127.029 34.1128C127.029 30.7305 124.897 27.8273 121.889 26.6805C121.51 26.3321 121.013 26.1289 120.458 26.1289H51.8337C51.2788 26.1289 50.7824 26.3321 50.4028 26.6805C47.395 27.8273 45.2632 30.7305 45.2632 34.1128C45.2632 38.5112 48.8697 42.0966 53.2938 42.0966C57.7179 42.0966 61.3243 38.5112 61.3243 34.1128C61.3243 32.8063 61.0031 31.5725 60.4337 30.4837H70.085V130.645H34.3125C33.1006 130.645 32.1223 131.618 32.1223 132.822C32.1223 134.027 33.1006 135 34.3125 135H137.98C139.192 135 140.17 134.027 140.17 132.822C140.17 131.618 139.192 130.645 137.98 130.645ZM97.8269 130.645H92.9648V30.4837H97.8269V130.645ZM88.5844 130.645H83.7223V30.4837H88.5844V130.645ZM118.998 37.7418C116.983 37.7418 115.348 36.116 115.348 34.1128C115.348 32.1095 116.983 30.4837 118.998 30.4837C121.013 30.4837 122.649 32.1095 122.649 34.1128C122.649 36.116 121.013 37.7418 118.998 37.7418ZM56.944 34.1128C56.944 36.116 55.3087 37.7418 53.2938 37.7418C51.2788 37.7418 49.6435 36.116 49.6435 34.1128C49.6435 32.1095 51.2788 30.4837 53.2938 30.4837C55.3087 30.4837 56.944 32.1095 56.944 34.1128ZM74.4653 30.4837H79.3274V130.645H74.4653V30.4837Z\"  />\n    <path d=\"M69.3549 4.35484H102.937C104.149 4.35484 105.127 3.38226 105.127 2.17742C105.127 0.972581 104.149 0 102.937 0H69.3549C68.1431 0 67.1648 0.972581 67.1648 2.17742C67.1648 3.38226 68.1431 4.35484 69.3549 4.35484Z\"  />\n    </svg>\n    ";
 var defaultProps = {
   containerSize: {
     width: 200,
@@ -40233,7 +40233,7 @@ var defaultProps = {
       fontFamily: "Helvetica"
     },
     logo: {
-      fill: "green"
+      fill: "violet"
     }
   }
 };
@@ -40269,6 +40269,7 @@ var CreateLogo = function CreateLogo(props) {
           fill: ((_q = (_p = props === null || props === void 0 ? void 0 : props.style) === null || _p === void 0 ? void 0 : _p.logo) === null || _q === void 0 ? void 0 : _q.fill) || defaultProps.style.logo.fill
         }
       };
+      divRef.current.textContent = "";
       var draw = (0, _svg.SVG)().addTo(divRef.current).size(containerSize.width, containerSize.height).viewbox(0, 0, imageSize.width, imageSize.height).css("background-color", style.backgroundColor);
       (0, _utility.moveToCenter)(imageSize, (0, _alignFunctions.alignLogoTop)({
         logoDim: logoDim,
@@ -40280,8 +40281,8 @@ var CreateLogo = function CreateLogo(props) {
     }
   }, [props]);
   return React.createElement("div", {
-    ref: divRef,
-    className: "bg-orange-600"
+    className: "self-center",
+    ref: divRef
   });
 };
 
@@ -40513,7 +40514,178 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 // Useful for rendering a select input or a preview with all the logos available
 var _default = [_logo.default, _logo2.default, _logo3.default, _logo4.default, _logo5.default, _logo6.default, _logo7.default, _logo8.default, _logo9.default, _logo10.default];
 exports.default = _default;
-},{"./logo1":"assets/logos/logo1.ts","./logo2":"assets/logos/logo2.ts","./logo3":"assets/logos/logo3.ts","./logo4":"assets/logos/logo4.ts","./logo5":"assets/logos/logo5.ts","./logo6":"assets/logos/logo6.ts","./logo7":"assets/logos/logo7.ts","./logo8":"assets/logos/logo8.ts","./logo9":"assets/logos/logo9.ts","./logo10":"assets/logos/logo10.ts"}],"index.tsx":[function(require,module,exports) {
+},{"./logo1":"assets/logos/logo1.ts","./logo2":"assets/logos/logo2.ts","./logo3":"assets/logos/logo3.ts","./logo4":"assets/logos/logo4.ts","./logo5":"assets/logos/logo5.ts","./logo6":"assets/logos/logo6.ts","./logo7":"assets/logos/logo7.ts","./logo8":"assets/logos/logo8.ts","./logo9":"assets/logos/logo9.ts","./logo10":"assets/logos/logo10.ts"}],"components/LogoItem.tsx":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _svg = require("@svgdotjs/svg.js");
+
+var React = _interopRequireWildcard(require("react"));
+
+function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+
+var LogoItem = function LogoItem(props) {
+  var itemRef = React.useRef(null);
+  React.useEffect(function () {
+    if (itemRef.current) {
+      itemRef.current.textContent = "";
+      var svgItem = (0, _svg.SVG)().addTo(itemRef.current).svg(props.logo.svg);
+      svgItem.viewbox(0, 0, svgItem.bbox().width, svgItem.bbox().height).size(50, 50).addClass("border-2 hover:border-blue-500 p-1 rounded");
+    }
+  }, [props.logo.svg]);
+  return React.createElement("button", {
+    style: {
+      width: "max-content",
+      height: "max-content"
+    },
+    ref: itemRef
+  });
+};
+
+var _default = LogoItem;
+exports.default = _default;
+},{"@svgdotjs/svg.js":"../node_modules/@svgdotjs/svg.js/dist/svg.esm.js","react":"../node_modules/react/index.js"}],"components/SelectLogo.tsx":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var React = _interopRequireWildcard(require("react"));
+
+var _logos = _interopRequireDefault(require("../assets/logos"));
+
+var _LogoItem = _interopRequireDefault(require("./LogoItem"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+
+var SelectLogo = function SelectLogo() {
+  var renderLogos = function renderLogos() {
+    return _logos.default.map(function (logo, index) {
+      return React.createElement(_LogoItem.default, {
+        key: index,
+        logo: logo
+      });
+    });
+  };
+
+  return React.createElement("div", null, React.createElement("h1", {
+    className: "font-bold"
+  }, "Logo Options"), React.createElement("p", null, "Select a symbol for the logo"), React.createElement("div", {
+    className: "h-32 lg:h-auto overflow-auto overscroll-auto md:overscroll-contain lg:overscroll-none grid grid-cols-3 gap-4"
+  }, renderLogos()));
+};
+
+var _default = SelectLogo;
+exports.default = _default;
+},{"react":"../node_modules/react/index.js","../assets/logos":"assets/logos/index.ts","./LogoItem":"components/LogoItem.tsx"}],"Creator.tsx":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var React = _interopRequireWildcard(require("react"));
+
+var _CreateLogo = _interopRequireDefault(require("./components/CreateLogo"));
+
+var _SelectLogo = _interopRequireDefault(require("./components/SelectLogo"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+function _iterableToArrayLimit(arr, i) { if (typeof Symbol === "undefined" || !(Symbol.iterator in Object(arr))) return; var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+var Creator = function Creator() {
+  var _React$useState = React.useState("logo"),
+      _React$useState2 = _slicedToArray(_React$useState, 2),
+      menuOption = _React$useState2[0],
+      setMenuOption = _React$useState2[1];
+
+  var renderRightSidePanel = function renderRightSidePanel() {
+    switch (menuOption) {
+      case "logo":
+        return React.createElement(_SelectLogo.default, null);
+
+      case "layout":
+        return React.createElement("div", null, "layout");
+
+      case "typography":
+        return React.createElement("div", null, "typography");
+
+      case "colors":
+        return React.createElement("div", null, "colors");
+    }
+  };
+
+  return React.createElement("div", {
+    className: "flex justify-center"
+  }, React.createElement("div", {
+    className: "flex flex-initial flex-col lg:flex-row"
+  }, React.createElement("div", {
+    className: "flex justify-center m-1 lg:m-16"
+  }, React.createElement("div", {
+    className: "grid gap-2 grid-cols-2 lg:grid-cols-1"
+  }, React.createElement("button", {
+    onClick: function onClick() {
+      return setMenuOption("logo");
+    },
+    className: "box-content h-auto w-18 bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded"
+  }, "Logo"), React.createElement("button", {
+    onClick: function onClick() {
+      return setMenuOption("typography");
+    },
+    className: "box-content h-auto w-18 bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded"
+  }, "Typography"), React.createElement("button", {
+    onClick: function onClick() {
+      return setMenuOption("layout");
+    },
+    className: "box-content h-auto w-18 bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded"
+  }, "Layout"), React.createElement("button", {
+    onClick: function onClick() {
+      return setMenuOption("colors");
+    },
+    className: "box-content h-auto w-18 bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded"
+  }, "Colors"))), React.createElement("div", {
+    className: "flex flex-auto m-1 lg:m-8 content-center"
+  }, React.createElement(_CreateLogo.default, {
+    containerSize: {
+      width: 300,
+      height: 280
+    }
+  })), React.createElement("div", {
+    className: "m-2 lg:m-16"
+  }, renderRightSidePanel())));
+};
+
+var _default = Creator;
+exports.default = _default;
+},{"react":"../node_modules/react/index.js","./components/CreateLogo":"components/CreateLogo.tsx","./components/SelectLogo":"components/SelectLogo.tsx"}],"index.tsx":[function(require,module,exports) {
 "use strict";
 
 var _react = _interopRequireDefault(require("react"));
@@ -40524,31 +40696,21 @@ require("./assets/styles/index.scss");
 
 require("./assets/styles/tailwind.css");
 
-var _CreateLogo = _interopRequireDefault(require("./components/CreateLogo"));
-
-var _logos = _interopRequireDefault(require("./assets/logos"));
+var _Creator = _interopRequireDefault(require("./Creator"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+// import CreateLogo from "./components/CreateLogo"
+// import logos from "./assets/logos"
 var Application = function Application() {
-  var renderLogoList = function renderLogoList() {
-    return _logos.default.map(function (logo, index) {
-      return _react.default.createElement(_CreateLogo.default, {
-        key: index,
-        logoSVG: logo.svg
-      });
-    });
-  };
-
-  return _react.default.createElement("div", {
-    className: "flex flex-col items-center justify-center text-white bg-gradient-to-br from-gray-600 via-teal-700 to-gray-800"
-  }, _react.default.createElement("div", {
-    className: "grid gap-4 grid-cols-3"
-  }, renderLogoList()));
+  // const renderLogoList = () => {
+  //     return logos.map((logo, index) => <CreateLogo key={index} logoSVG={logo.svg} />)
+  // }
+  return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement(_Creator.default, null));
 };
 
 (0, _reactDom.render)(_react.default.createElement(Application, null), document.getElementById("root"));
-},{"react":"../node_modules/react/index.js","react-dom":"../node_modules/react-dom/index.js","./assets/styles/index.scss":"assets/styles/index.scss","./assets/styles/tailwind.css":"assets/styles/tailwind.css","./components/CreateLogo":"components/CreateLogo.tsx","./assets/logos":"assets/logos/index.ts"}],"../node_modules/.pnpm/parcel-bundler@1.12.4/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js","react-dom":"../node_modules/react-dom/index.js","./assets/styles/index.scss":"assets/styles/index.scss","./assets/styles/tailwind.css":"assets/styles/tailwind.css","./Creator":"Creator.tsx"}],"../node_modules/.pnpm/parcel-bundler@1.12.4/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -40576,7 +40738,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "64830" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "65255" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
