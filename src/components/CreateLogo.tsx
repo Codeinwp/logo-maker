@@ -32,7 +32,7 @@ type CreateLogoPropsComponent = {
             fontFamily?: string
         }
         logo?: {
-            stroke?: string
+            fill?: string
         }
     }
 }
@@ -74,7 +74,7 @@ const defaultProps = {
             fontFamily: "Helvetica",
         },
         logo: {
-            stroke: "blue",
+            fill: "green",
         },
     },
 }
@@ -111,7 +111,7 @@ const CreateLogo: React.FunctionComponent<CreateLogoPropsComponent> = (
                         props?.style?.slogan?.fontFamily || defaultProps.style.slogan.fontFamily,
                 },
                 logo: {
-                    stroke: props?.style?.logo?.stroke || defaultProps.style.logo.stroke,
+                    fill: props?.style?.logo?.fill || defaultProps.style.logo.fill,
                 },
             }
 

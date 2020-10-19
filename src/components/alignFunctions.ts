@@ -35,7 +35,7 @@ export type AlignProps = {
             fontFamily: string
         }
         logo: {
-            stroke: string
+            fill: string
         }
     }
 }
@@ -50,7 +50,7 @@ export const alignLogoTop = (props: AlignProps, draw: Svg) : ContainerData => {
     const logo = SVG().addTo(draw).svg(logoSVG)
     const svgRawDim = logo.bbox() // get the natural dimension to calculate the viewbox
 
-    logo.viewbox(0, 0, svgRawDim.width, svgRawDim.height).size(logoDim.width, logoDim.height).css('stroke', style.logo.stroke)
+    logo.viewbox(0, 0, svgRawDim.width, svgRawDim.height).size(logoDim.width, logoDim.height).css('fill', style.logo.fill)
 
     /*
            Add the title's SVG
@@ -113,7 +113,7 @@ export const alignLogoLeft = (props: AlignProps, draw: Svg) : ContainerData => {
     const logo = SVG().addTo(draw).svg(logoSVG).css('background-color', style.backgroundColor)
     const svgRawDim = logo.bbox() // get the natural dimension to calculate the viewbox
 
-    logo.viewbox(0, 0, svgRawDim.width, svgRawDim.height).size(logoDim.width, logoDim.height).css('stroke', style.logo.stroke)
+    logo.viewbox(0, 0, svgRawDim.width, svgRawDim.height).size(logoDim.width, logoDim.height).css('fill', style.logo.fill)
 
     /*
            Add the title's SVG
@@ -181,7 +181,7 @@ export const alignLogoRight = (props: AlignProps, draw: Svg) : ContainerData => 
     const logo = SVG().addTo(draw).svg(logoSVG).css('background-color', style.backgroundColor)
     const svgRawDim = logo.bbox() // get the natural dimension to calculate the viewbox
 
-    logo.viewbox(0, 0, svgRawDim.width, svgRawDim.height).size(logoDim.width, logoDim.height).css('stroke', style.logo.stroke)
+    logo.viewbox(0, 0, svgRawDim.width, svgRawDim.height).size(logoDim.width, logoDim.height).css('fill', style.logo.fill)
 
     /*
            Add the title's SVG
