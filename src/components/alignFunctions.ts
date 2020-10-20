@@ -1,6 +1,7 @@
 import { SVG, Svg } from "@svgdotjs/svg.js"
 import { Elements } from "./utility"
 
+const autoScallingOffsetMargin = 100
 
 export type ContainerData = {
     containerPos: {
@@ -86,6 +87,13 @@ export const alignLogoTop = (props: AlignProps, draw: Svg) : ContainerData => {
     title.move(cx - titleDim.width / 2, logoDim.height)
     slogan.move(cx - sloganDim.width / 2, logoDim.height + titleDim.height)
 
+    const currentViewBox = draw.viewbox()
+    
+    // AUTOSCAllING
+    // check if the current element occupy more than the initial size of the viewbox 
+    draw.viewbox(0, 0, currentViewBox.width < widthContainer ? widthContainer + autoScallingOffsetMargin : currentViewBox.width, currentViewBox.height < heightContainer ? heightContainer + autoScallingOffsetMargin : currentViewBox.height)
+
+
     return {
         containerPos: {
             x: 0,
@@ -154,6 +162,12 @@ export const alignLogoLeft = (props: AlignProps, draw: Svg) : ContainerData => {
     title.move(logoDim.width + ctx - titleDim.width / 2, cy - (cty - titleDim.height / 2) - titleDim.height / 2)
     slogan.move(logoDim.width + ctx - sloganDim.width / 2, cy + (cty - sloganDim.height / 2) - sloganDim.height / 2 + titleDim.height)
 
+    const currentViewBox = draw.viewbox()
+    
+    // AUTOSCAllING
+    // check if the current element occupy more than the initial size of the viewbox 
+    draw.viewbox(0, 0, currentViewBox.width < widthContainer ? widthContainer + autoScallingOffsetMargin : currentViewBox.width, currentViewBox.height < heightContainer ? heightContainer + autoScallingOffsetMargin : currentViewBox.height)
+
     return {
         containerPos: {
             x: 0,
@@ -221,6 +235,12 @@ export const alignLogoRight = (props: AlignProps, draw: Svg) : ContainerData => 
     logo.move(textContainerWidth, cy - logoDim.height / 2)
     title.move(ctx - titleDim.width / 2, cy - (cty - titleDim.height / 2) - titleDim.height / 2)
     slogan.move(ctx - sloganDim.width / 2, cy + (cty - sloganDim.height / 2) - sloganDim.height / 2)
+
+    const currentViewBox = draw.viewbox()
+    
+    // AUTOSCAllING
+    // check if the current element occupy more than the initial size of the viewbox 
+    draw.viewbox(0, 0, currentViewBox.width < widthContainer ? widthContainer + autoScallingOffsetMargin : currentViewBox.width, currentViewBox.height < heightContainer ? heightContainer + autoScallingOffsetMargin : currentViewBox.height)
 
     return {
         containerPos: {

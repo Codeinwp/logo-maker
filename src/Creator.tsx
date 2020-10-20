@@ -1,20 +1,27 @@
 import * as React from "react"
+import { Logo1, LogoSVGImport } from "./assets/logos"
 import CreateLogo from "./components/CreateLogo"
-import SelectLogo from "./components/SelectLogo"
+import SelectLogo from "./components/ui/SelectLogo"
+import SelectTypography, {
+    defaultValues as typographyDefaultValues,
+    TypographyData,
+} from "./components/ui/SelectTypography"
 
 type MenuOptions = "logo" | "typography" | "layout" | "colors"
 
 const Creator: React.FunctionComponent<unknown> = () => {
     const [menuOption, setMenuOption] = React.useState<MenuOptions>("logo")
+    const [logo, setLogo] = React.useState<LogoSVGImport>(Logo1)
+    const [typography, setTypography] = React.useState<TypographyData>(typographyDefaultValues)
 
     const renderRightSidePanel = () => {
         switch (menuOption) {
             case "logo":
-                return <SelectLogo />
+                return <SelectLogo setLogo={setLogo} />
             case "layout":
                 return <div>layout</div>
             case "typography":
-                return <div>typography</div>
+                return <SelectTypography typography={typography} setTypography={setTypography} />
             case "colors":
                 return <div>colors</div>
         }
@@ -52,7 +59,23 @@ const Creator: React.FunctionComponent<unknown> = () => {
                     </div>
                 </div>
                 <div className="flex flex-auto m-1 lg:m-8 content-center">
-                    <CreateLogo containerSize={{ width: 300, height: 280 }} />
+                    <CreateLogo
+                        containerSize={{ width: 300, height: 280 }}
+                        imageSize={{ width: 200, height: 200 }}
+                        logoSVG={logo.svg}
+                        title={typography.title.text}
+                        slogan={typography.slogan.text}
+                        style={{
+                            title: {
+                                fontFamily: typography.title.fontFamily,
+                                fontSize: typography.title.fontSize,
+                            },
+                            slogan: {
+                                fontFamily: typography.slogan.fontFamily,
+                                fontSize: typography.slogan.fontSize,
+                            },
+                        }}
+                    />
                 </div>
                 <div className="m-2 lg:m-16">{renderRightSidePanel()}</div>
             </div>

@@ -1,10 +1,18 @@
 import * as React from "react"
-import logos from "../assets/logos"
+import logos, { LogoSVGImport } from "../../assets/logos"
 import LogoItem from "./LogoItem"
 
-const SelectLogo: React.FunctionComponent<unknown> = () => {
+type SelectLogoProps = {
+    setLogo: React.Dispatch<React.SetStateAction<LogoSVGImport>>
+}
+
+const SelectLogo: React.FunctionComponent<SelectLogoProps> = (props: SelectLogoProps) => {
+    const { setLogo } = props
+
     const renderLogos = () => {
-        return logos.map((logo, index) => <LogoItem key={index} logo={logo} />)
+        return logos.map((logo, index) => (
+            <LogoItem onClick={() => setLogo(logo)} key={index} logo={logo} />
+        ))
     }
 
     return (

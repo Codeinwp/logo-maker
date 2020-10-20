@@ -51,8 +51,8 @@ const defaultProps = {
         height: 200,
     },
     imageSize: {
-        width: 300,
-        height: 300,
+        width: 400,
+        height: 400,
     },
     logoDim: {
         width: 100,
@@ -124,6 +124,7 @@ const CreateLogo: React.FunctionComponent<CreateLogoPropsComponent> = (
                 .css("background-color", style.backgroundColor)
 
             moveToCenter(
+                draw,
                 imageSize,
                 alignLogoTop(
                     {
