@@ -1,7 +1,8 @@
 import * as React from "react"
 import { SVG } from "@svgdotjs/svg.js"
 import { moveToCenter } from "./utility"
-import { alignLogoTop } from "./alignFunctions"
+import { alignLogoLeft, alignLogoRight, alignLogoTop } from "./alignFunctions"
+import { LogoAlignOptions } from "./ui/SelectLayout"
 
 type CreateLogoPropsComponent = {
     containerSize?: {
@@ -17,6 +18,7 @@ type CreateLogoPropsComponent = {
         height: number
     }
     logoSVG?: string
+    logoAlign?: LogoAlignOptions
     title?: string
     slogan?: string
     style?: {
@@ -60,6 +62,7 @@ const defaultProps = {
     },
     logoSVG: logoPath,
     title: "Default title",
+    logoAlign: "align-top",
     slogan: "Default slogan",
     style: {
         backgroundColor: "#f00",
@@ -94,6 +97,7 @@ const CreateLogo: React.FunctionComponent<CreateLogoPropsComponent> = (
             const logoDim = props.logoDim || defaultProps.logoDim
             const logoSVG = props.logoSVG || defaultProps.logoSVG
             const title = props.title || defaultProps.title
+            const logoAlign = props.logoAlign || defaultProps.logoAlign
             const slogan = props.slogan || defaultProps.slogan
             const style = {
                 backgroundColor:
@@ -123,20 +127,59 @@ const CreateLogo: React.FunctionComponent<CreateLogoPropsComponent> = (
                 .viewbox(0, 0, imageSize.width, imageSize.height)
                 .css("background-color", style.backgroundColor)
 
-            moveToCenter(
-                draw,
-                imageSize,
-                alignLogoTop(
-                    {
-                        logoDim,
-                        logoSVG,
-                        title,
-                        slogan,
-                        style,
-                    },
-                    draw
-                )
-            )
+            const getAlignedLogo = () => {
+                switch (logoAlign) {
+                    case "align-top":
+                        return alignLogoTop(
+                            {
+                                logoDim,
+                                logoSVG,
+                                title,
+                                slogan,
+                                style,
+                            },
+                            draw
+                        )
+                    case "align-left":
+                        return alignLogoLeft(
+                            {
+                                logoDim,
+                                logoSVG,
+                                title,
+                                slogan,
+                                style,
+                            },
+                            draw
+                        )
+                    case "align-right":
+                        return alignLogoRight(
+                            {
+                                logoDim,
+                                logoSVG,
+                                title,
+                                slogan,
+                                style,
+                            },
+                            draw
+                        )
+                    default:
+                        console.log(
+                            "Invalid Type. The logo will be aligned top as fallback option!"
+                        )
+                        return alignLogoTop(
+                            {
+                                logoDim,
+                                logoSVG,
+                                title,
+                                slogan,
+                                style,
+                            },
+                            draw
+                        )
+                }
+            }
+
+            moveToCenter(draw, imageSize, getAlignedLogo())
         }
     }, [props])
 

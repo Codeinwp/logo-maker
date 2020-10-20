@@ -149,7 +149,7 @@ export const alignLogoLeft = (props: AlignProps, draw: Svg) : ContainerData => {
     // so the width of the container is equal with the width of the largest element
     // and the height is the sum of all the element's height
     const widthContainer = logoDim.width + Math.max( titleDim.width, sloganDim.width)
-    const heightContainer = logoDim.height + titleDim.height + sloganDim.height
+    const heightContainer = Math.max(logoDim.height, titleDim.height + sloganDim.height)
     const cx = widthContainer / 2
     const cy = heightContainer / 2
 
@@ -160,7 +160,7 @@ export const alignLogoLeft = (props: AlignProps, draw: Svg) : ContainerData => {
 
     logo.move(0, cy - logoDim.height / 2)
     title.move(logoDim.width + ctx - titleDim.width / 2, cy - (cty - titleDim.height / 2) - titleDim.height / 2)
-    slogan.move(logoDim.width + ctx - sloganDim.width / 2, cy + (cty - sloganDim.height / 2) - sloganDim.height / 2 + titleDim.height)
+    slogan.move(logoDim.width + ctx - sloganDim.width / 2, cy + (cty - sloganDim.height / 2) - sloganDim.height / 2 )
 
     const currentViewBox = draw.viewbox()
     
@@ -223,7 +223,7 @@ export const alignLogoRight = (props: AlignProps, draw: Svg) : ContainerData => 
     // so the width of the container is equal with the width of the largest element
     // and the height is the sum of all the element's height
     const widthContainer = logoDim.width + Math.max( titleDim.width, sloganDim.width)
-    const heightContainer = logoDim.height + titleDim.height + sloganDim.height
+    const heightContainer = Math.max(logoDim.height, titleDim.height + sloganDim.height)
     const cx = widthContainer / 2
     const cy = heightContainer / 2
 

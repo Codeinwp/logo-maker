@@ -1,5 +1,5 @@
 import * as React from "react"
-import Select, { ValueType } from "react-select"
+import Select from "react-select"
 
 export type TypographyData = {
     title: {

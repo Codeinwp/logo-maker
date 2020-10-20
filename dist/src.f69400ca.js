@@ -40327,7 +40327,7 @@ var alignLogoLeft = function alignLogoLeft(props, draw) {
   // and the height is the sum of all the element's height
 
   var widthContainer = logoDim.width + Math.max(titleDim.width, sloganDim.width);
-  var heightContainer = logoDim.height + titleDim.height + sloganDim.height;
+  var heightContainer = Math.max(logoDim.height, titleDim.height + sloganDim.height);
   var cx = widthContainer / 2;
   var cy = heightContainer / 2;
   var textContainerWidth = Math.max(titleDim.width, sloganDim.width);
@@ -40336,7 +40336,7 @@ var alignLogoLeft = function alignLogoLeft(props, draw) {
   var cty = textContainerHeight / 2;
   logo.move(0, cy - logoDim.height / 2);
   title.move(logoDim.width + ctx - titleDim.width / 2, cy - (cty - titleDim.height / 2) - titleDim.height / 2);
-  slogan.move(logoDim.width + ctx - sloganDim.width / 2, cy + (cty - sloganDim.height / 2) - sloganDim.height / 2 + titleDim.height);
+  slogan.move(logoDim.width + ctx - sloganDim.width / 2, cy + (cty - sloganDim.height / 2) - sloganDim.height / 2);
   var currentViewBox = draw.viewbox(); // AUTOSCAllING
   // check if the current element occupy more than the initial size of the viewbox 
 
@@ -40402,7 +40402,7 @@ var alignLogoRight = function alignLogoRight(props, draw) {
   // and the height is the sum of all the element's height
 
   var widthContainer = logoDim.width + Math.max(titleDim.width, sloganDim.width);
-  var heightContainer = logoDim.height + titleDim.height + sloganDim.height;
+  var heightContainer = Math.max(logoDim.height, titleDim.height + sloganDim.height);
   var cx = widthContainer / 2;
   var cy = heightContainer / 2;
   var textContainerWidth = Math.max(titleDim.width, sloganDim.width);
@@ -40470,6 +40470,7 @@ var defaultProps = {
   },
   logoSVG: logoPath,
   title: "Default title",
+  logoAlign: "align-top",
   slogan: "Default slogan",
   style: {
     backgroundColor: "#f00",
@@ -40503,6 +40504,7 @@ var CreateLogo = function CreateLogo(props) {
       var logoDim = props.logoDim || defaultProps.logoDim;
       var logoSVG = props.logoSVG || defaultProps.logoSVG;
       var title = props.title || defaultProps.title;
+      var logoAlign = props.logoAlign || defaultProps.logoAlign;
       var slogan = props.slogan || defaultProps.slogan;
       var style = {
         backgroundColor: ((_a = props === null || props === void 0 ? void 0 : props.style) === null || _a === void 0 ? void 0 : _a.backgroundColor) || defaultProps.style.backgroundColor,
@@ -40522,13 +40524,49 @@ var CreateLogo = function CreateLogo(props) {
       };
       divRef.current.textContent = "";
       var draw = (0, _svg.SVG)().addTo(divRef.current).size(containerSize.width, containerSize.height).viewbox(0, 0, imageSize.width, imageSize.height).css("background-color", style.backgroundColor);
-      (0, _utility.moveToCenter)(draw, imageSize, (0, _alignFunctions.alignLogoTop)({
-        logoDim: logoDim,
-        logoSVG: logoSVG,
-        title: title,
-        slogan: slogan,
-        style: style
-      }, draw));
+
+      var getAlignedLogo = function getAlignedLogo() {
+        switch (logoAlign) {
+          case "align-top":
+            return (0, _alignFunctions.alignLogoTop)({
+              logoDim: logoDim,
+              logoSVG: logoSVG,
+              title: title,
+              slogan: slogan,
+              style: style
+            }, draw);
+
+          case "align-left":
+            return (0, _alignFunctions.alignLogoLeft)({
+              logoDim: logoDim,
+              logoSVG: logoSVG,
+              title: title,
+              slogan: slogan,
+              style: style
+            }, draw);
+
+          case "align-right":
+            return (0, _alignFunctions.alignLogoRight)({
+              logoDim: logoDim,
+              logoSVG: logoSVG,
+              title: title,
+              slogan: slogan,
+              style: style
+            }, draw);
+
+          default:
+            console.log("Invalid Type. The logo will be aligned top as fallback option!");
+            return (0, _alignFunctions.alignLogoTop)({
+              logoDim: logoDim,
+              logoSVG: logoSVG,
+              title: title,
+              slogan: slogan,
+              style: style
+            }, draw);
+        }
+      };
+
+      (0, _utility.moveToCenter)(draw, imageSize, getAlignedLogo());
     }
   }, [props]);
   return React.createElement("div", {
@@ -40539,7 +40577,45 @@ var CreateLogo = function CreateLogo(props) {
 
 var _default = CreateLogo;
 exports.default = _default;
-},{"react":"../node_modules/react/index.js","@svgdotjs/svg.js":"../node_modules/@svgdotjs/svg.js/dist/svg.esm.js","./utility":"components/utility.ts","./alignFunctions":"components/alignFunctions.ts"}],"components/ui/LogoItem.tsx":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js","@svgdotjs/svg.js":"../node_modules/@svgdotjs/svg.js/dist/svg.esm.js","./utility":"components/utility.ts","./alignFunctions":"components/alignFunctions.ts"}],"components/ui/SelectLayout.tsx":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var React = _interopRequireWildcard(require("react"));
+
+function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+
+var SelectLayout = function SelectLayout(props) {
+  var setLogoAlign = props.setLogoAlign;
+  return React.createElement("div", {
+    className: "flex flex-col"
+  }, React.createElement("button", {
+    className: "m-4",
+    onClick: function onClick() {
+      return setLogoAlign("align-top");
+    }
+  }, "Logo TOP"), React.createElement("button", {
+    className: "m-4",
+    onClick: function onClick() {
+      return setLogoAlign("align-left");
+    }
+  }, "Logo LEFT"), React.createElement("button", {
+    className: "m-4",
+    onClick: function onClick() {
+      return setLogoAlign("align-right");
+    }
+  }, "Logo RIGHT"));
+};
+
+var _default = SelectLayout;
+exports.default = _default;
+},{"react":"../node_modules/react/index.js"}],"components/ui/LogoItem.tsx":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -48956,6 +49032,8 @@ var _logos = require("./assets/logos");
 
 var _CreateLogo = _interopRequireDefault(require("./components/CreateLogo"));
 
+var _SelectLayout = _interopRequireDefault(require("./components/ui/SelectLayout"));
+
 var _SelectLogo = _interopRequireDefault(require("./components/ui/SelectLogo"));
 
 var _SelectTypography = _interopRequireWildcard(require("./components/ui/SelectTypography"));
@@ -48994,6 +49072,11 @@ var Creator = function Creator() {
       typography = _React$useState6[0],
       setTypography = _React$useState6[1];
 
+  var _React$useState7 = React.useState("align-top"),
+      _React$useState8 = _slicedToArray(_React$useState7, 2),
+      logoAlign = _React$useState8[0],
+      setLogoAlign = _React$useState8[1];
+
   var renderRightSidePanel = function renderRightSidePanel() {
     switch (menuOption) {
       case "logo":
@@ -49002,7 +49085,10 @@ var Creator = function Creator() {
         });
 
       case "layout":
-        return React.createElement("div", null, "layout");
+        return React.createElement(_SelectLayout.default, {
+          logoAlign: logoAlign,
+          setLogoAlign: setLogoAlign
+        });
 
       case "typography":
         return React.createElement(_SelectTypography.default, {
@@ -49055,6 +49141,7 @@ var Creator = function Creator() {
       height: 200
     },
     logoSVG: logo.svg,
+    logoAlign: logoAlign,
     title: typography.title.text,
     slogan: typography.slogan.text,
     style: {
@@ -49074,7 +49161,7 @@ var Creator = function Creator() {
 
 var _default = Creator;
 exports.default = _default;
-},{"react":"../node_modules/react/index.js","./assets/logos":"assets/logos/index.ts","./components/CreateLogo":"components/CreateLogo.tsx","./components/ui/SelectLogo":"components/ui/SelectLogo.tsx","./components/ui/SelectTypography":"components/ui/SelectTypography.tsx"}],"index.tsx":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js","./assets/logos":"assets/logos/index.ts","./components/CreateLogo":"components/CreateLogo.tsx","./components/ui/SelectLayout":"components/ui/SelectLayout.tsx","./components/ui/SelectLogo":"components/ui/SelectLogo.tsx","./components/ui/SelectTypography":"components/ui/SelectTypography.tsx"}],"index.tsx":[function(require,module,exports) {
 "use strict";
 
 var _react = _interopRequireDefault(require("react"));
@@ -49127,7 +49214,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "60829" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "62451" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
