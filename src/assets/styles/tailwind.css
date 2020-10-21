@@ -13,3 +13,6 @@
 /* Stop purging. */
 
 /* Your own custom utilities */
+.max-content {
+    width: max-content;
+}

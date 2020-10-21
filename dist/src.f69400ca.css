@@ -107112,6 +107112,9 @@ video {
 /* Stop purging. */
 
 /* Your own custom utilities */
+.max-content {
+    width: max-content;
+}
 
 
 /*# sourceMappingURL=/src.f69400ca.css.map */

@@ -11,15 +11,28 @@ const SelectLayout: React.FunctionComponent<SelectLayoutProps> = (props: SelectL
     const { setLogoAlign } = props
     return (
         <div className="flex flex-col">
-            <button className="m-4" onClick={() => setLogoAlign("align-top")}>
-                Logo TOP
-            </button>
-            <button className="m-4" onClick={() => setLogoAlign("align-left")}>
-                Logo LEFT
-            </button>
-            <button className="m-4" onClick={() => setLogoAlign("align-right")}>
-                Logo RIGHT
-            </button>
+            <h1 className="text-xl text-gray-500 my-1">LOGO OPTIONS</h1>
+            <p className="my-1">Select a symbol for the logo</p>
+            <div className="flex flex-col">
+                <button
+                    className="box-border w-auto p-2 my-4 border-2 hover:border-blue-600 max-content rounded-lg"
+                    onClick={() => setLogoAlign("align-top")}
+                >
+                    Logo TOP
+                </button>
+                <button
+                    className="box-border w-auto p-2 my-4 border-2 hover:border-blue-600 max-content rounded-lg"
+                    onClick={() => setLogoAlign("align-left")}
+                >
+                    Logo LEFT
+                </button>
+                <button
+                    className="box-border w-auto p-2 my-4 border-2 hover:border-blue-600 max-content rounded-lg"
+                    onClick={() => setLogoAlign("align-right")}
+                >
+                    Logo RIGHT
+                </button>
+            </div>
         </div>
     )
 }

@@ -104,41 +104,55 @@ const SelectTypography: React.FunctionComponent<SelectTypographyProps> = (
     }
 
     return (
-        <div className="w-24" style={{ minWidth: 280 + "px" }}>
-            <div>
-                <h1>LOGO</h1>
-                <label htmlFor="select-title-text">Font Family</label>
+        <div className="w-auto">
+            <div className="container m-4 flex flex-col">
+                <h1 className="text-xl my-1 text-gray-500">LOGO</h1>
+                <label className="my-1" htmlFor="select-title-text">
+                    Title
+                </label>
                 <input
                     value={typography.title.text}
+                    className="border p-1"
                     onChange={(e) => onTitleTextChange(e.target.value)}
                 />
-                <label htmlFor="select-title-font-family">Font Family</label>
+                <label className="my-1" htmlFor="select-title-font-family">
+                    Font Family
+                </label>
                 <Select
                     id="select-title-font-family"
                     onChange={onTitleFontFamilyChange}
                     options={fontOptions}
                 />
-                <label htmlFor="select-title-font-size">Font Size</label>
+                <label className="my-1" htmlFor="select-title-font-size">
+                    Font Size
+                </label>
                 <Select
                     id="select-title-font-size"
                     options={titleSizeOptions}
                     onChange={onTitleFontSizeChange}
                 />
             </div>
-            <div>
-                <h1>SLOGAN</h1>
-                <label htmlFor="select-slogan-text">Font Family</label>
+            <div className="container m-4 flex flex-col">
+                <h1 className="text-xl my-1">SLOGAN</h1>
+                <label className="my-1" htmlFor="select-slogan-text">
+                    Slogan
+                </label>
                 <input
                     value={typography.slogan.text}
+                    className="border m-b-1 p-1"
                     onChange={(e) => onSloganTextChange(e.target.value)}
                 />
-                <label htmlFor="select-slogan-font-family">Font Family</label>
+                <label className="my-1" htmlFor="select-slogan-font-family">
+                    Font Family
+                </label>
                 <Select
                     id="select-slogan-font-family"
                     onChange={onSloganFontFamilyChange}
                     options={fontOptions}
                 />
-                <label htmlFor="select-slogan-font-size">Font Size</label>
+                <label className="my-1" htmlFor="select-slogan-font-size">
+                    Font Size
+                </label>
                 <Select
                     id="select-slogan-font-size"
                     options={sloganSizeOptions}

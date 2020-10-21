@@ -54693,20 +54693,26 @@ var SelectColor = function SelectColor(props) {
     setColors(Object.assign({}, colors));
   };
 
-  return React.createElement("div", {
-    style: {
-      width: 200 + "px"
-    }
-  }, React.createElement("p", null, "Background Color"), React.createElement(_reactColor.SliderPicker, {
+  return React.createElement("div", null, React.createElement("h1", {
+    className: "text-xl text-gray-500"
+  }, "COLOR PALETTE"), React.createElement("p", {
+    className: "my-1"
+  }, "Background Color"), React.createElement(_reactColor.SliderPicker, {
     color: colors.backgroundColor,
     onChangeComplete: onBackgroundColor
-  }), React.createElement("p", null, "Logo Color"), React.createElement(_reactColor.SliderPicker, {
+  }), React.createElement("p", {
+    className: "my-1"
+  }, "Logo Color"), React.createElement(_reactColor.SliderPicker, {
     color: colors.logoColor,
     onChangeComplete: onLogoColor
-  }), React.createElement("p", null, "Title Color"), React.createElement(_reactColor.SliderPicker, {
+  }), React.createElement("p", {
+    className: "my-1"
+  }, "Title Color"), React.createElement(_reactColor.SliderPicker, {
     color: colors.titleColor,
     onChangeComplete: onTitleColor
-  }), React.createElement("p", null, "Slogan Color"), React.createElement(_reactColor.SliderPicker, {
+  }), React.createElement("p", {
+    className: "my-1"
+  }, "Slogan Color"), React.createElement(_reactColor.SliderPicker, {
     color: colors.sloganColor,
     onChangeComplete: onSloganColor
   }));
@@ -54732,22 +54738,28 @@ var SelectLayout = function SelectLayout(props) {
   var setLogoAlign = props.setLogoAlign;
   return React.createElement("div", {
     className: "flex flex-col"
+  }, React.createElement("h1", {
+    className: "text-xl text-gray-500 my-1"
+  }, "LOGO OPTIONS"), React.createElement("p", {
+    className: "my-1"
+  }, "Select a symbol for the logo"), React.createElement("div", {
+    className: "flex flex-col"
   }, React.createElement("button", {
-    className: "m-4",
+    className: "box-border w-auto p-2 my-4 border-2 hover:border-blue-600 max-content rounded-lg",
     onClick: function onClick() {
       return setLogoAlign("align-top");
     }
   }, "Logo TOP"), React.createElement("button", {
-    className: "m-4",
+    className: "box-border w-auto p-2 my-4 border-2 hover:border-blue-600 max-content rounded-lg",
     onClick: function onClick() {
       return setLogoAlign("align-left");
     }
   }, "Logo LEFT"), React.createElement("button", {
-    className: "m-4",
+    className: "box-border w-auto p-2 my-4 border-2 hover:border-blue-600 max-content rounded-lg",
     onClick: function onClick() {
       return setLogoAlign("align-right");
     }
-  }, "Logo RIGHT"));
+  }, "Logo RIGHT")));
 };
 
 var _default = SelectLayout;
@@ -54827,8 +54839,10 @@ var SelectLogo = function SelectLogo(props) {
   };
 
   return React.createElement("div", null, React.createElement("h1", {
-    className: "font-bold"
-  }, "Logo Options"), React.createElement("p", null, "Select a symbol for the logo"), React.createElement("div", {
+    className: "text-xl text-gray-500"
+  }, "Logo Options"), React.createElement("p", {
+    className: "my-2"
+  }, "Select a symbol for the logo"), React.createElement("div", {
     className: "h-32 lg:h-auto overflow-auto overscroll-auto md:overscroll-contain lg:overscroll-none grid grid-cols-3 gap-4"
   }, renderLogos()));
 };
@@ -62247,43 +62261,56 @@ var SelectTypography = function SelectTypography(props) {
   };
 
   return React.createElement("div", {
-    className: "w-24",
-    style: {
-      minWidth: 280 + "px"
-    }
-  }, React.createElement("div", null, React.createElement("h1", null, "LOGO"), React.createElement("label", {
+    className: "w-auto"
+  }, React.createElement("div", {
+    className: "container m-4 flex flex-col"
+  }, React.createElement("h1", {
+    className: "text-xl my-1 text-gray-500"
+  }, "LOGO"), React.createElement("label", {
+    className: "my-1",
     htmlFor: "select-title-text"
-  }, "Font Family"), React.createElement("input", {
+  }, "Title"), React.createElement("input", {
     value: typography.title.text,
+    className: "border p-1",
     onChange: function onChange(e) {
       return onTitleTextChange(e.target.value);
     }
   }), React.createElement("label", {
+    className: "my-1",
     htmlFor: "select-title-font-family"
   }, "Font Family"), React.createElement(_reactSelect.default, {
     id: "select-title-font-family",
     onChange: onTitleFontFamilyChange,
     options: fontOptions
   }), React.createElement("label", {
+    className: "my-1",
     htmlFor: "select-title-font-size"
   }, "Font Size"), React.createElement(_reactSelect.default, {
     id: "select-title-font-size",
     options: titleSizeOptions,
     onChange: onTitleFontSizeChange
-  })), React.createElement("div", null, React.createElement("h1", null, "SLOGAN"), React.createElement("label", {
+  })), React.createElement("div", {
+    className: "container m-4 flex flex-col"
+  }, React.createElement("h1", {
+    className: "text-xl my-1"
+  }, "SLOGAN"), React.createElement("label", {
+    className: "my-1",
     htmlFor: "select-slogan-text"
-  }, "Font Family"), React.createElement("input", {
+  }, "Slogan"), React.createElement("input", {
     value: typography.slogan.text,
+    className: "border m-b-1 p-1",
     onChange: function onChange(e) {
       return onSloganTextChange(e.target.value);
     }
   }), React.createElement("label", {
+    className: "my-1",
     htmlFor: "select-slogan-font-family"
   }, "Font Family"), React.createElement(_reactSelect.default, {
     id: "select-slogan-font-family",
     onChange: onSloganFontFamilyChange,
     options: fontOptions
   }), React.createElement("label", {
+    className: "my-1",
     htmlFor: "select-slogan-font-size"
   }, "Font Size"), React.createElement(_reactSelect.default, {
     id: "select-slogan-font-size",
@@ -62390,37 +62417,37 @@ var Creator = function Creator() {
   };
 
   return React.createElement("div", {
-    className: "flex flex-col justify-center"
+    className: "flex flex-col"
   }, React.createElement("div", {
-    className: "flex justify-center"
+    className: "flex w-auto  justify-center"
   }, React.createElement("div", {
-    className: "flex flex-initial flex-col lg:flex-row"
+    className: "flex flex-initial flex-col lg:flex-row w-full justify-evenly"
   }, React.createElement("div", {
-    className: "flex justify-center m-1 lg:m-16"
+    className: "box-border flex justify-end m-1 lg:m-16 w-1/4"
   }, React.createElement("div", {
-    className: "grid gap-2 grid-cols-2 lg:grid-cols-1"
+    className: "grid h-40 gap-2 grid-cols-2 lg:grid-cols-1"
   }, React.createElement("button", {
     onClick: function onClick() {
       return setMenuOption("logo");
     },
-    className: "box-content h-auto w-18 bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded"
+    className: "box-border w-auto p-2 text-left bg-transparent text-gray-500 font-semibold hover:text-black"
   }, "Logo"), React.createElement("button", {
     onClick: function onClick() {
       return setMenuOption("typography");
     },
-    className: "box-content h-auto w-18 bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded"
+    className: "box-border w-auto p-2 text-left bg-transparent text-gray-500 font-semibold hover:text-black"
   }, "Typography"), React.createElement("button", {
     onClick: function onClick() {
       return setMenuOption("layout");
     },
-    className: "box-content h-auto w-18 bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded"
+    className: "box-border w-auto p-2 text-left bg-transparent text-gray-500 font-semibold hover:text-black"
   }, "Layout"), React.createElement("button", {
     onClick: function onClick() {
       return setMenuOption("colors");
     },
-    className: "box-content h-auto w-18 bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded"
+    className: "box-border w-auto p-2 text-left bg-transparent text-gray-500 font-semibold hover:text-black"
   }, "Colors"))), React.createElement("div", {
-    className: "flex flex-auto m-1 lg:m-8 content-center"
+    className: "w-1/3 flex justify-center"
   }, React.createElement(_CreateLogo.default, {
     containerSize: {
       width: 300,
@@ -62451,7 +62478,7 @@ var Creator = function Creator() {
       }
     }
   })), React.createElement("div", {
-    className: "m-2 lg:m-16"
+    className: "m-2 lg:m-16 w-1/4"
   }, renderRightSidePanel()))), React.createElement(_DownloadButton.default, null));
 };
 
@@ -62510,7 +62537,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51285" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53219" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

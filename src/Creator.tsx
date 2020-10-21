@@ -36,38 +36,38 @@ const Creator: React.FunctionComponent<unknown> = () => {
     }
 
     return (
-        <div className="flex flex-col justify-center">
-            <div className="flex justify-center">
-                <div className="flex flex-initial flex-col lg:flex-row">
-                    <div className="flex justify-center m-1 lg:m-16">
-                        <div className="grid gap-2 grid-cols-2 lg:grid-cols-1">
+        <div className="flex flex-col">
+            <div className="flex w-auto  justify-center">
+                <div className="flex flex-initial flex-col lg:flex-row w-full justify-evenly">
+                    <div className="box-border flex justify-end m-1 lg:m-16 w-1/4">
+                        <div className="grid h-40 gap-2 grid-cols-2 lg:grid-cols-1">
                             <button
                                 onClick={() => setMenuOption("logo")}
-                                className="box-content h-auto w-18 bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded"
+                                className="box-border w-auto p-2 text-left bg-transparent text-gray-500 font-semibold hover:text-black"
                             >
                                 Logo
                             </button>
                             <button
                                 onClick={() => setMenuOption("typography")}
-                                className="box-content h-auto w-18 bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded"
+                                className="box-border w-auto p-2 text-left bg-transparent text-gray-500 font-semibold hover:text-black"
                             >
                                 Typography
                             </button>
                             <button
                                 onClick={() => setMenuOption("layout")}
-                                className="box-content h-auto w-18 bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded"
+                                className="box-border w-auto p-2 text-left bg-transparent text-gray-500 font-semibold hover:text-black"
                             >
                                 Layout
                             </button>
                             <button
                                 onClick={() => setMenuOption("colors")}
-                                className="box-content h-auto w-18 bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded"
+                                className="box-border w-auto p-2 text-left bg-transparent text-gray-500 font-semibold hover:text-black"
                             >
                                 Colors
                             </button>
                         </div>
                     </div>
-                    <div className="flex flex-auto m-1 lg:m-8 content-center">
+                    <div className="w-1/3 flex justify-center">
                         <CreateLogo
                             containerSize={{ width: 300, height: 280 }}
                             imageSize={{ width: 200, height: 200 }}
@@ -93,7 +93,7 @@ const Creator: React.FunctionComponent<unknown> = () => {
                             }}
                         />
                     </div>
-                    <div className="m-2 lg:m-16">{renderRightSidePanel()}</div>
+                    <div className="m-2 lg:m-16 w-1/4">{renderRightSidePanel()}</div>
                 </div>
             </div>
             <DownloadButton />

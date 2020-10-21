@@ -44,14 +44,15 @@ const SelectColor: React.FunctionComponent<SelectColorProps> = (props: SelectCol
     }
 
     return (
-        <div style={{ width: 200 + "px" }}>
-            <p>Background Color</p>
+        <div>
+            <h1 className="text-xl text-gray-500">COLOR PALETTE</h1>
+            <p className="my-1">Background Color</p>
             <SliderPicker color={colors.backgroundColor} onChangeComplete={onBackgroundColor} />
-            <p>Logo Color</p>
+            <p className="my-1">Logo Color</p>
             <SliderPicker color={colors.logoColor} onChangeComplete={onLogoColor} />
-            <p>Title Color</p>
+            <p className="my-1">Title Color</p>
             <SliderPicker color={colors.titleColor} onChangeComplete={onTitleColor} />
-            <p>Slogan Color</p>
+            <p className="my-1">Slogan Color</p>
             <SliderPicker color={colors.sloganColor} onChangeComplete={onSloganColor} />
         </div>
     )

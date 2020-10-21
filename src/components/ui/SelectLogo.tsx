@@ -17,8 +17,8 @@ const SelectLogo: React.FunctionComponent<SelectLogoProps> = (props: SelectLogoP
 
     return (
         <div>
-            <h1 className="font-bold">Logo Options</h1>
-            <p>Select a symbol for the logo</p>
+            <h1 className="text-xl text-gray-500">Logo Options</h1>
+            <p className="my-2">Select a symbol for the logo</p>
             <div
                 className="h-32 lg:h-auto overflow-auto overscroll-auto md:overscroll-contain lg:overscroll-none grid grid-cols-3 gap-4"
                 // style={{ maxHeight: 150 + "px", overflow: "auto" }}
