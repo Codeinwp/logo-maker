@@ -1,8 +1,10 @@
 dependencies:
   '@svgdotjs/svg.js': 3.0.16
+  '@types/react-color': 3.0.4
   '@types/react-select': 3.0.22
   postcss-import: 12.0.1
   react: 16.13.1
+  react-color: 2.18.1_react@16.13.1
   react-dom: 16.13.1_react@16.13.1
   react-select: 3.1.0_react-dom@16.13.1+react@16.13.1
 devDependencies:
@@ -1129,6 +1131,14 @@ packages:
     dev: true
     resolution:
       integrity: sha512-trnsAYxU3xnS1gPHPyU961coFyLkh4gAD/0zQ5mymY4yOZ+CYvsPqUbOFSw0aDM4y0tV7tiFxL/1XfXPNC6IPg==
+  /@icons/material/0.2.4_react@16.13.1:
+    dependencies:
+      react: 16.13.1
+    dev: false
+    peerDependencies:
+      react: '*'
+    resolution:
+      integrity: sha512-QPcGmICAPbGLGb6F/yNf/KzKqvFx8z5qx3D1yFqVAjoFmXK35EgyW+cJ57Te3CNsmzblwtzakLGFqHPqrfb4Tw==
   /@mrmlnc/readdir-enhanced/2.2.1:
     dependencies:
       call-me-maybe: 1.0.1
@@ -1235,6 +1245,13 @@ packages:
     dev: true
     resolution:
       integrity: sha512-1HcDas8SEj4z1Wc696tH56G8OlRaH/sqZOynNNB+HF0WOeXPaxTtbYzJY2oEfiUxjSKjhCKr+MvR7dCHcEelug==
+  /@types/react-color/3.0.4:
+    dependencies:
+      '@types/react': 16.9.53
+      '@types/reactcss': 1.2.3
+    dev: false
+    resolution:
+      integrity: sha512-EswbYJDF1kkrx93/YU+BbBtb46CCtDMvTiGmcOa/c5PETnwTiSWoseJ1oSWeRl/4rUXkhME9bVURvvPg0W5YQw==
   /@types/react-dom/16.9.8:
     dependencies:
       '@types/react': 16.9.51
@@ -1267,6 +1284,12 @@ packages:
     dev: false
     resolution:
       integrity: sha512-4nW60Sd4L7+WMXH1D6jCdVftuW7j4Za6zdp6tJ33Rqv0nk1ZAmQKML9ZLD4H0dehA3FZxXR/GM8gXplf82oNGw==
+  /@types/reactcss/1.2.3:
+    dependencies:
+      '@types/react': 16.9.53
+    dev: false
+    resolution:
+      integrity: sha512-d2gQQ0IL6hXLnoRfVYZukQNWHuVsE75DzFTLPUuyyEhJS8G2VvlE+qfQQ91SJjaMqlURRCNIsX7Jcsw6cEuJlA==
   /@typescript-eslint/eslint-plugin/4.4.0_a71b0516f86a95383173f79e74386c73:
     dependencies:
       '@typescript-eslint/experimental-utils': 4.4.0_eslint@7.10.0+typescript@4.0.3
@@ -4386,6 +4409,10 @@ packages:
       node: '>=0.10.0'
     resolution:
       integrity: sha1-7Nyo8TFE5mDxtb1B8S80edmN+48=
+  /material-colors/1.2.6:
+    dev: false
+    resolution:
+      integrity: sha512-6qE4B9deFBIa9YSpOc9O0Sgc43zTeVYbgDT5veRKSlB2+ZuHNoVVxA1L/ckMUayV9Ay9y7Z/SZCLcGteW9i7bg==
   /md5.js/1.3.5:
     dependencies:
       hash-base: 3.1.0
@@ -5691,6 +5718,19 @@ packages:
       node: '>= 0.6'
     resolution:
       integrity: sha512-Hrgsx+orqoygnmhFbKaHE6c296J+HTAQXoxEF6gNupROmmGJRoyzfG3ccAveqCBrwr/2yxQ5BVd/GTl5agOwSg==
+  /react-color/2.18.1_react@16.13.1:
+    dependencies:
+      '@icons/material': 0.2.4_react@16.13.1
+      lodash: 4.17.20
+      material-colors: 1.2.6
+      prop-types: 15.7.2
+      reactcss: 1.2.3
+      tinycolor2: 1.4.2
+    dev: false
+    peerDependencies:
+      react: '*'
+    resolution:
+      integrity: sha512-X5XpyJS6ncplZs74ak0JJoqPi+33Nzpv5RYWWxn17bslih+X7OlgmfpmGC1fNvdkK7/SGWYf1JJdn7D2n5gSuQ==
   /react-dom/16.13.1_react@16.13.1:
     dependencies:
       loose-envify: 1.4.0
@@ -5757,6 +5797,12 @@ packages:
       node: '>=0.10.0'
     resolution:
       integrity: sha512-YMZQQq32xHLX0bz5Mnibv1/LHb3Sqzngu7xstSM+vrkE5Kzr9xE0yMByK5kMoTK30YVJE61WfbxIFFvfeDKT1w==
+  /reactcss/1.2.3:
+    dependencies:
+      lodash: 4.17.20
+    dev: false
+    resolution:
+      integrity: sha512-KiwVUcFu1RErkI97ywr8nvx8dNOpT03rbnma0SSalTYjkrPYaEajR4a/MRt6DZ46K6arDRbWMNHF+xH7G7n/8A==
   /read-cache/1.0.0:
     dependencies:
       pify: 2.3.0
@@ -6676,6 +6722,10 @@ packages:
     dev: true
     resolution:
       integrity: sha512-pkY1fj1cKHb2seWDy0B16HeWyczlJA9/WW3u3c4z/NiWDsO3DOU5D7nhTLE9CF0yXv/QZFY7sEJmj24dK+Rrqw==
+  /tinycolor2/1.4.2:
+    dev: false
+    resolution:
+      integrity: sha512-vJhccZPs965sV/L2sU4oRQVAos0pQXwsvTLkWYdqJ+a8Q5kPFzJTuOFwy7UniPli44NKQGAglksjvOcpo95aZA==
   /to-arraybuffer/1.0.1:
     dev: true
     resolution:
@@ -7113,6 +7163,7 @@ specifiers:
   '@fullhuman/postcss-purgecss': ^3.0.0
   '@svgdotjs/svg.js': ^3.0.16
   '@types/react': ^16.9.51
+  '@types/react-color': ^3.0.4
   '@types/react-dom': ^16.9.8
   '@types/react-select': ^3.0.22
   '@typescript-eslint/eslint-plugin': ^4.4.0
@@ -7130,6 +7181,7 @@ specifiers:
   parcel-bundler: ^1.12.4
   postcss-import: ^12.0.1
   react: ^16.13.1
+  react-color: ^2.18.1
   react-dom: ^16.13.1
   react-select: ^3.1.0
   sass: ^1.27.0
