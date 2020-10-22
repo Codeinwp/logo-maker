@@ -49,15 +49,15 @@ const DownloadButton: React.FunctionComponent<unknown> = () => {
     }
 
     return (
-        <div className="container flex justify-center">
+        <div className="container flex justify-center max-content mx-8 my-4">
             <button
-                className="m-2 box-content  w-18 bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded"
+                className="m-2 box-content max-content bg-transparent bg-orange-600 font-semibold text-white py-2 px-4 rounded"
                 onClick={() => downloadSVG()}
             >
                 Download as SVG
             </button>
             <button
-                className="m-2 box-content  w-18 bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded"
+                className="m-2 box-content max-content bg-transparent bg-orange-600 font-semibold text-white py-2 px-4 rounded"
                 onClick={() => downloadSVGasPNG()}
             >
                 Download as PNG

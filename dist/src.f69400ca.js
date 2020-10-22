@@ -40571,7 +40571,6 @@ var CreateLogo = function CreateLogo(props) {
   }, [props]);
   return React.createElement("div", {
     id: "logo-image",
-    className: "self-center",
     ref: divRef
   });
 };
@@ -40642,14 +40641,14 @@ var DownloadButton = function DownloadButton() {
   };
 
   return React.createElement("div", {
-    className: "container flex justify-center"
+    className: "container flex justify-center max-content mx-8 my-4"
   }, React.createElement("button", {
-    className: "m-2 box-content  w-18 bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded",
+    className: "m-2 box-content max-content bg-transparent bg-orange-600 font-semibold text-white py-2 px-4 rounded",
     onClick: function onClick() {
       return downloadSVG();
     }
   }, "Download as SVG"), React.createElement("button", {
-    className: "m-2 box-content  w-18 bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded",
+    className: "m-2 box-content max-content bg-transparent bg-orange-600 font-semibold text-white py-2 px-4 rounded",
     onClick: function onClick() {
       return downloadSVGasPNG();
     }
@@ -54743,9 +54742,9 @@ var SelectLayout = function SelectLayout(props) {
   }, "LOGO OPTIONS"), React.createElement("p", {
     className: "my-1"
   }, "Select a symbol for the logo"), React.createElement("div", {
-    className: "flex flex-col"
+    className: "flex flex-col items-center items lg:items-start"
   }, React.createElement("button", {
-    className: "box-border w-auto p-2 my-4 border-2 hover:border-blue-600 max-content rounded-lg",
+    className: "box-border w-auto p-2 my-4 border-2 border-blue-600 lg:border-gray-300 hover:border-blue-600 max-content rounded-lg",
     onClick: function onClick() {
       return setLogoAlign("align-top");
     }
@@ -62417,15 +62416,17 @@ var Creator = function Creator() {
   };
 
   return React.createElement("div", {
-    className: "flex flex-col"
+    className: "flex flex-col-reverse lg:flex-col"
   }, React.createElement("div", {
-    className: "flex w-auto  justify-center"
+    className: "grid justify-items-end"
+  }, React.createElement(_DownloadButton.default, null)), React.createElement("div", {
+    className: "flex w-auto justify-center"
   }, React.createElement("div", {
-    className: "flex flex-initial flex-col lg:flex-row w-full justify-evenly"
+    className: "flex flex-initial flex-col lg:flex-row lg:w-full lg:justify-evenly"
   }, React.createElement("div", {
-    className: "box-border flex justify-end m-1 lg:m-16 w-1/4"
+    className: "box-border flex w-auto justify-center lg:max-content  lg:justify-end  lg:m-16 lg:w-1/4 lg:m-1"
   }, React.createElement("div", {
-    className: "grid h-40 gap-2 grid-cols-2 lg:grid-cols-1"
+    className: "grid h-20 grid-cols-2 lg:h-40 lg:grid-cols-1 lg:gap-2"
   }, React.createElement("button", {
     onClick: function onClick() {
       return setMenuOption("logo");
@@ -62447,7 +62448,7 @@ var Creator = function Creator() {
     },
     className: "box-border w-auto p-2 text-left bg-transparent text-gray-500 font-semibold hover:text-black"
   }, "Colors"))), React.createElement("div", {
-    className: "w-1/3 flex justify-center"
+    className: "flex justify-center lg:py-16 lg:w-1/3"
   }, React.createElement(_CreateLogo.default, {
     containerSize: {
       width: 300,
@@ -62478,8 +62479,8 @@ var Creator = function Creator() {
       }
     }
   })), React.createElement("div", {
-    className: "m-2 lg:m-16 w-1/4"
-  }, renderRightSidePanel()))), React.createElement(_DownloadButton.default, null));
+    className: "m-2 lg:m-16 lg:w-1/4"
+  }, renderRightSidePanel()))));
 };
 
 var _default = Creator;
@@ -62537,7 +62538,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53219" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55444" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

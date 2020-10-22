@@ -183,7 +183,7 @@ const CreateLogo: React.FunctionComponent<CreateLogoPropsComponent> = (
         }
     }, [props])
 
-    return <div id="logo-image" className="self-center" ref={divRef}></div>
+    return <div id="logo-image" ref={divRef}></div>
 }
 
 export default CreateLogo
