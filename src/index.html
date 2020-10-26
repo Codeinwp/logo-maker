@@ -10,6 +10,14 @@
         <div id="root" class="h-screen">
             <!-- Your react app will be rendered here -->
         </div>
+        <script>
+            window.process = {
+                env: {
+                    NODE_ENV: "production"
+                }
+            };
+            var __DEV__ = true;
+          </script>
         <script src="../src/index.tsx"></script>
     </body>
 </html>

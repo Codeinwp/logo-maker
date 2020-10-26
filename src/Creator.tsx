@@ -1,5 +1,4 @@
 import * as React from "react"
-import { Logo1, LogoSVGImport } from "./assets/logos"
 import CreateLogo from "./components/CreateLogo"
 import DownloadButton from "./components/ui/DownloadButton"
 import SelectColor, {
@@ -12,12 +11,13 @@ import SelectTypography, {
     defaultValues as typographyDefaultValues,
     TypographyData,
 } from "./components/ui/SelectTypography"
+import UIStore from "./stores/LogoModel"
 
 type MenuOptions = "logo" | "typography" | "layout" | "colors"
 
 const Creator: React.FunctionComponent<unknown> = () => {
     const [menuOption, setMenuOption] = React.useState<MenuOptions>("logo")
-    const [logo, setLogo] = React.useState<LogoSVGImport>(Logo1)
+    const logo = UIStore.useState((s) => s.logo.src)
     const [typography, setTypography] = React.useState<TypographyData>(typographyDefaultValues)
     const [logoAlign, setLogoAlign] = React.useState<LogoAlignOptions>("align-top")
     const [colors, setColors] = React.useState<ColorData>(colorsDefaultValues)
@@ -25,7 +25,7 @@ const Creator: React.FunctionComponent<unknown> = () => {
     const renderRightSidePanel = () => {
         switch (menuOption) {
             case "logo":
-                return <SelectLogo setLogo={setLogo} />
+                return <SelectLogo />
             case "layout":
                 return <SelectLayout logoAlign={logoAlign} setLogoAlign={setLogoAlign} />
             case "typography":
