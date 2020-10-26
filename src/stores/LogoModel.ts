@@ -44,12 +44,12 @@ export type TSlogan = {
 
 export type StoreProps = {
 	container: TLogoContainer
-	logg: TLogo,
+	logo: TLogo,
 	title: TTitle,
 	slogan: TSlogan
 } 
 
-export const UIStore = new Store({
+export const UIStore = new Store<StoreProps>({
 	container : {
 		width: 300,
 		height: 280,

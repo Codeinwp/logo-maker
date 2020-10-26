@@ -5,7 +5,7 @@ import SelectColor, {
     ColorData,
     defaultValues as colorsDefaultValues,
 } from "./components/ui/SelectColors"
-import SelectLayout, { LogoAlignOptions } from "./components/ui/SelectLayout"
+import SelectLayout from "./components/ui/SelectLayout"
 import SelectLogo from "./components/ui/SelectLogo"
 import SelectTypography from "./components/ui/SelectTypography"
 
@@ -17,7 +17,6 @@ const Creator: React.FunctionComponent<unknown> = () => {
     const [menuOption, setMenuOption] = React.useState<MenuOptions>("logo")
     const logo = UIStore.useState((s) => s.logo.src)
 
-    const [logoAlign, setLogoAlign] = React.useState<LogoAlignOptions>("align-top")
     const [colors, setColors] = React.useState<ColorData>(colorsDefaultValues)
 
     const renderRightSidePanel = () => {
@@ -25,7 +24,7 @@ const Creator: React.FunctionComponent<unknown> = () => {
             case "logo":
                 return <SelectLogo />
             case "layout":
-                return <SelectLayout logoAlign={logoAlign} setLogoAlign={setLogoAlign} />
+                return <SelectLayout />
             case "typography":
                 return <SelectTypography />
             case "colors":
@@ -73,7 +72,7 @@ const Creator: React.FunctionComponent<unknown> = () => {
                             containerSize={{ width: 300, height: 280 }}
                             imageSize={{ width: 200, height: 200 }}
                             logoSVG={logo.svg}
-                            logoAlign={logoAlign}
+                            logoAlign={UIStore.useState((s) => s.container.align)}
                             title={UIStore.useState((s) => s.title.text)}
                             slogan={UIStore.useState((s) => s.slogan.text)}
                             style={{

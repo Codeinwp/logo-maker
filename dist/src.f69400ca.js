@@ -54493,51 +54493,7 @@ var SelectColor = function SelectColor(props) {
 
 var _default = SelectColor;
 exports.default = _default;
-},{"react":"../node_modules/react/index.js","react-color":"../node_modules/react-color/lib/index.js"}],"components/ui/SelectLayout.tsx":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var React = _interopRequireWildcard(require("react"));
-
-function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
-
-function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
-
-var SelectLayout = function SelectLayout(props) {
-  var setLogoAlign = props.setLogoAlign;
-  return React.createElement("div", {
-    className: "flex flex-col"
-  }, React.createElement("h1", {
-    className: "text-xl text-gray-500 my-1"
-  }, "LOGO OPTIONS"), React.createElement("p", {
-    className: "my-1"
-  }, "Select a symbol for the logo"), React.createElement("div", {
-    className: "flex flex-col items-center items lg:items-start"
-  }, React.createElement("button", {
-    className: "box-border w-auto p-2 my-4 border-2 border-blue-600 lg:border-gray-300 hover:border-blue-600 max-content rounded-lg",
-    onClick: function onClick() {
-      return setLogoAlign("align-top");
-    }
-  }, "Logo TOP"), React.createElement("button", {
-    className: "box-border w-auto p-2 my-4 border-2 hover:border-blue-600 max-content rounded-lg",
-    onClick: function onClick() {
-      return setLogoAlign("align-left");
-    }
-  }, "Logo LEFT"), React.createElement("button", {
-    className: "box-border w-auto p-2 my-4 border-2 hover:border-blue-600 max-content rounded-lg",
-    onClick: function onClick() {
-      return setLogoAlign("align-right");
-    }
-  }, "Logo RIGHT")));
-};
-
-var _default = SelectLayout;
-exports.default = _default;
-},{"react":"../node_modules/react/index.js"}],"assets/logos/logo1.ts":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js","react-color":"../node_modules/react-color/lib/index.js"}],"assets/logos/logo1.ts":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -54763,46 +54719,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 // Useful for rendering a select input or a preview with all the logos available
 var _default = [_logo.default, _logo2.default, _logo3.default, _logo4.default, _logo5.default, _logo6.default, _logo7.default, _logo8.default, _logo9.default, _logo10.default];
 exports.default = _default;
-},{"./logo1":"assets/logos/logo1.ts","./logo2":"assets/logos/logo2.ts","./logo3":"assets/logos/logo3.ts","./logo4":"assets/logos/logo4.ts","./logo5":"assets/logos/logo5.ts","./logo6":"assets/logos/logo6.ts","./logo7":"assets/logos/logo7.ts","./logo8":"assets/logos/logo8.ts","./logo9":"assets/logos/logo9.ts","./logo10":"assets/logos/logo10.ts"}],"components/ui/LogoItem.tsx":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var _svg = require("@svgdotjs/svg.js");
-
-var React = _interopRequireWildcard(require("react"));
-
-function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
-
-function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
-
-var LogoItem = function LogoItem(props) {
-  var onClick = props.onClick,
-      logo = props.logo;
-  var itemRef = React.useRef(null);
-  React.useEffect(function () {
-    if (itemRef.current) {
-      itemRef.current.textContent = "";
-      var svgItem = (0, _svg.SVG)().addTo(itemRef.current).svg(logo.svg);
-      svgItem.viewbox(0, 0, svgItem.bbox().width, svgItem.bbox().height).size(50, 50).addClass("border-2 hover:border-blue-500 p-1 rounded");
-    }
-  }, [logo.svg]);
-  return React.createElement("button", {
-    onClick: onClick,
-    style: {
-      width: "max-content",
-      height: "max-content"
-    },
-    ref: itemRef
-  });
-};
-
-var _default = LogoItem;
-exports.default = _default;
-},{"@svgdotjs/svg.js":"../node_modules/@svgdotjs/svg.js/dist/svg.esm.js","react":"../node_modules/react/index.js"}],"../node_modules/fast-deep-equal/es6/index.js":[function(require,module,exports) {
+},{"./logo1":"assets/logos/logo1.ts","./logo2":"assets/logos/logo2.ts","./logo3":"assets/logos/logo3.ts","./logo4":"assets/logos/logo4.ts","./logo5":"assets/logos/logo5.ts","./logo6":"assets/logos/logo6.ts","./logo7":"assets/logos/logo7.ts","./logo8":"assets/logos/logo8.ts","./logo9":"assets/logos/logo9.ts","./logo10":"assets/logos/logo10.ts"}],"../node_modules/fast-deep-equal/es6/index.js":[function(require,module,exports) {
 'use strict';
 
 // do not edit .js files directly - edit src/index.jst
@@ -58892,7 +58809,99 @@ var UIStore = new _pullstate.Store({
 exports.UIStore = UIStore;
 var _default = UIStore;
 exports.default = _default;
-},{"./../assets/logos":"assets/logos/index.ts","pullstate":"../node_modules/pullstate/dist/index.es.js"}],"components/ui/SelectLogo.tsx":[function(require,module,exports) {
+},{"./../assets/logos":"assets/logos/index.ts","pullstate":"../node_modules/pullstate/dist/index.es.js"}],"components/ui/SelectLayout.tsx":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var React = _interopRequireWildcard(require("react"));
+
+var _LogoModel = _interopRequireDefault(require("~/stores/LogoModel"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+
+var SelectLayout = function SelectLayout() {
+  return React.createElement("div", {
+    className: "flex flex-col"
+  }, React.createElement("h1", {
+    className: "text-xl text-gray-500 my-1"
+  }, "LOGO OPTIONS"), React.createElement("p", {
+    className: "my-1"
+  }, "Select a symbol for the logo"), React.createElement("div", {
+    className: "flex flex-col items-center items lg:items-start"
+  }, React.createElement("button", {
+    className: "box-border w-auto p-2 my-4 border-2 border-blue-600 lg:border-gray-300 hover:border-blue-600 max-content rounded-lg",
+    onClick: function onClick() {
+      return _LogoModel.default.update(function (s) {
+        s.container.align = "align-top";
+      });
+    }
+  }, "Logo TOP"), React.createElement("button", {
+    className: "box-border w-auto p-2 my-4 border-2 hover:border-blue-600 max-content rounded-lg",
+    onClick: function onClick() {
+      return _LogoModel.default.update(function (s) {
+        s.container.align = "align-left";
+      });
+    }
+  }, "Logo LEFT"), React.createElement("button", {
+    className: "box-border w-auto p-2 my-4 border-2 hover:border-blue-600 max-content rounded-lg",
+    onClick: function onClick() {
+      return _LogoModel.default.update(function (s) {
+        s.container.align = "align-right";
+      });
+    }
+  }, "Logo RIGHT")));
+};
+
+var _default = SelectLayout;
+exports.default = _default;
+},{"react":"../node_modules/react/index.js","~/stores/LogoModel":"stores/LogoModel.ts"}],"components/ui/LogoItem.tsx":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _svg = require("@svgdotjs/svg.js");
+
+var React = _interopRequireWildcard(require("react"));
+
+function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+
+var LogoItem = function LogoItem(props) {
+  var onClick = props.onClick,
+      logo = props.logo;
+  var itemRef = React.useRef(null);
+  React.useEffect(function () {
+    if (itemRef.current) {
+      itemRef.current.textContent = "";
+      var svgItem = (0, _svg.SVG)().addTo(itemRef.current).svg(logo.svg);
+      svgItem.viewbox(0, 0, svgItem.bbox().width, svgItem.bbox().height).size(50, 50).addClass("border-2 hover:border-blue-500 p-1 rounded");
+    }
+  }, [logo.svg]);
+  return React.createElement("button", {
+    onClick: onClick,
+    style: {
+      width: "max-content",
+      height: "max-content"
+    },
+    ref: itemRef
+  });
+};
+
+var _default = LogoItem;
+exports.default = _default;
+},{"@svgdotjs/svg.js":"../node_modules/@svgdotjs/svg.js/dist/svg.esm.js","react":"../node_modules/react/index.js"}],"components/ui/SelectLogo.tsx":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -66473,15 +66482,10 @@ var Creator = function Creator() {
     return s.logo.src;
   });
 
-  var _React$useState3 = React.useState("align-top"),
+  var _React$useState3 = React.useState(_SelectColors.defaultValues),
       _React$useState4 = _slicedToArray(_React$useState3, 2),
-      logoAlign = _React$useState4[0],
-      setLogoAlign = _React$useState4[1];
-
-  var _React$useState5 = React.useState(_SelectColors.defaultValues),
-      _React$useState6 = _slicedToArray(_React$useState5, 2),
-      colors = _React$useState6[0],
-      setColors = _React$useState6[1];
+      colors = _React$useState4[0],
+      setColors = _React$useState4[1];
 
   var renderRightSidePanel = function renderRightSidePanel() {
     switch (menuOption) {
@@ -66489,10 +66493,7 @@ var Creator = function Creator() {
         return React.createElement(_SelectLogo.default, null);
 
       case "layout":
-        return React.createElement(_SelectLayout.default, {
-          logoAlign: logoAlign,
-          setLogoAlign: setLogoAlign
-        });
+        return React.createElement(_SelectLayout.default, null);
 
       case "typography":
         return React.createElement(_SelectTypography.default, null);
@@ -66549,7 +66550,9 @@ var Creator = function Creator() {
       height: 200
     },
     logoSVG: logo.svg,
-    logoAlign: logoAlign,
+    logoAlign: _LogoModel.default.useState(function (s) {
+      return s.container.align;
+    }),
     title: _LogoModel.default.useState(function (s) {
       return s.title.text;
     }),
