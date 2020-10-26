@@ -58881,10 +58881,10 @@ var UIStore = new _pullstate.Store({
     }
   },
   slogan: {
-    text: 'SLogan',
+    text: 'Slogan',
     style: {
       color: '#FFFFFF',
-      fontSize: 424,
+      fontSize: 24,
       fontFamily: 'Helvetica'
     }
   }
@@ -66251,11 +66251,13 @@ exports.default = _default;
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.default = exports.defaultValues = void 0;
+exports.default = void 0;
 
 var React = _interopRequireWildcard(require("react"));
 
 var _reactSelect = _interopRequireDefault(require("react-select"));
+
+var _LogoModel = _interopRequireDefault(require("~/stores/LogoModel"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -66275,23 +66277,7 @@ function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) return _arrayLikeToAr
 
 function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
 
-var defaultValues = {
-  title: {
-    text: "Optimole",
-    fontFamily: "Times New Roman",
-    fontSize: 40
-  },
-  slogan: {
-    text: "The best service for image optimization.",
-    fontFamily: "Times New Roman",
-    fontSize: 24
-  }
-};
-exports.defaultValues = defaultValues;
-
-var SelectTypography = function SelectTypography(props) {
-  var typography = props.typography,
-      setTypography = props.setTypography;
+var SelectTypography = function SelectTypography() {
   var fontOptions = [{
     value: "Times New Romans",
     label: "Times New Romans"
@@ -66322,37 +66308,52 @@ var SelectTypography = function SelectTypography(props) {
   });
 
   var onTitleTextChange = function onTitleTextChange(value) {
-    typography.title.text = value;
-    setTypography(Object.assign({}, typography));
+    _LogoModel.default.update(function (s) {
+      s.title.text = value;
+    });
   }; // eslint-disable-next-line @typescript-eslint/no-explicit-any
 
 
-  var onTitleFontFamilyChange = function onTitleFontFamilyChange(value) {
-    typography.title.fontFamily = value.value;
-    setTypography(Object.assign({}, typography));
+  var onTitleFontFamilyChange = function onTitleFontFamilyChange(_ref) {
+    var value = _ref.value;
+    console.log(value);
+
+    _LogoModel.default.update(function (s) {
+      s.title.style.fontFamily = value;
+    });
   }; // eslint-disable-next-line @typescript-eslint/no-explicit-any
 
 
-  var onTitleFontSizeChange = function onTitleFontSizeChange(value) {
-    typography.title.fontSize = value.value;
-    setTypography(Object.assign({}, typography));
+  var onTitleFontSizeChange = function onTitleFontSizeChange(_ref2) {
+    var value = _ref2.value;
+
+    _LogoModel.default.update(function (s) {
+      s.title.style.fontSize = value;
+    });
   };
 
   var onSloganTextChange = function onSloganTextChange(value) {
-    typography.slogan.text = value;
-    setTypography(Object.assign({}, typography));
+    _LogoModel.default.update(function (s) {
+      s.slogan.text = value;
+    });
   }; // eslint-disable-next-line @typescript-eslint/no-explicit-any
 
 
-  var onSloganFontFamilyChange = function onSloganFontFamilyChange(value) {
-    typography.slogan.fontFamily = value.value;
-    setTypography(Object.assign({}, typography));
+  var onSloganFontFamilyChange = function onSloganFontFamilyChange(_ref3) {
+    var value = _ref3.value;
+
+    _LogoModel.default.update(function (s) {
+      s.slogan.style.fontFamily = value;
+    });
   }; // eslint-disable-next-line @typescript-eslint/no-explicit-any
 
 
-  var onSloganFontSizeChange = function onSloganFontSizeChange(value) {
-    typography.slogan.fontSize = value.value;
-    setTypography(Object.assign({}, typography));
+  var onSloganFontSizeChange = function onSloganFontSizeChange(_ref4) {
+    var value = _ref4.value;
+
+    _LogoModel.default.update(function (s) {
+      s.slogan.style.fontSize = value;
+    });
   };
 
   return React.createElement("div", {
@@ -66365,7 +66366,9 @@ var SelectTypography = function SelectTypography(props) {
     className: "my-1",
     htmlFor: "select-title-text"
   }, "Title"), React.createElement("input", {
-    value: typography.title.text,
+    value: _LogoModel.default.useState(function (s) {
+      return s.title.text;
+    }),
     className: "border p-1",
     onChange: function onChange(e) {
       return onTitleTextChange(e.target.value);
@@ -66392,7 +66395,9 @@ var SelectTypography = function SelectTypography(props) {
     className: "my-1",
     htmlFor: "select-slogan-text"
   }, "Slogan"), React.createElement("input", {
-    value: typography.slogan.text,
+    value: _LogoModel.default.useState(function (s) {
+      return s.slogan.text;
+    }),
     className: "border m-b-1 p-1",
     onChange: function onChange(e) {
       return onSloganTextChange(e.target.value);
@@ -66416,7 +66421,7 @@ var SelectTypography = function SelectTypography(props) {
 
 var _default = SelectTypography;
 exports.default = _default;
-},{"react":"../node_modules/react/index.js","react-select":"../node_modules/react-select/dist/react-select.browser.esm.js"}],"Creator.tsx":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js","react-select":"../node_modules/react-select/dist/react-select.browser.esm.js","~/stores/LogoModel":"stores/LogoModel.ts"}],"Creator.tsx":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -66436,7 +66441,7 @@ var _SelectLayout = _interopRequireDefault(require("./components/ui/SelectLayout
 
 var _SelectLogo = _interopRequireDefault(require("./components/ui/SelectLogo"));
 
-var _SelectTypography = _interopRequireWildcard(require("./components/ui/SelectTypography"));
+var _SelectTypography = _interopRequireDefault(require("./components/ui/SelectTypography"));
 
 var _LogoModel = _interopRequireDefault(require("./stores/LogoModel"));
 
@@ -66468,20 +66473,15 @@ var Creator = function Creator() {
     return s.logo.src;
   });
 
-  var _React$useState3 = React.useState(_SelectTypography.defaultValues),
+  var _React$useState3 = React.useState("align-top"),
       _React$useState4 = _slicedToArray(_React$useState3, 2),
-      typography = _React$useState4[0],
-      setTypography = _React$useState4[1];
+      logoAlign = _React$useState4[0],
+      setLogoAlign = _React$useState4[1];
 
-  var _React$useState5 = React.useState("align-top"),
+  var _React$useState5 = React.useState(_SelectColors.defaultValues),
       _React$useState6 = _slicedToArray(_React$useState5, 2),
-      logoAlign = _React$useState6[0],
-      setLogoAlign = _React$useState6[1];
-
-  var _React$useState7 = React.useState(_SelectColors.defaultValues),
-      _React$useState8 = _slicedToArray(_React$useState7, 2),
-      colors = _React$useState8[0],
-      setColors = _React$useState8[1];
+      colors = _React$useState6[0],
+      setColors = _React$useState6[1];
 
   var renderRightSidePanel = function renderRightSidePanel() {
     switch (menuOption) {
@@ -66495,10 +66495,7 @@ var Creator = function Creator() {
         });
 
       case "typography":
-        return React.createElement(_SelectTypography.default, {
-          typography: typography,
-          setTypography: setTypography
-        });
+        return React.createElement(_SelectTypography.default, null);
 
       case "colors":
         return React.createElement(_SelectColors.default, {
@@ -66553,19 +66550,31 @@ var Creator = function Creator() {
     },
     logoSVG: logo.svg,
     logoAlign: logoAlign,
-    title: typography.title.text,
-    slogan: typography.slogan.text,
+    title: _LogoModel.default.useState(function (s) {
+      return s.title.text;
+    }),
+    slogan: _LogoModel.default.useState(function (s) {
+      return s.slogan.text;
+    }),
     style: {
       backgroundColor: colors.backgroundColor,
       title: {
         color: colors.titleColor,
-        fontFamily: typography.title.fontFamily,
-        fontSize: typography.title.fontSize
+        fontFamily: _LogoModel.default.useState(function (s) {
+          return s.title.style.fontFamily;
+        }),
+        fontSize: _LogoModel.default.useState(function (s) {
+          return s.title.style.fontSize;
+        })
       },
       slogan: {
         color: colors.sloganColor,
-        fontFamily: typography.slogan.fontFamily,
-        fontSize: typography.slogan.fontSize
+        fontFamily: _LogoModel.default.useState(function (s) {
+          return s.slogan.style.fontFamily;
+        }),
+        fontSize: _LogoModel.default.useState(function (s) {
+          return s.slogan.style.fontSize;
+        })
       },
       logo: {
         fill: colors.logoColor
@@ -66631,7 +66640,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51857" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52333" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

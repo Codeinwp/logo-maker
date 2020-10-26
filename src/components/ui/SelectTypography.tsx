@@ -1,42 +1,8 @@
 import * as React from "react"
 import Select from "react-select"
+import UIStore from "~/stores/LogoModel"
 
-export type TypographyData = {
-    title: {
-        text: string
-        fontFamily: string
-        fontSize: number
-    }
-    slogan: {
-        text: string
-        fontFamily: string
-        fontSize: number
-    }
-}
-
-export const defaultValues = {
-    title: {
-        text: "Optimole",
-        fontFamily: "Times New Roman",
-        fontSize: 40,
-    },
-    slogan: {
-        text: "The best service for image optimization.",
-        fontFamily: "Times New Roman",
-        fontSize: 24,
-    },
-}
-
-type SelectTypographyProps = {
-    typography: TypographyData
-    setTypography: React.Dispatch<React.SetStateAction<TypographyData>>
-}
-
-const SelectTypography: React.FunctionComponent<SelectTypographyProps> = (
-    props: SelectTypographyProps
-) => {
-    const { typography, setTypography } = props
-
+const SelectTypography: React.FunctionComponent<unknown> = () => {
     const fontOptions = [
         { value: "Times New Romans", label: "Times New Romans" },
         { value: "Helvetica", label: "Helvetica" },
@@ -58,48 +24,43 @@ const SelectTypography: React.FunctionComponent<SelectTypographyProps> = (
         }))
 
     const onTitleTextChange = (value: string) => {
-        typography.title.text = value
-        setTypography({
-            ...typography,
+        UIStore.update((s) => {
+            s.title.text = value
         })
     }
 
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    const onTitleFontFamilyChange = (value: any) => {
-        typography.title.fontFamily = value.value
-        setTypography({
-            ...typography,
+    const onTitleFontFamilyChange = ({ value }: any) => {
+        console.log(value)
+        UIStore.update((s) => {
+            s.title.style.fontFamily = value
         })
     }
 
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    const onTitleFontSizeChange = (value: any) => {
-        typography.title.fontSize = value.value
-        setTypography({
-            ...typography,
+    const onTitleFontSizeChange = ({ value }: any) => {
+        UIStore.update((s) => {
+            s.title.style.fontSize = value
         })
     }
 
     const onSloganTextChange = (value: string) => {
-        typography.slogan.text = value
-        setTypography({
-            ...typography,
+        UIStore.update((s) => {
+            s.slogan.text = value
         })
     }
 
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    const onSloganFontFamilyChange = (value: any) => {
-        typography.slogan.fontFamily = value.value
-        setTypography({
-            ...typography,
+    const onSloganFontFamilyChange = ({ value }: any) => {
+        UIStore.update((s) => {
+            s.slogan.style.fontFamily = value
         })
     }
 
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    const onSloganFontSizeChange = (value: any) => {
-        typography.slogan.fontSize = value.value
-        setTypography({
-            ...typography,
+    const onSloganFontSizeChange = ({ value }: any) => {
+        UIStore.update((s) => {
+            s.slogan.style.fontSize = value
         })
     }
 
@@ -111,7 +72,7 @@ const SelectTypography: React.FunctionComponent<SelectTypographyProps> = (
                     Title
                 </label>
                 <input
-                    value={typography.title.text}
+                    value={UIStore.useState((s) => s.title.text)}
                     className="border p-1"
                     onChange={(e) => onTitleTextChange(e.target.value)}
                 />
@@ -138,7 +99,7 @@ const SelectTypography: React.FunctionComponent<SelectTypographyProps> = (
                     Slogan
                 </label>
                 <input
-                    value={typography.slogan.text}
+                    value={UIStore.useState((s) => s.slogan.text)}
                     className="border m-b-1 p-1"
                     onChange={(e) => onSloganTextChange(e.target.value)}
                 />

@@ -81,15 +81,14 @@ export const UIStore = new Store({
 	},
 
 	slogan : {
-		text: 'SLogan',
+		text: 'Slogan',
 		style: {
 			color: '#FFFFFF',
-			fontSize: 424,
+			fontSize: 24,
 			fontFamily: 'Helvetica'
 		}
 	}
 });
-
 
 
 export default UIStore

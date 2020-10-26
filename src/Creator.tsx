@@ -7,10 +7,8 @@ import SelectColor, {
 } from "./components/ui/SelectColors"
 import SelectLayout, { LogoAlignOptions } from "./components/ui/SelectLayout"
 import SelectLogo from "./components/ui/SelectLogo"
-import SelectTypography, {
-    defaultValues as typographyDefaultValues,
-    TypographyData,
-} from "./components/ui/SelectTypography"
+import SelectTypography from "./components/ui/SelectTypography"
+
 import UIStore from "./stores/LogoModel"
 
 type MenuOptions = "logo" | "typography" | "layout" | "colors"
@@ -18,7 +16,7 @@ type MenuOptions = "logo" | "typography" | "layout" | "colors"
 const Creator: React.FunctionComponent<unknown> = () => {
     const [menuOption, setMenuOption] = React.useState<MenuOptions>("logo")
     const logo = UIStore.useState((s) => s.logo.src)
-    const [typography, setTypography] = React.useState<TypographyData>(typographyDefaultValues)
+
     const [logoAlign, setLogoAlign] = React.useState<LogoAlignOptions>("align-top")
     const [colors, setColors] = React.useState<ColorData>(colorsDefaultValues)
 
@@ -29,7 +27,7 @@ const Creator: React.FunctionComponent<unknown> = () => {
             case "layout":
                 return <SelectLayout logoAlign={logoAlign} setLogoAlign={setLogoAlign} />
             case "typography":
-                return <SelectTypography typography={typography} setTypography={setTypography} />
+                return <SelectTypography />
             case "colors":
                 return <SelectColor colors={colors} setColors={setColors} />
         }
@@ -76,19 +74,19 @@ const Creator: React.FunctionComponent<unknown> = () => {
                             imageSize={{ width: 200, height: 200 }}
                             logoSVG={logo.svg}
                             logoAlign={logoAlign}
-                            title={typography.title.text}
-                            slogan={typography.slogan.text}
+                            title={UIStore.useState((s) => s.title.text)}
+                            slogan={UIStore.useState((s) => s.slogan.text)}
                             style={{
                                 backgroundColor: colors.backgroundColor,
                                 title: {
                                     color: colors.titleColor,
-                                    fontFamily: typography.title.fontFamily,
-                                    fontSize: typography.title.fontSize,
+                                    fontFamily: UIStore.useState((s) => s.title.style.fontFamily),
+                                    fontSize: UIStore.useState((s) => s.title.style.fontSize),
                                 },
                                 slogan: {
                                     color: colors.sloganColor,
-                                    fontFamily: typography.slogan.fontFamily,
-                                    fontSize: typography.slogan.fontSize,
+                                    fontFamily: UIStore.useState((s) => s.slogan.style.fontFamily),
+                                    fontSize: UIStore.useState((s) => s.slogan.style.fontSize),
                                 },
                                 logo: {
                                     fill: colors.logoColor,
