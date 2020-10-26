@@ -1,10 +1,7 @@
 import * as React from "react"
 import CreateLogo from "./components/CreateLogo"
 import DownloadButton from "./components/ui/DownloadButton"
-import SelectColor, {
-    ColorData,
-    defaultValues as colorsDefaultValues,
-} from "./components/ui/SelectColors"
+import SelectColor from "./components/ui/SelectColors"
 import SelectLayout from "./components/ui/SelectLayout"
 import SelectLogo from "./components/ui/SelectLogo"
 import SelectTypography from "./components/ui/SelectTypography"
@@ -17,8 +14,6 @@ const Creator: React.FunctionComponent<unknown> = () => {
     const [menuOption, setMenuOption] = React.useState<MenuOptions>("logo")
     const logo = UIStore.useState((s) => s.logo.src)
 
-    const [colors, setColors] = React.useState<ColorData>(colorsDefaultValues)
-
     const renderRightSidePanel = () => {
         switch (menuOption) {
             case "logo":
@@ -28,7 +23,7 @@ const Creator: React.FunctionComponent<unknown> = () => {
             case "typography":
                 return <SelectTypography />
             case "colors":
-                return <SelectColor colors={colors} setColors={setColors} />
+                return <SelectColor />
         }
     }
 
@@ -76,19 +71,19 @@ const Creator: React.FunctionComponent<unknown> = () => {
                             title={UIStore.useState((s) => s.title.text)}
                             slogan={UIStore.useState((s) => s.slogan.text)}
                             style={{
-                                backgroundColor: colors.backgroundColor,
+                                backgroundColor: UIStore.useState((s) => s.container.style.color),
                                 title: {
-                                    color: colors.titleColor,
+                                    color: UIStore.useState((s) => s.title.style.color),
                                     fontFamily: UIStore.useState((s) => s.title.style.fontFamily),
                                     fontSize: UIStore.useState((s) => s.title.style.fontSize),
                                 },
                                 slogan: {
-                                    color: colors.sloganColor,
+                                    color: UIStore.useState((s) => s.slogan.style.color),
                                     fontFamily: UIStore.useState((s) => s.slogan.style.fontFamily),
                                     fontSize: UIStore.useState((s) => s.slogan.style.fontSize),
                                 },
                                 logo: {
-                                    fill: colors.logoColor,
+                                    fill: UIStore.useState((s) => s.logo.style.fill),
                                 },
                             }}
                         />

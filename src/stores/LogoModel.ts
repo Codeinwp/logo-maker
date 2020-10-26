@@ -13,6 +13,9 @@ export type TLogoContainer = {
 		width: number
 		height: number
 	}
+	style: {
+		color: string
+	}
 }
 
 export type TLogo = {
@@ -59,6 +62,9 @@ export const UIStore = new Store<StoreProps>({
 			y: 0, 
 			width: 400,
 			height: 400
+		},
+		style: {
+			color: '#ABABCB'
 		}
 	},
 

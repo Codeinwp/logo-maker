@@ -54418,82 +54418,7 @@ var _Chrome2 = _interopRequireDefault(_Chrome);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 exports.default = _Chrome2.default;
-},{"./components/alpha/Alpha":"../node_modules/react-color/lib/components/alpha/Alpha.js","./components/block/Block":"../node_modules/react-color/lib/components/block/Block.js","./components/circle/Circle":"../node_modules/react-color/lib/components/circle/Circle.js","./components/chrome/Chrome":"../node_modules/react-color/lib/components/chrome/Chrome.js","./components/compact/Compact":"../node_modules/react-color/lib/components/compact/Compact.js","./components/github/Github":"../node_modules/react-color/lib/components/github/Github.js","./components/hue/Hue":"../node_modules/react-color/lib/components/hue/Hue.js","./components/material/Material":"../node_modules/react-color/lib/components/material/Material.js","./components/photoshop/Photoshop":"../node_modules/react-color/lib/components/photoshop/Photoshop.js","./components/sketch/Sketch":"../node_modules/react-color/lib/components/sketch/Sketch.js","./components/slider/Slider":"../node_modules/react-color/lib/components/slider/Slider.js","./components/swatches/Swatches":"../node_modules/react-color/lib/components/swatches/Swatches.js","./components/twitter/Twitter":"../node_modules/react-color/lib/components/twitter/Twitter.js","./components/common/ColorWrap":"../node_modules/react-color/lib/components/common/ColorWrap.js"}],"components/ui/SelectColors.tsx":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = exports.defaultValues = void 0;
-
-var React = _interopRequireWildcard(require("react"));
-
-var _reactColor = require("react-color");
-
-function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
-
-function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
-
-var defaultValues = {
-  backgroundColor: "#31446C",
-  logoColor: "#FFFFFF",
-  titleColor: "#FFFFFF",
-  sloganColor: "#FFFFFF"
-};
-exports.defaultValues = defaultValues;
-
-var SelectColor = function SelectColor(props) {
-  var colors = props.colors,
-      setColors = props.setColors;
-
-  var onBackgroundColor = function onBackgroundColor(value) {
-    colors.backgroundColor = value.hex;
-    setColors(Object.assign({}, colors));
-  };
-
-  var onTitleColor = function onTitleColor(value) {
-    colors.titleColor = value.hex;
-    setColors(Object.assign({}, colors));
-  };
-
-  var onSloganColor = function onSloganColor(value) {
-    colors.sloganColor = value.hex;
-    setColors(Object.assign({}, colors));
-  };
-
-  var onLogoColor = function onLogoColor(value) {
-    colors.logoColor = value.hex;
-    setColors(Object.assign({}, colors));
-  };
-
-  return React.createElement("div", null, React.createElement("h1", {
-    className: "text-xl text-gray-500"
-  }, "COLOR PALETTE"), React.createElement("p", {
-    className: "my-1"
-  }, "Background Color"), React.createElement(_reactColor.SliderPicker, {
-    color: colors.backgroundColor,
-    onChangeComplete: onBackgroundColor
-  }), React.createElement("p", {
-    className: "my-1"
-  }, "Logo Color"), React.createElement(_reactColor.SliderPicker, {
-    color: colors.logoColor,
-    onChangeComplete: onLogoColor
-  }), React.createElement("p", {
-    className: "my-1"
-  }, "Title Color"), React.createElement(_reactColor.SliderPicker, {
-    color: colors.titleColor,
-    onChangeComplete: onTitleColor
-  }), React.createElement("p", {
-    className: "my-1"
-  }, "Slogan Color"), React.createElement(_reactColor.SliderPicker, {
-    color: colors.sloganColor,
-    onChangeComplete: onSloganColor
-  }));
-};
-
-var _default = SelectColor;
-exports.default = _default;
-},{"react":"../node_modules/react/index.js","react-color":"../node_modules/react-color/lib/index.js"}],"assets/logos/logo1.ts":[function(require,module,exports) {
+},{"./components/alpha/Alpha":"../node_modules/react-color/lib/components/alpha/Alpha.js","./components/block/Block":"../node_modules/react-color/lib/components/block/Block.js","./components/circle/Circle":"../node_modules/react-color/lib/components/circle/Circle.js","./components/chrome/Chrome":"../node_modules/react-color/lib/components/chrome/Chrome.js","./components/compact/Compact":"../node_modules/react-color/lib/components/compact/Compact.js","./components/github/Github":"../node_modules/react-color/lib/components/github/Github.js","./components/hue/Hue":"../node_modules/react-color/lib/components/hue/Hue.js","./components/material/Material":"../node_modules/react-color/lib/components/material/Material.js","./components/photoshop/Photoshop":"../node_modules/react-color/lib/components/photoshop/Photoshop.js","./components/sketch/Sketch":"../node_modules/react-color/lib/components/sketch/Sketch.js","./components/slider/Slider":"../node_modules/react-color/lib/components/slider/Slider.js","./components/swatches/Swatches":"../node_modules/react-color/lib/components/swatches/Swatches.js","./components/twitter/Twitter":"../node_modules/react-color/lib/components/twitter/Twitter.js","./components/common/ColorWrap":"../node_modules/react-color/lib/components/common/ColorWrap.js"}],"assets/logos/logo1.ts":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -58779,6 +58704,9 @@ var UIStore = new _pullstate.Store({
       y: 0,
       width: 400,
       height: 400
+    },
+    style: {
+      color: '#ABABCB'
     }
   },
   logo: {
@@ -58809,7 +58737,87 @@ var UIStore = new _pullstate.Store({
 exports.UIStore = UIStore;
 var _default = UIStore;
 exports.default = _default;
-},{"./../assets/logos":"assets/logos/index.ts","pullstate":"../node_modules/pullstate/dist/index.es.js"}],"components/ui/SelectLayout.tsx":[function(require,module,exports) {
+},{"./../assets/logos":"assets/logos/index.ts","pullstate":"../node_modules/pullstate/dist/index.es.js"}],"components/ui/SelectColors.tsx":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var React = _interopRequireWildcard(require("react"));
+
+var _reactColor = require("react-color");
+
+var _LogoModel = _interopRequireDefault(require("~/stores/LogoModel"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+
+var SelectColor = function SelectColor() {
+  var onBackgroundColor = function onBackgroundColor(value) {
+    _LogoModel.default.update(function (s) {
+      s.container.style.color = value.hex;
+    });
+  };
+
+  var onTitleColor = function onTitleColor(value) {
+    _LogoModel.default.update(function (s) {
+      s.title.style.color = value.hex;
+    });
+  };
+
+  var onSloganColor = function onSloganColor(value) {
+    _LogoModel.default.update(function (s) {
+      s.slogan.style.color = value.hex;
+    });
+  };
+
+  var onLogoColor = function onLogoColor(value) {
+    _LogoModel.default.update(function (s) {
+      s.logo.style.fill = value.hex;
+    });
+  };
+
+  return React.createElement("div", null, React.createElement("h1", {
+    className: "text-xl text-gray-500"
+  }, "COLOR PALETTE"), React.createElement("p", {
+    className: "my-1"
+  }, "Background Color"), React.createElement(_reactColor.SliderPicker, {
+    color: _LogoModel.default.useState(function (s) {
+      return s.container.style.color;
+    }),
+    onChangeComplete: onBackgroundColor
+  }), React.createElement("p", {
+    className: "my-1"
+  }, "Logo Color"), React.createElement(_reactColor.SliderPicker, {
+    color: _LogoModel.default.useState(function (s) {
+      return s.logo.style.fill;
+    }),
+    onChangeComplete: onLogoColor
+  }), React.createElement("p", {
+    className: "my-1"
+  }, "Title Color"), React.createElement(_reactColor.SliderPicker, {
+    color: _LogoModel.default.useState(function (s) {
+      return s.title.style.color;
+    }),
+    onChangeComplete: onTitleColor
+  }), React.createElement("p", {
+    className: "my-1"
+  }, "Slogan Color"), React.createElement(_reactColor.SliderPicker, {
+    color: _LogoModel.default.useState(function (s) {
+      return s.slogan.style.color;
+    }),
+    onChangeComplete: onSloganColor
+  }));
+};
+
+var _default = SelectColor;
+exports.default = _default;
+},{"react":"../node_modules/react/index.js","react-color":"../node_modules/react-color/lib/index.js","~/stores/LogoModel":"stores/LogoModel.ts"}],"components/ui/SelectLayout.tsx":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -66444,7 +66452,7 @@ var _CreateLogo = _interopRequireDefault(require("./components/CreateLogo"));
 
 var _DownloadButton = _interopRequireDefault(require("./components/ui/DownloadButton"));
 
-var _SelectColors = _interopRequireWildcard(require("./components/ui/SelectColors"));
+var _SelectColors = _interopRequireDefault(require("./components/ui/SelectColors"));
 
 var _SelectLayout = _interopRequireDefault(require("./components/ui/SelectLayout"));
 
@@ -66482,11 +66490,6 @@ var Creator = function Creator() {
     return s.logo.src;
   });
 
-  var _React$useState3 = React.useState(_SelectColors.defaultValues),
-      _React$useState4 = _slicedToArray(_React$useState3, 2),
-      colors = _React$useState4[0],
-      setColors = _React$useState4[1];
-
   var renderRightSidePanel = function renderRightSidePanel() {
     switch (menuOption) {
       case "logo":
@@ -66499,10 +66502,7 @@ var Creator = function Creator() {
         return React.createElement(_SelectTypography.default, null);
 
       case "colors":
-        return React.createElement(_SelectColors.default, {
-          colors: colors,
-          setColors: setColors
-        });
+        return React.createElement(_SelectColors.default, null);
     }
   };
 
@@ -66560,9 +66560,13 @@ var Creator = function Creator() {
       return s.slogan.text;
     }),
     style: {
-      backgroundColor: colors.backgroundColor,
+      backgroundColor: _LogoModel.default.useState(function (s) {
+        return s.container.style.color;
+      }),
       title: {
-        color: colors.titleColor,
+        color: _LogoModel.default.useState(function (s) {
+          return s.title.style.color;
+        }),
         fontFamily: _LogoModel.default.useState(function (s) {
           return s.title.style.fontFamily;
         }),
@@ -66571,7 +66575,9 @@ var Creator = function Creator() {
         })
       },
       slogan: {
-        color: colors.sloganColor,
+        color: _LogoModel.default.useState(function (s) {
+          return s.slogan.style.color;
+        }),
         fontFamily: _LogoModel.default.useState(function (s) {
           return s.slogan.style.fontFamily;
         }),
@@ -66580,7 +66586,9 @@ var Creator = function Creator() {
         })
       },
       logo: {
-        fill: colors.logoColor
+        fill: _LogoModel.default.useState(function (s) {
+          return s.logo.style.fill;
+        })
       }
     }
   })), React.createElement("div", {

@@ -1,59 +1,55 @@
 import * as React from "react"
 import { SliderPicker } from "react-color"
+import UIStore from "~/stores/LogoModel"
 
-export type ColorData = {
-    backgroundColor: string
-    logoColor: string
-    titleColor: string
-    sloganColor: string
-}
-
-export const defaultValues = {
-    backgroundColor: "#31446C",
-    logoColor: "#FFFFFF",
-    titleColor: "#FFFFFF",
-    sloganColor: "#FFFFFF",
-}
-
-type SelectColorProps = {
-    colors: ColorData
-    setColors: React.Dispatch<React.SetStateAction<ColorData>>
-}
-
-const SelectColor: React.FunctionComponent<SelectColorProps> = (props: SelectColorProps) => {
-    const { colors, setColors } = props
-
+const SelectColor: React.FunctionComponent<unknown> = () => {
     const onBackgroundColor = (value: { hex: string }) => {
-        colors.backgroundColor = value.hex
-        setColors({ ...colors })
+        UIStore.update((s) => {
+            s.container.style.color = value.hex
+        })
     }
 
     const onTitleColor = (value: { hex: string }) => {
-        colors.titleColor = value.hex
-        setColors({ ...colors })
+        UIStore.update((s) => {
+            s.title.style.color = value.hex
+        })
     }
 
     const onSloganColor = (value: { hex: string }) => {
-        colors.sloganColor = value.hex
-        setColors({ ...colors })
+        UIStore.update((s) => {
+            s.slogan.style.color = value.hex
+        })
     }
 
     const onLogoColor = (value: { hex: string }) => {
-        colors.logoColor = value.hex
-        setColors({ ...colors })
+        UIStore.update((s) => {
+            s.logo.style.fill = value.hex
+        })
     }
 
     return (
         <div>
             <h1 className="text-xl text-gray-500">COLOR PALETTE</h1>
             <p className="my-1">Background Color</p>
-            <SliderPicker color={colors.backgroundColor} onChangeComplete={onBackgroundColor} />
+            <SliderPicker
+                color={UIStore.useState((s) => s.container.style.color)}
+                onChangeComplete={onBackgroundColor}
+            />
             <p className="my-1">Logo Color</p>
-            <SliderPicker color={colors.logoColor} onChangeComplete={onLogoColor} />
+            <SliderPicker
+                color={UIStore.useState((s) => s.logo.style.fill)}
+                onChangeComplete={onLogoColor}
+            />
             <p className="my-1">Title Color</p>
-            <SliderPicker color={colors.titleColor} onChangeComplete={onTitleColor} />
+            <SliderPicker
+                color={UIStore.useState((s) => s.title.style.color)}
+                onChangeComplete={onTitleColor}
+            />
             <p className="my-1">Slogan Color</p>
-            <SliderPicker color={colors.sloganColor} onChangeComplete={onSloganColor} />
+            <SliderPicker
+                color={UIStore.useState((s) => s.slogan.style.color)}
+                onChangeComplete={onSloganColor}
+            />
         </div>
     )
 }
