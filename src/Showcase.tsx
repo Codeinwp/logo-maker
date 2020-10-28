@@ -5,8 +5,7 @@ import CreateLogo from "./components/CreateLogo"
 import UIStore from "./stores/LogoModel"
 
 const Showcase: React.FunctionComponent<unknown> = () => {
-    const title = UIStore.useState((s) => s.title.text)
-    const slogan = UIStore.useState((s) => s.slogan.text)
+    const store = UIStore.useState(s => s)
 
     const setLogo = (logo: LogoSVGImport) => {
         UIStore.update((s) => {
@@ -15,13 +14,29 @@ const Showcase: React.FunctionComponent<unknown> = () => {
     }
 
     const renderLogoList = () => {
-        return logos.map((logo) => (
-            <button key={logo.id} onClick={() => setLogo(logo)}>
+        return logos.map((logoSRC) => (
+            <button key={logoSRC.id} onClick={() => setLogo(logoSRC)}>
                 <CreateLogo
-                    imageSize={{ width: 300, height: 300 }}
-                    logoSVG={logo.svg}
-                    title={title}
-                    slogan={slogan}
+                    logoProps={
+                        {
+                            ...store,
+                            container: {
+                                ...store.container,
+                                width: 150,
+                                height: 150,
+                                viewbox: {
+                                    x: 0,
+                                    y: 0,
+                                    width: 300,
+                                    height: 300
+                                }
+                            },
+                            logo: {
+                                ...store.logo,
+                                src: logoSRC
+                            }
+                        }
+                    }
                 />
             </button>
         ))
@@ -37,7 +52,7 @@ const Showcase: React.FunctionComponent<unknown> = () => {
                     Back
                 </Link>
             </div>
-            <div className="m-16 lg:w-2/5">
+            <div className="m-16 lg:w-3/5">
                 <div className="flex flex-col bg-orange-200 my-4">
                     <h1 className="text-4xl text-center">Choose from any of the logo templates</h1>
                     <p className="text-xl text-center">

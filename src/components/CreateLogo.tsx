@@ -22,54 +22,22 @@ const logoPath = `<svg width="172" height="135" viewBox="0 0 172 135" xmlns="htt
     </svg>
     `
 
-const defaultProps = {
-    containerSize: {
-        width: 200,
-        height: 200,
-    },
-    imageSize: {
-        width: 400,
-        height: 400,
-    },
-    logoDim: {
-        width: 100,
-        height: 100,
-    },
-    logoSVG: logoPath,
-    title: "Default title",
-    logoAlign: "align-top",
-    slogan: "Default slogan",
-    style: {
-        backgroundColor: "#f00",
-        title: {
-            color: "#0f0",
-            fontSize: 40,
-            fontFamily: "Helvetica",
-        },
-        slogan: {
-            color: "#00f",
-            fontSize: 25,
-            fontFamily: "Helvetica",
-        },
-        logo: {
-            fill: "violet",
-        },
-    },
-}
+
 
 const CreateLogo: React.FunctionComponent<CreateLogoPropsComponent> = (
     props: CreateLogoPropsComponent
 ) => {
     const divRef = React.useRef<HTMLDivElement>(null)
-    const { container } = props.logoProps
+    
 
     React.useEffect(() => {
-        if (divRef.current) {
+        console.log(props.logoProps)
+        if (divRef.current && props.logoProps) {
             /*
                 Create the SVG parent
                 */
             
-
+            const container  = props.logoProps.container
             divRef.current.textContent = ""
 
             const vb = container.viewbox;
@@ -98,7 +66,7 @@ const CreateLogo: React.FunctionComponent<CreateLogoPropsComponent> = (
                         )
                     default:
                         console.log(
-                            "Invalid Type. The logo will be aligned top as fallback option!"
+                            "Invalid Type. The logo will be aligned top as a fallback option!"
                         )
                         return alignLogoTop(
                             props.logoProps,
@@ -109,7 +77,7 @@ const CreateLogo: React.FunctionComponent<CreateLogoPropsComponent> = (
 
             moveToCenter(draw, container.viewbox, getAlignedLogo())
         }
-    }, [props])
+    }, [props.logoProps])
 
     return <div id="logo-image" ref={divRef}></div>
 }

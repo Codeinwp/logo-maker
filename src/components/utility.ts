@@ -36,7 +36,7 @@ export const moveToCenter = (
 	// Apply the relocation
 	logoSVG.center( logoSVG.cx() + xOffsetToCenter, logoSVG.cy() + yOffsetToCenter )
 	titleSVG.center( titleSVG.cx() + xOffsetToCenter, titleSVG.cy() + yOffsetToCenter )
-	titleSVG.center( titleSVG.cx() + xOffsetToCenter, titleSVG.cy() + yOffsetToCenter )
+	sloganSVG.center( sloganSVG.cx() + xOffsetToCenter, sloganSVG.cy() + yOffsetToCenter )
 
 
     return container.containerElems
