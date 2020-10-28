@@ -13,7 +13,8 @@ type MenuOptions = "logo" | "typography" | "layout" | "colors"
 
 const Creator: React.FunctionComponent<unknown> = () => {
     const [menuOption, setMenuOption] = React.useState<MenuOptions>("logo")
-    const logo = UIStore.useState((s) => s.logo.src)
+    const store = UIStore.useState((s) => s)
+     
 
     const renderRightSidePanel = () => {
         switch (menuOption) {
@@ -73,28 +74,9 @@ const Creator: React.FunctionComponent<unknown> = () => {
                     </div>
                     <div className="flex justify-center lg:py-16 lg:w-1/3">
                         <CreateLogo
-                            containerSize={{ width: 300, height: 280 }}
-                            imageSize={{ width: 200, height: 200 }}
-                            logoSVG={logo.svg}
-                            logoAlign={UIStore.useState((s) => s.container.align)}
-                            title={UIStore.useState((s) => s.title.text)}
-                            slogan={UIStore.useState((s) => s.slogan.text)}
-                            style={{
-                                backgroundColor: UIStore.useState((s) => s.container.style.color),
-                                title: {
-                                    color: UIStore.useState((s) => s.title.style.color),
-                                    fontFamily: UIStore.useState((s) => s.title.style.fontFamily),
-                                    fontSize: UIStore.useState((s) => s.title.style.fontSize),
-                                },
-                                slogan: {
-                                    color: UIStore.useState((s) => s.slogan.style.color),
-                                    fontFamily: UIStore.useState((s) => s.slogan.style.fontFamily),
-                                    fontSize: UIStore.useState((s) => s.slogan.style.fontSize),
-                                },
-                                logo: {
-                                    fill: UIStore.useState((s) => s.logo.style.fill),
-                                },
-                            }}
+                            logoProps={
+                                {...store}
+                            }
                         />
                     </div>
                     <div className="m-2 lg:m-16 lg:w-1/4">{renderRightSidePanel()}</div>
