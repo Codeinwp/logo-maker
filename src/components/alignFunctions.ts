@@ -1,4 +1,5 @@
 import { SVG, Svg } from "@svgdotjs/svg.js"
+import { TLogo, TLogoContainer, TSlogan, TTitle } from "~/stores/LogoModel"
 import { Elements } from "./utility"
 
 const autoScallingOffsetMargin = 100
@@ -15,33 +16,14 @@ export type ContainerData = {
     containerElems: Elements
 }
 
-export type AlignProps = {
-    logoDim: {
-        width: number
-        height: number
-    }
-    logoSVG: string
-    title: string
-    slogan: string
-    style: {
-        backgroundColor: string
-        title: {
-            color: string
-            fontSize: number
-            fontFamily: string
-        }
-        slogan: {
-            color: string
-            fontSize: number
-            fontFamily: string
-        }
-        logo: {
-            fill: string
-        }
-    }
+export type LogoProps = {
+    container: TLogoContainer
+    logo: TLogo
+    title: TTitle
+    slogan: TSlogan
 }
 
-export const alignLogoTop = (props: AlignProps, draw: Svg) : ContainerData => {
+export const alignLogoTop = (props: LogoProps, draw: Svg) : ContainerData => {
     const { logoDim, logoSVG, title: titleText, slogan: sloganText, style } = props
     
     /*
@@ -111,7 +93,7 @@ export const alignLogoTop = (props: AlignProps, draw: Svg) : ContainerData => {
     }
 }
 
-export const alignLogoLeft = (props: AlignProps, draw: Svg) : ContainerData => {
+export const alignLogoLeft = (props: LogoProps, draw: Svg) : ContainerData => {
     const { logoDim, logoSVG, title: titleText, slogan: sloganText, style } = props
     
     /*
@@ -185,7 +167,7 @@ export const alignLogoLeft = (props: AlignProps, draw: Svg) : ContainerData => {
     }
 }
 
-export const alignLogoRight = (props: AlignProps, draw: Svg) : ContainerData => {
+export const alignLogoRight = (props: LogoProps, draw: Svg) : ContainerData => {
     const { logoDim, logoSVG, title: titleText, slogan: sloganText, style } = props
     
     /*

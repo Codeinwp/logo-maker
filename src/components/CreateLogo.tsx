@@ -2,40 +2,15 @@ import * as React from "react"
 import { SVG } from "@svgdotjs/svg.js"
 import { moveToCenter } from "./utility"
 import { alignLogoLeft, alignLogoRight, alignLogoTop } from "./alignFunctions"
-import { LogoAlignOptions } from "./ui/SelectLayout"
+
+import { TLogo, TLogoContainer, TSlogan, TTitle } from "~/stores/LogoModel"
 
 type CreateLogoPropsComponent = {
-    containerSize?: {
-        width: number
-        height: number
-    }
-    imageSize?: {
-        width: number
-        height: number
-    }
-    logoDim?: {
-        width: number
-        height: number
-    }
-    logoSVG?: string
-    logoAlign?: LogoAlignOptions
-    title?: string
-    slogan?: string
-    style?: {
-        backgroundColor?: string
-        title?: {
-            color?: string
-            fontSize?: number
-            fontFamily?: string
-        }
-        slogan?: {
-            color?: string
-            fontSize?: number
-            fontFamily?: string
-        }
-        logo?: {
-            fill?: string
-        }
+    logoProps: {
+        container: TLogoContainer
+        logo: TLogo
+        title: TTitle
+        slogan: TSlogan
     }
 }
 
@@ -92,8 +67,6 @@ const CreateLogo: React.FunctionComponent<CreateLogoPropsComponent> = (
             /*
                 Create the SVG parent
                 */
-            const containerSize = props.containerSize || defaultProps.containerSize
-            const imageSize = props.imageSize || defaultProps.imageSize
             const logoDim = props.logoDim || defaultProps.logoDim
             const logoSVG = props.logoSVG || defaultProps.logoSVG
             const title = props.title || defaultProps.title
