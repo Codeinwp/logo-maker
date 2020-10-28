@@ -2,41 +2,41 @@ import { Svg, Text } from "@svgdotjs/svg.js"
 import { ContainerData } from "./alignFunctions"
 
 export type Elements = {
-    logo: Svg
-    title: Text
-    slogan: Text
+    logoSVG: Svg
+    titleSVG: Text
+    sloganSVG: Text
 }
 
 
 
 export const moveToCenter = (
     draw: Svg,
-    imageSize: {
+    viewbox: {
         width: number
         height: number
     },
     container: ContainerData
 ) : Elements => {
 	// Compute the center
-    const { logo, title, slogan } = container.containerElems
+    const { logoSVG, titleSVG, sloganSVG } = container.containerElems
     
     // check if the svg has scaled
     const currentViewBox = draw.viewbox()
-    if (currentViewBox.width > imageSize.width) {
-        imageSize.width = currentViewBox.width 
+    if (currentViewBox.width > viewbox.width) {
+        viewbox.width = currentViewBox.width 
     }
 
-    if (currentViewBox.height > imageSize.height) {
-        imageSize.height = currentViewBox.height
+    if (currentViewBox.height > viewbox.height) {
+        viewbox.height = currentViewBox.height
     }
 
-    const xOffsetToCenter = imageSize.width / 2 - container.containerPos.cx
-	const yOffsetToCenter = imageSize.height / 2 - container.containerPos.cy
+    const xOffsetToCenter = viewbox.width / 2 - container.containerPos.cx
+	const yOffsetToCenter = viewbox.height / 2 - container.containerPos.cy
 
 	// Apply the relocation
-	logo.center( logo.cx() + xOffsetToCenter, logo.cy() + yOffsetToCenter )
-	title.center( title.cx() + xOffsetToCenter, title.cy() + yOffsetToCenter )
-	slogan.center( slogan.cx() + xOffsetToCenter, slogan.cy() + yOffsetToCenter )
+	logoSVG.center( logoSVG.cx() + xOffsetToCenter, logoSVG.cy() + yOffsetToCenter )
+	titleSVG.center( titleSVG.cx() + xOffsetToCenter, titleSVG.cy() + yOffsetToCenter )
+	titleSVG.center( titleSVG.cx() + xOffsetToCenter, titleSVG.cy() + yOffsetToCenter )
 
 
     return container.containerElems
