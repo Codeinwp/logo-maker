@@ -14,7 +14,6 @@ type MenuOptions = "logo" | "typography" | "layout" | "colors"
 const Creator: React.FunctionComponent<unknown> = () => {
     const [menuOption, setMenuOption] = React.useState<MenuOptions>("logo")
     const store = UIStore.useState((s) => s)
-     
 
     const renderRightSidePanel = () => {
         switch (menuOption) {
@@ -32,9 +31,9 @@ const Creator: React.FunctionComponent<unknown> = () => {
     return (
         <div className="flex flex-col-reverse lg:flex-col">
             <div className="flex flex-row">
-                <div className="container flex justify-center max-content mx-8 my-4">
+                <div className="container flex lg:px-32 lg:w-3/4 mx-8 my-4">
                     <Link
-                        className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+                        className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 max-content rounded"
                         to="/showcase"
                     >
                         Back
@@ -73,11 +72,7 @@ const Creator: React.FunctionComponent<unknown> = () => {
                         </div>
                     </div>
                     <div className="flex justify-center lg:py-16 lg:w-1/3">
-                        <CreateLogo
-                            logoProps={
-                                store
-                            }
-                        />
+                        <CreateLogo logoProps={store} />
                     </div>
                     <div className="m-2 lg:m-16 lg:w-1/4">{renderRightSidePanel()}</div>
                 </div>

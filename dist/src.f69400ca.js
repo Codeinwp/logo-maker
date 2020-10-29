@@ -30295,20 +30295,7 @@ function createMemoryHistory(props) {
   };
   return history;
 }
-},{"@babel/runtime/helpers/esm/extends":"../node_modules/@babel/runtime/helpers/esm/extends.js","resolve-pathname":"../node_modules/resolve-pathname/esm/resolve-pathname.js","value-equal":"../node_modules/value-equal/esm/value-equal.js","tiny-warning":"../node_modules/tiny-warning/dist/tiny-warning.esm.js","tiny-invariant":"../node_modules/tiny-invariant/dist/tiny-invariant.esm.js"}],"../node_modules/mini-create-react-context/node_modules/@babel/runtime/helpers/esm/inheritsLoose.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = _inheritsLoose;
-
-function _inheritsLoose(subClass, superClass) {
-  subClass.prototype = Object.create(superClass.prototype);
-  subClass.prototype.constructor = subClass;
-  subClass.__proto__ = superClass;
-}
-},{}],"../node_modules/mini-create-react-context/dist/esm/index.js":[function(require,module,exports) {
+},{"@babel/runtime/helpers/esm/extends":"../node_modules/@babel/runtime/helpers/esm/extends.js","resolve-pathname":"../node_modules/resolve-pathname/esm/resolve-pathname.js","value-equal":"../node_modules/value-equal/esm/value-equal.js","tiny-warning":"../node_modules/tiny-warning/dist/tiny-warning.esm.js","tiny-invariant":"../node_modules/tiny-invariant/dist/tiny-invariant.esm.js"}],"../node_modules/mini-create-react-context/dist/esm/index.js":[function(require,module,exports) {
 var global = arguments[3];
 "use strict";
 
@@ -30502,9 +30489,11 @@ function createReactContext(defaultValue, calculateChangedBits) {
 var index = _react.default.createContext || createReactContext;
 var _default = index;
 exports.default = _default;
-},{"react":"../node_modules/react/index.js","@babel/runtime/helpers/esm/inheritsLoose":"../node_modules/mini-create-react-context/node_modules/@babel/runtime/helpers/esm/inheritsLoose.js","prop-types":"../node_modules/prop-types/index.js","tiny-warning":"../node_modules/tiny-warning/dist/tiny-warning.esm.js"}],"../node_modules/path-to-regexp/node_modules/isarray/index.js":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js","@babel/runtime/helpers/esm/inheritsLoose":"../node_modules/@babel/runtime/helpers/esm/inheritsLoose.js","prop-types":"../node_modules/prop-types/index.js","tiny-warning":"../node_modules/tiny-warning/dist/tiny-warning.esm.js"}],"../node_modules/isarray/index.js":[function(require,module,exports) {
+var toString = {}.toString;
+
 module.exports = Array.isArray || function (arr) {
-  return Object.prototype.toString.call(arr) == '[object Array]';
+  return toString.call(arr) == '[object Array]';
 };
 
 },{}],"../node_modules/path-to-regexp/index.js":[function(require,module,exports) {
@@ -30935,7 +30924,7 @@ function pathToRegexp (path, keys, options) {
   return stringToRegexp(/** @type {string} */ (path), /** @type {!Array} */ (keys), options)
 }
 
-},{"isarray":"../node_modules/path-to-regexp/node_modules/isarray/index.js"}],"../node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js":[function(require,module,exports) {
+},{"isarray":"../node_modules/isarray/index.js"}],"../node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -32269,7 +32258,7 @@ if ("development" !== "production") {
     style: _propTypes.default.object
   });
 }
-},{"react-router":"../node_modules/react-router/esm/react-router.js","@babel/runtime/helpers/esm/inheritsLoose":"../node_modules/@babel/runtime/helpers/esm/inheritsLoose.js","react":"../node_modules/react/index.js","history":"../node_modules/history/esm/history.js","prop-types":"../node_modules/prop-types/index.js","tiny-warning":"../node_modules/tiny-warning/dist/tiny-warning.esm.js","@babel/runtime/helpers/esm/extends":"../node_modules/@babel/runtime/helpers/esm/extends.js","@babel/runtime/helpers/esm/objectWithoutPropertiesLoose":"../node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js","tiny-invariant":"../node_modules/tiny-invariant/dist/tiny-invariant.esm.js"}],"../node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
+},{"react-router":"../node_modules/react-router/esm/react-router.js","@babel/runtime/helpers/esm/inheritsLoose":"../node_modules/@babel/runtime/helpers/esm/inheritsLoose.js","react":"../node_modules/react/index.js","history":"../node_modules/history/esm/history.js","prop-types":"../node_modules/prop-types/index.js","tiny-warning":"../node_modules/tiny-warning/dist/tiny-warning.esm.js","@babel/runtime/helpers/esm/extends":"../node_modules/@babel/runtime/helpers/esm/extends.js","@babel/runtime/helpers/esm/objectWithoutPropertiesLoose":"../node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js","tiny-invariant":"../node_modules/tiny-invariant/dist/tiny-invariant.esm.js"}],"../node_modules/.pnpm/parcel-bundler@1.12.4/node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
 var bundleURL = null;
 
 function getBundleURLCached() {
@@ -32301,7 +32290,7 @@ function getBaseURL(url) {
 
 exports.getBundleURL = getBundleURLCached;
 exports.getBaseURL = getBaseURL;
-},{}],"../node_modules/parcel-bundler/src/builtins/css-loader.js":[function(require,module,exports) {
+},{}],"../node_modules/.pnpm/parcel-bundler@1.12.4/node_modules/parcel-bundler/src/builtins/css-loader.js":[function(require,module,exports) {
 var bundle = require('./bundle-url');
 
 function updateLink(link) {
@@ -32336,17 +32325,17 @@ function reloadCSS() {
 }
 
 module.exports = reloadCSS;
-},{"./bundle-url":"../node_modules/parcel-bundler/src/builtins/bundle-url.js"}],"assets/styles/index.scss":[function(require,module,exports) {
+},{"./bundle-url":"../node_modules/.pnpm/parcel-bundler@1.12.4/node_modules/parcel-bundler/src/builtins/bundle-url.js"}],"assets/styles/index.scss":[function(require,module,exports) {
 var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"assets/styles/tailwind.css":[function(require,module,exports) {
+},{"_css_loader":"../node_modules/.pnpm/parcel-bundler@1.12.4/node_modules/parcel-bundler/src/builtins/css-loader.js"}],"assets/styles/tailwind.css":[function(require,module,exports) {
 var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"../node_modules/@svgdotjs/svg.js/dist/svg.esm.js":[function(require,module,exports) {
+},{"_css_loader":"../node_modules/.pnpm/parcel-bundler@1.12.4/node_modules/parcel-bundler/src/builtins/css-loader.js"}],"../node_modules/@svgdotjs/svg.js/dist/svg.esm.js":[function(require,module,exports) {
 var global = arguments[3];
 
 var define;
@@ -44178,7 +44167,842 @@ var alignLogoRight = function alignLogoRight(props, draw) {
 };
 
 exports.alignLogoRight = alignLogoRight;
-},{"@svgdotjs/svg.js":"../node_modules/@svgdotjs/svg.js/dist/svg.esm.js"}],"components/CreateLogo.tsx":[function(require,module,exports) {
+},{"@svgdotjs/svg.js":"../node_modules/@svgdotjs/svg.js/dist/svg.esm.js"}],"../node_modules/uuid/dist/esm-browser/rng.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = rng;
+// Unique ID creation requires a high quality random # generator. In the browser we therefore
+// require the crypto API and do not support built-in fallback to lower quality random number
+// generators (like Math.random()).
+// getRandomValues needs to be invoked in a context where "this" is a Crypto implementation. Also,
+// find the complete implementation of crypto (msCrypto) on IE11.
+var getRandomValues = typeof crypto !== 'undefined' && crypto.getRandomValues && crypto.getRandomValues.bind(crypto) || typeof msCrypto !== 'undefined' && typeof msCrypto.getRandomValues === 'function' && msCrypto.getRandomValues.bind(msCrypto);
+var rnds8 = new Uint8Array(16);
+
+function rng() {
+  if (!getRandomValues) {
+    throw new Error('crypto.getRandomValues() not supported. See https://github.com/uuidjs/uuid#getrandomvalues-not-supported');
+  }
+
+  return getRandomValues(rnds8);
+}
+},{}],"../node_modules/uuid/dist/esm-browser/regex.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+var _default = /^(?:[0-9a-f]{8}-[0-9a-f]{4}-[1-5][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}|00000000-0000-0000-0000-000000000000)$/i;
+exports.default = _default;
+},{}],"../node_modules/uuid/dist/esm-browser/validate.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _regex = _interopRequireDefault(require("./regex.js"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function validate(uuid) {
+  return typeof uuid === 'string' && _regex.default.test(uuid);
+}
+
+var _default = validate;
+exports.default = _default;
+},{"./regex.js":"../node_modules/uuid/dist/esm-browser/regex.js"}],"../node_modules/uuid/dist/esm-browser/stringify.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _validate = _interopRequireDefault(require("./validate.js"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+/**
+ * Convert array of 16 byte values to UUID string format of the form:
+ * XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
+ */
+var byteToHex = [];
+
+for (var i = 0; i < 256; ++i) {
+  byteToHex.push((i + 0x100).toString(16).substr(1));
+}
+
+function stringify(arr) {
+  var offset = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 0; // Note: Be careful editing this code!  It's been tuned for performance
+  // and works in ways you may not expect. See https://github.com/uuidjs/uuid/pull/434
+
+  var uuid = (byteToHex[arr[offset + 0]] + byteToHex[arr[offset + 1]] + byteToHex[arr[offset + 2]] + byteToHex[arr[offset + 3]] + '-' + byteToHex[arr[offset + 4]] + byteToHex[arr[offset + 5]] + '-' + byteToHex[arr[offset + 6]] + byteToHex[arr[offset + 7]] + '-' + byteToHex[arr[offset + 8]] + byteToHex[arr[offset + 9]] + '-' + byteToHex[arr[offset + 10]] + byteToHex[arr[offset + 11]] + byteToHex[arr[offset + 12]] + byteToHex[arr[offset + 13]] + byteToHex[arr[offset + 14]] + byteToHex[arr[offset + 15]]).toLowerCase(); // Consistency check for valid UUID.  If this throws, it's likely due to one
+  // of the following:
+  // - One or more input array values don't map to a hex octet (leading to
+  // "undefined" in the uuid)
+  // - Invalid input values for the RFC `version` or `variant` fields
+
+  if (!(0, _validate.default)(uuid)) {
+    throw TypeError('Stringified UUID is invalid');
+  }
+
+  return uuid;
+}
+
+var _default = stringify;
+exports.default = _default;
+},{"./validate.js":"../node_modules/uuid/dist/esm-browser/validate.js"}],"../node_modules/uuid/dist/esm-browser/v1.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _rng = _interopRequireDefault(require("./rng.js"));
+
+var _stringify = _interopRequireDefault(require("./stringify.js"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+// **`v1()` - Generate time-based UUID**
+//
+// Inspired by https://github.com/LiosK/UUID.js
+// and http://docs.python.org/library/uuid.html
+var _nodeId;
+
+var _clockseq; // Previous uuid creation time
+
+
+var _lastMSecs = 0;
+var _lastNSecs = 0; // See https://github.com/uuidjs/uuid for API details
+
+function v1(options, buf, offset) {
+  var i = buf && offset || 0;
+  var b = buf || new Array(16);
+  options = options || {};
+  var node = options.node || _nodeId;
+  var clockseq = options.clockseq !== undefined ? options.clockseq : _clockseq; // node and clockseq need to be initialized to random values if they're not
+  // specified.  We do this lazily to minimize issues related to insufficient
+  // system entropy.  See #189
+
+  if (node == null || clockseq == null) {
+    var seedBytes = options.random || (options.rng || _rng.default)();
+
+    if (node == null) {
+      // Per 4.5, create and 48-bit node id, (47 random bits + multicast bit = 1)
+      node = _nodeId = [seedBytes[0] | 0x01, seedBytes[1], seedBytes[2], seedBytes[3], seedBytes[4], seedBytes[5]];
+    }
+
+    if (clockseq == null) {
+      // Per 4.2.2, randomize (14 bit) clockseq
+      clockseq = _clockseq = (seedBytes[6] << 8 | seedBytes[7]) & 0x3fff;
+    }
+  } // UUID timestamps are 100 nano-second units since the Gregorian epoch,
+  // (1582-10-15 00:00).  JSNumbers aren't precise enough for this, so
+  // time is handled internally as 'msecs' (integer milliseconds) and 'nsecs'
+  // (100-nanoseconds offset from msecs) since unix epoch, 1970-01-01 00:00.
+
+
+  var msecs = options.msecs !== undefined ? options.msecs : Date.now(); // Per 4.2.1.2, use count of uuid's generated during the current clock
+  // cycle to simulate higher resolution clock
+
+  var nsecs = options.nsecs !== undefined ? options.nsecs : _lastNSecs + 1; // Time since last uuid creation (in msecs)
+
+  var dt = msecs - _lastMSecs + (nsecs - _lastNSecs) / 10000; // Per 4.2.1.2, Bump clockseq on clock regression
+
+  if (dt < 0 && options.clockseq === undefined) {
+    clockseq = clockseq + 1 & 0x3fff;
+  } // Reset nsecs if clock regresses (new clockseq) or we've moved onto a new
+  // time interval
+
+
+  if ((dt < 0 || msecs > _lastMSecs) && options.nsecs === undefined) {
+    nsecs = 0;
+  } // Per 4.2.1.2 Throw error if too many uuids are requested
+
+
+  if (nsecs >= 10000) {
+    throw new Error("uuid.v1(): Can't create more than 10M uuids/sec");
+  }
+
+  _lastMSecs = msecs;
+  _lastNSecs = nsecs;
+  _clockseq = clockseq; // Per 4.1.4 - Convert from unix epoch to Gregorian epoch
+
+  msecs += 12219292800000; // `time_low`
+
+  var tl = ((msecs & 0xfffffff) * 10000 + nsecs) % 0x100000000;
+  b[i++] = tl >>> 24 & 0xff;
+  b[i++] = tl >>> 16 & 0xff;
+  b[i++] = tl >>> 8 & 0xff;
+  b[i++] = tl & 0xff; // `time_mid`
+
+  var tmh = msecs / 0x100000000 * 10000 & 0xfffffff;
+  b[i++] = tmh >>> 8 & 0xff;
+  b[i++] = tmh & 0xff; // `time_high_and_version`
+
+  b[i++] = tmh >>> 24 & 0xf | 0x10; // include version
+
+  b[i++] = tmh >>> 16 & 0xff; // `clock_seq_hi_and_reserved` (Per 4.2.2 - include variant)
+
+  b[i++] = clockseq >>> 8 | 0x80; // `clock_seq_low`
+
+  b[i++] = clockseq & 0xff; // `node`
+
+  for (var n = 0; n < 6; ++n) {
+    b[i + n] = node[n];
+  }
+
+  return buf || (0, _stringify.default)(b);
+}
+
+var _default = v1;
+exports.default = _default;
+},{"./rng.js":"../node_modules/uuid/dist/esm-browser/rng.js","./stringify.js":"../node_modules/uuid/dist/esm-browser/stringify.js"}],"../node_modules/uuid/dist/esm-browser/parse.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _validate = _interopRequireDefault(require("./validate.js"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function parse(uuid) {
+  if (!(0, _validate.default)(uuid)) {
+    throw TypeError('Invalid UUID');
+  }
+
+  var v;
+  var arr = new Uint8Array(16); // Parse ########-....-....-....-............
+
+  arr[0] = (v = parseInt(uuid.slice(0, 8), 16)) >>> 24;
+  arr[1] = v >>> 16 & 0xff;
+  arr[2] = v >>> 8 & 0xff;
+  arr[3] = v & 0xff; // Parse ........-####-....-....-............
+
+  arr[4] = (v = parseInt(uuid.slice(9, 13), 16)) >>> 8;
+  arr[5] = v & 0xff; // Parse ........-....-####-....-............
+
+  arr[6] = (v = parseInt(uuid.slice(14, 18), 16)) >>> 8;
+  arr[7] = v & 0xff; // Parse ........-....-....-####-............
+
+  arr[8] = (v = parseInt(uuid.slice(19, 23), 16)) >>> 8;
+  arr[9] = v & 0xff; // Parse ........-....-....-....-############
+  // (Use "/" to avoid 32-bit truncation when bit-shifting high-order bytes)
+
+  arr[10] = (v = parseInt(uuid.slice(24, 36), 16)) / 0x10000000000 & 0xff;
+  arr[11] = v / 0x100000000 & 0xff;
+  arr[12] = v >>> 24 & 0xff;
+  arr[13] = v >>> 16 & 0xff;
+  arr[14] = v >>> 8 & 0xff;
+  arr[15] = v & 0xff;
+  return arr;
+}
+
+var _default = parse;
+exports.default = _default;
+},{"./validate.js":"../node_modules/uuid/dist/esm-browser/validate.js"}],"../node_modules/uuid/dist/esm-browser/v35.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = _default;
+exports.URL = exports.DNS = void 0;
+
+var _stringify = _interopRequireDefault(require("./stringify.js"));
+
+var _parse = _interopRequireDefault(require("./parse.js"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function stringToBytes(str) {
+  str = unescape(encodeURIComponent(str)); // UTF8 escape
+
+  var bytes = [];
+
+  for (var i = 0; i < str.length; ++i) {
+    bytes.push(str.charCodeAt(i));
+  }
+
+  return bytes;
+}
+
+var DNS = '6ba7b810-9dad-11d1-80b4-00c04fd430c8';
+exports.DNS = DNS;
+var URL = '6ba7b811-9dad-11d1-80b4-00c04fd430c8';
+exports.URL = URL;
+
+function _default(name, version, hashfunc) {
+  function generateUUID(value, namespace, buf, offset) {
+    if (typeof value === 'string') {
+      value = stringToBytes(value);
+    }
+
+    if (typeof namespace === 'string') {
+      namespace = (0, _parse.default)(namespace);
+    }
+
+    if (namespace.length !== 16) {
+      throw TypeError('Namespace must be array-like (16 iterable integer values, 0-255)');
+    } // Compute hash of namespace and value, Per 4.3
+    // Future: Use spread syntax when supported on all platforms, e.g. `bytes =
+    // hashfunc([...namespace, ... value])`
+
+
+    var bytes = new Uint8Array(16 + value.length);
+    bytes.set(namespace);
+    bytes.set(value, namespace.length);
+    bytes = hashfunc(bytes);
+    bytes[6] = bytes[6] & 0x0f | version;
+    bytes[8] = bytes[8] & 0x3f | 0x80;
+
+    if (buf) {
+      offset = offset || 0;
+
+      for (var i = 0; i < 16; ++i) {
+        buf[offset + i] = bytes[i];
+      }
+
+      return buf;
+    }
+
+    return (0, _stringify.default)(bytes);
+  } // Function#name is not settable on some platforms (#270)
+
+
+  try {
+    generateUUID.name = name; // eslint-disable-next-line no-empty
+  } catch (err) {} // For CommonJS default export support
+
+
+  generateUUID.DNS = DNS;
+  generateUUID.URL = URL;
+  return generateUUID;
+}
+},{"./stringify.js":"../node_modules/uuid/dist/esm-browser/stringify.js","./parse.js":"../node_modules/uuid/dist/esm-browser/parse.js"}],"../node_modules/uuid/dist/esm-browser/md5.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+/*
+ * Browser-compatible JavaScript MD5
+ *
+ * Modification of JavaScript MD5
+ * https://github.com/blueimp/JavaScript-MD5
+ *
+ * Copyright 2011, Sebastian Tschan
+ * https://blueimp.net
+ *
+ * Licensed under the MIT license:
+ * https://opensource.org/licenses/MIT
+ *
+ * Based on
+ * A JavaScript implementation of the RSA Data Security, Inc. MD5 Message
+ * Digest Algorithm, as defined in RFC 1321.
+ * Version 2.2 Copyright (C) Paul Johnston 1999 - 2009
+ * Other contributors: Greg Holt, Andrew Kepert, Ydnar, Lostinet
+ * Distributed under the BSD License
+ * See http://pajhome.org.uk/crypt/md5 for more info.
+ */
+function md5(bytes) {
+  if (typeof bytes === 'string') {
+    var msg = unescape(encodeURIComponent(bytes)); // UTF8 escape
+
+    bytes = new Uint8Array(msg.length);
+
+    for (var i = 0; i < msg.length; ++i) {
+      bytes[i] = msg.charCodeAt(i);
+    }
+  }
+
+  return md5ToHexEncodedArray(wordsToMd5(bytesToWords(bytes), bytes.length * 8));
+}
+/*
+ * Convert an array of little-endian words to an array of bytes
+ */
+
+
+function md5ToHexEncodedArray(input) {
+  var output = [];
+  var length32 = input.length * 32;
+  var hexTab = '0123456789abcdef';
+
+  for (var i = 0; i < length32; i += 8) {
+    var x = input[i >> 5] >>> i % 32 & 0xff;
+    var hex = parseInt(hexTab.charAt(x >>> 4 & 0x0f) + hexTab.charAt(x & 0x0f), 16);
+    output.push(hex);
+  }
+
+  return output;
+}
+/**
+ * Calculate output length with padding and bit length
+ */
+
+
+function getOutputLength(inputLength8) {
+  return (inputLength8 + 64 >>> 9 << 4) + 14 + 1;
+}
+/*
+ * Calculate the MD5 of an array of little-endian words, and a bit length.
+ */
+
+
+function wordsToMd5(x, len) {
+  /* append padding */
+  x[len >> 5] |= 0x80 << len % 32;
+  x[getOutputLength(len) - 1] = len;
+  var a = 1732584193;
+  var b = -271733879;
+  var c = -1732584194;
+  var d = 271733878;
+
+  for (var i = 0; i < x.length; i += 16) {
+    var olda = a;
+    var oldb = b;
+    var oldc = c;
+    var oldd = d;
+    a = md5ff(a, b, c, d, x[i], 7, -680876936);
+    d = md5ff(d, a, b, c, x[i + 1], 12, -389564586);
+    c = md5ff(c, d, a, b, x[i + 2], 17, 606105819);
+    b = md5ff(b, c, d, a, x[i + 3], 22, -1044525330);
+    a = md5ff(a, b, c, d, x[i + 4], 7, -176418897);
+    d = md5ff(d, a, b, c, x[i + 5], 12, 1200080426);
+    c = md5ff(c, d, a, b, x[i + 6], 17, -1473231341);
+    b = md5ff(b, c, d, a, x[i + 7], 22, -45705983);
+    a = md5ff(a, b, c, d, x[i + 8], 7, 1770035416);
+    d = md5ff(d, a, b, c, x[i + 9], 12, -1958414417);
+    c = md5ff(c, d, a, b, x[i + 10], 17, -42063);
+    b = md5ff(b, c, d, a, x[i + 11], 22, -1990404162);
+    a = md5ff(a, b, c, d, x[i + 12], 7, 1804603682);
+    d = md5ff(d, a, b, c, x[i + 13], 12, -40341101);
+    c = md5ff(c, d, a, b, x[i + 14], 17, -1502002290);
+    b = md5ff(b, c, d, a, x[i + 15], 22, 1236535329);
+    a = md5gg(a, b, c, d, x[i + 1], 5, -165796510);
+    d = md5gg(d, a, b, c, x[i + 6], 9, -1069501632);
+    c = md5gg(c, d, a, b, x[i + 11], 14, 643717713);
+    b = md5gg(b, c, d, a, x[i], 20, -373897302);
+    a = md5gg(a, b, c, d, x[i + 5], 5, -701558691);
+    d = md5gg(d, a, b, c, x[i + 10], 9, 38016083);
+    c = md5gg(c, d, a, b, x[i + 15], 14, -660478335);
+    b = md5gg(b, c, d, a, x[i + 4], 20, -405537848);
+    a = md5gg(a, b, c, d, x[i + 9], 5, 568446438);
+    d = md5gg(d, a, b, c, x[i + 14], 9, -1019803690);
+    c = md5gg(c, d, a, b, x[i + 3], 14, -187363961);
+    b = md5gg(b, c, d, a, x[i + 8], 20, 1163531501);
+    a = md5gg(a, b, c, d, x[i + 13], 5, -1444681467);
+    d = md5gg(d, a, b, c, x[i + 2], 9, -51403784);
+    c = md5gg(c, d, a, b, x[i + 7], 14, 1735328473);
+    b = md5gg(b, c, d, a, x[i + 12], 20, -1926607734);
+    a = md5hh(a, b, c, d, x[i + 5], 4, -378558);
+    d = md5hh(d, a, b, c, x[i + 8], 11, -2022574463);
+    c = md5hh(c, d, a, b, x[i + 11], 16, 1839030562);
+    b = md5hh(b, c, d, a, x[i + 14], 23, -35309556);
+    a = md5hh(a, b, c, d, x[i + 1], 4, -1530992060);
+    d = md5hh(d, a, b, c, x[i + 4], 11, 1272893353);
+    c = md5hh(c, d, a, b, x[i + 7], 16, -155497632);
+    b = md5hh(b, c, d, a, x[i + 10], 23, -1094730640);
+    a = md5hh(a, b, c, d, x[i + 13], 4, 681279174);
+    d = md5hh(d, a, b, c, x[i], 11, -358537222);
+    c = md5hh(c, d, a, b, x[i + 3], 16, -722521979);
+    b = md5hh(b, c, d, a, x[i + 6], 23, 76029189);
+    a = md5hh(a, b, c, d, x[i + 9], 4, -640364487);
+    d = md5hh(d, a, b, c, x[i + 12], 11, -421815835);
+    c = md5hh(c, d, a, b, x[i + 15], 16, 530742520);
+    b = md5hh(b, c, d, a, x[i + 2], 23, -995338651);
+    a = md5ii(a, b, c, d, x[i], 6, -198630844);
+    d = md5ii(d, a, b, c, x[i + 7], 10, 1126891415);
+    c = md5ii(c, d, a, b, x[i + 14], 15, -1416354905);
+    b = md5ii(b, c, d, a, x[i + 5], 21, -57434055);
+    a = md5ii(a, b, c, d, x[i + 12], 6, 1700485571);
+    d = md5ii(d, a, b, c, x[i + 3], 10, -1894986606);
+    c = md5ii(c, d, a, b, x[i + 10], 15, -1051523);
+    b = md5ii(b, c, d, a, x[i + 1], 21, -2054922799);
+    a = md5ii(a, b, c, d, x[i + 8], 6, 1873313359);
+    d = md5ii(d, a, b, c, x[i + 15], 10, -30611744);
+    c = md5ii(c, d, a, b, x[i + 6], 15, -1560198380);
+    b = md5ii(b, c, d, a, x[i + 13], 21, 1309151649);
+    a = md5ii(a, b, c, d, x[i + 4], 6, -145523070);
+    d = md5ii(d, a, b, c, x[i + 11], 10, -1120210379);
+    c = md5ii(c, d, a, b, x[i + 2], 15, 718787259);
+    b = md5ii(b, c, d, a, x[i + 9], 21, -343485551);
+    a = safeAdd(a, olda);
+    b = safeAdd(b, oldb);
+    c = safeAdd(c, oldc);
+    d = safeAdd(d, oldd);
+  }
+
+  return [a, b, c, d];
+}
+/*
+ * Convert an array bytes to an array of little-endian words
+ * Characters >255 have their high-byte silently ignored.
+ */
+
+
+function bytesToWords(input) {
+  if (input.length === 0) {
+    return [];
+  }
+
+  var length8 = input.length * 8;
+  var output = new Uint32Array(getOutputLength(length8));
+
+  for (var i = 0; i < length8; i += 8) {
+    output[i >> 5] |= (input[i / 8] & 0xff) << i % 32;
+  }
+
+  return output;
+}
+/*
+ * Add integers, wrapping at 2^32. This uses 16-bit operations internally
+ * to work around bugs in some JS interpreters.
+ */
+
+
+function safeAdd(x, y) {
+  var lsw = (x & 0xffff) + (y & 0xffff);
+  var msw = (x >> 16) + (y >> 16) + (lsw >> 16);
+  return msw << 16 | lsw & 0xffff;
+}
+/*
+ * Bitwise rotate a 32-bit number to the left.
+ */
+
+
+function bitRotateLeft(num, cnt) {
+  return num << cnt | num >>> 32 - cnt;
+}
+/*
+ * These functions implement the four basic operations the algorithm uses.
+ */
+
+
+function md5cmn(q, a, b, x, s, t) {
+  return safeAdd(bitRotateLeft(safeAdd(safeAdd(a, q), safeAdd(x, t)), s), b);
+}
+
+function md5ff(a, b, c, d, x, s, t) {
+  return md5cmn(b & c | ~b & d, a, b, x, s, t);
+}
+
+function md5gg(a, b, c, d, x, s, t) {
+  return md5cmn(b & d | c & ~d, a, b, x, s, t);
+}
+
+function md5hh(a, b, c, d, x, s, t) {
+  return md5cmn(b ^ c ^ d, a, b, x, s, t);
+}
+
+function md5ii(a, b, c, d, x, s, t) {
+  return md5cmn(c ^ (b | ~d), a, b, x, s, t);
+}
+
+var _default = md5;
+exports.default = _default;
+},{}],"../node_modules/uuid/dist/esm-browser/v3.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _v = _interopRequireDefault(require("./v35.js"));
+
+var _md = _interopRequireDefault(require("./md5.js"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var v3 = (0, _v.default)('v3', 0x30, _md.default);
+var _default = v3;
+exports.default = _default;
+},{"./v35.js":"../node_modules/uuid/dist/esm-browser/v35.js","./md5.js":"../node_modules/uuid/dist/esm-browser/md5.js"}],"../node_modules/uuid/dist/esm-browser/v4.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _rng = _interopRequireDefault(require("./rng.js"));
+
+var _stringify = _interopRequireDefault(require("./stringify.js"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function v4(options, buf, offset) {
+  options = options || {};
+
+  var rnds = options.random || (options.rng || _rng.default)(); // Per 4.4, set bits for version and `clock_seq_hi_and_reserved`
+
+
+  rnds[6] = rnds[6] & 0x0f | 0x40;
+  rnds[8] = rnds[8] & 0x3f | 0x80; // Copy bytes to buffer, if provided
+
+  if (buf) {
+    offset = offset || 0;
+
+    for (var i = 0; i < 16; ++i) {
+      buf[offset + i] = rnds[i];
+    }
+
+    return buf;
+  }
+
+  return (0, _stringify.default)(rnds);
+}
+
+var _default = v4;
+exports.default = _default;
+},{"./rng.js":"../node_modules/uuid/dist/esm-browser/rng.js","./stringify.js":"../node_modules/uuid/dist/esm-browser/stringify.js"}],"../node_modules/uuid/dist/esm-browser/sha1.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+// Adapted from Chris Veness' SHA1 code at
+// http://www.movable-type.co.uk/scripts/sha1.html
+function f(s, x, y, z) {
+  switch (s) {
+    case 0:
+      return x & y ^ ~x & z;
+
+    case 1:
+      return x ^ y ^ z;
+
+    case 2:
+      return x & y ^ x & z ^ y & z;
+
+    case 3:
+      return x ^ y ^ z;
+  }
+}
+
+function ROTL(x, n) {
+  return x << n | x >>> 32 - n;
+}
+
+function sha1(bytes) {
+  var K = [0x5a827999, 0x6ed9eba1, 0x8f1bbcdc, 0xca62c1d6];
+  var H = [0x67452301, 0xefcdab89, 0x98badcfe, 0x10325476, 0xc3d2e1f0];
+
+  if (typeof bytes === 'string') {
+    var msg = unescape(encodeURIComponent(bytes)); // UTF8 escape
+
+    bytes = [];
+
+    for (var i = 0; i < msg.length; ++i) {
+      bytes.push(msg.charCodeAt(i));
+    }
+  } else if (!Array.isArray(bytes)) {
+    // Convert Array-like to Array
+    bytes = Array.prototype.slice.call(bytes);
+  }
+
+  bytes.push(0x80);
+  var l = bytes.length / 4 + 2;
+  var N = Math.ceil(l / 16);
+  var M = new Array(N);
+
+  for (var _i = 0; _i < N; ++_i) {
+    var arr = new Uint32Array(16);
+
+    for (var j = 0; j < 16; ++j) {
+      arr[j] = bytes[_i * 64 + j * 4] << 24 | bytes[_i * 64 + j * 4 + 1] << 16 | bytes[_i * 64 + j * 4 + 2] << 8 | bytes[_i * 64 + j * 4 + 3];
+    }
+
+    M[_i] = arr;
+  }
+
+  M[N - 1][14] = (bytes.length - 1) * 8 / Math.pow(2, 32);
+  M[N - 1][14] = Math.floor(M[N - 1][14]);
+  M[N - 1][15] = (bytes.length - 1) * 8 & 0xffffffff;
+
+  for (var _i2 = 0; _i2 < N; ++_i2) {
+    var W = new Uint32Array(80);
+
+    for (var t = 0; t < 16; ++t) {
+      W[t] = M[_i2][t];
+    }
+
+    for (var _t = 16; _t < 80; ++_t) {
+      W[_t] = ROTL(W[_t - 3] ^ W[_t - 8] ^ W[_t - 14] ^ W[_t - 16], 1);
+    }
+
+    var a = H[0];
+    var b = H[1];
+    var c = H[2];
+    var d = H[3];
+    var e = H[4];
+
+    for (var _t2 = 0; _t2 < 80; ++_t2) {
+      var s = Math.floor(_t2 / 20);
+      var T = ROTL(a, 5) + f(s, b, c, d) + e + K[s] + W[_t2] >>> 0;
+      e = d;
+      d = c;
+      c = ROTL(b, 30) >>> 0;
+      b = a;
+      a = T;
+    }
+
+    H[0] = H[0] + a >>> 0;
+    H[1] = H[1] + b >>> 0;
+    H[2] = H[2] + c >>> 0;
+    H[3] = H[3] + d >>> 0;
+    H[4] = H[4] + e >>> 0;
+  }
+
+  return [H[0] >> 24 & 0xff, H[0] >> 16 & 0xff, H[0] >> 8 & 0xff, H[0] & 0xff, H[1] >> 24 & 0xff, H[1] >> 16 & 0xff, H[1] >> 8 & 0xff, H[1] & 0xff, H[2] >> 24 & 0xff, H[2] >> 16 & 0xff, H[2] >> 8 & 0xff, H[2] & 0xff, H[3] >> 24 & 0xff, H[3] >> 16 & 0xff, H[3] >> 8 & 0xff, H[3] & 0xff, H[4] >> 24 & 0xff, H[4] >> 16 & 0xff, H[4] >> 8 & 0xff, H[4] & 0xff];
+}
+
+var _default = sha1;
+exports.default = _default;
+},{}],"../node_modules/uuid/dist/esm-browser/v5.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _v = _interopRequireDefault(require("./v35.js"));
+
+var _sha = _interopRequireDefault(require("./sha1.js"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var v5 = (0, _v.default)('v5', 0x50, _sha.default);
+var _default = v5;
+exports.default = _default;
+},{"./v35.js":"../node_modules/uuid/dist/esm-browser/v35.js","./sha1.js":"../node_modules/uuid/dist/esm-browser/sha1.js"}],"../node_modules/uuid/dist/esm-browser/nil.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+var _default = '00000000-0000-0000-0000-000000000000';
+exports.default = _default;
+},{}],"../node_modules/uuid/dist/esm-browser/version.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _validate = _interopRequireDefault(require("./validate.js"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function version(uuid) {
+  if (!(0, _validate.default)(uuid)) {
+    throw TypeError('Invalid UUID');
+  }
+
+  return parseInt(uuid.substr(14, 1), 16);
+}
+
+var _default = version;
+exports.default = _default;
+},{"./validate.js":"../node_modules/uuid/dist/esm-browser/validate.js"}],"../node_modules/uuid/dist/esm-browser/index.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+Object.defineProperty(exports, "v1", {
+  enumerable: true,
+  get: function () {
+    return _v.default;
+  }
+});
+Object.defineProperty(exports, "v3", {
+  enumerable: true,
+  get: function () {
+    return _v2.default;
+  }
+});
+Object.defineProperty(exports, "v4", {
+  enumerable: true,
+  get: function () {
+    return _v3.default;
+  }
+});
+Object.defineProperty(exports, "v5", {
+  enumerable: true,
+  get: function () {
+    return _v4.default;
+  }
+});
+Object.defineProperty(exports, "NIL", {
+  enumerable: true,
+  get: function () {
+    return _nil.default;
+  }
+});
+Object.defineProperty(exports, "version", {
+  enumerable: true,
+  get: function () {
+    return _version.default;
+  }
+});
+Object.defineProperty(exports, "validate", {
+  enumerable: true,
+  get: function () {
+    return _validate.default;
+  }
+});
+Object.defineProperty(exports, "stringify", {
+  enumerable: true,
+  get: function () {
+    return _stringify.default;
+  }
+});
+Object.defineProperty(exports, "parse", {
+  enumerable: true,
+  get: function () {
+    return _parse.default;
+  }
+});
+
+var _v = _interopRequireDefault(require("./v1.js"));
+
+var _v2 = _interopRequireDefault(require("./v3.js"));
+
+var _v3 = _interopRequireDefault(require("./v4.js"));
+
+var _v4 = _interopRequireDefault(require("./v5.js"));
+
+var _nil = _interopRequireDefault(require("./nil.js"));
+
+var _version = _interopRequireDefault(require("./version.js"));
+
+var _validate = _interopRequireDefault(require("./validate.js"));
+
+var _stringify = _interopRequireDefault(require("./stringify.js"));
+
+var _parse = _interopRequireDefault(require("./parse.js"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+},{"./v1.js":"../node_modules/uuid/dist/esm-browser/v1.js","./v3.js":"../node_modules/uuid/dist/esm-browser/v3.js","./v4.js":"../node_modules/uuid/dist/esm-browser/v4.js","./v5.js":"../node_modules/uuid/dist/esm-browser/v5.js","./nil.js":"../node_modules/uuid/dist/esm-browser/nil.js","./version.js":"../node_modules/uuid/dist/esm-browser/version.js","./validate.js":"../node_modules/uuid/dist/esm-browser/validate.js","./stringify.js":"../node_modules/uuid/dist/esm-browser/stringify.js","./parse.js":"../node_modules/uuid/dist/esm-browser/parse.js"}],"components/CreateLogo.tsx":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -44194,11 +45018,11 @@ var _utility = require("./utility");
 
 var _alignFunctions = require("./alignFunctions");
 
+var _uuid = require("uuid");
+
 function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
-
-var logoPath = "<svg width=\"172\" height=\"135\" viewBox=\"0 0 172 135\" xmlns=\"http://www.w3.org/2000/svg\">\n    <path d=\"M171.985 72.1159L171.971 71.8837C171.971 71.753 171.942 71.6224 171.912 71.4917C171.883 71.3321 171.839 71.1724 171.781 71.0272L151.179 22.1224C154.669 20.8159 157.165 17.4627 157.165 13.5433C157.165 8.49172 153.033 4.36914 147.938 4.36914C142.842 4.36914 138.71 8.47721 138.71 13.5433C138.71 15.532 139.367 17.3756 140.447 18.8853H31.3046C32.3997 17.3756 33.0421 15.532 33.0421 13.5433C33.0421 8.49172 28.91 4.36914 23.8143 4.36914C18.7185 4.36914 14.5864 8.46269 14.5864 13.5288C14.5864 17.5208 17.1708 20.903 20.748 22.1659L0.175212 71.0127C0.029202 71.3756 -0.014601 71.753 0.029202 72.1159C0.014601 72.3046 0 72.5079 0 72.6966C0 85.8192 10.7463 96.503 23.9457 96.503C37.145 96.503 47.8913 85.8192 47.8913 72.6966C47.8913 72.4933 47.8767 72.3046 47.8621 72.1014L47.8475 71.8691C47.8475 71.7385 47.8183 71.6079 47.7891 71.4772C47.7599 71.3175 47.7161 71.1579 47.6577 71.0127L27.5375 23.2256H144.419L124.284 71.0127C124.138 71.3756 124.094 71.753 124.138 72.1159C124.123 72.3046 124.109 72.5079 124.109 72.6966C124.109 85.8192 134.855 96.503 148.054 96.503C161.254 96.503 172 85.8192 172 72.6966C172 72.4933 171.985 72.3046 171.985 72.1159ZM166.51 69.7788H129.555L148.04 25.9256L166.51 69.7788ZM147.923 8.70946C150.595 8.70946 152.77 10.8724 152.77 13.5288C152.77 16.1853 150.595 18.3482 147.923 18.3482C145.251 18.3482 143.075 16.1853 143.075 13.5288C143.075 10.8724 145.251 8.70946 147.923 8.70946ZM18.9667 13.5288C18.9667 10.8724 21.1423 8.70946 23.8143 8.70946C26.4862 8.70946 28.6618 10.8724 28.6618 13.5288C28.6618 16.1853 26.4862 18.3482 23.8143 18.3482C21.1423 18.3482 18.9667 16.1853 18.9667 13.5288ZM23.9165 25.9256L42.4014 69.7788H5.44618L23.9165 25.9256ZM23.9457 92.1482C13.6374 92.1482 5.16876 84.1933 4.43871 74.1337H43.4672C42.7226 84.1933 34.254 92.1482 23.9457 92.1482ZM148.054 92.1482C137.746 92.1482 129.277 84.1933 128.533 74.1337H167.561C166.831 84.1933 158.363 92.1482 148.054 92.1482Z\"  />\n    <path d=\"M62.0544 13.7904H110.238C111.45 13.7904 112.428 12.8178 112.428 11.613C112.428 10.4081 111.45 9.43555 110.238 9.43555H62.0544C60.8425 9.43555 59.8643 10.4081 59.8643 11.613C59.8643 12.8178 60.8425 13.7904 62.0544 13.7904Z\"  />\n    <path d=\"M137.98 130.645H102.207V30.4837H111.858C111.289 31.5725 110.968 32.8063 110.968 34.1128C110.968 38.5112 114.574 42.0966 118.998 42.0966C123.422 42.0966 127.029 38.5112 127.029 34.1128C127.029 30.7305 124.897 27.8273 121.889 26.6805C121.51 26.3321 121.013 26.1289 120.458 26.1289H51.8337C51.2788 26.1289 50.7824 26.3321 50.4028 26.6805C47.395 27.8273 45.2632 30.7305 45.2632 34.1128C45.2632 38.5112 48.8697 42.0966 53.2938 42.0966C57.7179 42.0966 61.3243 38.5112 61.3243 34.1128C61.3243 32.8063 61.0031 31.5725 60.4337 30.4837H70.085V130.645H34.3125C33.1006 130.645 32.1223 131.618 32.1223 132.822C32.1223 134.027 33.1006 135 34.3125 135H137.98C139.192 135 140.17 134.027 140.17 132.822C140.17 131.618 139.192 130.645 137.98 130.645ZM97.8269 130.645H92.9648V30.4837H97.8269V130.645ZM88.5844 130.645H83.7223V30.4837H88.5844V130.645ZM118.998 37.7418C116.983 37.7418 115.348 36.116 115.348 34.1128C115.348 32.1095 116.983 30.4837 118.998 30.4837C121.013 30.4837 122.649 32.1095 122.649 34.1128C122.649 36.116 121.013 37.7418 118.998 37.7418ZM56.944 34.1128C56.944 36.116 55.3087 37.7418 53.2938 37.7418C51.2788 37.7418 49.6435 36.116 49.6435 34.1128C49.6435 32.1095 51.2788 30.4837 53.2938 30.4837C55.3087 30.4837 56.944 32.1095 56.944 34.1128ZM74.4653 30.4837H79.3274V130.645H74.4653V30.4837Z\"  />\n    <path d=\"M69.3549 4.35484H102.937C104.149 4.35484 105.127 3.38226 105.127 2.17742C105.127 0.972581 104.149 0 102.937 0H69.3549C68.1431 0 67.1648 0.972581 67.1648 2.17742C67.1648 3.38226 68.1431 4.35484 69.3549 4.35484Z\"  />\n    </svg>\n    ";
 
 var CreateLogo = function CreateLogo(props) {
   var divRef = React.useRef(null);
@@ -44235,14 +45059,14 @@ var CreateLogo = function CreateLogo(props) {
     }
   }, [props.logoProps]);
   return React.createElement("div", {
-    id: "logo-image",
+    id: "image-logo-".concat((0, _uuid.v4)()),
     ref: divRef
   });
 };
 
 var _default = CreateLogo;
 exports.default = _default;
-},{"react":"../node_modules/react/index.js","@svgdotjs/svg.js":"../node_modules/@svgdotjs/svg.js/dist/svg.esm.js","./utility":"components/utility.ts","./alignFunctions":"components/alignFunctions.ts"}],"components/ui/DownloadButton.tsx":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js","@svgdotjs/svg.js":"../node_modules/@svgdotjs/svg.js/dist/svg.esm.js","./utility":"components/utility.ts","./alignFunctions":"components/alignFunctions.ts","uuid":"../node_modules/uuid/dist/esm-browser/index.js"}],"components/ui/DownloadButton.tsx":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -44257,37 +45081,30 @@ function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 
 var DownloadButton = function DownloadButton() {
-  var downloadSVGasPNG = function downloadSVGasPNG() {
-    var _a;
-
-    var svg = (_a = document.querySelector("#logo-image")) === null || _a === void 0 ? void 0 : _a.childNodes[0];
-
-    if (!svg) {
-      return;
-    }
-
-    var xml = new XMLSerializer().serializeToString(svg);
-    var svg64 = btoa(xml);
-    var image = "data:image/svg+xml;base64," + svg64;
-    var element = document.createElement("a");
-    var sourceImage = new Image();
-
-    sourceImage.onload = function () {
-      console.log("Load");
-      var canvas = document.createElement("canvas");
-      canvas.height = 280;
-      canvas.width = 300;
-      var ctx = canvas.getContext("2d");
-      ctx === null || ctx === void 0 ? void 0 : ctx.drawImage(sourceImage, 0, 0, 280, 300);
-      element.download = "logo.png";
-      element.href = canvas.toDataURL("image/png");
-      element.click();
-      element.remove();
-    };
-
-    sourceImage.src = image;
-  };
-
+  // const downloadSVGasPNG = () => {
+  //     const svg = document.querySelector("#logo-image")?.childNodes[0]
+  //     if (!svg) {
+  //         return
+  //     }
+  //     const xml = new XMLSerializer().serializeToString(svg)
+  //     const svg64 = btoa(xml)
+  //     const image = "data:image/svg+xml;base64," + svg64
+  //     const element = document.createElement("a")
+  //     const sourceImage = new Image()
+  //     sourceImage.onload = () => {
+  //         console.log("Load")
+  //         const canvas = document.createElement("canvas")
+  //         canvas.height = 280
+  //         canvas.width = 300
+  //         const ctx = canvas.getContext("2d")
+  //         ctx?.drawImage(sourceImage, 0, 0, 280, 300)
+  //         element.download = "logo.png"
+  //         element.href = canvas.toDataURL("image/png")
+  //         element.click()
+  //         element.remove()
+  //     }
+  //     sourceImage.src = image
+  // }
   var downloadSVG = function downloadSVG() {
     var _a;
 
@@ -44308,16 +45125,17 @@ var DownloadButton = function DownloadButton() {
   return React.createElement("div", {
     className: "container flex justify-center max-content mx-8 my-4"
   }, React.createElement("button", {
-    className: "m-2 box-content max-content bg-transparent bg-orange-600 font-semibold text-white py-2 px-4 rounded",
     onClick: function onClick() {
       return downloadSVG();
-    }
-  }, "Download as SVG"), React.createElement("button", {
-    className: "m-2 box-content max-content bg-transparent bg-orange-600 font-semibold text-white py-2 px-4 rounded",
-    onClick: function onClick() {
-      return downloadSVGasPNG();
-    }
-  }, "Download as PNG"));
+    },
+    className: "bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded inline-flex items-center"
+  }, React.createElement("svg", {
+    className: "fill-current w-4 h-4 mr-2",
+    xmlns: "http://www.w3.org/2000/svg",
+    viewBox: "0 0 20 20"
+  }, React.createElement("path", {
+    d: "M13 8V2H7v6H2l8 8 8-8h-5zM0 18h20v2H0v-2z"
+  })), React.createElement("span", null, "Download")));
 };
 
 var _default = DownloadButton;
@@ -49271,15 +50089,13 @@ var ReactCSS = exports.ReactCSS = function ReactCSS(classes) {
 };
 
 exports.default = ReactCSS;
-},{"./flattenNames":"../node_modules/reactcss/lib/flattenNames.js","./mergeClasses":"../node_modules/reactcss/lib/mergeClasses.js","./autoprefix":"../node_modules/reactcss/lib/autoprefix.js","./components/hover":"../node_modules/reactcss/lib/components/hover.js","./components/active":"../node_modules/reactcss/lib/components/active.js","./loop":"../node_modules/reactcss/lib/loop.js"}],"../node_modules/react-color/es/helpers/alpha.js":[function(require,module,exports) {
-"use strict";
+},{"./flattenNames":"../node_modules/reactcss/lib/flattenNames.js","./mergeClasses":"../node_modules/reactcss/lib/mergeClasses.js","./autoprefix":"../node_modules/reactcss/lib/autoprefix.js","./components/hover":"../node_modules/reactcss/lib/components/hover.js","./components/active":"../node_modules/reactcss/lib/components/active.js","./loop":"../node_modules/reactcss/lib/loop.js"}],"../node_modules/react-color/lib/helpers/alpha.js":[function(require,module,exports) {
+'use strict';
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.calculateChange = void 0;
-
-var calculateChange = function calculateChange(e, hsl, direction, initialA, container) {
+var calculateChange = exports.calculateChange = function calculateChange(e, hsl, direction, initialA, container) {
   var containerWidth = container.clientWidth;
   var containerHeight = container.clientHeight;
   var x = typeof e.pageX === 'number' ? e.pageX : e.touches[0].pageX;
@@ -49289,7 +50105,6 @@ var calculateChange = function calculateChange(e, hsl, direction, initialA, cont
 
   if (direction === 'vertical') {
     var a = void 0;
-
     if (top < 0) {
       a = 0;
     } else if (top > containerHeight) {
@@ -49309,7 +50124,6 @@ var calculateChange = function calculateChange(e, hsl, direction, initialA, cont
     }
   } else {
     var _a = void 0;
-
     if (left < 0) {
       _a = 0;
     } else if (left > containerWidth) {
@@ -49328,35 +50142,27 @@ var calculateChange = function calculateChange(e, hsl, direction, initialA, cont
       };
     }
   }
-
   return null;
 };
-
-exports.calculateChange = calculateChange;
-},{}],"../node_modules/react-color/es/helpers/checkboard.js":[function(require,module,exports) {
-"use strict";
+},{}],"../node_modules/react-color/lib/helpers/checkboard.js":[function(require,module,exports) {
+'use strict';
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.get = exports.render = void 0;
 var checkboardCache = {};
 
-var render = function render(c1, c2, size, serverCanvas) {
+var render = exports.render = function render(c1, c2, size, serverCanvas) {
   if (typeof document === 'undefined' && !serverCanvas) {
     return null;
   }
-
   var canvas = serverCanvas ? new serverCanvas() : document.createElement('canvas');
   canvas.width = size * 2;
   canvas.height = size * 2;
   var ctx = canvas.getContext('2d');
-
   if (!ctx) {
     return null;
   } // If no context can be found, return early.
-
-
   ctx.fillStyle = c1;
   ctx.fillRect(0, 0, canvas.width, canvas.height);
   ctx.fillStyle = c2;
@@ -49366,9 +50172,7 @@ var render = function render(c1, c2, size, serverCanvas) {
   return canvas.toDataURL();
 };
 
-exports.render = render;
-
-var get = function get(c1, c2, size, serverCanvas) {
+var get = exports.get = function get(c1, c2, size, serverCanvas) {
   var key = c1 + '-' + c2 + '-' + size + (serverCanvas ? '-server' : '');
 
   if (checkboardCache[key]) {
@@ -49379,43 +50183,33 @@ var get = function get(c1, c2, size, serverCanvas) {
   checkboardCache[key] = checkboard;
   return checkboard;
 };
-
-exports.get = get;
-},{}],"../node_modules/react-color/es/components/common/Checkboard.js":[function(require,module,exports) {
-"use strict";
+},{}],"../node_modules/react-color/lib/components/common/Checkboard.js":[function(require,module,exports) {
+'use strict';
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.default = exports.Checkboard = void 0;
+exports.Checkboard = undefined;
 
-var _react = _interopRequireWildcard(require("react"));
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
-var _reactcss = _interopRequireDefault(require("reactcss"));
+var _react = require('react');
 
-var checkboard = _interopRequireWildcard(require("../../helpers/checkboard"));
+var _react2 = _interopRequireDefault(_react);
+
+var _reactcss = require('reactcss');
+
+var _reactcss2 = _interopRequireDefault(_reactcss);
+
+var _checkboard = require('../../helpers/checkboard');
+
+var checkboard = _interopRequireWildcard(_checkboard);
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
-
-function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
-
-var _extends = Object.assign || function (target) {
-  for (var i = 1; i < arguments.length; i++) {
-    var source = arguments[i];
-
-    for (var key in source) {
-      if (Object.prototype.hasOwnProperty.call(source, key)) {
-        target[key] = source[key];
-      }
-    }
-  }
-
-  return target;
-};
-
-var Checkboard = function Checkboard(_ref) {
+var Checkboard = exports.Checkboard = function Checkboard(_ref) {
   var white = _ref.white,
       grey = _ref.grey,
       size = _ref.size,
@@ -49423,7 +50217,8 @@ var Checkboard = function Checkboard(_ref) {
       borderRadius = _ref.borderRadius,
       boxShadow = _ref.boxShadow,
       children = _ref.children;
-  var styles = (0, _reactcss.default)({
+
+  var styles = (0, _reactcss2.default)({
     'default': {
       grid: {
         borderRadius: borderRadius,
@@ -49433,107 +50228,56 @@ var Checkboard = function Checkboard(_ref) {
       }
     }
   });
-  return (0, _react.isValidElement)(children) ? _react.default.cloneElement(children, _extends({}, children.props, {
-    style: _extends({}, children.props.style, styles.grid)
-  })) : _react.default.createElement('div', {
-    style: styles.grid
-  });
+  return (0, _react.isValidElement)(children) ? _react2.default.cloneElement(children, _extends({}, children.props, { style: _extends({}, children.props.style, styles.grid) })) : _react2.default.createElement('div', { style: styles.grid });
 };
 
-exports.Checkboard = Checkboard;
 Checkboard.defaultProps = {
   size: 8,
   white: 'transparent',
   grey: 'rgba(0,0,0,.08)',
   renderers: {}
 };
-var _default = Checkboard;
-exports.default = _default;
-},{"react":"../node_modules/react/index.js","reactcss":"../node_modules/reactcss/lib/index.js","../../helpers/checkboard":"../node_modules/react-color/es/helpers/checkboard.js"}],"../node_modules/react-color/es/components/common/Alpha.js":[function(require,module,exports) {
-"use strict";
+
+exports.default = Checkboard;
+},{"react":"../node_modules/react/index.js","reactcss":"../node_modules/reactcss/lib/index.js","../../helpers/checkboard":"../node_modules/react-color/lib/helpers/checkboard.js"}],"../node_modules/react-color/lib/components/common/Alpha.js":[function(require,module,exports) {
+'use strict';
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.default = exports.Alpha = void 0;
+exports.Alpha = undefined;
 
-var _react = _interopRequireWildcard(require("react"));
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
-var _reactcss = _interopRequireDefault(require("reactcss"));
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var alpha = _interopRequireWildcard(require("../../helpers/alpha"));
+var _react = require('react');
 
-var _Checkboard = _interopRequireDefault(require("./Checkboard"));
+var _react2 = _interopRequireDefault(_react);
+
+var _reactcss = require('reactcss');
+
+var _reactcss2 = _interopRequireDefault(_reactcss);
+
+var _alpha = require('../../helpers/alpha');
+
+var alpha = _interopRequireWildcard(_alpha);
+
+var _Checkboard = require('./Checkboard');
+
+var _Checkboard2 = _interopRequireDefault(_Checkboard);
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
-var _extends = Object.assign || function (target) {
-  for (var i = 1; i < arguments.length; i++) {
-    var source = arguments[i];
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-    for (var key in source) {
-      if (Object.prototype.hasOwnProperty.call(source, key)) {
-        target[key] = source[key];
-      }
-    }
-  }
-
-  return target;
-};
-
-var _createClass = function () {
-  function defineProperties(target, props) {
-    for (var i = 0; i < props.length; i++) {
-      var descriptor = props[i];
-      descriptor.enumerable = descriptor.enumerable || false;
-      descriptor.configurable = true;
-      if ("value" in descriptor) descriptor.writable = true;
-      Object.defineProperty(target, descriptor.key, descriptor);
-    }
-  }
-
-  return function (Constructor, protoProps, staticProps) {
-    if (protoProps) defineProperties(Constructor.prototype, protoProps);
-    if (staticProps) defineProperties(Constructor, staticProps);
-    return Constructor;
-  };
-}();
-
-function _classCallCheck(instance, Constructor) {
-  if (!(instance instanceof Constructor)) {
-    throw new TypeError("Cannot call a class as a function");
-  }
-}
-
-function _possibleConstructorReturn(self, call) {
-  if (!self) {
-    throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
-  }
-
-  return call && (typeof call === "object" || typeof call === "function") ? call : self;
-}
-
-function _inherits(subClass, superClass) {
-  if (typeof superClass !== "function" && superClass !== null) {
-    throw new TypeError("Super expression must either be null or a function, not " + typeof superClass);
-  }
-
-  subClass.prototype = Object.create(superClass && superClass.prototype, {
-    constructor: {
-      value: subClass,
-      enumerable: false,
-      writable: true,
-      configurable: true
-    }
-  });
-  if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass;
-}
-
-var Alpha = function (_ref) {
+var Alpha = exports.Alpha = function (_ref) {
   _inherits(Alpha, _ref);
 
   function Alpha() {
@@ -49552,7 +50296,6 @@ var Alpha = function (_ref) {
       change && typeof _this.props.onChange === 'function' && _this.props.onChange(change, e);
     }, _this.handleMouseDown = function (e) {
       _this.handleChange(e);
-
       window.addEventListener('mousemove', _this.handleChange);
       window.addEventListener('mouseup', _this.handleMouseUp);
     }, _this.handleMouseUp = function () {
@@ -49574,7 +50317,7 @@ var Alpha = function (_ref) {
       var _this2 = this;
 
       var rgb = this.props.rgb;
-      var styles = (0, _reactcss.default)({
+      var styles = (0, _reactcss2.default)({
         'default': {
           alpha: {
             absolute: '0px 0px 0px 0px',
@@ -49624,133 +50367,82 @@ var Alpha = function (_ref) {
         vertical: this.props.direction === 'vertical',
         overwrite: true
       });
-      return _react.default.createElement('div', {
-        style: styles.alpha
-      }, _react.default.createElement('div', {
-        style: styles.checkboard
-      }, _react.default.createElement(_Checkboard.default, {
-        renderers: this.props.renderers
-      })), _react.default.createElement('div', {
-        style: styles.gradient
-      }), _react.default.createElement('div', {
-        style: styles.container,
-        ref: function ref(container) {
-          return _this2.container = container;
-        },
-        onMouseDown: this.handleMouseDown,
-        onTouchMove: this.handleChange,
-        onTouchStart: this.handleChange
-      }, _react.default.createElement('div', {
-        style: styles.pointer
-      }, this.props.pointer ? _react.default.createElement(this.props.pointer, this.props) : _react.default.createElement('div', {
-        style: styles.slider
-      }))));
+
+      return _react2.default.createElement(
+        'div',
+        { style: styles.alpha },
+        _react2.default.createElement(
+          'div',
+          { style: styles.checkboard },
+          _react2.default.createElement(_Checkboard2.default, { renderers: this.props.renderers })
+        ),
+        _react2.default.createElement('div', { style: styles.gradient }),
+        _react2.default.createElement(
+          'div',
+          {
+            style: styles.container,
+            ref: function ref(container) {
+              return _this2.container = container;
+            },
+            onMouseDown: this.handleMouseDown,
+            onTouchMove: this.handleChange,
+            onTouchStart: this.handleChange
+          },
+          _react2.default.createElement(
+            'div',
+            { style: styles.pointer },
+            this.props.pointer ? _react2.default.createElement(this.props.pointer, this.props) : _react2.default.createElement('div', { style: styles.slider })
+          )
+        )
+      );
     }
   }]);
 
   return Alpha;
 }(_react.PureComponent || _react.Component);
 
-exports.Alpha = Alpha;
-var _default = Alpha;
-exports.default = _default;
-},{"react":"../node_modules/react/index.js","reactcss":"../node_modules/reactcss/lib/index.js","../../helpers/alpha":"../node_modules/react-color/es/helpers/alpha.js","./Checkboard":"../node_modules/react-color/es/components/common/Checkboard.js"}],"../node_modules/react-color/es/components/common/EditableInput.js":[function(require,module,exports) {
-"use strict";
+exports.default = Alpha;
+},{"react":"../node_modules/react/index.js","reactcss":"../node_modules/reactcss/lib/index.js","../../helpers/alpha":"../node_modules/react-color/lib/helpers/alpha.js","./Checkboard":"../node_modules/react-color/lib/components/common/Checkboard.js"}],"../node_modules/react-color/lib/components/common/EditableInput.js":[function(require,module,exports) {
+'use strict';
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.default = exports.EditableInput = void 0;
+exports.EditableInput = undefined;
 
-var _react = _interopRequireWildcard(require("react"));
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _reactcss = _interopRequireDefault(require("reactcss"));
+var _react = require('react');
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactcss = require('reactcss');
+
+var _reactcss2 = _interopRequireDefault(_reactcss);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
-function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-var _createClass = function () {
-  function defineProperties(target, props) {
-    for (var i = 0; i < props.length; i++) {
-      var descriptor = props[i];
-      descriptor.enumerable = descriptor.enumerable || false;
-      descriptor.configurable = true;
-      if ("value" in descriptor) descriptor.writable = true;
-      Object.defineProperty(target, descriptor.key, descriptor);
-    }
-  }
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
-  return function (Constructor, protoProps, staticProps) {
-    if (protoProps) defineProperties(Constructor.prototype, protoProps);
-    if (staticProps) defineProperties(Constructor, staticProps);
-    return Constructor;
-  };
-}();
-
-function _defineProperty(obj, key, value) {
-  if (key in obj) {
-    Object.defineProperty(obj, key, {
-      value: value,
-      enumerable: true,
-      configurable: true,
-      writable: true
-    });
-  } else {
-    obj[key] = value;
-  }
-
-  return obj;
-}
-
-function _classCallCheck(instance, Constructor) {
-  if (!(instance instanceof Constructor)) {
-    throw new TypeError("Cannot call a class as a function");
-  }
-}
-
-function _possibleConstructorReturn(self, call) {
-  if (!self) {
-    throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
-  }
-
-  return call && (typeof call === "object" || typeof call === "function") ? call : self;
-}
-
-function _inherits(subClass, superClass) {
-  if (typeof superClass !== "function" && superClass !== null) {
-    throw new TypeError("Super expression must either be null or a function, not " + typeof superClass);
-  }
-
-  subClass.prototype = Object.create(superClass && superClass.prototype, {
-    constructor: {
-      value: subClass,
-      enumerable: false,
-      writable: true,
-      configurable: true
-    }
-  });
-  if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass;
-}
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
 var DEFAULT_ARROW_OFFSET = 1;
+
 var UP_KEY_CODE = 38;
 var DOWN_KEY_CODE = 40;
 var VALID_KEY_CODES = [UP_KEY_CODE, DOWN_KEY_CODE];
-
 var isValidKeyCode = function isValidKeyCode(keyCode) {
   return VALID_KEY_CODES.indexOf(keyCode) > -1;
 };
-
 var getNumberValue = function getNumberValue(value) {
   return Number(String(value).replace(/%/g, ''));
 };
 
-var idCounter = 1;
-
-var EditableInput = function (_ref) {
+var EditableInput = exports.EditableInput = function (_ref) {
   _inherits(EditableInput, _ref);
 
   function EditableInput(props) {
@@ -49760,10 +50452,7 @@ var EditableInput = function (_ref) {
 
     _this.handleBlur = function () {
       if (_this.state.blurValue) {
-        _this.setState({
-          value: _this.state.blurValue,
-          blurValue: null
-        });
+        _this.setState({ value: _this.state.blurValue, blurValue: null });
       }
     };
 
@@ -49776,10 +50465,8 @@ var EditableInput = function (_ref) {
       // and update accordingly with a percentage
       // https://github.com/casesandberg/react-color/issues/383
       var value = getNumberValue(e.target.value);
-
       if (!isNaN(value) && isValidKeyCode(e.keyCode)) {
         var offset = _this.getArrowOffset();
-
         var updatedValue = e.keyCode === UP_KEY_CODE ? value + offset : value - offset;
 
         _this.setUpdatedValue(updatedValue, e);
@@ -49789,7 +50476,6 @@ var EditableInput = function (_ref) {
     _this.handleDrag = function (e) {
       if (_this.props.dragLabel) {
         var newValue = Math.round(_this.props.value + e.movementX);
-
         if (newValue >= 0 && newValue <= _this.props.dragMax) {
           _this.props.onChange && _this.props.onChange(_this.getValueObjectWithLabel(newValue), e);
         }
@@ -49799,9 +50485,7 @@ var EditableInput = function (_ref) {
     _this.handleMouseDown = function (e) {
       if (_this.props.dragLabel) {
         e.preventDefault();
-
         _this.handleDrag(e);
-
         window.addEventListener('mousemove', _this.handleDrag);
         window.addEventListener('mouseup', _this.handleMouseUp);
       }
@@ -49820,7 +50504,6 @@ var EditableInput = function (_ref) {
       value: String(props.value).toUpperCase(),
       blurValue: String(props.value).toUpperCase()
     };
-    _this.inputId = 'rc-editable-input-' + idCounter++;
     return _this;
   }
 
@@ -49829,14 +50512,9 @@ var EditableInput = function (_ref) {
     value: function componentDidUpdate(prevProps, prevState) {
       if (this.props.value !== this.state.value && (prevProps.value !== this.props.value || prevState.value !== this.state.value)) {
         if (this.input === document.activeElement) {
-          this.setState({
-            blurValue: String(this.props.value).toUpperCase()
-          });
+          this.setState({ blurValue: String(this.props.value).toUpperCase() });
         } else {
-          this.setState({
-            value: String(this.props.value).toUpperCase(),
-            blurValue: !this.state.blurValue && String(this.props.value).toUpperCase()
-          });
+          this.setState({ value: String(this.props.value).toUpperCase(), blurValue: !this.state.blurValue && String(this.props.value).toUpperCase() });
         }
       }
     }
@@ -49860,16 +50538,15 @@ var EditableInput = function (_ref) {
     value: function setUpdatedValue(value, e) {
       var onChangeValue = this.props.label ? this.getValueObjectWithLabel(value) : value;
       this.props.onChange && this.props.onChange(onChangeValue, e);
-      this.setState({
-        value: value
-      });
+
+      this.setState({ value: value });
     }
   }, {
     key: 'render',
     value: function render() {
       var _this2 = this;
 
-      var styles = (0, _reactcss.default)({
+      var styles = (0, _reactcss2.default)({
         'default': {
           wrap: {
             position: 'relative'
@@ -49888,43 +50565,42 @@ var EditableInput = function (_ref) {
       }, {
         'user-override': true
       }, this.props);
-      return _react.default.createElement('div', {
-        style: styles.wrap
-      }, _react.default.createElement('input', {
-        id: this.inputId,
-        style: styles.input,
-        ref: function ref(input) {
-          return _this2.input = input;
-        },
-        value: this.state.value,
-        onKeyDown: this.handleKeyDown,
-        onChange: this.handleChange,
-        onBlur: this.handleBlur,
-        placeholder: this.props.placeholder,
-        spellCheck: 'false'
-      }), this.props.label && !this.props.hideLabel ? _react.default.createElement('label', {
-        htmlFor: this.inputId,
-        style: styles.label,
-        onMouseDown: this.handleMouseDown
-      }, this.props.label) : null);
+
+      return _react2.default.createElement(
+        'div',
+        { style: styles.wrap },
+        _react2.default.createElement('input', {
+          style: styles.input,
+          ref: function ref(input) {
+            return _this2.input = input;
+          },
+          value: this.state.value,
+          onKeyDown: this.handleKeyDown,
+          onChange: this.handleChange,
+          onBlur: this.handleBlur,
+          placeholder: this.props.placeholder,
+          spellCheck: 'false'
+        }),
+        this.props.label && !this.props.hideLabel ? _react2.default.createElement(
+          'span',
+          { style: styles.label, onMouseDown: this.handleMouseDown },
+          this.props.label
+        ) : null
+      );
     }
   }]);
 
   return EditableInput;
 }(_react.PureComponent || _react.Component);
 
-exports.EditableInput = EditableInput;
-var _default = EditableInput;
-exports.default = _default;
-},{"react":"../node_modules/react/index.js","reactcss":"../node_modules/reactcss/lib/index.js"}],"../node_modules/react-color/es/helpers/hue.js":[function(require,module,exports) {
-"use strict";
+exports.default = EditableInput;
+},{"react":"../node_modules/react/index.js","reactcss":"../node_modules/reactcss/lib/index.js"}],"../node_modules/react-color/lib/helpers/hue.js":[function(require,module,exports) {
+'use strict';
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.calculateChange = void 0;
-
-var calculateChange = function calculateChange(e, direction, hsl, container) {
+var calculateChange = exports.calculateChange = function calculateChange(e, direction, hsl, container) {
   var containerWidth = container.clientWidth;
   var containerHeight = container.clientHeight;
   var x = typeof e.pageX === 'number' ? e.pageX : e.touches[0].pageX;
@@ -49934,7 +50610,6 @@ var calculateChange = function calculateChange(e, direction, hsl, container) {
 
   if (direction === 'vertical') {
     var h = void 0;
-
     if (top < 0) {
       h = 359;
     } else if (top > containerHeight) {
@@ -49955,14 +50630,12 @@ var calculateChange = function calculateChange(e, direction, hsl, container) {
     }
   } else {
     var _h = void 0;
-
     if (left < 0) {
       _h = 0;
     } else if (left > containerWidth) {
       _h = 359;
     } else {
       var _percent = left * 100 / containerWidth;
-
       _h = 360 * _percent / 100;
     }
 
@@ -49976,80 +50649,41 @@ var calculateChange = function calculateChange(e, direction, hsl, container) {
       };
     }
   }
-
   return null;
 };
-
-exports.calculateChange = calculateChange;
-},{}],"../node_modules/react-color/es/components/common/Hue.js":[function(require,module,exports) {
-"use strict";
+},{}],"../node_modules/react-color/lib/components/common/Hue.js":[function(require,module,exports) {
+'use strict';
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.default = exports.Hue = void 0;
+exports.Hue = undefined;
 
-var _react = _interopRequireWildcard(require("react"));
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _reactcss = _interopRequireDefault(require("reactcss"));
+var _react = require('react');
 
-var hue = _interopRequireWildcard(require("../../helpers/hue"));
+var _react2 = _interopRequireDefault(_react);
+
+var _reactcss = require('reactcss');
+
+var _reactcss2 = _interopRequireDefault(_reactcss);
+
+var _hue = require('../../helpers/hue');
+
+var hue = _interopRequireWildcard(_hue);
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
-var _createClass = function () {
-  function defineProperties(target, props) {
-    for (var i = 0; i < props.length; i++) {
-      var descriptor = props[i];
-      descriptor.enumerable = descriptor.enumerable || false;
-      descriptor.configurable = true;
-      if ("value" in descriptor) descriptor.writable = true;
-      Object.defineProperty(target, descriptor.key, descriptor);
-    }
-  }
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-  return function (Constructor, protoProps, staticProps) {
-    if (protoProps) defineProperties(Constructor.prototype, protoProps);
-    if (staticProps) defineProperties(Constructor, staticProps);
-    return Constructor;
-  };
-}();
-
-function _classCallCheck(instance, Constructor) {
-  if (!(instance instanceof Constructor)) {
-    throw new TypeError("Cannot call a class as a function");
-  }
-}
-
-function _possibleConstructorReturn(self, call) {
-  if (!self) {
-    throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
-  }
-
-  return call && (typeof call === "object" || typeof call === "function") ? call : self;
-}
-
-function _inherits(subClass, superClass) {
-  if (typeof superClass !== "function" && superClass !== null) {
-    throw new TypeError("Super expression must either be null or a function, not " + typeof superClass);
-  }
-
-  subClass.prototype = Object.create(superClass && superClass.prototype, {
-    constructor: {
-      value: subClass,
-      enumerable: false,
-      writable: true,
-      configurable: true
-    }
-  });
-  if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass;
-}
-
-var Hue = function (_ref) {
+var Hue = exports.Hue = function (_ref) {
   _inherits(Hue, _ref);
 
   function Hue() {
@@ -50068,7 +50702,6 @@ var Hue = function (_ref) {
       change && typeof _this.props.onChange === 'function' && _this.props.onChange(change, e);
     }, _this.handleMouseDown = function (e) {
       _this.handleChange(e);
-
       window.addEventListener('mousemove', _this.handleChange);
       window.addEventListener('mouseup', _this.handleMouseUp);
     }, _this.handleMouseUp = function () {
@@ -50094,7 +50727,9 @@ var Hue = function (_ref) {
 
       var _props$direction = this.props.direction,
           direction = _props$direction === undefined ? 'horizontal' : _props$direction;
-      var styles = (0, _reactcss.default)({
+
+
+      var styles = (0, _reactcss2.default)({
         'default': {
           hue: {
             absolute: '0px 0px 0px 0px',
@@ -50127,1537 +50762,45 @@ var Hue = function (_ref) {
             top: -(this.props.hsl.h * 100 / 360) + 100 + '%'
           }
         }
-      }, {
-        vertical: direction === 'vertical'
-      });
-      return _react.default.createElement('div', {
-        style: styles.hue
-      }, _react.default.createElement('div', {
-        className: 'hue-' + direction,
-        style: styles.container,
-        ref: function ref(container) {
-          return _this2.container = container;
-        },
-        onMouseDown: this.handleMouseDown,
-        onTouchMove: this.handleChange,
-        onTouchStart: this.handleChange
-      }, _react.default.createElement('style', null, '\n            .hue-horizontal {\n              background: linear-gradient(to right, #f00 0%, #ff0 17%, #0f0\n                33%, #0ff 50%, #00f 67%, #f0f 83%, #f00 100%);\n              background: -webkit-linear-gradient(to right, #f00 0%, #ff0\n                17%, #0f0 33%, #0ff 50%, #00f 67%, #f0f 83%, #f00 100%);\n            }\n\n            .hue-vertical {\n              background: linear-gradient(to top, #f00 0%, #ff0 17%, #0f0 33%,\n                #0ff 50%, #00f 67%, #f0f 83%, #f00 100%);\n              background: -webkit-linear-gradient(to top, #f00 0%, #ff0 17%,\n                #0f0 33%, #0ff 50%, #00f 67%, #f0f 83%, #f00 100%);\n            }\n          '), _react.default.createElement('div', {
-        style: styles.pointer
-      }, this.props.pointer ? _react.default.createElement(this.props.pointer, this.props) : _react.default.createElement('div', {
-        style: styles.slider
-      }))));
+      }, { vertical: direction === 'vertical' });
+
+      return _react2.default.createElement(
+        'div',
+        { style: styles.hue },
+        _react2.default.createElement(
+          'div',
+          {
+            className: 'hue-' + direction,
+            style: styles.container,
+            ref: function ref(container) {
+              return _this2.container = container;
+            },
+            onMouseDown: this.handleMouseDown,
+            onTouchMove: this.handleChange,
+            onTouchStart: this.handleChange
+          },
+          _react2.default.createElement(
+            'style',
+            null,
+            '\n            .hue-horizontal {\n              background: linear-gradient(to right, #f00 0%, #ff0 17%, #0f0\n                33%, #0ff 50%, #00f 67%, #f0f 83%, #f00 100%);\n              background: -webkit-linear-gradient(to right, #f00 0%, #ff0\n                17%, #0f0 33%, #0ff 50%, #00f 67%, #f0f 83%, #f00 100%);\n            }\n\n            .hue-vertical {\n              background: linear-gradient(to top, #f00 0%, #ff0 17%, #0f0 33%,\n                #0ff 50%, #00f 67%, #f0f 83%, #f00 100%);\n              background: -webkit-linear-gradient(to top, #f00 0%, #ff0 17%,\n                #0f0 33%, #0ff 50%, #00f 67%, #f0f 83%, #f00 100%);\n            }\n          '
+          ),
+          _react2.default.createElement(
+            'div',
+            { style: styles.pointer },
+            this.props.pointer ? _react2.default.createElement(this.props.pointer, this.props) : _react2.default.createElement('div', { style: styles.slider })
+          )
+        )
+      );
     }
   }]);
 
   return Hue;
 }(_react.PureComponent || _react.Component);
 
-exports.Hue = Hue;
-var _default = Hue;
-exports.default = _default;
-},{"react":"../node_modules/react/index.js","reactcss":"../node_modules/reactcss/lib/index.js","../../helpers/hue":"../node_modules/react-color/es/helpers/hue.js"}],"../node_modules/lodash-es/_listCacheClear.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-/**
- * Removes all key-value entries from the list cache.
- *
- * @private
- * @name clear
- * @memberOf ListCache
- */
-function listCacheClear() {
-  this.__data__ = [];
-  this.size = 0;
-}
-
-var _default = listCacheClear;
-exports.default = _default;
-},{}],"../node_modules/lodash-es/eq.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-/**
- * Performs a
- * [`SameValueZero`](http://ecma-international.org/ecma-262/7.0/#sec-samevaluezero)
- * comparison between two values to determine if they are equivalent.
- *
- * @static
- * @memberOf _
- * @since 4.0.0
- * @category Lang
- * @param {*} value The value to compare.
- * @param {*} other The other value to compare.
- * @returns {boolean} Returns `true` if the values are equivalent, else `false`.
- * @example
- *
- * var object = { 'a': 1 };
- * var other = { 'a': 1 };
- *
- * _.eq(object, object);
- * // => true
- *
- * _.eq(object, other);
- * // => false
- *
- * _.eq('a', 'a');
- * // => true
- *
- * _.eq('a', Object('a'));
- * // => false
- *
- * _.eq(NaN, NaN);
- * // => true
- */
-function eq(value, other) {
-  return value === other || value !== value && other !== other;
-}
-
-var _default = eq;
-exports.default = _default;
-},{}],"../node_modules/lodash-es/_assocIndexOf.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var _eq = _interopRequireDefault(require("./eq.js"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-/**
- * Gets the index at which the `key` is found in `array` of key-value pairs.
- *
- * @private
- * @param {Array} array The array to inspect.
- * @param {*} key The key to search for.
- * @returns {number} Returns the index of the matched value, else `-1`.
- */
-function assocIndexOf(array, key) {
-  var length = array.length;
-
-  while (length--) {
-    if ((0, _eq.default)(array[length][0], key)) {
-      return length;
-    }
-  }
-
-  return -1;
-}
-
-var _default = assocIndexOf;
-exports.default = _default;
-},{"./eq.js":"../node_modules/lodash-es/eq.js"}],"../node_modules/lodash-es/_listCacheDelete.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var _assocIndexOf = _interopRequireDefault(require("./_assocIndexOf.js"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-/** Used for built-in method references. */
-var arrayProto = Array.prototype;
-/** Built-in value references. */
-
-var splice = arrayProto.splice;
-/**
- * Removes `key` and its value from the list cache.
- *
- * @private
- * @name delete
- * @memberOf ListCache
- * @param {string} key The key of the value to remove.
- * @returns {boolean} Returns `true` if the entry was removed, else `false`.
- */
-
-function listCacheDelete(key) {
-  var data = this.__data__,
-      index = (0, _assocIndexOf.default)(data, key);
-
-  if (index < 0) {
-    return false;
-  }
-
-  var lastIndex = data.length - 1;
-
-  if (index == lastIndex) {
-    data.pop();
-  } else {
-    splice.call(data, index, 1);
-  }
-
-  --this.size;
-  return true;
-}
-
-var _default = listCacheDelete;
-exports.default = _default;
-},{"./_assocIndexOf.js":"../node_modules/lodash-es/_assocIndexOf.js"}],"../node_modules/lodash-es/_listCacheGet.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var _assocIndexOf = _interopRequireDefault(require("./_assocIndexOf.js"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-/**
- * Gets the list cache value for `key`.
- *
- * @private
- * @name get
- * @memberOf ListCache
- * @param {string} key The key of the value to get.
- * @returns {*} Returns the entry value.
- */
-function listCacheGet(key) {
-  var data = this.__data__,
-      index = (0, _assocIndexOf.default)(data, key);
-  return index < 0 ? undefined : data[index][1];
-}
-
-var _default = listCacheGet;
-exports.default = _default;
-},{"./_assocIndexOf.js":"../node_modules/lodash-es/_assocIndexOf.js"}],"../node_modules/lodash-es/_listCacheHas.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var _assocIndexOf = _interopRequireDefault(require("./_assocIndexOf.js"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-/**
- * Checks if a list cache value for `key` exists.
- *
- * @private
- * @name has
- * @memberOf ListCache
- * @param {string} key The key of the entry to check.
- * @returns {boolean} Returns `true` if an entry for `key` exists, else `false`.
- */
-function listCacheHas(key) {
-  return (0, _assocIndexOf.default)(this.__data__, key) > -1;
-}
-
-var _default = listCacheHas;
-exports.default = _default;
-},{"./_assocIndexOf.js":"../node_modules/lodash-es/_assocIndexOf.js"}],"../node_modules/lodash-es/_listCacheSet.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var _assocIndexOf = _interopRequireDefault(require("./_assocIndexOf.js"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-/**
- * Sets the list cache `key` to `value`.
- *
- * @private
- * @name set
- * @memberOf ListCache
- * @param {string} key The key of the value to set.
- * @param {*} value The value to set.
- * @returns {Object} Returns the list cache instance.
- */
-function listCacheSet(key, value) {
-  var data = this.__data__,
-      index = (0, _assocIndexOf.default)(data, key);
-
-  if (index < 0) {
-    ++this.size;
-    data.push([key, value]);
-  } else {
-    data[index][1] = value;
-  }
-
-  return this;
-}
-
-var _default = listCacheSet;
-exports.default = _default;
-},{"./_assocIndexOf.js":"../node_modules/lodash-es/_assocIndexOf.js"}],"../node_modules/lodash-es/_ListCache.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var _listCacheClear = _interopRequireDefault(require("./_listCacheClear.js"));
-
-var _listCacheDelete = _interopRequireDefault(require("./_listCacheDelete.js"));
-
-var _listCacheGet = _interopRequireDefault(require("./_listCacheGet.js"));
-
-var _listCacheHas = _interopRequireDefault(require("./_listCacheHas.js"));
-
-var _listCacheSet = _interopRequireDefault(require("./_listCacheSet.js"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-/**
- * Creates an list cache object.
- *
- * @private
- * @constructor
- * @param {Array} [entries] The key-value pairs to cache.
- */
-function ListCache(entries) {
-  var index = -1,
-      length = entries == null ? 0 : entries.length;
-  this.clear();
-
-  while (++index < length) {
-    var entry = entries[index];
-    this.set(entry[0], entry[1]);
-  }
-} // Add methods to `ListCache`.
-
-
-ListCache.prototype.clear = _listCacheClear.default;
-ListCache.prototype['delete'] = _listCacheDelete.default;
-ListCache.prototype.get = _listCacheGet.default;
-ListCache.prototype.has = _listCacheHas.default;
-ListCache.prototype.set = _listCacheSet.default;
-var _default = ListCache;
-exports.default = _default;
-},{"./_listCacheClear.js":"../node_modules/lodash-es/_listCacheClear.js","./_listCacheDelete.js":"../node_modules/lodash-es/_listCacheDelete.js","./_listCacheGet.js":"../node_modules/lodash-es/_listCacheGet.js","./_listCacheHas.js":"../node_modules/lodash-es/_listCacheHas.js","./_listCacheSet.js":"../node_modules/lodash-es/_listCacheSet.js"}],"../node_modules/lodash-es/_stackClear.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var _ListCache = _interopRequireDefault(require("./_ListCache.js"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-/**
- * Removes all key-value entries from the stack.
- *
- * @private
- * @name clear
- * @memberOf Stack
- */
-function stackClear() {
-  this.__data__ = new _ListCache.default();
-  this.size = 0;
-}
-
-var _default = stackClear;
-exports.default = _default;
-},{"./_ListCache.js":"../node_modules/lodash-es/_ListCache.js"}],"../node_modules/lodash-es/_stackDelete.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-/**
- * Removes `key` and its value from the stack.
- *
- * @private
- * @name delete
- * @memberOf Stack
- * @param {string} key The key of the value to remove.
- * @returns {boolean} Returns `true` if the entry was removed, else `false`.
- */
-function stackDelete(key) {
-  var data = this.__data__,
-      result = data['delete'](key);
-  this.size = data.size;
-  return result;
-}
-
-var _default = stackDelete;
-exports.default = _default;
-},{}],"../node_modules/lodash-es/_stackGet.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-/**
- * Gets the stack value for `key`.
- *
- * @private
- * @name get
- * @memberOf Stack
- * @param {string} key The key of the value to get.
- * @returns {*} Returns the entry value.
- */
-function stackGet(key) {
-  return this.__data__.get(key);
-}
-
-var _default = stackGet;
-exports.default = _default;
-},{}],"../node_modules/lodash-es/_stackHas.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-/**
- * Checks if a stack value for `key` exists.
- *
- * @private
- * @name has
- * @memberOf Stack
- * @param {string} key The key of the entry to check.
- * @returns {boolean} Returns `true` if an entry for `key` exists, else `false`.
- */
-function stackHas(key) {
-  return this.__data__.has(key);
-}
-
-var _default = stackHas;
-exports.default = _default;
-},{}],"../node_modules/lodash-es/_freeGlobal.js":[function(require,module,exports) {
-var global = arguments[3];
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-/** Detect free variable `global` from Node.js. */
-var freeGlobal = typeof global == 'object' && global && global.Object === Object && global;
-var _default = freeGlobal;
-exports.default = _default;
-},{}],"../node_modules/lodash-es/_root.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var _freeGlobal = _interopRequireDefault(require("./_freeGlobal.js"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-/** Detect free variable `self`. */
-var freeSelf = typeof self == 'object' && self && self.Object === Object && self;
-/** Used as a reference to the global object. */
-
-var root = _freeGlobal.default || freeSelf || Function('return this')();
-var _default = root;
-exports.default = _default;
-},{"./_freeGlobal.js":"../node_modules/lodash-es/_freeGlobal.js"}],"../node_modules/lodash-es/_Symbol.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var _root = _interopRequireDefault(require("./_root.js"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-/** Built-in value references. */
-var Symbol = _root.default.Symbol;
-var _default = Symbol;
-exports.default = _default;
-},{"./_root.js":"../node_modules/lodash-es/_root.js"}],"../node_modules/lodash-es/_getRawTag.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var _Symbol = _interopRequireDefault(require("./_Symbol.js"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-/** Used for built-in method references. */
-var objectProto = Object.prototype;
-/** Used to check objects for own properties. */
-
-var hasOwnProperty = objectProto.hasOwnProperty;
-/**
- * Used to resolve the
- * [`toStringTag`](http://ecma-international.org/ecma-262/7.0/#sec-object.prototype.tostring)
- * of values.
- */
-
-var nativeObjectToString = objectProto.toString;
-/** Built-in value references. */
-
-var symToStringTag = _Symbol.default ? _Symbol.default.toStringTag : undefined;
-/**
- * A specialized version of `baseGetTag` which ignores `Symbol.toStringTag` values.
- *
- * @private
- * @param {*} value The value to query.
- * @returns {string} Returns the raw `toStringTag`.
- */
-
-function getRawTag(value) {
-  var isOwn = hasOwnProperty.call(value, symToStringTag),
-      tag = value[symToStringTag];
-
-  try {
-    value[symToStringTag] = undefined;
-    var unmasked = true;
-  } catch (e) {}
-
-  var result = nativeObjectToString.call(value);
-
-  if (unmasked) {
-    if (isOwn) {
-      value[symToStringTag] = tag;
-    } else {
-      delete value[symToStringTag];
-    }
-  }
-
-  return result;
-}
-
-var _default = getRawTag;
-exports.default = _default;
-},{"./_Symbol.js":"../node_modules/lodash-es/_Symbol.js"}],"../node_modules/lodash-es/_objectToString.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-/** Used for built-in method references. */
-var objectProto = Object.prototype;
-/**
- * Used to resolve the
- * [`toStringTag`](http://ecma-international.org/ecma-262/7.0/#sec-object.prototype.tostring)
- * of values.
- */
-
-var nativeObjectToString = objectProto.toString;
-/**
- * Converts `value` to a string using `Object.prototype.toString`.
- *
- * @private
- * @param {*} value The value to convert.
- * @returns {string} Returns the converted string.
- */
-
-function objectToString(value) {
-  return nativeObjectToString.call(value);
-}
-
-var _default = objectToString;
-exports.default = _default;
-},{}],"../node_modules/lodash-es/_baseGetTag.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var _Symbol = _interopRequireDefault(require("./_Symbol.js"));
-
-var _getRawTag = _interopRequireDefault(require("./_getRawTag.js"));
-
-var _objectToString = _interopRequireDefault(require("./_objectToString.js"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-/** `Object#toString` result references. */
-var nullTag = '[object Null]',
-    undefinedTag = '[object Undefined]';
-/** Built-in value references. */
-
-var symToStringTag = _Symbol.default ? _Symbol.default.toStringTag : undefined;
-/**
- * The base implementation of `getTag` without fallbacks for buggy environments.
- *
- * @private
- * @param {*} value The value to query.
- * @returns {string} Returns the `toStringTag`.
- */
-
-function baseGetTag(value) {
-  if (value == null) {
-    return value === undefined ? undefinedTag : nullTag;
-  }
-
-  return symToStringTag && symToStringTag in Object(value) ? (0, _getRawTag.default)(value) : (0, _objectToString.default)(value);
-}
-
-var _default = baseGetTag;
-exports.default = _default;
-},{"./_Symbol.js":"../node_modules/lodash-es/_Symbol.js","./_getRawTag.js":"../node_modules/lodash-es/_getRawTag.js","./_objectToString.js":"../node_modules/lodash-es/_objectToString.js"}],"../node_modules/lodash-es/isObject.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-/**
- * Checks if `value` is the
- * [language type](http://www.ecma-international.org/ecma-262/7.0/#sec-ecmascript-language-types)
- * of `Object`. (e.g. arrays, functions, objects, regexes, `new Number(0)`, and `new String('')`)
- *
- * @static
- * @memberOf _
- * @since 0.1.0
- * @category Lang
- * @param {*} value The value to check.
- * @returns {boolean} Returns `true` if `value` is an object, else `false`.
- * @example
- *
- * _.isObject({});
- * // => true
- *
- * _.isObject([1, 2, 3]);
- * // => true
- *
- * _.isObject(_.noop);
- * // => true
- *
- * _.isObject(null);
- * // => false
- */
-function isObject(value) {
-  var type = typeof value;
-  return value != null && (type == 'object' || type == 'function');
-}
-
-var _default = isObject;
-exports.default = _default;
-},{}],"../node_modules/lodash-es/isFunction.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var _baseGetTag = _interopRequireDefault(require("./_baseGetTag.js"));
-
-var _isObject = _interopRequireDefault(require("./isObject.js"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-/** `Object#toString` result references. */
-var asyncTag = '[object AsyncFunction]',
-    funcTag = '[object Function]',
-    genTag = '[object GeneratorFunction]',
-    proxyTag = '[object Proxy]';
-/**
- * Checks if `value` is classified as a `Function` object.
- *
- * @static
- * @memberOf _
- * @since 0.1.0
- * @category Lang
- * @param {*} value The value to check.
- * @returns {boolean} Returns `true` if `value` is a function, else `false`.
- * @example
- *
- * _.isFunction(_);
- * // => true
- *
- * _.isFunction(/abc/);
- * // => false
- */
-
-function isFunction(value) {
-  if (!(0, _isObject.default)(value)) {
-    return false;
-  } // The use of `Object#toString` avoids issues with the `typeof` operator
-  // in Safari 9 which returns 'object' for typed arrays and other constructors.
-
-
-  var tag = (0, _baseGetTag.default)(value);
-  return tag == funcTag || tag == genTag || tag == asyncTag || tag == proxyTag;
-}
-
-var _default = isFunction;
-exports.default = _default;
-},{"./_baseGetTag.js":"../node_modules/lodash-es/_baseGetTag.js","./isObject.js":"../node_modules/lodash-es/isObject.js"}],"../node_modules/lodash-es/_coreJsData.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var _root = _interopRequireDefault(require("./_root.js"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-/** Used to detect overreaching core-js shims. */
-var coreJsData = _root.default['__core-js_shared__'];
-var _default = coreJsData;
-exports.default = _default;
-},{"./_root.js":"../node_modules/lodash-es/_root.js"}],"../node_modules/lodash-es/_isMasked.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var _coreJsData = _interopRequireDefault(require("./_coreJsData.js"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-/** Used to detect methods masquerading as native. */
-var maskSrcKey = function () {
-  var uid = /[^.]+$/.exec(_coreJsData.default && _coreJsData.default.keys && _coreJsData.default.keys.IE_PROTO || '');
-  return uid ? 'Symbol(src)_1.' + uid : '';
-}();
-/**
- * Checks if `func` has its source masked.
- *
- * @private
- * @param {Function} func The function to check.
- * @returns {boolean} Returns `true` if `func` is masked, else `false`.
- */
-
-
-function isMasked(func) {
-  return !!maskSrcKey && maskSrcKey in func;
-}
-
-var _default = isMasked;
-exports.default = _default;
-},{"./_coreJsData.js":"../node_modules/lodash-es/_coreJsData.js"}],"../node_modules/lodash-es/_toSource.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-/** Used for built-in method references. */
-var funcProto = Function.prototype;
-/** Used to resolve the decompiled source of functions. */
-
-var funcToString = funcProto.toString;
-/**
- * Converts `func` to its source code.
- *
- * @private
- * @param {Function} func The function to convert.
- * @returns {string} Returns the source code.
- */
-
-function toSource(func) {
-  if (func != null) {
-    try {
-      return funcToString.call(func);
-    } catch (e) {}
-
-    try {
-      return func + '';
-    } catch (e) {}
-  }
-
-  return '';
-}
-
-var _default = toSource;
-exports.default = _default;
-},{}],"../node_modules/lodash-es/_baseIsNative.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var _isFunction = _interopRequireDefault(require("./isFunction.js"));
-
-var _isMasked = _interopRequireDefault(require("./_isMasked.js"));
-
-var _isObject = _interopRequireDefault(require("./isObject.js"));
-
-var _toSource = _interopRequireDefault(require("./_toSource.js"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-/**
- * Used to match `RegExp`
- * [syntax characters](http://ecma-international.org/ecma-262/7.0/#sec-patterns).
- */
-var reRegExpChar = /[\\^$.*+?()[\]{}|]/g;
-/** Used to detect host constructors (Safari). */
-
-var reIsHostCtor = /^\[object .+?Constructor\]$/;
-/** Used for built-in method references. */
-
-var funcProto = Function.prototype,
-    objectProto = Object.prototype;
-/** Used to resolve the decompiled source of functions. */
-
-var funcToString = funcProto.toString;
-/** Used to check objects for own properties. */
-
-var hasOwnProperty = objectProto.hasOwnProperty;
-/** Used to detect if a method is native. */
-
-var reIsNative = RegExp('^' + funcToString.call(hasOwnProperty).replace(reRegExpChar, '\\$&').replace(/hasOwnProperty|(function).*?(?=\\\()| for .+?(?=\\\])/g, '$1.*?') + '$');
-/**
- * The base implementation of `_.isNative` without bad shim checks.
- *
- * @private
- * @param {*} value The value to check.
- * @returns {boolean} Returns `true` if `value` is a native function,
- *  else `false`.
- */
-
-function baseIsNative(value) {
-  if (!(0, _isObject.default)(value) || (0, _isMasked.default)(value)) {
-    return false;
-  }
-
-  var pattern = (0, _isFunction.default)(value) ? reIsNative : reIsHostCtor;
-  return pattern.test((0, _toSource.default)(value));
-}
-
-var _default = baseIsNative;
-exports.default = _default;
-},{"./isFunction.js":"../node_modules/lodash-es/isFunction.js","./_isMasked.js":"../node_modules/lodash-es/_isMasked.js","./isObject.js":"../node_modules/lodash-es/isObject.js","./_toSource.js":"../node_modules/lodash-es/_toSource.js"}],"../node_modules/lodash-es/_getValue.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-/**
- * Gets the value at `key` of `object`.
- *
- * @private
- * @param {Object} [object] The object to query.
- * @param {string} key The key of the property to get.
- * @returns {*} Returns the property value.
- */
-function getValue(object, key) {
-  return object == null ? undefined : object[key];
-}
-
-var _default = getValue;
-exports.default = _default;
-},{}],"../node_modules/lodash-es/_getNative.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var _baseIsNative = _interopRequireDefault(require("./_baseIsNative.js"));
-
-var _getValue = _interopRequireDefault(require("./_getValue.js"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-/**
- * Gets the native function at `key` of `object`.
- *
- * @private
- * @param {Object} object The object to query.
- * @param {string} key The key of the method to get.
- * @returns {*} Returns the function if it's native, else `undefined`.
- */
-function getNative(object, key) {
-  var value = (0, _getValue.default)(object, key);
-  return (0, _baseIsNative.default)(value) ? value : undefined;
-}
-
-var _default = getNative;
-exports.default = _default;
-},{"./_baseIsNative.js":"../node_modules/lodash-es/_baseIsNative.js","./_getValue.js":"../node_modules/lodash-es/_getValue.js"}],"../node_modules/lodash-es/_Map.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var _getNative = _interopRequireDefault(require("./_getNative.js"));
-
-var _root = _interopRequireDefault(require("./_root.js"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-/* Built-in method references that are verified to be native. */
-var Map = (0, _getNative.default)(_root.default, 'Map');
-var _default = Map;
-exports.default = _default;
-},{"./_getNative.js":"../node_modules/lodash-es/_getNative.js","./_root.js":"../node_modules/lodash-es/_root.js"}],"../node_modules/lodash-es/_nativeCreate.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var _getNative = _interopRequireDefault(require("./_getNative.js"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-/* Built-in method references that are verified to be native. */
-var nativeCreate = (0, _getNative.default)(Object, 'create');
-var _default = nativeCreate;
-exports.default = _default;
-},{"./_getNative.js":"../node_modules/lodash-es/_getNative.js"}],"../node_modules/lodash-es/_hashClear.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var _nativeCreate = _interopRequireDefault(require("./_nativeCreate.js"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-/**
- * Removes all key-value entries from the hash.
- *
- * @private
- * @name clear
- * @memberOf Hash
- */
-function hashClear() {
-  this.__data__ = _nativeCreate.default ? (0, _nativeCreate.default)(null) : {};
-  this.size = 0;
-}
-
-var _default = hashClear;
-exports.default = _default;
-},{"./_nativeCreate.js":"../node_modules/lodash-es/_nativeCreate.js"}],"../node_modules/lodash-es/_hashDelete.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-/**
- * Removes `key` and its value from the hash.
- *
- * @private
- * @name delete
- * @memberOf Hash
- * @param {Object} hash The hash to modify.
- * @param {string} key The key of the value to remove.
- * @returns {boolean} Returns `true` if the entry was removed, else `false`.
- */
-function hashDelete(key) {
-  var result = this.has(key) && delete this.__data__[key];
-  this.size -= result ? 1 : 0;
-  return result;
-}
-
-var _default = hashDelete;
-exports.default = _default;
-},{}],"../node_modules/lodash-es/_hashGet.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var _nativeCreate = _interopRequireDefault(require("./_nativeCreate.js"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-/** Used to stand-in for `undefined` hash values. */
-var HASH_UNDEFINED = '__lodash_hash_undefined__';
-/** Used for built-in method references. */
-
-var objectProto = Object.prototype;
-/** Used to check objects for own properties. */
-
-var hasOwnProperty = objectProto.hasOwnProperty;
-/**
- * Gets the hash value for `key`.
- *
- * @private
- * @name get
- * @memberOf Hash
- * @param {string} key The key of the value to get.
- * @returns {*} Returns the entry value.
- */
-
-function hashGet(key) {
-  var data = this.__data__;
-
-  if (_nativeCreate.default) {
-    var result = data[key];
-    return result === HASH_UNDEFINED ? undefined : result;
-  }
-
-  return hasOwnProperty.call(data, key) ? data[key] : undefined;
-}
-
-var _default = hashGet;
-exports.default = _default;
-},{"./_nativeCreate.js":"../node_modules/lodash-es/_nativeCreate.js"}],"../node_modules/lodash-es/_hashHas.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var _nativeCreate = _interopRequireDefault(require("./_nativeCreate.js"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-/** Used for built-in method references. */
-var objectProto = Object.prototype;
-/** Used to check objects for own properties. */
-
-var hasOwnProperty = objectProto.hasOwnProperty;
-/**
- * Checks if a hash value for `key` exists.
- *
- * @private
- * @name has
- * @memberOf Hash
- * @param {string} key The key of the entry to check.
- * @returns {boolean} Returns `true` if an entry for `key` exists, else `false`.
- */
-
-function hashHas(key) {
-  var data = this.__data__;
-  return _nativeCreate.default ? data[key] !== undefined : hasOwnProperty.call(data, key);
-}
-
-var _default = hashHas;
-exports.default = _default;
-},{"./_nativeCreate.js":"../node_modules/lodash-es/_nativeCreate.js"}],"../node_modules/lodash-es/_hashSet.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var _nativeCreate = _interopRequireDefault(require("./_nativeCreate.js"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-/** Used to stand-in for `undefined` hash values. */
-var HASH_UNDEFINED = '__lodash_hash_undefined__';
-/**
- * Sets the hash `key` to `value`.
- *
- * @private
- * @name set
- * @memberOf Hash
- * @param {string} key The key of the value to set.
- * @param {*} value The value to set.
- * @returns {Object} Returns the hash instance.
- */
-
-function hashSet(key, value) {
-  var data = this.__data__;
-  this.size += this.has(key) ? 0 : 1;
-  data[key] = _nativeCreate.default && value === undefined ? HASH_UNDEFINED : value;
-  return this;
-}
-
-var _default = hashSet;
-exports.default = _default;
-},{"./_nativeCreate.js":"../node_modules/lodash-es/_nativeCreate.js"}],"../node_modules/lodash-es/_Hash.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var _hashClear = _interopRequireDefault(require("./_hashClear.js"));
-
-var _hashDelete = _interopRequireDefault(require("./_hashDelete.js"));
-
-var _hashGet = _interopRequireDefault(require("./_hashGet.js"));
-
-var _hashHas = _interopRequireDefault(require("./_hashHas.js"));
-
-var _hashSet = _interopRequireDefault(require("./_hashSet.js"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-/**
- * Creates a hash object.
- *
- * @private
- * @constructor
- * @param {Array} [entries] The key-value pairs to cache.
- */
-function Hash(entries) {
-  var index = -1,
-      length = entries == null ? 0 : entries.length;
-  this.clear();
-
-  while (++index < length) {
-    var entry = entries[index];
-    this.set(entry[0], entry[1]);
-  }
-} // Add methods to `Hash`.
-
-
-Hash.prototype.clear = _hashClear.default;
-Hash.prototype['delete'] = _hashDelete.default;
-Hash.prototype.get = _hashGet.default;
-Hash.prototype.has = _hashHas.default;
-Hash.prototype.set = _hashSet.default;
-var _default = Hash;
-exports.default = _default;
-},{"./_hashClear.js":"../node_modules/lodash-es/_hashClear.js","./_hashDelete.js":"../node_modules/lodash-es/_hashDelete.js","./_hashGet.js":"../node_modules/lodash-es/_hashGet.js","./_hashHas.js":"../node_modules/lodash-es/_hashHas.js","./_hashSet.js":"../node_modules/lodash-es/_hashSet.js"}],"../node_modules/lodash-es/_mapCacheClear.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var _Hash = _interopRequireDefault(require("./_Hash.js"));
-
-var _ListCache = _interopRequireDefault(require("./_ListCache.js"));
-
-var _Map = _interopRequireDefault(require("./_Map.js"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-/**
- * Removes all key-value entries from the map.
- *
- * @private
- * @name clear
- * @memberOf MapCache
- */
-function mapCacheClear() {
-  this.size = 0;
-  this.__data__ = {
-    'hash': new _Hash.default(),
-    'map': new (_Map.default || _ListCache.default)(),
-    'string': new _Hash.default()
-  };
-}
-
-var _default = mapCacheClear;
-exports.default = _default;
-},{"./_Hash.js":"../node_modules/lodash-es/_Hash.js","./_ListCache.js":"../node_modules/lodash-es/_ListCache.js","./_Map.js":"../node_modules/lodash-es/_Map.js"}],"../node_modules/lodash-es/_isKeyable.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-/**
- * Checks if `value` is suitable for use as unique object key.
- *
- * @private
- * @param {*} value The value to check.
- * @returns {boolean} Returns `true` if `value` is suitable, else `false`.
- */
-function isKeyable(value) {
-  var type = typeof value;
-  return type == 'string' || type == 'number' || type == 'symbol' || type == 'boolean' ? value !== '__proto__' : value === null;
-}
-
-var _default = isKeyable;
-exports.default = _default;
-},{}],"../node_modules/lodash-es/_getMapData.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var _isKeyable = _interopRequireDefault(require("./_isKeyable.js"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-/**
- * Gets the data for `map`.
- *
- * @private
- * @param {Object} map The map to query.
- * @param {string} key The reference key.
- * @returns {*} Returns the map data.
- */
-function getMapData(map, key) {
-  var data = map.__data__;
-  return (0, _isKeyable.default)(key) ? data[typeof key == 'string' ? 'string' : 'hash'] : data.map;
-}
-
-var _default = getMapData;
-exports.default = _default;
-},{"./_isKeyable.js":"../node_modules/lodash-es/_isKeyable.js"}],"../node_modules/lodash-es/_mapCacheDelete.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var _getMapData = _interopRequireDefault(require("./_getMapData.js"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-/**
- * Removes `key` and its value from the map.
- *
- * @private
- * @name delete
- * @memberOf MapCache
- * @param {string} key The key of the value to remove.
- * @returns {boolean} Returns `true` if the entry was removed, else `false`.
- */
-function mapCacheDelete(key) {
-  var result = (0, _getMapData.default)(this, key)['delete'](key);
-  this.size -= result ? 1 : 0;
-  return result;
-}
-
-var _default = mapCacheDelete;
-exports.default = _default;
-},{"./_getMapData.js":"../node_modules/lodash-es/_getMapData.js"}],"../node_modules/lodash-es/_mapCacheGet.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var _getMapData = _interopRequireDefault(require("./_getMapData.js"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-/**
- * Gets the map value for `key`.
- *
- * @private
- * @name get
- * @memberOf MapCache
- * @param {string} key The key of the value to get.
- * @returns {*} Returns the entry value.
- */
-function mapCacheGet(key) {
-  return (0, _getMapData.default)(this, key).get(key);
-}
-
-var _default = mapCacheGet;
-exports.default = _default;
-},{"./_getMapData.js":"../node_modules/lodash-es/_getMapData.js"}],"../node_modules/lodash-es/_mapCacheHas.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var _getMapData = _interopRequireDefault(require("./_getMapData.js"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-/**
- * Checks if a map value for `key` exists.
- *
- * @private
- * @name has
- * @memberOf MapCache
- * @param {string} key The key of the entry to check.
- * @returns {boolean} Returns `true` if an entry for `key` exists, else `false`.
- */
-function mapCacheHas(key) {
-  return (0, _getMapData.default)(this, key).has(key);
-}
-
-var _default = mapCacheHas;
-exports.default = _default;
-},{"./_getMapData.js":"../node_modules/lodash-es/_getMapData.js"}],"../node_modules/lodash-es/_mapCacheSet.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var _getMapData = _interopRequireDefault(require("./_getMapData.js"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-/**
- * Sets the map `key` to `value`.
- *
- * @private
- * @name set
- * @memberOf MapCache
- * @param {string} key The key of the value to set.
- * @param {*} value The value to set.
- * @returns {Object} Returns the map cache instance.
- */
-function mapCacheSet(key, value) {
-  var data = (0, _getMapData.default)(this, key),
-      size = data.size;
-  data.set(key, value);
-  this.size += data.size == size ? 0 : 1;
-  return this;
-}
-
-var _default = mapCacheSet;
-exports.default = _default;
-},{"./_getMapData.js":"../node_modules/lodash-es/_getMapData.js"}],"../node_modules/lodash-es/_MapCache.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var _mapCacheClear = _interopRequireDefault(require("./_mapCacheClear.js"));
-
-var _mapCacheDelete = _interopRequireDefault(require("./_mapCacheDelete.js"));
-
-var _mapCacheGet = _interopRequireDefault(require("./_mapCacheGet.js"));
-
-var _mapCacheHas = _interopRequireDefault(require("./_mapCacheHas.js"));
-
-var _mapCacheSet = _interopRequireDefault(require("./_mapCacheSet.js"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-/**
- * Creates a map cache object to store key-value pairs.
- *
- * @private
- * @constructor
- * @param {Array} [entries] The key-value pairs to cache.
- */
-function MapCache(entries) {
-  var index = -1,
-      length = entries == null ? 0 : entries.length;
-  this.clear();
-
-  while (++index < length) {
-    var entry = entries[index];
-    this.set(entry[0], entry[1]);
-  }
-} // Add methods to `MapCache`.
-
-
-MapCache.prototype.clear = _mapCacheClear.default;
-MapCache.prototype['delete'] = _mapCacheDelete.default;
-MapCache.prototype.get = _mapCacheGet.default;
-MapCache.prototype.has = _mapCacheHas.default;
-MapCache.prototype.set = _mapCacheSet.default;
-var _default = MapCache;
-exports.default = _default;
-},{"./_mapCacheClear.js":"../node_modules/lodash-es/_mapCacheClear.js","./_mapCacheDelete.js":"../node_modules/lodash-es/_mapCacheDelete.js","./_mapCacheGet.js":"../node_modules/lodash-es/_mapCacheGet.js","./_mapCacheHas.js":"../node_modules/lodash-es/_mapCacheHas.js","./_mapCacheSet.js":"../node_modules/lodash-es/_mapCacheSet.js"}],"../node_modules/lodash-es/_stackSet.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var _ListCache = _interopRequireDefault(require("./_ListCache.js"));
-
-var _Map = _interopRequireDefault(require("./_Map.js"));
-
-var _MapCache = _interopRequireDefault(require("./_MapCache.js"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-/** Used as the size to enable large array optimizations. */
-var LARGE_ARRAY_SIZE = 200;
-/**
- * Sets the stack `key` to `value`.
- *
- * @private
- * @name set
- * @memberOf Stack
- * @param {string} key The key of the value to set.
- * @param {*} value The value to set.
- * @returns {Object} Returns the stack cache instance.
- */
-
-function stackSet(key, value) {
-  var data = this.__data__;
-
-  if (data instanceof _ListCache.default) {
-    var pairs = data.__data__;
-
-    if (!_Map.default || pairs.length < LARGE_ARRAY_SIZE - 1) {
-      pairs.push([key, value]);
-      this.size = ++data.size;
-      return this;
-    }
-
-    data = this.__data__ = new _MapCache.default(pairs);
-  }
-
-  data.set(key, value);
-  this.size = data.size;
-  return this;
-}
-
-var _default = stackSet;
-exports.default = _default;
-},{"./_ListCache.js":"../node_modules/lodash-es/_ListCache.js","./_Map.js":"../node_modules/lodash-es/_Map.js","./_MapCache.js":"../node_modules/lodash-es/_MapCache.js"}],"../node_modules/lodash-es/_Stack.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var _ListCache = _interopRequireDefault(require("./_ListCache.js"));
-
-var _stackClear = _interopRequireDefault(require("./_stackClear.js"));
-
-var _stackDelete = _interopRequireDefault(require("./_stackDelete.js"));
-
-var _stackGet = _interopRequireDefault(require("./_stackGet.js"));
-
-var _stackHas = _interopRequireDefault(require("./_stackHas.js"));
-
-var _stackSet = _interopRequireDefault(require("./_stackSet.js"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-/**
- * Creates a stack cache object to store key-value pairs.
- *
- * @private
- * @constructor
- * @param {Array} [entries] The key-value pairs to cache.
- */
-function Stack(entries) {
-  var data = this.__data__ = new _ListCache.default(entries);
-  this.size = data.size;
-} // Add methods to `Stack`.
-
-
-Stack.prototype.clear = _stackClear.default;
-Stack.prototype['delete'] = _stackDelete.default;
-Stack.prototype.get = _stackGet.default;
-Stack.prototype.has = _stackHas.default;
-Stack.prototype.set = _stackSet.default;
-var _default = Stack;
-exports.default = _default;
-},{"./_ListCache.js":"../node_modules/lodash-es/_ListCache.js","./_stackClear.js":"../node_modules/lodash-es/_stackClear.js","./_stackDelete.js":"../node_modules/lodash-es/_stackDelete.js","./_stackGet.js":"../node_modules/lodash-es/_stackGet.js","./_stackHas.js":"../node_modules/lodash-es/_stackHas.js","./_stackSet.js":"../node_modules/lodash-es/_stackSet.js"}],"../node_modules/lodash-es/_defineProperty.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var _getNative = _interopRequireDefault(require("./_getNative.js"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var defineProperty = function () {
-  try {
-    var func = (0, _getNative.default)(Object, 'defineProperty');
-    func({}, '', {});
-    return func;
-  } catch (e) {}
-}();
-
-var _default = defineProperty;
-exports.default = _default;
-},{"./_getNative.js":"../node_modules/lodash-es/_getNative.js"}],"../node_modules/lodash-es/_baseAssignValue.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var _defineProperty = _interopRequireDefault(require("./_defineProperty.js"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-/**
- * The base implementation of `assignValue` and `assignMergeValue` without
- * value checks.
- *
- * @private
- * @param {Object} object The object to modify.
- * @param {string} key The key of the property to assign.
- * @param {*} value The value to assign.
- */
-function baseAssignValue(object, key, value) {
-  if (key == '__proto__' && _defineProperty.default) {
-    (0, _defineProperty.default)(object, key, {
-      'configurable': true,
-      'enumerable': true,
-      'value': value,
-      'writable': true
-    });
-  } else {
-    object[key] = value;
-  }
-}
-
-var _default = baseAssignValue;
-exports.default = _default;
-},{"./_defineProperty.js":"../node_modules/lodash-es/_defineProperty.js"}],"../node_modules/lodash-es/_assignMergeValue.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var _baseAssignValue = _interopRequireDefault(require("./_baseAssignValue.js"));
-
-var _eq = _interopRequireDefault(require("./eq.js"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+exports.default = Hue;
+},{"react":"../node_modules/react/index.js","reactcss":"../node_modules/reactcss/lib/index.js","../../helpers/hue":"../node_modules/react-color/lib/helpers/hue.js"}],"../node_modules/lodash/_assignMergeValue.js":[function(require,module,exports) {
+var baseAssignValue = require('./_baseAssignValue'),
+    eq = require('./eq');
 
 /**
  * This function is like `assignValue` except that it doesn't assign
@@ -51669,612 +50812,17 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
  * @param {*} value The value to assign.
  */
 function assignMergeValue(object, key, value) {
-  if (value !== undefined && !(0, _eq.default)(object[key], value) || value === undefined && !(key in object)) {
-    (0, _baseAssignValue.default)(object, key, value);
+  if ((value !== undefined && !eq(object[key], value)) ||
+      (value === undefined && !(key in object))) {
+    baseAssignValue(object, key, value);
   }
 }
 
-var _default = assignMergeValue;
-exports.default = _default;
-},{"./_baseAssignValue.js":"../node_modules/lodash-es/_baseAssignValue.js","./eq.js":"../node_modules/lodash-es/eq.js"}],"../node_modules/lodash-es/_createBaseFor.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-/**
- * Creates a base function for methods like `_.forIn` and `_.forOwn`.
- *
- * @private
- * @param {boolean} [fromRight] Specify iterating from right to left.
- * @returns {Function} Returns the new base function.
- */
-function createBaseFor(fromRight) {
-  return function (object, iteratee, keysFunc) {
-    var index = -1,
-        iterable = Object(object),
-        props = keysFunc(object),
-        length = props.length;
-
-    while (length--) {
-      var key = props[fromRight ? length : ++index];
-
-      if (iteratee(iterable[key], key, iterable) === false) {
-        break;
-      }
-    }
-
-    return object;
-  };
-}
-
-var _default = createBaseFor;
-exports.default = _default;
-},{}],"../node_modules/lodash-es/_baseFor.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var _createBaseFor = _interopRequireDefault(require("./_createBaseFor.js"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-/**
- * The base implementation of `baseForOwn` which iterates over `object`
- * properties returned by `keysFunc` and invokes `iteratee` for each property.
- * Iteratee functions may exit iteration early by explicitly returning `false`.
- *
- * @private
- * @param {Object} object The object to iterate over.
- * @param {Function} iteratee The function invoked per iteration.
- * @param {Function} keysFunc The function to get the keys of `object`.
- * @returns {Object} Returns `object`.
- */
-var baseFor = (0, _createBaseFor.default)();
-var _default = baseFor;
-exports.default = _default;
-},{"./_createBaseFor.js":"../node_modules/lodash-es/_createBaseFor.js"}],"../node_modules/lodash-es/_cloneBuffer.js":[function(require,module,exports) {
-
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var _root = _interopRequireDefault(require("./_root.js"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-/** Detect free variable `exports`. */
-var freeExports = typeof exports == 'object' && exports && !exports.nodeType && exports;
-/** Detect free variable `module`. */
-
-var freeModule = freeExports && typeof module == 'object' && module && !module.nodeType && module;
-/** Detect the popular CommonJS extension `module.exports`. */
-
-var moduleExports = freeModule && freeModule.exports === freeExports;
-/** Built-in value references. */
-
-var Buffer = moduleExports ? _root.default.Buffer : undefined,
-    allocUnsafe = Buffer ? Buffer.allocUnsafe : undefined;
-/**
- * Creates a clone of  `buffer`.
- *
- * @private
- * @param {Buffer} buffer The buffer to clone.
- * @param {boolean} [isDeep] Specify a deep clone.
- * @returns {Buffer} Returns the cloned buffer.
- */
-
-function cloneBuffer(buffer, isDeep) {
-  if (isDeep) {
-    return buffer.slice();
-  }
-
-  var length = buffer.length,
-      result = allocUnsafe ? allocUnsafe(length) : new buffer.constructor(length);
-  buffer.copy(result);
-  return result;
-}
-
-var _default = cloneBuffer;
-exports.default = _default;
-},{"./_root.js":"../node_modules/lodash-es/_root.js"}],"../node_modules/lodash-es/_Uint8Array.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var _root = _interopRequireDefault(require("./_root.js"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-/** Built-in value references. */
-var Uint8Array = _root.default.Uint8Array;
-var _default = Uint8Array;
-exports.default = _default;
-},{"./_root.js":"../node_modules/lodash-es/_root.js"}],"../node_modules/lodash-es/_cloneArrayBuffer.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var _Uint8Array = _interopRequireDefault(require("./_Uint8Array.js"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-/**
- * Creates a clone of `arrayBuffer`.
- *
- * @private
- * @param {ArrayBuffer} arrayBuffer The array buffer to clone.
- * @returns {ArrayBuffer} Returns the cloned array buffer.
- */
-function cloneArrayBuffer(arrayBuffer) {
-  var result = new arrayBuffer.constructor(arrayBuffer.byteLength);
-  new _Uint8Array.default(result).set(new _Uint8Array.default(arrayBuffer));
-  return result;
-}
-
-var _default = cloneArrayBuffer;
-exports.default = _default;
-},{"./_Uint8Array.js":"../node_modules/lodash-es/_Uint8Array.js"}],"../node_modules/lodash-es/_cloneTypedArray.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var _cloneArrayBuffer = _interopRequireDefault(require("./_cloneArrayBuffer.js"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-/**
- * Creates a clone of `typedArray`.
- *
- * @private
- * @param {Object} typedArray The typed array to clone.
- * @param {boolean} [isDeep] Specify a deep clone.
- * @returns {Object} Returns the cloned typed array.
- */
-function cloneTypedArray(typedArray, isDeep) {
-  var buffer = isDeep ? (0, _cloneArrayBuffer.default)(typedArray.buffer) : typedArray.buffer;
-  return new typedArray.constructor(buffer, typedArray.byteOffset, typedArray.length);
-}
-
-var _default = cloneTypedArray;
-exports.default = _default;
-},{"./_cloneArrayBuffer.js":"../node_modules/lodash-es/_cloneArrayBuffer.js"}],"../node_modules/lodash-es/_copyArray.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-/**
- * Copies the values of `source` to `array`.
- *
- * @private
- * @param {Array} source The array to copy values from.
- * @param {Array} [array=[]] The array to copy values to.
- * @returns {Array} Returns `array`.
- */
-function copyArray(source, array) {
-  var index = -1,
-      length = source.length;
-  array || (array = Array(length));
-
-  while (++index < length) {
-    array[index] = source[index];
-  }
-
-  return array;
-}
-
-var _default = copyArray;
-exports.default = _default;
-},{}],"../node_modules/lodash-es/_baseCreate.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var _isObject = _interopRequireDefault(require("./isObject.js"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-/** Built-in value references. */
-var objectCreate = Object.create;
-/**
- * The base implementation of `_.create` without support for assigning
- * properties to the created object.
- *
- * @private
- * @param {Object} proto The object to inherit from.
- * @returns {Object} Returns the new object.
- */
-
-var baseCreate = function () {
-  function object() {}
-
-  return function (proto) {
-    if (!(0, _isObject.default)(proto)) {
-      return {};
-    }
-
-    if (objectCreate) {
-      return objectCreate(proto);
-    }
-
-    object.prototype = proto;
-    var result = new object();
-    object.prototype = undefined;
-    return result;
-  };
-}();
-
-var _default = baseCreate;
-exports.default = _default;
-},{"./isObject.js":"../node_modules/lodash-es/isObject.js"}],"../node_modules/lodash-es/_overArg.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-/**
- * Creates a unary function that invokes `func` with its argument transformed.
- *
- * @private
- * @param {Function} func The function to wrap.
- * @param {Function} transform The argument transform.
- * @returns {Function} Returns the new function.
- */
-function overArg(func, transform) {
-  return function (arg) {
-    return func(transform(arg));
-  };
-}
-
-var _default = overArg;
-exports.default = _default;
-},{}],"../node_modules/lodash-es/_getPrototype.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var _overArg = _interopRequireDefault(require("./_overArg.js"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-/** Built-in value references. */
-var getPrototype = (0, _overArg.default)(Object.getPrototypeOf, Object);
-var _default = getPrototype;
-exports.default = _default;
-},{"./_overArg.js":"../node_modules/lodash-es/_overArg.js"}],"../node_modules/lodash-es/_isPrototype.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-/** Used for built-in method references. */
-var objectProto = Object.prototype;
-/**
- * Checks if `value` is likely a prototype object.
- *
- * @private
- * @param {*} value The value to check.
- * @returns {boolean} Returns `true` if `value` is a prototype, else `false`.
- */
-
-function isPrototype(value) {
-  var Ctor = value && value.constructor,
-      proto = typeof Ctor == 'function' && Ctor.prototype || objectProto;
-  return value === proto;
-}
-
-var _default = isPrototype;
-exports.default = _default;
-},{}],"../node_modules/lodash-es/_initCloneObject.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var _baseCreate = _interopRequireDefault(require("./_baseCreate.js"));
-
-var _getPrototype = _interopRequireDefault(require("./_getPrototype.js"));
-
-var _isPrototype = _interopRequireDefault(require("./_isPrototype.js"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-/**
- * Initializes an object clone.
- *
- * @private
- * @param {Object} object The object to clone.
- * @returns {Object} Returns the initialized clone.
- */
-function initCloneObject(object) {
-  return typeof object.constructor == 'function' && !(0, _isPrototype.default)(object) ? (0, _baseCreate.default)((0, _getPrototype.default)(object)) : {};
-}
-
-var _default = initCloneObject;
-exports.default = _default;
-},{"./_baseCreate.js":"../node_modules/lodash-es/_baseCreate.js","./_getPrototype.js":"../node_modules/lodash-es/_getPrototype.js","./_isPrototype.js":"../node_modules/lodash-es/_isPrototype.js"}],"../node_modules/lodash-es/isObjectLike.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-/**
- * Checks if `value` is object-like. A value is object-like if it's not `null`
- * and has a `typeof` result of "object".
- *
- * @static
- * @memberOf _
- * @since 4.0.0
- * @category Lang
- * @param {*} value The value to check.
- * @returns {boolean} Returns `true` if `value` is object-like, else `false`.
- * @example
- *
- * _.isObjectLike({});
- * // => true
- *
- * _.isObjectLike([1, 2, 3]);
- * // => true
- *
- * _.isObjectLike(_.noop);
- * // => false
- *
- * _.isObjectLike(null);
- * // => false
- */
-function isObjectLike(value) {
-  return value != null && typeof value == 'object';
-}
-
-var _default = isObjectLike;
-exports.default = _default;
-},{}],"../node_modules/lodash-es/_baseIsArguments.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var _baseGetTag = _interopRequireDefault(require("./_baseGetTag.js"));
-
-var _isObjectLike = _interopRequireDefault(require("./isObjectLike.js"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-/** `Object#toString` result references. */
-var argsTag = '[object Arguments]';
-/**
- * The base implementation of `_.isArguments`.
- *
- * @private
- * @param {*} value The value to check.
- * @returns {boolean} Returns `true` if `value` is an `arguments` object,
- */
-
-function baseIsArguments(value) {
-  return (0, _isObjectLike.default)(value) && (0, _baseGetTag.default)(value) == argsTag;
-}
-
-var _default = baseIsArguments;
-exports.default = _default;
-},{"./_baseGetTag.js":"../node_modules/lodash-es/_baseGetTag.js","./isObjectLike.js":"../node_modules/lodash-es/isObjectLike.js"}],"../node_modules/lodash-es/isArguments.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var _baseIsArguments = _interopRequireDefault(require("./_baseIsArguments.js"));
-
-var _isObjectLike = _interopRequireDefault(require("./isObjectLike.js"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-/** Used for built-in method references. */
-var objectProto = Object.prototype;
-/** Used to check objects for own properties. */
-
-var hasOwnProperty = objectProto.hasOwnProperty;
-/** Built-in value references. */
-
-var propertyIsEnumerable = objectProto.propertyIsEnumerable;
-/**
- * Checks if `value` is likely an `arguments` object.
- *
- * @static
- * @memberOf _
- * @since 0.1.0
- * @category Lang
- * @param {*} value The value to check.
- * @returns {boolean} Returns `true` if `value` is an `arguments` object,
- *  else `false`.
- * @example
- *
- * _.isArguments(function() { return arguments; }());
- * // => true
- *
- * _.isArguments([1, 2, 3]);
- * // => false
- */
-
-var isArguments = (0, _baseIsArguments.default)(function () {
-  return arguments;
-}()) ? _baseIsArguments.default : function (value) {
-  return (0, _isObjectLike.default)(value) && hasOwnProperty.call(value, 'callee') && !propertyIsEnumerable.call(value, 'callee');
-};
-var _default = isArguments;
-exports.default = _default;
-},{"./_baseIsArguments.js":"../node_modules/lodash-es/_baseIsArguments.js","./isObjectLike.js":"../node_modules/lodash-es/isObjectLike.js"}],"../node_modules/lodash-es/isArray.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-/**
- * Checks if `value` is classified as an `Array` object.
- *
- * @static
- * @memberOf _
- * @since 0.1.0
- * @category Lang
- * @param {*} value The value to check.
- * @returns {boolean} Returns `true` if `value` is an array, else `false`.
- * @example
- *
- * _.isArray([1, 2, 3]);
- * // => true
- *
- * _.isArray(document.body.children);
- * // => false
- *
- * _.isArray('abc');
- * // => false
- *
- * _.isArray(_.noop);
- * // => false
- */
-var isArray = Array.isArray;
-var _default = isArray;
-exports.default = _default;
-},{}],"../node_modules/lodash-es/isLength.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-/** Used as references for various `Number` constants. */
-var MAX_SAFE_INTEGER = 9007199254740991;
-/**
- * Checks if `value` is a valid array-like length.
- *
- * **Note:** This method is loosely based on
- * [`ToLength`](http://ecma-international.org/ecma-262/7.0/#sec-tolength).
- *
- * @static
- * @memberOf _
- * @since 4.0.0
- * @category Lang
- * @param {*} value The value to check.
- * @returns {boolean} Returns `true` if `value` is a valid length, else `false`.
- * @example
- *
- * _.isLength(3);
- * // => true
- *
- * _.isLength(Number.MIN_VALUE);
- * // => false
- *
- * _.isLength(Infinity);
- * // => false
- *
- * _.isLength('3');
- * // => false
- */
-
-function isLength(value) {
-  return typeof value == 'number' && value > -1 && value % 1 == 0 && value <= MAX_SAFE_INTEGER;
-}
-
-var _default = isLength;
-exports.default = _default;
-},{}],"../node_modules/lodash-es/isArrayLike.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var _isFunction = _interopRequireDefault(require("./isFunction.js"));
-
-var _isLength = _interopRequireDefault(require("./isLength.js"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-/**
- * Checks if `value` is array-like. A value is considered array-like if it's
- * not a function and has a `value.length` that's an integer greater than or
- * equal to `0` and less than or equal to `Number.MAX_SAFE_INTEGER`.
- *
- * @static
- * @memberOf _
- * @since 4.0.0
- * @category Lang
- * @param {*} value The value to check.
- * @returns {boolean} Returns `true` if `value` is array-like, else `false`.
- * @example
- *
- * _.isArrayLike([1, 2, 3]);
- * // => true
- *
- * _.isArrayLike(document.body.children);
- * // => true
- *
- * _.isArrayLike('abc');
- * // => true
- *
- * _.isArrayLike(_.noop);
- * // => false
- */
-function isArrayLike(value) {
-  return value != null && (0, _isLength.default)(value.length) && !(0, _isFunction.default)(value);
-}
-
-var _default = isArrayLike;
-exports.default = _default;
-},{"./isFunction.js":"../node_modules/lodash-es/isFunction.js","./isLength.js":"../node_modules/lodash-es/isLength.js"}],"../node_modules/lodash-es/isArrayLikeObject.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var _isArrayLike = _interopRequireDefault(require("./isArrayLike.js"));
-
-var _isObjectLike = _interopRequireDefault(require("./isObjectLike.js"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+module.exports = assignMergeValue;
+
+},{"./_baseAssignValue":"../node_modules/lodash/_baseAssignValue.js","./eq":"../node_modules/lodash/eq.js"}],"../node_modules/lodash/isArrayLikeObject.js":[function(require,module,exports) {
+var isArrayLike = require('./isArrayLike'),
+    isObjectLike = require('./isObjectLike');
 
 /**
  * This method is like `_.isArrayLike` except that it also checks if `value`
@@ -52302,336 +50850,12 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
  * // => false
  */
 function isArrayLikeObject(value) {
-  return (0, _isObjectLike.default)(value) && (0, _isArrayLike.default)(value);
+  return isObjectLike(value) && isArrayLike(value);
 }
 
-var _default = isArrayLikeObject;
-exports.default = _default;
-},{"./isArrayLike.js":"../node_modules/lodash-es/isArrayLike.js","./isObjectLike.js":"../node_modules/lodash-es/isObjectLike.js"}],"../node_modules/lodash-es/stubFalse.js":[function(require,module,exports) {
-"use strict";
+module.exports = isArrayLikeObject;
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-/**
- * This method returns `false`.
- *
- * @static
- * @memberOf _
- * @since 4.13.0
- * @category Util
- * @returns {boolean} Returns `false`.
- * @example
- *
- * _.times(2, _.stubFalse);
- * // => [false, false]
- */
-function stubFalse() {
-  return false;
-}
-
-var _default = stubFalse;
-exports.default = _default;
-},{}],"../node_modules/lodash-es/isBuffer.js":[function(require,module,exports) {
-
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var _root = _interopRequireDefault(require("./_root.js"));
-
-var _stubFalse = _interopRequireDefault(require("./stubFalse.js"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-/** Detect free variable `exports`. */
-var freeExports = typeof exports == 'object' && exports && !exports.nodeType && exports;
-/** Detect free variable `module`. */
-
-var freeModule = freeExports && typeof module == 'object' && module && !module.nodeType && module;
-/** Detect the popular CommonJS extension `module.exports`. */
-
-var moduleExports = freeModule && freeModule.exports === freeExports;
-/** Built-in value references. */
-
-var Buffer = moduleExports ? _root.default.Buffer : undefined;
-/* Built-in method references for those with the same name as other `lodash` methods. */
-
-var nativeIsBuffer = Buffer ? Buffer.isBuffer : undefined;
-/**
- * Checks if `value` is a buffer.
- *
- * @static
- * @memberOf _
- * @since 4.3.0
- * @category Lang
- * @param {*} value The value to check.
- * @returns {boolean} Returns `true` if `value` is a buffer, else `false`.
- * @example
- *
- * _.isBuffer(new Buffer(2));
- * // => true
- *
- * _.isBuffer(new Uint8Array(2));
- * // => false
- */
-
-var isBuffer = nativeIsBuffer || _stubFalse.default;
-var _default = isBuffer;
-exports.default = _default;
-},{"./_root.js":"../node_modules/lodash-es/_root.js","./stubFalse.js":"../node_modules/lodash-es/stubFalse.js"}],"../node_modules/lodash-es/isPlainObject.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var _baseGetTag = _interopRequireDefault(require("./_baseGetTag.js"));
-
-var _getPrototype = _interopRequireDefault(require("./_getPrototype.js"));
-
-var _isObjectLike = _interopRequireDefault(require("./isObjectLike.js"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-/** `Object#toString` result references. */
-var objectTag = '[object Object]';
-/** Used for built-in method references. */
-
-var funcProto = Function.prototype,
-    objectProto = Object.prototype;
-/** Used to resolve the decompiled source of functions. */
-
-var funcToString = funcProto.toString;
-/** Used to check objects for own properties. */
-
-var hasOwnProperty = objectProto.hasOwnProperty;
-/** Used to infer the `Object` constructor. */
-
-var objectCtorString = funcToString.call(Object);
-/**
- * Checks if `value` is a plain object, that is, an object created by the
- * `Object` constructor or one with a `[[Prototype]]` of `null`.
- *
- * @static
- * @memberOf _
- * @since 0.8.0
- * @category Lang
- * @param {*} value The value to check.
- * @returns {boolean} Returns `true` if `value` is a plain object, else `false`.
- * @example
- *
- * function Foo() {
- *   this.a = 1;
- * }
- *
- * _.isPlainObject(new Foo);
- * // => false
- *
- * _.isPlainObject([1, 2, 3]);
- * // => false
- *
- * _.isPlainObject({ 'x': 0, 'y': 0 });
- * // => true
- *
- * _.isPlainObject(Object.create(null));
- * // => true
- */
-
-function isPlainObject(value) {
-  if (!(0, _isObjectLike.default)(value) || (0, _baseGetTag.default)(value) != objectTag) {
-    return false;
-  }
-
-  var proto = (0, _getPrototype.default)(value);
-
-  if (proto === null) {
-    return true;
-  }
-
-  var Ctor = hasOwnProperty.call(proto, 'constructor') && proto.constructor;
-  return typeof Ctor == 'function' && Ctor instanceof Ctor && funcToString.call(Ctor) == objectCtorString;
-}
-
-var _default = isPlainObject;
-exports.default = _default;
-},{"./_baseGetTag.js":"../node_modules/lodash-es/_baseGetTag.js","./_getPrototype.js":"../node_modules/lodash-es/_getPrototype.js","./isObjectLike.js":"../node_modules/lodash-es/isObjectLike.js"}],"../node_modules/lodash-es/_baseIsTypedArray.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var _baseGetTag = _interopRequireDefault(require("./_baseGetTag.js"));
-
-var _isLength = _interopRequireDefault(require("./isLength.js"));
-
-var _isObjectLike = _interopRequireDefault(require("./isObjectLike.js"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-/** `Object#toString` result references. */
-var argsTag = '[object Arguments]',
-    arrayTag = '[object Array]',
-    boolTag = '[object Boolean]',
-    dateTag = '[object Date]',
-    errorTag = '[object Error]',
-    funcTag = '[object Function]',
-    mapTag = '[object Map]',
-    numberTag = '[object Number]',
-    objectTag = '[object Object]',
-    regexpTag = '[object RegExp]',
-    setTag = '[object Set]',
-    stringTag = '[object String]',
-    weakMapTag = '[object WeakMap]';
-var arrayBufferTag = '[object ArrayBuffer]',
-    dataViewTag = '[object DataView]',
-    float32Tag = '[object Float32Array]',
-    float64Tag = '[object Float64Array]',
-    int8Tag = '[object Int8Array]',
-    int16Tag = '[object Int16Array]',
-    int32Tag = '[object Int32Array]',
-    uint8Tag = '[object Uint8Array]',
-    uint8ClampedTag = '[object Uint8ClampedArray]',
-    uint16Tag = '[object Uint16Array]',
-    uint32Tag = '[object Uint32Array]';
-/** Used to identify `toStringTag` values of typed arrays. */
-
-var typedArrayTags = {};
-typedArrayTags[float32Tag] = typedArrayTags[float64Tag] = typedArrayTags[int8Tag] = typedArrayTags[int16Tag] = typedArrayTags[int32Tag] = typedArrayTags[uint8Tag] = typedArrayTags[uint8ClampedTag] = typedArrayTags[uint16Tag] = typedArrayTags[uint32Tag] = true;
-typedArrayTags[argsTag] = typedArrayTags[arrayTag] = typedArrayTags[arrayBufferTag] = typedArrayTags[boolTag] = typedArrayTags[dataViewTag] = typedArrayTags[dateTag] = typedArrayTags[errorTag] = typedArrayTags[funcTag] = typedArrayTags[mapTag] = typedArrayTags[numberTag] = typedArrayTags[objectTag] = typedArrayTags[regexpTag] = typedArrayTags[setTag] = typedArrayTags[stringTag] = typedArrayTags[weakMapTag] = false;
-/**
- * The base implementation of `_.isTypedArray` without Node.js optimizations.
- *
- * @private
- * @param {*} value The value to check.
- * @returns {boolean} Returns `true` if `value` is a typed array, else `false`.
- */
-
-function baseIsTypedArray(value) {
-  return (0, _isObjectLike.default)(value) && (0, _isLength.default)(value.length) && !!typedArrayTags[(0, _baseGetTag.default)(value)];
-}
-
-var _default = baseIsTypedArray;
-exports.default = _default;
-},{"./_baseGetTag.js":"../node_modules/lodash-es/_baseGetTag.js","./isLength.js":"../node_modules/lodash-es/isLength.js","./isObjectLike.js":"../node_modules/lodash-es/isObjectLike.js"}],"../node_modules/lodash-es/_baseUnary.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-/**
- * The base implementation of `_.unary` without support for storing metadata.
- *
- * @private
- * @param {Function} func The function to cap arguments for.
- * @returns {Function} Returns the new capped function.
- */
-function baseUnary(func) {
-  return function (value) {
-    return func(value);
-  };
-}
-
-var _default = baseUnary;
-exports.default = _default;
-},{}],"../node_modules/lodash-es/_nodeUtil.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var _freeGlobal = _interopRequireDefault(require("./_freeGlobal.js"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-/** Detect free variable `exports`. */
-var freeExports = typeof exports == 'object' && exports && !exports.nodeType && exports;
-/** Detect free variable `module`. */
-
-var freeModule = freeExports && typeof module == 'object' && module && !module.nodeType && module;
-/** Detect the popular CommonJS extension `module.exports`. */
-
-var moduleExports = freeModule && freeModule.exports === freeExports;
-/** Detect free variable `process` from Node.js. */
-
-var freeProcess = moduleExports && _freeGlobal.default.process;
-/** Used to access faster Node.js helpers. */
-
-var nodeUtil = function () {
-  try {
-    // Use `util.types` for Node.js 10+.
-    var types = freeModule && freeModule.require && freeModule.require('util').types;
-
-    if (types) {
-      return types;
-    } // Legacy `process.binding('util')` for Node.js < 10.
-
-
-    return freeProcess && freeProcess.binding && freeProcess.binding('util');
-  } catch (e) {}
-}();
-
-var _default = nodeUtil;
-exports.default = _default;
-},{"./_freeGlobal.js":"../node_modules/lodash-es/_freeGlobal.js"}],"../node_modules/lodash-es/isTypedArray.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var _baseIsTypedArray = _interopRequireDefault(require("./_baseIsTypedArray.js"));
-
-var _baseUnary = _interopRequireDefault(require("./_baseUnary.js"));
-
-var _nodeUtil = _interopRequireDefault(require("./_nodeUtil.js"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-/* Node.js helper references. */
-var nodeIsTypedArray = _nodeUtil.default && _nodeUtil.default.isTypedArray;
-/**
- * Checks if `value` is classified as a typed array.
- *
- * @static
- * @memberOf _
- * @since 3.0.0
- * @category Lang
- * @param {*} value The value to check.
- * @returns {boolean} Returns `true` if `value` is a typed array, else `false`.
- * @example
- *
- * _.isTypedArray(new Uint8Array);
- * // => true
- *
- * _.isTypedArray([]);
- * // => false
- */
-
-var isTypedArray = nodeIsTypedArray ? (0, _baseUnary.default)(nodeIsTypedArray) : _baseIsTypedArray.default;
-var _default = isTypedArray;
-exports.default = _default;
-},{"./_baseIsTypedArray.js":"../node_modules/lodash-es/_baseIsTypedArray.js","./_baseUnary.js":"../node_modules/lodash-es/_baseUnary.js","./_nodeUtil.js":"../node_modules/lodash-es/_nodeUtil.js"}],"../node_modules/lodash-es/_safeGet.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
+},{"./isArrayLike":"../node_modules/lodash/isArrayLike.js","./isObjectLike":"../node_modules/lodash/isObjectLike.js"}],"../node_modules/lodash/_safeGet.js":[function(require,module,exports) {
 /**
  * Gets the value at `key`, unless `key` is "__proto__" or "constructor".
  *
@@ -52652,355 +50876,11 @@ function safeGet(object, key) {
   return object[key];
 }
 
-var _default = safeGet;
-exports.default = _default;
-},{}],"../node_modules/lodash-es/_assignValue.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var _baseAssignValue = _interopRequireDefault(require("./_baseAssignValue.js"));
-
-var _eq = _interopRequireDefault(require("./eq.js"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-/** Used for built-in method references. */
-var objectProto = Object.prototype;
-/** Used to check objects for own properties. */
-
-var hasOwnProperty = objectProto.hasOwnProperty;
-/**
- * Assigns `value` to `key` of `object` if the existing value is not equivalent
- * using [`SameValueZero`](http://ecma-international.org/ecma-262/7.0/#sec-samevaluezero)
- * for equality comparisons.
- *
- * @private
- * @param {Object} object The object to modify.
- * @param {string} key The key of the property to assign.
- * @param {*} value The value to assign.
- */
-
-function assignValue(object, key, value) {
-  var objValue = object[key];
-
-  if (!(hasOwnProperty.call(object, key) && (0, _eq.default)(objValue, value)) || value === undefined && !(key in object)) {
-    (0, _baseAssignValue.default)(object, key, value);
-  }
-}
-
-var _default = assignValue;
-exports.default = _default;
-},{"./_baseAssignValue.js":"../node_modules/lodash-es/_baseAssignValue.js","./eq.js":"../node_modules/lodash-es/eq.js"}],"../node_modules/lodash-es/_copyObject.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var _assignValue = _interopRequireDefault(require("./_assignValue.js"));
-
-var _baseAssignValue = _interopRequireDefault(require("./_baseAssignValue.js"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-/**
- * Copies properties of `source` to `object`.
- *
- * @private
- * @param {Object} source The object to copy properties from.
- * @param {Array} props The property identifiers to copy.
- * @param {Object} [object={}] The object to copy properties to.
- * @param {Function} [customizer] The function to customize copied values.
- * @returns {Object} Returns `object`.
- */
-function copyObject(source, props, object, customizer) {
-  var isNew = !object;
-  object || (object = {});
-  var index = -1,
-      length = props.length;
-
-  while (++index < length) {
-    var key = props[index];
-    var newValue = customizer ? customizer(object[key], source[key], key, object, source) : undefined;
-
-    if (newValue === undefined) {
-      newValue = source[key];
-    }
-
-    if (isNew) {
-      (0, _baseAssignValue.default)(object, key, newValue);
-    } else {
-      (0, _assignValue.default)(object, key, newValue);
-    }
-  }
-
-  return object;
-}
-
-var _default = copyObject;
-exports.default = _default;
-},{"./_assignValue.js":"../node_modules/lodash-es/_assignValue.js","./_baseAssignValue.js":"../node_modules/lodash-es/_baseAssignValue.js"}],"../node_modules/lodash-es/_baseTimes.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-/**
- * The base implementation of `_.times` without support for iteratee shorthands
- * or max array length checks.
- *
- * @private
- * @param {number} n The number of times to invoke `iteratee`.
- * @param {Function} iteratee The function invoked per iteration.
- * @returns {Array} Returns the array of results.
- */
-function baseTimes(n, iteratee) {
-  var index = -1,
-      result = Array(n);
-
-  while (++index < n) {
-    result[index] = iteratee(index);
-  }
-
-  return result;
-}
-
-var _default = baseTimes;
-exports.default = _default;
-},{}],"../node_modules/lodash-es/_isIndex.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-/** Used as references for various `Number` constants. */
-var MAX_SAFE_INTEGER = 9007199254740991;
-/** Used to detect unsigned integer values. */
-
-var reIsUint = /^(?:0|[1-9]\d*)$/;
-/**
- * Checks if `value` is a valid array-like index.
- *
- * @private
- * @param {*} value The value to check.
- * @param {number} [length=MAX_SAFE_INTEGER] The upper bounds of a valid index.
- * @returns {boolean} Returns `true` if `value` is a valid index, else `false`.
- */
-
-function isIndex(value, length) {
-  var type = typeof value;
-  length = length == null ? MAX_SAFE_INTEGER : length;
-  return !!length && (type == 'number' || type != 'symbol' && reIsUint.test(value)) && value > -1 && value % 1 == 0 && value < length;
-}
-
-var _default = isIndex;
-exports.default = _default;
-},{}],"../node_modules/lodash-es/_arrayLikeKeys.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var _baseTimes = _interopRequireDefault(require("./_baseTimes.js"));
-
-var _isArguments = _interopRequireDefault(require("./isArguments.js"));
-
-var _isArray = _interopRequireDefault(require("./isArray.js"));
-
-var _isBuffer = _interopRequireDefault(require("./isBuffer.js"));
-
-var _isIndex = _interopRequireDefault(require("./_isIndex.js"));
-
-var _isTypedArray = _interopRequireDefault(require("./isTypedArray.js"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-/** Used for built-in method references. */
-var objectProto = Object.prototype;
-/** Used to check objects for own properties. */
-
-var hasOwnProperty = objectProto.hasOwnProperty;
-/**
- * Creates an array of the enumerable property names of the array-like `value`.
- *
- * @private
- * @param {*} value The value to query.
- * @param {boolean} inherited Specify returning inherited property names.
- * @returns {Array} Returns the array of property names.
- */
-
-function arrayLikeKeys(value, inherited) {
-  var isArr = (0, _isArray.default)(value),
-      isArg = !isArr && (0, _isArguments.default)(value),
-      isBuff = !isArr && !isArg && (0, _isBuffer.default)(value),
-      isType = !isArr && !isArg && !isBuff && (0, _isTypedArray.default)(value),
-      skipIndexes = isArr || isArg || isBuff || isType,
-      result = skipIndexes ? (0, _baseTimes.default)(value.length, String) : [],
-      length = result.length;
-
-  for (var key in value) {
-    if ((inherited || hasOwnProperty.call(value, key)) && !(skipIndexes && ( // Safari 9 has enumerable `arguments.length` in strict mode.
-    key == 'length' || // Node.js 0.10 has enumerable non-index properties on buffers.
-    isBuff && (key == 'offset' || key == 'parent') || // PhantomJS 2 has enumerable non-index properties on typed arrays.
-    isType && (key == 'buffer' || key == 'byteLength' || key == 'byteOffset') || // Skip index properties.
-    (0, _isIndex.default)(key, length)))) {
-      result.push(key);
-    }
-  }
-
-  return result;
-}
-
-var _default = arrayLikeKeys;
-exports.default = _default;
-},{"./_baseTimes.js":"../node_modules/lodash-es/_baseTimes.js","./isArguments.js":"../node_modules/lodash-es/isArguments.js","./isArray.js":"../node_modules/lodash-es/isArray.js","./isBuffer.js":"../node_modules/lodash-es/isBuffer.js","./_isIndex.js":"../node_modules/lodash-es/_isIndex.js","./isTypedArray.js":"../node_modules/lodash-es/isTypedArray.js"}],"../node_modules/lodash-es/_nativeKeysIn.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-/**
- * This function is like
- * [`Object.keys`](http://ecma-international.org/ecma-262/7.0/#sec-object.keys)
- * except that it includes inherited enumerable properties.
- *
- * @private
- * @param {Object} object The object to query.
- * @returns {Array} Returns the array of property names.
- */
-function nativeKeysIn(object) {
-  var result = [];
-
-  if (object != null) {
-    for (var key in Object(object)) {
-      result.push(key);
-    }
-  }
-
-  return result;
-}
-
-var _default = nativeKeysIn;
-exports.default = _default;
-},{}],"../node_modules/lodash-es/_baseKeysIn.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var _isObject = _interopRequireDefault(require("./isObject.js"));
-
-var _isPrototype = _interopRequireDefault(require("./_isPrototype.js"));
-
-var _nativeKeysIn = _interopRequireDefault(require("./_nativeKeysIn.js"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-/** Used for built-in method references. */
-var objectProto = Object.prototype;
-/** Used to check objects for own properties. */
-
-var hasOwnProperty = objectProto.hasOwnProperty;
-/**
- * The base implementation of `_.keysIn` which doesn't treat sparse arrays as dense.
- *
- * @private
- * @param {Object} object The object to query.
- * @returns {Array} Returns the array of property names.
- */
-
-function baseKeysIn(object) {
-  if (!(0, _isObject.default)(object)) {
-    return (0, _nativeKeysIn.default)(object);
-  }
-
-  var isProto = (0, _isPrototype.default)(object),
-      result = [];
-
-  for (var key in object) {
-    if (!(key == 'constructor' && (isProto || !hasOwnProperty.call(object, key)))) {
-      result.push(key);
-    }
-  }
-
-  return result;
-}
-
-var _default = baseKeysIn;
-exports.default = _default;
-},{"./isObject.js":"../node_modules/lodash-es/isObject.js","./_isPrototype.js":"../node_modules/lodash-es/_isPrototype.js","./_nativeKeysIn.js":"../node_modules/lodash-es/_nativeKeysIn.js"}],"../node_modules/lodash-es/keysIn.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var _arrayLikeKeys = _interopRequireDefault(require("./_arrayLikeKeys.js"));
-
-var _baseKeysIn = _interopRequireDefault(require("./_baseKeysIn.js"));
-
-var _isArrayLike = _interopRequireDefault(require("./isArrayLike.js"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-/**
- * Creates an array of the own and inherited enumerable property names of `object`.
- *
- * **Note:** Non-object values are coerced to objects.
- *
- * @static
- * @memberOf _
- * @since 3.0.0
- * @category Object
- * @param {Object} object The object to query.
- * @returns {Array} Returns the array of property names.
- * @example
- *
- * function Foo() {
- *   this.a = 1;
- *   this.b = 2;
- * }
- *
- * Foo.prototype.c = 3;
- *
- * _.keysIn(new Foo);
- * // => ['a', 'b', 'c'] (iteration order is not guaranteed)
- */
-function keysIn(object) {
-  return (0, _isArrayLike.default)(object) ? (0, _arrayLikeKeys.default)(object, true) : (0, _baseKeysIn.default)(object);
-}
-
-var _default = keysIn;
-exports.default = _default;
-},{"./_arrayLikeKeys.js":"../node_modules/lodash-es/_arrayLikeKeys.js","./_baseKeysIn.js":"../node_modules/lodash-es/_baseKeysIn.js","./isArrayLike.js":"../node_modules/lodash-es/isArrayLike.js"}],"../node_modules/lodash-es/toPlainObject.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var _copyObject = _interopRequireDefault(require("./_copyObject.js"));
-
-var _keysIn = _interopRequireDefault(require("./keysIn.js"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+module.exports = safeGet;
+
+},{}],"../node_modules/lodash/toPlainObject.js":[function(require,module,exports) {
+var copyObject = require('./_copyObject'),
+    keysIn = require('./keysIn');
 
 /**
  * Converts `value` to a plain object flattening inherited enumerable string
@@ -53027,50 +50907,27 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
  * // => { 'a': 1, 'b': 2, 'c': 3 }
  */
 function toPlainObject(value) {
-  return (0, _copyObject.default)(value, (0, _keysIn.default)(value));
+  return copyObject(value, keysIn(value));
 }
 
-var _default = toPlainObject;
-exports.default = _default;
-},{"./_copyObject.js":"../node_modules/lodash-es/_copyObject.js","./keysIn.js":"../node_modules/lodash-es/keysIn.js"}],"../node_modules/lodash-es/_baseMergeDeep.js":[function(require,module,exports) {
-"use strict";
+module.exports = toPlainObject;
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var _assignMergeValue = _interopRequireDefault(require("./_assignMergeValue.js"));
-
-var _cloneBuffer = _interopRequireDefault(require("./_cloneBuffer.js"));
-
-var _cloneTypedArray = _interopRequireDefault(require("./_cloneTypedArray.js"));
-
-var _copyArray = _interopRequireDefault(require("./_copyArray.js"));
-
-var _initCloneObject = _interopRequireDefault(require("./_initCloneObject.js"));
-
-var _isArguments = _interopRequireDefault(require("./isArguments.js"));
-
-var _isArray = _interopRequireDefault(require("./isArray.js"));
-
-var _isArrayLikeObject = _interopRequireDefault(require("./isArrayLikeObject.js"));
-
-var _isBuffer = _interopRequireDefault(require("./isBuffer.js"));
-
-var _isFunction = _interopRequireDefault(require("./isFunction.js"));
-
-var _isObject = _interopRequireDefault(require("./isObject.js"));
-
-var _isPlainObject = _interopRequireDefault(require("./isPlainObject.js"));
-
-var _isTypedArray = _interopRequireDefault(require("./isTypedArray.js"));
-
-var _safeGet = _interopRequireDefault(require("./_safeGet.js"));
-
-var _toPlainObject = _interopRequireDefault(require("./toPlainObject.js"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+},{"./_copyObject":"../node_modules/lodash/_copyObject.js","./keysIn":"../node_modules/lodash/keysIn.js"}],"../node_modules/lodash/_baseMergeDeep.js":[function(require,module,exports) {
+var assignMergeValue = require('./_assignMergeValue'),
+    cloneBuffer = require('./_cloneBuffer'),
+    cloneTypedArray = require('./_cloneTypedArray'),
+    copyArray = require('./_copyArray'),
+    initCloneObject = require('./_initCloneObject'),
+    isArguments = require('./isArguments'),
+    isArray = require('./isArray'),
+    isArrayLikeObject = require('./isArrayLikeObject'),
+    isBuffer = require('./isBuffer'),
+    isFunction = require('./isFunction'),
+    isObject = require('./isObject'),
+    isPlainObject = require('./isPlainObject'),
+    isTypedArray = require('./isTypedArray'),
+    safeGet = require('./_safeGet'),
+    toPlainObject = require('./toPlainObject');
 
 /**
  * A specialized version of `baseMerge` for arrays and objects which performs
@@ -53088,86 +50945,77 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
  *  counterparts.
  */
 function baseMergeDeep(object, source, key, srcIndex, mergeFunc, customizer, stack) {
-  var objValue = (0, _safeGet.default)(object, key),
-      srcValue = (0, _safeGet.default)(source, key),
+  var objValue = safeGet(object, key),
+      srcValue = safeGet(source, key),
       stacked = stack.get(srcValue);
 
   if (stacked) {
-    (0, _assignMergeValue.default)(object, key, stacked);
+    assignMergeValue(object, key, stacked);
     return;
   }
+  var newValue = customizer
+    ? customizer(objValue, srcValue, (key + ''), object, source, stack)
+    : undefined;
 
-  var newValue = customizer ? customizer(objValue, srcValue, key + '', object, source, stack) : undefined;
   var isCommon = newValue === undefined;
 
   if (isCommon) {
-    var isArr = (0, _isArray.default)(srcValue),
-        isBuff = !isArr && (0, _isBuffer.default)(srcValue),
-        isTyped = !isArr && !isBuff && (0, _isTypedArray.default)(srcValue);
-    newValue = srcValue;
+    var isArr = isArray(srcValue),
+        isBuff = !isArr && isBuffer(srcValue),
+        isTyped = !isArr && !isBuff && isTypedArray(srcValue);
 
+    newValue = srcValue;
     if (isArr || isBuff || isTyped) {
-      if ((0, _isArray.default)(objValue)) {
+      if (isArray(objValue)) {
         newValue = objValue;
-      } else if ((0, _isArrayLikeObject.default)(objValue)) {
-        newValue = (0, _copyArray.default)(objValue);
-      } else if (isBuff) {
+      }
+      else if (isArrayLikeObject(objValue)) {
+        newValue = copyArray(objValue);
+      }
+      else if (isBuff) {
         isCommon = false;
-        newValue = (0, _cloneBuffer.default)(srcValue, true);
-      } else if (isTyped) {
+        newValue = cloneBuffer(srcValue, true);
+      }
+      else if (isTyped) {
         isCommon = false;
-        newValue = (0, _cloneTypedArray.default)(srcValue, true);
-      } else {
+        newValue = cloneTypedArray(srcValue, true);
+      }
+      else {
         newValue = [];
       }
-    } else if ((0, _isPlainObject.default)(srcValue) || (0, _isArguments.default)(srcValue)) {
+    }
+    else if (isPlainObject(srcValue) || isArguments(srcValue)) {
       newValue = objValue;
-
-      if ((0, _isArguments.default)(objValue)) {
-        newValue = (0, _toPlainObject.default)(objValue);
-      } else if (!(0, _isObject.default)(objValue) || (0, _isFunction.default)(objValue)) {
-        newValue = (0, _initCloneObject.default)(srcValue);
+      if (isArguments(objValue)) {
+        newValue = toPlainObject(objValue);
       }
-    } else {
+      else if (!isObject(objValue) || isFunction(objValue)) {
+        newValue = initCloneObject(srcValue);
+      }
+    }
+    else {
       isCommon = false;
     }
   }
-
   if (isCommon) {
     // Recursively merge objects and arrays (susceptible to call stack limits).
     stack.set(srcValue, newValue);
     mergeFunc(newValue, srcValue, srcIndex, customizer, stack);
     stack['delete'](srcValue);
   }
-
-  (0, _assignMergeValue.default)(object, key, newValue);
+  assignMergeValue(object, key, newValue);
 }
 
-var _default = baseMergeDeep;
-exports.default = _default;
-},{"./_assignMergeValue.js":"../node_modules/lodash-es/_assignMergeValue.js","./_cloneBuffer.js":"../node_modules/lodash-es/_cloneBuffer.js","./_cloneTypedArray.js":"../node_modules/lodash-es/_cloneTypedArray.js","./_copyArray.js":"../node_modules/lodash-es/_copyArray.js","./_initCloneObject.js":"../node_modules/lodash-es/_initCloneObject.js","./isArguments.js":"../node_modules/lodash-es/isArguments.js","./isArray.js":"../node_modules/lodash-es/isArray.js","./isArrayLikeObject.js":"../node_modules/lodash-es/isArrayLikeObject.js","./isBuffer.js":"../node_modules/lodash-es/isBuffer.js","./isFunction.js":"../node_modules/lodash-es/isFunction.js","./isObject.js":"../node_modules/lodash-es/isObject.js","./isPlainObject.js":"../node_modules/lodash-es/isPlainObject.js","./isTypedArray.js":"../node_modules/lodash-es/isTypedArray.js","./_safeGet.js":"../node_modules/lodash-es/_safeGet.js","./toPlainObject.js":"../node_modules/lodash-es/toPlainObject.js"}],"../node_modules/lodash-es/_baseMerge.js":[function(require,module,exports) {
-"use strict";
+module.exports = baseMergeDeep;
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var _Stack = _interopRequireDefault(require("./_Stack.js"));
-
-var _assignMergeValue = _interopRequireDefault(require("./_assignMergeValue.js"));
-
-var _baseFor = _interopRequireDefault(require("./_baseFor.js"));
-
-var _baseMergeDeep = _interopRequireDefault(require("./_baseMergeDeep.js"));
-
-var _isObject = _interopRequireDefault(require("./isObject.js"));
-
-var _keysIn = _interopRequireDefault(require("./keysIn.js"));
-
-var _safeGet = _interopRequireDefault(require("./_safeGet.js"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+},{"./_assignMergeValue":"../node_modules/lodash/_assignMergeValue.js","./_cloneBuffer":"../node_modules/lodash/_cloneBuffer.js","./_cloneTypedArray":"../node_modules/lodash/_cloneTypedArray.js","./_copyArray":"../node_modules/lodash/_copyArray.js","./_initCloneObject":"../node_modules/lodash/_initCloneObject.js","./isArguments":"../node_modules/lodash/isArguments.js","./isArray":"../node_modules/lodash/isArray.js","./isArrayLikeObject":"../node_modules/lodash/isArrayLikeObject.js","./isBuffer":"../node_modules/lodash/isBuffer.js","./isFunction":"../node_modules/lodash/isFunction.js","./isObject":"../node_modules/lodash/isObject.js","./isPlainObject":"../node_modules/lodash/isPlainObject.js","./isTypedArray":"../node_modules/lodash/isTypedArray.js","./_safeGet":"../node_modules/lodash/_safeGet.js","./toPlainObject":"../node_modules/lodash/toPlainObject.js"}],"../node_modules/lodash/_baseMerge.js":[function(require,module,exports) {
+var Stack = require('./_Stack'),
+    assignMergeValue = require('./_assignMergeValue'),
+    baseFor = require('./_baseFor'),
+    baseMergeDeep = require('./_baseMergeDeep'),
+    isObject = require('./isObject'),
+    keysIn = require('./keysIn'),
+    safeGet = require('./_safeGet');
 
 /**
  * The base implementation of `_.merge` without support for multiple sources.
@@ -53184,64 +51032,27 @@ function baseMerge(object, source, srcIndex, customizer, stack) {
   if (object === source) {
     return;
   }
-
-  (0, _baseFor.default)(source, function (srcValue, key) {
-    stack || (stack = new _Stack.default());
-
-    if ((0, _isObject.default)(srcValue)) {
-      (0, _baseMergeDeep.default)(object, source, key, srcIndex, baseMerge, customizer, stack);
-    } else {
-      var newValue = customizer ? customizer((0, _safeGet.default)(object, key), srcValue, key + '', object, source, stack) : undefined;
+  baseFor(source, function(srcValue, key) {
+    stack || (stack = new Stack);
+    if (isObject(srcValue)) {
+      baseMergeDeep(object, source, key, srcIndex, baseMerge, customizer, stack);
+    }
+    else {
+      var newValue = customizer
+        ? customizer(safeGet(object, key), srcValue, (key + ''), object, source, stack)
+        : undefined;
 
       if (newValue === undefined) {
         newValue = srcValue;
       }
-
-      (0, _assignMergeValue.default)(object, key, newValue);
+      assignMergeValue(object, key, newValue);
     }
-  }, _keysIn.default);
+  }, keysIn);
 }
 
-var _default = baseMerge;
-exports.default = _default;
-},{"./_Stack.js":"../node_modules/lodash-es/_Stack.js","./_assignMergeValue.js":"../node_modules/lodash-es/_assignMergeValue.js","./_baseFor.js":"../node_modules/lodash-es/_baseFor.js","./_baseMergeDeep.js":"../node_modules/lodash-es/_baseMergeDeep.js","./isObject.js":"../node_modules/lodash-es/isObject.js","./keysIn.js":"../node_modules/lodash-es/keysIn.js","./_safeGet.js":"../node_modules/lodash-es/_safeGet.js"}],"../node_modules/lodash-es/identity.js":[function(require,module,exports) {
-"use strict";
+module.exports = baseMerge;
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-/**
- * This method returns the first argument it receives.
- *
- * @static
- * @since 0.1.0
- * @memberOf _
- * @category Util
- * @param {*} value Any value.
- * @returns {*} Returns `value`.
- * @example
- *
- * var object = { 'a': 1 };
- *
- * console.log(_.identity(object) === object);
- * // => true
- */
-function identity(value) {
-  return value;
-}
-
-var _default = identity;
-exports.default = _default;
-},{}],"../node_modules/lodash-es/_apply.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
+},{"./_Stack":"../node_modules/lodash/_Stack.js","./_assignMergeValue":"../node_modules/lodash/_assignMergeValue.js","./_baseFor":"../node_modules/lodash/_baseFor.js","./_baseMergeDeep":"../node_modules/lodash/_baseMergeDeep.js","./isObject":"../node_modules/lodash/isObject.js","./keysIn":"../node_modules/lodash/keysIn.js","./_safeGet":"../node_modules/lodash/_safeGet.js"}],"../node_modules/lodash/_apply.js":[function(require,module,exports) {
 /**
  * A faster alternative to `Function#apply`, this function invokes `func`
  * with the `this` binding of `thisArg` and the arguments of `args`.
@@ -53254,38 +51065,22 @@ exports.default = void 0;
  */
 function apply(func, thisArg, args) {
   switch (args.length) {
-    case 0:
-      return func.call(thisArg);
-
-    case 1:
-      return func.call(thisArg, args[0]);
-
-    case 2:
-      return func.call(thisArg, args[0], args[1]);
-
-    case 3:
-      return func.call(thisArg, args[0], args[1], args[2]);
+    case 0: return func.call(thisArg);
+    case 1: return func.call(thisArg, args[0]);
+    case 2: return func.call(thisArg, args[0], args[1]);
+    case 3: return func.call(thisArg, args[0], args[1], args[2]);
   }
-
   return func.apply(thisArg, args);
 }
 
-var _default = apply;
-exports.default = _default;
-},{}],"../node_modules/lodash-es/_overRest.js":[function(require,module,exports) {
-"use strict";
+module.exports = apply;
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var _apply = _interopRequireDefault(require("./_apply.js"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+},{}],"../node_modules/lodash/_overRest.js":[function(require,module,exports) {
+var apply = require('./_apply');
 
 /* Built-in method references for those with the same name as other `lodash` methods. */
 var nativeMax = Math.max;
+
 /**
  * A specialized version of `baseRest` which transforms the rest array.
  *
@@ -53295,10 +51090,9 @@ var nativeMax = Math.max;
  * @param {Function} transform The rest array transform.
  * @returns {Function} Returns the new function.
  */
-
 function overRest(func, start, transform) {
-  start = nativeMax(start === undefined ? func.length - 1 : start, 0);
-  return function () {
+  start = nativeMax(start === undefined ? (func.length - 1) : start, 0);
+  return function() {
     var args = arguments,
         index = -1,
         length = nativeMax(args.length - start, 0),
@@ -53307,29 +51101,19 @@ function overRest(func, start, transform) {
     while (++index < length) {
       array[index] = args[start + index];
     }
-
     index = -1;
     var otherArgs = Array(start + 1);
-
     while (++index < start) {
       otherArgs[index] = args[index];
     }
-
     otherArgs[start] = transform(array);
-    return (0, _apply.default)(func, this, otherArgs);
+    return apply(func, this, otherArgs);
   };
 }
 
-var _default = overRest;
-exports.default = _default;
-},{"./_apply.js":"../node_modules/lodash-es/_apply.js"}],"../node_modules/lodash-es/constant.js":[function(require,module,exports) {
-"use strict";
+module.exports = overRest;
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
+},{"./_apply":"../node_modules/lodash/_apply.js"}],"../node_modules/lodash/constant.js":[function(require,module,exports) {
 /**
  * Creates a function that returns `value`.
  *
@@ -53350,28 +51134,17 @@ exports.default = void 0;
  * // => true
  */
 function constant(value) {
-  return function () {
+  return function() {
     return value;
   };
 }
 
-var _default = constant;
-exports.default = _default;
-},{}],"../node_modules/lodash-es/_baseSetToString.js":[function(require,module,exports) {
-"use strict";
+module.exports = constant;
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var _constant = _interopRequireDefault(require("./constant.js"));
-
-var _defineProperty = _interopRequireDefault(require("./_defineProperty.js"));
-
-var _identity = _interopRequireDefault(require("./identity.js"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+},{}],"../node_modules/lodash/_baseSetToString.js":[function(require,module,exports) {
+var constant = require('./constant'),
+    defineProperty = require('./_defineProperty'),
+    identity = require('./identity');
 
 /**
  * The base implementation of `setToString` without support for hot loop shorting.
@@ -53381,30 +51154,25 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
  * @param {Function} string The `toString` result.
  * @returns {Function} Returns `func`.
  */
-var baseSetToString = !_defineProperty.default ? _identity.default : function (func, string) {
-  return (0, _defineProperty.default)(func, 'toString', {
+var baseSetToString = !defineProperty ? identity : function(func, string) {
+  return defineProperty(func, 'toString', {
     'configurable': true,
     'enumerable': false,
-    'value': (0, _constant.default)(string),
+    'value': constant(string),
     'writable': true
   });
 };
-var _default = baseSetToString;
-exports.default = _default;
-},{"./constant.js":"../node_modules/lodash-es/constant.js","./_defineProperty.js":"../node_modules/lodash-es/_defineProperty.js","./identity.js":"../node_modules/lodash-es/identity.js"}],"../node_modules/lodash-es/_shortOut.js":[function(require,module,exports) {
-"use strict";
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
+module.exports = baseSetToString;
 
+},{"./constant":"../node_modules/lodash/constant.js","./_defineProperty":"../node_modules/lodash/_defineProperty.js","./identity":"../node_modules/lodash/identity.js"}],"../node_modules/lodash/_shortOut.js":[function(require,module,exports) {
 /** Used to detect hot functions by number of calls within a span of milliseconds. */
 var HOT_COUNT = 800,
     HOT_SPAN = 16;
-/* Built-in method references for those with the same name as other `lodash` methods. */
 
+/* Built-in method references for those with the same name as other `lodash` methods. */
 var nativeNow = Date.now;
+
 /**
  * Creates a function that'll short out and invoke `identity` instead
  * of `func` when it's called `HOT_COUNT` or more times in `HOT_SPAN`
@@ -53414,15 +51182,15 @@ var nativeNow = Date.now;
  * @param {Function} func The function to restrict.
  * @returns {Function} Returns the new shortable function.
  */
-
 function shortOut(func) {
   var count = 0,
       lastCalled = 0;
-  return function () {
+
+  return function() {
     var stamp = nativeNow(),
         remaining = HOT_SPAN - (stamp - lastCalled);
-    lastCalled = stamp;
 
+    lastCalled = stamp;
     if (remaining > 0) {
       if (++count >= HOT_COUNT) {
         return arguments[0];
@@ -53430,26 +51198,15 @@ function shortOut(func) {
     } else {
       count = 0;
     }
-
     return func.apply(undefined, arguments);
   };
 }
 
-var _default = shortOut;
-exports.default = _default;
-},{}],"../node_modules/lodash-es/_setToString.js":[function(require,module,exports) {
-"use strict";
+module.exports = shortOut;
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var _baseSetToString = _interopRequireDefault(require("./_baseSetToString.js"));
-
-var _shortOut = _interopRequireDefault(require("./_shortOut.js"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+},{}],"../node_modules/lodash/_setToString.js":[function(require,module,exports) {
+var baseSetToString = require('./_baseSetToString'),
+    shortOut = require('./_shortOut');
 
 /**
  * Sets the `toString` method of `func` to return `string`.
@@ -53459,24 +51216,14 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
  * @param {Function} string The `toString` result.
  * @returns {Function} Returns `func`.
  */
-var setToString = (0, _shortOut.default)(_baseSetToString.default);
-var _default = setToString;
-exports.default = _default;
-},{"./_baseSetToString.js":"../node_modules/lodash-es/_baseSetToString.js","./_shortOut.js":"../node_modules/lodash-es/_shortOut.js"}],"../node_modules/lodash-es/_baseRest.js":[function(require,module,exports) {
-"use strict";
+var setToString = shortOut(baseSetToString);
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
+module.exports = setToString;
 
-var _identity = _interopRequireDefault(require("./identity.js"));
-
-var _overRest = _interopRequireDefault(require("./_overRest.js"));
-
-var _setToString = _interopRequireDefault(require("./_setToString.js"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+},{"./_baseSetToString":"../node_modules/lodash/_baseSetToString.js","./_shortOut":"../node_modules/lodash/_shortOut.js"}],"../node_modules/lodash/_baseRest.js":[function(require,module,exports) {
+var identity = require('./identity'),
+    overRest = require('./_overRest'),
+    setToString = require('./_setToString');
 
 /**
  * The base implementation of `_.rest` which doesn't validate or coerce arguments.
@@ -53487,28 +51234,16 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
  * @returns {Function} Returns the new function.
  */
 function baseRest(func, start) {
-  return (0, _setToString.default)((0, _overRest.default)(func, start, _identity.default), func + '');
+  return setToString(overRest(func, start, identity), func + '');
 }
 
-var _default = baseRest;
-exports.default = _default;
-},{"./identity.js":"../node_modules/lodash-es/identity.js","./_overRest.js":"../node_modules/lodash-es/_overRest.js","./_setToString.js":"../node_modules/lodash-es/_setToString.js"}],"../node_modules/lodash-es/_isIterateeCall.js":[function(require,module,exports) {
-"use strict";
+module.exports = baseRest;
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var _eq = _interopRequireDefault(require("./eq.js"));
-
-var _isArrayLike = _interopRequireDefault(require("./isArrayLike.js"));
-
-var _isIndex = _interopRequireDefault(require("./_isIndex.js"));
-
-var _isObject = _interopRequireDefault(require("./isObject.js"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+},{"./identity":"../node_modules/lodash/identity.js","./_overRest":"../node_modules/lodash/_overRest.js","./_setToString":"../node_modules/lodash/_setToString.js"}],"../node_modules/lodash/_isIterateeCall.js":[function(require,module,exports) {
+var eq = require('./eq'),
+    isArrayLike = require('./isArrayLike'),
+    isIndex = require('./_isIndex'),
+    isObject = require('./isObject');
 
 /**
  * Checks if the given arguments are from an iteratee call.
@@ -53521,34 +51256,24 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
  *  else `false`.
  */
 function isIterateeCall(value, index, object) {
-  if (!(0, _isObject.default)(object)) {
+  if (!isObject(object)) {
     return false;
   }
-
   var type = typeof index;
-
-  if (type == 'number' ? (0, _isArrayLike.default)(object) && (0, _isIndex.default)(index, object.length) : type == 'string' && index in object) {
-    return (0, _eq.default)(object[index], value);
+  if (type == 'number'
+        ? (isArrayLike(object) && isIndex(index, object.length))
+        : (type == 'string' && index in object)
+      ) {
+    return eq(object[index], value);
   }
-
   return false;
 }
 
-var _default = isIterateeCall;
-exports.default = _default;
-},{"./eq.js":"../node_modules/lodash-es/eq.js","./isArrayLike.js":"../node_modules/lodash-es/isArrayLike.js","./_isIndex.js":"../node_modules/lodash-es/_isIndex.js","./isObject.js":"../node_modules/lodash-es/isObject.js"}],"../node_modules/lodash-es/_createAssigner.js":[function(require,module,exports) {
-"use strict";
+module.exports = isIterateeCall;
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var _baseRest = _interopRequireDefault(require("./_baseRest.js"));
-
-var _isIterateeCall = _interopRequireDefault(require("./_isIterateeCall.js"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+},{"./eq":"../node_modules/lodash/eq.js","./isArrayLike":"../node_modules/lodash/isArrayLike.js","./_isIndex":"../node_modules/lodash/_isIndex.js","./isObject":"../node_modules/lodash/isObject.js"}],"../node_modules/lodash/_createAssigner.js":[function(require,module,exports) {
+var baseRest = require('./_baseRest'),
+    isIterateeCall = require('./_isIterateeCall');
 
 /**
  * Creates a function like `_.assign`.
@@ -53558,47 +51283,36 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
  * @returns {Function} Returns the new assigner function.
  */
 function createAssigner(assigner) {
-  return (0, _baseRest.default)(function (object, sources) {
+  return baseRest(function(object, sources) {
     var index = -1,
         length = sources.length,
         customizer = length > 1 ? sources[length - 1] : undefined,
         guard = length > 2 ? sources[2] : undefined;
-    customizer = assigner.length > 3 && typeof customizer == 'function' ? (length--, customizer) : undefined;
 
-    if (guard && (0, _isIterateeCall.default)(sources[0], sources[1], guard)) {
+    customizer = (assigner.length > 3 && typeof customizer == 'function')
+      ? (length--, customizer)
+      : undefined;
+
+    if (guard && isIterateeCall(sources[0], sources[1], guard)) {
       customizer = length < 3 ? undefined : customizer;
       length = 1;
     }
-
     object = Object(object);
-
     while (++index < length) {
       var source = sources[index];
-
       if (source) {
         assigner(object, source, index, customizer);
       }
     }
-
     return object;
   });
 }
 
-var _default = createAssigner;
-exports.default = _default;
-},{"./_baseRest.js":"../node_modules/lodash-es/_baseRest.js","./_isIterateeCall.js":"../node_modules/lodash-es/_isIterateeCall.js"}],"../node_modules/lodash-es/merge.js":[function(require,module,exports) {
-"use strict";
+module.exports = createAssigner;
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var _baseMerge = _interopRequireDefault(require("./_baseMerge.js"));
-
-var _createAssigner = _interopRequireDefault(require("./_createAssigner.js"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+},{"./_baseRest":"../node_modules/lodash/_baseRest.js","./_isIterateeCall":"../node_modules/lodash/_isIterateeCall.js"}],"../node_modules/lodash/merge.js":[function(require,module,exports) {
+var baseMerge = require('./_baseMerge'),
+    createAssigner = require('./_createAssigner');
 
 /**
  * This method is like `_.assign` except that it recursively merges own and
@@ -53631,37 +51345,47 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
  * _.merge(object, other);
  * // => { 'a': [{ 'b': 2, 'c': 3 }, { 'd': 4, 'e': 5 }] }
  */
-var merge = (0, _createAssigner.default)(function (object, source, srcIndex) {
-  (0, _baseMerge.default)(object, source, srcIndex);
+var merge = createAssigner(function(object, source, srcIndex) {
+  baseMerge(object, source, srcIndex);
 });
-var _default = merge;
-exports.default = _default;
-},{"./_baseMerge.js":"../node_modules/lodash-es/_baseMerge.js","./_createAssigner.js":"../node_modules/lodash-es/_createAssigner.js"}],"../node_modules/react-color/es/components/common/Raised.js":[function(require,module,exports) {
-"use strict";
+
+module.exports = merge;
+
+},{"./_baseMerge":"../node_modules/lodash/_baseMerge.js","./_createAssigner":"../node_modules/lodash/_createAssigner.js"}],"../node_modules/react-color/lib/components/common/Raised.js":[function(require,module,exports) {
+'use strict';
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.default = exports.Raised = void 0;
+exports.Raised = undefined;
 
-var _react = _interopRequireDefault(require("react"));
+var _react = require('react');
 
-var _propTypes = _interopRequireDefault(require("prop-types"));
+var _react2 = _interopRequireDefault(_react);
 
-var _reactcss = _interopRequireDefault(require("reactcss"));
+var _propTypes = require('prop-types');
 
-var _merge = _interopRequireDefault(require("lodash-es/merge"));
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+var _reactcss = require('reactcss');
+
+var _reactcss2 = _interopRequireDefault(_reactcss);
+
+var _merge = require('lodash/merge');
+
+var _merge2 = _interopRequireDefault(_merge);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var Raised = function Raised(_ref) {
+var Raised = exports.Raised = function Raised(_ref) {
   var zDepth = _ref.zDepth,
       radius = _ref.radius,
       background = _ref.background,
       children = _ref.children,
       _ref$styles = _ref.styles,
       passedStyles = _ref$styles === undefined ? {} : _ref$styles;
-  var styles = (0, _reactcss.default)((0, _merge.default)({
+
+  var styles = (0, _reactcss2.default)((0, _merge2.default)({
     'default': {
       wrap: {
         position: 'relative',
@@ -53682,6 +51406,7 @@ var Raised = function Raised(_ref) {
         boxShadow: 'none'
       }
     },
+
     'zDepth-1': {
       bg: {
         boxShadow: '0 2px 10px rgba(0,0,0,.12), 0 2px 5px rgba(0,0,0,.16)'
@@ -53717,44 +51442,37 @@ var Raised = function Raised(_ref) {
         borderRadius: '50%'
       }
     }
-  }, passedStyles), {
-    'zDepth-1': zDepth === 1
-  });
-  return _react.default.createElement('div', {
-    style: styles.wrap
-  }, _react.default.createElement('div', {
-    style: styles.bg
-  }), _react.default.createElement('div', {
-    style: styles.content
-  }, children));
+  }, passedStyles), { 'zDepth-1': zDepth === 1 });
+
+  return _react2.default.createElement(
+    'div',
+    { style: styles.wrap },
+    _react2.default.createElement('div', { style: styles.bg }),
+    _react2.default.createElement(
+      'div',
+      { style: styles.content },
+      children
+    )
+  );
 };
 
-exports.Raised = Raised;
 Raised.propTypes = {
-  background: _propTypes.default.string,
-  zDepth: _propTypes.default.oneOf([0, 1, 2, 3, 4, 5]),
-  radius: _propTypes.default.number,
-  styles: _propTypes.default.object
+  background: _propTypes2.default.string,
+  zDepth: _propTypes2.default.oneOf([0, 1, 2, 3, 4, 5]),
+  radius: _propTypes2.default.number,
+  styles: _propTypes2.default.object
 };
+
 Raised.defaultProps = {
   background: '#fff',
   zDepth: 1,
   radius: 2,
   styles: {}
 };
-var _default = Raised;
-exports.default = _default;
-},{"react":"../node_modules/react/index.js","prop-types":"../node_modules/prop-types/index.js","reactcss":"../node_modules/reactcss/lib/index.js","lodash-es/merge":"../node_modules/lodash-es/merge.js"}],"../node_modules/lodash-es/now.js":[function(require,module,exports) {
-"use strict";
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var _root = _interopRequireDefault(require("./_root.js"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+exports.default = Raised;
+},{"react":"../node_modules/react/index.js","prop-types":"../node_modules/prop-types/index.js","reactcss":"../node_modules/reactcss/lib/index.js","lodash/merge":"../node_modules/lodash/merge.js"}],"../node_modules/lodash/now.js":[function(require,module,exports) {
+var root = require('./_root');
 
 /**
  * Gets the timestamp of the number of milliseconds that have elapsed since
@@ -53772,83 +51490,34 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
  * }, _.now());
  * // => Logs the number of milliseconds it took for the deferred invocation.
  */
-var now = function () {
-  return _root.default.Date.now();
+var now = function() {
+  return root.Date.now();
 };
 
-var _default = now;
-exports.default = _default;
-},{"./_root.js":"../node_modules/lodash-es/_root.js"}],"../node_modules/lodash-es/isSymbol.js":[function(require,module,exports) {
-"use strict";
+module.exports = now;
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var _baseGetTag = _interopRequireDefault(require("./_baseGetTag.js"));
-
-var _isObjectLike = _interopRequireDefault(require("./isObjectLike.js"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-/** `Object#toString` result references. */
-var symbolTag = '[object Symbol]';
-/**
- * Checks if `value` is classified as a `Symbol` primitive or object.
- *
- * @static
- * @memberOf _
- * @since 4.0.0
- * @category Lang
- * @param {*} value The value to check.
- * @returns {boolean} Returns `true` if `value` is a symbol, else `false`.
- * @example
- *
- * _.isSymbol(Symbol.iterator);
- * // => true
- *
- * _.isSymbol('abc');
- * // => false
- */
-
-function isSymbol(value) {
-  return typeof value == 'symbol' || (0, _isObjectLike.default)(value) && (0, _baseGetTag.default)(value) == symbolTag;
-}
-
-var _default = isSymbol;
-exports.default = _default;
-},{"./_baseGetTag.js":"../node_modules/lodash-es/_baseGetTag.js","./isObjectLike.js":"../node_modules/lodash-es/isObjectLike.js"}],"../node_modules/lodash-es/toNumber.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var _isObject = _interopRequireDefault(require("./isObject.js"));
-
-var _isSymbol = _interopRequireDefault(require("./isSymbol.js"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+},{"./_root":"../node_modules/lodash/_root.js"}],"../node_modules/lodash/toNumber.js":[function(require,module,exports) {
+var isObject = require('./isObject'),
+    isSymbol = require('./isSymbol');
 
 /** Used as references for various `Number` constants. */
 var NAN = 0 / 0;
+
 /** Used to match leading and trailing whitespace. */
-
 var reTrim = /^\s+|\s+$/g;
+
 /** Used to detect bad signed hexadecimal string values. */
-
 var reIsBadHex = /^[-+]0x[0-9a-f]+$/i;
+
 /** Used to detect binary string values. */
-
 var reIsBinary = /^0b[01]+$/i;
+
 /** Used to detect octal string values. */
-
 var reIsOctal = /^0o[0-7]+$/i;
-/** Built-in method references without a dependency on `root`. */
 
+/** Built-in method references without a dependency on `root`. */
 var freeParseInt = parseInt;
+
 /**
  * Converts `value` to a number.
  *
@@ -53872,54 +51541,41 @@ var freeParseInt = parseInt;
  * _.toNumber('3.2');
  * // => 3.2
  */
-
 function toNumber(value) {
   if (typeof value == 'number') {
     return value;
   }
-
-  if ((0, _isSymbol.default)(value)) {
+  if (isSymbol(value)) {
     return NAN;
   }
-
-  if ((0, _isObject.default)(value)) {
+  if (isObject(value)) {
     var other = typeof value.valueOf == 'function' ? value.valueOf() : value;
-    value = (0, _isObject.default)(other) ? other + '' : other;
+    value = isObject(other) ? (other + '') : other;
   }
-
   if (typeof value != 'string') {
     return value === 0 ? value : +value;
   }
-
   value = value.replace(reTrim, '');
   var isBinary = reIsBinary.test(value);
-  return isBinary || reIsOctal.test(value) ? freeParseInt(value.slice(2), isBinary ? 2 : 8) : reIsBadHex.test(value) ? NAN : +value;
+  return (isBinary || reIsOctal.test(value))
+    ? freeParseInt(value.slice(2), isBinary ? 2 : 8)
+    : (reIsBadHex.test(value) ? NAN : +value);
 }
 
-var _default = toNumber;
-exports.default = _default;
-},{"./isObject.js":"../node_modules/lodash-es/isObject.js","./isSymbol.js":"../node_modules/lodash-es/isSymbol.js"}],"../node_modules/lodash-es/debounce.js":[function(require,module,exports) {
-"use strict";
+module.exports = toNumber;
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var _isObject = _interopRequireDefault(require("./isObject.js"));
-
-var _now = _interopRequireDefault(require("./now.js"));
-
-var _toNumber = _interopRequireDefault(require("./toNumber.js"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+},{"./isObject":"../node_modules/lodash/isObject.js","./isSymbol":"../node_modules/lodash/isSymbol.js"}],"../node_modules/lodash/debounce.js":[function(require,module,exports) {
+var isObject = require('./isObject'),
+    now = require('./now'),
+    toNumber = require('./toNumber');
 
 /** Error message constants. */
 var FUNC_ERROR_TEXT = 'Expected a function';
-/* Built-in method references for those with the same name as other `lodash` methods. */
 
+/* Built-in method references for those with the same name as other `lodash` methods. */
 var nativeMax = Math.max,
     nativeMin = Math.min;
+
 /**
  * Creates a debounced function that delays invoking `func` until after `wait`
  * milliseconds have elapsed since the last time the debounced function was
@@ -53974,7 +51630,6 @@ var nativeMax = Math.max,
  * // Cancel the trailing debounced invocation.
  * jQuery(window).on('popstate', debounced.cancel);
  */
-
 function debounce(func, wait, options) {
   var lastArgs,
       lastThis,
@@ -53990,19 +51645,18 @@ function debounce(func, wait, options) {
   if (typeof func != 'function') {
     throw new TypeError(FUNC_ERROR_TEXT);
   }
-
-  wait = (0, _toNumber.default)(wait) || 0;
-
-  if ((0, _isObject.default)(options)) {
+  wait = toNumber(wait) || 0;
+  if (isObject(options)) {
     leading = !!options.leading;
     maxing = 'maxWait' in options;
-    maxWait = maxing ? nativeMax((0, _toNumber.default)(options.maxWait) || 0, wait) : maxWait;
+    maxWait = maxing ? nativeMax(toNumber(options.maxWait) || 0, wait) : maxWait;
     trailing = 'trailing' in options ? !!options.trailing : trailing;
   }
 
   function invokeFunc(time) {
     var args = lastArgs,
         thisArg = lastThis;
+
     lastArgs = lastThis = undefined;
     lastInvokeTime = time;
     result = func.apply(thisArg, args);
@@ -54011,10 +51665,10 @@ function debounce(func, wait, options) {
 
   function leadingEdge(time) {
     // Reset any `maxWait` timer.
-    lastInvokeTime = time; // Start the timer for the trailing edge.
-
-    timerId = setTimeout(timerExpired, wait); // Invoke the leading edge.
-
+    lastInvokeTime = time;
+    // Start the timer for the trailing edge.
+    timerId = setTimeout(timerExpired, wait);
+    // Invoke the leading edge.
     return leading ? invokeFunc(time) : result;
   }
 
@@ -54022,37 +51676,40 @@ function debounce(func, wait, options) {
     var timeSinceLastCall = time - lastCallTime,
         timeSinceLastInvoke = time - lastInvokeTime,
         timeWaiting = wait - timeSinceLastCall;
-    return maxing ? nativeMin(timeWaiting, maxWait - timeSinceLastInvoke) : timeWaiting;
+
+    return maxing
+      ? nativeMin(timeWaiting, maxWait - timeSinceLastInvoke)
+      : timeWaiting;
   }
 
   function shouldInvoke(time) {
     var timeSinceLastCall = time - lastCallTime,
-        timeSinceLastInvoke = time - lastInvokeTime; // Either this is the first call, activity has stopped and we're at the
+        timeSinceLastInvoke = time - lastInvokeTime;
+
+    // Either this is the first call, activity has stopped and we're at the
     // trailing edge, the system time has gone backwards and we're treating
     // it as the trailing edge, or we've hit the `maxWait` limit.
-
-    return lastCallTime === undefined || timeSinceLastCall >= wait || timeSinceLastCall < 0 || maxing && timeSinceLastInvoke >= maxWait;
+    return (lastCallTime === undefined || (timeSinceLastCall >= wait) ||
+      (timeSinceLastCall < 0) || (maxing && timeSinceLastInvoke >= maxWait));
   }
 
   function timerExpired() {
-    var time = (0, _now.default)();
-
+    var time = now();
     if (shouldInvoke(time)) {
       return trailingEdge(time);
-    } // Restart the timer.
-
-
+    }
+    // Restart the timer.
     timerId = setTimeout(timerExpired, remainingWait(time));
   }
 
   function trailingEdge(time) {
-    timerId = undefined; // Only invoke if we have `lastArgs` which means `func` has been
-    // debounced at least once.
+    timerId = undefined;
 
+    // Only invoke if we have `lastArgs` which means `func` has been
+    // debounced at least once.
     if (trailing && lastArgs) {
       return invokeFunc(time);
     }
-
     lastArgs = lastThis = undefined;
     return result;
   }
@@ -54061,18 +51718,18 @@ function debounce(func, wait, options) {
     if (timerId !== undefined) {
       clearTimeout(timerId);
     }
-
     lastInvokeTime = 0;
     lastArgs = lastCallTime = lastThis = timerId = undefined;
   }
 
   function flush() {
-    return timerId === undefined ? result : trailingEdge((0, _now.default)());
+    return timerId === undefined ? result : trailingEdge(now());
   }
 
   function debounced() {
-    var time = (0, _now.default)(),
+    var time = now(),
         isInvoking = shouldInvoke(time);
+
     lastArgs = arguments;
     lastThis = this;
     lastCallTime = time;
@@ -54081,7 +51738,6 @@ function debounce(func, wait, options) {
       if (timerId === undefined) {
         return leadingEdge(lastCallTime);
       }
-
       if (maxing) {
         // Handle invocations in a tight loop.
         clearTimeout(timerId);
@@ -54089,37 +51745,25 @@ function debounce(func, wait, options) {
         return invokeFunc(lastCallTime);
       }
     }
-
     if (timerId === undefined) {
       timerId = setTimeout(timerExpired, wait);
     }
-
     return result;
   }
-
   debounced.cancel = cancel;
   debounced.flush = flush;
   return debounced;
 }
 
-var _default = debounce;
-exports.default = _default;
-},{"./isObject.js":"../node_modules/lodash-es/isObject.js","./now.js":"../node_modules/lodash-es/now.js","./toNumber.js":"../node_modules/lodash-es/toNumber.js"}],"../node_modules/lodash-es/throttle.js":[function(require,module,exports) {
-"use strict";
+module.exports = debounce;
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var _debounce = _interopRequireDefault(require("./debounce.js"));
-
-var _isObject = _interopRequireDefault(require("./isObject.js"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+},{"./isObject":"../node_modules/lodash/isObject.js","./now":"../node_modules/lodash/now.js","./toNumber":"../node_modules/lodash/toNumber.js"}],"../node_modules/lodash/throttle.js":[function(require,module,exports) {
+var debounce = require('./debounce'),
+    isObject = require('./isObject');
 
 /** Error message constants. */
 var FUNC_ERROR_TEXT = 'Expected a function';
+
 /**
  * Creates a throttled function that only invokes `func` at most once per
  * every `wait` milliseconds. The throttled function comes with a `cancel`
@@ -54164,7 +51808,6 @@ var FUNC_ERROR_TEXT = 'Expected a function';
  * // Cancel the trailing throttled invocation.
  * jQuery(window).on('popstate', throttled.cancel);
  */
-
 function throttle(func, wait, options) {
   var leading = true,
       trailing = true;
@@ -54172,30 +51815,26 @@ function throttle(func, wait, options) {
   if (typeof func != 'function') {
     throw new TypeError(FUNC_ERROR_TEXT);
   }
-
-  if ((0, _isObject.default)(options)) {
+  if (isObject(options)) {
     leading = 'leading' in options ? !!options.leading : leading;
     trailing = 'trailing' in options ? !!options.trailing : trailing;
   }
-
-  return (0, _debounce.default)(func, wait, {
+  return debounce(func, wait, {
     'leading': leading,
     'maxWait': wait,
     'trailing': trailing
   });
 }
 
-var _default = throttle;
-exports.default = _default;
-},{"./debounce.js":"../node_modules/lodash-es/debounce.js","./isObject.js":"../node_modules/lodash-es/isObject.js"}],"../node_modules/react-color/es/helpers/saturation.js":[function(require,module,exports) {
-"use strict";
+module.exports = throttle;
+
+},{"./debounce":"../node_modules/lodash/debounce.js","./isObject":"../node_modules/lodash/isObject.js"}],"../node_modules/react-color/lib/helpers/saturation.js":[function(require,module,exports) {
+'use strict';
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.calculateChange = void 0;
-
-var calculateChange = function calculateChange(e, hsl, container) {
+var calculateChange = exports.calculateChange = function calculateChange(e, hsl, container) {
   var _container$getBoundin = container.getBoundingClientRect(),
       containerWidth = _container$getBoundin.width,
       containerHeight = _container$getBoundin.height;
@@ -54219,6 +51858,7 @@ var calculateChange = function calculateChange(e, hsl, container) {
 
   var saturation = left / containerWidth;
   var bright = 1 - top / containerHeight;
+
   return {
     h: hsl.h,
     s: saturation,
@@ -54227,79 +51867,43 @@ var calculateChange = function calculateChange(e, hsl, container) {
     source: 'hsv'
   };
 };
-
-exports.calculateChange = calculateChange;
-},{}],"../node_modules/react-color/es/components/common/Saturation.js":[function(require,module,exports) {
-"use strict";
+},{}],"../node_modules/react-color/lib/components/common/Saturation.js":[function(require,module,exports) {
+'use strict';
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.default = exports.Saturation = void 0;
+exports.Saturation = undefined;
 
-var _react = _interopRequireWildcard(require("react"));
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _reactcss = _interopRequireDefault(require("reactcss"));
+var _react = require('react');
 
-var _throttle = _interopRequireDefault(require("lodash-es/throttle"));
+var _react2 = _interopRequireDefault(_react);
 
-var saturation = _interopRequireWildcard(require("../../helpers/saturation"));
+var _reactcss = require('reactcss');
+
+var _reactcss2 = _interopRequireDefault(_reactcss);
+
+var _throttle = require('lodash/throttle');
+
+var _throttle2 = _interopRequireDefault(_throttle);
+
+var _saturation = require('../../helpers/saturation');
+
+var saturation = _interopRequireWildcard(_saturation);
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
-var _createClass = function () {
-  function defineProperties(target, props) {
-    for (var i = 0; i < props.length; i++) {
-      var descriptor = props[i];
-      descriptor.enumerable = descriptor.enumerable || false;
-      descriptor.configurable = true;
-      if ("value" in descriptor) descriptor.writable = true;
-      Object.defineProperty(target, descriptor.key, descriptor);
-    }
-  }
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-  return function (Constructor, protoProps, staticProps) {
-    if (protoProps) defineProperties(Constructor.prototype, protoProps);
-    if (staticProps) defineProperties(Constructor, staticProps);
-    return Constructor;
-  };
-}();
-
-function _classCallCheck(instance, Constructor) {
-  if (!(instance instanceof Constructor)) {
-    throw new TypeError("Cannot call a class as a function");
-  }
-}
-
-function _possibleConstructorReturn(self, call) {
-  if (!self) {
-    throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
-  }
-
-  return call && (typeof call === "object" || typeof call === "function") ? call : self;
-}
-
-function _inherits(subClass, superClass) {
-  if (typeof superClass !== "function" && superClass !== null) {
-    throw new TypeError("Super expression must either be null or a function, not " + typeof superClass);
-  }
-
-  subClass.prototype = Object.create(superClass && superClass.prototype, {
-    constructor: {
-      value: subClass,
-      enumerable: false,
-      writable: true,
-      configurable: true
-    }
-  });
-  if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass;
-}
-
-var Saturation = function (_ref) {
+var Saturation = exports.Saturation = function (_ref) {
   _inherits(Saturation, _ref);
 
   function Saturation(props) {
@@ -54313,18 +51917,15 @@ var Saturation = function (_ref) {
 
     _this.handleMouseDown = function (e) {
       _this.handleChange(e);
-
-      var renderWindow = _this.getContainerRenderWindow();
-
-      renderWindow.addEventListener('mousemove', _this.handleChange);
-      renderWindow.addEventListener('mouseup', _this.handleMouseUp);
+      window.addEventListener('mousemove', _this.handleChange);
+      window.addEventListener('mouseup', _this.handleMouseUp);
     };
 
     _this.handleMouseUp = function () {
       _this.unbindEventListeners();
     };
 
-    _this.throttle = (0, _throttle.default)(function (fn, data, e) {
+    _this.throttle = (0, _throttle2.default)(function (fn, data, e) {
       fn(data, e);
     }, 50);
     return _this;
@@ -54337,23 +51938,10 @@ var Saturation = function (_ref) {
       this.unbindEventListeners();
     }
   }, {
-    key: 'getContainerRenderWindow',
-    value: function getContainerRenderWindow() {
-      var container = this.container;
-      var renderWindow = window;
-
-      while (!renderWindow.document.contains(container) && renderWindow.parent !== renderWindow) {
-        renderWindow = renderWindow.parent;
-      }
-
-      return renderWindow;
-    }
-  }, {
     key: 'unbindEventListeners',
     value: function unbindEventListeners() {
-      var renderWindow = this.getContainerRenderWindow();
-      renderWindow.removeEventListener('mousemove', this.handleChange);
-      renderWindow.removeEventListener('mouseup', this.handleMouseUp);
+      window.removeEventListener('mousemove', this.handleChange);
+      window.removeEventListener('mouseup', this.handleMouseUp);
     }
   }, {
     key: 'render',
@@ -54367,7 +51955,7 @@ var Saturation = function (_ref) {
           pointer = _ref2.pointer,
           circle = _ref2.circle;
 
-      var styles = (0, _reactcss.default)({
+      var styles = (0, _reactcss2.default)({
         'default': {
           color: {
             absolute: '0px 0px 0px 0px',
@@ -54405,321 +51993,47 @@ var Saturation = function (_ref) {
           pointer: pointer,
           circle: circle
         }
-      }, {
-        'custom': !!this.props.style
-      });
-      return _react.default.createElement('div', {
-        style: styles.color,
-        ref: function ref(container) {
-          return _this2.container = container;
+      }, { 'custom': !!this.props.style });
+
+      return _react2.default.createElement(
+        'div',
+        {
+          style: styles.color,
+          ref: function ref(container) {
+            return _this2.container = container;
+          },
+          onMouseDown: this.handleMouseDown,
+          onTouchMove: this.handleChange,
+          onTouchStart: this.handleChange
         },
-        onMouseDown: this.handleMouseDown,
-        onTouchMove: this.handleChange,
-        onTouchStart: this.handleChange
-      }, _react.default.createElement('style', null, '\n          .saturation-white {\n            background: -webkit-linear-gradient(to right, #fff, rgba(255,255,255,0));\n            background: linear-gradient(to right, #fff, rgba(255,255,255,0));\n          }\n          .saturation-black {\n            background: -webkit-linear-gradient(to top, #000, rgba(0,0,0,0));\n            background: linear-gradient(to top, #000, rgba(0,0,0,0));\n          }\n        '), _react.default.createElement('div', {
-        style: styles.white,
-        className: 'saturation-white'
-      }, _react.default.createElement('div', {
-        style: styles.black,
-        className: 'saturation-black'
-      }), _react.default.createElement('div', {
-        style: styles.pointer
-      }, this.props.pointer ? _react.default.createElement(this.props.pointer, this.props) : _react.default.createElement('div', {
-        style: styles.circle
-      }))));
+        _react2.default.createElement(
+          'style',
+          null,
+          '\n          .saturation-white {\n            background: -webkit-linear-gradient(to right, #fff, rgba(255,255,255,0));\n            background: linear-gradient(to right, #fff, rgba(255,255,255,0));\n          }\n          .saturation-black {\n            background: -webkit-linear-gradient(to top, #000, rgba(0,0,0,0));\n            background: linear-gradient(to top, #000, rgba(0,0,0,0));\n          }\n        '
+        ),
+        _react2.default.createElement(
+          'div',
+          { style: styles.white, className: 'saturation-white' },
+          _react2.default.createElement('div', { style: styles.black, className: 'saturation-black' }),
+          _react2.default.createElement(
+            'div',
+            { style: styles.pointer },
+            this.props.pointer ? _react2.default.createElement(this.props.pointer, this.props) : _react2.default.createElement('div', { style: styles.circle })
+          )
+        )
+      );
     }
   }]);
 
   return Saturation;
 }(_react.PureComponent || _react.Component);
 
-exports.Saturation = Saturation;
-var _default = Saturation;
-exports.default = _default;
-},{"react":"../node_modules/react/index.js","reactcss":"../node_modules/reactcss/lib/index.js","lodash-es/throttle":"../node_modules/lodash-es/throttle.js","../../helpers/saturation":"../node_modules/react-color/es/helpers/saturation.js"}],"../node_modules/lodash-es/_arrayEach.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-/**
- * A specialized version of `_.forEach` for arrays without support for
- * iteratee shorthands.
- *
- * @private
- * @param {Array} [array] The array to iterate over.
- * @param {Function} iteratee The function invoked per iteration.
- * @returns {Array} Returns `array`.
- */
-function arrayEach(array, iteratee) {
-  var index = -1,
-      length = array == null ? 0 : array.length;
-
-  while (++index < length) {
-    if (iteratee(array[index], index, array) === false) {
-      break;
-    }
-  }
-
-  return array;
-}
-
-var _default = arrayEach;
-exports.default = _default;
-},{}],"../node_modules/lodash-es/_nativeKeys.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var _overArg = _interopRequireDefault(require("./_overArg.js"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-/* Built-in method references for those with the same name as other `lodash` methods. */
-var nativeKeys = (0, _overArg.default)(Object.keys, Object);
-var _default = nativeKeys;
-exports.default = _default;
-},{"./_overArg.js":"../node_modules/lodash-es/_overArg.js"}],"../node_modules/lodash-es/_baseKeys.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var _isPrototype = _interopRequireDefault(require("./_isPrototype.js"));
-
-var _nativeKeys = _interopRequireDefault(require("./_nativeKeys.js"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-/** Used for built-in method references. */
-var objectProto = Object.prototype;
-/** Used to check objects for own properties. */
-
-var hasOwnProperty = objectProto.hasOwnProperty;
-/**
- * The base implementation of `_.keys` which doesn't treat sparse arrays as dense.
- *
- * @private
- * @param {Object} object The object to query.
- * @returns {Array} Returns the array of property names.
- */
-
-function baseKeys(object) {
-  if (!(0, _isPrototype.default)(object)) {
-    return (0, _nativeKeys.default)(object);
-  }
-
-  var result = [];
-
-  for (var key in Object(object)) {
-    if (hasOwnProperty.call(object, key) && key != 'constructor') {
-      result.push(key);
-    }
-  }
-
-  return result;
-}
-
-var _default = baseKeys;
-exports.default = _default;
-},{"./_isPrototype.js":"../node_modules/lodash-es/_isPrototype.js","./_nativeKeys.js":"../node_modules/lodash-es/_nativeKeys.js"}],"../node_modules/lodash-es/keys.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var _arrayLikeKeys = _interopRequireDefault(require("./_arrayLikeKeys.js"));
-
-var _baseKeys = _interopRequireDefault(require("./_baseKeys.js"));
-
-var _isArrayLike = _interopRequireDefault(require("./isArrayLike.js"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-/**
- * Creates an array of the own enumerable property names of `object`.
- *
- * **Note:** Non-object values are coerced to objects. See the
- * [ES spec](http://ecma-international.org/ecma-262/7.0/#sec-object.keys)
- * for more details.
- *
- * @static
- * @since 0.1.0
- * @memberOf _
- * @category Object
- * @param {Object} object The object to query.
- * @returns {Array} Returns the array of property names.
- * @example
- *
- * function Foo() {
- *   this.a = 1;
- *   this.b = 2;
- * }
- *
- * Foo.prototype.c = 3;
- *
- * _.keys(new Foo);
- * // => ['a', 'b'] (iteration order is not guaranteed)
- *
- * _.keys('hi');
- * // => ['0', '1']
- */
-function keys(object) {
-  return (0, _isArrayLike.default)(object) ? (0, _arrayLikeKeys.default)(object) : (0, _baseKeys.default)(object);
-}
-
-var _default = keys;
-exports.default = _default;
-},{"./_arrayLikeKeys.js":"../node_modules/lodash-es/_arrayLikeKeys.js","./_baseKeys.js":"../node_modules/lodash-es/_baseKeys.js","./isArrayLike.js":"../node_modules/lodash-es/isArrayLike.js"}],"../node_modules/lodash-es/_baseForOwn.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var _baseFor = _interopRequireDefault(require("./_baseFor.js"));
-
-var _keys = _interopRequireDefault(require("./keys.js"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-/**
- * The base implementation of `_.forOwn` without support for iteratee shorthands.
- *
- * @private
- * @param {Object} object The object to iterate over.
- * @param {Function} iteratee The function invoked per iteration.
- * @returns {Object} Returns `object`.
- */
-function baseForOwn(object, iteratee) {
-  return object && (0, _baseFor.default)(object, iteratee, _keys.default);
-}
-
-var _default = baseForOwn;
-exports.default = _default;
-},{"./_baseFor.js":"../node_modules/lodash-es/_baseFor.js","./keys.js":"../node_modules/lodash-es/keys.js"}],"../node_modules/lodash-es/_createBaseEach.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var _isArrayLike = _interopRequireDefault(require("./isArrayLike.js"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-/**
- * Creates a `baseEach` or `baseEachRight` function.
- *
- * @private
- * @param {Function} eachFunc The function to iterate over a collection.
- * @param {boolean} [fromRight] Specify iterating from right to left.
- * @returns {Function} Returns the new base function.
- */
-function createBaseEach(eachFunc, fromRight) {
-  return function (collection, iteratee) {
-    if (collection == null) {
-      return collection;
-    }
-
-    if (!(0, _isArrayLike.default)(collection)) {
-      return eachFunc(collection, iteratee);
-    }
-
-    var length = collection.length,
-        index = fromRight ? length : -1,
-        iterable = Object(collection);
-
-    while (fromRight ? index-- : ++index < length) {
-      if (iteratee(iterable[index], index, iterable) === false) {
-        break;
-      }
-    }
-
-    return collection;
-  };
-}
-
-var _default = createBaseEach;
-exports.default = _default;
-},{"./isArrayLike.js":"../node_modules/lodash-es/isArrayLike.js"}],"../node_modules/lodash-es/_baseEach.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var _baseForOwn = _interopRequireDefault(require("./_baseForOwn.js"));
-
-var _createBaseEach = _interopRequireDefault(require("./_createBaseEach.js"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-/**
- * The base implementation of `_.forEach` without support for iteratee shorthands.
- *
- * @private
- * @param {Array|Object} collection The collection to iterate over.
- * @param {Function} iteratee The function invoked per iteration.
- * @returns {Array|Object} Returns `collection`.
- */
-var baseEach = (0, _createBaseEach.default)(_baseForOwn.default);
-var _default = baseEach;
-exports.default = _default;
-},{"./_baseForOwn.js":"../node_modules/lodash-es/_baseForOwn.js","./_createBaseEach.js":"../node_modules/lodash-es/_createBaseEach.js"}],"../node_modules/lodash-es/_castFunction.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var _identity = _interopRequireDefault(require("./identity.js"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-/**
- * Casts `value` to `identity` if it's not a function.
- *
- * @private
- * @param {*} value The value to inspect.
- * @returns {Function} Returns cast function.
- */
-function castFunction(value) {
-  return typeof value == 'function' ? value : _identity.default;
-}
-
-var _default = castFunction;
-exports.default = _default;
-},{"./identity.js":"../node_modules/lodash-es/identity.js"}],"../node_modules/lodash-es/forEach.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var _arrayEach = _interopRequireDefault(require("./_arrayEach.js"));
-
-var _baseEach = _interopRequireDefault(require("./_baseEach.js"));
-
-var _castFunction = _interopRequireDefault(require("./_castFunction.js"));
-
-var _isArray = _interopRequireDefault(require("./isArray.js"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+exports.default = Saturation;
+},{"react":"../node_modules/react/index.js","reactcss":"../node_modules/reactcss/lib/index.js","lodash/throttle":"../node_modules/lodash/throttle.js","../../helpers/saturation":"../node_modules/react-color/lib/helpers/saturation.js"}],"../node_modules/lodash/forEach.js":[function(require,module,exports) {
+var arrayEach = require('./_arrayEach'),
+    baseEach = require('./_baseEach'),
+    castFunction = require('./_castFunction'),
+    isArray = require('./isArray');
 
 /**
  * Iterates over elements of `collection` and invokes `iteratee` for each element.
@@ -54752,29 +52066,16 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
  * // => Logs 'a' then 'b' (iteration order is not guaranteed).
  */
 function forEach(collection, iteratee) {
-  var func = (0, _isArray.default)(collection) ? _arrayEach.default : _baseEach.default;
-  return func(collection, (0, _castFunction.default)(iteratee));
+  var func = isArray(collection) ? arrayEach : baseEach;
+  return func(collection, castFunction(iteratee));
 }
 
-var _default = forEach;
-exports.default = _default;
-},{"./_arrayEach.js":"../node_modules/lodash-es/_arrayEach.js","./_baseEach.js":"../node_modules/lodash-es/_baseEach.js","./_castFunction.js":"../node_modules/lodash-es/_castFunction.js","./isArray.js":"../node_modules/lodash-es/isArray.js"}],"../node_modules/lodash-es/each.js":[function(require,module,exports) {
-"use strict";
+module.exports = forEach;
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-Object.defineProperty(exports, "default", {
-  enumerable: true,
-  get: function () {
-    return _forEach.default;
-  }
-});
+},{"./_arrayEach":"../node_modules/lodash/_arrayEach.js","./_baseEach":"../node_modules/lodash/_baseEach.js","./_castFunction":"../node_modules/lodash/_castFunction.js","./isArray":"../node_modules/lodash/isArray.js"}],"../node_modules/lodash/each.js":[function(require,module,exports) {
+module.exports = require('./forEach');
 
-var _forEach = _interopRequireDefault(require("./forEach.js"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-},{"./forEach.js":"../node_modules/lodash-es/forEach.js"}],"../node_modules/tinycolor2/tinycolor.js":[function(require,module,exports) {
+},{"./forEach":"../node_modules/lodash/forEach.js"}],"../node_modules/tinycolor2/tinycolor.js":[function(require,module,exports) {
 var define;
 // TinyColor v1.4.2
 // https://github.com/bgrins/TinyColor
@@ -55972,35 +53273,36 @@ else {
 
 })(Math);
 
-},{}],"../node_modules/react-color/es/helpers/color.js":[function(require,module,exports) {
-"use strict";
+},{}],"../node_modules/react-color/lib/helpers/color.js":[function(require,module,exports) {
+'use strict';
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.isvalidColorString = exports.red = exports.getContrastingColor = exports.isValidHex = exports.toState = exports.simpleCheckForValidColor = void 0;
+exports.red = exports.getContrastingColor = exports.isValidHex = exports.toState = exports.simpleCheckForValidColor = undefined;
 
-var _each = _interopRequireDefault(require("lodash-es/each"));
+var _each = require('lodash/each');
 
-var _tinycolor = _interopRequireDefault(require("tinycolor2"));
+var _each2 = _interopRequireDefault(_each);
+
+var _tinycolor = require('tinycolor2');
+
+var _tinycolor2 = _interopRequireDefault(_tinycolor);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var simpleCheckForValidColor = function simpleCheckForValidColor(data) {
+var simpleCheckForValidColor = exports.simpleCheckForValidColor = function simpleCheckForValidColor(data) {
   var keysToCheck = ['r', 'g', 'b', 'a', 'h', 's', 'l', 'v'];
   var checked = 0;
   var passed = 0;
-  (0, _each.default)(keysToCheck, function (letter) {
+  (0, _each2.default)(keysToCheck, function (letter) {
     if (data[letter]) {
       checked += 1;
-
       if (!isNaN(data[letter])) {
         passed += 1;
       }
-
       if (letter === 's' || letter === 'l') {
         var percentPatt = /^\d+%$/;
-
         if (percentPatt.test(data[letter])) {
           passed += 1;
         }
@@ -56010,21 +53312,18 @@ var simpleCheckForValidColor = function simpleCheckForValidColor(data) {
   return checked === passed ? data : false;
 };
 
-exports.simpleCheckForValidColor = simpleCheckForValidColor;
-
-var toState = function toState(data, oldHue) {
-  var color = data.hex ? (0, _tinycolor.default)(data.hex) : (0, _tinycolor.default)(data);
+var toState = exports.toState = function toState(data, oldHue) {
+  var color = data.hex ? (0, _tinycolor2.default)(data.hex) : (0, _tinycolor2.default)(data);
   var hsl = color.toHsl();
   var hsv = color.toHsv();
   var rgb = color.toRgb();
   var hex = color.toHex();
-
   if (hsl.s === 0) {
     hsl.h = oldHue || 0;
     hsv.h = oldHue || 0;
   }
-
   var transparent = hex === '000000' && rgb.a === 0;
+
   return {
     hsl: hsl,
     hex: transparent ? 'transparent' : '#' + hex,
@@ -56035,148 +53334,65 @@ var toState = function toState(data, oldHue) {
   };
 };
 
-exports.toState = toState;
-
-var isValidHex = function isValidHex(hex) {
-  if (hex === 'transparent') {
-    return true;
-  } // disable hex4 and hex8
-
-
+var isValidHex = exports.isValidHex = function isValidHex(hex) {
+  // disable hex4 and hex8
   var lh = String(hex).charAt(0) === '#' ? 1 : 0;
-  return hex.length !== 4 + lh && hex.length < 7 + lh && (0, _tinycolor.default)(hex).isValid();
+  return hex.length !== 4 + lh && hex.length < 7 + lh && (0, _tinycolor2.default)(hex).isValid();
 };
 
-exports.isValidHex = isValidHex;
-
-var getContrastingColor = function getContrastingColor(data) {
+var getContrastingColor = exports.getContrastingColor = function getContrastingColor(data) {
   if (!data) {
     return '#fff';
   }
-
   var col = toState(data);
-
   if (col.hex === 'transparent') {
     return 'rgba(0,0,0,0.4)';
   }
-
   var yiq = (col.rgb.r * 299 + col.rgb.g * 587 + col.rgb.b * 114) / 1000;
   return yiq >= 128 ? '#000' : '#fff';
 };
 
-exports.getContrastingColor = getContrastingColor;
-var red = {
-  hsl: {
-    a: 1,
-    h: 0,
-    l: 0.5,
-    s: 1
-  },
+var red = exports.red = {
+  hsl: { a: 1, h: 0, l: 0.5, s: 1 },
   hex: '#ff0000',
-  rgb: {
-    r: 255,
-    g: 0,
-    b: 0,
-    a: 1
-  },
-  hsv: {
-    h: 0,
-    s: 1,
-    v: 1,
-    a: 1
-  }
-};
-exports.red = red;
-
-var isvalidColorString = function isvalidColorString(string, type) {
-  var stringWithoutDegree = string.replace('°', '');
-  return (0, _tinycolor.default)(type + ' (' + stringWithoutDegree + ')')._ok;
+  rgb: { r: 255, g: 0, b: 0, a: 1 },
+  hsv: { h: 0, s: 1, v: 1, a: 1 }
 };
 
-exports.isvalidColorString = isvalidColorString;
-},{"lodash-es/each":"../node_modules/lodash-es/each.js","tinycolor2":"../node_modules/tinycolor2/tinycolor.js"}],"../node_modules/react-color/es/components/common/ColorWrap.js":[function(require,module,exports) {
-"use strict";
+exports.default = exports;
+},{"lodash/each":"../node_modules/lodash/each.js","tinycolor2":"../node_modules/tinycolor2/tinycolor.js"}],"../node_modules/react-color/lib/components/common/ColorWrap.js":[function(require,module,exports) {
+'use strict';
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.default = exports.ColorWrap = void 0;
+exports.ColorWrap = undefined;
 
-var _react = _interopRequireWildcard(require("react"));
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
-var _debounce = _interopRequireDefault(require("lodash-es/debounce"));
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var color = _interopRequireWildcard(require("../../helpers/color"));
+var _react = require('react');
+
+var _react2 = _interopRequireDefault(_react);
+
+var _debounce = require('lodash/debounce');
+
+var _debounce2 = _interopRequireDefault(_debounce);
+
+var _color = require('../../helpers/color');
+
+var _color2 = _interopRequireDefault(_color);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
-var _extends = Object.assign || function (target) {
-  for (var i = 1; i < arguments.length; i++) {
-    var source = arguments[i];
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-    for (var key in source) {
-      if (Object.prototype.hasOwnProperty.call(source, key)) {
-        target[key] = source[key];
-      }
-    }
-  }
-
-  return target;
-};
-
-var _createClass = function () {
-  function defineProperties(target, props) {
-    for (var i = 0; i < props.length; i++) {
-      var descriptor = props[i];
-      descriptor.enumerable = descriptor.enumerable || false;
-      descriptor.configurable = true;
-      if ("value" in descriptor) descriptor.writable = true;
-      Object.defineProperty(target, descriptor.key, descriptor);
-    }
-  }
-
-  return function (Constructor, protoProps, staticProps) {
-    if (protoProps) defineProperties(Constructor.prototype, protoProps);
-    if (staticProps) defineProperties(Constructor, staticProps);
-    return Constructor;
-  };
-}();
-
-function _classCallCheck(instance, Constructor) {
-  if (!(instance instanceof Constructor)) {
-    throw new TypeError("Cannot call a class as a function");
-  }
-}
-
-function _possibleConstructorReturn(self, call) {
-  if (!self) {
-    throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
-  }
-
-  return call && (typeof call === "object" || typeof call === "function") ? call : self;
-}
-
-function _inherits(subClass, superClass) {
-  if (typeof superClass !== "function" && superClass !== null) {
-    throw new TypeError("Super expression must either be null or a function, not " + typeof superClass);
-  }
-
-  subClass.prototype = Object.create(superClass && superClass.prototype, {
-    constructor: {
-      value: subClass,
-      enumerable: false,
-      writable: true,
-      configurable: true
-    }
-  });
-  if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass;
-}
-
-var ColorWrap = function ColorWrap(Picker) {
+var ColorWrap = exports.ColorWrap = function ColorWrap(Picker) {
   var ColorPicker = function (_ref) {
     _inherits(ColorPicker, _ref);
 
@@ -56186,29 +53402,26 @@ var ColorWrap = function ColorWrap(Picker) {
       var _this = _possibleConstructorReturn(this, (ColorPicker.__proto__ || Object.getPrototypeOf(ColorPicker)).call(this));
 
       _this.handleChange = function (data, event) {
-        var isValidColor = color.simpleCheckForValidColor(data);
-
+        var isValidColor = _color2.default.simpleCheckForValidColor(data);
         if (isValidColor) {
-          var colors = color.toState(data, data.h || _this.state.oldHue);
-
+          var colors = _color2.default.toState(data, data.h || _this.state.oldHue);
           _this.setState(colors);
-
           _this.props.onChangeComplete && _this.debounce(_this.props.onChangeComplete, colors, event);
           _this.props.onChange && _this.props.onChange(colors, event);
         }
       };
 
       _this.handleSwatchHover = function (data, event) {
-        var isValidColor = color.simpleCheckForValidColor(data);
-
+        var isValidColor = _color2.default.simpleCheckForValidColor(data);
         if (isValidColor) {
-          var colors = color.toState(data, data.h || _this.state.oldHue);
+          var colors = _color2.default.toState(data, data.h || _this.state.oldHue);
           _this.props.onSwatchHover && _this.props.onSwatchHover(colors, event);
         }
       };
 
-      _this.state = _extends({}, color.toState(props.color, 0));
-      _this.debounce = (0, _debounce.default)(function (fn, data, event) {
+      _this.state = _extends({}, _color2.default.toState(props.color, 0));
+
+      _this.debounce = (0, _debounce2.default)(function (fn, data, event) {
         fn(data, event);
       }, 100);
       return _this;
@@ -56218,19 +53431,18 @@ var ColorWrap = function ColorWrap(Picker) {
       key: 'render',
       value: function render() {
         var optionalEvents = {};
-
         if (this.props.onSwatchHover) {
           optionalEvents.onSwatchHover = this.handleSwatchHover;
         }
 
-        return _react.default.createElement(Picker, _extends({}, this.props, this.state, {
+        return _react2.default.createElement(Picker, _extends({}, this.props, this.state, {
           onChange: this.handleChange
         }, optionalEvents));
       }
     }], [{
       key: 'getDerivedStateFromProps',
       value: function getDerivedStateFromProps(nextProps, state) {
-        return _extends({}, color.toState(nextProps.color, state.oldHue));
+        return _extends({}, _color2.default.toState(nextProps.color, state.oldHue));
       }
     }]);
 
@@ -56238,6 +53450,7 @@ var ColorWrap = function ColorWrap(Picker) {
   }(_react.PureComponent || _react.Component);
 
   ColorPicker.propTypes = _extends({}, Picker.propTypes);
+
   ColorPicker.defaultProps = _extends({}, Picker.defaultProps, {
     color: {
       h: 250,
@@ -56246,89 +53459,37 @@ var ColorWrap = function ColorWrap(Picker) {
       a: 1
     }
   });
+
   return ColorPicker;
 };
 
-exports.ColorWrap = ColorWrap;
-var _default = ColorWrap;
-exports.default = _default;
-},{"react":"../node_modules/react/index.js","lodash-es/debounce":"../node_modules/lodash-es/debounce.js","../../helpers/color":"../node_modules/react-color/es/helpers/color.js"}],"../node_modules/react-color/es/helpers/interaction.js":[function(require,module,exports) {
-"use strict";
+exports.default = ColorWrap;
+},{"react":"../node_modules/react/index.js","lodash/debounce":"../node_modules/lodash/debounce.js","../../helpers/color":"../node_modules/react-color/lib/helpers/color.js"}],"../node_modules/react-color/lib/helpers/interaction.js":[function(require,module,exports) {
+'use strict';
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.handleFocus = void 0;
+exports.handleFocus = undefined;
 
-var _react = _interopRequireDefault(require("react"));
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = require('react');
+
+var _react2 = _interopRequireDefault(_react);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var _extends = Object.assign || function (target) {
-  for (var i = 1; i < arguments.length; i++) {
-    var source = arguments[i];
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-    for (var key in source) {
-      if (Object.prototype.hasOwnProperty.call(source, key)) {
-        target[key] = source[key];
-      }
-    }
-  }
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
-  return target;
-};
-
-var _createClass = function () {
-  function defineProperties(target, props) {
-    for (var i = 0; i < props.length; i++) {
-      var descriptor = props[i];
-      descriptor.enumerable = descriptor.enumerable || false;
-      descriptor.configurable = true;
-      if ("value" in descriptor) descriptor.writable = true;
-      Object.defineProperty(target, descriptor.key, descriptor);
-    }
-  }
-
-  return function (Constructor, protoProps, staticProps) {
-    if (protoProps) defineProperties(Constructor.prototype, protoProps);
-    if (staticProps) defineProperties(Constructor, staticProps);
-    return Constructor;
-  };
-}();
-
-function _classCallCheck(instance, Constructor) {
-  if (!(instance instanceof Constructor)) {
-    throw new TypeError("Cannot call a class as a function");
-  }
-}
-
-function _possibleConstructorReturn(self, call) {
-  if (!self) {
-    throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
-  }
-
-  return call && (typeof call === "object" || typeof call === "function") ? call : self;
-}
-
-function _inherits(subClass, superClass) {
-  if (typeof superClass !== "function" && superClass !== null) {
-    throw new TypeError("Super expression must either be null or a function, not " + typeof superClass);
-  }
-
-  subClass.prototype = Object.create(superClass && superClass.prototype, {
-    constructor: {
-      value: subClass,
-      enumerable: false,
-      writable: true,
-      configurable: true
-    }
-  });
-  if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass;
-}
-/* eslint-disable no-invalid-this */
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } /* eslint-disable no-invalid-this */
 
 
-var handleFocus = function handleFocus(Component) {
+var handleFocus = exports.handleFocus = function handleFocus(Component) {
   var Span = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 'span';
   return function (_React$Component) {
     _inherits(Focus, _React$Component);
@@ -56344,69 +53505,56 @@ var handleFocus = function handleFocus(Component) {
         args[_key] = arguments[_key];
       }
 
-      return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = Focus.__proto__ || Object.getPrototypeOf(Focus)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
-        focus: false
-      }, _this.handleFocus = function () {
-        return _this.setState({
-          focus: true
-        });
+      return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = Focus.__proto__ || Object.getPrototypeOf(Focus)).call.apply(_ref, [this].concat(args))), _this), _this.state = { focus: false }, _this.handleFocus = function () {
+        return _this.setState({ focus: true });
       }, _this.handleBlur = function () {
-        return _this.setState({
-          focus: false
-        });
+        return _this.setState({ focus: false });
       }, _temp), _possibleConstructorReturn(_this, _ret);
     }
 
     _createClass(Focus, [{
       key: 'render',
       value: function render() {
-        return _react.default.createElement(Span, {
-          onFocus: this.handleFocus,
-          onBlur: this.handleBlur
-        }, _react.default.createElement(Component, _extends({}, this.props, this.state)));
+        return _react2.default.createElement(
+          Span,
+          { onFocus: this.handleFocus, onBlur: this.handleBlur },
+          _react2.default.createElement(Component, _extends({}, this.props, this.state))
+        );
       }
     }]);
 
     return Focus;
-  }(_react.default.Component);
+  }(_react2.default.Component);
 };
-
-exports.handleFocus = handleFocus;
-},{"react":"../node_modules/react/index.js"}],"../node_modules/react-color/es/components/common/Swatch.js":[function(require,module,exports) {
-"use strict";
+},{"react":"../node_modules/react/index.js"}],"../node_modules/react-color/lib/components/common/Swatch.js":[function(require,module,exports) {
+'use strict';
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.default = exports.Swatch = void 0;
+exports.Swatch = undefined;
 
-var _react = _interopRequireDefault(require("react"));
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
-var _reactcss = _interopRequireDefault(require("reactcss"));
+var _react = require('react');
 
-var _interaction = require("../../helpers/interaction");
+var _react2 = _interopRequireDefault(_react);
 
-var _Checkboard = _interopRequireDefault(require("./Checkboard"));
+var _reactcss = require('reactcss');
+
+var _reactcss2 = _interopRequireDefault(_reactcss);
+
+var _interaction = require('../../helpers/interaction');
+
+var _Checkboard = require('./Checkboard');
+
+var _Checkboard2 = _interopRequireDefault(_Checkboard);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var _extends = Object.assign || function (target) {
-  for (var i = 1; i < arguments.length; i++) {
-    var source = arguments[i];
-
-    for (var key in source) {
-      if (Object.prototype.hasOwnProperty.call(source, key)) {
-        target[key] = source[key];
-      }
-    }
-  }
-
-  return target;
-};
-
 var ENTER = 13;
 
-var Swatch = function Swatch(_ref) {
+var Swatch = exports.Swatch = function Swatch(_ref) {
   var color = _ref.color,
       style = _ref.style,
       _ref$onClick = _ref.onClick,
@@ -56418,8 +53566,9 @@ var Swatch = function Swatch(_ref) {
       focus = _ref.focus,
       _ref$focusStyle = _ref.focusStyle,
       focusStyle = _ref$focusStyle === undefined ? {} : _ref$focusStyle;
+
   var transparent = color === 'transparent';
-  var styles = (0, _reactcss.default)({
+  var styles = (0, _reactcss2.default)({
     default: {
       swatch: _extends({
         background: color,
@@ -56435,127 +53584,138 @@ var Swatch = function Swatch(_ref) {
   var handleClick = function handleClick(e) {
     return onClick(color, e);
   };
-
   var handleKeyDown = function handleKeyDown(e) {
     return e.keyCode === ENTER && onClick(color, e);
   };
-
   var handleHover = function handleHover(e) {
     return onHover(color, e);
   };
 
   var optionalEvents = {};
-
   if (onHover) {
     optionalEvents.onMouseOver = handleHover;
   }
 
-  return _react.default.createElement('div', _extends({
-    style: styles.swatch,
-    onClick: handleClick,
-    title: title,
-    tabIndex: 0,
-    onKeyDown: handleKeyDown
-  }, optionalEvents), children, transparent && _react.default.createElement(_Checkboard.default, {
-    borderRadius: styles.swatch.borderRadius,
-    boxShadow: 'inset 0 0 0 1px rgba(0,0,0,0.1)'
-  }));
+  return _react2.default.createElement(
+    'div',
+    _extends({
+      style: styles.swatch,
+      onClick: handleClick,
+      title: title,
+      tabIndex: 0,
+      onKeyDown: handleKeyDown
+    }, optionalEvents),
+    children,
+    transparent && _react2.default.createElement(_Checkboard2.default, {
+      borderRadius: styles.swatch.borderRadius,
+      boxShadow: 'inset 0 0 0 1px rgba(0,0,0,0.1)'
+    })
+  );
 };
 
-exports.Swatch = Swatch;
-
-var _default = (0, _interaction.handleFocus)(Swatch);
-
-exports.default = _default;
-},{"react":"../node_modules/react/index.js","reactcss":"../node_modules/reactcss/lib/index.js","../../helpers/interaction":"../node_modules/react-color/es/helpers/interaction.js","./Checkboard":"../node_modules/react-color/es/components/common/Checkboard.js"}],"../node_modules/react-color/es/components/common/index.js":[function(require,module,exports) {
-"use strict";
+exports.default = (0, _interaction.handleFocus)(Swatch);
+},{"react":"../node_modules/react/index.js","reactcss":"../node_modules/reactcss/lib/index.js","../../helpers/interaction":"../node_modules/react-color/lib/helpers/interaction.js","./Checkboard":"../node_modules/react-color/lib/components/common/Checkboard.js"}],"../node_modules/react-color/lib/components/common/index.js":[function(require,module,exports) {
+'use strict';
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-Object.defineProperty(exports, "Alpha", {
+
+var _Alpha = require('./Alpha');
+
+Object.defineProperty(exports, 'Alpha', {
   enumerable: true,
-  get: function () {
-    return _Alpha.default;
-  }
-});
-Object.defineProperty(exports, "Checkboard", {
-  enumerable: true,
-  get: function () {
-    return _Checkboard.default;
-  }
-});
-Object.defineProperty(exports, "EditableInput", {
-  enumerable: true,
-  get: function () {
-    return _EditableInput.default;
-  }
-});
-Object.defineProperty(exports, "Hue", {
-  enumerable: true,
-  get: function () {
-    return _Hue.default;
-  }
-});
-Object.defineProperty(exports, "Raised", {
-  enumerable: true,
-  get: function () {
-    return _Raised.default;
-  }
-});
-Object.defineProperty(exports, "Saturation", {
-  enumerable: true,
-  get: function () {
-    return _Saturation.default;
-  }
-});
-Object.defineProperty(exports, "ColorWrap", {
-  enumerable: true,
-  get: function () {
-    return _ColorWrap.default;
-  }
-});
-Object.defineProperty(exports, "Swatch", {
-  enumerable: true,
-  get: function () {
-    return _Swatch.default;
+  get: function get() {
+    return _interopRequireDefault(_Alpha).default;
   }
 });
 
-var _Alpha = _interopRequireDefault(require("./Alpha"));
+var _Checkboard = require('./Checkboard');
 
-var _Checkboard = _interopRequireDefault(require("./Checkboard"));
+Object.defineProperty(exports, 'Checkboard', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_Checkboard).default;
+  }
+});
 
-var _EditableInput = _interopRequireDefault(require("./EditableInput"));
+var _EditableInput = require('./EditableInput');
 
-var _Hue = _interopRequireDefault(require("./Hue"));
+Object.defineProperty(exports, 'EditableInput', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_EditableInput).default;
+  }
+});
 
-var _Raised = _interopRequireDefault(require("./Raised"));
+var _Hue = require('./Hue');
 
-var _Saturation = _interopRequireDefault(require("./Saturation"));
+Object.defineProperty(exports, 'Hue', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_Hue).default;
+  }
+});
 
-var _ColorWrap = _interopRequireDefault(require("./ColorWrap"));
+var _Raised = require('./Raised');
 
-var _Swatch = _interopRequireDefault(require("./Swatch"));
+Object.defineProperty(exports, 'Raised', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_Raised).default;
+  }
+});
+
+var _Saturation = require('./Saturation');
+
+Object.defineProperty(exports, 'Saturation', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_Saturation).default;
+  }
+});
+
+var _ColorWrap = require('./ColorWrap');
+
+Object.defineProperty(exports, 'ColorWrap', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_ColorWrap).default;
+  }
+});
+
+var _Swatch = require('./Swatch');
+
+Object.defineProperty(exports, 'Swatch', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_Swatch).default;
+  }
+});
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-},{"./Alpha":"../node_modules/react-color/es/components/common/Alpha.js","./Checkboard":"../node_modules/react-color/es/components/common/Checkboard.js","./EditableInput":"../node_modules/react-color/es/components/common/EditableInput.js","./Hue":"../node_modules/react-color/es/components/common/Hue.js","./Raised":"../node_modules/react-color/es/components/common/Raised.js","./Saturation":"../node_modules/react-color/es/components/common/Saturation.js","./ColorWrap":"../node_modules/react-color/es/components/common/ColorWrap.js","./Swatch":"../node_modules/react-color/es/components/common/Swatch.js"}],"../node_modules/react-color/es/components/alpha/AlphaPointer.js":[function(require,module,exports) {
-"use strict";
+},{"./Alpha":"../node_modules/react-color/lib/components/common/Alpha.js","./Checkboard":"../node_modules/react-color/lib/components/common/Checkboard.js","./EditableInput":"../node_modules/react-color/lib/components/common/EditableInput.js","./Hue":"../node_modules/react-color/lib/components/common/Hue.js","./Raised":"../node_modules/react-color/lib/components/common/Raised.js","./Saturation":"../node_modules/react-color/lib/components/common/Saturation.js","./ColorWrap":"../node_modules/react-color/lib/components/common/ColorWrap.js","./Swatch":"../node_modules/react-color/lib/components/common/Swatch.js"}],"../node_modules/react-color/lib/components/alpha/AlphaPointer.js":[function(require,module,exports) {
+'use strict';
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.default = exports.AlphaPointer = void 0;
+exports.AlphaPointer = undefined;
 
-var _react = _interopRequireDefault(require("react"));
+var _react = require('react');
 
-var _reactcss = _interopRequireDefault(require("reactcss"));
+var _react2 = _interopRequireDefault(_react);
+
+var _reactcss = require('reactcss');
+
+var _reactcss2 = _interopRequireDefault(_reactcss);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var AlphaPointer = function AlphaPointer(_ref) {
+var AlphaPointer = exports.AlphaPointer = function AlphaPointer(_ref) {
   var direction = _ref.direction;
-  var styles = (0, _reactcss.default)({
+
+  var styles = (0, _reactcss2.default)({
     'default': {
       picker: {
         width: '18px',
@@ -56571,50 +53731,39 @@ var AlphaPointer = function AlphaPointer(_ref) {
         transform: 'translate(-3px, -9px)'
       }
     }
-  }, {
-    vertical: direction === 'vertical'
-  });
-  return _react.default.createElement('div', {
-    style: styles.picker
-  });
+  }, { vertical: direction === 'vertical' });
+
+  return _react2.default.createElement('div', { style: styles.picker });
 };
 
-exports.AlphaPointer = AlphaPointer;
-var _default = AlphaPointer;
-exports.default = _default;
-},{"react":"../node_modules/react/index.js","reactcss":"../node_modules/reactcss/lib/index.js"}],"../node_modules/react-color/es/components/alpha/Alpha.js":[function(require,module,exports) {
-"use strict";
+exports.default = AlphaPointer;
+},{"react":"../node_modules/react/index.js","reactcss":"../node_modules/reactcss/lib/index.js"}],"../node_modules/react-color/lib/components/alpha/Alpha.js":[function(require,module,exports) {
+'use strict';
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.default = exports.AlphaPicker = void 0;
+exports.AlphaPicker = undefined;
 
-var _react = _interopRequireDefault(require("react"));
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
-var _reactcss = _interopRequireDefault(require("reactcss"));
+var _react = require('react');
 
-var _common = require("../common");
+var _react2 = _interopRequireDefault(_react);
 
-var _AlphaPointer = _interopRequireDefault(require("./AlphaPointer"));
+var _reactcss = require('reactcss');
+
+var _reactcss2 = _interopRequireDefault(_reactcss);
+
+var _common = require('../common');
+
+var _AlphaPointer = require('./AlphaPointer');
+
+var _AlphaPointer2 = _interopRequireDefault(_AlphaPointer);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var _extends = Object.assign || function (target) {
-  for (var i = 1; i < arguments.length; i++) {
-    var source = arguments[i];
-
-    for (var key in source) {
-      if (Object.prototype.hasOwnProperty.call(source, key)) {
-        target[key] = source[key];
-      }
-    }
-  }
-
-  return target;
-};
-
-var AlphaPicker = function AlphaPicker(_ref) {
+var AlphaPicker = exports.AlphaPicker = function AlphaPicker(_ref) {
   var rgb = _ref.rgb,
       hsl = _ref.hsl,
       width = _ref.width,
@@ -56626,7 +53775,8 @@ var AlphaPicker = function AlphaPicker(_ref) {
       pointer = _ref.pointer,
       _ref$className = _ref.className,
       className = _ref$className === undefined ? '' : _ref$className;
-  var styles = (0, _reactcss.default)({
+
+  var styles = (0, _reactcss2.default)({
     'default': {
       picker: {
         position: 'relative',
@@ -56639,2172 +53789,59 @@ var AlphaPicker = function AlphaPicker(_ref) {
       }
     }
   });
-  return _react.default.createElement('div', {
-    style: styles.picker,
-    className: 'alpha-picker ' + className
-  }, _react.default.createElement(_common.Alpha, _extends({}, styles.alpha, {
-    rgb: rgb,
-    hsl: hsl,
-    pointer: pointer,
-    renderers: renderers,
-    onChange: onChange,
-    direction: direction
-  })));
+
+  return _react2.default.createElement(
+    'div',
+    { style: styles.picker, className: 'alpha-picker ' + className },
+    _react2.default.createElement(_common.Alpha, _extends({}, styles.alpha, {
+      rgb: rgb,
+      hsl: hsl,
+      pointer: pointer,
+      renderers: renderers,
+      onChange: onChange,
+      direction: direction
+    }))
+  );
 };
 
-exports.AlphaPicker = AlphaPicker;
 AlphaPicker.defaultProps = {
   width: '316px',
   height: '16px',
   direction: 'horizontal',
-  pointer: _AlphaPointer.default
+  pointer: _AlphaPointer2.default
 };
 
-var _default = (0, _common.ColorWrap)(AlphaPicker);
-
-exports.default = _default;
-},{"react":"../node_modules/react/index.js","reactcss":"../node_modules/reactcss/lib/index.js","../common":"../node_modules/react-color/es/components/common/index.js","./AlphaPointer":"../node_modules/react-color/es/components/alpha/AlphaPointer.js"}],"../node_modules/lodash-es/_arrayMap.js":[function(require,module,exports) {
-"use strict";
+exports.default = (0, _common.ColorWrap)(AlphaPicker);
+},{"react":"../node_modules/react/index.js","reactcss":"../node_modules/reactcss/lib/index.js","../common":"../node_modules/react-color/lib/components/common/index.js","./AlphaPointer":"../node_modules/react-color/lib/components/alpha/AlphaPointer.js"}],"../node_modules/react-color/lib/components/block/BlockSwatches.js":[function(require,module,exports) {
+'use strict';
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.default = void 0;
+exports.BlockSwatches = undefined;
 
-/**
- * A specialized version of `_.map` for arrays without support for iteratee
- * shorthands.
- *
- * @private
- * @param {Array} [array] The array to iterate over.
- * @param {Function} iteratee The function invoked per iteration.
- * @returns {Array} Returns the new mapped array.
- */
-function arrayMap(array, iteratee) {
-  var index = -1,
-      length = array == null ? 0 : array.length,
-      result = Array(length);
+var _react = require('react');
 
-  while (++index < length) {
-    result[index] = iteratee(array[index], index, array);
-  }
+var _react2 = _interopRequireDefault(_react);
 
-  return result;
-}
+var _reactcss = require('reactcss');
 
-var _default = arrayMap;
-exports.default = _default;
-},{}],"../node_modules/lodash-es/_setCacheAdd.js":[function(require,module,exports) {
-"use strict";
+var _reactcss2 = _interopRequireDefault(_reactcss);
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
+var _map = require('lodash/map');
 
-/** Used to stand-in for `undefined` hash values. */
-var HASH_UNDEFINED = '__lodash_hash_undefined__';
-/**
- * Adds `value` to the array cache.
- *
- * @private
- * @name add
- * @memberOf SetCache
- * @alias push
- * @param {*} value The value to cache.
- * @returns {Object} Returns the cache instance.
- */
+var _map2 = _interopRequireDefault(_map);
 
-function setCacheAdd(value) {
-  this.__data__.set(value, HASH_UNDEFINED);
-
-  return this;
-}
-
-var _default = setCacheAdd;
-exports.default = _default;
-},{}],"../node_modules/lodash-es/_setCacheHas.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-/**
- * Checks if `value` is in the array cache.
- *
- * @private
- * @name has
- * @memberOf SetCache
- * @param {*} value The value to search for.
- * @returns {number} Returns `true` if `value` is found, else `false`.
- */
-function setCacheHas(value) {
-  return this.__data__.has(value);
-}
-
-var _default = setCacheHas;
-exports.default = _default;
-},{}],"../node_modules/lodash-es/_SetCache.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var _MapCache = _interopRequireDefault(require("./_MapCache.js"));
-
-var _setCacheAdd = _interopRequireDefault(require("./_setCacheAdd.js"));
-
-var _setCacheHas = _interopRequireDefault(require("./_setCacheHas.js"));
+var _common = require('../common');
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-/**
- *
- * Creates an array cache object to store unique values.
- *
- * @private
- * @constructor
- * @param {Array} [values] The values to cache.
- */
-function SetCache(values) {
-  var index = -1,
-      length = values == null ? 0 : values.length;
-  this.__data__ = new _MapCache.default();
-
-  while (++index < length) {
-    this.add(values[index]);
-  }
-} // Add methods to `SetCache`.
-
-
-SetCache.prototype.add = SetCache.prototype.push = _setCacheAdd.default;
-SetCache.prototype.has = _setCacheHas.default;
-var _default = SetCache;
-exports.default = _default;
-},{"./_MapCache.js":"../node_modules/lodash-es/_MapCache.js","./_setCacheAdd.js":"../node_modules/lodash-es/_setCacheAdd.js","./_setCacheHas.js":"../node_modules/lodash-es/_setCacheHas.js"}],"../node_modules/lodash-es/_arraySome.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-/**
- * A specialized version of `_.some` for arrays without support for iteratee
- * shorthands.
- *
- * @private
- * @param {Array} [array] The array to iterate over.
- * @param {Function} predicate The function invoked per iteration.
- * @returns {boolean} Returns `true` if any element passes the predicate check,
- *  else `false`.
- */
-function arraySome(array, predicate) {
-  var index = -1,
-      length = array == null ? 0 : array.length;
-
-  while (++index < length) {
-    if (predicate(array[index], index, array)) {
-      return true;
-    }
-  }
-
-  return false;
-}
-
-var _default = arraySome;
-exports.default = _default;
-},{}],"../node_modules/lodash-es/_cacheHas.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-/**
- * Checks if a `cache` value for `key` exists.
- *
- * @private
- * @param {Object} cache The cache to query.
- * @param {string} key The key of the entry to check.
- * @returns {boolean} Returns `true` if an entry for `key` exists, else `false`.
- */
-function cacheHas(cache, key) {
-  return cache.has(key);
-}
-
-var _default = cacheHas;
-exports.default = _default;
-},{}],"../node_modules/lodash-es/_equalArrays.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var _SetCache = _interopRequireDefault(require("./_SetCache.js"));
-
-var _arraySome = _interopRequireDefault(require("./_arraySome.js"));
-
-var _cacheHas = _interopRequireDefault(require("./_cacheHas.js"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-/** Used to compose bitmasks for value comparisons. */
-var COMPARE_PARTIAL_FLAG = 1,
-    COMPARE_UNORDERED_FLAG = 2;
-/**
- * A specialized version of `baseIsEqualDeep` for arrays with support for
- * partial deep comparisons.
- *
- * @private
- * @param {Array} array The array to compare.
- * @param {Array} other The other array to compare.
- * @param {number} bitmask The bitmask flags. See `baseIsEqual` for more details.
- * @param {Function} customizer The function to customize comparisons.
- * @param {Function} equalFunc The function to determine equivalents of values.
- * @param {Object} stack Tracks traversed `array` and `other` objects.
- * @returns {boolean} Returns `true` if the arrays are equivalent, else `false`.
- */
-
-function equalArrays(array, other, bitmask, customizer, equalFunc, stack) {
-  var isPartial = bitmask & COMPARE_PARTIAL_FLAG,
-      arrLength = array.length,
-      othLength = other.length;
-
-  if (arrLength != othLength && !(isPartial && othLength > arrLength)) {
-    return false;
-  } // Assume cyclic values are equal.
-
-
-  var stacked = stack.get(array);
-
-  if (stacked && stack.get(other)) {
-    return stacked == other;
-  }
-
-  var index = -1,
-      result = true,
-      seen = bitmask & COMPARE_UNORDERED_FLAG ? new _SetCache.default() : undefined;
-  stack.set(array, other);
-  stack.set(other, array); // Ignore non-index properties.
-
-  while (++index < arrLength) {
-    var arrValue = array[index],
-        othValue = other[index];
-
-    if (customizer) {
-      var compared = isPartial ? customizer(othValue, arrValue, index, other, array, stack) : customizer(arrValue, othValue, index, array, other, stack);
-    }
-
-    if (compared !== undefined) {
-      if (compared) {
-        continue;
-      }
-
-      result = false;
-      break;
-    } // Recursively compare arrays (susceptible to call stack limits).
-
-
-    if (seen) {
-      if (!(0, _arraySome.default)(other, function (othValue, othIndex) {
-        if (!(0, _cacheHas.default)(seen, othIndex) && (arrValue === othValue || equalFunc(arrValue, othValue, bitmask, customizer, stack))) {
-          return seen.push(othIndex);
-        }
-      })) {
-        result = false;
-        break;
-      }
-    } else if (!(arrValue === othValue || equalFunc(arrValue, othValue, bitmask, customizer, stack))) {
-      result = false;
-      break;
-    }
-  }
-
-  stack['delete'](array);
-  stack['delete'](other);
-  return result;
-}
-
-var _default = equalArrays;
-exports.default = _default;
-},{"./_SetCache.js":"../node_modules/lodash-es/_SetCache.js","./_arraySome.js":"../node_modules/lodash-es/_arraySome.js","./_cacheHas.js":"../node_modules/lodash-es/_cacheHas.js"}],"../node_modules/lodash-es/_mapToArray.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-/**
- * Converts `map` to its key-value pairs.
- *
- * @private
- * @param {Object} map The map to convert.
- * @returns {Array} Returns the key-value pairs.
- */
-function mapToArray(map) {
-  var index = -1,
-      result = Array(map.size);
-  map.forEach(function (value, key) {
-    result[++index] = [key, value];
-  });
-  return result;
-}
-
-var _default = mapToArray;
-exports.default = _default;
-},{}],"../node_modules/lodash-es/_setToArray.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-/**
- * Converts `set` to an array of its values.
- *
- * @private
- * @param {Object} set The set to convert.
- * @returns {Array} Returns the values.
- */
-function setToArray(set) {
-  var index = -1,
-      result = Array(set.size);
-  set.forEach(function (value) {
-    result[++index] = value;
-  });
-  return result;
-}
-
-var _default = setToArray;
-exports.default = _default;
-},{}],"../node_modules/lodash-es/_equalByTag.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var _Symbol = _interopRequireDefault(require("./_Symbol.js"));
-
-var _Uint8Array = _interopRequireDefault(require("./_Uint8Array.js"));
-
-var _eq = _interopRequireDefault(require("./eq.js"));
-
-var _equalArrays = _interopRequireDefault(require("./_equalArrays.js"));
-
-var _mapToArray = _interopRequireDefault(require("./_mapToArray.js"));
-
-var _setToArray = _interopRequireDefault(require("./_setToArray.js"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-/** Used to compose bitmasks for value comparisons. */
-var COMPARE_PARTIAL_FLAG = 1,
-    COMPARE_UNORDERED_FLAG = 2;
-/** `Object#toString` result references. */
-
-var boolTag = '[object Boolean]',
-    dateTag = '[object Date]',
-    errorTag = '[object Error]',
-    mapTag = '[object Map]',
-    numberTag = '[object Number]',
-    regexpTag = '[object RegExp]',
-    setTag = '[object Set]',
-    stringTag = '[object String]',
-    symbolTag = '[object Symbol]';
-var arrayBufferTag = '[object ArrayBuffer]',
-    dataViewTag = '[object DataView]';
-/** Used to convert symbols to primitives and strings. */
-
-var symbolProto = _Symbol.default ? _Symbol.default.prototype : undefined,
-    symbolValueOf = symbolProto ? symbolProto.valueOf : undefined;
-/**
- * A specialized version of `baseIsEqualDeep` for comparing objects of
- * the same `toStringTag`.
- *
- * **Note:** This function only supports comparing values with tags of
- * `Boolean`, `Date`, `Error`, `Number`, `RegExp`, or `String`.
- *
- * @private
- * @param {Object} object The object to compare.
- * @param {Object} other The other object to compare.
- * @param {string} tag The `toStringTag` of the objects to compare.
- * @param {number} bitmask The bitmask flags. See `baseIsEqual` for more details.
- * @param {Function} customizer The function to customize comparisons.
- * @param {Function} equalFunc The function to determine equivalents of values.
- * @param {Object} stack Tracks traversed `object` and `other` objects.
- * @returns {boolean} Returns `true` if the objects are equivalent, else `false`.
- */
-
-function equalByTag(object, other, tag, bitmask, customizer, equalFunc, stack) {
-  switch (tag) {
-    case dataViewTag:
-      if (object.byteLength != other.byteLength || object.byteOffset != other.byteOffset) {
-        return false;
-      }
-
-      object = object.buffer;
-      other = other.buffer;
-
-    case arrayBufferTag:
-      if (object.byteLength != other.byteLength || !equalFunc(new _Uint8Array.default(object), new _Uint8Array.default(other))) {
-        return false;
-      }
-
-      return true;
-
-    case boolTag:
-    case dateTag:
-    case numberTag:
-      // Coerce booleans to `1` or `0` and dates to milliseconds.
-      // Invalid dates are coerced to `NaN`.
-      return (0, _eq.default)(+object, +other);
-
-    case errorTag:
-      return object.name == other.name && object.message == other.message;
-
-    case regexpTag:
-    case stringTag:
-      // Coerce regexes to strings and treat strings, primitives and objects,
-      // as equal. See http://www.ecma-international.org/ecma-262/7.0/#sec-regexp.prototype.tostring
-      // for more details.
-      return object == other + '';
-
-    case mapTag:
-      var convert = _mapToArray.default;
-
-    case setTag:
-      var isPartial = bitmask & COMPARE_PARTIAL_FLAG;
-      convert || (convert = _setToArray.default);
-
-      if (object.size != other.size && !isPartial) {
-        return false;
-      } // Assume cyclic values are equal.
-
-
-      var stacked = stack.get(object);
-
-      if (stacked) {
-        return stacked == other;
-      }
-
-      bitmask |= COMPARE_UNORDERED_FLAG; // Recursively compare objects (susceptible to call stack limits).
-
-      stack.set(object, other);
-      var result = (0, _equalArrays.default)(convert(object), convert(other), bitmask, customizer, equalFunc, stack);
-      stack['delete'](object);
-      return result;
-
-    case symbolTag:
-      if (symbolValueOf) {
-        return symbolValueOf.call(object) == symbolValueOf.call(other);
-      }
-
-  }
-
-  return false;
-}
-
-var _default = equalByTag;
-exports.default = _default;
-},{"./_Symbol.js":"../node_modules/lodash-es/_Symbol.js","./_Uint8Array.js":"../node_modules/lodash-es/_Uint8Array.js","./eq.js":"../node_modules/lodash-es/eq.js","./_equalArrays.js":"../node_modules/lodash-es/_equalArrays.js","./_mapToArray.js":"../node_modules/lodash-es/_mapToArray.js","./_setToArray.js":"../node_modules/lodash-es/_setToArray.js"}],"../node_modules/lodash-es/_arrayPush.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-/**
- * Appends the elements of `values` to `array`.
- *
- * @private
- * @param {Array} array The array to modify.
- * @param {Array} values The values to append.
- * @returns {Array} Returns `array`.
- */
-function arrayPush(array, values) {
-  var index = -1,
-      length = values.length,
-      offset = array.length;
-
-  while (++index < length) {
-    array[offset + index] = values[index];
-  }
-
-  return array;
-}
-
-var _default = arrayPush;
-exports.default = _default;
-},{}],"../node_modules/lodash-es/_baseGetAllKeys.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var _arrayPush = _interopRequireDefault(require("./_arrayPush.js"));
-
-var _isArray = _interopRequireDefault(require("./isArray.js"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-/**
- * The base implementation of `getAllKeys` and `getAllKeysIn` which uses
- * `keysFunc` and `symbolsFunc` to get the enumerable property names and
- * symbols of `object`.
- *
- * @private
- * @param {Object} object The object to query.
- * @param {Function} keysFunc The function to get the keys of `object`.
- * @param {Function} symbolsFunc The function to get the symbols of `object`.
- * @returns {Array} Returns the array of property names and symbols.
- */
-function baseGetAllKeys(object, keysFunc, symbolsFunc) {
-  var result = keysFunc(object);
-  return (0, _isArray.default)(object) ? result : (0, _arrayPush.default)(result, symbolsFunc(object));
-}
-
-var _default = baseGetAllKeys;
-exports.default = _default;
-},{"./_arrayPush.js":"../node_modules/lodash-es/_arrayPush.js","./isArray.js":"../node_modules/lodash-es/isArray.js"}],"../node_modules/lodash-es/_arrayFilter.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-/**
- * A specialized version of `_.filter` for arrays without support for
- * iteratee shorthands.
- *
- * @private
- * @param {Array} [array] The array to iterate over.
- * @param {Function} predicate The function invoked per iteration.
- * @returns {Array} Returns the new filtered array.
- */
-function arrayFilter(array, predicate) {
-  var index = -1,
-      length = array == null ? 0 : array.length,
-      resIndex = 0,
-      result = [];
-
-  while (++index < length) {
-    var value = array[index];
-
-    if (predicate(value, index, array)) {
-      result[resIndex++] = value;
-    }
-  }
-
-  return result;
-}
-
-var _default = arrayFilter;
-exports.default = _default;
-},{}],"../node_modules/lodash-es/stubArray.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-/**
- * This method returns a new empty array.
- *
- * @static
- * @memberOf _
- * @since 4.13.0
- * @category Util
- * @returns {Array} Returns the new empty array.
- * @example
- *
- * var arrays = _.times(2, _.stubArray);
- *
- * console.log(arrays);
- * // => [[], []]
- *
- * console.log(arrays[0] === arrays[1]);
- * // => false
- */
-function stubArray() {
-  return [];
-}
-
-var _default = stubArray;
-exports.default = _default;
-},{}],"../node_modules/lodash-es/_getSymbols.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var _arrayFilter = _interopRequireDefault(require("./_arrayFilter.js"));
-
-var _stubArray = _interopRequireDefault(require("./stubArray.js"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-/** Used for built-in method references. */
-var objectProto = Object.prototype;
-/** Built-in value references. */
-
-var propertyIsEnumerable = objectProto.propertyIsEnumerable;
-/* Built-in method references for those with the same name as other `lodash` methods. */
-
-var nativeGetSymbols = Object.getOwnPropertySymbols;
-/**
- * Creates an array of the own enumerable symbols of `object`.
- *
- * @private
- * @param {Object} object The object to query.
- * @returns {Array} Returns the array of symbols.
- */
-
-var getSymbols = !nativeGetSymbols ? _stubArray.default : function (object) {
-  if (object == null) {
-    return [];
-  }
-
-  object = Object(object);
-  return (0, _arrayFilter.default)(nativeGetSymbols(object), function (symbol) {
-    return propertyIsEnumerable.call(object, symbol);
-  });
-};
-var _default = getSymbols;
-exports.default = _default;
-},{"./_arrayFilter.js":"../node_modules/lodash-es/_arrayFilter.js","./stubArray.js":"../node_modules/lodash-es/stubArray.js"}],"../node_modules/lodash-es/_getAllKeys.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var _baseGetAllKeys = _interopRequireDefault(require("./_baseGetAllKeys.js"));
-
-var _getSymbols = _interopRequireDefault(require("./_getSymbols.js"));
-
-var _keys = _interopRequireDefault(require("./keys.js"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-/**
- * Creates an array of own enumerable property names and symbols of `object`.
- *
- * @private
- * @param {Object} object The object to query.
- * @returns {Array} Returns the array of property names and symbols.
- */
-function getAllKeys(object) {
-  return (0, _baseGetAllKeys.default)(object, _keys.default, _getSymbols.default);
-}
-
-var _default = getAllKeys;
-exports.default = _default;
-},{"./_baseGetAllKeys.js":"../node_modules/lodash-es/_baseGetAllKeys.js","./_getSymbols.js":"../node_modules/lodash-es/_getSymbols.js","./keys.js":"../node_modules/lodash-es/keys.js"}],"../node_modules/lodash-es/_equalObjects.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var _getAllKeys = _interopRequireDefault(require("./_getAllKeys.js"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-/** Used to compose bitmasks for value comparisons. */
-var COMPARE_PARTIAL_FLAG = 1;
-/** Used for built-in method references. */
-
-var objectProto = Object.prototype;
-/** Used to check objects for own properties. */
-
-var hasOwnProperty = objectProto.hasOwnProperty;
-/**
- * A specialized version of `baseIsEqualDeep` for objects with support for
- * partial deep comparisons.
- *
- * @private
- * @param {Object} object The object to compare.
- * @param {Object} other The other object to compare.
- * @param {number} bitmask The bitmask flags. See `baseIsEqual` for more details.
- * @param {Function} customizer The function to customize comparisons.
- * @param {Function} equalFunc The function to determine equivalents of values.
- * @param {Object} stack Tracks traversed `object` and `other` objects.
- * @returns {boolean} Returns `true` if the objects are equivalent, else `false`.
- */
-
-function equalObjects(object, other, bitmask, customizer, equalFunc, stack) {
-  var isPartial = bitmask & COMPARE_PARTIAL_FLAG,
-      objProps = (0, _getAllKeys.default)(object),
-      objLength = objProps.length,
-      othProps = (0, _getAllKeys.default)(other),
-      othLength = othProps.length;
-
-  if (objLength != othLength && !isPartial) {
-    return false;
-  }
-
-  var index = objLength;
-
-  while (index--) {
-    var key = objProps[index];
-
-    if (!(isPartial ? key in other : hasOwnProperty.call(other, key))) {
-      return false;
-    }
-  } // Assume cyclic values are equal.
-
-
-  var stacked = stack.get(object);
-
-  if (stacked && stack.get(other)) {
-    return stacked == other;
-  }
-
-  var result = true;
-  stack.set(object, other);
-  stack.set(other, object);
-  var skipCtor = isPartial;
-
-  while (++index < objLength) {
-    key = objProps[index];
-    var objValue = object[key],
-        othValue = other[key];
-
-    if (customizer) {
-      var compared = isPartial ? customizer(othValue, objValue, key, other, object, stack) : customizer(objValue, othValue, key, object, other, stack);
-    } // Recursively compare objects (susceptible to call stack limits).
-
-
-    if (!(compared === undefined ? objValue === othValue || equalFunc(objValue, othValue, bitmask, customizer, stack) : compared)) {
-      result = false;
-      break;
-    }
-
-    skipCtor || (skipCtor = key == 'constructor');
-  }
-
-  if (result && !skipCtor) {
-    var objCtor = object.constructor,
-        othCtor = other.constructor; // Non `Object` object instances with different constructors are not equal.
-
-    if (objCtor != othCtor && 'constructor' in object && 'constructor' in other && !(typeof objCtor == 'function' && objCtor instanceof objCtor && typeof othCtor == 'function' && othCtor instanceof othCtor)) {
-      result = false;
-    }
-  }
-
-  stack['delete'](object);
-  stack['delete'](other);
-  return result;
-}
-
-var _default = equalObjects;
-exports.default = _default;
-},{"./_getAllKeys.js":"../node_modules/lodash-es/_getAllKeys.js"}],"../node_modules/lodash-es/_DataView.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var _getNative = _interopRequireDefault(require("./_getNative.js"));
-
-var _root = _interopRequireDefault(require("./_root.js"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-/* Built-in method references that are verified to be native. */
-var DataView = (0, _getNative.default)(_root.default, 'DataView');
-var _default = DataView;
-exports.default = _default;
-},{"./_getNative.js":"../node_modules/lodash-es/_getNative.js","./_root.js":"../node_modules/lodash-es/_root.js"}],"../node_modules/lodash-es/_Promise.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var _getNative = _interopRequireDefault(require("./_getNative.js"));
-
-var _root = _interopRequireDefault(require("./_root.js"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-/* Built-in method references that are verified to be native. */
-var Promise = (0, _getNative.default)(_root.default, 'Promise');
-var _default = Promise;
-exports.default = _default;
-},{"./_getNative.js":"../node_modules/lodash-es/_getNative.js","./_root.js":"../node_modules/lodash-es/_root.js"}],"../node_modules/lodash-es/_Set.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var _getNative = _interopRequireDefault(require("./_getNative.js"));
-
-var _root = _interopRequireDefault(require("./_root.js"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-/* Built-in method references that are verified to be native. */
-var Set = (0, _getNative.default)(_root.default, 'Set');
-var _default = Set;
-exports.default = _default;
-},{"./_getNative.js":"../node_modules/lodash-es/_getNative.js","./_root.js":"../node_modules/lodash-es/_root.js"}],"../node_modules/lodash-es/_WeakMap.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var _getNative = _interopRequireDefault(require("./_getNative.js"));
-
-var _root = _interopRequireDefault(require("./_root.js"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-/* Built-in method references that are verified to be native. */
-var WeakMap = (0, _getNative.default)(_root.default, 'WeakMap');
-var _default = WeakMap;
-exports.default = _default;
-},{"./_getNative.js":"../node_modules/lodash-es/_getNative.js","./_root.js":"../node_modules/lodash-es/_root.js"}],"../node_modules/lodash-es/_getTag.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var _DataView = _interopRequireDefault(require("./_DataView.js"));
-
-var _Map = _interopRequireDefault(require("./_Map.js"));
-
-var _Promise = _interopRequireDefault(require("./_Promise.js"));
-
-var _Set = _interopRequireDefault(require("./_Set.js"));
-
-var _WeakMap = _interopRequireDefault(require("./_WeakMap.js"));
-
-var _baseGetTag = _interopRequireDefault(require("./_baseGetTag.js"));
-
-var _toSource = _interopRequireDefault(require("./_toSource.js"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-/** `Object#toString` result references. */
-var mapTag = '[object Map]',
-    objectTag = '[object Object]',
-    promiseTag = '[object Promise]',
-    setTag = '[object Set]',
-    weakMapTag = '[object WeakMap]';
-var dataViewTag = '[object DataView]';
-/** Used to detect maps, sets, and weakmaps. */
-
-var dataViewCtorString = (0, _toSource.default)(_DataView.default),
-    mapCtorString = (0, _toSource.default)(_Map.default),
-    promiseCtorString = (0, _toSource.default)(_Promise.default),
-    setCtorString = (0, _toSource.default)(_Set.default),
-    weakMapCtorString = (0, _toSource.default)(_WeakMap.default);
-/**
- * Gets the `toStringTag` of `value`.
- *
- * @private
- * @param {*} value The value to query.
- * @returns {string} Returns the `toStringTag`.
- */
-
-var getTag = _baseGetTag.default; // Fallback for data views, maps, sets, and weak maps in IE 11 and promises in Node.js < 6.
-
-if (_DataView.default && getTag(new _DataView.default(new ArrayBuffer(1))) != dataViewTag || _Map.default && getTag(new _Map.default()) != mapTag || _Promise.default && getTag(_Promise.default.resolve()) != promiseTag || _Set.default && getTag(new _Set.default()) != setTag || _WeakMap.default && getTag(new _WeakMap.default()) != weakMapTag) {
-  getTag = function (value) {
-    var result = (0, _baseGetTag.default)(value),
-        Ctor = result == objectTag ? value.constructor : undefined,
-        ctorString = Ctor ? (0, _toSource.default)(Ctor) : '';
-
-    if (ctorString) {
-      switch (ctorString) {
-        case dataViewCtorString:
-          return dataViewTag;
-
-        case mapCtorString:
-          return mapTag;
-
-        case promiseCtorString:
-          return promiseTag;
-
-        case setCtorString:
-          return setTag;
-
-        case weakMapCtorString:
-          return weakMapTag;
-      }
-    }
-
-    return result;
-  };
-}
-
-var _default = getTag;
-exports.default = _default;
-},{"./_DataView.js":"../node_modules/lodash-es/_DataView.js","./_Map.js":"../node_modules/lodash-es/_Map.js","./_Promise.js":"../node_modules/lodash-es/_Promise.js","./_Set.js":"../node_modules/lodash-es/_Set.js","./_WeakMap.js":"../node_modules/lodash-es/_WeakMap.js","./_baseGetTag.js":"../node_modules/lodash-es/_baseGetTag.js","./_toSource.js":"../node_modules/lodash-es/_toSource.js"}],"../node_modules/lodash-es/_baseIsEqualDeep.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var _Stack = _interopRequireDefault(require("./_Stack.js"));
-
-var _equalArrays = _interopRequireDefault(require("./_equalArrays.js"));
-
-var _equalByTag = _interopRequireDefault(require("./_equalByTag.js"));
-
-var _equalObjects = _interopRequireDefault(require("./_equalObjects.js"));
-
-var _getTag = _interopRequireDefault(require("./_getTag.js"));
-
-var _isArray = _interopRequireDefault(require("./isArray.js"));
-
-var _isBuffer = _interopRequireDefault(require("./isBuffer.js"));
-
-var _isTypedArray = _interopRequireDefault(require("./isTypedArray.js"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-/** Used to compose bitmasks for value comparisons. */
-var COMPARE_PARTIAL_FLAG = 1;
-/** `Object#toString` result references. */
-
-var argsTag = '[object Arguments]',
-    arrayTag = '[object Array]',
-    objectTag = '[object Object]';
-/** Used for built-in method references. */
-
-var objectProto = Object.prototype;
-/** Used to check objects for own properties. */
-
-var hasOwnProperty = objectProto.hasOwnProperty;
-/**
- * A specialized version of `baseIsEqual` for arrays and objects which performs
- * deep comparisons and tracks traversed objects enabling objects with circular
- * references to be compared.
- *
- * @private
- * @param {Object} object The object to compare.
- * @param {Object} other The other object to compare.
- * @param {number} bitmask The bitmask flags. See `baseIsEqual` for more details.
- * @param {Function} customizer The function to customize comparisons.
- * @param {Function} equalFunc The function to determine equivalents of values.
- * @param {Object} [stack] Tracks traversed `object` and `other` objects.
- * @returns {boolean} Returns `true` if the objects are equivalent, else `false`.
- */
-
-function baseIsEqualDeep(object, other, bitmask, customizer, equalFunc, stack) {
-  var objIsArr = (0, _isArray.default)(object),
-      othIsArr = (0, _isArray.default)(other),
-      objTag = objIsArr ? arrayTag : (0, _getTag.default)(object),
-      othTag = othIsArr ? arrayTag : (0, _getTag.default)(other);
-  objTag = objTag == argsTag ? objectTag : objTag;
-  othTag = othTag == argsTag ? objectTag : othTag;
-  var objIsObj = objTag == objectTag,
-      othIsObj = othTag == objectTag,
-      isSameTag = objTag == othTag;
-
-  if (isSameTag && (0, _isBuffer.default)(object)) {
-    if (!(0, _isBuffer.default)(other)) {
-      return false;
-    }
-
-    objIsArr = true;
-    objIsObj = false;
-  }
-
-  if (isSameTag && !objIsObj) {
-    stack || (stack = new _Stack.default());
-    return objIsArr || (0, _isTypedArray.default)(object) ? (0, _equalArrays.default)(object, other, bitmask, customizer, equalFunc, stack) : (0, _equalByTag.default)(object, other, objTag, bitmask, customizer, equalFunc, stack);
-  }
-
-  if (!(bitmask & COMPARE_PARTIAL_FLAG)) {
-    var objIsWrapped = objIsObj && hasOwnProperty.call(object, '__wrapped__'),
-        othIsWrapped = othIsObj && hasOwnProperty.call(other, '__wrapped__');
-
-    if (objIsWrapped || othIsWrapped) {
-      var objUnwrapped = objIsWrapped ? object.value() : object,
-          othUnwrapped = othIsWrapped ? other.value() : other;
-      stack || (stack = new _Stack.default());
-      return equalFunc(objUnwrapped, othUnwrapped, bitmask, customizer, stack);
-    }
-  }
-
-  if (!isSameTag) {
-    return false;
-  }
-
-  stack || (stack = new _Stack.default());
-  return (0, _equalObjects.default)(object, other, bitmask, customizer, equalFunc, stack);
-}
-
-var _default = baseIsEqualDeep;
-exports.default = _default;
-},{"./_Stack.js":"../node_modules/lodash-es/_Stack.js","./_equalArrays.js":"../node_modules/lodash-es/_equalArrays.js","./_equalByTag.js":"../node_modules/lodash-es/_equalByTag.js","./_equalObjects.js":"../node_modules/lodash-es/_equalObjects.js","./_getTag.js":"../node_modules/lodash-es/_getTag.js","./isArray.js":"../node_modules/lodash-es/isArray.js","./isBuffer.js":"../node_modules/lodash-es/isBuffer.js","./isTypedArray.js":"../node_modules/lodash-es/isTypedArray.js"}],"../node_modules/lodash-es/_baseIsEqual.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var _baseIsEqualDeep = _interopRequireDefault(require("./_baseIsEqualDeep.js"));
-
-var _isObjectLike = _interopRequireDefault(require("./isObjectLike.js"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-/**
- * The base implementation of `_.isEqual` which supports partial comparisons
- * and tracks traversed objects.
- *
- * @private
- * @param {*} value The value to compare.
- * @param {*} other The other value to compare.
- * @param {boolean} bitmask The bitmask flags.
- *  1 - Unordered comparison
- *  2 - Partial comparison
- * @param {Function} [customizer] The function to customize comparisons.
- * @param {Object} [stack] Tracks traversed `value` and `other` objects.
- * @returns {boolean} Returns `true` if the values are equivalent, else `false`.
- */
-function baseIsEqual(value, other, bitmask, customizer, stack) {
-  if (value === other) {
-    return true;
-  }
-
-  if (value == null || other == null || !(0, _isObjectLike.default)(value) && !(0, _isObjectLike.default)(other)) {
-    return value !== value && other !== other;
-  }
-
-  return (0, _baseIsEqualDeep.default)(value, other, bitmask, customizer, baseIsEqual, stack);
-}
-
-var _default = baseIsEqual;
-exports.default = _default;
-},{"./_baseIsEqualDeep.js":"../node_modules/lodash-es/_baseIsEqualDeep.js","./isObjectLike.js":"../node_modules/lodash-es/isObjectLike.js"}],"../node_modules/lodash-es/_baseIsMatch.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var _Stack = _interopRequireDefault(require("./_Stack.js"));
-
-var _baseIsEqual = _interopRequireDefault(require("./_baseIsEqual.js"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-/** Used to compose bitmasks for value comparisons. */
-var COMPARE_PARTIAL_FLAG = 1,
-    COMPARE_UNORDERED_FLAG = 2;
-/**
- * The base implementation of `_.isMatch` without support for iteratee shorthands.
- *
- * @private
- * @param {Object} object The object to inspect.
- * @param {Object} source The object of property values to match.
- * @param {Array} matchData The property names, values, and compare flags to match.
- * @param {Function} [customizer] The function to customize comparisons.
- * @returns {boolean} Returns `true` if `object` is a match, else `false`.
- */
-
-function baseIsMatch(object, source, matchData, customizer) {
-  var index = matchData.length,
-      length = index,
-      noCustomizer = !customizer;
-
-  if (object == null) {
-    return !length;
-  }
-
-  object = Object(object);
-
-  while (index--) {
-    var data = matchData[index];
-
-    if (noCustomizer && data[2] ? data[1] !== object[data[0]] : !(data[0] in object)) {
-      return false;
-    }
-  }
-
-  while (++index < length) {
-    data = matchData[index];
-    var key = data[0],
-        objValue = object[key],
-        srcValue = data[1];
-
-    if (noCustomizer && data[2]) {
-      if (objValue === undefined && !(key in object)) {
-        return false;
-      }
-    } else {
-      var stack = new _Stack.default();
-
-      if (customizer) {
-        var result = customizer(objValue, srcValue, key, object, source, stack);
-      }
-
-      if (!(result === undefined ? (0, _baseIsEqual.default)(srcValue, objValue, COMPARE_PARTIAL_FLAG | COMPARE_UNORDERED_FLAG, customizer, stack) : result)) {
-        return false;
-      }
-    }
-  }
-
-  return true;
-}
-
-var _default = baseIsMatch;
-exports.default = _default;
-},{"./_Stack.js":"../node_modules/lodash-es/_Stack.js","./_baseIsEqual.js":"../node_modules/lodash-es/_baseIsEqual.js"}],"../node_modules/lodash-es/_isStrictComparable.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var _isObject = _interopRequireDefault(require("./isObject.js"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-/**
- * Checks if `value` is suitable for strict equality comparisons, i.e. `===`.
- *
- * @private
- * @param {*} value The value to check.
- * @returns {boolean} Returns `true` if `value` if suitable for strict
- *  equality comparisons, else `false`.
- */
-function isStrictComparable(value) {
-  return value === value && !(0, _isObject.default)(value);
-}
-
-var _default = isStrictComparable;
-exports.default = _default;
-},{"./isObject.js":"../node_modules/lodash-es/isObject.js"}],"../node_modules/lodash-es/_getMatchData.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var _isStrictComparable = _interopRequireDefault(require("./_isStrictComparable.js"));
-
-var _keys = _interopRequireDefault(require("./keys.js"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-/**
- * Gets the property names, values, and compare flags of `object`.
- *
- * @private
- * @param {Object} object The object to query.
- * @returns {Array} Returns the match data of `object`.
- */
-function getMatchData(object) {
-  var result = (0, _keys.default)(object),
-      length = result.length;
-
-  while (length--) {
-    var key = result[length],
-        value = object[key];
-    result[length] = [key, value, (0, _isStrictComparable.default)(value)];
-  }
-
-  return result;
-}
-
-var _default = getMatchData;
-exports.default = _default;
-},{"./_isStrictComparable.js":"../node_modules/lodash-es/_isStrictComparable.js","./keys.js":"../node_modules/lodash-es/keys.js"}],"../node_modules/lodash-es/_matchesStrictComparable.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-/**
- * A specialized version of `matchesProperty` for source values suitable
- * for strict equality comparisons, i.e. `===`.
- *
- * @private
- * @param {string} key The key of the property to get.
- * @param {*} srcValue The value to match.
- * @returns {Function} Returns the new spec function.
- */
-function matchesStrictComparable(key, srcValue) {
-  return function (object) {
-    if (object == null) {
-      return false;
-    }
-
-    return object[key] === srcValue && (srcValue !== undefined || key in Object(object));
-  };
-}
-
-var _default = matchesStrictComparable;
-exports.default = _default;
-},{}],"../node_modules/lodash-es/_baseMatches.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var _baseIsMatch = _interopRequireDefault(require("./_baseIsMatch.js"));
-
-var _getMatchData = _interopRequireDefault(require("./_getMatchData.js"));
-
-var _matchesStrictComparable = _interopRequireDefault(require("./_matchesStrictComparable.js"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-/**
- * The base implementation of `_.matches` which doesn't clone `source`.
- *
- * @private
- * @param {Object} source The object of property values to match.
- * @returns {Function} Returns the new spec function.
- */
-function baseMatches(source) {
-  var matchData = (0, _getMatchData.default)(source);
-
-  if (matchData.length == 1 && matchData[0][2]) {
-    return (0, _matchesStrictComparable.default)(matchData[0][0], matchData[0][1]);
-  }
-
-  return function (object) {
-    return object === source || (0, _baseIsMatch.default)(object, source, matchData);
-  };
-}
-
-var _default = baseMatches;
-exports.default = _default;
-},{"./_baseIsMatch.js":"../node_modules/lodash-es/_baseIsMatch.js","./_getMatchData.js":"../node_modules/lodash-es/_getMatchData.js","./_matchesStrictComparable.js":"../node_modules/lodash-es/_matchesStrictComparable.js"}],"../node_modules/lodash-es/_isKey.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var _isArray = _interopRequireDefault(require("./isArray.js"));
-
-var _isSymbol = _interopRequireDefault(require("./isSymbol.js"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-/** Used to match property names within property paths. */
-var reIsDeepProp = /\.|\[(?:[^[\]]*|(["'])(?:(?!\1)[^\\]|\\.)*?\1)\]/,
-    reIsPlainProp = /^\w*$/;
-/**
- * Checks if `value` is a property name and not a property path.
- *
- * @private
- * @param {*} value The value to check.
- * @param {Object} [object] The object to query keys on.
- * @returns {boolean} Returns `true` if `value` is a property name, else `false`.
- */
-
-function isKey(value, object) {
-  if ((0, _isArray.default)(value)) {
-    return false;
-  }
-
-  var type = typeof value;
-
-  if (type == 'number' || type == 'symbol' || type == 'boolean' || value == null || (0, _isSymbol.default)(value)) {
-    return true;
-  }
-
-  return reIsPlainProp.test(value) || !reIsDeepProp.test(value) || object != null && value in Object(object);
-}
-
-var _default = isKey;
-exports.default = _default;
-},{"./isArray.js":"../node_modules/lodash-es/isArray.js","./isSymbol.js":"../node_modules/lodash-es/isSymbol.js"}],"../node_modules/lodash-es/memoize.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var _MapCache = _interopRequireDefault(require("./_MapCache.js"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-/** Error message constants. */
-var FUNC_ERROR_TEXT = 'Expected a function';
-/**
- * Creates a function that memoizes the result of `func`. If `resolver` is
- * provided, it determines the cache key for storing the result based on the
- * arguments provided to the memoized function. By default, the first argument
- * provided to the memoized function is used as the map cache key. The `func`
- * is invoked with the `this` binding of the memoized function.
- *
- * **Note:** The cache is exposed as the `cache` property on the memoized
- * function. Its creation may be customized by replacing the `_.memoize.Cache`
- * constructor with one whose instances implement the
- * [`Map`](http://ecma-international.org/ecma-262/7.0/#sec-properties-of-the-map-prototype-object)
- * method interface of `clear`, `delete`, `get`, `has`, and `set`.
- *
- * @static
- * @memberOf _
- * @since 0.1.0
- * @category Function
- * @param {Function} func The function to have its output memoized.
- * @param {Function} [resolver] The function to resolve the cache key.
- * @returns {Function} Returns the new memoized function.
- * @example
- *
- * var object = { 'a': 1, 'b': 2 };
- * var other = { 'c': 3, 'd': 4 };
- *
- * var values = _.memoize(_.values);
- * values(object);
- * // => [1, 2]
- *
- * values(other);
- * // => [3, 4]
- *
- * object.a = 2;
- * values(object);
- * // => [1, 2]
- *
- * // Modify the result cache.
- * values.cache.set(object, ['a', 'b']);
- * values(object);
- * // => ['a', 'b']
- *
- * // Replace `_.memoize.Cache`.
- * _.memoize.Cache = WeakMap;
- */
-
-function memoize(func, resolver) {
-  if (typeof func != 'function' || resolver != null && typeof resolver != 'function') {
-    throw new TypeError(FUNC_ERROR_TEXT);
-  }
-
-  var memoized = function () {
-    var args = arguments,
-        key = resolver ? resolver.apply(this, args) : args[0],
-        cache = memoized.cache;
-
-    if (cache.has(key)) {
-      return cache.get(key);
-    }
-
-    var result = func.apply(this, args);
-    memoized.cache = cache.set(key, result) || cache;
-    return result;
-  };
-
-  memoized.cache = new (memoize.Cache || _MapCache.default)();
-  return memoized;
-} // Expose `MapCache`.
-
-
-memoize.Cache = _MapCache.default;
-var _default = memoize;
-exports.default = _default;
-},{"./_MapCache.js":"../node_modules/lodash-es/_MapCache.js"}],"../node_modules/lodash-es/_memoizeCapped.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var _memoize = _interopRequireDefault(require("./memoize.js"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-/** Used as the maximum memoize cache size. */
-var MAX_MEMOIZE_SIZE = 500;
-/**
- * A specialized version of `_.memoize` which clears the memoized function's
- * cache when it exceeds `MAX_MEMOIZE_SIZE`.
- *
- * @private
- * @param {Function} func The function to have its output memoized.
- * @returns {Function} Returns the new memoized function.
- */
-
-function memoizeCapped(func) {
-  var result = (0, _memoize.default)(func, function (key) {
-    if (cache.size === MAX_MEMOIZE_SIZE) {
-      cache.clear();
-    }
-
-    return key;
-  });
-  var cache = result.cache;
-  return result;
-}
-
-var _default = memoizeCapped;
-exports.default = _default;
-},{"./memoize.js":"../node_modules/lodash-es/memoize.js"}],"../node_modules/lodash-es/_stringToPath.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var _memoizeCapped = _interopRequireDefault(require("./_memoizeCapped.js"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-/** Used to match property names within property paths. */
-var rePropName = /[^.[\]]+|\[(?:(-?\d+(?:\.\d+)?)|(["'])((?:(?!\2)[^\\]|\\.)*?)\2)\]|(?=(?:\.|\[\])(?:\.|\[\]|$))/g;
-/** Used to match backslashes in property paths. */
-
-var reEscapeChar = /\\(\\)?/g;
-/**
- * Converts `string` to a property path array.
- *
- * @private
- * @param {string} string The string to convert.
- * @returns {Array} Returns the property path array.
- */
-
-var stringToPath = (0, _memoizeCapped.default)(function (string) {
-  var result = [];
-
-  if (string.charCodeAt(0) === 46
-  /* . */
-  ) {
-      result.push('');
-    }
-
-  string.replace(rePropName, function (match, number, quote, subString) {
-    result.push(quote ? subString.replace(reEscapeChar, '$1') : number || match);
-  });
-  return result;
-});
-var _default = stringToPath;
-exports.default = _default;
-},{"./_memoizeCapped.js":"../node_modules/lodash-es/_memoizeCapped.js"}],"../node_modules/lodash-es/_baseToString.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var _Symbol = _interopRequireDefault(require("./_Symbol.js"));
-
-var _arrayMap = _interopRequireDefault(require("./_arrayMap.js"));
-
-var _isArray = _interopRequireDefault(require("./isArray.js"));
-
-var _isSymbol = _interopRequireDefault(require("./isSymbol.js"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-/** Used as references for various `Number` constants. */
-var INFINITY = 1 / 0;
-/** Used to convert symbols to primitives and strings. */
-
-var symbolProto = _Symbol.default ? _Symbol.default.prototype : undefined,
-    symbolToString = symbolProto ? symbolProto.toString : undefined;
-/**
- * The base implementation of `_.toString` which doesn't convert nullish
- * values to empty strings.
- *
- * @private
- * @param {*} value The value to process.
- * @returns {string} Returns the string.
- */
-
-function baseToString(value) {
-  // Exit early for strings to avoid a performance hit in some environments.
-  if (typeof value == 'string') {
-    return value;
-  }
-
-  if ((0, _isArray.default)(value)) {
-    // Recursively convert values (susceptible to call stack limits).
-    return (0, _arrayMap.default)(value, baseToString) + '';
-  }
-
-  if ((0, _isSymbol.default)(value)) {
-    return symbolToString ? symbolToString.call(value) : '';
-  }
-
-  var result = value + '';
-  return result == '0' && 1 / value == -INFINITY ? '-0' : result;
-}
-
-var _default = baseToString;
-exports.default = _default;
-},{"./_Symbol.js":"../node_modules/lodash-es/_Symbol.js","./_arrayMap.js":"../node_modules/lodash-es/_arrayMap.js","./isArray.js":"../node_modules/lodash-es/isArray.js","./isSymbol.js":"../node_modules/lodash-es/isSymbol.js"}],"../node_modules/lodash-es/toString.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var _baseToString = _interopRequireDefault(require("./_baseToString.js"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-/**
- * Converts `value` to a string. An empty string is returned for `null`
- * and `undefined` values. The sign of `-0` is preserved.
- *
- * @static
- * @memberOf _
- * @since 4.0.0
- * @category Lang
- * @param {*} value The value to convert.
- * @returns {string} Returns the converted string.
- * @example
- *
- * _.toString(null);
- * // => ''
- *
- * _.toString(-0);
- * // => '-0'
- *
- * _.toString([1, 2, 3]);
- * // => '1,2,3'
- */
-function toString(value) {
-  return value == null ? '' : (0, _baseToString.default)(value);
-}
-
-var _default = toString;
-exports.default = _default;
-},{"./_baseToString.js":"../node_modules/lodash-es/_baseToString.js"}],"../node_modules/lodash-es/_castPath.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var _isArray = _interopRequireDefault(require("./isArray.js"));
-
-var _isKey = _interopRequireDefault(require("./_isKey.js"));
-
-var _stringToPath = _interopRequireDefault(require("./_stringToPath.js"));
-
-var _toString = _interopRequireDefault(require("./toString.js"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-/**
- * Casts `value` to a path array if it's not one.
- *
- * @private
- * @param {*} value The value to inspect.
- * @param {Object} [object] The object to query keys on.
- * @returns {Array} Returns the cast property path array.
- */
-function castPath(value, object) {
-  if ((0, _isArray.default)(value)) {
-    return value;
-  }
-
-  return (0, _isKey.default)(value, object) ? [value] : (0, _stringToPath.default)((0, _toString.default)(value));
-}
-
-var _default = castPath;
-exports.default = _default;
-},{"./isArray.js":"../node_modules/lodash-es/isArray.js","./_isKey.js":"../node_modules/lodash-es/_isKey.js","./_stringToPath.js":"../node_modules/lodash-es/_stringToPath.js","./toString.js":"../node_modules/lodash-es/toString.js"}],"../node_modules/lodash-es/_toKey.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var _isSymbol = _interopRequireDefault(require("./isSymbol.js"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-/** Used as references for various `Number` constants. */
-var INFINITY = 1 / 0;
-/**
- * Converts `value` to a string key if it's not a string or symbol.
- *
- * @private
- * @param {*} value The value to inspect.
- * @returns {string|symbol} Returns the key.
- */
-
-function toKey(value) {
-  if (typeof value == 'string' || (0, _isSymbol.default)(value)) {
-    return value;
-  }
-
-  var result = value + '';
-  return result == '0' && 1 / value == -INFINITY ? '-0' : result;
-}
-
-var _default = toKey;
-exports.default = _default;
-},{"./isSymbol.js":"../node_modules/lodash-es/isSymbol.js"}],"../node_modules/lodash-es/_baseGet.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var _castPath = _interopRequireDefault(require("./_castPath.js"));
-
-var _toKey = _interopRequireDefault(require("./_toKey.js"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-/**
- * The base implementation of `_.get` without support for default values.
- *
- * @private
- * @param {Object} object The object to query.
- * @param {Array|string} path The path of the property to get.
- * @returns {*} Returns the resolved value.
- */
-function baseGet(object, path) {
-  path = (0, _castPath.default)(path, object);
-  var index = 0,
-      length = path.length;
-
-  while (object != null && index < length) {
-    object = object[(0, _toKey.default)(path[index++])];
-  }
-
-  return index && index == length ? object : undefined;
-}
-
-var _default = baseGet;
-exports.default = _default;
-},{"./_castPath.js":"../node_modules/lodash-es/_castPath.js","./_toKey.js":"../node_modules/lodash-es/_toKey.js"}],"../node_modules/lodash-es/get.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var _baseGet = _interopRequireDefault(require("./_baseGet.js"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-/**
- * Gets the value at `path` of `object`. If the resolved value is
- * `undefined`, the `defaultValue` is returned in its place.
- *
- * @static
- * @memberOf _
- * @since 3.7.0
- * @category Object
- * @param {Object} object The object to query.
- * @param {Array|string} path The path of the property to get.
- * @param {*} [defaultValue] The value returned for `undefined` resolved values.
- * @returns {*} Returns the resolved value.
- * @example
- *
- * var object = { 'a': [{ 'b': { 'c': 3 } }] };
- *
- * _.get(object, 'a[0].b.c');
- * // => 3
- *
- * _.get(object, ['a', '0', 'b', 'c']);
- * // => 3
- *
- * _.get(object, 'a.b.c', 'default');
- * // => 'default'
- */
-function get(object, path, defaultValue) {
-  var result = object == null ? undefined : (0, _baseGet.default)(object, path);
-  return result === undefined ? defaultValue : result;
-}
-
-var _default = get;
-exports.default = _default;
-},{"./_baseGet.js":"../node_modules/lodash-es/_baseGet.js"}],"../node_modules/lodash-es/_baseHasIn.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-/**
- * The base implementation of `_.hasIn` without support for deep paths.
- *
- * @private
- * @param {Object} [object] The object to query.
- * @param {Array|string} key The key to check.
- * @returns {boolean} Returns `true` if `key` exists, else `false`.
- */
-function baseHasIn(object, key) {
-  return object != null && key in Object(object);
-}
-
-var _default = baseHasIn;
-exports.default = _default;
-},{}],"../node_modules/lodash-es/_hasPath.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var _castPath = _interopRequireDefault(require("./_castPath.js"));
-
-var _isArguments = _interopRequireDefault(require("./isArguments.js"));
-
-var _isArray = _interopRequireDefault(require("./isArray.js"));
-
-var _isIndex = _interopRequireDefault(require("./_isIndex.js"));
-
-var _isLength = _interopRequireDefault(require("./isLength.js"));
-
-var _toKey = _interopRequireDefault(require("./_toKey.js"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-/**
- * Checks if `path` exists on `object`.
- *
- * @private
- * @param {Object} object The object to query.
- * @param {Array|string} path The path to check.
- * @param {Function} hasFunc The function to check properties.
- * @returns {boolean} Returns `true` if `path` exists, else `false`.
- */
-function hasPath(object, path, hasFunc) {
-  path = (0, _castPath.default)(path, object);
-  var index = -1,
-      length = path.length,
-      result = false;
-
-  while (++index < length) {
-    var key = (0, _toKey.default)(path[index]);
-
-    if (!(result = object != null && hasFunc(object, key))) {
-      break;
-    }
-
-    object = object[key];
-  }
-
-  if (result || ++index != length) {
-    return result;
-  }
-
-  length = object == null ? 0 : object.length;
-  return !!length && (0, _isLength.default)(length) && (0, _isIndex.default)(key, length) && ((0, _isArray.default)(object) || (0, _isArguments.default)(object));
-}
-
-var _default = hasPath;
-exports.default = _default;
-},{"./_castPath.js":"../node_modules/lodash-es/_castPath.js","./isArguments.js":"../node_modules/lodash-es/isArguments.js","./isArray.js":"../node_modules/lodash-es/isArray.js","./_isIndex.js":"../node_modules/lodash-es/_isIndex.js","./isLength.js":"../node_modules/lodash-es/isLength.js","./_toKey.js":"../node_modules/lodash-es/_toKey.js"}],"../node_modules/lodash-es/hasIn.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var _baseHasIn = _interopRequireDefault(require("./_baseHasIn.js"));
-
-var _hasPath = _interopRequireDefault(require("./_hasPath.js"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-/**
- * Checks if `path` is a direct or inherited property of `object`.
- *
- * @static
- * @memberOf _
- * @since 4.0.0
- * @category Object
- * @param {Object} object The object to query.
- * @param {Array|string} path The path to check.
- * @returns {boolean} Returns `true` if `path` exists, else `false`.
- * @example
- *
- * var object = _.create({ 'a': _.create({ 'b': 2 }) });
- *
- * _.hasIn(object, 'a');
- * // => true
- *
- * _.hasIn(object, 'a.b');
- * // => true
- *
- * _.hasIn(object, ['a', 'b']);
- * // => true
- *
- * _.hasIn(object, 'b');
- * // => false
- */
-function hasIn(object, path) {
-  return object != null && (0, _hasPath.default)(object, path, _baseHasIn.default);
-}
-
-var _default = hasIn;
-exports.default = _default;
-},{"./_baseHasIn.js":"../node_modules/lodash-es/_baseHasIn.js","./_hasPath.js":"../node_modules/lodash-es/_hasPath.js"}],"../node_modules/lodash-es/_baseMatchesProperty.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var _baseIsEqual = _interopRequireDefault(require("./_baseIsEqual.js"));
-
-var _get = _interopRequireDefault(require("./get.js"));
-
-var _hasIn = _interopRequireDefault(require("./hasIn.js"));
-
-var _isKey = _interopRequireDefault(require("./_isKey.js"));
-
-var _isStrictComparable = _interopRequireDefault(require("./_isStrictComparable.js"));
-
-var _matchesStrictComparable = _interopRequireDefault(require("./_matchesStrictComparable.js"));
-
-var _toKey = _interopRequireDefault(require("./_toKey.js"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-/** Used to compose bitmasks for value comparisons. */
-var COMPARE_PARTIAL_FLAG = 1,
-    COMPARE_UNORDERED_FLAG = 2;
-/**
- * The base implementation of `_.matchesProperty` which doesn't clone `srcValue`.
- *
- * @private
- * @param {string} path The path of the property to get.
- * @param {*} srcValue The value to match.
- * @returns {Function} Returns the new spec function.
- */
-
-function baseMatchesProperty(path, srcValue) {
-  if ((0, _isKey.default)(path) && (0, _isStrictComparable.default)(srcValue)) {
-    return (0, _matchesStrictComparable.default)((0, _toKey.default)(path), srcValue);
-  }
-
-  return function (object) {
-    var objValue = (0, _get.default)(object, path);
-    return objValue === undefined && objValue === srcValue ? (0, _hasIn.default)(object, path) : (0, _baseIsEqual.default)(srcValue, objValue, COMPARE_PARTIAL_FLAG | COMPARE_UNORDERED_FLAG);
-  };
-}
-
-var _default = baseMatchesProperty;
-exports.default = _default;
-},{"./_baseIsEqual.js":"../node_modules/lodash-es/_baseIsEqual.js","./get.js":"../node_modules/lodash-es/get.js","./hasIn.js":"../node_modules/lodash-es/hasIn.js","./_isKey.js":"../node_modules/lodash-es/_isKey.js","./_isStrictComparable.js":"../node_modules/lodash-es/_isStrictComparable.js","./_matchesStrictComparable.js":"../node_modules/lodash-es/_matchesStrictComparable.js","./_toKey.js":"../node_modules/lodash-es/_toKey.js"}],"../node_modules/lodash-es/_baseProperty.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-/**
- * The base implementation of `_.property` without support for deep paths.
- *
- * @private
- * @param {string} key The key of the property to get.
- * @returns {Function} Returns the new accessor function.
- */
-function baseProperty(key) {
-  return function (object) {
-    return object == null ? undefined : object[key];
-  };
-}
-
-var _default = baseProperty;
-exports.default = _default;
-},{}],"../node_modules/lodash-es/_basePropertyDeep.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var _baseGet = _interopRequireDefault(require("./_baseGet.js"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-/**
- * A specialized version of `baseProperty` which supports deep paths.
- *
- * @private
- * @param {Array|string} path The path of the property to get.
- * @returns {Function} Returns the new accessor function.
- */
-function basePropertyDeep(path) {
-  return function (object) {
-    return (0, _baseGet.default)(object, path);
-  };
-}
-
-var _default = basePropertyDeep;
-exports.default = _default;
-},{"./_baseGet.js":"../node_modules/lodash-es/_baseGet.js"}],"../node_modules/lodash-es/property.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var _baseProperty = _interopRequireDefault(require("./_baseProperty.js"));
-
-var _basePropertyDeep = _interopRequireDefault(require("./_basePropertyDeep.js"));
-
-var _isKey = _interopRequireDefault(require("./_isKey.js"));
-
-var _toKey = _interopRequireDefault(require("./_toKey.js"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-/**
- * Creates a function that returns the value at `path` of a given object.
- *
- * @static
- * @memberOf _
- * @since 2.4.0
- * @category Util
- * @param {Array|string} path The path of the property to get.
- * @returns {Function} Returns the new accessor function.
- * @example
- *
- * var objects = [
- *   { 'a': { 'b': 2 } },
- *   { 'a': { 'b': 1 } }
- * ];
- *
- * _.map(objects, _.property('a.b'));
- * // => [2, 1]
- *
- * _.map(_.sortBy(objects, _.property(['a', 'b'])), 'a.b');
- * // => [1, 2]
- */
-function property(path) {
-  return (0, _isKey.default)(path) ? (0, _baseProperty.default)((0, _toKey.default)(path)) : (0, _basePropertyDeep.default)(path);
-}
-
-var _default = property;
-exports.default = _default;
-},{"./_baseProperty.js":"../node_modules/lodash-es/_baseProperty.js","./_basePropertyDeep.js":"../node_modules/lodash-es/_basePropertyDeep.js","./_isKey.js":"../node_modules/lodash-es/_isKey.js","./_toKey.js":"../node_modules/lodash-es/_toKey.js"}],"../node_modules/lodash-es/_baseIteratee.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var _baseMatches = _interopRequireDefault(require("./_baseMatches.js"));
-
-var _baseMatchesProperty = _interopRequireDefault(require("./_baseMatchesProperty.js"));
-
-var _identity = _interopRequireDefault(require("./identity.js"));
-
-var _isArray = _interopRequireDefault(require("./isArray.js"));
-
-var _property = _interopRequireDefault(require("./property.js"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-/**
- * The base implementation of `_.iteratee`.
- *
- * @private
- * @param {*} [value=_.identity] The value to convert to an iteratee.
- * @returns {Function} Returns the iteratee.
- */
-function baseIteratee(value) {
-  // Don't store the `typeof` result in a variable to avoid a JIT bug in Safari 9.
-  // See https://bugs.webkit.org/show_bug.cgi?id=156034 for more details.
-  if (typeof value == 'function') {
-    return value;
-  }
-
-  if (value == null) {
-    return _identity.default;
-  }
-
-  if (typeof value == 'object') {
-    return (0, _isArray.default)(value) ? (0, _baseMatchesProperty.default)(value[0], value[1]) : (0, _baseMatches.default)(value);
-  }
-
-  return (0, _property.default)(value);
-}
-
-var _default = baseIteratee;
-exports.default = _default;
-},{"./_baseMatches.js":"../node_modules/lodash-es/_baseMatches.js","./_baseMatchesProperty.js":"../node_modules/lodash-es/_baseMatchesProperty.js","./identity.js":"../node_modules/lodash-es/identity.js","./isArray.js":"../node_modules/lodash-es/isArray.js","./property.js":"../node_modules/lodash-es/property.js"}],"../node_modules/lodash-es/_baseMap.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var _baseEach = _interopRequireDefault(require("./_baseEach.js"));
-
-var _isArrayLike = _interopRequireDefault(require("./isArrayLike.js"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-/**
- * The base implementation of `_.map` without support for iteratee shorthands.
- *
- * @private
- * @param {Array|Object} collection The collection to iterate over.
- * @param {Function} iteratee The function invoked per iteration.
- * @returns {Array} Returns the new mapped array.
- */
-function baseMap(collection, iteratee) {
-  var index = -1,
-      result = (0, _isArrayLike.default)(collection) ? Array(collection.length) : [];
-  (0, _baseEach.default)(collection, function (value, key, collection) {
-    result[++index] = iteratee(value, key, collection);
-  });
-  return result;
-}
-
-var _default = baseMap;
-exports.default = _default;
-},{"./_baseEach.js":"../node_modules/lodash-es/_baseEach.js","./isArrayLike.js":"../node_modules/lodash-es/isArrayLike.js"}],"../node_modules/lodash-es/map.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var _arrayMap = _interopRequireDefault(require("./_arrayMap.js"));
-
-var _baseIteratee = _interopRequireDefault(require("./_baseIteratee.js"));
-
-var _baseMap = _interopRequireDefault(require("./_baseMap.js"));
-
-var _isArray = _interopRequireDefault(require("./isArray.js"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-/**
- * Creates an array of values by running each element in `collection` thru
- * `iteratee`. The iteratee is invoked with three arguments:
- * (value, index|key, collection).
- *
- * Many lodash methods are guarded to work as iteratees for methods like
- * `_.every`, `_.filter`, `_.map`, `_.mapValues`, `_.reject`, and `_.some`.
- *
- * The guarded methods are:
- * `ary`, `chunk`, `curry`, `curryRight`, `drop`, `dropRight`, `every`,
- * `fill`, `invert`, `parseInt`, `random`, `range`, `rangeRight`, `repeat`,
- * `sampleSize`, `slice`, `some`, `sortBy`, `split`, `take`, `takeRight`,
- * `template`, `trim`, `trimEnd`, `trimStart`, and `words`
- *
- * @static
- * @memberOf _
- * @since 0.1.0
- * @category Collection
- * @param {Array|Object} collection The collection to iterate over.
- * @param {Function} [iteratee=_.identity] The function invoked per iteration.
- * @returns {Array} Returns the new mapped array.
- * @example
- *
- * function square(n) {
- *   return n * n;
- * }
- *
- * _.map([4, 8], square);
- * // => [16, 64]
- *
- * _.map({ 'a': 4, 'b': 8 }, square);
- * // => [16, 64] (iteration order is not guaranteed)
- *
- * var users = [
- *   { 'user': 'barney' },
- *   { 'user': 'fred' }
- * ];
- *
- * // The `_.property` iteratee shorthand.
- * _.map(users, 'user');
- * // => ['barney', 'fred']
- */
-function map(collection, iteratee) {
-  var func = (0, _isArray.default)(collection) ? _arrayMap.default : _baseMap.default;
-  return func(collection, (0, _baseIteratee.default)(iteratee, 3));
-}
-
-var _default = map;
-exports.default = _default;
-},{"./_arrayMap.js":"../node_modules/lodash-es/_arrayMap.js","./_baseIteratee.js":"../node_modules/lodash-es/_baseIteratee.js","./_baseMap.js":"../node_modules/lodash-es/_baseMap.js","./isArray.js":"../node_modules/lodash-es/isArray.js"}],"../node_modules/react-color/es/components/block/BlockSwatches.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = exports.BlockSwatches = void 0;
-
-var _react = _interopRequireDefault(require("react"));
-
-var _reactcss = _interopRequireDefault(require("reactcss"));
-
-var _map = _interopRequireDefault(require("lodash-es/map"));
-
-var _common = require("../common");
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var BlockSwatches = function BlockSwatches(_ref) {
+var BlockSwatches = exports.BlockSwatches = function BlockSwatches(_ref) {
   var colors = _ref.colors,
       onClick = _ref.onClick,
       onSwatchHover = _ref.onSwatchHover;
-  var styles = (0, _reactcss.default)({
+
+  var styles = (0, _reactcss2.default)({
     'default': {
       swatches: {
         marginRight: '-10px'
@@ -58822,56 +53859,64 @@ var BlockSwatches = function BlockSwatches(_ref) {
       }
     }
   });
-  return _react.default.createElement('div', {
-    style: styles.swatches
-  }, (0, _map.default)(colors, function (c) {
-    return _react.default.createElement(_common.Swatch, {
-      key: c,
-      color: c,
-      style: styles.swatch,
-      onClick: onClick,
-      onHover: onSwatchHover,
-      focusStyle: {
-        boxShadow: '0 0 4px ' + c
-      }
-    });
-  }), _react.default.createElement('div', {
-    style: styles.clear
-  }));
+
+  return _react2.default.createElement(
+    'div',
+    { style: styles.swatches },
+    (0, _map2.default)(colors, function (c) {
+      return _react2.default.createElement(_common.Swatch, {
+        key: c,
+        color: c,
+        style: styles.swatch,
+        onClick: onClick,
+        onHover: onSwatchHover,
+        focusStyle: {
+          boxShadow: '0 0 4px ' + c
+        }
+      });
+    }),
+    _react2.default.createElement('div', { style: styles.clear })
+  );
 };
 
-exports.BlockSwatches = BlockSwatches;
-var _default = BlockSwatches;
-exports.default = _default;
-},{"react":"../node_modules/react/index.js","reactcss":"../node_modules/reactcss/lib/index.js","lodash-es/map":"../node_modules/lodash-es/map.js","../common":"../node_modules/react-color/es/components/common/index.js"}],"../node_modules/react-color/es/components/block/Block.js":[function(require,module,exports) {
-"use strict";
+exports.default = BlockSwatches;
+},{"react":"../node_modules/react/index.js","reactcss":"../node_modules/reactcss/lib/index.js","lodash/map":"../node_modules/lodash/map.js","../common":"../node_modules/react-color/lib/components/common/index.js"}],"../node_modules/react-color/lib/components/block/Block.js":[function(require,module,exports) {
+'use strict';
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.default = exports.Block = void 0;
+exports.Block = undefined;
 
-var _react = _interopRequireDefault(require("react"));
+var _react = require('react');
 
-var _propTypes = _interopRequireDefault(require("prop-types"));
+var _react2 = _interopRequireDefault(_react);
 
-var _reactcss = _interopRequireDefault(require("reactcss"));
+var _propTypes = require('prop-types');
 
-var _merge = _interopRequireDefault(require("lodash-es/merge"));
+var _propTypes2 = _interopRequireDefault(_propTypes);
 
-var color = _interopRequireWildcard(require("../../helpers/color"));
+var _reactcss = require('reactcss');
 
-var _common = require("../common");
+var _reactcss2 = _interopRequireDefault(_reactcss);
 
-var _BlockSwatches = _interopRequireDefault(require("./BlockSwatches"));
+var _merge = require('lodash/merge');
 
-function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
+var _merge2 = _interopRequireDefault(_merge);
 
-function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+var _color = require('../../helpers/color');
+
+var _color2 = _interopRequireDefault(_color);
+
+var _common = require('../common');
+
+var _BlockSwatches = require('./BlockSwatches');
+
+var _BlockSwatches2 = _interopRequireDefault(_BlockSwatches);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var Block = function Block(_ref) {
+var Block = exports.Block = function Block(_ref) {
   var onChange = _ref.onChange,
       onSwatchHover = _ref.onSwatchHover,
       hex = _ref.hex,
@@ -58882,16 +53927,16 @@ var Block = function Block(_ref) {
       passedStyles = _ref$styles === undefined ? {} : _ref$styles,
       _ref$className = _ref.className,
       className = _ref$className === undefined ? '' : _ref$className;
-  var transparent = hex === 'transparent';
 
+  var transparent = hex === 'transparent';
   var handleChange = function handleChange(hexCode, e) {
-    color.isValidHex(hexCode) && onChange({
+    _color2.default.isValidHex(hexCode) && onChange({
       hex: hexCode,
       source: 'hex'
     }, e);
   };
 
-  var styles = (0, _reactcss.default)((0, _merge.default)({
+  var styles = (0, _reactcss2.default)((0, _merge2.default)({
     'default': {
       card: {
         width: width,
@@ -58914,7 +53959,7 @@ var Block = function Block(_ref) {
       },
       label: {
         fontSize: '18px',
-        color: color.getContrastingColor(hex),
+        color: _color2.default.getContrastingColor(hex),
         position: 'relative'
       },
       triangle: {
@@ -58946,42 +53991,42 @@ var Block = function Block(_ref) {
         display: 'none'
       }
     }
-  }, passedStyles), {
-    'hide-triangle': triangle === 'hide'
-  });
-  return _react.default.createElement('div', {
-    style: styles.card,
-    className: 'block-picker ' + className
-  }, _react.default.createElement('div', {
-    style: styles.triangle
-  }), _react.default.createElement('div', {
-    style: styles.head
-  }, transparent && _react.default.createElement(_common.Checkboard, {
-    borderRadius: '6px 6px 0 0'
-  }), _react.default.createElement('div', {
-    style: styles.label
-  }, hex)), _react.default.createElement('div', {
-    style: styles.body
-  }, _react.default.createElement(_BlockSwatches.default, {
-    colors: colors,
-    onClick: handleChange,
-    onSwatchHover: onSwatchHover
-  }), _react.default.createElement(_common.EditableInput, {
-    style: {
-      input: styles.input
-    },
-    value: hex,
-    onChange: handleChange
-  })));
+  }, passedStyles), { 'hide-triangle': triangle === 'hide' });
+
+  return _react2.default.createElement(
+    'div',
+    { style: styles.card, className: 'block-picker ' + className },
+    _react2.default.createElement('div', { style: styles.triangle }),
+    _react2.default.createElement(
+      'div',
+      { style: styles.head },
+      transparent && _react2.default.createElement(_common.Checkboard, { borderRadius: '6px 6px 0 0' }),
+      _react2.default.createElement(
+        'div',
+        { style: styles.label },
+        hex
+      )
+    ),
+    _react2.default.createElement(
+      'div',
+      { style: styles.body },
+      _react2.default.createElement(_BlockSwatches2.default, { colors: colors, onClick: handleChange, onSwatchHover: onSwatchHover }),
+      _react2.default.createElement(_common.EditableInput, {
+        style: { input: styles.input },
+        value: hex,
+        onChange: handleChange
+      })
+    )
+  );
 };
 
-exports.Block = Block;
 Block.propTypes = {
-  width: _propTypes.default.oneOfType([_propTypes.default.string, _propTypes.default.number]),
-  colors: _propTypes.default.arrayOf(_propTypes.default.string),
-  triangle: _propTypes.default.oneOf(['top', 'hide']),
-  styles: _propTypes.default.object
+  width: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number]),
+  colors: _propTypes2.default.arrayOf(_propTypes2.default.string),
+  triangle: _propTypes2.default.oneOf(['top', 'hide']),
+  styles: _propTypes2.default.object
 };
+
 Block.defaultProps = {
   width: 170,
   colors: ['#D9E3F0', '#F47373', '#697689', '#37D67A', '#2CCCE4', '#555555', '#dce775', '#ff8a65', '#ba68c8'],
@@ -58989,10 +54034,8 @@ Block.defaultProps = {
   styles: {}
 };
 
-var _default = (0, _common.ColorWrap)(Block);
-
-exports.default = _default;
-},{"react":"../node_modules/react/index.js","prop-types":"../node_modules/prop-types/index.js","reactcss":"../node_modules/reactcss/lib/index.js","lodash-es/merge":"../node_modules/lodash-es/merge.js","../../helpers/color":"../node_modules/react-color/es/helpers/color.js","../common":"../node_modules/react-color/es/components/common/index.js","./BlockSwatches":"../node_modules/react-color/es/components/block/BlockSwatches.js"}],"../node_modules/material-colors/dist/colors.es2015.js":[function(require,module,exports) {
+exports.default = (0, _common.ColorWrap)(Block);
+},{"react":"../node_modules/react/index.js","prop-types":"../node_modules/prop-types/index.js","reactcss":"../node_modules/reactcss/lib/index.js","lodash/merge":"../node_modules/lodash/merge.js","../../helpers/color":"../node_modules/react-color/lib/helpers/color.js","../common":"../node_modules/react-color/lib/components/common/index.js","./BlockSwatches":"../node_modules/react-color/lib/components/block/BlockSwatches.js"}],"../node_modules/material-colors/dist/colors.es2015.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -59366,27 +54409,27 @@ var _default = {
   black: black
 };
 exports.default = _default;
-},{}],"../node_modules/react-color/es/components/circle/CircleSwatch.js":[function(require,module,exports) {
-"use strict";
+},{}],"../node_modules/react-color/lib/components/circle/CircleSwatch.js":[function(require,module,exports) {
+'use strict';
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.default = exports.CircleSwatch = void 0;
+exports.CircleSwatch = undefined;
 
-var _react = _interopRequireDefault(require("react"));
+var _react = require('react');
 
-var _reactcss = _interopRequireWildcard(require("reactcss"));
+var _react2 = _interopRequireDefault(_react);
 
-var _common = require("../common");
+var _reactcss = require('reactcss');
 
-function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
+var _reactcss2 = _interopRequireDefault(_reactcss);
 
-function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+var _common = require('../common');
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var CircleSwatch = function CircleSwatch(_ref) {
+var CircleSwatch = exports.CircleSwatch = function CircleSwatch(_ref) {
   var color = _ref.color,
       onClick = _ref.onClick,
       onSwatchHover = _ref.onSwatchHover,
@@ -59394,7 +54437,8 @@ var CircleSwatch = function CircleSwatch(_ref) {
       active = _ref.active,
       circleSize = _ref.circleSize,
       circleSpacing = _ref.circleSpacing;
-  var styles = (0, _reactcss.default)({
+
+  var styles = (0, _reactcss2.default)({
     'default': {
       swatch: {
         width: circleSize,
@@ -59421,63 +54465,70 @@ var CircleSwatch = function CircleSwatch(_ref) {
         boxShadow: 'inset 0 0 0 3px ' + color
       }
     }
-  }, {
-    hover: hover,
-    active: active
-  });
-  return _react.default.createElement('div', {
-    style: styles.swatch
-  }, _react.default.createElement(_common.Swatch, {
-    style: styles.Swatch,
-    color: color,
-    onClick: onClick,
-    onHover: onSwatchHover,
-    focusStyle: {
-      boxShadow: styles.Swatch.boxShadow + ', 0 0 5px ' + color
-    }
-  }));
+  }, { hover: hover, active: active });
+
+  return _react2.default.createElement(
+    'div',
+    { style: styles.swatch },
+    _react2.default.createElement(_common.Swatch, {
+      style: styles.Swatch,
+      color: color,
+      onClick: onClick,
+      onHover: onSwatchHover,
+      focusStyle: { boxShadow: styles.Swatch.boxShadow + ', 0 0 5px ' + color }
+    })
+  );
 };
 
-exports.CircleSwatch = CircleSwatch;
 CircleSwatch.defaultProps = {
   circleSize: 28,
   circleSpacing: 14
 };
 
-var _default = (0, _reactcss.handleHover)(CircleSwatch);
-
-exports.default = _default;
-},{"react":"../node_modules/react/index.js","reactcss":"../node_modules/reactcss/lib/index.js","../common":"../node_modules/react-color/es/components/common/index.js"}],"../node_modules/react-color/es/components/circle/Circle.js":[function(require,module,exports) {
-"use strict";
+exports.default = (0, _reactcss.handleHover)(CircleSwatch);
+},{"react":"../node_modules/react/index.js","reactcss":"../node_modules/reactcss/lib/index.js","../common":"../node_modules/react-color/lib/components/common/index.js"}],"../node_modules/react-color/lib/components/circle/Circle.js":[function(require,module,exports) {
+'use strict';
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.default = exports.Circle = void 0;
+exports.Circle = undefined;
 
-var _react = _interopRequireDefault(require("react"));
+var _react = require('react');
 
-var _propTypes = _interopRequireDefault(require("prop-types"));
+var _react2 = _interopRequireDefault(_react);
 
-var _reactcss = _interopRequireDefault(require("reactcss"));
+var _propTypes = require('prop-types');
 
-var _map = _interopRequireDefault(require("lodash-es/map"));
+var _propTypes2 = _interopRequireDefault(_propTypes);
 
-var _merge = _interopRequireDefault(require("lodash-es/merge"));
+var _reactcss = require('reactcss');
 
-var material = _interopRequireWildcard(require("material-colors"));
+var _reactcss2 = _interopRequireDefault(_reactcss);
 
-var _common = require("../common");
+var _map = require('lodash/map');
 
-var _CircleSwatch = _interopRequireDefault(require("./CircleSwatch"));
+var _map2 = _interopRequireDefault(_map);
 
-function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
+var _merge = require('lodash/merge');
 
-function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+var _merge2 = _interopRequireDefault(_merge);
+
+var _materialColors = require('material-colors');
+
+var material = _interopRequireWildcard(_materialColors);
+
+var _common = require('../common');
+
+var _CircleSwatch = require('./CircleSwatch');
+
+var _CircleSwatch2 = _interopRequireDefault(_CircleSwatch);
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var Circle = function Circle(_ref) {
+var Circle = exports.Circle = function Circle(_ref) {
   var width = _ref.width,
       onChange = _ref.onChange,
       onSwatchHover = _ref.onSwatchHover,
@@ -59489,7 +54540,8 @@ var Circle = function Circle(_ref) {
       circleSpacing = _ref.circleSpacing,
       _ref$className = _ref.className,
       className = _ref$className === undefined ? '' : _ref$className;
-  var styles = (0, _reactcss.default)((0, _merge.default)({
+
+  var styles = (0, _reactcss2.default)((0, _merge2.default)({
     'default': {
       card: {
         width: width,
@@ -59502,35 +54554,33 @@ var Circle = function Circle(_ref) {
   }, passedStyles));
 
   var handleChange = function handleChange(hexCode, e) {
-    return onChange({
-      hex: hexCode,
-      source: 'hex'
-    }, e);
+    return onChange({ hex: hexCode, source: 'hex' }, e);
   };
 
-  return _react.default.createElement('div', {
-    style: styles.card,
-    className: 'circle-picker ' + className
-  }, (0, _map.default)(colors, function (c) {
-    return _react.default.createElement(_CircleSwatch.default, {
-      key: c,
-      color: c,
-      onClick: handleChange,
-      onSwatchHover: onSwatchHover,
-      active: hex === c.toLowerCase(),
-      circleSize: circleSize,
-      circleSpacing: circleSpacing
-    });
-  }));
+  return _react2.default.createElement(
+    'div',
+    { style: styles.card, className: 'circle-picker ' + className },
+    (0, _map2.default)(colors, function (c) {
+      return _react2.default.createElement(_CircleSwatch2.default, {
+        key: c,
+        color: c,
+        onClick: handleChange,
+        onSwatchHover: onSwatchHover,
+        active: hex === c.toLowerCase(),
+        circleSize: circleSize,
+        circleSpacing: circleSpacing
+      });
+    })
+  );
 };
 
-exports.Circle = Circle;
 Circle.propTypes = {
-  width: _propTypes.default.oneOfType([_propTypes.default.string, _propTypes.default.number]),
-  circleSize: _propTypes.default.number,
-  circleSpacing: _propTypes.default.number,
-  styles: _propTypes.default.object
+  width: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number]),
+  circleSize: _propTypes2.default.number,
+  circleSpacing: _propTypes2.default.number,
+  styles: _propTypes2.default.object
 };
+
 Circle.defaultProps = {
   width: 252,
   circleSize: 28,
@@ -59539,17 +54589,8 @@ Circle.defaultProps = {
   styles: {}
 };
 
-var _default = (0, _common.ColorWrap)(Circle);
-
-exports.default = _default;
-},{"react":"../node_modules/react/index.js","prop-types":"../node_modules/prop-types/index.js","reactcss":"../node_modules/reactcss/lib/index.js","lodash-es/map":"../node_modules/lodash-es/map.js","lodash-es/merge":"../node_modules/lodash-es/merge.js","material-colors":"../node_modules/material-colors/dist/colors.es2015.js","../common":"../node_modules/react-color/es/components/common/index.js","./CircleSwatch":"../node_modules/react-color/es/components/circle/CircleSwatch.js"}],"../node_modules/lodash-es/isUndefined.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
+exports.default = (0, _common.ColorWrap)(Circle);
+},{"react":"../node_modules/react/index.js","prop-types":"../node_modules/prop-types/index.js","reactcss":"../node_modules/reactcss/lib/index.js","lodash/map":"../node_modules/lodash/map.js","lodash/merge":"../node_modules/lodash/merge.js","material-colors":"../node_modules/material-colors/dist/colors.es2015.js","../common":"../node_modules/react-color/lib/components/common/index.js","./CircleSwatch":"../node_modules/react-color/lib/components/circle/CircleSwatch.js"}],"../node_modules/lodash/isUndefined.js":[function(require,module,exports) {
 /**
  * Checks if `value` is `undefined`.
  *
@@ -59571,8 +54612,8 @@ function isUndefined(value) {
   return value === undefined;
 }
 
-var _default = isUndefined;
-exports.default = _default;
+module.exports = isUndefined;
+
 },{}],"../node_modules/@icons/material/UnfoldMoreHorizontalIcon.js":[function(require,module,exports) {
 'use strict';
 
@@ -59612,83 +54653,47 @@ exports.default = function (_ref) {
     _react2.default.createElement('path', { d: 'M12,18.17L8.83,15L7.42,16.41L12,21L16.59,16.41L15.17,15M12,5.83L15.17,9L16.58,7.59L12,3L7.41,7.59L8.83,9L12,5.83Z' })
   );
 };
-},{"react":"../node_modules/react/index.js"}],"../node_modules/react-color/es/components/chrome/ChromeFields.js":[function(require,module,exports) {
-"use strict";
+},{"react":"../node_modules/react/index.js"}],"../node_modules/react-color/lib/components/chrome/ChromeFields.js":[function(require,module,exports) {
+'use strict';
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.default = exports.ChromeFields = void 0;
+exports.ChromeFields = undefined;
 
-var _react = _interopRequireDefault(require("react"));
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _reactcss = _interopRequireDefault(require("reactcss"));
+var _react = require('react');
 
-var color = _interopRequireWildcard(require("../../helpers/color"));
+var _react2 = _interopRequireDefault(_react);
 
-var _isUndefined = _interopRequireDefault(require("lodash-es/isUndefined"));
+var _reactcss = require('reactcss');
 
-var _common = require("../common");
+var _reactcss2 = _interopRequireDefault(_reactcss);
 
-var _UnfoldMoreHorizontalIcon = _interopRequireDefault(require("@icons/material/UnfoldMoreHorizontalIcon"));
+var _color = require('../../helpers/color');
 
-function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
+var _color2 = _interopRequireDefault(_color);
 
-function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+var _isUndefined = require('lodash/isUndefined');
+
+var _isUndefined2 = _interopRequireDefault(_isUndefined);
+
+var _common = require('../common');
+
+var _UnfoldMoreHorizontalIcon = require('@icons/material/UnfoldMoreHorizontalIcon');
+
+var _UnfoldMoreHorizontalIcon2 = _interopRequireDefault(_UnfoldMoreHorizontalIcon);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var _createClass = function () {
-  function defineProperties(target, props) {
-    for (var i = 0; i < props.length; i++) {
-      var descriptor = props[i];
-      descriptor.enumerable = descriptor.enumerable || false;
-      descriptor.configurable = true;
-      if ("value" in descriptor) descriptor.writable = true;
-      Object.defineProperty(target, descriptor.key, descriptor);
-    }
-  }
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-  return function (Constructor, protoProps, staticProps) {
-    if (protoProps) defineProperties(Constructor.prototype, protoProps);
-    if (staticProps) defineProperties(Constructor, staticProps);
-    return Constructor;
-  };
-}();
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
-function _classCallCheck(instance, Constructor) {
-  if (!(instance instanceof Constructor)) {
-    throw new TypeError("Cannot call a class as a function");
-  }
-}
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } /* eslint-disable react/no-did-mount-set-state, no-param-reassign */
 
-function _possibleConstructorReturn(self, call) {
-  if (!self) {
-    throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
-  }
-
-  return call && (typeof call === "object" || typeof call === "function") ? call : self;
-}
-
-function _inherits(subClass, superClass) {
-  if (typeof superClass !== "function" && superClass !== null) {
-    throw new TypeError("Super expression must either be null or a function, not " + typeof superClass);
-  }
-
-  subClass.prototype = Object.create(superClass && superClass.prototype, {
-    constructor: {
-      value: subClass,
-      enumerable: false,
-      writable: true,
-      configurable: true
-    }
-  });
-  if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass;
-}
-/* eslint-disable react/no-did-mount-set-state, no-param-reassign */
-
-
-var ChromeFields = function (_React$Component) {
+var ChromeFields = exports.ChromeFields = function (_React$Component) {
   _inherits(ChromeFields, _React$Component);
 
   function ChromeFields(props) {
@@ -59698,29 +54703,21 @@ var ChromeFields = function (_React$Component) {
 
     _this.toggleViews = function () {
       if (_this.state.view === 'hex') {
-        _this.setState({
-          view: 'rgb'
-        });
+        _this.setState({ view: 'rgb' });
       } else if (_this.state.view === 'rgb') {
-        _this.setState({
-          view: 'hsl'
-        });
+        _this.setState({ view: 'hsl' });
       } else if (_this.state.view === 'hsl') {
         if (_this.props.hsl.a === 1) {
-          _this.setState({
-            view: 'hex'
-          });
+          _this.setState({ view: 'hex' });
         } else {
-          _this.setState({
-            view: 'rgb'
-          });
+          _this.setState({ view: 'rgb' });
         }
       }
     };
 
     _this.handleChange = function (data, e) {
       if (data.hex) {
-        color.isValidHex(data.hex) && _this.props.onChange({
+        _color2.default.isValidHex(data.hex) && _this.props.onChange({
           hex: data.hex,
           source: 'hex'
         }, e);
@@ -59750,12 +54747,11 @@ var ChromeFields = function (_React$Component) {
         if (typeof data.s === 'string' && data.s.includes('%')) {
           data.s = data.s.replace('%', '');
         }
-
         if (typeof data.l === 'string' && data.l.includes('%')) {
           data.l = data.l.replace('%', '');
-        } // We store HSL as a unit interval so we need to override the 1 input to 0.01
+        }
 
-
+        // We store HSL as a unit interval so we need to override the 1 input to 0.01
         if (data.s == 1) {
           data.s = 0.01;
         } else if (data.l == 1) {
@@ -59764,8 +54760,8 @@ var ChromeFields = function (_React$Component) {
 
         _this.props.onChange({
           h: data.h || _this.props.hsl.h,
-          s: Number(!(0, _isUndefined.default)(data.s) ? data.s : _this.props.hsl.s),
-          l: Number(!(0, _isUndefined.default)(data.l) ? data.l : _this.props.hsl.l),
+          s: Number(!(0, _isUndefined2.default)(data.s) ? data.s : _this.props.hsl.s),
+          l: Number(!(0, _isUndefined2.default)(data.l) ? data.l : _this.props.hsl.l),
           source: 'hsl'
         }, e);
       }
@@ -59788,7 +54784,6 @@ var ChromeFields = function (_React$Component) {
         view: props.view
       };
     }
-
     return _this;
   }
 
@@ -59797,7 +54792,7 @@ var ChromeFields = function (_React$Component) {
     value: function render() {
       var _this2 = this;
 
-      var styles = (0, _reactcss.default)({
+      var styles = (0, _reactcss2.default)({
         'default': {
           wrap: {
             paddingTop: '16px',
@@ -59870,173 +54865,176 @@ var ChromeFields = function (_React$Component) {
           }
         }
       }, this.props, this.state);
-      var fields = void 0;
 
+      var fields = void 0;
       if (this.state.view === 'hex') {
-        fields = _react.default.createElement('div', {
-          style: styles.fields,
-          className: 'flexbox-fix'
-        }, _react.default.createElement('div', {
-          style: styles.field
-        }, _react.default.createElement(_common.EditableInput, {
-          style: {
-            input: styles.input,
-            label: styles.label
-          },
-          label: 'hex',
-          value: this.props.hex,
-          onChange: this.handleChange
-        })));
+        fields = _react2.default.createElement(
+          'div',
+          { style: styles.fields, className: 'flexbox-fix' },
+          _react2.default.createElement(
+            'div',
+            { style: styles.field },
+            _react2.default.createElement(_common.EditableInput, {
+              style: { input: styles.input, label: styles.label },
+              label: 'hex', value: this.props.hex,
+              onChange: this.handleChange
+            })
+          )
+        );
       } else if (this.state.view === 'rgb') {
-        fields = _react.default.createElement('div', {
-          style: styles.fields,
-          className: 'flexbox-fix'
-        }, _react.default.createElement('div', {
-          style: styles.field
-        }, _react.default.createElement(_common.EditableInput, {
-          style: {
-            input: styles.input,
-            label: styles.label
-          },
-          label: 'r',
-          value: this.props.rgb.r,
-          onChange: this.handleChange
-        })), _react.default.createElement('div', {
-          style: styles.field
-        }, _react.default.createElement(_common.EditableInput, {
-          style: {
-            input: styles.input,
-            label: styles.label
-          },
-          label: 'g',
-          value: this.props.rgb.g,
-          onChange: this.handleChange
-        })), _react.default.createElement('div', {
-          style: styles.field
-        }, _react.default.createElement(_common.EditableInput, {
-          style: {
-            input: styles.input,
-            label: styles.label
-          },
-          label: 'b',
-          value: this.props.rgb.b,
-          onChange: this.handleChange
-        })), _react.default.createElement('div', {
-          style: styles.alpha
-        }, _react.default.createElement(_common.EditableInput, {
-          style: {
-            input: styles.input,
-            label: styles.label
-          },
-          label: 'a',
-          value: this.props.rgb.a,
-          arrowOffset: 0.01,
-          onChange: this.handleChange
-        })));
+        fields = _react2.default.createElement(
+          'div',
+          { style: styles.fields, className: 'flexbox-fix' },
+          _react2.default.createElement(
+            'div',
+            { style: styles.field },
+            _react2.default.createElement(_common.EditableInput, {
+              style: { input: styles.input, label: styles.label },
+              label: 'r',
+              value: this.props.rgb.r,
+              onChange: this.handleChange
+            })
+          ),
+          _react2.default.createElement(
+            'div',
+            { style: styles.field },
+            _react2.default.createElement(_common.EditableInput, {
+              style: { input: styles.input, label: styles.label },
+              label: 'g',
+              value: this.props.rgb.g,
+              onChange: this.handleChange
+            })
+          ),
+          _react2.default.createElement(
+            'div',
+            { style: styles.field },
+            _react2.default.createElement(_common.EditableInput, {
+              style: { input: styles.input, label: styles.label },
+              label: 'b',
+              value: this.props.rgb.b,
+              onChange: this.handleChange
+            })
+          ),
+          _react2.default.createElement(
+            'div',
+            { style: styles.alpha },
+            _react2.default.createElement(_common.EditableInput, {
+              style: { input: styles.input, label: styles.label },
+              label: 'a',
+              value: this.props.rgb.a,
+              arrowOffset: 0.01,
+              onChange: this.handleChange
+            })
+          )
+        );
       } else if (this.state.view === 'hsl') {
-        fields = _react.default.createElement('div', {
-          style: styles.fields,
-          className: 'flexbox-fix'
-        }, _react.default.createElement('div', {
-          style: styles.field
-        }, _react.default.createElement(_common.EditableInput, {
-          style: {
-            input: styles.input,
-            label: styles.label
-          },
-          label: 'h',
-          value: Math.round(this.props.hsl.h),
-          onChange: this.handleChange
-        })), _react.default.createElement('div', {
-          style: styles.field
-        }, _react.default.createElement(_common.EditableInput, {
-          style: {
-            input: styles.input,
-            label: styles.label
-          },
-          label: 's',
-          value: Math.round(this.props.hsl.s * 100) + '%',
-          onChange: this.handleChange
-        })), _react.default.createElement('div', {
-          style: styles.field
-        }, _react.default.createElement(_common.EditableInput, {
-          style: {
-            input: styles.input,
-            label: styles.label
-          },
-          label: 'l',
-          value: Math.round(this.props.hsl.l * 100) + '%',
-          onChange: this.handleChange
-        })), _react.default.createElement('div', {
-          style: styles.alpha
-        }, _react.default.createElement(_common.EditableInput, {
-          style: {
-            input: styles.input,
-            label: styles.label
-          },
-          label: 'a',
-          value: this.props.hsl.a,
-          arrowOffset: 0.01,
-          onChange: this.handleChange
-        })));
+        fields = _react2.default.createElement(
+          'div',
+          { style: styles.fields, className: 'flexbox-fix' },
+          _react2.default.createElement(
+            'div',
+            { style: styles.field },
+            _react2.default.createElement(_common.EditableInput, {
+              style: { input: styles.input, label: styles.label },
+              label: 'h',
+              value: Math.round(this.props.hsl.h),
+              onChange: this.handleChange
+            })
+          ),
+          _react2.default.createElement(
+            'div',
+            { style: styles.field },
+            _react2.default.createElement(_common.EditableInput, {
+              style: { input: styles.input, label: styles.label },
+              label: 's',
+              value: Math.round(this.props.hsl.s * 100) + '%',
+              onChange: this.handleChange
+            })
+          ),
+          _react2.default.createElement(
+            'div',
+            { style: styles.field },
+            _react2.default.createElement(_common.EditableInput, {
+              style: { input: styles.input, label: styles.label },
+              label: 'l',
+              value: Math.round(this.props.hsl.l * 100) + '%',
+              onChange: this.handleChange
+            })
+          ),
+          _react2.default.createElement(
+            'div',
+            { style: styles.alpha },
+            _react2.default.createElement(_common.EditableInput, {
+              style: { input: styles.input, label: styles.label },
+              label: 'a',
+              value: this.props.hsl.a,
+              arrowOffset: 0.01,
+              onChange: this.handleChange
+            })
+          )
+        );
       }
 
-      return _react.default.createElement('div', {
-        style: styles.wrap,
-        className: 'flexbox-fix'
-      }, fields, _react.default.createElement('div', {
-        style: styles.toggle
-      }, _react.default.createElement('div', {
-        style: styles.icon,
-        onClick: this.toggleViews,
-        ref: function ref(icon) {
-          return _this2.icon = icon;
-        }
-      }, _react.default.createElement(_UnfoldMoreHorizontalIcon.default, {
-        style: styles.svg,
-        onMouseOver: this.showHighlight,
-        onMouseEnter: this.showHighlight,
-        onMouseOut: this.hideHighlight
-      }))));
+      return _react2.default.createElement(
+        'div',
+        { style: styles.wrap, className: 'flexbox-fix' },
+        fields,
+        _react2.default.createElement(
+          'div',
+          { style: styles.toggle },
+          _react2.default.createElement(
+            'div',
+            { style: styles.icon, onClick: this.toggleViews, ref: function ref(icon) {
+                return _this2.icon = icon;
+              } },
+            _react2.default.createElement(_UnfoldMoreHorizontalIcon2.default, {
+              style: styles.svg,
+              onMouseOver: this.showHighlight,
+              onMouseEnter: this.showHighlight,
+              onMouseOut: this.hideHighlight
+            })
+          )
+        )
+      );
     }
   }], [{
     key: 'getDerivedStateFromProps',
     value: function getDerivedStateFromProps(nextProps, state) {
       if (nextProps.hsl.a !== 1 && state.view === 'hex') {
-        return {
-          view: 'rgb'
-        };
+        return { view: 'rgb' };
       }
-
       return null;
     }
   }]);
 
   return ChromeFields;
-}(_react.default.Component);
+}(_react2.default.Component);
 
-exports.ChromeFields = ChromeFields;
 ChromeFields.defaultProps = {
   view: "hex"
 };
-var _default = ChromeFields;
-exports.default = _default;
-},{"react":"../node_modules/react/index.js","reactcss":"../node_modules/reactcss/lib/index.js","../../helpers/color":"../node_modules/react-color/es/helpers/color.js","lodash-es/isUndefined":"../node_modules/lodash-es/isUndefined.js","../common":"../node_modules/react-color/es/components/common/index.js","@icons/material/UnfoldMoreHorizontalIcon":"../node_modules/@icons/material/UnfoldMoreHorizontalIcon.js"}],"../node_modules/react-color/es/components/chrome/ChromePointer.js":[function(require,module,exports) {
-"use strict";
+
+exports.default = ChromeFields;
+},{"react":"../node_modules/react/index.js","reactcss":"../node_modules/reactcss/lib/index.js","../../helpers/color":"../node_modules/react-color/lib/helpers/color.js","lodash/isUndefined":"../node_modules/lodash/isUndefined.js","../common":"../node_modules/react-color/lib/components/common/index.js","@icons/material/UnfoldMoreHorizontalIcon":"../node_modules/@icons/material/UnfoldMoreHorizontalIcon.js"}],"../node_modules/react-color/lib/components/chrome/ChromePointer.js":[function(require,module,exports) {
+'use strict';
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.default = exports.ChromePointer = void 0;
+exports.ChromePointer = undefined;
 
-var _react = _interopRequireDefault(require("react"));
+var _react = require('react');
 
-var _reactcss = _interopRequireDefault(require("reactcss"));
+var _react2 = _interopRequireDefault(_react);
+
+var _reactcss = require('reactcss');
+
+var _reactcss2 = _interopRequireDefault(_reactcss);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var ChromePointer = function ChromePointer() {
-  var styles = (0, _reactcss.default)({
+var ChromePointer = exports.ChromePointer = function ChromePointer() {
+  var styles = (0, _reactcss2.default)({
     'default': {
       picker: {
         width: '12px',
@@ -60048,30 +55046,31 @@ var ChromePointer = function ChromePointer() {
       }
     }
   });
-  return _react.default.createElement('div', {
-    style: styles.picker
-  });
+
+  return _react2.default.createElement('div', { style: styles.picker });
 };
 
-exports.ChromePointer = ChromePointer;
-var _default = ChromePointer;
-exports.default = _default;
-},{"react":"../node_modules/react/index.js","reactcss":"../node_modules/reactcss/lib/index.js"}],"../node_modules/react-color/es/components/chrome/ChromePointerCircle.js":[function(require,module,exports) {
-"use strict";
+exports.default = ChromePointer;
+},{"react":"../node_modules/react/index.js","reactcss":"../node_modules/reactcss/lib/index.js"}],"../node_modules/react-color/lib/components/chrome/ChromePointerCircle.js":[function(require,module,exports) {
+'use strict';
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.default = exports.ChromePointerCircle = void 0;
+exports.ChromePointerCircle = undefined;
 
-var _react = _interopRequireDefault(require("react"));
+var _react = require('react');
 
-var _reactcss = _interopRequireDefault(require("reactcss"));
+var _react2 = _interopRequireDefault(_react);
+
+var _reactcss = require('reactcss');
+
+var _reactcss2 = _interopRequireDefault(_reactcss);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var ChromePointerCircle = function ChromePointerCircle() {
-  var styles = (0, _reactcss.default)({
+var ChromePointerCircle = exports.ChromePointerCircle = function ChromePointerCircle() {
+  var styles = (0, _reactcss2.default)({
     'default': {
       picker: {
         width: '12px',
@@ -60082,41 +55081,52 @@ var ChromePointerCircle = function ChromePointerCircle() {
       }
     }
   });
-  return _react.default.createElement('div', {
-    style: styles.picker
-  });
+
+  return _react2.default.createElement('div', { style: styles.picker });
 };
 
-exports.ChromePointerCircle = ChromePointerCircle;
-var _default = ChromePointerCircle;
-exports.default = _default;
-},{"react":"../node_modules/react/index.js","reactcss":"../node_modules/reactcss/lib/index.js"}],"../node_modules/react-color/es/components/chrome/Chrome.js":[function(require,module,exports) {
-"use strict";
+exports.default = ChromePointerCircle;
+},{"react":"../node_modules/react/index.js","reactcss":"../node_modules/reactcss/lib/index.js"}],"../node_modules/react-color/lib/components/chrome/Chrome.js":[function(require,module,exports) {
+'use strict';
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.default = exports.Chrome = void 0;
+exports.Chrome = undefined;
 
-var _react = _interopRequireDefault(require("react"));
+var _react = require('react');
 
-var _propTypes = _interopRequireDefault(require("prop-types"));
+var _react2 = _interopRequireDefault(_react);
 
-var _reactcss = _interopRequireDefault(require("reactcss"));
+var _propTypes = require('prop-types');
 
-var _merge = _interopRequireDefault(require("lodash-es/merge"));
+var _propTypes2 = _interopRequireDefault(_propTypes);
 
-var _common = require("../common");
+var _reactcss = require('reactcss');
 
-var _ChromeFields = _interopRequireDefault(require("./ChromeFields"));
+var _reactcss2 = _interopRequireDefault(_reactcss);
 
-var _ChromePointer = _interopRequireDefault(require("./ChromePointer"));
+var _merge = require('lodash/merge');
 
-var _ChromePointerCircle = _interopRequireDefault(require("./ChromePointerCircle"));
+var _merge2 = _interopRequireDefault(_merge);
+
+var _common = require('../common');
+
+var _ChromeFields = require('./ChromeFields');
+
+var _ChromeFields2 = _interopRequireDefault(_ChromeFields);
+
+var _ChromePointer = require('./ChromePointer');
+
+var _ChromePointer2 = _interopRequireDefault(_ChromePointer);
+
+var _ChromePointerCircle = require('./ChromePointerCircle');
+
+var _ChromePointerCircle2 = _interopRequireDefault(_ChromePointerCircle);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var Chrome = function Chrome(_ref) {
+var Chrome = exports.Chrome = function Chrome(_ref) {
   var width = _ref.width,
       onChange = _ref.onChange,
       disableAlpha = _ref.disableAlpha,
@@ -60130,7 +55140,8 @@ var Chrome = function Chrome(_ref) {
       _ref$className = _ref.className,
       className = _ref$className === undefined ? '' : _ref$className,
       defaultView = _ref.defaultView;
-  var styles = (0, _reactcss.default)((0, _merge.default)({
+
+  var styles = (0, _reactcss2.default)((0, _merge2.default)({
     'default': {
       picker: {
         width: width,
@@ -60209,106 +55220,123 @@ var Chrome = function Chrome(_ref) {
         marginTop: '0px'
       }
     }
-  }, passedStyles), {
-    disableAlpha: disableAlpha
-  });
-  return _react.default.createElement('div', {
-    style: styles.picker,
-    className: 'chrome-picker ' + className
-  }, _react.default.createElement('div', {
-    style: styles.saturation
-  }, _react.default.createElement(_common.Saturation, {
-    style: styles.Saturation,
-    hsl: hsl,
-    hsv: hsv,
-    pointer: _ChromePointerCircle.default,
-    onChange: onChange
-  })), _react.default.createElement('div', {
-    style: styles.body
-  }, _react.default.createElement('div', {
-    style: styles.controls,
-    className: 'flexbox-fix'
-  }, _react.default.createElement('div', {
-    style: styles.color
-  }, _react.default.createElement('div', {
-    style: styles.swatch
-  }, _react.default.createElement('div', {
-    style: styles.active
-  }), _react.default.createElement(_common.Checkboard, {
-    renderers: renderers
-  }))), _react.default.createElement('div', {
-    style: styles.toggles
-  }, _react.default.createElement('div', {
-    style: styles.hue
-  }, _react.default.createElement(_common.Hue, {
-    style: styles.Hue,
-    hsl: hsl,
-    pointer: _ChromePointer.default,
-    onChange: onChange
-  })), _react.default.createElement('div', {
-    style: styles.alpha
-  }, _react.default.createElement(_common.Alpha, {
-    style: styles.Alpha,
-    rgb: rgb,
-    hsl: hsl,
-    pointer: _ChromePointer.default,
-    renderers: renderers,
-    onChange: onChange
-  })))), _react.default.createElement(_ChromeFields.default, {
-    rgb: rgb,
-    hsl: hsl,
-    hex: hex,
-    view: defaultView,
-    onChange: onChange,
-    disableAlpha: disableAlpha
-  })));
+  }, passedStyles), { disableAlpha: disableAlpha });
+
+  return _react2.default.createElement(
+    'div',
+    { style: styles.picker, className: 'chrome-picker ' + className },
+    _react2.default.createElement(
+      'div',
+      { style: styles.saturation },
+      _react2.default.createElement(_common.Saturation, {
+        style: styles.Saturation,
+        hsl: hsl,
+        hsv: hsv,
+        pointer: _ChromePointerCircle2.default,
+        onChange: onChange
+      })
+    ),
+    _react2.default.createElement(
+      'div',
+      { style: styles.body },
+      _react2.default.createElement(
+        'div',
+        { style: styles.controls, className: 'flexbox-fix' },
+        _react2.default.createElement(
+          'div',
+          { style: styles.color },
+          _react2.default.createElement(
+            'div',
+            { style: styles.swatch },
+            _react2.default.createElement('div', { style: styles.active }),
+            _react2.default.createElement(_common.Checkboard, { renderers: renderers })
+          )
+        ),
+        _react2.default.createElement(
+          'div',
+          { style: styles.toggles },
+          _react2.default.createElement(
+            'div',
+            { style: styles.hue },
+            _react2.default.createElement(_common.Hue, {
+              style: styles.Hue,
+              hsl: hsl,
+              pointer: _ChromePointer2.default,
+              onChange: onChange
+            })
+          ),
+          _react2.default.createElement(
+            'div',
+            { style: styles.alpha },
+            _react2.default.createElement(_common.Alpha, {
+              style: styles.Alpha,
+              rgb: rgb,
+              hsl: hsl,
+              pointer: _ChromePointer2.default,
+              renderers: renderers,
+              onChange: onChange
+            })
+          )
+        )
+      ),
+      _react2.default.createElement(_ChromeFields2.default, {
+        rgb: rgb,
+        hsl: hsl,
+        hex: hex,
+        view: defaultView,
+        onChange: onChange,
+        disableAlpha: disableAlpha
+      })
+    )
+  );
 };
 
-exports.Chrome = Chrome;
 Chrome.propTypes = {
-  width: _propTypes.default.oneOfType([_propTypes.default.string, _propTypes.default.number]),
-  disableAlpha: _propTypes.default.bool,
-  styles: _propTypes.default.object,
-  defaultView: _propTypes.default.oneOf(["hex", "rgb", "hsl"])
+  width: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number]),
+  disableAlpha: _propTypes2.default.bool,
+  styles: _propTypes2.default.object,
+  defaultView: _propTypes2.default.oneOf(["hex", "rgb", "hsl"])
 };
+
 Chrome.defaultProps = {
   width: 225,
   disableAlpha: false,
   styles: {}
 };
 
-var _default = (0, _common.ColorWrap)(Chrome);
-
-exports.default = _default;
-},{"react":"../node_modules/react/index.js","prop-types":"../node_modules/prop-types/index.js","reactcss":"../node_modules/reactcss/lib/index.js","lodash-es/merge":"../node_modules/lodash-es/merge.js","../common":"../node_modules/react-color/es/components/common/index.js","./ChromeFields":"../node_modules/react-color/es/components/chrome/ChromeFields.js","./ChromePointer":"../node_modules/react-color/es/components/chrome/ChromePointer.js","./ChromePointerCircle":"../node_modules/react-color/es/components/chrome/ChromePointerCircle.js"}],"../node_modules/react-color/es/components/compact/CompactColor.js":[function(require,module,exports) {
-"use strict";
+exports.default = (0, _common.ColorWrap)(Chrome);
+},{"react":"../node_modules/react/index.js","prop-types":"../node_modules/prop-types/index.js","reactcss":"../node_modules/reactcss/lib/index.js","lodash/merge":"../node_modules/lodash/merge.js","../common":"../node_modules/react-color/lib/components/common/index.js","./ChromeFields":"../node_modules/react-color/lib/components/chrome/ChromeFields.js","./ChromePointer":"../node_modules/react-color/lib/components/chrome/ChromePointer.js","./ChromePointerCircle":"../node_modules/react-color/lib/components/chrome/ChromePointerCircle.js"}],"../node_modules/react-color/lib/components/compact/CompactColor.js":[function(require,module,exports) {
+'use strict';
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.default = exports.CompactColor = void 0;
+exports.CompactColor = undefined;
 
-var _react = _interopRequireDefault(require("react"));
+var _react = require('react');
 
-var _reactcss = _interopRequireDefault(require("reactcss"));
+var _react2 = _interopRequireDefault(_react);
 
-var colorUtils = _interopRequireWildcard(require("../../helpers/color"));
+var _reactcss = require('reactcss');
 
-var _common = require("../common");
+var _reactcss2 = _interopRequireDefault(_reactcss);
 
-function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
+var _color = require('../../helpers/color');
 
-function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+var _color2 = _interopRequireDefault(_color);
+
+var _common = require('../common');
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var CompactColor = function CompactColor(_ref) {
+var CompactColor = exports.CompactColor = function CompactColor(_ref) {
   var color = _ref.color,
       _ref$onClick = _ref.onClick,
       onClick = _ref$onClick === undefined ? function () {} : _ref$onClick,
       onSwatchHover = _ref.onSwatchHover,
       active = _ref.active;
-  var styles = (0, _reactcss.default)({
+
+  var styles = (0, _reactcss2.default)({
     'default': {
       color: {
         background: color,
@@ -60322,7 +55350,7 @@ var CompactColor = function CompactColor(_ref) {
       },
       dot: {
         absolute: '5px 5px 5px 5px',
-        background: colorUtils.getContrastingColor(color),
+        background: _color2.default.getContrastingColor(color),
         borderRadius: '50%',
         opacity: '0'
       }
@@ -60345,48 +55373,48 @@ var CompactColor = function CompactColor(_ref) {
         background: '#000'
       }
     }
-  }, {
-    active: active,
-    'color-#FFFFFF': color === '#FFFFFF',
-    'transparent': color === 'transparent'
-  });
-  return _react.default.createElement(_common.Swatch, {
-    style: styles.color,
-    color: color,
-    onClick: onClick,
-    onHover: onSwatchHover,
-    focusStyle: {
-      boxShadow: '0 0 4px ' + color
-    }
-  }, _react.default.createElement('div', {
-    style: styles.dot
-  }));
+  }, { active: active, 'color-#FFFFFF': color === '#FFFFFF', 'transparent': color === 'transparent' });
+
+  return _react2.default.createElement(
+    _common.Swatch,
+    {
+      style: styles.color,
+      color: color,
+      onClick: onClick,
+      onHover: onSwatchHover,
+      focusStyle: { boxShadow: '0 0 4px ' + color }
+    },
+    _react2.default.createElement('div', { style: styles.dot })
+  );
 };
 
-exports.CompactColor = CompactColor;
-var _default = CompactColor;
-exports.default = _default;
-},{"react":"../node_modules/react/index.js","reactcss":"../node_modules/reactcss/lib/index.js","../../helpers/color":"../node_modules/react-color/es/helpers/color.js","../common":"../node_modules/react-color/es/components/common/index.js"}],"../node_modules/react-color/es/components/compact/CompactFields.js":[function(require,module,exports) {
-"use strict";
+exports.default = CompactColor;
+},{"react":"../node_modules/react/index.js","reactcss":"../node_modules/reactcss/lib/index.js","../../helpers/color":"../node_modules/react-color/lib/helpers/color.js","../common":"../node_modules/react-color/lib/components/common/index.js"}],"../node_modules/react-color/lib/components/compact/CompactFields.js":[function(require,module,exports) {
+'use strict';
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.default = exports.CompactFields = void 0;
+exports.CompactFields = undefined;
 
-var _react = _interopRequireDefault(require("react"));
+var _react = require('react');
 
-var _reactcss = _interopRequireDefault(require("reactcss"));
+var _react2 = _interopRequireDefault(_react);
 
-var _common = require("../common");
+var _reactcss = require('reactcss');
+
+var _reactcss2 = _interopRequireDefault(_reactcss);
+
+var _common = require('../common');
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var CompactFields = function CompactFields(_ref) {
+var CompactFields = exports.CompactFields = function CompactFields(_ref) {
   var hex = _ref.hex,
       rgb = _ref.rgb,
       onChange = _ref.onChange;
-  var styles = (0, _reactcss.default)({
+
+  var styles = (0, _reactcss2.default)({
     'default': {
       fields: {
         display: 'flex',
@@ -60463,86 +55491,83 @@ var CompactFields = function CompactFields(_ref) {
     }
   };
 
-  return _react.default.createElement('div', {
-    style: styles.fields,
-    className: 'flexbox-fix'
-  }, _react.default.createElement('div', {
-    style: styles.active
-  }), _react.default.createElement(_common.EditableInput, {
-    style: {
-      wrap: styles.HEXwrap,
-      input: styles.HEXinput,
-      label: styles.HEXlabel
-    },
-    label: 'hex',
-    value: hex,
-    onChange: handleChange
-  }), _react.default.createElement(_common.EditableInput, {
-    style: {
-      wrap: styles.RGBwrap,
-      input: styles.RGBinput,
-      label: styles.RGBlabel
-    },
-    label: 'r',
-    value: rgb.r,
-    onChange: handleChange
-  }), _react.default.createElement(_common.EditableInput, {
-    style: {
-      wrap: styles.RGBwrap,
-      input: styles.RGBinput,
-      label: styles.RGBlabel
-    },
-    label: 'g',
-    value: rgb.g,
-    onChange: handleChange
-  }), _react.default.createElement(_common.EditableInput, {
-    style: {
-      wrap: styles.RGBwrap,
-      input: styles.RGBinput,
-      label: styles.RGBlabel
-    },
-    label: 'b',
-    value: rgb.b,
-    onChange: handleChange
-  }));
+  return _react2.default.createElement(
+    'div',
+    { style: styles.fields, className: 'flexbox-fix' },
+    _react2.default.createElement('div', { style: styles.active }),
+    _react2.default.createElement(_common.EditableInput, {
+      style: { wrap: styles.HEXwrap, input: styles.HEXinput, label: styles.HEXlabel },
+      label: 'hex',
+      value: hex,
+      onChange: handleChange
+    }),
+    _react2.default.createElement(_common.EditableInput, {
+      style: { wrap: styles.RGBwrap, input: styles.RGBinput, label: styles.RGBlabel },
+      label: 'r',
+      value: rgb.r,
+      onChange: handleChange
+    }),
+    _react2.default.createElement(_common.EditableInput, {
+      style: { wrap: styles.RGBwrap, input: styles.RGBinput, label: styles.RGBlabel },
+      label: 'g',
+      value: rgb.g,
+      onChange: handleChange
+    }),
+    _react2.default.createElement(_common.EditableInput, {
+      style: { wrap: styles.RGBwrap, input: styles.RGBinput, label: styles.RGBlabel },
+      label: 'b',
+      value: rgb.b,
+      onChange: handleChange
+    })
+  );
 };
 
-exports.CompactFields = CompactFields;
-var _default = CompactFields;
-exports.default = _default;
-},{"react":"../node_modules/react/index.js","reactcss":"../node_modules/reactcss/lib/index.js","../common":"../node_modules/react-color/es/components/common/index.js"}],"../node_modules/react-color/es/components/compact/Compact.js":[function(require,module,exports) {
-"use strict";
+exports.default = CompactFields;
+},{"react":"../node_modules/react/index.js","reactcss":"../node_modules/reactcss/lib/index.js","../common":"../node_modules/react-color/lib/components/common/index.js"}],"../node_modules/react-color/lib/components/compact/Compact.js":[function(require,module,exports) {
+'use strict';
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.default = exports.Compact = void 0;
+exports.Compact = undefined;
 
-var _react = _interopRequireDefault(require("react"));
+var _react = require('react');
 
-var _propTypes = _interopRequireDefault(require("prop-types"));
+var _react2 = _interopRequireDefault(_react);
 
-var _reactcss = _interopRequireDefault(require("reactcss"));
+var _propTypes = require('prop-types');
 
-var _map = _interopRequireDefault(require("lodash-es/map"));
+var _propTypes2 = _interopRequireDefault(_propTypes);
 
-var _merge = _interopRequireDefault(require("lodash-es/merge"));
+var _reactcss = require('reactcss');
 
-var color = _interopRequireWildcard(require("../../helpers/color"));
+var _reactcss2 = _interopRequireDefault(_reactcss);
 
-var _common = require("../common");
+var _map = require('lodash/map');
 
-var _CompactColor = _interopRequireDefault(require("./CompactColor"));
+var _map2 = _interopRequireDefault(_map);
 
-var _CompactFields = _interopRequireDefault(require("./CompactFields"));
+var _merge = require('lodash/merge');
 
-function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
+var _merge2 = _interopRequireDefault(_merge);
 
-function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+var _color = require('../../helpers/color');
+
+var _color2 = _interopRequireDefault(_color);
+
+var _common = require('../common');
+
+var _CompactColor = require('./CompactColor');
+
+var _CompactColor2 = _interopRequireDefault(_CompactColor);
+
+var _CompactFields = require('./CompactFields');
+
+var _CompactFields2 = _interopRequireDefault(_CompactFields);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var Compact = function Compact(_ref) {
+var Compact = exports.Compact = function Compact(_ref) {
   var onChange = _ref.onChange,
       onSwatchHover = _ref.onSwatchHover,
       colors = _ref.colors,
@@ -60552,7 +55577,8 @@ var Compact = function Compact(_ref) {
       passedStyles = _ref$styles === undefined ? {} : _ref$styles,
       _ref$className = _ref.className,
       className = _ref$className === undefined ? '' : _ref$className;
-  var styles = (0, _reactcss.default)((0, _merge.default)({
+
+  var styles = (0, _reactcss2.default)((0, _merge2.default)({
     'default': {
       Compact: {
         background: '#f6f6f6',
@@ -60572,7 +55598,7 @@ var Compact = function Compact(_ref) {
 
   var handleChange = function handleChange(data, e) {
     if (data.hex) {
-      color.isValidHex(data.hex) && onChange({
+      _color2.default.isValidHex(data.hex) && onChange({
         hex: data.hex,
         source: 'hex'
       }, e);
@@ -60581,74 +55607,76 @@ var Compact = function Compact(_ref) {
     }
   };
 
-  return _react.default.createElement(_common.Raised, {
-    style: styles.Compact,
-    styles: passedStyles
-  }, _react.default.createElement('div', {
-    style: styles.compact,
-    className: 'compact-picker ' + className
-  }, _react.default.createElement('div', null, (0, _map.default)(colors, function (c) {
-    return _react.default.createElement(_CompactColor.default, {
-      key: c,
-      color: c,
-      active: c.toLowerCase() === hex,
-      onClick: handleChange,
-      onSwatchHover: onSwatchHover
-    });
-  }), _react.default.createElement('div', {
-    style: styles.clear
-  })), _react.default.createElement(_CompactFields.default, {
-    hex: hex,
-    rgb: rgb,
-    onChange: handleChange
-  })));
+  return _react2.default.createElement(
+    _common.Raised,
+    { style: styles.Compact, styles: passedStyles },
+    _react2.default.createElement(
+      'div',
+      { style: styles.compact, className: 'compact-picker ' + className },
+      _react2.default.createElement(
+        'div',
+        null,
+        (0, _map2.default)(colors, function (c) {
+          return _react2.default.createElement(_CompactColor2.default, {
+            key: c,
+            color: c,
+            active: c.toLowerCase() === hex,
+            onClick: handleChange,
+            onSwatchHover: onSwatchHover
+          });
+        }),
+        _react2.default.createElement('div', { style: styles.clear })
+      ),
+      _react2.default.createElement(_CompactFields2.default, { hex: hex, rgb: rgb, onChange: handleChange })
+    )
+  );
 };
 
-exports.Compact = Compact;
 Compact.propTypes = {
-  colors: _propTypes.default.arrayOf(_propTypes.default.string),
-  styles: _propTypes.default.object
+  colors: _propTypes2.default.arrayOf(_propTypes2.default.string),
+  styles: _propTypes2.default.object
 };
+
 Compact.defaultProps = {
   colors: ['#4D4D4D', '#999999', '#FFFFFF', '#F44E3B', '#FE9200', '#FCDC00', '#DBDF00', '#A4DD00', '#68CCCA', '#73D8FF', '#AEA1FF', '#FDA1FF', '#333333', '#808080', '#cccccc', '#D33115', '#E27300', '#FCC400', '#B0BC00', '#68BC00', '#16A5A5', '#009CE0', '#7B64FF', '#FA28FF', '#000000', '#666666', '#B3B3B3', '#9F0500', '#C45100', '#FB9E00', '#808900', '#194D33', '#0C797D', '#0062B1', '#653294', '#AB149E'],
   styles: {}
 };
 
-var _default = (0, _common.ColorWrap)(Compact);
-
-exports.default = _default;
-},{"react":"../node_modules/react/index.js","prop-types":"../node_modules/prop-types/index.js","reactcss":"../node_modules/reactcss/lib/index.js","lodash-es/map":"../node_modules/lodash-es/map.js","lodash-es/merge":"../node_modules/lodash-es/merge.js","../../helpers/color":"../node_modules/react-color/es/helpers/color.js","../common":"../node_modules/react-color/es/components/common/index.js","./CompactColor":"../node_modules/react-color/es/components/compact/CompactColor.js","./CompactFields":"../node_modules/react-color/es/components/compact/CompactFields.js"}],"../node_modules/react-color/es/components/github/GithubSwatch.js":[function(require,module,exports) {
-"use strict";
+exports.default = (0, _common.ColorWrap)(Compact);
+},{"react":"../node_modules/react/index.js","prop-types":"../node_modules/prop-types/index.js","reactcss":"../node_modules/reactcss/lib/index.js","lodash/map":"../node_modules/lodash/map.js","lodash/merge":"../node_modules/lodash/merge.js","../../helpers/color":"../node_modules/react-color/lib/helpers/color.js","../common":"../node_modules/react-color/lib/components/common/index.js","./CompactColor":"../node_modules/react-color/lib/components/compact/CompactColor.js","./CompactFields":"../node_modules/react-color/lib/components/compact/CompactFields.js"}],"../node_modules/react-color/lib/components/github/GithubSwatch.js":[function(require,module,exports) {
+'use strict';
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.default = exports.GithubSwatch = void 0;
+exports.GithubSwatch = undefined;
 
-var _react = _interopRequireDefault(require("react"));
+var _react = require('react');
 
-var _reactcss = _interopRequireWildcard(require("reactcss"));
+var _react2 = _interopRequireDefault(_react);
 
-var _common = require("../common");
+var _reactcss = require('reactcss');
 
-function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
+var _reactcss2 = _interopRequireDefault(_reactcss);
 
-function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+var _common = require('../common');
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var GithubSwatch = function GithubSwatch(_ref) {
+var GithubSwatch = exports.GithubSwatch = function GithubSwatch(_ref) {
   var hover = _ref.hover,
       color = _ref.color,
       onClick = _ref.onClick,
       onSwatchHover = _ref.onSwatchHover;
+
   var hoverSwatch = {
     position: 'relative',
     zIndex: '2',
     outline: '2px solid #fff',
     boxShadow: '0 0 5px 2px rgba(0,0,0,0.25)'
   };
-  var styles = (0, _reactcss.default)({
+
+  var styles = (0, _reactcss2.default)({
     'default': {
       swatch: {
         width: '25px',
@@ -60659,49 +55687,58 @@ var GithubSwatch = function GithubSwatch(_ref) {
     'hover': {
       swatch: hoverSwatch
     }
-  }, {
-    hover: hover
-  });
-  return _react.default.createElement('div', {
-    style: styles.swatch
-  }, _react.default.createElement(_common.Swatch, {
-    color: color,
-    onClick: onClick,
-    onHover: onSwatchHover,
-    focusStyle: hoverSwatch
-  }));
+  }, { hover: hover });
+
+  return _react2.default.createElement(
+    'div',
+    { style: styles.swatch },
+    _react2.default.createElement(_common.Swatch, {
+      color: color,
+      onClick: onClick,
+      onHover: onSwatchHover,
+      focusStyle: hoverSwatch
+    })
+  );
 };
 
-exports.GithubSwatch = GithubSwatch;
-
-var _default = (0, _reactcss.handleHover)(GithubSwatch);
-
-exports.default = _default;
-},{"react":"../node_modules/react/index.js","reactcss":"../node_modules/reactcss/lib/index.js","../common":"../node_modules/react-color/es/components/common/index.js"}],"../node_modules/react-color/es/components/github/Github.js":[function(require,module,exports) {
-"use strict";
+exports.default = (0, _reactcss.handleHover)(GithubSwatch);
+},{"react":"../node_modules/react/index.js","reactcss":"../node_modules/reactcss/lib/index.js","../common":"../node_modules/react-color/lib/components/common/index.js"}],"../node_modules/react-color/lib/components/github/Github.js":[function(require,module,exports) {
+'use strict';
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.default = exports.Github = void 0;
+exports.Github = undefined;
 
-var _react = _interopRequireDefault(require("react"));
+var _react = require('react');
 
-var _propTypes = _interopRequireDefault(require("prop-types"));
+var _react2 = _interopRequireDefault(_react);
 
-var _reactcss = _interopRequireDefault(require("reactcss"));
+var _propTypes = require('prop-types');
 
-var _map = _interopRequireDefault(require("lodash-es/map"));
+var _propTypes2 = _interopRequireDefault(_propTypes);
 
-var _merge = _interopRequireDefault(require("lodash-es/merge"));
+var _reactcss = require('reactcss');
 
-var _common = require("../common");
+var _reactcss2 = _interopRequireDefault(_reactcss);
 
-var _GithubSwatch = _interopRequireDefault(require("./GithubSwatch"));
+var _map = require('lodash/map');
+
+var _map2 = _interopRequireDefault(_map);
+
+var _merge = require('lodash/merge');
+
+var _merge2 = _interopRequireDefault(_merge);
+
+var _common = require('../common');
+
+var _GithubSwatch = require('./GithubSwatch');
+
+var _GithubSwatch2 = _interopRequireDefault(_GithubSwatch);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var Github = function Github(_ref) {
+var Github = exports.Github = function Github(_ref) {
   var width = _ref.width,
       colors = _ref.colors,
       onChange = _ref.onChange,
@@ -60711,7 +55748,8 @@ var Github = function Github(_ref) {
       passedStyles = _ref$styles === undefined ? {} : _ref$styles,
       _ref$className = _ref.className,
       className = _ref$className === undefined ? '' : _ref$className;
-  var styles = (0, _reactcss.default)((0, _merge.default)({
+
+  var styles = (0, _reactcss2.default)((0, _merge2.default)({
     'default': {
       card: {
         width: width,
@@ -60796,36 +55834,32 @@ var Github = function Github(_ref) {
   });
 
   var handleChange = function handleChange(hex, e) {
-    return onChange({
-      hex: hex,
-      source: 'hex'
-    }, e);
+    return onChange({ hex: hex, source: 'hex' }, e);
   };
 
-  return _react.default.createElement('div', {
-    style: styles.card,
-    className: 'github-picker ' + className
-  }, _react.default.createElement('div', {
-    style: styles.triangleShadow
-  }), _react.default.createElement('div', {
-    style: styles.triangle
-  }), (0, _map.default)(colors, function (c) {
-    return _react.default.createElement(_GithubSwatch.default, {
-      color: c,
-      key: c,
-      onClick: handleChange,
-      onSwatchHover: onSwatchHover
-    });
-  }));
+  return _react2.default.createElement(
+    'div',
+    { style: styles.card, className: 'github-picker ' + className },
+    _react2.default.createElement('div', { style: styles.triangleShadow }),
+    _react2.default.createElement('div', { style: styles.triangle }),
+    (0, _map2.default)(colors, function (c) {
+      return _react2.default.createElement(_GithubSwatch2.default, {
+        color: c,
+        key: c,
+        onClick: handleChange,
+        onSwatchHover: onSwatchHover
+      });
+    })
+  );
 };
 
-exports.Github = Github;
 Github.propTypes = {
-  width: _propTypes.default.oneOfType([_propTypes.default.string, _propTypes.default.number]),
-  colors: _propTypes.default.arrayOf(_propTypes.default.string),
-  triangle: _propTypes.default.oneOf(['hide', 'top-left', 'top-right', 'bottom-left', 'bottom-right']),
-  styles: _propTypes.default.object
+  width: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number]),
+  colors: _propTypes2.default.arrayOf(_propTypes2.default.string),
+  triangle: _propTypes2.default.oneOf(['hide', 'top-left', 'top-right', 'bottom-left', 'bottom-right']),
+  styles: _propTypes2.default.object
 };
+
 Github.defaultProps = {
   width: 200,
   colors: ['#B80000', '#DB3E00', '#FCCB00', '#008B02', '#006B76', '#1273DE', '#004DCF', '#5300EB', '#EB9694', '#FAD0C3', '#FEF3BD', '#C1E1C5', '#BEDADC', '#C4DEF6', '#BED3F3', '#D4C4FB'],
@@ -60833,26 +55867,29 @@ Github.defaultProps = {
   styles: {}
 };
 
-var _default = (0, _common.ColorWrap)(Github);
-
-exports.default = _default;
-},{"react":"../node_modules/react/index.js","prop-types":"../node_modules/prop-types/index.js","reactcss":"../node_modules/reactcss/lib/index.js","lodash-es/map":"../node_modules/lodash-es/map.js","lodash-es/merge":"../node_modules/lodash-es/merge.js","../common":"../node_modules/react-color/es/components/common/index.js","./GithubSwatch":"../node_modules/react-color/es/components/github/GithubSwatch.js"}],"../node_modules/react-color/es/components/hue/HuePointer.js":[function(require,module,exports) {
-"use strict";
+exports.default = (0, _common.ColorWrap)(Github);
+},{"react":"../node_modules/react/index.js","prop-types":"../node_modules/prop-types/index.js","reactcss":"../node_modules/reactcss/lib/index.js","lodash/map":"../node_modules/lodash/map.js","lodash/merge":"../node_modules/lodash/merge.js","../common":"../node_modules/react-color/lib/components/common/index.js","./GithubSwatch":"../node_modules/react-color/lib/components/github/GithubSwatch.js"}],"../node_modules/react-color/lib/components/hue/HuePointer.js":[function(require,module,exports) {
+'use strict';
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.default = exports.SliderPointer = void 0;
+exports.SliderPointer = undefined;
 
-var _react = _interopRequireDefault(require("react"));
+var _react = require('react');
 
-var _reactcss = _interopRequireDefault(require("reactcss"));
+var _react2 = _interopRequireDefault(_react);
+
+var _reactcss = require('reactcss');
+
+var _reactcss2 = _interopRequireDefault(_reactcss);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var SliderPointer = function SliderPointer(_ref) {
+var SliderPointer = exports.SliderPointer = function SliderPointer(_ref) {
   var direction = _ref.direction;
-  var styles = (0, _reactcss.default)({
+
+  var styles = (0, _reactcss2.default)({
     'default': {
       picker: {
         width: '18px',
@@ -60868,54 +55905,47 @@ var SliderPointer = function SliderPointer(_ref) {
         transform: 'translate(-3px, -9px)'
       }
     }
-  }, {
-    vertical: direction === 'vertical'
-  });
-  return _react.default.createElement('div', {
-    style: styles.picker
-  });
+  }, { vertical: direction === 'vertical' });
+
+  return _react2.default.createElement('div', { style: styles.picker });
 };
 
-exports.SliderPointer = SliderPointer;
-var _default = SliderPointer;
-exports.default = _default;
-},{"react":"../node_modules/react/index.js","reactcss":"../node_modules/reactcss/lib/index.js"}],"../node_modules/react-color/es/components/hue/Hue.js":[function(require,module,exports) {
-"use strict";
+exports.default = SliderPointer;
+},{"react":"../node_modules/react/index.js","reactcss":"../node_modules/reactcss/lib/index.js"}],"../node_modules/react-color/lib/components/hue/Hue.js":[function(require,module,exports) {
+'use strict';
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.default = exports.HuePicker = void 0;
+exports.HuePicker = undefined;
 
-var _react = _interopRequireDefault(require("react"));
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
-var _propTypes = _interopRequireDefault(require("prop-types"));
+var _react = require('react');
 
-var _reactcss = _interopRequireDefault(require("reactcss"));
+var _react2 = _interopRequireDefault(_react);
 
-var _merge = _interopRequireDefault(require("lodash-es/merge"));
+var _propTypes = require('prop-types');
 
-var _common = require("../common");
+var _propTypes2 = _interopRequireDefault(_propTypes);
 
-var _HuePointer = _interopRequireDefault(require("./HuePointer"));
+var _reactcss = require('reactcss');
+
+var _reactcss2 = _interopRequireDefault(_reactcss);
+
+var _merge = require('lodash/merge');
+
+var _merge2 = _interopRequireDefault(_merge);
+
+var _common = require('../common');
+
+var _HuePointer = require('./HuePointer');
+
+var _HuePointer2 = _interopRequireDefault(_HuePointer);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var _extends = Object.assign || function (target) {
-  for (var i = 1; i < arguments.length; i++) {
-    var source = arguments[i];
-
-    for (var key in source) {
-      if (Object.prototype.hasOwnProperty.call(source, key)) {
-        target[key] = source[key];
-      }
-    }
-  }
-
-  return target;
-};
-
-var HuePicker = function HuePicker(_ref) {
+var HuePicker = exports.HuePicker = function HuePicker(_ref) {
   var width = _ref.width,
       height = _ref.height,
       onChange = _ref.onChange,
@@ -60926,7 +55956,8 @@ var HuePicker = function HuePicker(_ref) {
       passedStyles = _ref$styles === undefined ? {} : _ref$styles,
       _ref$className = _ref.className,
       className = _ref$className === undefined ? '' : _ref$className;
-  var styles = (0, _reactcss.default)((0, _merge.default)({
+
+  var styles = (0, _reactcss2.default)((0, _merge2.default)({
     'default': {
       picker: {
         position: 'relative',
@@ -60937,68 +55968,66 @@ var HuePicker = function HuePicker(_ref) {
         radius: '2px'
       }
     }
-  }, passedStyles)); // Overwrite to provide pure hue color
+  }, passedStyles));
 
+  // Overwrite to provide pure hue color
   var handleChange = function handleChange(data) {
-    return onChange({
-      a: 1,
-      h: data.h,
-      l: 0.5,
-      s: 1
-    });
+    return onChange({ a: 1, h: data.h, l: 0.5, s: 1 });
   };
 
-  return _react.default.createElement('div', {
-    style: styles.picker,
-    className: 'hue-picker ' + className
-  }, _react.default.createElement(_common.Hue, _extends({}, styles.hue, {
-    hsl: hsl,
-    pointer: pointer,
-    onChange: handleChange,
-    direction: direction
-  })));
+  return _react2.default.createElement(
+    'div',
+    { style: styles.picker, className: 'hue-picker ' + className },
+    _react2.default.createElement(_common.Hue, _extends({}, styles.hue, {
+      hsl: hsl,
+      pointer: pointer,
+      onChange: handleChange,
+      direction: direction
+    }))
+  );
 };
 
-exports.HuePicker = HuePicker;
 HuePicker.propTypes = {
-  styles: _propTypes.default.object
+  styles: _propTypes2.default.object
 };
 HuePicker.defaultProps = {
   width: '316px',
   height: '16px',
   direction: 'horizontal',
-  pointer: _HuePointer.default,
+  pointer: _HuePointer2.default,
   styles: {}
 };
 
-var _default = (0, _common.ColorWrap)(HuePicker);
-
-exports.default = _default;
-},{"react":"../node_modules/react/index.js","prop-types":"../node_modules/prop-types/index.js","reactcss":"../node_modules/reactcss/lib/index.js","lodash-es/merge":"../node_modules/lodash-es/merge.js","../common":"../node_modules/react-color/es/components/common/index.js","./HuePointer":"../node_modules/react-color/es/components/hue/HuePointer.js"}],"../node_modules/react-color/es/components/material/Material.js":[function(require,module,exports) {
-"use strict";
+exports.default = (0, _common.ColorWrap)(HuePicker);
+},{"react":"../node_modules/react/index.js","prop-types":"../node_modules/prop-types/index.js","reactcss":"../node_modules/reactcss/lib/index.js","lodash/merge":"../node_modules/lodash/merge.js","../common":"../node_modules/react-color/lib/components/common/index.js","./HuePointer":"../node_modules/react-color/lib/components/hue/HuePointer.js"}],"../node_modules/react-color/lib/components/material/Material.js":[function(require,module,exports) {
+'use strict';
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.default = exports.Material = void 0;
+exports.Material = undefined;
 
-var _react = _interopRequireDefault(require("react"));
+var _react = require('react');
 
-var _reactcss = _interopRequireDefault(require("reactcss"));
+var _react2 = _interopRequireDefault(_react);
 
-var _merge = _interopRequireDefault(require("lodash-es/merge"));
+var _reactcss = require('reactcss');
 
-var color = _interopRequireWildcard(require("../../helpers/color"));
+var _reactcss2 = _interopRequireDefault(_reactcss);
 
-var _common = require("../common");
+var _merge = require('lodash/merge');
 
-function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
+var _merge2 = _interopRequireDefault(_merge);
 
-function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+var _color = require('../../helpers/color');
+
+var _color2 = _interopRequireDefault(_color);
+
+var _common = require('../common');
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var Material = function Material(_ref) {
+var Material = exports.Material = function Material(_ref) {
   var onChange = _ref.onChange,
       hex = _ref.hex,
       rgb = _ref.rgb,
@@ -61006,7 +56035,8 @@ var Material = function Material(_ref) {
       passedStyles = _ref$styles === undefined ? {} : _ref$styles,
       _ref$className = _ref.className,
       className = _ref$className === undefined ? '' : _ref$className;
-  var styles = (0, _reactcss.default)((0, _merge.default)({
+
+  var styles = (0, _reactcss2.default)((0, _merge2.default)({
     'default': {
       material: {
         width: '98px',
@@ -61075,7 +56105,7 @@ var Material = function Material(_ref) {
 
   var handleChange = function handleChange(data, e) {
     if (data.hex) {
-      color.isValidHex(data.hex) && onChange({
+      _color2.default.isValidHex(data.hex) && onChange({
         hex: data.hex,
         source: 'hex'
       }, e);
@@ -61089,92 +56119,87 @@ var Material = function Material(_ref) {
     }
   };
 
-  return _react.default.createElement(_common.Raised, {
-    styles: passedStyles
-  }, _react.default.createElement('div', {
-    style: styles.material,
-    className: 'material-picker ' + className
-  }, _react.default.createElement(_common.EditableInput, {
-    style: {
-      wrap: styles.HEXwrap,
-      input: styles.HEXinput,
-      label: styles.HEXlabel
-    },
-    label: 'hex',
-    value: hex,
-    onChange: handleChange
-  }), _react.default.createElement('div', {
-    style: styles.split,
-    className: 'flexbox-fix'
-  }, _react.default.createElement('div', {
-    style: styles.third
-  }, _react.default.createElement(_common.EditableInput, {
-    style: {
-      wrap: styles.RGBwrap,
-      input: styles.RGBinput,
-      label: styles.RGBlabel
-    },
-    label: 'r',
-    value: rgb.r,
-    onChange: handleChange
-  })), _react.default.createElement('div', {
-    style: styles.third
-  }, _react.default.createElement(_common.EditableInput, {
-    style: {
-      wrap: styles.RGBwrap,
-      input: styles.RGBinput,
-      label: styles.RGBlabel
-    },
-    label: 'g',
-    value: rgb.g,
-    onChange: handleChange
-  })), _react.default.createElement('div', {
-    style: styles.third
-  }, _react.default.createElement(_common.EditableInput, {
-    style: {
-      wrap: styles.RGBwrap,
-      input: styles.RGBinput,
-      label: styles.RGBlabel
-    },
-    label: 'b',
-    value: rgb.b,
-    onChange: handleChange
-  })))));
+  return _react2.default.createElement(
+    _common.Raised,
+    { styles: passedStyles },
+    _react2.default.createElement(
+      'div',
+      { style: styles.material, className: 'material-picker ' + className },
+      _react2.default.createElement(_common.EditableInput, {
+        style: { wrap: styles.HEXwrap, input: styles.HEXinput, label: styles.HEXlabel },
+        label: 'hex',
+        value: hex,
+        onChange: handleChange
+      }),
+      _react2.default.createElement(
+        'div',
+        { style: styles.split, className: 'flexbox-fix' },
+        _react2.default.createElement(
+          'div',
+          { style: styles.third },
+          _react2.default.createElement(_common.EditableInput, {
+            style: { wrap: styles.RGBwrap, input: styles.RGBinput, label: styles.RGBlabel },
+            label: 'r', value: rgb.r,
+            onChange: handleChange
+          })
+        ),
+        _react2.default.createElement(
+          'div',
+          { style: styles.third },
+          _react2.default.createElement(_common.EditableInput, {
+            style: { wrap: styles.RGBwrap, input: styles.RGBinput, label: styles.RGBlabel },
+            label: 'g',
+            value: rgb.g,
+            onChange: handleChange
+          })
+        ),
+        _react2.default.createElement(
+          'div',
+          { style: styles.third },
+          _react2.default.createElement(_common.EditableInput, {
+            style: { wrap: styles.RGBwrap, input: styles.RGBinput, label: styles.RGBlabel },
+            label: 'b',
+            value: rgb.b,
+            onChange: handleChange
+          })
+        )
+      )
+    )
+  );
 };
 
-exports.Material = Material;
-
-var _default = (0, _common.ColorWrap)(Material);
-
-exports.default = _default;
-},{"react":"../node_modules/react/index.js","reactcss":"../node_modules/reactcss/lib/index.js","lodash-es/merge":"../node_modules/lodash-es/merge.js","../../helpers/color":"../node_modules/react-color/es/helpers/color.js","../common":"../node_modules/react-color/es/components/common/index.js"}],"../node_modules/react-color/es/components/photoshop/PhotoshopFields.js":[function(require,module,exports) {
-"use strict";
+exports.default = (0, _common.ColorWrap)(Material);
+},{"react":"../node_modules/react/index.js","reactcss":"../node_modules/reactcss/lib/index.js","lodash/merge":"../node_modules/lodash/merge.js","../../helpers/color":"../node_modules/react-color/lib/helpers/color.js","../common":"../node_modules/react-color/lib/components/common/index.js"}],"../node_modules/react-color/lib/components/photoshop/PhotoshopFields.js":[function(require,module,exports) {
+'use strict';
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.default = exports.PhotoshopPicker = void 0;
+exports.PhotoshopPicker = undefined;
 
-var _react = _interopRequireDefault(require("react"));
+var _react = require('react');
 
-var _reactcss = _interopRequireDefault(require("reactcss"));
+var _react2 = _interopRequireDefault(_react);
 
-var color = _interopRequireWildcard(require("../../helpers/color"));
+var _reactcss = require('reactcss');
 
-var _common = require("../common");
+var _reactcss2 = _interopRequireDefault(_reactcss);
 
-function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
+var _color = require('../../helpers/color');
 
-function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+var _color2 = _interopRequireDefault(_color);
+
+var _common = require('../common');
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var PhotoshopPicker = function PhotoshopPicker(_ref) {
+var PhotoshopPicker = exports.PhotoshopPicker = function PhotoshopPicker(_ref) {
   var onChange = _ref.onChange,
       rgb = _ref.rgb,
       hsv = _ref.hsv,
       hex = _ref.hex;
-  var styles = (0, _reactcss.default)({
+
+  var styles = (0, _reactcss2.default)({
     'default': {
       fields: {
         paddingTop: '5px',
@@ -61201,7 +56226,6 @@ var PhotoshopPicker = function PhotoshopPicker(_ref) {
       },
       RGBlabel: {
         left: '0px',
-        top: '0px',
         width: '34px',
         textTransform: 'uppercase',
         fontSize: '13px',
@@ -61248,7 +56272,7 @@ var PhotoshopPicker = function PhotoshopPicker(_ref) {
 
   var handleChange = function handleChange(data, e) {
     if (data['#']) {
-      color.isValidHex(data['#']) && onChange({
+      _color2.default.isValidHex(data['#']) && onChange({
         hex: data['#'],
         source: 'hex'
       }, e);
@@ -61269,106 +56293,98 @@ var PhotoshopPicker = function PhotoshopPicker(_ref) {
     }
   };
 
-  return _react.default.createElement('div', {
-    style: styles.fields
-  }, _react.default.createElement(_common.EditableInput, {
-    style: {
-      wrap: styles.RGBwrap,
-      input: styles.RGBinput,
-      label: styles.RGBlabel
-    },
-    label: 'h',
-    value: Math.round(hsv.h),
-    onChange: handleChange
-  }), _react.default.createElement(_common.EditableInput, {
-    style: {
-      wrap: styles.RGBwrap,
-      input: styles.RGBinput,
-      label: styles.RGBlabel
-    },
-    label: 's',
-    value: Math.round(hsv.s * 100),
-    onChange: handleChange
-  }), _react.default.createElement(_common.EditableInput, {
-    style: {
-      wrap: styles.RGBwrap,
-      input: styles.RGBinput,
-      label: styles.RGBlabel
-    },
-    label: 'v',
-    value: Math.round(hsv.v * 100),
-    onChange: handleChange
-  }), _react.default.createElement('div', {
-    style: styles.divider
-  }), _react.default.createElement(_common.EditableInput, {
-    style: {
-      wrap: styles.RGBwrap,
-      input: styles.RGBinput,
-      label: styles.RGBlabel
-    },
-    label: 'r',
-    value: rgb.r,
-    onChange: handleChange
-  }), _react.default.createElement(_common.EditableInput, {
-    style: {
-      wrap: styles.RGBwrap,
-      input: styles.RGBinput,
-      label: styles.RGBlabel
-    },
-    label: 'g',
-    value: rgb.g,
-    onChange: handleChange
-  }), _react.default.createElement(_common.EditableInput, {
-    style: {
-      wrap: styles.RGBwrap,
-      input: styles.RGBinput,
-      label: styles.RGBlabel
-    },
-    label: 'b',
-    value: rgb.b,
-    onChange: handleChange
-  }), _react.default.createElement('div', {
-    style: styles.divider
-  }), _react.default.createElement(_common.EditableInput, {
-    style: {
-      wrap: styles.HEXwrap,
-      input: styles.HEXinput,
-      label: styles.HEXlabel
-    },
-    label: '#',
-    value: hex.replace('#', ''),
-    onChange: handleChange
-  }), _react.default.createElement('div', {
-    style: styles.fieldSymbols
-  }, _react.default.createElement('div', {
-    style: styles.symbol
-  }, '\xB0'), _react.default.createElement('div', {
-    style: styles.symbol
-  }, '%'), _react.default.createElement('div', {
-    style: styles.symbol
-  }, '%')));
+  return _react2.default.createElement(
+    'div',
+    { style: styles.fields },
+    _react2.default.createElement(_common.EditableInput, {
+      style: { wrap: styles.RGBwrap, input: styles.RGBinput, label: styles.RGBlabel },
+      label: 'h',
+      value: Math.round(hsv.h),
+      onChange: handleChange
+    }),
+    _react2.default.createElement(_common.EditableInput, {
+      style: { wrap: styles.RGBwrap, input: styles.RGBinput, label: styles.RGBlabel },
+      label: 's',
+      value: Math.round(hsv.s * 100),
+      onChange: handleChange
+    }),
+    _react2.default.createElement(_common.EditableInput, {
+      style: { wrap: styles.RGBwrap, input: styles.RGBinput, label: styles.RGBlabel },
+      label: 'v',
+      value: Math.round(hsv.v * 100),
+      onChange: handleChange
+    }),
+    _react2.default.createElement('div', { style: styles.divider }),
+    _react2.default.createElement(_common.EditableInput, {
+      style: { wrap: styles.RGBwrap, input: styles.RGBinput, label: styles.RGBlabel },
+      label: 'r',
+      value: rgb.r,
+      onChange: handleChange
+    }),
+    _react2.default.createElement(_common.EditableInput, {
+      style: { wrap: styles.RGBwrap, input: styles.RGBinput, label: styles.RGBlabel },
+      label: 'g',
+      value: rgb.g,
+      onChange: handleChange
+    }),
+    _react2.default.createElement(_common.EditableInput, {
+      style: { wrap: styles.RGBwrap, input: styles.RGBinput, label: styles.RGBlabel },
+      label: 'b',
+      value: rgb.b,
+      onChange: handleChange
+    }),
+    _react2.default.createElement('div', { style: styles.divider }),
+    _react2.default.createElement(_common.EditableInput, {
+      style: { wrap: styles.HEXwrap, input: styles.HEXinput, label: styles.HEXlabel },
+      label: '#',
+      value: hex.replace('#', ''),
+      onChange: handleChange
+    }),
+    _react2.default.createElement(
+      'div',
+      { style: styles.fieldSymbols },
+      _react2.default.createElement(
+        'div',
+        { style: styles.symbol },
+        '\xB0'
+      ),
+      _react2.default.createElement(
+        'div',
+        { style: styles.symbol },
+        '%'
+      ),
+      _react2.default.createElement(
+        'div',
+        { style: styles.symbol },
+        '%'
+      )
+    )
+  );
 };
 
-exports.PhotoshopPicker = PhotoshopPicker;
-var _default = PhotoshopPicker;
-exports.default = _default;
-},{"react":"../node_modules/react/index.js","reactcss":"../node_modules/reactcss/lib/index.js","../../helpers/color":"../node_modules/react-color/es/helpers/color.js","../common":"../node_modules/react-color/es/components/common/index.js"}],"../node_modules/react-color/es/components/photoshop/PhotoshopPointerCircle.js":[function(require,module,exports) {
-"use strict";
+exports.default = PhotoshopPicker;
+},{"react":"../node_modules/react/index.js","reactcss":"../node_modules/reactcss/lib/index.js","../../helpers/color":"../node_modules/react-color/lib/helpers/color.js","../common":"../node_modules/react-color/lib/components/common/index.js"}],"../node_modules/react-color/lib/components/photoshop/PhotoshopPointerCircle.js":[function(require,module,exports) {
+'use strict';
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.default = exports.PhotoshopPointerCircle = void 0;
+exports.PhotoshopPointerCircle = undefined;
 
-var _react = _interopRequireDefault(require("react"));
+var _react = require('react');
 
-var _reactcss = _interopRequireDefault(require("reactcss"));
+var _react2 = _interopRequireDefault(_react);
+
+var _reactcss = require('reactcss');
+
+var _reactcss2 = _interopRequireDefault(_reactcss);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var PhotoshopPointerCircle = function PhotoshopPointerCircle(_ref) {
+var PhotoshopPointerCircle = exports.PhotoshopPointerCircle = function PhotoshopPointerCircle(_ref) {
   var hsl = _ref.hsl;
-  var styles = (0, _reactcss.default)({
+
+  var styles = (0, _reactcss2.default)({
     'default': {
       picker: {
         width: '12px',
@@ -61383,33 +56399,32 @@ var PhotoshopPointerCircle = function PhotoshopPointerCircle(_ref) {
         boxShadow: 'inset 0 0 0 1px #000'
       }
     }
-  }, {
-    'black-outline': hsl.l > 0.5
-  });
-  return _react.default.createElement('div', {
-    style: styles.picker
-  });
+  }, { 'black-outline': hsl.l > 0.5 });
+
+  return _react2.default.createElement('div', { style: styles.picker });
 };
 
-exports.PhotoshopPointerCircle = PhotoshopPointerCircle;
-var _default = PhotoshopPointerCircle;
-exports.default = _default;
-},{"react":"../node_modules/react/index.js","reactcss":"../node_modules/reactcss/lib/index.js"}],"../node_modules/react-color/es/components/photoshop/PhotoshopPointer.js":[function(require,module,exports) {
-"use strict";
+exports.default = PhotoshopPointerCircle;
+},{"react":"../node_modules/react/index.js","reactcss":"../node_modules/reactcss/lib/index.js"}],"../node_modules/react-color/lib/components/photoshop/PhotoshopPointer.js":[function(require,module,exports) {
+'use strict';
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.default = exports.PhotoshopPointerCircle = void 0;
+exports.PhotoshopPointerCircle = undefined;
 
-var _react = _interopRequireDefault(require("react"));
+var _react = require('react');
 
-var _reactcss = _interopRequireDefault(require("reactcss"));
+var _react2 = _interopRequireDefault(_react);
+
+var _reactcss = require('reactcss');
+
+var _reactcss2 = _interopRequireDefault(_reactcss);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var PhotoshopPointerCircle = function PhotoshopPointerCircle() {
-  var styles = (0, _reactcss.default)({
+var PhotoshopPointerCircle = exports.PhotoshopPointerCircle = function PhotoshopPointerCircle() {
+  var styles = (0, _reactcss2.default)({
     'default': {
       triangle: {
         width: 0,
@@ -61428,6 +56443,7 @@ var PhotoshopPointerCircle = function PhotoshopPointerCircle() {
         borderWidth: '5px 0 5px 8px',
         borderColor: 'transparent transparent transparent #555'
       },
+
       left: {
         Extend: 'triangleBorder',
         transform: 'translate(-13px, -4px)'
@@ -61436,6 +56452,7 @@ var PhotoshopPointerCircle = function PhotoshopPointerCircle() {
         Extend: 'triangle',
         transform: 'translate(-8px, -5px)'
       },
+
       right: {
         Extend: 'triangleBorder',
         transform: 'translate(20px, -14px) rotate(180deg)'
@@ -61446,42 +56463,49 @@ var PhotoshopPointerCircle = function PhotoshopPointerCircle() {
       }
     }
   });
-  return _react.default.createElement('div', {
-    style: styles.pointer
-  }, _react.default.createElement('div', {
-    style: styles.left
-  }, _react.default.createElement('div', {
-    style: styles.leftInside
-  })), _react.default.createElement('div', {
-    style: styles.right
-  }, _react.default.createElement('div', {
-    style: styles.rightInside
-  })));
+
+  return _react2.default.createElement(
+    'div',
+    { style: styles.pointer },
+    _react2.default.createElement(
+      'div',
+      { style: styles.left },
+      _react2.default.createElement('div', { style: styles.leftInside })
+    ),
+    _react2.default.createElement(
+      'div',
+      { style: styles.right },
+      _react2.default.createElement('div', { style: styles.rightInside })
+    )
+  );
 };
 
-exports.PhotoshopPointerCircle = PhotoshopPointerCircle;
-var _default = PhotoshopPointerCircle;
-exports.default = _default;
-},{"react":"../node_modules/react/index.js","reactcss":"../node_modules/reactcss/lib/index.js"}],"../node_modules/react-color/es/components/photoshop/PhotoshopButton.js":[function(require,module,exports) {
-"use strict";
+exports.default = PhotoshopPointerCircle;
+},{"react":"../node_modules/react/index.js","reactcss":"../node_modules/reactcss/lib/index.js"}],"../node_modules/react-color/lib/components/photoshop/PhotoshopButton.js":[function(require,module,exports) {
+'use strict';
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.default = exports.PhotoshopButton = void 0;
+exports.PhotoshopButton = undefined;
 
-var _react = _interopRequireDefault(require("react"));
+var _react = require('react');
 
-var _reactcss = _interopRequireDefault(require("reactcss"));
+var _react2 = _interopRequireDefault(_react);
+
+var _reactcss = require('reactcss');
+
+var _reactcss2 = _interopRequireDefault(_reactcss);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var PhotoshopButton = function PhotoshopButton(_ref) {
+var PhotoshopButton = exports.PhotoshopButton = function PhotoshopButton(_ref) {
   var onClick = _ref.onClick,
       label = _ref.label,
       children = _ref.children,
       active = _ref.active;
-  var styles = (0, _reactcss.default)({
+
+  var styles = (0, _reactcss2.default)({
     'default': {
       button: {
         backgroundImage: 'linear-gradient(-180deg, #FFFFFF 0%, #E6E6E6 100%)',
@@ -61502,36 +56526,39 @@ var PhotoshopButton = function PhotoshopButton(_ref) {
         boxShadow: '0 0 0 1px #878787'
       }
     }
-  }, {
-    active: active
-  });
-  return _react.default.createElement('div', {
-    style: styles.button,
-    onClick: onClick
-  }, label || children);
+  }, { active: active });
+
+  return _react2.default.createElement(
+    'div',
+    { style: styles.button, onClick: onClick },
+    label || children
+  );
 };
 
-exports.PhotoshopButton = PhotoshopButton;
-var _default = PhotoshopButton;
-exports.default = _default;
-},{"react":"../node_modules/react/index.js","reactcss":"../node_modules/reactcss/lib/index.js"}],"../node_modules/react-color/es/components/photoshop/PhotoshopPreviews.js":[function(require,module,exports) {
-"use strict";
+exports.default = PhotoshopButton;
+},{"react":"../node_modules/react/index.js","reactcss":"../node_modules/reactcss/lib/index.js"}],"../node_modules/react-color/lib/components/photoshop/PhotoshopPreviews.js":[function(require,module,exports) {
+'use strict';
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.default = exports.PhotoshopPreviews = void 0;
+exports.PhotoshopPreviews = undefined;
 
-var _react = _interopRequireDefault(require("react"));
+var _react = require('react');
 
-var _reactcss = _interopRequireDefault(require("reactcss"));
+var _react2 = _interopRequireDefault(_react);
+
+var _reactcss = require('reactcss');
+
+var _reactcss2 = _interopRequireDefault(_reactcss);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var PhotoshopPreviews = function PhotoshopPreviews(_ref) {
+var PhotoshopPreviews = exports.PhotoshopPreviews = function PhotoshopPreviews(_ref) {
   var rgb = _ref.rgb,
       currentColor = _ref.currentColor;
-  var styles = (0, _reactcss.default)({
+
+  var styles = (0, _reactcss2.default)({
     'default': {
       swatches: {
         border: '1px solid #B3B3B3',
@@ -61556,101 +56583,87 @@ var PhotoshopPreviews = function PhotoshopPreviews(_ref) {
       }
     }
   });
-  return _react.default.createElement('div', null, _react.default.createElement('div', {
-    style: styles.label
-  }, 'new'), _react.default.createElement('div', {
-    style: styles.swatches
-  }, _react.default.createElement('div', {
-    style: styles.new
-  }), _react.default.createElement('div', {
-    style: styles.current
-  })), _react.default.createElement('div', {
-    style: styles.label
-  }, 'current'));
+
+  return _react2.default.createElement(
+    'div',
+    null,
+    _react2.default.createElement(
+      'div',
+      { style: styles.label },
+      'new'
+    ),
+    _react2.default.createElement(
+      'div',
+      { style: styles.swatches },
+      _react2.default.createElement('div', { style: styles.new }),
+      _react2.default.createElement('div', { style: styles.current })
+    ),
+    _react2.default.createElement(
+      'div',
+      { style: styles.label },
+      'current'
+    )
+  );
 };
 
-exports.PhotoshopPreviews = PhotoshopPreviews;
-var _default = PhotoshopPreviews;
-exports.default = _default;
-},{"react":"../node_modules/react/index.js","reactcss":"../node_modules/reactcss/lib/index.js"}],"../node_modules/react-color/es/components/photoshop/Photoshop.js":[function(require,module,exports) {
-"use strict";
+exports.default = PhotoshopPreviews;
+},{"react":"../node_modules/react/index.js","reactcss":"../node_modules/reactcss/lib/index.js"}],"../node_modules/react-color/lib/components/photoshop/Photoshop.js":[function(require,module,exports) {
+'use strict';
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.default = exports.Photoshop = void 0;
+exports.Photoshop = undefined;
 
-var _react = _interopRequireDefault(require("react"));
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _propTypes = _interopRequireDefault(require("prop-types"));
+var _react = require('react');
 
-var _reactcss = _interopRequireDefault(require("reactcss"));
+var _react2 = _interopRequireDefault(_react);
 
-var _merge = _interopRequireDefault(require("lodash-es/merge"));
+var _propTypes = require('prop-types');
 
-var _common = require("../common");
+var _propTypes2 = _interopRequireDefault(_propTypes);
 
-var _PhotoshopFields = _interopRequireDefault(require("./PhotoshopFields"));
+var _reactcss = require('reactcss');
 
-var _PhotoshopPointerCircle = _interopRequireDefault(require("./PhotoshopPointerCircle"));
+var _reactcss2 = _interopRequireDefault(_reactcss);
 
-var _PhotoshopPointer = _interopRequireDefault(require("./PhotoshopPointer"));
+var _merge = require('lodash/merge');
 
-var _PhotoshopButton = _interopRequireDefault(require("./PhotoshopButton"));
+var _merge2 = _interopRequireDefault(_merge);
 
-var _PhotoshopPreviews = _interopRequireDefault(require("./PhotoshopPreviews"));
+var _common = require('../common');
+
+var _PhotoshopFields = require('./PhotoshopFields');
+
+var _PhotoshopFields2 = _interopRequireDefault(_PhotoshopFields);
+
+var _PhotoshopPointerCircle = require('./PhotoshopPointerCircle');
+
+var _PhotoshopPointerCircle2 = _interopRequireDefault(_PhotoshopPointerCircle);
+
+var _PhotoshopPointer = require('./PhotoshopPointer');
+
+var _PhotoshopPointer2 = _interopRequireDefault(_PhotoshopPointer);
+
+var _PhotoshopButton = require('./PhotoshopButton');
+
+var _PhotoshopButton2 = _interopRequireDefault(_PhotoshopButton);
+
+var _PhotoshopPreviews = require('./PhotoshopPreviews');
+
+var _PhotoshopPreviews2 = _interopRequireDefault(_PhotoshopPreviews);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var _createClass = function () {
-  function defineProperties(target, props) {
-    for (var i = 0; i < props.length; i++) {
-      var descriptor = props[i];
-      descriptor.enumerable = descriptor.enumerable || false;
-      descriptor.configurable = true;
-      if ("value" in descriptor) descriptor.writable = true;
-      Object.defineProperty(target, descriptor.key, descriptor);
-    }
-  }
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-  return function (Constructor, protoProps, staticProps) {
-    if (protoProps) defineProperties(Constructor.prototype, protoProps);
-    if (staticProps) defineProperties(Constructor, staticProps);
-    return Constructor;
-  };
-}();
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
-function _classCallCheck(instance, Constructor) {
-  if (!(instance instanceof Constructor)) {
-    throw new TypeError("Cannot call a class as a function");
-  }
-}
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-function _possibleConstructorReturn(self, call) {
-  if (!self) {
-    throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
-  }
-
-  return call && (typeof call === "object" || typeof call === "function") ? call : self;
-}
-
-function _inherits(subClass, superClass) {
-  if (typeof superClass !== "function" && superClass !== null) {
-    throw new TypeError("Super expression must either be null or a function, not " + typeof superClass);
-  }
-
-  subClass.prototype = Object.create(superClass && superClass.prototype, {
-    constructor: {
-      value: subClass,
-      enumerable: false,
-      writable: true,
-      configurable: true
-    }
-  });
-  if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass;
-}
-
-var Photoshop = function (_React$Component) {
+var Photoshop = exports.Photoshop = function (_React$Component) {
   _inherits(Photoshop, _React$Component);
 
   function Photoshop(props) {
@@ -61672,7 +56685,8 @@ var Photoshop = function (_React$Component) {
           passedStyles = _props$styles === undefined ? {} : _props$styles,
           _props$className = _props.className,
           className = _props$className === undefined ? '' : _props$className;
-      var styles = (0, _reactcss.default)((0, _merge.default)({
+
+      var styles = (0, _reactcss2.default)((0, _merge2.default)({
         'default': {
           picker: {
             background: '#DCDCDC',
@@ -61728,102 +56742,119 @@ var Photoshop = function (_React$Component) {
           }
         }
       }, passedStyles));
-      return _react.default.createElement('div', {
-        style: styles.picker,
-        className: 'photoshop-picker ' + className
-      }, _react.default.createElement('div', {
-        style: styles.head
-      }, this.props.header), _react.default.createElement('div', {
-        style: styles.body,
-        className: 'flexbox-fix'
-      }, _react.default.createElement('div', {
-        style: styles.saturation
-      }, _react.default.createElement(_common.Saturation, {
-        hsl: this.props.hsl,
-        hsv: this.props.hsv,
-        pointer: _PhotoshopPointerCircle.default,
-        onChange: this.props.onChange
-      })), _react.default.createElement('div', {
-        style: styles.hue
-      }, _react.default.createElement(_common.Hue, {
-        direction: 'vertical',
-        hsl: this.props.hsl,
-        pointer: _PhotoshopPointer.default,
-        onChange: this.props.onChange
-      })), _react.default.createElement('div', {
-        style: styles.controls
-      }, _react.default.createElement('div', {
-        style: styles.top,
-        className: 'flexbox-fix'
-      }, _react.default.createElement('div', {
-        style: styles.previews
-      }, _react.default.createElement(_PhotoshopPreviews.default, {
-        rgb: this.props.rgb,
-        currentColor: this.state.currentColor
-      })), _react.default.createElement('div', {
-        style: styles.actions
-      }, _react.default.createElement(_PhotoshopButton.default, {
-        label: 'OK',
-        onClick: this.props.onAccept,
-        active: true
-      }), _react.default.createElement(_PhotoshopButton.default, {
-        label: 'Cancel',
-        onClick: this.props.onCancel
-      }), _react.default.createElement(_PhotoshopFields.default, {
-        onChange: this.props.onChange,
-        rgb: this.props.rgb,
-        hsv: this.props.hsv,
-        hex: this.props.hex
-      }))))));
+
+      return _react2.default.createElement(
+        'div',
+        { style: styles.picker, className: 'photoshop-picker ' + className },
+        _react2.default.createElement(
+          'div',
+          { style: styles.head },
+          this.props.header
+        ),
+        _react2.default.createElement(
+          'div',
+          { style: styles.body, className: 'flexbox-fix' },
+          _react2.default.createElement(
+            'div',
+            { style: styles.saturation },
+            _react2.default.createElement(_common.Saturation, {
+              hsl: this.props.hsl,
+              hsv: this.props.hsv,
+              pointer: _PhotoshopPointerCircle2.default,
+              onChange: this.props.onChange
+            })
+          ),
+          _react2.default.createElement(
+            'div',
+            { style: styles.hue },
+            _react2.default.createElement(_common.Hue, {
+              direction: 'vertical',
+              hsl: this.props.hsl,
+              pointer: _PhotoshopPointer2.default,
+              onChange: this.props.onChange
+            })
+          ),
+          _react2.default.createElement(
+            'div',
+            { style: styles.controls },
+            _react2.default.createElement(
+              'div',
+              { style: styles.top, className: 'flexbox-fix' },
+              _react2.default.createElement(
+                'div',
+                { style: styles.previews },
+                _react2.default.createElement(_PhotoshopPreviews2.default, {
+                  rgb: this.props.rgb,
+                  currentColor: this.state.currentColor
+                })
+              ),
+              _react2.default.createElement(
+                'div',
+                { style: styles.actions },
+                _react2.default.createElement(_PhotoshopButton2.default, { label: 'OK', onClick: this.props.onAccept, active: true }),
+                _react2.default.createElement(_PhotoshopButton2.default, { label: 'Cancel', onClick: this.props.onCancel }),
+                _react2.default.createElement(_PhotoshopFields2.default, {
+                  onChange: this.props.onChange,
+                  rgb: this.props.rgb,
+                  hsv: this.props.hsv,
+                  hex: this.props.hex
+                })
+              )
+            )
+          )
+        )
+      );
     }
   }]);
 
   return Photoshop;
-}(_react.default.Component);
+}(_react2.default.Component);
 
-exports.Photoshop = Photoshop;
 Photoshop.propTypes = {
-  header: _propTypes.default.string,
-  styles: _propTypes.default.object
+  header: _propTypes2.default.string,
+  styles: _propTypes2.default.object
 };
+
 Photoshop.defaultProps = {
   header: 'Color Picker',
   styles: {}
 };
 
-var _default = (0, _common.ColorWrap)(Photoshop);
-
-exports.default = _default;
-},{"react":"../node_modules/react/index.js","prop-types":"../node_modules/prop-types/index.js","reactcss":"../node_modules/reactcss/lib/index.js","lodash-es/merge":"../node_modules/lodash-es/merge.js","../common":"../node_modules/react-color/es/components/common/index.js","./PhotoshopFields":"../node_modules/react-color/es/components/photoshop/PhotoshopFields.js","./PhotoshopPointerCircle":"../node_modules/react-color/es/components/photoshop/PhotoshopPointerCircle.js","./PhotoshopPointer":"../node_modules/react-color/es/components/photoshop/PhotoshopPointer.js","./PhotoshopButton":"../node_modules/react-color/es/components/photoshop/PhotoshopButton.js","./PhotoshopPreviews":"../node_modules/react-color/es/components/photoshop/PhotoshopPreviews.js"}],"../node_modules/react-color/es/components/sketch/SketchFields.js":[function(require,module,exports) {
-"use strict";
+exports.default = (0, _common.ColorWrap)(Photoshop);
+},{"react":"../node_modules/react/index.js","prop-types":"../node_modules/prop-types/index.js","reactcss":"../node_modules/reactcss/lib/index.js","lodash/merge":"../node_modules/lodash/merge.js","../common":"../node_modules/react-color/lib/components/common/index.js","./PhotoshopFields":"../node_modules/react-color/lib/components/photoshop/PhotoshopFields.js","./PhotoshopPointerCircle":"../node_modules/react-color/lib/components/photoshop/PhotoshopPointerCircle.js","./PhotoshopPointer":"../node_modules/react-color/lib/components/photoshop/PhotoshopPointer.js","./PhotoshopButton":"../node_modules/react-color/lib/components/photoshop/PhotoshopButton.js","./PhotoshopPreviews":"../node_modules/react-color/lib/components/photoshop/PhotoshopPreviews.js"}],"../node_modules/react-color/lib/components/sketch/SketchFields.js":[function(require,module,exports) {
+'use strict';
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.default = exports.SketchFields = void 0;
+exports.SketchFields = undefined;
 
-var _react = _interopRequireDefault(require("react"));
+var _react = require('react');
 
-var _reactcss = _interopRequireDefault(require("reactcss"));
+var _react2 = _interopRequireDefault(_react);
 
-var color = _interopRequireWildcard(require("../../helpers/color"));
+var _reactcss = require('reactcss');
 
-var _common = require("../common");
+var _reactcss2 = _interopRequireDefault(_reactcss);
 
-function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
+var _color = require('../../helpers/color');
 
-function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+var _color2 = _interopRequireDefault(_color);
+
+var _common = require('../common');
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 /* eslint-disable no-param-reassign */
-var SketchFields = function SketchFields(_ref) {
+
+var SketchFields = exports.SketchFields = function SketchFields(_ref) {
   var onChange = _ref.onChange,
       rgb = _ref.rgb,
       hsl = _ref.hsl,
       hex = _ref.hex,
       disableAlpha = _ref.disableAlpha;
-  var styles = (0, _reactcss.default)({
+
+  var styles = (0, _reactcss2.default)({
     'default': {
       fields: {
         display: 'flex',
@@ -61862,13 +56893,11 @@ var SketchFields = function SketchFields(_ref) {
         display: 'none'
       }
     }
-  }, {
-    disableAlpha: disableAlpha
-  });
+  }, { disableAlpha: disableAlpha });
 
   var handleChange = function handleChange(data, e) {
     if (data.hex) {
-      color.isValidHex(data.hex) && onChange({
+      _color2.default.isValidHex(data.hex) && onChange({
         hex: data.hex,
         source: 'hex'
       }, e);
@@ -61898,111 +56927,104 @@ var SketchFields = function SketchFields(_ref) {
     }
   };
 
-  return _react.default.createElement('div', {
-    style: styles.fields,
-    className: 'flexbox-fix'
-  }, _react.default.createElement('div', {
-    style: styles.double
-  }, _react.default.createElement(_common.EditableInput, {
-    style: {
-      input: styles.input,
-      label: styles.label
-    },
-    label: 'hex',
-    value: hex.replace('#', ''),
-    onChange: handleChange
-  })), _react.default.createElement('div', {
-    style: styles.single
-  }, _react.default.createElement(_common.EditableInput, {
-    style: {
-      input: styles.input,
-      label: styles.label
-    },
-    label: 'r',
-    value: rgb.r,
-    onChange: handleChange,
-    dragLabel: 'true',
-    dragMax: '255'
-  })), _react.default.createElement('div', {
-    style: styles.single
-  }, _react.default.createElement(_common.EditableInput, {
-    style: {
-      input: styles.input,
-      label: styles.label
-    },
-    label: 'g',
-    value: rgb.g,
-    onChange: handleChange,
-    dragLabel: 'true',
-    dragMax: '255'
-  })), _react.default.createElement('div', {
-    style: styles.single
-  }, _react.default.createElement(_common.EditableInput, {
-    style: {
-      input: styles.input,
-      label: styles.label
-    },
-    label: 'b',
-    value: rgb.b,
-    onChange: handleChange,
-    dragLabel: 'true',
-    dragMax: '255'
-  })), _react.default.createElement('div', {
-    style: styles.alpha
-  }, _react.default.createElement(_common.EditableInput, {
-    style: {
-      input: styles.input,
-      label: styles.label
-    },
-    label: 'a',
-    value: Math.round(rgb.a * 100),
-    onChange: handleChange,
-    dragLabel: 'true',
-    dragMax: '100'
-  })));
+  return _react2.default.createElement(
+    'div',
+    { style: styles.fields, className: 'flexbox-fix' },
+    _react2.default.createElement(
+      'div',
+      { style: styles.double },
+      _react2.default.createElement(_common.EditableInput, {
+        style: { input: styles.input, label: styles.label },
+        label: 'hex',
+        value: hex.replace('#', ''),
+        onChange: handleChange
+      })
+    ),
+    _react2.default.createElement(
+      'div',
+      { style: styles.single },
+      _react2.default.createElement(_common.EditableInput, {
+        style: { input: styles.input, label: styles.label },
+        label: 'r',
+        value: rgb.r,
+        onChange: handleChange,
+        dragLabel: 'true',
+        dragMax: '255'
+      })
+    ),
+    _react2.default.createElement(
+      'div',
+      { style: styles.single },
+      _react2.default.createElement(_common.EditableInput, {
+        style: { input: styles.input, label: styles.label },
+        label: 'g',
+        value: rgb.g,
+        onChange: handleChange,
+        dragLabel: 'true',
+        dragMax: '255'
+      })
+    ),
+    _react2.default.createElement(
+      'div',
+      { style: styles.single },
+      _react2.default.createElement(_common.EditableInput, {
+        style: { input: styles.input, label: styles.label },
+        label: 'b',
+        value: rgb.b,
+        onChange: handleChange,
+        dragLabel: 'true',
+        dragMax: '255'
+      })
+    ),
+    _react2.default.createElement(
+      'div',
+      { style: styles.alpha },
+      _react2.default.createElement(_common.EditableInput, {
+        style: { input: styles.input, label: styles.label },
+        label: 'a',
+        value: Math.round(rgb.a * 100),
+        onChange: handleChange,
+        dragLabel: 'true',
+        dragMax: '100'
+      })
+    )
+  );
 };
 
-exports.SketchFields = SketchFields;
-var _default = SketchFields;
-exports.default = _default;
-},{"react":"../node_modules/react/index.js","reactcss":"../node_modules/reactcss/lib/index.js","../../helpers/color":"../node_modules/react-color/es/helpers/color.js","../common":"../node_modules/react-color/es/components/common/index.js"}],"../node_modules/react-color/es/components/sketch/SketchPresetColors.js":[function(require,module,exports) {
-"use strict";
+exports.default = SketchFields;
+},{"react":"../node_modules/react/index.js","reactcss":"../node_modules/reactcss/lib/index.js","../../helpers/color":"../node_modules/react-color/lib/helpers/color.js","../common":"../node_modules/react-color/lib/components/common/index.js"}],"../node_modules/react-color/lib/components/sketch/SketchPresetColors.js":[function(require,module,exports) {
+'use strict';
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.default = exports.SketchPresetColors = void 0;
+exports.SketchPresetColors = undefined;
 
-var _react = _interopRequireDefault(require("react"));
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
-var _propTypes = _interopRequireDefault(require("prop-types"));
+var _react = require('react');
 
-var _reactcss = _interopRequireDefault(require("reactcss"));
+var _react2 = _interopRequireDefault(_react);
 
-var _common = require("../common");
+var _propTypes = require('prop-types');
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+var _reactcss = require('reactcss');
+
+var _reactcss2 = _interopRequireDefault(_reactcss);
+
+var _common = require('../common');
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var _extends = Object.assign || function (target) {
-  for (var i = 1; i < arguments.length; i++) {
-    var source = arguments[i];
-
-    for (var key in source) {
-      if (Object.prototype.hasOwnProperty.call(source, key)) {
-        target[key] = source[key];
-      }
-    }
-  }
-
-  return target;
-};
-
-var SketchPresetColors = function SketchPresetColors(_ref) {
+var SketchPresetColors = exports.SketchPresetColors = function SketchPresetColors(_ref) {
   var colors = _ref.colors,
       _ref$onClick = _ref.onClick,
       onClick = _ref$onClick === undefined ? function () {} : _ref$onClick,
       onSwatchHover = _ref.onSwatchHover;
-  var styles = (0, _reactcss.default)({
+
+  var styles = (0, _reactcss2.default)({
     'default': {
       colors: {
         margin: '0 -10px',
@@ -62038,76 +57060,75 @@ var SketchPresetColors = function SketchPresetColors(_ref) {
     }, e);
   };
 
-  return _react.default.createElement('div', {
-    style: styles.colors,
-    className: 'flexbox-fix'
-  }, colors.map(function (colorObjOrString) {
-    var c = typeof colorObjOrString === 'string' ? {
-      color: colorObjOrString
-    } : colorObjOrString;
-    var key = '' + c.color + (c.title || '');
-    return _react.default.createElement('div', {
-      key: key,
-      style: styles.swatchWrap
-    }, _react.default.createElement(_common.Swatch, _extends({}, c, {
-      style: styles.swatch,
-      onClick: handleClick,
-      onHover: onSwatchHover,
-      focusStyle: {
-        boxShadow: 'inset 0 0 0 1px rgba(0,0,0,.15), 0 0 4px ' + c.color
-      }
-    })));
-  }));
+  return _react2.default.createElement(
+    'div',
+    { style: styles.colors, className: 'flexbox-fix' },
+    colors.map(function (colorObjOrString) {
+      var c = typeof colorObjOrString === 'string' ? { color: colorObjOrString } : colorObjOrString;
+      var key = '' + c.color + (c.title || '');
+      return _react2.default.createElement(
+        'div',
+        { key: key, style: styles.swatchWrap },
+        _react2.default.createElement(_common.Swatch, _extends({}, c, {
+          style: styles.swatch,
+          onClick: handleClick,
+          onHover: onSwatchHover,
+          focusStyle: {
+            boxShadow: 'inset 0 0 0 1px rgba(0,0,0,.15), 0 0 4px ' + c.color
+          }
+        }))
+      );
+    })
+  );
 };
 
-exports.SketchPresetColors = SketchPresetColors;
 SketchPresetColors.propTypes = {
-  colors: _propTypes.default.arrayOf(_propTypes.default.oneOfType([_propTypes.default.string, _propTypes.default.shape({
-    color: _propTypes.default.string,
-    title: _propTypes.default.string
+  colors: _propTypes2.default.arrayOf(_propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.shape({
+    color: _propTypes2.default.string,
+    title: _propTypes2.default.string
   })])).isRequired
 };
-var _default = SketchPresetColors;
-exports.default = _default;
-},{"react":"../node_modules/react/index.js","prop-types":"../node_modules/prop-types/index.js","reactcss":"../node_modules/reactcss/lib/index.js","../common":"../node_modules/react-color/es/components/common/index.js"}],"../node_modules/react-color/es/components/sketch/Sketch.js":[function(require,module,exports) {
-"use strict";
+
+exports.default = SketchPresetColors;
+},{"react":"../node_modules/react/index.js","prop-types":"../node_modules/prop-types/index.js","reactcss":"../node_modules/reactcss/lib/index.js","../common":"../node_modules/react-color/lib/components/common/index.js"}],"../node_modules/react-color/lib/components/sketch/Sketch.js":[function(require,module,exports) {
+'use strict';
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.default = exports.Sketch = void 0;
+exports.Sketch = undefined;
 
-var _react = _interopRequireDefault(require("react"));
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
-var _propTypes = _interopRequireDefault(require("prop-types"));
+var _react = require('react');
 
-var _reactcss = _interopRequireDefault(require("reactcss"));
+var _react2 = _interopRequireDefault(_react);
 
-var _merge = _interopRequireDefault(require("lodash-es/merge"));
+var _propTypes = require('prop-types');
 
-var _common = require("../common");
+var _propTypes2 = _interopRequireDefault(_propTypes);
 
-var _SketchFields = _interopRequireDefault(require("./SketchFields"));
+var _reactcss = require('reactcss');
 
-var _SketchPresetColors = _interopRequireDefault(require("./SketchPresetColors"));
+var _reactcss2 = _interopRequireDefault(_reactcss);
+
+var _merge = require('lodash/merge');
+
+var _merge2 = _interopRequireDefault(_merge);
+
+var _common = require('../common');
+
+var _SketchFields = require('./SketchFields');
+
+var _SketchFields2 = _interopRequireDefault(_SketchFields);
+
+var _SketchPresetColors = require('./SketchPresetColors');
+
+var _SketchPresetColors2 = _interopRequireDefault(_SketchPresetColors);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var _extends = Object.assign || function (target) {
-  for (var i = 1; i < arguments.length; i++) {
-    var source = arguments[i];
-
-    for (var key in source) {
-      if (Object.prototype.hasOwnProperty.call(source, key)) {
-        target[key] = source[key];
-      }
-    }
-  }
-
-  return target;
-};
-
-var Sketch = function Sketch(_ref) {
+var Sketch = exports.Sketch = function Sketch(_ref) {
   var width = _ref.width,
       rgb = _ref.rgb,
       hex = _ref.hex,
@@ -62122,7 +57143,8 @@ var Sketch = function Sketch(_ref) {
       passedStyles = _ref$styles === undefined ? {} : _ref$styles,
       _ref$className = _ref.className,
       className = _ref$className === undefined ? '' : _ref$className;
-  var styles = (0, _reactcss.default)((0, _merge.default)({
+
+  var styles = (0, _reactcss2.default)((0, _merge2.default)({
     'default': _extends({
       picker: {
         width: width,
@@ -62172,6 +57194,7 @@ var Sketch = function Sketch(_ref) {
         radius: '2px',
         shadow: 'inset 0 0 0 1px rgba(0,0,0,.15), inset 0 0 4px rgba(0,0,0,.25)'
       },
+
       alpha: {
         position: 'relative',
         height: '10px',
@@ -62194,61 +57217,76 @@ var Sketch = function Sketch(_ref) {
         display: 'none'
       }
     }
-  }, passedStyles), {
-    disableAlpha: disableAlpha
-  });
-  return _react.default.createElement('div', {
-    style: styles.picker,
-    className: 'sketch-picker ' + className
-  }, _react.default.createElement('div', {
-    style: styles.saturation
-  }, _react.default.createElement(_common.Saturation, {
-    style: styles.Saturation,
-    hsl: hsl,
-    hsv: hsv,
-    onChange: onChange
-  })), _react.default.createElement('div', {
-    style: styles.controls,
-    className: 'flexbox-fix'
-  }, _react.default.createElement('div', {
-    style: styles.sliders
-  }, _react.default.createElement('div', {
-    style: styles.hue
-  }, _react.default.createElement(_common.Hue, {
-    style: styles.Hue,
-    hsl: hsl,
-    onChange: onChange
-  })), _react.default.createElement('div', {
-    style: styles.alpha
-  }, _react.default.createElement(_common.Alpha, {
-    style: styles.Alpha,
-    rgb: rgb,
-    hsl: hsl,
-    renderers: renderers,
-    onChange: onChange
-  }))), _react.default.createElement('div', {
-    style: styles.color
-  }, _react.default.createElement(_common.Checkboard, null), _react.default.createElement('div', {
-    style: styles.activeColor
-  }))), _react.default.createElement(_SketchFields.default, {
-    rgb: rgb,
-    hsl: hsl,
-    hex: hex,
-    onChange: onChange,
-    disableAlpha: disableAlpha
-  }), _react.default.createElement(_SketchPresetColors.default, {
-    colors: presetColors,
-    onClick: onChange,
-    onSwatchHover: onSwatchHover
-  }));
+  }, passedStyles), { disableAlpha: disableAlpha });
+
+  return _react2.default.createElement(
+    'div',
+    { style: styles.picker, className: 'sketch-picker ' + className },
+    _react2.default.createElement(
+      'div',
+      { style: styles.saturation },
+      _react2.default.createElement(_common.Saturation, {
+        style: styles.Saturation,
+        hsl: hsl,
+        hsv: hsv,
+        onChange: onChange
+      })
+    ),
+    _react2.default.createElement(
+      'div',
+      { style: styles.controls, className: 'flexbox-fix' },
+      _react2.default.createElement(
+        'div',
+        { style: styles.sliders },
+        _react2.default.createElement(
+          'div',
+          { style: styles.hue },
+          _react2.default.createElement(_common.Hue, {
+            style: styles.Hue,
+            hsl: hsl,
+            onChange: onChange
+          })
+        ),
+        _react2.default.createElement(
+          'div',
+          { style: styles.alpha },
+          _react2.default.createElement(_common.Alpha, {
+            style: styles.Alpha,
+            rgb: rgb,
+            hsl: hsl,
+            renderers: renderers,
+            onChange: onChange
+          })
+        )
+      ),
+      _react2.default.createElement(
+        'div',
+        { style: styles.color },
+        _react2.default.createElement(_common.Checkboard, null),
+        _react2.default.createElement('div', { style: styles.activeColor })
+      )
+    ),
+    _react2.default.createElement(_SketchFields2.default, {
+      rgb: rgb,
+      hsl: hsl,
+      hex: hex,
+      onChange: onChange,
+      disableAlpha: disableAlpha
+    }),
+    _react2.default.createElement(_SketchPresetColors2.default, {
+      colors: presetColors,
+      onClick: onChange,
+      onSwatchHover: onSwatchHover
+    })
+  );
 };
 
-exports.Sketch = Sketch;
 Sketch.propTypes = {
-  disableAlpha: _propTypes.default.bool,
-  width: _propTypes.default.oneOfType([_propTypes.default.string, _propTypes.default.number]),
-  styles: _propTypes.default.object
+  disableAlpha: _propTypes2.default.bool,
+  width: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number]),
+  styles: _propTypes2.default.object
 };
+
 Sketch.defaultProps = {
   disableAlpha: false,
   width: 200,
@@ -62256,24 +57294,26 @@ Sketch.defaultProps = {
   presetColors: ['#D0021B', '#F5A623', '#F8E71C', '#8B572A', '#7ED321', '#417505', '#BD10E0', '#9013FE', '#4A90E2', '#50E3C2', '#B8E986', '#000000', '#4A4A4A', '#9B9B9B', '#FFFFFF']
 };
 
-var _default = (0, _common.ColorWrap)(Sketch);
-
-exports.default = _default;
-},{"react":"../node_modules/react/index.js","prop-types":"../node_modules/prop-types/index.js","reactcss":"../node_modules/reactcss/lib/index.js","lodash-es/merge":"../node_modules/lodash-es/merge.js","../common":"../node_modules/react-color/es/components/common/index.js","./SketchFields":"../node_modules/react-color/es/components/sketch/SketchFields.js","./SketchPresetColors":"../node_modules/react-color/es/components/sketch/SketchPresetColors.js"}],"../node_modules/react-color/es/components/slider/SliderSwatch.js":[function(require,module,exports) {
-"use strict";
+exports.default = (0, _common.ColorWrap)(Sketch);
+},{"react":"../node_modules/react/index.js","prop-types":"../node_modules/prop-types/index.js","reactcss":"../node_modules/reactcss/lib/index.js","lodash/merge":"../node_modules/lodash/merge.js","../common":"../node_modules/react-color/lib/components/common/index.js","./SketchFields":"../node_modules/react-color/lib/components/sketch/SketchFields.js","./SketchPresetColors":"../node_modules/react-color/lib/components/sketch/SketchPresetColors.js"}],"../node_modules/react-color/lib/components/slider/SliderSwatch.js":[function(require,module,exports) {
+'use strict';
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.default = exports.SliderSwatch = void 0;
+exports.SliderSwatch = undefined;
 
-var _react = _interopRequireDefault(require("react"));
+var _react = require('react');
 
-var _reactcss = _interopRequireDefault(require("reactcss"));
+var _react2 = _interopRequireDefault(_react);
+
+var _reactcss = require('reactcss');
+
+var _reactcss2 = _interopRequireDefault(_reactcss);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var SliderSwatch = function SliderSwatch(_ref) {
+var SliderSwatch = exports.SliderSwatch = function SliderSwatch(_ref) {
   var hsl = _ref.hsl,
       offset = _ref.offset,
       _ref$onClick = _ref.onClick,
@@ -62281,7 +57321,8 @@ var SliderSwatch = function SliderSwatch(_ref) {
       active = _ref.active,
       first = _ref.first,
       last = _ref.last;
-  var styles = (0, _reactcss.default)({
+
+  var styles = (0, _reactcss2.default)({
     'default': {
       swatch: {
         height: '12px',
@@ -62305,11 +57346,7 @@ var SliderSwatch = function SliderSwatch(_ref) {
         borderRadius: '3.6px/2px'
       }
     }
-  }, {
-    active: active,
-    first: first,
-    last: last
-  });
+  }, { active: active, first: first, last: last });
 
   var handleClick = function handleClick(e) {
     return onClick({
@@ -62320,35 +57357,37 @@ var SliderSwatch = function SliderSwatch(_ref) {
     }, e);
   };
 
-  return _react.default.createElement('div', {
-    style: styles.swatch,
-    onClick: handleClick
-  });
+  return _react2.default.createElement('div', { style: styles.swatch, onClick: handleClick });
 };
 
-exports.SliderSwatch = SliderSwatch;
-var _default = SliderSwatch;
-exports.default = _default;
-},{"react":"../node_modules/react/index.js","reactcss":"../node_modules/reactcss/lib/index.js"}],"../node_modules/react-color/es/components/slider/SliderSwatches.js":[function(require,module,exports) {
-"use strict";
+exports.default = SliderSwatch;
+},{"react":"../node_modules/react/index.js","reactcss":"../node_modules/reactcss/lib/index.js"}],"../node_modules/react-color/lib/components/slider/SliderSwatches.js":[function(require,module,exports) {
+'use strict';
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.default = exports.SliderSwatches = void 0;
+exports.SliderSwatches = undefined;
 
-var _react = _interopRequireDefault(require("react"));
+var _react = require('react');
 
-var _reactcss = _interopRequireDefault(require("reactcss"));
+var _react2 = _interopRequireDefault(_react);
 
-var _SliderSwatch = _interopRequireDefault(require("./SliderSwatch"));
+var _reactcss = require('reactcss');
+
+var _reactcss2 = _interopRequireDefault(_reactcss);
+
+var _SliderSwatch = require('./SliderSwatch');
+
+var _SliderSwatch2 = _interopRequireDefault(_SliderSwatch);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var SliderSwatches = function SliderSwatches(_ref) {
+var SliderSwatches = exports.SliderSwatches = function SliderSwatches(_ref) {
   var onClick = _ref.onClick,
       hsl = _ref.hsl;
-  var styles = (0, _reactcss.default)({
+
+  var styles = (0, _reactcss2.default)({
     'default': {
       swatches: {
         marginTop: '20px'
@@ -62363,72 +57402,91 @@ var SliderSwatches = function SliderSwatches(_ref) {
         clear: 'both'
       }
     }
-  }); // Acceptible difference in floating point equality
+  });
 
+  // Acceptible difference in floating point equality
   var epsilon = 0.1;
-  return _react.default.createElement('div', {
-    style: styles.swatches
-  }, _react.default.createElement('div', {
-    style: styles.swatch
-  }, _react.default.createElement(_SliderSwatch.default, {
-    hsl: hsl,
-    offset: '.80',
-    active: Math.abs(hsl.l - 0.80) < epsilon && Math.abs(hsl.s - 0.50) < epsilon,
-    onClick: onClick,
-    first: true
-  })), _react.default.createElement('div', {
-    style: styles.swatch
-  }, _react.default.createElement(_SliderSwatch.default, {
-    hsl: hsl,
-    offset: '.65',
-    active: Math.abs(hsl.l - 0.65) < epsilon && Math.abs(hsl.s - 0.50) < epsilon,
-    onClick: onClick
-  })), _react.default.createElement('div', {
-    style: styles.swatch
-  }, _react.default.createElement(_SliderSwatch.default, {
-    hsl: hsl,
-    offset: '.50',
-    active: Math.abs(hsl.l - 0.50) < epsilon && Math.abs(hsl.s - 0.50) < epsilon,
-    onClick: onClick
-  })), _react.default.createElement('div', {
-    style: styles.swatch
-  }, _react.default.createElement(_SliderSwatch.default, {
-    hsl: hsl,
-    offset: '.35',
-    active: Math.abs(hsl.l - 0.35) < epsilon && Math.abs(hsl.s - 0.50) < epsilon,
-    onClick: onClick
-  })), _react.default.createElement('div', {
-    style: styles.swatch
-  }, _react.default.createElement(_SliderSwatch.default, {
-    hsl: hsl,
-    offset: '.20',
-    active: Math.abs(hsl.l - 0.20) < epsilon && Math.abs(hsl.s - 0.50) < epsilon,
-    onClick: onClick,
-    last: true
-  })), _react.default.createElement('div', {
-    style: styles.clear
-  }));
+
+  return _react2.default.createElement(
+    'div',
+    { style: styles.swatches },
+    _react2.default.createElement(
+      'div',
+      { style: styles.swatch },
+      _react2.default.createElement(_SliderSwatch2.default, {
+        hsl: hsl,
+        offset: '.80',
+        active: Math.abs(hsl.l - 0.80) < epsilon && Math.abs(hsl.s - 0.50) < epsilon,
+        onClick: onClick,
+        first: true
+      })
+    ),
+    _react2.default.createElement(
+      'div',
+      { style: styles.swatch },
+      _react2.default.createElement(_SliderSwatch2.default, {
+        hsl: hsl,
+        offset: '.65',
+        active: Math.abs(hsl.l - 0.65) < epsilon && Math.abs(hsl.s - 0.50) < epsilon,
+        onClick: onClick
+      })
+    ),
+    _react2.default.createElement(
+      'div',
+      { style: styles.swatch },
+      _react2.default.createElement(_SliderSwatch2.default, {
+        hsl: hsl,
+        offset: '.50',
+        active: Math.abs(hsl.l - 0.50) < epsilon && Math.abs(hsl.s - 0.50) < epsilon,
+        onClick: onClick
+      })
+    ),
+    _react2.default.createElement(
+      'div',
+      { style: styles.swatch },
+      _react2.default.createElement(_SliderSwatch2.default, {
+        hsl: hsl,
+        offset: '.35',
+        active: Math.abs(hsl.l - 0.35) < epsilon && Math.abs(hsl.s - 0.50) < epsilon,
+        onClick: onClick
+      })
+    ),
+    _react2.default.createElement(
+      'div',
+      { style: styles.swatch },
+      _react2.default.createElement(_SliderSwatch2.default, {
+        hsl: hsl,
+        offset: '.20',
+        active: Math.abs(hsl.l - 0.20) < epsilon && Math.abs(hsl.s - 0.50) < epsilon,
+        onClick: onClick,
+        last: true
+      })
+    ),
+    _react2.default.createElement('div', { style: styles.clear })
+  );
 };
 
-exports.SliderSwatches = SliderSwatches;
-var _default = SliderSwatches;
-exports.default = _default;
-},{"react":"../node_modules/react/index.js","reactcss":"../node_modules/reactcss/lib/index.js","./SliderSwatch":"../node_modules/react-color/es/components/slider/SliderSwatch.js"}],"../node_modules/react-color/es/components/slider/SliderPointer.js":[function(require,module,exports) {
-"use strict";
+exports.default = SliderSwatches;
+},{"react":"../node_modules/react/index.js","reactcss":"../node_modules/reactcss/lib/index.js","./SliderSwatch":"../node_modules/react-color/lib/components/slider/SliderSwatch.js"}],"../node_modules/react-color/lib/components/slider/SliderPointer.js":[function(require,module,exports) {
+'use strict';
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.default = exports.SliderPointer = void 0;
+exports.SliderPointer = undefined;
 
-var _react = _interopRequireDefault(require("react"));
+var _react = require('react');
 
-var _reactcss = _interopRequireDefault(require("reactcss"));
+var _react2 = _interopRequireDefault(_react);
+
+var _reactcss = require('reactcss');
+
+var _reactcss2 = _interopRequireDefault(_reactcss);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var SliderPointer = function SliderPointer() {
-  var styles = (0, _reactcss.default)({
+var SliderPointer = exports.SliderPointer = function SliderPointer() {
+  var styles = (0, _reactcss2.default)({
     'default': {
       picker: {
         width: '14px',
@@ -62440,39 +57498,48 @@ var SliderPointer = function SliderPointer() {
       }
     }
   });
-  return _react.default.createElement('div', {
-    style: styles.picker
-  });
+
+  return _react2.default.createElement('div', { style: styles.picker });
 };
 
-exports.SliderPointer = SliderPointer;
-var _default = SliderPointer;
-exports.default = _default;
-},{"react":"../node_modules/react/index.js","reactcss":"../node_modules/reactcss/lib/index.js"}],"../node_modules/react-color/es/components/slider/Slider.js":[function(require,module,exports) {
-"use strict";
+exports.default = SliderPointer;
+},{"react":"../node_modules/react/index.js","reactcss":"../node_modules/reactcss/lib/index.js"}],"../node_modules/react-color/lib/components/slider/Slider.js":[function(require,module,exports) {
+'use strict';
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.default = exports.Slider = void 0;
+exports.Slider = undefined;
 
-var _react = _interopRequireDefault(require("react"));
+var _react = require('react');
 
-var _propTypes = _interopRequireDefault(require("prop-types"));
+var _react2 = _interopRequireDefault(_react);
 
-var _reactcss = _interopRequireDefault(require("reactcss"));
+var _propTypes = require('prop-types');
 
-var _merge = _interopRequireDefault(require("lodash-es/merge"));
+var _propTypes2 = _interopRequireDefault(_propTypes);
 
-var _common = require("../common");
+var _reactcss = require('reactcss');
 
-var _SliderSwatches = _interopRequireDefault(require("./SliderSwatches"));
+var _reactcss2 = _interopRequireDefault(_reactcss);
 
-var _SliderPointer = _interopRequireDefault(require("./SliderPointer"));
+var _merge = require('lodash/merge');
+
+var _merge2 = _interopRequireDefault(_merge);
+
+var _common = require('../common');
+
+var _SliderSwatches = require('./SliderSwatches');
+
+var _SliderSwatches2 = _interopRequireDefault(_SliderSwatches);
+
+var _SliderPointer = require('./SliderPointer');
+
+var _SliderPointer2 = _interopRequireDefault(_SliderPointer);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var Slider = function Slider(_ref) {
+var Slider = exports.Slider = function Slider(_ref) {
   var hsl = _ref.hsl,
       onChange = _ref.onChange,
       pointer = _ref.pointer,
@@ -62480,7 +57547,8 @@ var Slider = function Slider(_ref) {
       passedStyles = _ref$styles === undefined ? {} : _ref$styles,
       _ref$className = _ref.className,
       className = _ref$className === undefined ? '' : _ref$className;
-  var styles = (0, _reactcss.default)((0, _merge.default)({
+
+  var styles = (0, _reactcss2.default)((0, _merge2.default)({
     'default': {
       hue: {
         height: '12px',
@@ -62491,37 +57559,38 @@ var Slider = function Slider(_ref) {
       }
     }
   }, passedStyles));
-  return _react.default.createElement('div', {
-    style: styles.wrap || {},
-    className: 'slider-picker ' + className
-  }, _react.default.createElement('div', {
-    style: styles.hue
-  }, _react.default.createElement(_common.Hue, {
-    style: styles.Hue,
-    hsl: hsl,
-    pointer: pointer,
-    onChange: onChange
-  })), _react.default.createElement('div', {
-    style: styles.swatches
-  }, _react.default.createElement(_SliderSwatches.default, {
-    hsl: hsl,
-    onClick: onChange
-  })));
+
+  return _react2.default.createElement(
+    'div',
+    { style: styles.wrap || {}, className: 'slider-picker ' + className },
+    _react2.default.createElement(
+      'div',
+      { style: styles.hue },
+      _react2.default.createElement(_common.Hue, {
+        style: styles.Hue,
+        hsl: hsl,
+        pointer: pointer,
+        onChange: onChange
+      })
+    ),
+    _react2.default.createElement(
+      'div',
+      { style: styles.swatches },
+      _react2.default.createElement(_SliderSwatches2.default, { hsl: hsl, onClick: onChange })
+    )
+  );
 };
 
-exports.Slider = Slider;
 Slider.propTypes = {
-  styles: _propTypes.default.object
+  styles: _propTypes2.default.object
 };
 Slider.defaultProps = {
-  pointer: _SliderPointer.default,
+  pointer: _SliderPointer2.default,
   styles: {}
 };
 
-var _default = (0, _common.ColorWrap)(Slider);
-
-exports.default = _default;
-},{"react":"../node_modules/react/index.js","prop-types":"../node_modules/prop-types/index.js","reactcss":"../node_modules/reactcss/lib/index.js","lodash-es/merge":"../node_modules/lodash-es/merge.js","../common":"../node_modules/react-color/es/components/common/index.js","./SliderSwatches":"../node_modules/react-color/es/components/slider/SliderSwatches.js","./SliderPointer":"../node_modules/react-color/es/components/slider/SliderPointer.js"}],"../node_modules/@icons/material/CheckIcon.js":[function(require,module,exports) {
+exports.default = (0, _common.ColorWrap)(Slider);
+},{"react":"../node_modules/react/index.js","prop-types":"../node_modules/prop-types/index.js","reactcss":"../node_modules/reactcss/lib/index.js","lodash/merge":"../node_modules/lodash/merge.js","../common":"../node_modules/react-color/lib/components/common/index.js","./SliderSwatches":"../node_modules/react-color/lib/components/slider/SliderSwatches.js","./SliderPointer":"../node_modules/react-color/lib/components/slider/SliderPointer.js"}],"../node_modules/@icons/material/CheckIcon.js":[function(require,module,exports) {
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -62560,31 +57629,35 @@ exports.default = function (_ref) {
     _react2.default.createElement('path', { d: 'M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z' })
   );
 };
-},{"react":"../node_modules/react/index.js"}],"../node_modules/react-color/es/components/swatches/SwatchesColor.js":[function(require,module,exports) {
-"use strict";
+},{"react":"../node_modules/react/index.js"}],"../node_modules/react-color/lib/components/swatches/SwatchesColor.js":[function(require,module,exports) {
+'use strict';
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.default = exports.SwatchesColor = void 0;
+exports.SwatchesColor = undefined;
 
-var _react = _interopRequireDefault(require("react"));
+var _react = require('react');
 
-var _reactcss = _interopRequireDefault(require("reactcss"));
+var _react2 = _interopRequireDefault(_react);
 
-var colorUtils = _interopRequireWildcard(require("../../helpers/color"));
+var _reactcss = require('reactcss');
 
-var _common = require("../common");
+var _reactcss2 = _interopRequireDefault(_reactcss);
 
-var _CheckIcon = _interopRequireDefault(require("@icons/material/CheckIcon"));
+var _color = require('../../helpers/color');
 
-function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
+var _color2 = _interopRequireDefault(_color);
 
-function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+var _common = require('../common');
+
+var _CheckIcon = require('@icons/material/CheckIcon');
+
+var _CheckIcon2 = _interopRequireDefault(_CheckIcon);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var SwatchesColor = function SwatchesColor(_ref) {
+var SwatchesColor = exports.SwatchesColor = function SwatchesColor(_ref) {
   var color = _ref.color,
       _ref$onClick = _ref.onClick,
       onClick = _ref$onClick === undefined ? function () {} : _ref$onClick,
@@ -62592,7 +57665,8 @@ var SwatchesColor = function SwatchesColor(_ref) {
       first = _ref.first,
       last = _ref.last,
       active = _ref.active;
-  var styles = (0, _reactcss.default)({
+
+  var styles = (0, _reactcss2.default)({
     'default': {
       color: {
         width: '40px',
@@ -62602,7 +57676,7 @@ var SwatchesColor = function SwatchesColor(_ref) {
         marginBottom: '1px'
       },
       check: {
-        color: colorUtils.getContrastingColor(color),
+        color: _color2.default.getContrastingColor(color),
         marginLeft: '8px',
         display: 'none'
       }
@@ -62644,46 +57718,58 @@ var SwatchesColor = function SwatchesColor(_ref) {
     'color-#FFFFFF': color === '#FFFFFF',
     'transparent': color === 'transparent'
   });
-  return _react.default.createElement(_common.Swatch, {
-    color: color,
-    style: styles.color,
-    onClick: onClick,
-    onHover: onSwatchHover,
-    focusStyle: {
-      boxShadow: '0 0 4px ' + color
-    }
-  }, _react.default.createElement('div', {
-    style: styles.check
-  }, _react.default.createElement(_CheckIcon.default, null)));
+
+  return _react2.default.createElement(
+    _common.Swatch,
+    {
+      color: color,
+      style: styles.color,
+      onClick: onClick,
+      onHover: onSwatchHover,
+      focusStyle: { boxShadow: '0 0 4px ' + color }
+    },
+    _react2.default.createElement(
+      'div',
+      { style: styles.check },
+      _react2.default.createElement(_CheckIcon2.default, null)
+    )
+  );
 };
 
-exports.SwatchesColor = SwatchesColor;
-var _default = SwatchesColor;
-exports.default = _default;
-},{"react":"../node_modules/react/index.js","reactcss":"../node_modules/reactcss/lib/index.js","../../helpers/color":"../node_modules/react-color/es/helpers/color.js","../common":"../node_modules/react-color/es/components/common/index.js","@icons/material/CheckIcon":"../node_modules/@icons/material/CheckIcon.js"}],"../node_modules/react-color/es/components/swatches/SwatchesGroup.js":[function(require,module,exports) {
-"use strict";
+exports.default = SwatchesColor;
+},{"react":"../node_modules/react/index.js","reactcss":"../node_modules/reactcss/lib/index.js","../../helpers/color":"../node_modules/react-color/lib/helpers/color.js","../common":"../node_modules/react-color/lib/components/common/index.js","@icons/material/CheckIcon":"../node_modules/@icons/material/CheckIcon.js"}],"../node_modules/react-color/lib/components/swatches/SwatchesGroup.js":[function(require,module,exports) {
+'use strict';
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.default = exports.SwatchesGroup = void 0;
+exports.SwatchesGroup = undefined;
 
-var _react = _interopRequireDefault(require("react"));
+var _react = require('react');
 
-var _reactcss = _interopRequireDefault(require("reactcss"));
+var _react2 = _interopRequireDefault(_react);
 
-var _map = _interopRequireDefault(require("lodash-es/map"));
+var _reactcss = require('reactcss');
 
-var _SwatchesColor = _interopRequireDefault(require("./SwatchesColor"));
+var _reactcss2 = _interopRequireDefault(_reactcss);
+
+var _map = require('lodash/map');
+
+var _map2 = _interopRequireDefault(_map);
+
+var _SwatchesColor = require('./SwatchesColor');
+
+var _SwatchesColor2 = _interopRequireDefault(_SwatchesColor);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var SwatchesGroup = function SwatchesGroup(_ref) {
+var SwatchesGroup = exports.SwatchesGroup = function SwatchesGroup(_ref) {
   var onClick = _ref.onClick,
       onSwatchHover = _ref.onSwatchHover,
       group = _ref.group,
       active = _ref.active;
-  var styles = (0, _reactcss.default)({
+
+  var styles = (0, _reactcss2.default)({
     'default': {
       group: {
         paddingBottom: '10px',
@@ -62693,55 +57779,68 @@ var SwatchesGroup = function SwatchesGroup(_ref) {
       }
     }
   });
-  return _react.default.createElement('div', {
-    style: styles.group
-  }, (0, _map.default)(group, function (color, i) {
-    return _react.default.createElement(_SwatchesColor.default, {
-      key: color,
-      color: color,
-      active: color.toLowerCase() === active,
-      first: i === 0,
-      last: i === group.length - 1,
-      onClick: onClick,
-      onSwatchHover: onSwatchHover
-    });
-  }));
+
+  return _react2.default.createElement(
+    'div',
+    { style: styles.group },
+    (0, _map2.default)(group, function (color, i) {
+      return _react2.default.createElement(_SwatchesColor2.default, {
+        key: color,
+        color: color,
+        active: color.toLowerCase() === active,
+        first: i === 0,
+        last: i === group.length - 1,
+        onClick: onClick,
+        onSwatchHover: onSwatchHover
+      });
+    })
+  );
 };
 
-exports.SwatchesGroup = SwatchesGroup;
-var _default = SwatchesGroup;
-exports.default = _default;
-},{"react":"../node_modules/react/index.js","reactcss":"../node_modules/reactcss/lib/index.js","lodash-es/map":"../node_modules/lodash-es/map.js","./SwatchesColor":"../node_modules/react-color/es/components/swatches/SwatchesColor.js"}],"../node_modules/react-color/es/components/swatches/Swatches.js":[function(require,module,exports) {
-"use strict";
+exports.default = SwatchesGroup;
+},{"react":"../node_modules/react/index.js","reactcss":"../node_modules/reactcss/lib/index.js","lodash/map":"../node_modules/lodash/map.js","./SwatchesColor":"../node_modules/react-color/lib/components/swatches/SwatchesColor.js"}],"../node_modules/react-color/lib/components/swatches/Swatches.js":[function(require,module,exports) {
+'use strict';
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.default = exports.Swatches = void 0;
+exports.Swatches = undefined;
 
-var _react = _interopRequireDefault(require("react"));
+var _react = require('react');
 
-var _propTypes = _interopRequireDefault(require("prop-types"));
+var _react2 = _interopRequireDefault(_react);
 
-var _reactcss = _interopRequireDefault(require("reactcss"));
+var _propTypes = require('prop-types');
 
-var _map = _interopRequireDefault(require("lodash-es/map"));
+var _propTypes2 = _interopRequireDefault(_propTypes);
 
-var _merge = _interopRequireDefault(require("lodash-es/merge"));
+var _reactcss = require('reactcss');
 
-var material = _interopRequireWildcard(require("material-colors"));
+var _reactcss2 = _interopRequireDefault(_reactcss);
 
-var _common = require("../common");
+var _map = require('lodash/map');
 
-var _SwatchesGroup = _interopRequireDefault(require("./SwatchesGroup"));
+var _map2 = _interopRequireDefault(_map);
 
-function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
+var _merge = require('lodash/merge');
 
-function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+var _merge2 = _interopRequireDefault(_merge);
+
+var _materialColors = require('material-colors');
+
+var material = _interopRequireWildcard(_materialColors);
+
+var _common = require('../common');
+
+var _SwatchesGroup = require('./SwatchesGroup');
+
+var _SwatchesGroup2 = _interopRequireDefault(_SwatchesGroup);
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var Swatches = function Swatches(_ref) {
+var Swatches = exports.Swatches = function Swatches(_ref) {
   var width = _ref.width,
       height = _ref.height,
       onChange = _ref.onChange,
@@ -62752,7 +57851,8 @@ var Swatches = function Swatches(_ref) {
       passedStyles = _ref$styles === undefined ? {} : _ref$styles,
       _ref$className = _ref.className,
       className = _ref$className === undefined ? '' : _ref$className;
-  var styles = (0, _reactcss.default)((0, _merge.default)({
+
+  var styles = (0, _reactcss2.default)((0, _merge2.default)({
     'default': {
       picker: {
         width: width,
@@ -62772,80 +57872,89 @@ var Swatches = function Swatches(_ref) {
   }, passedStyles));
 
   var handleChange = function handleChange(data, e) {
-    return onChange({
-      hex: data,
-      source: 'hex'
-    }, e);
+    return onChange({ hex: data, source: 'hex' }, e);
   };
 
-  return _react.default.createElement('div', {
-    style: styles.picker,
-    className: 'swatches-picker ' + className
-  }, _react.default.createElement(_common.Raised, null, _react.default.createElement('div', {
-    style: styles.overflow
-  }, _react.default.createElement('div', {
-    style: styles.body
-  }, (0, _map.default)(colors, function (group) {
-    return _react.default.createElement(_SwatchesGroup.default, {
-      key: group.toString(),
-      group: group,
-      active: hex,
-      onClick: handleChange,
-      onSwatchHover: onSwatchHover
-    });
-  }), _react.default.createElement('div', {
-    style: styles.clear
-  })))));
+  return _react2.default.createElement(
+    'div',
+    { style: styles.picker, className: 'swatches-picker ' + className },
+    _react2.default.createElement(
+      _common.Raised,
+      null,
+      _react2.default.createElement(
+        'div',
+        { style: styles.overflow },
+        _react2.default.createElement(
+          'div',
+          { style: styles.body },
+          (0, _map2.default)(colors, function (group) {
+            return _react2.default.createElement(_SwatchesGroup2.default, {
+              key: group.toString(),
+              group: group,
+              active: hex,
+              onClick: handleChange,
+              onSwatchHover: onSwatchHover
+            });
+          }),
+          _react2.default.createElement('div', { style: styles.clear })
+        )
+      )
+    )
+  );
 };
 
-exports.Swatches = Swatches;
 Swatches.propTypes = {
-  width: _propTypes.default.oneOfType([_propTypes.default.string, _propTypes.default.number]),
-  height: _propTypes.default.oneOfType([_propTypes.default.string, _propTypes.default.number]),
-  colors: _propTypes.default.arrayOf(_propTypes.default.arrayOf(_propTypes.default.string)),
-  styles: _propTypes.default.object
-  /* eslint-disable max-len */
+  width: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number]),
+  height: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number]),
+  colors: _propTypes2.default.arrayOf(_propTypes2.default.arrayOf(_propTypes2.default.string)),
+  styles: _propTypes2.default.object
 
-};
-Swatches.defaultProps = {
+  /* eslint-disable max-len */
+};Swatches.defaultProps = {
   width: 320,
   height: 240,
   colors: [[material.red['900'], material.red['700'], material.red['500'], material.red['300'], material.red['100']], [material.pink['900'], material.pink['700'], material.pink['500'], material.pink['300'], material.pink['100']], [material.purple['900'], material.purple['700'], material.purple['500'], material.purple['300'], material.purple['100']], [material.deepPurple['900'], material.deepPurple['700'], material.deepPurple['500'], material.deepPurple['300'], material.deepPurple['100']], [material.indigo['900'], material.indigo['700'], material.indigo['500'], material.indigo['300'], material.indigo['100']], [material.blue['900'], material.blue['700'], material.blue['500'], material.blue['300'], material.blue['100']], [material.lightBlue['900'], material.lightBlue['700'], material.lightBlue['500'], material.lightBlue['300'], material.lightBlue['100']], [material.cyan['900'], material.cyan['700'], material.cyan['500'], material.cyan['300'], material.cyan['100']], [material.teal['900'], material.teal['700'], material.teal['500'], material.teal['300'], material.teal['100']], ['#194D33', material.green['700'], material.green['500'], material.green['300'], material.green['100']], [material.lightGreen['900'], material.lightGreen['700'], material.lightGreen['500'], material.lightGreen['300'], material.lightGreen['100']], [material.lime['900'], material.lime['700'], material.lime['500'], material.lime['300'], material.lime['100']], [material.yellow['900'], material.yellow['700'], material.yellow['500'], material.yellow['300'], material.yellow['100']], [material.amber['900'], material.amber['700'], material.amber['500'], material.amber['300'], material.amber['100']], [material.orange['900'], material.orange['700'], material.orange['500'], material.orange['300'], material.orange['100']], [material.deepOrange['900'], material.deepOrange['700'], material.deepOrange['500'], material.deepOrange['300'], material.deepOrange['100']], [material.brown['900'], material.brown['700'], material.brown['500'], material.brown['300'], material.brown['100']], [material.blueGrey['900'], material.blueGrey['700'], material.blueGrey['500'], material.blueGrey['300'], material.blueGrey['100']], ['#000000', '#525252', '#969696', '#D9D9D9', '#FFFFFF']],
   styles: {}
 };
 
-var _default = (0, _common.ColorWrap)(Swatches);
-
-exports.default = _default;
-},{"react":"../node_modules/react/index.js","prop-types":"../node_modules/prop-types/index.js","reactcss":"../node_modules/reactcss/lib/index.js","lodash-es/map":"../node_modules/lodash-es/map.js","lodash-es/merge":"../node_modules/lodash-es/merge.js","material-colors":"../node_modules/material-colors/dist/colors.es2015.js","../common":"../node_modules/react-color/es/components/common/index.js","./SwatchesGroup":"../node_modules/react-color/es/components/swatches/SwatchesGroup.js"}],"../node_modules/react-color/es/components/twitter/Twitter.js":[function(require,module,exports) {
-"use strict";
+exports.default = (0, _common.ColorWrap)(Swatches);
+},{"react":"../node_modules/react/index.js","prop-types":"../node_modules/prop-types/index.js","reactcss":"../node_modules/reactcss/lib/index.js","lodash/map":"../node_modules/lodash/map.js","lodash/merge":"../node_modules/lodash/merge.js","material-colors":"../node_modules/material-colors/dist/colors.es2015.js","../common":"../node_modules/react-color/lib/components/common/index.js","./SwatchesGroup":"../node_modules/react-color/lib/components/swatches/SwatchesGroup.js"}],"../node_modules/react-color/lib/components/twitter/Twitter.js":[function(require,module,exports) {
+'use strict';
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.default = exports.Twitter = void 0;
+exports.Twitter = undefined;
 
-var _react = _interopRequireDefault(require("react"));
+var _react = require('react');
 
-var _propTypes = _interopRequireDefault(require("prop-types"));
+var _react2 = _interopRequireDefault(_react);
 
-var _reactcss = _interopRequireDefault(require("reactcss"));
+var _propTypes = require('prop-types');
 
-var _map = _interopRequireDefault(require("lodash-es/map"));
+var _propTypes2 = _interopRequireDefault(_propTypes);
 
-var _merge = _interopRequireDefault(require("lodash-es/merge"));
+var _reactcss = require('reactcss');
 
-var color = _interopRequireWildcard(require("../../helpers/color"));
+var _reactcss2 = _interopRequireDefault(_reactcss);
 
-var _common = require("../common");
+var _map = require('lodash/map');
 
-function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
+var _map2 = _interopRequireDefault(_map);
 
-function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+var _merge = require('lodash/merge');
+
+var _merge2 = _interopRequireDefault(_merge);
+
+var _color = require('../../helpers/color');
+
+var _color2 = _interopRequireDefault(_color);
+
+var _common = require('../common');
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var Twitter = function Twitter(_ref) {
+var Twitter = exports.Twitter = function Twitter(_ref) {
   var onChange = _ref.onChange,
       onSwatchHover = _ref.onSwatchHover,
       hex = _ref.hex,
@@ -62856,7 +57965,8 @@ var Twitter = function Twitter(_ref) {
       passedStyles = _ref$styles === undefined ? {} : _ref$styles,
       _ref$className = _ref.className,
       className = _ref$className === undefined ? '' : _ref$className;
-  var styles = (0, _reactcss.default)((0, _merge.default)({
+
+  var styles = (0, _reactcss2.default)((0, _merge2.default)({
     'default': {
       card: {
         width: width,
@@ -62959,54 +58069,56 @@ var Twitter = function Twitter(_ref) {
   });
 
   var handleChange = function handleChange(hexcode, e) {
-    color.isValidHex(hexcode) && onChange({
+    _color2.default.isValidHex(hexcode) && onChange({
       hex: hexcode,
       source: 'hex'
     }, e);
   };
 
-  return _react.default.createElement('div', {
-    style: styles.card,
-    className: 'twitter-picker ' + className
-  }, _react.default.createElement('div', {
-    style: styles.triangleShadow
-  }), _react.default.createElement('div', {
-    style: styles.triangle
-  }), _react.default.createElement('div', {
-    style: styles.body
-  }, (0, _map.default)(colors, function (c, i) {
-    return _react.default.createElement(_common.Swatch, {
-      key: i,
-      color: c,
-      hex: c,
-      style: styles.swatch,
-      onClick: handleChange,
-      onHover: onSwatchHover,
-      focusStyle: {
-        boxShadow: '0 0 4px ' + c
-      }
-    });
-  }), _react.default.createElement('div', {
-    style: styles.hash
-  }, '#'), _react.default.createElement(_common.EditableInput, {
-    label: null,
-    style: {
-      input: styles.input
-    },
-    value: hex.replace('#', ''),
-    onChange: handleChange
-  }), _react.default.createElement('div', {
-    style: styles.clear
-  })));
+  return _react2.default.createElement(
+    'div',
+    { style: styles.card, className: 'twitter-picker ' + className },
+    _react2.default.createElement('div', { style: styles.triangleShadow }),
+    _react2.default.createElement('div', { style: styles.triangle }),
+    _react2.default.createElement(
+      'div',
+      { style: styles.body },
+      (0, _map2.default)(colors, function (c, i) {
+        return _react2.default.createElement(_common.Swatch, {
+          key: i,
+          color: c,
+          hex: c,
+          style: styles.swatch,
+          onClick: handleChange,
+          onHover: onSwatchHover,
+          focusStyle: {
+            boxShadow: '0 0 4px ' + c
+          }
+        });
+      }),
+      _react2.default.createElement(
+        'div',
+        { style: styles.hash },
+        '#'
+      ),
+      _react2.default.createElement(_common.EditableInput, {
+        label: null,
+        style: { input: styles.input },
+        value: hex.replace('#', ''),
+        onChange: handleChange
+      }),
+      _react2.default.createElement('div', { style: styles.clear })
+    )
+  );
 };
 
-exports.Twitter = Twitter;
 Twitter.propTypes = {
-  width: _propTypes.default.oneOfType([_propTypes.default.string, _propTypes.default.number]),
-  triangle: _propTypes.default.oneOf(['hide', 'top-left', 'top-right']),
-  colors: _propTypes.default.arrayOf(_propTypes.default.string),
-  styles: _propTypes.default.object
+  width: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number]),
+  triangle: _propTypes2.default.oneOf(['hide', 'top-left', 'top-right']),
+  colors: _propTypes2.default.arrayOf(_propTypes2.default.string),
+  styles: _propTypes2.default.object
 };
+
 Twitter.defaultProps = {
   width: 276,
   colors: ['#FF6900', '#FCB900', '#7BDCB5', '#00D084', '#8ED1FC', '#0693E3', '#ABB8C3', '#EB144C', '#F78DA7', '#9900EF'],
@@ -63014,620 +58126,147 @@ Twitter.defaultProps = {
   styles: {}
 };
 
-var _default = (0, _common.ColorWrap)(Twitter);
-
-exports.default = _default;
-},{"react":"../node_modules/react/index.js","prop-types":"../node_modules/prop-types/index.js","reactcss":"../node_modules/reactcss/lib/index.js","lodash-es/map":"../node_modules/lodash-es/map.js","lodash-es/merge":"../node_modules/lodash-es/merge.js","../../helpers/color":"../node_modules/react-color/es/helpers/color.js","../common":"../node_modules/react-color/es/components/common/index.js"}],"../node_modules/react-color/es/components/google/GooglePointerCircle.js":[function(require,module,exports) {
-"use strict";
+exports.default = (0, _common.ColorWrap)(Twitter);
+},{"react":"../node_modules/react/index.js","prop-types":"../node_modules/prop-types/index.js","reactcss":"../node_modules/reactcss/lib/index.js","lodash/map":"../node_modules/lodash/map.js","lodash/merge":"../node_modules/lodash/merge.js","../../helpers/color":"../node_modules/react-color/lib/helpers/color.js","../common":"../node_modules/react-color/lib/components/common/index.js"}],"../node_modules/react-color/lib/index.js":[function(require,module,exports) {
+'use strict';
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.default = exports.GooglePointerCircle = void 0;
+exports.CustomPicker = exports.TwitterPicker = exports.SwatchesPicker = exports.SliderPicker = exports.SketchPicker = exports.PhotoshopPicker = exports.MaterialPicker = exports.HuePicker = exports.GithubPicker = exports.CompactPicker = exports.ChromePicker = exports.default = exports.CirclePicker = exports.BlockPicker = exports.AlphaPicker = undefined;
 
-var _react = _interopRequireDefault(require("react"));
+var _Alpha = require('./components/alpha/Alpha');
 
-var _reactcss = _interopRequireDefault(require("reactcss"));
+Object.defineProperty(exports, 'AlphaPicker', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_Alpha).default;
+  }
+});
 
-var _propTypes = _interopRequireDefault(require("prop-types"));
+var _Block = require('./components/block/Block');
+
+Object.defineProperty(exports, 'BlockPicker', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_Block).default;
+  }
+});
+
+var _Circle = require('./components/circle/Circle');
+
+Object.defineProperty(exports, 'CirclePicker', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_Circle).default;
+  }
+});
+
+var _Chrome = require('./components/chrome/Chrome');
+
+Object.defineProperty(exports, 'ChromePicker', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_Chrome).default;
+  }
+});
+
+var _Compact = require('./components/compact/Compact');
+
+Object.defineProperty(exports, 'CompactPicker', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_Compact).default;
+  }
+});
+
+var _Github = require('./components/github/Github');
+
+Object.defineProperty(exports, 'GithubPicker', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_Github).default;
+  }
+});
+
+var _Hue = require('./components/hue/Hue');
+
+Object.defineProperty(exports, 'HuePicker', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_Hue).default;
+  }
+});
+
+var _Material = require('./components/material/Material');
+
+Object.defineProperty(exports, 'MaterialPicker', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_Material).default;
+  }
+});
+
+var _Photoshop = require('./components/photoshop/Photoshop');
+
+Object.defineProperty(exports, 'PhotoshopPicker', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_Photoshop).default;
+  }
+});
+
+var _Sketch = require('./components/sketch/Sketch');
+
+Object.defineProperty(exports, 'SketchPicker', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_Sketch).default;
+  }
+});
+
+var _Slider = require('./components/slider/Slider');
+
+Object.defineProperty(exports, 'SliderPicker', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_Slider).default;
+  }
+});
+
+var _Swatches = require('./components/swatches/Swatches');
+
+Object.defineProperty(exports, 'SwatchesPicker', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_Swatches).default;
+  }
+});
+
+var _Twitter = require('./components/twitter/Twitter');
+
+Object.defineProperty(exports, 'TwitterPicker', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_Twitter).default;
+  }
+});
+
+var _ColorWrap = require('./components/common/ColorWrap');
+
+Object.defineProperty(exports, 'CustomPicker', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_ColorWrap).default;
+  }
+});
+
+var _Chrome2 = _interopRequireDefault(_Chrome);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var GooglePointerCircle = function GooglePointerCircle(props) {
-  var styles = (0, _reactcss.default)({
-    'default': {
-      picker: {
-        width: '20px',
-        height: '20px',
-        borderRadius: '22px',
-        border: '2px #fff solid',
-        transform: 'translate(-12px, -13px)',
-        background: 'hsl(' + Math.round(props.hsl.h) + ', ' + Math.round(props.hsl.s * 100) + '%, ' + Math.round(props.hsl.l * 100) + '%)'
-      }
-    }
-  });
-  return _react.default.createElement('div', {
-    style: styles.picker
-  });
-};
-
-exports.GooglePointerCircle = GooglePointerCircle;
-GooglePointerCircle.propTypes = {
-  hsl: _propTypes.default.shape({
-    h: _propTypes.default.number,
-    s: _propTypes.default.number,
-    l: _propTypes.default.number,
-    a: _propTypes.default.number
-  })
-};
-GooglePointerCircle.defaultProps = {
-  hsl: {
-    a: 1,
-    h: 249.94,
-    l: 0.2,
-    s: 0.50
-  }
-};
-var _default = GooglePointerCircle;
-exports.default = _default;
-},{"react":"../node_modules/react/index.js","reactcss":"../node_modules/reactcss/lib/index.js","prop-types":"../node_modules/prop-types/index.js"}],"../node_modules/react-color/es/components/google/GooglePointer.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = exports.GooglePointer = void 0;
-
-var _react = _interopRequireDefault(require("react"));
-
-var _reactcss = _interopRequireDefault(require("reactcss"));
-
-var _propTypes = _interopRequireDefault(require("prop-types"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var GooglePointer = function GooglePointer(props) {
-  var styles = (0, _reactcss.default)({
-    'default': {
-      picker: {
-        width: '20px',
-        height: '20px',
-        borderRadius: '22px',
-        transform: 'translate(-10px, -7px)',
-        background: 'hsl(' + Math.round(props.hsl.h) + ', 100%, 50%)',
-        border: '2px white solid'
-      }
-    }
-  });
-  return _react.default.createElement('div', {
-    style: styles.picker
-  });
-};
-
-exports.GooglePointer = GooglePointer;
-GooglePointer.propTypes = {
-  hsl: _propTypes.default.shape({
-    h: _propTypes.default.number,
-    s: _propTypes.default.number,
-    l: _propTypes.default.number,
-    a: _propTypes.default.number
-  })
-};
-GooglePointer.defaultProps = {
-  hsl: {
-    a: 1,
-    h: 249.94,
-    l: 0.2,
-    s: 0.50
-  }
-};
-var _default = GooglePointer;
-exports.default = _default;
-},{"react":"../node_modules/react/index.js","reactcss":"../node_modules/reactcss/lib/index.js","prop-types":"../node_modules/prop-types/index.js"}],"../node_modules/react-color/es/components/google/GoogleFields.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = exports.GoogleFields = void 0;
-
-var _react = _interopRequireDefault(require("react"));
-
-var _reactcss = _interopRequireDefault(require("reactcss"));
-
-var color = _interopRequireWildcard(require("../../helpers/color"));
-
-var _common = require("../common");
-
-function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
-
-function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var GoogleFields = function GoogleFields(_ref) {
-  var onChange = _ref.onChange,
-      rgb = _ref.rgb,
-      hsl = _ref.hsl,
-      hex = _ref.hex,
-      hsv = _ref.hsv;
-
-  var handleChange = function handleChange(data, e) {
-    if (data.hex) {
-      color.isValidHex(data.hex) && onChange({
-        hex: data.hex,
-        source: 'hex'
-      }, e);
-    } else if (data.rgb) {
-      var values = data.rgb.split(',');
-      color.isvalidColorString(data.rgb, 'rgb') && onChange({
-        r: values[0],
-        g: values[1],
-        b: values[2],
-        a: 1,
-        source: 'rgb'
-      }, e);
-    } else if (data.hsv) {
-      var _values = data.hsv.split(',');
-
-      if (color.isvalidColorString(data.hsv, 'hsv')) {
-        _values[2] = _values[2].replace('%', '');
-        _values[1] = _values[1].replace('%', '');
-        _values[0] = _values[0].replace('°', '');
-
-        if (_values[1] == 1) {
-          _values[1] = 0.01;
-        } else if (_values[2] == 1) {
-          _values[2] = 0.01;
-        }
-
-        onChange({
-          h: Number(_values[0]),
-          s: Number(_values[1]),
-          v: Number(_values[2]),
-          source: 'hsv'
-        }, e);
-      }
-    } else if (data.hsl) {
-      var _values2 = data.hsl.split(',');
-
-      if (color.isvalidColorString(data.hsl, 'hsl')) {
-        _values2[2] = _values2[2].replace('%', '');
-        _values2[1] = _values2[1].replace('%', '');
-        _values2[0] = _values2[0].replace('°', '');
-
-        if (hsvValue[1] == 1) {
-          hsvValue[1] = 0.01;
-        } else if (hsvValue[2] == 1) {
-          hsvValue[2] = 0.01;
-        }
-
-        onChange({
-          h: Number(_values2[0]),
-          s: Number(_values2[1]),
-          v: Number(_values2[2]),
-          source: 'hsl'
-        }, e);
-      }
-    }
-  };
-
-  var styles = (0, _reactcss.default)({
-    'default': {
-      wrap: {
-        display: 'flex',
-        height: '100px',
-        marginTop: '4px'
-      },
-      fields: {
-        width: '100%'
-      },
-      column: {
-        paddingTop: '10px',
-        display: 'flex',
-        justifyContent: 'space-between'
-      },
-      double: {
-        padding: '0px 4.4px',
-        boxSizing: 'border-box'
-      },
-      input: {
-        width: '100%',
-        height: '38px',
-        boxSizing: 'border-box',
-        padding: '4px 10% 3px',
-        textAlign: 'center',
-        border: '1px solid #dadce0',
-        fontSize: '11px',
-        textTransform: 'lowercase',
-        borderRadius: '5px',
-        outline: 'none',
-        fontFamily: 'Roboto,Arial,sans-serif'
-      },
-      input2: {
-        height: '38px',
-        width: '100%',
-        border: '1px solid #dadce0',
-        boxSizing: 'border-box',
-        fontSize: '11px',
-        textTransform: 'lowercase',
-        borderRadius: '5px',
-        outline: 'none',
-        paddingLeft: '10px',
-        fontFamily: 'Roboto,Arial,sans-serif'
-      },
-      label: {
-        textAlign: 'center',
-        fontSize: '12px',
-        background: '#fff',
-        position: 'absolute',
-        textTransform: 'uppercase',
-        color: '#3c4043',
-        width: '35px',
-        top: '-6px',
-        left: '0',
-        right: '0',
-        marginLeft: 'auto',
-        marginRight: 'auto',
-        fontFamily: 'Roboto,Arial,sans-serif'
-      },
-      label2: {
-        left: '10px',
-        textAlign: 'center',
-        fontSize: '12px',
-        background: '#fff',
-        position: 'absolute',
-        textTransform: 'uppercase',
-        color: '#3c4043',
-        width: '32px',
-        top: '-6px',
-        fontFamily: 'Roboto,Arial,sans-serif'
-      },
-      single: {
-        flexGrow: '1',
-        margin: '0px 4.4px'
-      }
-    }
-  });
-  var rgbValue = rgb.r + ', ' + rgb.g + ', ' + rgb.b;
-  var hslValue = Math.round(hsl.h) + '\xB0, ' + Math.round(hsl.s * 100) + '%, ' + Math.round(hsl.l * 100) + '%';
-  var hsvValue = Math.round(hsv.h) + '\xB0, ' + Math.round(hsv.s * 100) + '%, ' + Math.round(hsv.v * 100) + '%';
-  return _react.default.createElement('div', {
-    style: styles.wrap,
-    className: 'flexbox-fix'
-  }, _react.default.createElement('div', {
-    style: styles.fields
-  }, _react.default.createElement('div', {
-    style: styles.double
-  }, _react.default.createElement(_common.EditableInput, {
-    style: {
-      input: styles.input,
-      label: styles.label
-    },
-    label: 'hex',
-    value: hex,
-    onChange: handleChange
-  })), _react.default.createElement('div', {
-    style: styles.column
-  }, _react.default.createElement('div', {
-    style: styles.single
-  }, _react.default.createElement(_common.EditableInput, {
-    style: {
-      input: styles.input2,
-      label: styles.label2
-    },
-    label: 'rgb',
-    value: rgbValue,
-    onChange: handleChange
-  })), _react.default.createElement('div', {
-    style: styles.single
-  }, _react.default.createElement(_common.EditableInput, {
-    style: {
-      input: styles.input2,
-      label: styles.label2
-    },
-    label: 'hsv',
-    value: hsvValue,
-    onChange: handleChange
-  })), _react.default.createElement('div', {
-    style: styles.single
-  }, _react.default.createElement(_common.EditableInput, {
-    style: {
-      input: styles.input2,
-      label: styles.label2
-    },
-    label: 'hsl',
-    value: hslValue,
-    onChange: handleChange
-  })))));
-};
-
-exports.GoogleFields = GoogleFields;
-var _default = GoogleFields;
-exports.default = _default;
-},{"react":"../node_modules/react/index.js","reactcss":"../node_modules/reactcss/lib/index.js","../../helpers/color":"../node_modules/react-color/es/helpers/color.js","../common":"../node_modules/react-color/es/components/common/index.js"}],"../node_modules/react-color/es/components/google/Google.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = exports.Google = void 0;
-
-var _react = _interopRequireDefault(require("react"));
-
-var _propTypes = _interopRequireDefault(require("prop-types"));
-
-var _reactcss = _interopRequireDefault(require("reactcss"));
-
-var _merge = _interopRequireDefault(require("lodash-es/merge"));
-
-var _common = require("../common");
-
-var _GooglePointerCircle = _interopRequireDefault(require("./GooglePointerCircle"));
-
-var _GooglePointer = _interopRequireDefault(require("./GooglePointer"));
-
-var _GoogleFields = _interopRequireDefault(require("./GoogleFields"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var Google = function Google(_ref) {
-  var width = _ref.width,
-      onChange = _ref.onChange,
-      rgb = _ref.rgb,
-      hsl = _ref.hsl,
-      hsv = _ref.hsv,
-      hex = _ref.hex,
-      header = _ref.header,
-      _ref$styles = _ref.styles,
-      passedStyles = _ref$styles === undefined ? {} : _ref$styles,
-      _ref$className = _ref.className,
-      className = _ref$className === undefined ? '' : _ref$className;
-  var styles = (0, _reactcss.default)((0, _merge.default)({
-    'default': {
-      picker: {
-        width: width,
-        background: '#fff',
-        border: '1px solid #dfe1e5',
-        boxSizing: 'initial',
-        display: 'flex',
-        flexWrap: 'wrap',
-        borderRadius: '8px 8px 0px 0px'
-      },
-      head: {
-        height: '57px',
-        width: '100%',
-        paddingTop: '16px',
-        paddingBottom: '16px',
-        paddingLeft: '16px',
-        fontSize: '20px',
-        boxSizing: 'border-box',
-        fontFamily: 'Roboto-Regular,HelveticaNeue,Arial,sans-serif'
-      },
-      saturation: {
-        width: '70%',
-        padding: '0px',
-        position: 'relative',
-        overflow: 'hidden'
-      },
-      swatch: {
-        width: '30%',
-        height: '228px',
-        padding: '0px',
-        background: 'rgba(' + rgb.r + ', ' + rgb.g + ', ' + rgb.b + ', 1)',
-        position: 'relative',
-        overflow: 'hidden'
-      },
-      body: {
-        margin: 'auto',
-        width: '95%'
-      },
-      controls: {
-        display: 'flex',
-        boxSizing: 'border-box',
-        height: '52px',
-        paddingTop: '22px'
-      },
-      color: {
-        width: '32px'
-      },
-      hue: {
-        height: '8px',
-        position: 'relative',
-        margin: '0px 16px 0px 16px',
-        width: '100%'
-      },
-      Hue: {
-        radius: '2px'
-      }
-    }
-  }, passedStyles));
-  return _react.default.createElement('div', {
-    style: styles.picker,
-    className: 'google-picker ' + className
-  }, _react.default.createElement('div', {
-    style: styles.head
-  }, header), _react.default.createElement('div', {
-    style: styles.swatch
-  }), _react.default.createElement('div', {
-    style: styles.saturation
-  }, _react.default.createElement(_common.Saturation, {
-    hsl: hsl,
-    hsv: hsv,
-    pointer: _GooglePointerCircle.default,
-    onChange: onChange
-  })), _react.default.createElement('div', {
-    style: styles.body
-  }, _react.default.createElement('div', {
-    style: styles.controls,
-    className: 'flexbox-fix'
-  }, _react.default.createElement('div', {
-    style: styles.hue
-  }, _react.default.createElement(_common.Hue, {
-    style: styles.Hue,
-    hsl: hsl,
-    radius: '4px',
-    pointer: _GooglePointer.default,
-    onChange: onChange
-  }))), _react.default.createElement(_GoogleFields.default, {
-    rgb: rgb,
-    hsl: hsl,
-    hex: hex,
-    hsv: hsv,
-    onChange: onChange
-  })));
-};
-
-exports.Google = Google;
-Google.propTypes = {
-  width: _propTypes.default.oneOfType([_propTypes.default.string, _propTypes.default.number]),
-  styles: _propTypes.default.object,
-  header: _propTypes.default.string
-};
-Google.defaultProps = {
-  width: 652,
-  styles: {},
-  header: 'Color picker'
-};
-
-var _default = (0, _common.ColorWrap)(Google);
-
-exports.default = _default;
-},{"react":"../node_modules/react/index.js","prop-types":"../node_modules/prop-types/index.js","reactcss":"../node_modules/reactcss/lib/index.js","lodash-es/merge":"../node_modules/lodash-es/merge.js","../common":"../node_modules/react-color/es/components/common/index.js","./GooglePointerCircle":"../node_modules/react-color/es/components/google/GooglePointerCircle.js","./GooglePointer":"../node_modules/react-color/es/components/google/GooglePointer.js","./GoogleFields":"../node_modules/react-color/es/components/google/GoogleFields.js"}],"../node_modules/react-color/es/index.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-Object.defineProperty(exports, "AlphaPicker", {
-  enumerable: true,
-  get: function () {
-    return _Alpha.default;
-  }
-});
-Object.defineProperty(exports, "BlockPicker", {
-  enumerable: true,
-  get: function () {
-    return _Block.default;
-  }
-});
-Object.defineProperty(exports, "CirclePicker", {
-  enumerable: true,
-  get: function () {
-    return _Circle.default;
-  }
-});
-Object.defineProperty(exports, "default", {
-  enumerable: true,
-  get: function () {
-    return _Chrome.default;
-  }
-});
-Object.defineProperty(exports, "ChromePicker", {
-  enumerable: true,
-  get: function () {
-    return _Chrome.default;
-  }
-});
-Object.defineProperty(exports, "CompactPicker", {
-  enumerable: true,
-  get: function () {
-    return _Compact.default;
-  }
-});
-Object.defineProperty(exports, "GithubPicker", {
-  enumerable: true,
-  get: function () {
-    return _Github.default;
-  }
-});
-Object.defineProperty(exports, "HuePicker", {
-  enumerable: true,
-  get: function () {
-    return _Hue.default;
-  }
-});
-Object.defineProperty(exports, "MaterialPicker", {
-  enumerable: true,
-  get: function () {
-    return _Material.default;
-  }
-});
-Object.defineProperty(exports, "PhotoshopPicker", {
-  enumerable: true,
-  get: function () {
-    return _Photoshop.default;
-  }
-});
-Object.defineProperty(exports, "SketchPicker", {
-  enumerable: true,
-  get: function () {
-    return _Sketch.default;
-  }
-});
-Object.defineProperty(exports, "SliderPicker", {
-  enumerable: true,
-  get: function () {
-    return _Slider.default;
-  }
-});
-Object.defineProperty(exports, "SwatchesPicker", {
-  enumerable: true,
-  get: function () {
-    return _Swatches.default;
-  }
-});
-Object.defineProperty(exports, "TwitterPicker", {
-  enumerable: true,
-  get: function () {
-    return _Twitter.default;
-  }
-});
-Object.defineProperty(exports, "GooglePicker", {
-  enumerable: true,
-  get: function () {
-    return _Google.default;
-  }
-});
-Object.defineProperty(exports, "CustomPicker", {
-  enumerable: true,
-  get: function () {
-    return _ColorWrap.default;
-  }
-});
-
-var _Alpha = _interopRequireDefault(require("./components/alpha/Alpha"));
-
-var _Block = _interopRequireDefault(require("./components/block/Block"));
-
-var _Circle = _interopRequireDefault(require("./components/circle/Circle"));
-
-var _Chrome = _interopRequireDefault(require("./components/chrome/Chrome"));
-
-var _Compact = _interopRequireDefault(require("./components/compact/Compact"));
-
-var _Github = _interopRequireDefault(require("./components/github/Github"));
-
-var _Hue = _interopRequireDefault(require("./components/hue/Hue"));
-
-var _Material = _interopRequireDefault(require("./components/material/Material"));
-
-var _Photoshop = _interopRequireDefault(require("./components/photoshop/Photoshop"));
-
-var _Sketch = _interopRequireDefault(require("./components/sketch/Sketch"));
-
-var _Slider = _interopRequireDefault(require("./components/slider/Slider"));
-
-var _Swatches = _interopRequireDefault(require("./components/swatches/Swatches"));
-
-var _Twitter = _interopRequireDefault(require("./components/twitter/Twitter"));
-
-var _Google = _interopRequireDefault(require("./components/google/Google"));
-
-var _ColorWrap = _interopRequireDefault(require("./components/common/ColorWrap"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-},{"./components/alpha/Alpha":"../node_modules/react-color/es/components/alpha/Alpha.js","./components/block/Block":"../node_modules/react-color/es/components/block/Block.js","./components/circle/Circle":"../node_modules/react-color/es/components/circle/Circle.js","./components/chrome/Chrome":"../node_modules/react-color/es/components/chrome/Chrome.js","./components/compact/Compact":"../node_modules/react-color/es/components/compact/Compact.js","./components/github/Github":"../node_modules/react-color/es/components/github/Github.js","./components/hue/Hue":"../node_modules/react-color/es/components/hue/Hue.js","./components/material/Material":"../node_modules/react-color/es/components/material/Material.js","./components/photoshop/Photoshop":"../node_modules/react-color/es/components/photoshop/Photoshop.js","./components/sketch/Sketch":"../node_modules/react-color/es/components/sketch/Sketch.js","./components/slider/Slider":"../node_modules/react-color/es/components/slider/Slider.js","./components/swatches/Swatches":"../node_modules/react-color/es/components/swatches/Swatches.js","./components/twitter/Twitter":"../node_modules/react-color/es/components/twitter/Twitter.js","./components/google/Google":"../node_modules/react-color/es/components/google/Google.js","./components/common/ColorWrap":"../node_modules/react-color/es/components/common/ColorWrap.js"}],"assets/logos/logo1.ts":[function(require,module,exports) {
+exports.default = _Chrome2.default;
+},{"./components/alpha/Alpha":"../node_modules/react-color/lib/components/alpha/Alpha.js","./components/block/Block":"../node_modules/react-color/lib/components/block/Block.js","./components/circle/Circle":"../node_modules/react-color/lib/components/circle/Circle.js","./components/chrome/Chrome":"../node_modules/react-color/lib/components/chrome/Chrome.js","./components/compact/Compact":"../node_modules/react-color/lib/components/compact/Compact.js","./components/github/Github":"../node_modules/react-color/lib/components/github/Github.js","./components/hue/Hue":"../node_modules/react-color/lib/components/hue/Hue.js","./components/material/Material":"../node_modules/react-color/lib/components/material/Material.js","./components/photoshop/Photoshop":"../node_modules/react-color/lib/components/photoshop/Photoshop.js","./components/sketch/Sketch":"../node_modules/react-color/lib/components/sketch/Sketch.js","./components/slider/Slider":"../node_modules/react-color/lib/components/slider/Slider.js","./components/swatches/Swatches":"../node_modules/react-color/lib/components/swatches/Swatches.js","./components/twitter/Twitter":"../node_modules/react-color/lib/components/twitter/Twitter.js","./components/common/ColorWrap":"../node_modules/react-color/lib/components/common/ColorWrap.js"}],"assets/logos/logo1.ts":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -63927,836 +58566,70 @@ module.exports = function equal(a, b) {
   return a!==a && b!==b;
 };
 
-},{}],"../node_modules/immer/dist/immer.esm.js":[function(require,module,exports) {
+},{}],"../node_modules/immer/src/utils/env.ts":[function(require,module,exports) {
+"use strict"; // Should be no imports here!
+
+function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+var _a;
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.Nothing = exports.iteratorSymbol = exports.DRAFT_STATE = exports.DRAFTABLE = exports.NOTHING = exports.isMinified = exports.hasProxies = exports.hasSet = exports.hasMap = void 0; // Some things that should be evaluated before all else...
+// We only want to know if non-polyfilled symbols are available
+
+var hasSymbol = typeof Symbol !== "undefined" && _typeof(Symbol("x")) === "symbol";
+exports.hasMap = typeof Map !== "undefined";
+exports.hasSet = typeof Set !== "undefined";
+exports.hasProxies = typeof Proxy !== "undefined" && typeof Proxy.revocable !== "undefined" && typeof Reflect !== "undefined";
+/* istanbul ignore next */
+
+function mini() {}
+
+exports.isMinified = mini.name !== "mini";
+/**
+ * The sentinel value returned by producers to replace the draft with undefined.
+ */
+
+exports.NOTHING = hasSymbol ? Symbol.for("immer-nothing") : (_a = {}, _a["immer-nothing"] = true, _a);
+/**
+ * To let Immer treat your class instances as plain immutable objects
+ * (albeit with a custom prototype), you must define either an instance property
+ * or a static property on each of your custom classes.
+ *
+ * Otherwise, your class instance will never be drafted, which means it won't be
+ * safe to mutate in a produce callback.
+ */
+
+exports.DRAFTABLE = hasSymbol ? Symbol.for("immer-draftable") : "__$immer_draftable";
+exports.DRAFT_STATE = hasSymbol ? Symbol.for("immer-state") : "__$immer_state"; // Even a polyfilled Symbol might provide Symbol.iterator
+
+exports.iteratorSymbol = typeof Symbol != "undefined" && Symbol.iterator || "@@iterator";
+/** Use a class type for `nothing` so its type is unique */
+
+var Nothing =
+/** @class */
+function () {
+  function Nothing() {}
+
+  return Nothing;
+}();
+
+exports.Nothing = Nothing;
+},{}],"../node_modules/immer/src/utils/errors.ts":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.castDraft = K;
-exports.castImmutable = $;
-exports.current = D;
-exports.enableAllPlugins = J;
-exports.enableES5 = T;
-exports.enableMapSet = C;
-exports.enablePatches = F;
-exports.isDraft = t;
-exports.isDraftable = r;
-exports.original = e;
-exports.setUseProxies = exports.setAutoFreeze = exports.produceWithPatches = exports.produce = exports.nothing = exports.immerable = exports.finishDraft = exports.createDraft = exports.applyPatches = exports.Immer = exports.default = void 0;
-
-function n(n) {
-  for (var t = arguments.length, r = Array(t > 1 ? t - 1 : 0), e = 1; e < t; e++) r[e - 1] = arguments[e];
-
-  if ("production" !== "development") {
-    var i = Y[n],
-        o = i ? "function" == typeof i ? i.apply(null, r) : i : "unknown error nr: " + n;
-    throw Error("[Immer] " + o);
-  }
-
-  throw Error("[Immer] minified error nr: " + n + (r.length ? " " + r.join(",") : "") + ". Find the full error at: https://bit.ly/3cXEKWf");
-}
-
-function t(n) {
-  return !!n && !!n[Q];
-}
-
-function r(n) {
-  return !!n && (function (n) {
-    if (!n || "object" != typeof n) return !1;
-    var t = Object.getPrototypeOf(n);
-    return !t || t === Object.prototype;
-  }(n) || Array.isArray(n) || !!n[L] || !!n.constructor[L] || s(n) || v(n));
-}
-
-function e(r) {
-  return t(r) || n(23, r), r[Q].t;
-}
-
-function i(n, t, r) {
-  void 0 === r && (r = !1), 0 === o(n) ? (r ? Object.keys : Z)(n).forEach(function (e) {
-    r && "symbol" == typeof e || t(e, n[e], n);
-  }) : n.forEach(function (r, e) {
-    return t(e, r, n);
-  });
-}
-
-function o(n) {
-  var t = n[Q];
-  return t ? t.i > 3 ? t.i - 4 : t.i : Array.isArray(n) ? 1 : s(n) ? 2 : v(n) ? 3 : 0;
-}
-
-function u(n, t) {
-  return 2 === o(n) ? n.has(t) : Object.prototype.hasOwnProperty.call(n, t);
-}
-
-function a(n, t) {
-  return 2 === o(n) ? n.get(t) : n[t];
-}
-
-function f(n, t, r) {
-  var e = o(n);
-  2 === e ? n.set(t, r) : 3 === e ? (n.delete(t), n.add(r)) : n[t] = r;
-}
-
-function c(n, t) {
-  return n === t ? 0 !== n || 1 / n == 1 / t : n != n && t != t;
-}
-
-function s(n) {
-  return X && n instanceof Map;
-}
-
-function v(n) {
-  return q && n instanceof Set;
-}
-
-function p(n) {
-  return n.o || n.t;
-}
-
-function l(n) {
-  if (Array.isArray(n)) return Array.prototype.slice.call(n);
-  var t = nn(n);
-  delete t[Q];
-
-  for (var r = Z(t), e = 0; e < r.length; e++) {
-    var i = r[e],
-        o = t[i];
-    !1 === o.writable && (o.writable = !0, o.configurable = !0), (o.get || o.set) && (t[i] = {
-      configurable: !0,
-      writable: !0,
-      enumerable: o.enumerable,
-      value: n[i]
-    });
-  }
-
-  return Object.create(Object.getPrototypeOf(n), t);
-}
-
-function d(n, e) {
-  y(n) || t(n) || !r(n) || (o(n) > 1 && (n.set = n.add = n.clear = n.delete = h), Object.freeze(n), e && i(n, function (n, t) {
-    return d(t, !0);
-  }, !0));
-}
-
-function h() {
-  n(2);
-}
-
-function y(n) {
-  return null == n || "object" != typeof n || Object.isFrozen(n);
-}
-
-function b(t) {
-  var r = tn[t];
-  return r || n("production" !== "development" ? 18 : 19, t), r;
-}
-
-function m(n, t) {
-  tn[n] = t;
-}
-
-function _() {
-  return "production" === "development" || U || n(0), U;
-}
-
-function j(n, t) {
-  t && (b("Patches"), n.u = [], n.s = [], n.v = t);
-}
-
-function g(n) {
-  O(n), n.p.forEach(S), n.p = null;
-}
-
-function O(n) {
-  n === U && (U = n.l);
-}
-
-function w(n) {
-  return U = {
-    p: [],
-    l: U,
-    h: n,
-    m: !0,
-    _: 0
-  };
-}
-
-function S(n) {
-  var t = n[Q];
-  0 === t.i || 1 === t.i ? t.j() : t.g = !0;
-}
-
-function P(t, e) {
-  e._ = e.p.length;
-  var i = e.p[0],
-      o = void 0 !== t && t !== i;
-  return e.h.O || b("ES5").S(e, t, o), o ? (i[Q].P && (g(e), n(4)), r(t) && (t = M(e, t), e.l || x(e, t)), e.u && b("Patches").M(i[Q], t, e.u, e.s)) : t = M(e, i, []), g(e), e.u && e.v(e.u, e.s), t !== H ? t : void 0;
-}
-
-function M(n, t, r) {
-  if (y(t)) return t;
-  var e = t[Q];
-  if (!e) return i(t, function (i, o) {
-    return A(n, e, t, i, o, r);
-  }, !0), t;
-  if (e.A !== n) return t;
-  if (!e.P) return x(n, e.t, !0), e.t;
-
-  if (!e.I) {
-    e.I = !0, e.A._--;
-    var o = 4 === e.i || 5 === e.i ? e.o = l(e.k) : e.o;
-    i(3 === e.i ? new Set(o) : o, function (t, i) {
-      return A(n, e, o, t, i, r);
-    }), x(n, o, !1), r && n.u && b("Patches").R(e, r, n.u, n.s);
-  }
-
-  return e.o;
-}
-
-function A(e, i, o, a, c, s) {
-  if ("production" !== "development" && c === o && n(5), t(c)) {
-    var v = M(e, c, s && i && 3 !== i.i && !u(i.D, a) ? s.concat(a) : void 0);
-    if (f(o, a, v), !t(v)) return;
-    e.m = !1;
-  }
-
-  if (r(c) && !y(c)) {
-    if (!e.h.N && e._ < 1) return;
-    M(e, c), i && i.A.l || x(e, c);
-  }
-}
-
-function x(n, t, r) {
-  void 0 === r && (r = !1), n.h.N && n.m && d(t, r);
-}
-
-function z(n, t) {
-  var r = n[Q];
-  return (r ? p(r) : n)[t];
-}
-
-function I(n, t) {
-  if (t in n) for (var r = Object.getPrototypeOf(n); r;) {
-    var e = Object.getOwnPropertyDescriptor(r, t);
-    if (e) return e;
-    r = Object.getPrototypeOf(r);
-  }
-}
-
-function E(n) {
-  n.P || (n.P = !0, n.l && E(n.l));
-}
-
-function k(n) {
-  n.o || (n.o = l(n.t));
-}
-
-function R(n, t, r) {
-  var e = s(t) ? b("MapSet").T(t, r) : v(t) ? b("MapSet").F(t, r) : n.O ? function (n, t) {
-    var r = Array.isArray(n),
-        e = {
-      i: r ? 1 : 0,
-      A: t ? t.A : _(),
-      P: !1,
-      I: !1,
-      D: {},
-      l: t,
-      t: n,
-      k: null,
-      o: null,
-      j: null,
-      C: !1
-    },
-        i = e,
-        o = rn;
-    r && (i = [e], o = en);
-    var u = Proxy.revocable(i, o),
-        a = u.revoke,
-        f = u.proxy;
-    return e.k = f, e.j = a, f;
-  }(t, r) : b("ES5").J(t, r);
-  return (r ? r.A : _()).p.push(e), e;
-}
-
-function D(e) {
-  return t(e) || n(22, e), function n(t) {
-    if (!r(t)) return t;
-    var e,
-        u = t[Q],
-        c = o(t);
-
-    if (u) {
-      if (!u.P && (u.i < 4 || !b("ES5").K(u))) return u.t;
-      u.I = !0, e = N(t, c), u.I = !1;
-    } else e = N(t, c);
-
-    return i(e, function (t, r) {
-      u && a(u.t, t) === r || f(e, t, n(r));
-    }), 3 === c ? new Set(e) : e;
-  }(e);
-}
-
-function N(n, t) {
-  switch (t) {
-    case 2:
-      return new Map(n);
-
-    case 3:
-      return Array.from(n);
-  }
-
-  return l(n);
-}
-
-function T() {
-  function r(n, t) {
-    var r = s[n];
-    return r ? r.enumerable = t : s[n] = r = {
-      configurable: !0,
-      enumerable: t,
-      get: function () {
-        var t = this[Q];
-        return "production" !== "development" && f(t), rn.get(t, n);
-      },
-      set: function (t) {
-        var r = this[Q];
-        "production" !== "development" && f(r), rn.set(r, n, t);
-      }
-    }, r;
-  }
-
-  function e(n) {
-    for (var t = n.length - 1; t >= 0; t--) {
-      var r = n[t][Q];
-      if (!r.P) switch (r.i) {
-        case 5:
-          a(r) && E(r);
-          break;
-
-        case 4:
-          o(r) && E(r);
-      }
-    }
-  }
-
-  function o(n) {
-    for (var t = n.t, r = n.k, e = Z(r), i = e.length - 1; i >= 0; i--) {
-      var o = e[i];
-
-      if (o !== Q) {
-        var a = t[o];
-        if (void 0 === a && !u(t, o)) return !0;
-        var f = r[o],
-            s = f && f[Q];
-        if (s ? s.t !== a : !c(f, a)) return !0;
-      }
-    }
-
-    var v = !!t[Q];
-    return e.length !== Z(t).length + (v ? 0 : 1);
-  }
-
-  function a(n) {
-    var t = n.k;
-    if (t.length !== n.t.length) return !0;
-    var r = Object.getOwnPropertyDescriptor(t, t.length - 1);
-    return !(!r || r.get);
-  }
-
-  function f(t) {
-    t.g && n(3, JSON.stringify(p(t)));
-  }
-
-  var s = {};
-  m("ES5", {
-    J: function (n, t) {
-      var e = Array.isArray(n),
-          i = function (n, t) {
-        if (n) {
-          for (var e = Array(t.length), i = 0; i < t.length; i++) Object.defineProperty(e, "" + i, r(i, !0));
-
-          return e;
-        }
-
-        var o = nn(t);
-        delete o[Q];
-
-        for (var u = Z(o), a = 0; a < u.length; a++) {
-          var f = u[a];
-          o[f] = r(f, n || !!o[f].enumerable);
-        }
-
-        return Object.create(Object.getPrototypeOf(t), o);
-      }(e, n),
-          o = {
-        i: e ? 5 : 4,
-        A: t ? t.A : _(),
-        P: !1,
-        I: !1,
-        D: {},
-        l: t,
-        t: n,
-        k: i,
-        o: null,
-        g: !1,
-        C: !1
-      };
-
-      return Object.defineProperty(i, Q, {
-        value: o,
-        writable: !0
-      }), i;
-    },
-    S: function (n, r, o) {
-      o ? t(r) && r[Q].A === n && e(n.p) : (n.u && function n(t) {
-        if (t && "object" == typeof t) {
-          var r = t[Q];
-
-          if (r) {
-            var e = r.t,
-                o = r.k,
-                f = r.D,
-                c = r.i;
-            if (4 === c) i(o, function (t) {
-              t !== Q && (void 0 !== e[t] || u(e, t) ? f[t] || n(o[t]) : (f[t] = !0, E(r)));
-            }), i(e, function (n) {
-              void 0 !== o[n] || u(o, n) || (f[n] = !1, E(r));
-            });else if (5 === c) {
-              if (a(r) && (E(r), f.length = !0), o.length < e.length) for (var s = o.length; s < e.length; s++) f[s] = !1;else for (var v = e.length; v < o.length; v++) f[v] = !0;
-
-              for (var p = Math.min(o.length, e.length), l = 0; l < p; l++) void 0 === f[l] && n(o[l]);
-            }
-          }
-        }
-      }(n.p[0]), e(n.p));
-    },
-    K: function (n) {
-      return 4 === n.i ? o(n) : a(n);
-    }
-  });
-}
-
-function F() {
-  function e(n) {
-    if (!r(n)) return n;
-    if (Array.isArray(n)) return n.map(e);
-    if (s(n)) return new Map(Array.from(n.entries()).map(function (n) {
-      return [n[0], e(n[1])];
-    }));
-    if (v(n)) return new Set(Array.from(n).map(e));
-    var t = Object.create(Object.getPrototypeOf(n));
-
-    for (var i in n) t[i] = e(n[i]);
-
-    return t;
-  }
-
-  function f(n) {
-    return t(n) ? e(n) : n;
-  }
-
-  var c = "add";
-  m("Patches", {
-    $: function (t, r) {
-      return r.forEach(function (r) {
-        for (var i = r.path, u = r.op, f = t, s = 0; s < i.length - 1; s++) "object" != typeof (f = a(f, i[s])) && n(15, i.join("/"));
-
-        var v = o(f),
-            p = e(r.value),
-            l = i[i.length - 1];
-
-        switch (u) {
-          case "replace":
-            switch (v) {
-              case 2:
-                return f.set(l, p);
-
-              case 3:
-                n(16);
-
-              default:
-                return f[l] = p;
-            }
-
-          case c:
-            switch (v) {
-              case 1:
-                return f.splice(l, 0, p);
-
-              case 2:
-                return f.set(l, p);
-
-              case 3:
-                return f.add(p);
-
-              default:
-                return f[l] = p;
-            }
-
-          case "remove":
-            switch (v) {
-              case 1:
-                return f.splice(l, 1);
-
-              case 2:
-                return f.delete(l);
-
-              case 3:
-                return f.delete(r.value);
-
-              default:
-                return delete f[l];
-            }
-
-          default:
-            n(17, u);
-        }
-      }), t;
-    },
-    R: function (n, t, r, e) {
-      switch (n.i) {
-        case 0:
-        case 4:
-        case 2:
-          return function (n, t, r, e) {
-            var o = n.t,
-                s = n.o;
-            i(n.D, function (n, i) {
-              var v = a(o, n),
-                  p = a(s, n),
-                  l = i ? u(o, n) ? "replace" : c : "remove";
-
-              if (v !== p || "replace" !== l) {
-                var d = t.concat(n);
-                r.push("remove" === l ? {
-                  op: l,
-                  path: d
-                } : {
-                  op: l,
-                  path: d,
-                  value: p
-                }), e.push(l === c ? {
-                  op: "remove",
-                  path: d
-                } : "remove" === l ? {
-                  op: c,
-                  path: d,
-                  value: f(v)
-                } : {
-                  op: "replace",
-                  path: d,
-                  value: f(v)
-                });
-              }
-            });
-          }(n, t, r, e);
-
-        case 5:
-        case 1:
-          return function (n, t, r, e) {
-            var i = n.t,
-                o = n.D,
-                u = n.o;
-
-            if (u.length < i.length) {
-              var a = [u, i];
-              i = a[0], u = a[1];
-              var s = [e, r];
-              r = s[0], e = s[1];
-            }
-
-            for (var v = 0; v < i.length; v++) if (o[v] && u[v] !== i[v]) {
-              var p = t.concat([v]);
-              r.push({
-                op: "replace",
-                path: p,
-                value: f(u[v])
-              }), e.push({
-                op: "replace",
-                path: p,
-                value: f(i[v])
-              });
-            }
-
-            for (var l = i.length; l < u.length; l++) {
-              var d = t.concat([l]);
-              r.push({
-                op: c,
-                path: d,
-                value: f(u[l])
-              });
-            }
-
-            i.length < u.length && e.push({
-              op: "replace",
-              path: t.concat(["length"]),
-              value: i.length
-            });
-          }(n, t, r, e);
-
-        case 3:
-          return function (n, t, r, e) {
-            var i = n.t,
-                o = n.o,
-                u = 0;
-            i.forEach(function (n) {
-              if (!o.has(n)) {
-                var i = t.concat([u]);
-                r.push({
-                  op: "remove",
-                  path: i,
-                  value: n
-                }), e.unshift({
-                  op: c,
-                  path: i,
-                  value: n
-                });
-              }
-
-              u++;
-            }), u = 0, o.forEach(function (n) {
-              if (!i.has(n)) {
-                var o = t.concat([u]);
-                r.push({
-                  op: c,
-                  path: o,
-                  value: n
-                }), e.unshift({
-                  op: "remove",
-                  path: o,
-                  value: n
-                });
-              }
-
-              u++;
-            });
-          }(n, t, r, e);
-      }
-    },
-    M: function (n, t, r, e) {
-      r.push({
-        op: "replace",
-        path: [],
-        value: t
-      }), e.push({
-        op: "replace",
-        path: [],
-        value: n.t
-      });
-    }
-  });
-}
-
-function C() {
-  function t(n, t) {
-    function r() {
-      this.constructor = n;
-    }
-
-    a(n, t), n.prototype = (r.prototype = t.prototype, new r());
-  }
-
-  function e(n) {
-    n.o || (n.D = new Map(), n.o = new Map(n.t));
-  }
-
-  function o(n) {
-    n.o || (n.o = new Set(), n.t.forEach(function (t) {
-      if (r(t)) {
-        var e = R(n.A.h, t, n);
-        n.p.set(t, e), n.o.add(e);
-      } else n.o.add(t);
-    }));
-  }
-
-  function u(t) {
-    t.g && n(3, JSON.stringify(p(t)));
-  }
-
-  var a = function (n, t) {
-    return (a = Object.setPrototypeOf || {
-      __proto__: []
-    } instanceof Array && function (n, t) {
-      n.__proto__ = t;
-    } || function (n, t) {
-      for (var r in t) t.hasOwnProperty(r) && (n[r] = t[r]);
-    })(n, t);
-  },
-      f = function () {
-    function n(n, t) {
-      return this[Q] = {
-        i: 2,
-        l: t,
-        A: t ? t.A : _(),
-        P: !1,
-        I: !1,
-        o: void 0,
-        D: void 0,
-        t: n,
-        k: this,
-        C: !1,
-        g: !1
-      }, this;
-    }
-
-    t(n, Map);
-    var o = n.prototype;
-    return Object.defineProperty(o, "size", {
-      get: function () {
-        return p(this[Q]).size;
-      }
-    }), o.has = function (n) {
-      return p(this[Q]).has(n);
-    }, o.set = function (n, t) {
-      var r = this[Q];
-      return u(r), p(r).has(n) && p(r).get(n) === t || (e(r), E(r), r.D.set(n, !0), r.o.set(n, t), r.D.set(n, !0)), this;
-    }, o.delete = function (n) {
-      if (!this.has(n)) return !1;
-      var t = this[Q];
-      return u(t), e(t), E(t), t.D.set(n, !1), t.o.delete(n), !0;
-    }, o.clear = function () {
-      var n = this[Q];
-      u(n), p(n).size && (e(n), E(n), n.D = new Map(), i(n.t, function (t) {
-        n.D.set(t, !1);
-      }), n.o.clear());
-    }, o.forEach = function (n, t) {
-      var r = this;
-      p(this[Q]).forEach(function (e, i) {
-        n.call(t, r.get(i), i, r);
-      });
-    }, o.get = function (n) {
-      var t = this[Q];
-      u(t);
-      var i = p(t).get(n);
-      if (t.I || !r(i)) return i;
-      if (i !== t.t.get(n)) return i;
-      var o = R(t.A.h, i, t);
-      return e(t), t.o.set(n, o), o;
-    }, o.keys = function () {
-      return p(this[Q]).keys();
-    }, o.values = function () {
-      var n,
-          t = this,
-          r = this.keys();
-      return (n = {})[V] = function () {
-        return t.values();
-      }, n.next = function () {
-        var n = r.next();
-        return n.done ? n : {
-          done: !1,
-          value: t.get(n.value)
-        };
-      }, n;
-    }, o.entries = function () {
-      var n,
-          t = this,
-          r = this.keys();
-      return (n = {})[V] = function () {
-        return t.entries();
-      }, n.next = function () {
-        var n = r.next();
-        if (n.done) return n;
-        var e = t.get(n.value);
-        return {
-          done: !1,
-          value: [n.value, e]
-        };
-      }, n;
-    }, o[V] = function () {
-      return this.entries();
-    }, n;
-  }(),
-      c = function () {
-    function n(n, t) {
-      return this[Q] = {
-        i: 3,
-        l: t,
-        A: t ? t.A : _(),
-        P: !1,
-        I: !1,
-        o: void 0,
-        t: n,
-        k: this,
-        p: new Map(),
-        g: !1,
-        C: !1
-      }, this;
-    }
-
-    t(n, Set);
-    var r = n.prototype;
-    return Object.defineProperty(r, "size", {
-      get: function () {
-        return p(this[Q]).size;
-      }
-    }), r.has = function (n) {
-      var t = this[Q];
-      return u(t), t.o ? !!t.o.has(n) || !(!t.p.has(n) || !t.o.has(t.p.get(n))) : t.t.has(n);
-    }, r.add = function (n) {
-      var t = this[Q];
-      return u(t), this.has(n) || (o(t), E(t), t.o.add(n)), this;
-    }, r.delete = function (n) {
-      if (!this.has(n)) return !1;
-      var t = this[Q];
-      return u(t), o(t), E(t), t.o.delete(n) || !!t.p.has(n) && t.o.delete(t.p.get(n));
-    }, r.clear = function () {
-      var n = this[Q];
-      u(n), p(n).size && (o(n), E(n), n.o.clear());
-    }, r.values = function () {
-      var n = this[Q];
-      return u(n), o(n), n.o.values();
-    }, r.entries = function () {
-      var n = this[Q];
-      return u(n), o(n), n.o.entries();
-    }, r.keys = function () {
-      return this.values();
-    }, r[V] = function () {
-      return this.values();
-    }, r.forEach = function (n, t) {
-      for (var r = this.values(), e = r.next(); !e.done;) n.call(t, e.value, e.value, this), e = r.next();
-    }, n;
-  }();
-
-  m("MapSet", {
-    T: function (n, t) {
-      return new f(n, t);
-    },
-    F: function (n, t) {
-      return new c(n, t);
-    }
-  });
-}
-
-function J() {
-  T(), C(), F();
-}
-
-function K(n) {
-  return n;
-}
-
-function $(n) {
-  return n;
-}
-
-var G,
-    U,
-    W = "undefined" != typeof Symbol && "symbol" == typeof Symbol("x"),
-    X = "undefined" != typeof Map,
-    q = "undefined" != typeof Set,
-    B = "undefined" != typeof Proxy && void 0 !== Proxy.revocable && "undefined" != typeof Reflect,
-    H = W ? Symbol.for("immer-nothing") : ((G = {})["immer-nothing"] = !0, G),
-    L = W ? Symbol.for("immer-draftable") : "__$immer_draftable",
-    Q = W ? Symbol.for("immer-state") : "__$immer_state",
-    V = "undefined" != typeof Symbol && Symbol.iterator || "@@iterator",
-    Y = {
+exports.die = void 0;
+var errors = {
   0: "Illegal state",
   1: "Immer drafts cannot have computed properties",
   2: "This object has been frozen and should not be mutated",
-  3: function (n) {
-    return "Cannot use a proxy that has been revoked. Did you pass an object from inside an immer function to an async process? " + n;
+  3: function _(data) {
+    return "Cannot use a proxy that has been revoked. Did you pass an object from inside an immer function to an async process? " + data;
   },
   4: "An immer producer returned a new value *and* modified its draft. Either return a new value *or* modify the draft.",
   5: "Immer forbids circular references",
@@ -64769,222 +58642,2237 @@ var G,
   12: "Object.setPrototypeOf() cannot be used on an Immer draft",
   13: "Immer only supports deleting array indices",
   14: "Immer only supports setting array indices and the 'length' property",
-  15: function (n) {
-    return "Cannot apply patch, path doesn't resolve: " + n;
+  15: function _(path) {
+    return "Cannot apply patch, path doesn't resolve: " + path;
   },
   16: 'Sets cannot have "replace" patches.',
-  17: function (n) {
-    return "Unsupported patch operation: " + n;
+  17: function _(op) {
+    return "Unsupported patch operation: " + op;
   },
-  18: function (n) {
-    return "The plugin for '" + n + "' has not been loaded into Immer. To enable the plugin, import and call `enable" + n + "()` when initializing your application.";
+  18: function _(plugin) {
+    return "The plugin for '" + plugin + "' has not been loaded into Immer. To enable the plugin, import and call `enable" + plugin + "()` when initializing your application.";
   },
   19: "plugin not loaded",
   20: "Cannot use proxies if Proxy, Proxy.revocable or Reflect are not available",
-  21: function (n) {
-    return "produce can only be called on things that are draftable: plain objects, arrays, Map, Set or classes that are marked with '[immerable]: true'. Got '" + n + "'";
+  21: function _(thing) {
+    return "produce can only be called on things that are draftable: plain objects, arrays, Map, Set or classes that are marked with '[immerable]: true'. Got '" + thing + "'";
   },
-  22: function (n) {
-    return "'current' expects a draft, got: " + n;
+  22: function _(thing) {
+    return "'current' expects a draft, got: " + thing;
   },
-  23: function (n) {
-    return "'original' expects a draft, got: " + n;
+  23: function _(thing) {
+    return "'original' expects a draft, got: " + thing;
   }
-},
-    Z = "undefined" != typeof Reflect && Reflect.ownKeys ? Reflect.ownKeys : void 0 !== Object.getOwnPropertySymbols ? function (n) {
-  return Object.getOwnPropertyNames(n).concat(Object.getOwnPropertySymbols(n));
-} : Object.getOwnPropertyNames,
-    nn = Object.getOwnPropertyDescriptors || function (n) {
-  var t = {};
-  return Z(n).forEach(function (r) {
-    t[r] = Object.getOwnPropertyDescriptor(n, r);
-  }), t;
-},
-    tn = {},
-    rn = {
-  get: function (n, t) {
-    if (t === Q) return n;
-    var e = p(n);
-    if (!u(e, t)) return function (n, t, r) {
-      var e,
-          i = I(t, r);
-      return i ? "value" in i ? i.value : null === (e = i.get) || void 0 === e ? void 0 : e.call(n.k) : void 0;
-    }(n, e, t);
-    var i = e[t];
-    return n.I || !r(i) ? i : i === z(n.t, t) ? (k(n), n.o[t] = R(n.A.h, i, n)) : i;
-  },
-  has: function (n, t) {
-    return t in p(n);
-  },
-  ownKeys: function (n) {
-    return Reflect.ownKeys(p(n));
-  },
-  set: function (n, t, r) {
-    var e = I(p(n), t);
-    if (null == e ? void 0 : e.set) return e.set.call(n.k, r), !0;
-
-    if (!n.P) {
-      var i = z(p(n), t),
-          o = null == i ? void 0 : i[Q];
-      if (o && o.t === r) return n.o[t] = r, n.D[t] = !1, !0;
-      if (c(r, i) && (void 0 !== r || u(n.t, t))) return !0;
-      k(n), E(n);
-    }
-
-    return n.o[t] = r, n.D[t] = !0, !0;
-  },
-  deleteProperty: function (n, t) {
-    return void 0 !== z(n.t, t) || t in n.t ? (n.D[t] = !1, k(n), E(n)) : delete n.D[t], n.o && delete n.o[t], !0;
-  },
-  getOwnPropertyDescriptor: function (n, t) {
-    var r = p(n),
-        e = Reflect.getOwnPropertyDescriptor(r, t);
-    return e ? {
-      writable: !0,
-      configurable: 1 !== n.i || "length" !== t,
-      enumerable: e.enumerable,
-      value: r[t]
-    } : e;
-  },
-  defineProperty: function () {
-    n(11);
-  },
-  getPrototypeOf: function (n) {
-    return Object.getPrototypeOf(n.t);
-  },
-  setPrototypeOf: function () {
-    n(12);
-  }
-},
-    en = {};
-
-exports.immerable = L;
-exports.nothing = H;
-i(rn, function (n, t) {
-  en[n] = function () {
-    return arguments[0] = arguments[0][0], t.apply(this, arguments);
-  };
-}), en.deleteProperty = function (t, r) {
-  return "production" !== "development" && isNaN(parseInt(r)) && n(13), rn.deleteProperty.call(this, t[0], r);
-}, en.set = function (t, r, e) {
-  return "production" !== "development" && "length" !== r && isNaN(parseInt(r)) && n(14), rn.set.call(this, t[0], r, e, t[0]);
 };
 
-var on = function () {
-  function e(n) {
-    this.O = B, this.N = "production" !== "development", "boolean" == typeof (null == n ? void 0 : n.useProxies) && this.setUseProxies(n.useProxies), "boolean" == typeof (null == n ? void 0 : n.autoFreeze) && this.setAutoFreeze(n.autoFreeze), this.produce = this.produce.bind(this), this.produceWithPatches = this.produceWithPatches.bind(this);
+function die(error) {
+  var args = [];
+
+  for (var _i = 1; _i < arguments.length; _i++) {
+    args[_i - 1] = arguments[_i];
   }
 
-  var i = e.prototype;
-  return i.produce = function (t, e, i) {
-    if ("function" == typeof t && "function" != typeof e) {
-      var o = e;
-      e = t;
-      var u = this;
-      return function (n) {
-        var t = this;
-        void 0 === n && (n = o);
+  if (__DEV__) {
+    var e = errors[error];
+    var msg = !e ? "unknown error nr: " + error : typeof e === "function" ? e.apply(null, args) : e;
+    throw new Error("[Immer] " + msg);
+  }
 
-        for (var r = arguments.length, i = Array(r > 1 ? r - 1 : 0), a = 1; a < r; a++) i[a - 1] = arguments[a];
+  throw new Error("[Immer] minified error nr: " + error + (args.length ? " " + args.join(",") : "") + ". Find the full error at: https://bit.ly/3cXEKWf");
+}
 
-        return u.produce(n, function (n) {
-          var r;
-          return (r = e).call.apply(r, [t, n].concat(i));
+exports.die = die;
+},{}],"../node_modules/immer/src/types/types-external.ts":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.never_used = void 0; // Fixes #507: bili doesn't export the types of this file if there is no actual source in it..
+// hopefully it get's tree-shaken away for everyone :)
+
+function never_used() {}
+
+exports.never_used = never_used;
+},{}],"../node_modules/immer/src/types/types-internal.ts":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.ProxyTypeSet = exports.ProxyTypeMap = exports.ProxyTypeES5Array = exports.ProxyTypeES5Object = exports.ProxyTypeProxyArray = exports.ProxyTypeProxyObject = exports.ArchtypeSet = exports.ArchtypeMap = exports.ArchtypeArray = exports.ArchtypeObject = void 0;
+
+var internal_1 = require("../internal");
+
+exports.ArchtypeObject = 0;
+exports.ArchtypeArray = 1;
+exports.ArchtypeMap = 2;
+exports.ArchtypeSet = 3;
+exports.ProxyTypeProxyObject = 0;
+exports.ProxyTypeProxyArray = 1;
+exports.ProxyTypeES5Object = 4;
+exports.ProxyTypeES5Array = 5;
+exports.ProxyTypeMap = 2;
+exports.ProxyTypeSet = 3;
+},{"../internal":"../node_modules/immer/src/internal.ts"}],"../node_modules/immer/src/utils/common.ts":[function(require,module,exports) {
+"use strict";
+
+function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.isFrozen = exports.freeze = exports.shallowCopy = exports.latest = exports.isSet = exports.isMap = exports.is = exports.set = exports.get = exports.has = exports.getArchtype = exports.each = exports.getOwnPropertyDescriptors = exports.ownKeys = exports.original = exports.isPlainObject = exports.isDraftable = exports.isDraft = void 0;
+
+var internal_1 = require("../internal");
+/** Returns true if the given value is an Immer draft */
+
+/*#__PURE__*/
+
+
+function isDraft(value) {
+  return !!value && !!value[internal_1.DRAFT_STATE];
+}
+
+exports.isDraft = isDraft;
+/** Returns true if the given value can be drafted by Immer */
+
+/*#__PURE__*/
+
+function isDraftable(value) {
+  if (!value) return false;
+  return isPlainObject(value) || Array.isArray(value) || !!value[internal_1.DRAFTABLE] || !!value.constructor[internal_1.DRAFTABLE] || isMap(value) || isSet(value);
+}
+
+exports.isDraftable = isDraftable;
+/*#__PURE__*/
+
+function isPlainObject(value) {
+  if (!value || _typeof(value) !== "object") return false;
+  var proto = Object.getPrototypeOf(value);
+  return !proto || proto === Object.prototype;
+}
+
+exports.isPlainObject = isPlainObject;
+
+function original(value) {
+  if (!isDraft(value)) internal_1.die(23, value);
+  return value[internal_1.DRAFT_STATE].base_;
+}
+
+exports.original = original;
+/*#__PURE__*/
+
+exports.ownKeys = typeof Reflect !== "undefined" && Reflect.ownKeys ? Reflect.ownKeys : typeof Object.getOwnPropertySymbols !== "undefined" ? function (obj) {
+  return Object.getOwnPropertyNames(obj).concat(Object.getOwnPropertySymbols(obj));
+} :
+/* istanbul ignore next */
+Object.getOwnPropertyNames;
+
+exports.getOwnPropertyDescriptors = Object.getOwnPropertyDescriptors || function getOwnPropertyDescriptors(target) {
+  // Polyfill needed for Hermes and IE, see https://github.com/facebook/hermes/issues/274
+  var res = {};
+  exports.ownKeys(target).forEach(function (key) {
+    res[key] = Object.getOwnPropertyDescriptor(target, key);
+  });
+  return res;
+};
+
+function each(obj, iter, enumerableOnly) {
+  if (enumerableOnly === void 0) {
+    enumerableOnly = false;
+  }
+
+  if (getArchtype(obj) === internal_1.ArchtypeObject) {
+    ;
+    (enumerableOnly ? Object.keys : exports.ownKeys)(obj).forEach(function (key) {
+      if (!enumerableOnly || _typeof(key) !== "symbol") iter(key, obj[key], obj);
+    });
+  } else {
+    obj.forEach(function (entry, index) {
+      return iter(index, entry, obj);
+    });
+  }
+}
+
+exports.each = each;
+/*#__PURE__*/
+
+function getArchtype(thing) {
+  /* istanbul ignore next */
+  var state = thing[internal_1.DRAFT_STATE];
+  return state ? state.type_ > 3 ? state.type_ - 4 // cause Object and Array map back from 4 and 5
+  : state.type_ // others are the same
+  : Array.isArray(thing) ? internal_1.ArchtypeArray : isMap(thing) ? internal_1.ArchtypeMap : isSet(thing) ? internal_1.ArchtypeSet : internal_1.ArchtypeObject;
+}
+
+exports.getArchtype = getArchtype;
+/*#__PURE__*/
+
+function has(thing, prop) {
+  return getArchtype(thing) === internal_1.ArchtypeMap ? thing.has(prop) : Object.prototype.hasOwnProperty.call(thing, prop);
+}
+
+exports.has = has;
+/*#__PURE__*/
+
+function get(thing, prop) {
+  // @ts-ignore
+  return getArchtype(thing) === internal_1.ArchtypeMap ? thing.get(prop) : thing[prop];
+}
+
+exports.get = get;
+/*#__PURE__*/
+
+function set(thing, propOrOldValue, value) {
+  var t = getArchtype(thing);
+  if (t === internal_1.ArchtypeMap) thing.set(propOrOldValue, value);else if (t === internal_1.ArchtypeSet) {
+    thing.delete(propOrOldValue);
+    thing.add(value);
+  } else thing[propOrOldValue] = value;
+}
+
+exports.set = set;
+/*#__PURE__*/
+
+function is(x, y) {
+  // From: https://github.com/facebook/fbjs/blob/c69904a511b900266935168223063dd8772dfc40/packages/fbjs/src/core/shallowEqual.js
+  if (x === y) {
+    return x !== 0 || 1 / x === 1 / y;
+  } else {
+    return x !== x && y !== y;
+  }
+}
+
+exports.is = is;
+/*#__PURE__*/
+
+function isMap(target) {
+  return internal_1.hasMap && target instanceof Map;
+}
+
+exports.isMap = isMap;
+/*#__PURE__*/
+
+function isSet(target) {
+  return internal_1.hasSet && target instanceof Set;
+}
+
+exports.isSet = isSet;
+/*#__PURE__*/
+
+function latest(state) {
+  return state.copy_ || state.base_;
+}
+
+exports.latest = latest;
+/*#__PURE__*/
+
+function shallowCopy(base) {
+  if (Array.isArray(base)) return Array.prototype.slice.call(base);
+  var descriptors = exports.getOwnPropertyDescriptors(base);
+  delete descriptors[internal_1.DRAFT_STATE];
+  var keys = exports.ownKeys(descriptors);
+
+  for (var i = 0; i < keys.length; i++) {
+    var key = keys[i];
+    var desc = descriptors[key];
+
+    if (desc.writable === false) {
+      desc.writable = true;
+      desc.configurable = true;
+    } // like object.assign, we will read any _own_, get/set accessors. This helps in dealing
+    // with libraries that trap values, like mobx or vue
+    // unlike object.assign, non-enumerables will be copied as well
+
+
+    if (desc.get || desc.set) descriptors[key] = {
+      configurable: true,
+      writable: true,
+      enumerable: desc.enumerable,
+      value: base[key]
+    };
+  }
+
+  return Object.create(Object.getPrototypeOf(base), descriptors);
+}
+
+exports.shallowCopy = shallowCopy;
+
+function freeze(obj, deep) {
+  if (isFrozen(obj) || isDraft(obj) || !isDraftable(obj)) return;
+
+  if (getArchtype(obj) > 1
+  /* Map or Set */
+  ) {
+      obj.set = obj.add = obj.clear = obj.delete = dontMutateFrozenCollections;
+    }
+
+  Object.freeze(obj);
+  if (deep) each(obj, function (key, value) {
+    return freeze(value, true);
+  }, true);
+}
+
+exports.freeze = freeze;
+
+function dontMutateFrozenCollections() {
+  internal_1.die(2);
+}
+
+function isFrozen(obj) {
+  if (obj == null || _typeof(obj) !== "object") return true; // See #600, IE dies on non-objects in Object.isFrozen
+
+  return Object.isFrozen(obj);
+}
+
+exports.isFrozen = isFrozen;
+},{"../internal":"../node_modules/immer/src/internal.ts"}],"../node_modules/immer/src/utils/plugins.ts":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.loadPlugin = exports.getPlugin = void 0;
+
+var internal_1 = require("../internal");
+/** Plugin utilities */
+
+
+var plugins = {};
+
+function getPlugin(pluginKey) {
+  var plugin = plugins[pluginKey];
+
+  if (!plugin) {
+    internal_1.die(__DEV__ ? 18 : 19, pluginKey);
+  } // @ts-ignore
+
+
+  return plugin;
+}
+
+exports.getPlugin = getPlugin;
+
+function loadPlugin(pluginKey, implementation) {
+  plugins[pluginKey] = implementation;
+}
+
+exports.loadPlugin = loadPlugin;
+},{"../internal":"../node_modules/immer/src/internal.ts"}],"../node_modules/immer/src/core/scope.ts":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.enterScope = exports.leaveScope = exports.revokeScope = exports.usePatchesInScope = exports.getCurrentScope = void 0;
+
+var internal_1 = require("../internal");
+
+var errors_1 = require("../utils/errors");
+
+var currentScope;
+
+function getCurrentScope() {
+  if (__DEV__ && !currentScope) errors_1.die(0);
+  return currentScope;
+}
+
+exports.getCurrentScope = getCurrentScope;
+
+function createScope(parent_, immer_) {
+  return {
+    drafts_: [],
+    parent_: parent_,
+    immer_: immer_,
+    // Whenever the modified draft contains a draft from another scope, we
+    // need to prevent auto-freezing so the unowned draft can be finalized.
+    canAutoFreeze_: true,
+    unfinalizedDrafts_: 0
+  };
+}
+
+function usePatchesInScope(scope, patchListener) {
+  if (patchListener) {
+    internal_1.getPlugin("Patches"); // assert we have the plugin
+
+    scope.patches_ = [];
+    scope.inversePatches_ = [];
+    scope.patchListener_ = patchListener;
+  }
+}
+
+exports.usePatchesInScope = usePatchesInScope;
+
+function revokeScope(scope) {
+  leaveScope(scope);
+  scope.drafts_.forEach(revokeDraft); // @ts-ignore
+
+  scope.drafts_ = null;
+}
+
+exports.revokeScope = revokeScope;
+
+function leaveScope(scope) {
+  if (scope === currentScope) {
+    currentScope = scope.parent_;
+  }
+}
+
+exports.leaveScope = leaveScope;
+
+function enterScope(immer) {
+  return currentScope = createScope(currentScope, immer);
+}
+
+exports.enterScope = enterScope;
+
+function revokeDraft(draft) {
+  var state = draft[internal_1.DRAFT_STATE];
+  if (state.type_ === internal_1.ProxyTypeProxyObject || state.type_ === internal_1.ProxyTypeProxyArray) state.revoke_();else state.revoked_ = true;
+}
+},{"../internal":"../node_modules/immer/src/internal.ts","../utils/errors":"../node_modules/immer/src/utils/errors.ts"}],"../node_modules/immer/src/core/finalize.ts":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.processResult = void 0;
+
+var internal_1 = require("../internal");
+
+function processResult(result, scope) {
+  scope.unfinalizedDrafts_ = scope.drafts_.length;
+  var baseDraft = scope.drafts_[0];
+  var isReplaced = result !== undefined && result !== baseDraft;
+  if (!scope.immer_.useProxies_) internal_1.getPlugin("ES5").willFinalizeES5_(scope, result, isReplaced);
+
+  if (isReplaced) {
+    if (baseDraft[internal_1.DRAFT_STATE].modified_) {
+      internal_1.revokeScope(scope);
+      internal_1.die(4);
+    }
+
+    if (internal_1.isDraftable(result)) {
+      // Finalize the result in case it contains (or is) a subset of the draft.
+      result = finalize(scope, result);
+      if (!scope.parent_) maybeFreeze(scope, result);
+    }
+
+    if (scope.patches_) {
+      internal_1.getPlugin("Patches").generateReplacementPatches_(baseDraft[internal_1.DRAFT_STATE], result, scope.patches_, scope.inversePatches_);
+    }
+  } else {
+    // Finalize the base draft.
+    result = finalize(scope, baseDraft, []);
+  }
+
+  internal_1.revokeScope(scope);
+
+  if (scope.patches_) {
+    scope.patchListener_(scope.patches_, scope.inversePatches_);
+  }
+
+  return result !== internal_1.NOTHING ? result : undefined;
+}
+
+exports.processResult = processResult;
+
+function finalize(rootScope, value, path) {
+  // Don't recurse in tho recursive data structures
+  if (internal_1.isFrozen(value)) return value;
+  var state = value[internal_1.DRAFT_STATE]; // A plain object, might need freezing, might contain drafts
+
+  if (!state) {
+    internal_1.each(value, function (key, childValue) {
+      return finalizeProperty(rootScope, state, value, key, childValue, path);
+    }, true // See #590, don't recurse into non-enumarable of non drafted objects
+    );
+    return value;
+  } // Never finalize drafts owned by another scope.
+
+
+  if (state.scope_ !== rootScope) return value; // Unmodified draft, return the (frozen) original
+
+  if (!state.modified_) {
+    maybeFreeze(rootScope, state.base_, true);
+    return state.base_;
+  } // Not finalized yet, let's do that now
+
+
+  if (!state.finalized_) {
+    state.finalized_ = true;
+    state.scope_.unfinalizedDrafts_--;
+    var result_1 = // For ES5, create a good copy from the draft first, with added keys and without deleted keys.
+    state.type_ === internal_1.ProxyTypeES5Object || state.type_ === internal_1.ProxyTypeES5Array ? state.copy_ = internal_1.shallowCopy(state.draft_) : state.copy_; // Finalize all children of the copy
+    // For sets we clone before iterating, otherwise we can get in endless loop due to modifying during iteration, see #628
+    // Although the original test case doesn't seem valid anyway, so if this in the way we can turn the next line
+    // back to each(result, ....)
+
+    internal_1.each(state.type_ === internal_1.ProxyTypeSet ? new Set(result_1) : result_1, function (key, childValue) {
+      return finalizeProperty(rootScope, state, result_1, key, childValue, path);
+    }); // everything inside is frozen, we can freeze here
+
+    maybeFreeze(rootScope, result_1, false); // first time finalizing, let's create those patches
+
+    if (path && rootScope.patches_) {
+      internal_1.getPlugin("Patches").generatePatches_(state, path, rootScope.patches_, rootScope.inversePatches_);
+    }
+  }
+
+  return state.copy_;
+}
+
+function finalizeProperty(rootScope, parentState, targetObject, prop, childValue, rootPath) {
+  if (__DEV__ && childValue === targetObject) internal_1.die(5);
+
+  if (internal_1.isDraft(childValue)) {
+    var path = rootPath && parentState && parentState.type_ !== internal_1.ProxyTypeSet && // Set objects are atomic since they have no keys.
+    !internal_1.has(parentState.assigned_, prop) // Skip deep patches for assigned keys.
+    ? rootPath.concat(prop) : undefined; // Drafts owned by `scope` are finalized here.
+
+    var res = finalize(rootScope, childValue, path);
+    internal_1.set(targetObject, prop, res); // Drafts from another scope must prevented to be frozen
+    // if we got a draft back from finalize, we're in a nested produce and shouldn't freeze
+
+    if (internal_1.isDraft(res)) {
+      rootScope.canAutoFreeze_ = false;
+    } else return;
+  } // Search new objects for unfinalized drafts. Frozen objects should never contain drafts.
+
+
+  if (internal_1.isDraftable(childValue) && !internal_1.isFrozen(childValue)) {
+    if (!rootScope.immer_.autoFreeze_ && rootScope.unfinalizedDrafts_ < 1) {
+      // optimization: if an object is not a draft, and we don't have to
+      // deepfreeze everything, and we are sure that no drafts are left in the remaining object
+      // cause we saw and finalized all drafts already; we can stop visiting the rest of the tree.
+      // This benefits especially adding large data tree's without further processing.
+      // See add-data.js perf test
+      return;
+    }
+
+    finalize(rootScope, childValue); // immer deep freezes plain objects, so if there is no parent state, we freeze as well
+
+    if (!parentState || !parentState.scope_.parent_) maybeFreeze(rootScope, childValue);
+  }
+}
+
+function maybeFreeze(scope, value, deep) {
+  if (deep === void 0) {
+    deep = false;
+  }
+
+  if (scope.immer_.autoFreeze_ && scope.canAutoFreeze_) {
+    internal_1.freeze(value, deep);
+  }
+}
+},{"../internal":"../node_modules/immer/src/internal.ts"}],"../node_modules/immer/src/core/proxy.ts":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.prepareCopy = exports.markChanged = exports.objectTraps = exports.createProxyProxy = void 0;
+
+var internal_1 = require("../internal");
+/**
+ * Returns a new draft of the `base` object.
+ *
+ * The second argument is the parent draft-state (used internally).
+ */
+
+
+function createProxyProxy(base, parent) {
+  var isArray = Array.isArray(base);
+  var state = {
+    type_: isArray ? internal_1.ProxyTypeProxyArray : internal_1.ProxyTypeProxyObject,
+    // Track which produce call this is associated with.
+    scope_: parent ? parent.scope_ : internal_1.getCurrentScope(),
+    // True for both shallow and deep changes.
+    modified_: false,
+    // Used during finalization.
+    finalized_: false,
+    // Track which properties have been assigned (true) or deleted (false).
+    assigned_: {},
+    // The parent draft state.
+    parent_: parent,
+    // The base state.
+    base_: base,
+    // The base proxy.
+    draft_: null,
+    // The base copy with any updated values.
+    copy_: null,
+    // Called by the `produce` function.
+    revoke_: null,
+    isManual_: false
+  }; // the traps must target something, a bit like the 'real' base.
+  // but also, we need to be able to determine from the target what the relevant state is
+  // (to avoid creating traps per instance to capture the state in closure,
+  // and to avoid creating weird hidden properties as well)
+  // So the trick is to use 'state' as the actual 'target'! (and make sure we intercept everything)
+  // Note that in the case of an array, we put the state in an array to have better Reflect defaults ootb
+
+  var target = state;
+  var traps = exports.objectTraps;
+
+  if (isArray) {
+    target = [state];
+    traps = arrayTraps;
+  }
+
+  var _a = Proxy.revocable(target, traps),
+      revoke = _a.revoke,
+      proxy = _a.proxy;
+
+  state.draft_ = proxy;
+  state.revoke_ = revoke;
+  return proxy;
+}
+
+exports.createProxyProxy = createProxyProxy;
+/**
+ * Object drafts
+ */
+
+exports.objectTraps = {
+  get: function get(state, prop) {
+    if (prop === internal_1.DRAFT_STATE) return state;
+    var source = internal_1.latest(state);
+
+    if (!internal_1.has(source, prop)) {
+      // non-existing or non-own property...
+      return readPropFromProto(state, source, prop);
+    }
+
+    var value = source[prop];
+
+    if (state.finalized_ || !internal_1.isDraftable(value)) {
+      return value;
+    } // Check for existing draft in modified state.
+    // Assigned values are never drafted. This catches any drafts we created, too.
+
+
+    if (value === peek(state.base_, prop)) {
+      prepareCopy(state);
+      return state.copy_[prop] = internal_1.createProxy(state.scope_.immer_, value, state);
+    }
+
+    return value;
+  },
+  has: function has(state, prop) {
+    return prop in internal_1.latest(state);
+  },
+  ownKeys: function ownKeys(state) {
+    return Reflect.ownKeys(internal_1.latest(state));
+  },
+  set: function set(state, prop
+  /* strictly not, but helps TS */
+  , value) {
+    var desc = getDescriptorFromProto(internal_1.latest(state), prop);
+
+    if (desc === null || desc === void 0 ? void 0 : desc.set) {
+      // special case: if this write is captured by a setter, we have
+      // to trigger it with the correct context
+      desc.set.call(state.draft_, value);
+      return true;
+    }
+
+    if (!state.modified_) {
+      // the last check is because we need to be able to distinguish setting a non-existig to undefined (which is a change)
+      // from setting an existing property with value undefined to undefined (which is not a change)
+      var current = peek(internal_1.latest(state), prop); // special case, if we assigning the original value to a draft, we can ignore the assignment
+
+      var currentState = current === null || current === void 0 ? void 0 : current[internal_1.DRAFT_STATE];
+
+      if (currentState && currentState.base_ === value) {
+        state.copy_[prop] = value;
+        state.assigned_[prop] = false;
+        return true;
+      }
+
+      if (internal_1.is(value, current) && (value !== undefined || internal_1.has(state.base_, prop))) return true;
+      prepareCopy(state);
+      markChanged(state);
+    } // @ts-ignore
+
+
+    state.copy_[prop] = value;
+    state.assigned_[prop] = true;
+    return true;
+  },
+  deleteProperty: function deleteProperty(state, prop) {
+    // The `undefined` check is a fast path for pre-existing keys.
+    if (peek(state.base_, prop) !== undefined || prop in state.base_) {
+      state.assigned_[prop] = false;
+      prepareCopy(state);
+      markChanged(state);
+    } else {
+      // if an originally not assigned property was deleted
+      delete state.assigned_[prop];
+    } // @ts-ignore
+
+
+    if (state.copy_) delete state.copy_[prop];
+    return true;
+  },
+  // Note: We never coerce `desc.value` into an Immer draft, because we can't make
+  // the same guarantee in ES5 mode.
+  getOwnPropertyDescriptor: function getOwnPropertyDescriptor(state, prop) {
+    var owner = internal_1.latest(state);
+    var desc = Reflect.getOwnPropertyDescriptor(owner, prop);
+    if (!desc) return desc;
+    return {
+      writable: true,
+      configurable: state.type_ !== internal_1.ProxyTypeProxyArray || prop !== "length",
+      enumerable: desc.enumerable,
+      value: owner[prop]
+    };
+  },
+  defineProperty: function defineProperty() {
+    internal_1.die(11);
+  },
+  getPrototypeOf: function getPrototypeOf(state) {
+    return Object.getPrototypeOf(state.base_);
+  },
+  setPrototypeOf: function setPrototypeOf() {
+    internal_1.die(12);
+  }
+};
+/**
+ * Array drafts
+ */
+
+var arrayTraps = {};
+internal_1.each(exports.objectTraps, function (key, fn) {
+  // @ts-ignore
+  arrayTraps[key] = function () {
+    arguments[0] = arguments[0][0];
+    return fn.apply(this, arguments);
+  };
+});
+
+arrayTraps.deleteProperty = function (state, prop) {
+  if (__DEV__ && isNaN(parseInt(prop))) internal_1.die(13);
+  return exports.objectTraps.deleteProperty.call(this, state[0], prop);
+};
+
+arrayTraps.set = function (state, prop, value) {
+  if (__DEV__ && prop !== "length" && isNaN(parseInt(prop))) internal_1.die(14);
+  return exports.objectTraps.set.call(this, state[0], prop, value, state[0]);
+}; // Access a property without creating an Immer draft.
+
+
+function peek(draft, prop) {
+  var state = draft[internal_1.DRAFT_STATE];
+  var source = state ? internal_1.latest(state) : draft;
+  return source[prop];
+}
+
+function readPropFromProto(state, source, prop) {
+  var _a;
+
+  var desc = getDescriptorFromProto(source, prop);
+  return desc ? "value" in desc ? desc.value : // This is a very special case, if the prop is a getter defined by the
+  (_a = // prototype, we should invoke it with the draft as context!
+  desc.get) === null || _a === void 0 ? void 0 : _a.call(state.draft_) : undefined;
+}
+
+function getDescriptorFromProto(source, prop) {
+  // 'in' checks proto!
+  if (!(prop in source)) return undefined;
+  var proto = Object.getPrototypeOf(source);
+
+  while (proto) {
+    var desc = Object.getOwnPropertyDescriptor(proto, prop);
+    if (desc) return desc;
+    proto = Object.getPrototypeOf(proto);
+  }
+
+  return undefined;
+}
+
+function markChanged(state) {
+  if (!state.modified_) {
+    state.modified_ = true;
+
+    if (state.parent_) {
+      markChanged(state.parent_);
+    }
+  }
+}
+
+exports.markChanged = markChanged;
+
+function prepareCopy(state) {
+  if (!state.copy_) {
+    state.copy_ = internal_1.shallowCopy(state.base_);
+  }
+}
+
+exports.prepareCopy = prepareCopy;
+},{"../internal":"../node_modules/immer/src/internal.ts"}],"../node_modules/immer/src/core/immerClass.ts":[function(require,module,exports) {
+"use strict";
+
+function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+var __spreadArrays = this && this.__spreadArrays || function () {
+  for (var s = 0, i = 0, il = arguments.length; i < il; i++) {
+    s += arguments[i].length;
+  }
+
+  for (var r = Array(s), k = 0, i = 0; i < il; i++) {
+    for (var a = arguments[i], j = 0, jl = a.length; j < jl; j++, k++) {
+      r[k] = a[j];
+    }
+  }
+
+  return r;
+};
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.createProxy = exports.Immer = void 0;
+
+var internal_1 = require("../internal");
+
+var Immer =
+/** @class */
+function () {
+  function Immer(config) {
+    this.useProxies_ = internal_1.hasProxies;
+    this.autoFreeze_ = __DEV__ ? true
+    /* istanbul ignore next */
+    : !internal_1.isMinified;
+    if (typeof (config === null || config === void 0 ? void 0 : config.useProxies) === "boolean") this.setUseProxies(config.useProxies);
+    if (typeof (config === null || config === void 0 ? void 0 : config.autoFreeze) === "boolean") this.setAutoFreeze(config.autoFreeze);
+    this.produce = this.produce.bind(this);
+    this.produceWithPatches = this.produceWithPatches.bind(this);
+  }
+  /**
+   * The `produce` function takes a value and a "recipe function" (whose
+   * return value often depends on the base state). The recipe function is
+   * free to mutate its first argument however it wants. All mutations are
+   * only ever applied to a __copy__ of the base state.
+   *
+   * Pass only a function to create a "curried producer" which relieves you
+   * from passing the recipe function every time.
+   *
+   * Only plain objects and arrays are made mutable. All other objects are
+   * considered uncopyable.
+   *
+   * Note: This function is __bound__ to its `Immer` instance.
+   *
+   * @param {any} base - the initial state
+   * @param {Function} producer - function that receives a proxy of the base state as first argument and which can be freely modified
+   * @param {Function} patchListener - optional function that will be called with all the patches produced here
+   * @returns {any} a new state, or the initial state if nothing was modified
+   */
+
+
+  Immer.prototype.produce = function (base, recipe, patchListener) {
+    // curried invocation
+    if (typeof base === "function" && typeof recipe !== "function") {
+      var defaultBase_1 = recipe;
+      recipe = base;
+      var self_1 = this;
+      return function curriedProduce(base) {
+        var _this = this;
+
+        if (base === void 0) {
+          base = defaultBase_1;
+        }
+
+        var args = [];
+
+        for (var _i = 1; _i < arguments.length; _i++) {
+          args[_i - 1] = arguments[_i];
+        }
+
+        return self_1.produce(base, function (draft) {
+          return recipe.call.apply(recipe, __spreadArrays([_this, draft], args));
+        }); // prettier-ignore
+      };
+    }
+
+    if (typeof recipe !== "function") internal_1.die(6);
+    if (patchListener !== undefined && typeof patchListener !== "function") internal_1.die(7);
+    var result; // Only plain objects, arrays, and "immerable classes" are drafted.
+
+    if (internal_1.isDraftable(base)) {
+      var scope_1 = internal_1.enterScope(this);
+      var proxy = createProxy(this, base, undefined);
+      var hasError = true;
+
+      try {
+        result = recipe(proxy);
+        hasError = false;
+      } finally {
+        // finally instead of catch + rethrow better preserves original stack
+        if (hasError) internal_1.revokeScope(scope_1);else internal_1.leaveScope(scope_1);
+      }
+
+      if (typeof Promise !== "undefined" && result instanceof Promise) {
+        return result.then(function (result) {
+          internal_1.usePatchesInScope(scope_1, patchListener);
+          return internal_1.processResult(result, scope_1);
+        }, function (error) {
+          internal_1.revokeScope(scope_1);
+          throw error;
+        });
+      }
+
+      internal_1.usePatchesInScope(scope_1, patchListener);
+      return internal_1.processResult(result, scope_1);
+    } else if (!base || _typeof(base) !== "object") {
+      result = recipe(base);
+      if (result === internal_1.NOTHING) return undefined;
+      if (result === undefined) result = base;
+      if (this.autoFreeze_) internal_1.freeze(result, true);
+      return result;
+    } else internal_1.die(21, base);
+  };
+
+  Immer.prototype.produceWithPatches = function (arg1, arg2, arg3) {
+    var _this = this;
+
+    if (typeof arg1 === "function") {
+      return function (state) {
+        var args = [];
+
+        for (var _i = 1; _i < arguments.length; _i++) {
+          args[_i - 1] = arguments[_i];
+        }
+
+        return _this.produceWithPatches(state, function (draft) {
+          return arg1.apply(void 0, __spreadArrays([draft], args));
         });
       };
     }
 
-    var a;
+    var patches, inversePatches;
+    var nextState = this.produce(arg1, arg2, function (p, ip) {
+      patches = p;
+      inversePatches = ip;
+    });
+    return [nextState, patches, inversePatches];
+  };
 
-    if ("function" != typeof e && n(6), void 0 !== i && "function" != typeof i && n(7), r(t)) {
-      var f = w(this),
-          c = R(this, t, void 0),
-          s = !0;
+  Immer.prototype.createDraft = function (base) {
+    if (!internal_1.isDraftable(base)) internal_1.die(8);
+    if (internal_1.isDraft(base)) base = internal_1.current(base);
+    var scope = internal_1.enterScope(this);
+    var proxy = createProxy(this, base, undefined);
+    proxy[internal_1.DRAFT_STATE].isManual_ = true;
+    internal_1.leaveScope(scope);
+    return proxy;
+  };
 
-      try {
-        a = e(c), s = !1;
-      } finally {
-        s ? g(f) : O(f);
-      }
+  Immer.prototype.finishDraft = function (draft, patchListener) {
+    var state = draft && draft[internal_1.DRAFT_STATE];
 
-      return "undefined" != typeof Promise && a instanceof Promise ? a.then(function (n) {
-        return j(f, i), P(n, f);
-      }, function (n) {
-        throw g(f), n;
-      }) : (j(f, i), P(a, f));
+    if (__DEV__) {
+      if (!state || !state.isManual_) internal_1.die(9);
+      if (state.finalized_) internal_1.die(10);
     }
 
-    if (!t || "object" != typeof t) {
-      if ((a = e(t)) === H) return;
-      return void 0 === a && (a = t), this.N && d(a, !0), a;
+    var scope = state.scope_;
+    internal_1.usePatchesInScope(scope, patchListener);
+    return internal_1.processResult(undefined, scope);
+  };
+  /**
+   * Pass true to automatically freeze all copies created by Immer.
+   *
+   * By default, auto-freezing is disabled in production.
+   */
+
+
+  Immer.prototype.setAutoFreeze = function (value) {
+    this.autoFreeze_ = value;
+  };
+  /**
+   * Pass true to use the ES2015 `Proxy` class when creating drafts, which is
+   * always faster than using ES5 proxies.
+   *
+   * By default, feature detection is used, so calling this is rarely necessary.
+   */
+
+
+  Immer.prototype.setUseProxies = function (value) {
+    if (value && !internal_1.hasProxies) {
+      internal_1.die(20);
     }
 
-    n(21, t);
-  }, i.produceWithPatches = function (n, t) {
-    var r,
-        e,
-        i = this;
-    return "function" == typeof n ? function (t) {
-      for (var r = arguments.length, e = Array(r > 1 ? r - 1 : 0), o = 1; o < r; o++) e[o - 1] = arguments[o];
+    this.useProxies_ = value;
+  };
 
-      return i.produceWithPatches(t, function (t) {
-        return n.apply(void 0, [t].concat(e));
-      });
-    } : [this.produce(n, t, function (n, t) {
-      r = n, e = t;
-    }), r, e];
-  }, i.createDraft = function (e) {
-    r(e) || n(8), t(e) && (e = D(e));
-    var i = w(this),
-        o = R(this, e, void 0);
-    return o[Q].C = !0, O(i), o;
-  }, i.finishDraft = function (t, r) {
-    var e = t && t[Q];
-    "production" !== "development" && (e && e.C || n(9), e.I && n(10));
-    var i = e.A;
-    return j(i, r), P(void 0, i);
-  }, i.setAutoFreeze = function (n) {
-    this.N = n;
-  }, i.setUseProxies = function (t) {
-    t && !B && n(20), this.O = t;
-  }, i.applyPatches = function (n, r) {
-    var e;
+  Immer.prototype.applyPatches = function (base, patches) {
+    // If a patch replaces the entire state, take that replacement as base
+    // before applying patches
+    var i;
 
-    for (e = r.length - 1; e >= 0; e--) {
-      var i = r[e];
+    for (i = patches.length - 1; i >= 0; i--) {
+      var patch = patches[i];
 
-      if (0 === i.path.length && "replace" === i.op) {
-        n = i.value;
+      if (patch.path.length === 0 && patch.op === "replace") {
+        base = patch.value;
         break;
       }
     }
 
-    var o = b("Patches").$;
-    return t(n) ? o(n, r) : this.produce(n, function (n) {
-      return o(n, r.slice(e + 1));
-    });
-  }, e;
-}(),
-    un = new on(),
-    an = un.produce,
-    fn = un.produceWithPatches.bind(un),
-    cn = un.setAutoFreeze.bind(un),
-    sn = un.setUseProxies.bind(un),
-    vn = un.applyPatches.bind(un),
-    pn = un.createDraft.bind(un),
-    ln = un.finishDraft.bind(un);
+    var applyPatchesImpl = internal_1.getPlugin("Patches").applyPatches_;
 
-exports.finishDraft = ln;
-exports.createDraft = pn;
-exports.applyPatches = vn;
-exports.setUseProxies = sn;
-exports.setAutoFreeze = cn;
-exports.produceWithPatches = fn;
-exports.produce = an;
-exports.Immer = on;
-var _default = an;
-exports.default = _default;
-},{}],"../node_modules/pullstate/dist/index.es.js":[function(require,module,exports) {
+    if (internal_1.isDraft(base)) {
+      // N.B: never hits if some patch a replacement, patches are never drafts
+      return applyPatchesImpl(base, patches);
+    } // Otherwise, produce a copy of the base state.
+
+
+    return this.produce(base, function (draft) {
+      return applyPatchesImpl(draft, patches.slice(i + 1));
+    });
+  };
+
+  return Immer;
+}();
+
+exports.Immer = Immer;
+
+function createProxy(immer, value, parent) {
+  // precondition: createProxy should be guarded by isDraftable, so we know we can safely draft
+  var draft = internal_1.isMap(value) ? internal_1.getPlugin("MapSet").proxyMap_(value, parent) : internal_1.isSet(value) ? internal_1.getPlugin("MapSet").proxySet_(value, parent) : immer.useProxies_ ? internal_1.createProxyProxy(value, parent) : internal_1.getPlugin("ES5").createES5Proxy_(value, parent);
+  var scope = parent ? parent.scope_ : internal_1.getCurrentScope();
+  scope.drafts_.push(draft);
+  return draft;
+}
+
+exports.createProxy = createProxy;
+},{"../internal":"../node_modules/immer/src/internal.ts"}],"../node_modules/immer/src/core/current.ts":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.current = void 0;
+
+var internal_1 = require("../internal");
+
+function current(value) {
+  if (!internal_1.isDraft(value)) internal_1.die(22, value);
+  return currentImpl(value);
+}
+
+exports.current = current;
+
+function currentImpl(value) {
+  if (!internal_1.isDraftable(value)) return value;
+  var state = value[internal_1.DRAFT_STATE];
+  var copy;
+  var archType = internal_1.getArchtype(value);
+
+  if (state) {
+    if (!state.modified_ && (state.type_ < 4 || !internal_1.getPlugin("ES5").hasChanges_(state))) return state.base_; // Optimization: avoid generating new drafts during copying
+
+    state.finalized_ = true;
+    copy = copyHelper(value, archType);
+    state.finalized_ = false;
+  } else {
+    copy = copyHelper(value, archType);
+  }
+
+  internal_1.each(copy, function (key, childValue) {
+    if (state && internal_1.get(state.base_, key) === childValue) return; // no need to copy or search in something that didn't change
+
+    internal_1.set(copy, key, currentImpl(childValue));
+  }); // In the future, we might consider freezing here, based on the current settings
+
+  return archType === internal_1.ArchtypeSet ? new Set(copy) : copy;
+}
+
+function copyHelper(value, archType) {
+  // creates a shallow copy, even if it is a map or set
+  switch (archType) {
+    case internal_1.ArchtypeMap:
+      return new Map(value);
+
+    case internal_1.ArchtypeSet:
+      // Set will be cloned as array temporarily, so that we can replace individual items
+      return Array.from(value);
+  }
+
+  return internal_1.shallowCopy(value);
+}
+},{"../internal":"../node_modules/immer/src/internal.ts"}],"../node_modules/immer/src/internal.ts":[function(require,module,exports) {
+"use strict";
+
+var __createBinding = this && this.__createBinding || (Object.create ? function (o, m, k, k2) {
+  if (k2 === undefined) k2 = k;
+  Object.defineProperty(o, k2, {
+    enumerable: true,
+    get: function get() {
+      return m[k];
+    }
+  });
+} : function (o, m, k, k2) {
+  if (k2 === undefined) k2 = k;
+  o[k2] = m[k];
+});
+
+var __exportStar = this && this.__exportStar || function (m, exports) {
+  for (var p in m) {
+    if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports, p)) __createBinding(exports, m, p);
+  }
+};
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+__exportStar(require("./utils/env"), exports);
+
+__exportStar(require("./utils/errors"), exports);
+
+__exportStar(require("./types/types-external"), exports);
+
+__exportStar(require("./types/types-internal"), exports);
+
+__exportStar(require("./utils/common"), exports);
+
+__exportStar(require("./utils/plugins"), exports);
+
+__exportStar(require("./core/scope"), exports);
+
+__exportStar(require("./core/finalize"), exports);
+
+__exportStar(require("./core/proxy"), exports);
+
+__exportStar(require("./core/immerClass"), exports);
+
+__exportStar(require("./core/current"), exports);
+},{"./utils/env":"../node_modules/immer/src/utils/env.ts","./utils/errors":"../node_modules/immer/src/utils/errors.ts","./types/types-external":"../node_modules/immer/src/types/types-external.ts","./types/types-internal":"../node_modules/immer/src/types/types-internal.ts","./utils/common":"../node_modules/immer/src/utils/common.ts","./utils/plugins":"../node_modules/immer/src/utils/plugins.ts","./core/scope":"../node_modules/immer/src/core/scope.ts","./core/finalize":"../node_modules/immer/src/core/finalize.ts","./core/proxy":"../node_modules/immer/src/core/proxy.ts","./core/immerClass":"../node_modules/immer/src/core/immerClass.ts","./core/current":"../node_modules/immer/src/core/current.ts"}],"../node_modules/immer/src/plugins/es5.ts":[function(require,module,exports) {
+"use strict";
+
+function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.enableES5 = void 0;
+
+var internal_1 = require("../internal");
+
+function enableES5() {
+  function willFinalizeES5_(scope, result, isReplaced) {
+    if (!isReplaced) {
+      if (scope.patches_) {
+        markChangesRecursively(scope.drafts_[0]);
+      } // This is faster when we don't care about which attributes changed.
+
+
+      markChangesSweep(scope.drafts_);
+    } // When a child draft is returned, look for changes.
+    else if (internal_1.isDraft(result) && result[internal_1.DRAFT_STATE].scope_ === scope) {
+        markChangesSweep(scope.drafts_);
+      }
+  }
+
+  function createES5Draft(isArray, base) {
+    if (isArray) {
+      var draft = new Array(base.length);
+
+      for (var i = 0; i < base.length; i++) {
+        Object.defineProperty(draft, "" + i, proxyProperty(i, true));
+      }
+
+      return draft;
+    } else {
+      var descriptors_1 = internal_1.getOwnPropertyDescriptors(base);
+      delete descriptors_1[internal_1.DRAFT_STATE];
+      var keys = internal_1.ownKeys(descriptors_1);
+
+      for (var i = 0; i < keys.length; i++) {
+        var key = keys[i];
+        descriptors_1[key] = proxyProperty(key, isArray || !!descriptors_1[key].enumerable);
+      }
+
+      return Object.create(Object.getPrototypeOf(base), descriptors_1);
+    }
+  }
+
+  function createES5Proxy_(base, parent) {
+    var isArray = Array.isArray(base);
+    var draft = createES5Draft(isArray, base);
+    var state = {
+      type_: isArray ? internal_1.ProxyTypeES5Array : internal_1.ProxyTypeES5Object,
+      scope_: parent ? parent.scope_ : internal_1.getCurrentScope(),
+      modified_: false,
+      finalized_: false,
+      assigned_: {},
+      parent_: parent,
+      // base is the object we are drafting
+      base_: base,
+      // draft is the draft object itself, that traps all reads and reads from either the base (if unmodified) or copy (if modified)
+      draft_: draft,
+      copy_: null,
+      revoked_: false,
+      isManual_: false
+    };
+    Object.defineProperty(draft, internal_1.DRAFT_STATE, {
+      value: state,
+      // enumerable: false <- the default
+      writable: true
+    });
+    return draft;
+  } // property descriptors are recycled to make sure we don't create a get and set closure per property,
+  // but share them all instead
+
+
+  var descriptors = {};
+
+  function proxyProperty(prop, enumerable) {
+    var desc = descriptors[prop];
+
+    if (desc) {
+      desc.enumerable = enumerable;
+    } else {
+      descriptors[prop] = desc = {
+        configurable: true,
+        enumerable: enumerable,
+        get: function get() {
+          var state = this[internal_1.DRAFT_STATE];
+          if (__DEV__) assertUnrevoked(state); // @ts-ignore
+
+          return internal_1.objectTraps.get(state, prop);
+        },
+        set: function set(value) {
+          var state = this[internal_1.DRAFT_STATE];
+          if (__DEV__) assertUnrevoked(state); // @ts-ignore
+
+          internal_1.objectTraps.set(state, prop, value);
+        }
+      };
+    }
+
+    return desc;
+  } // This looks expensive, but only proxies are visited, and only objects without known changes are scanned.
+
+
+  function markChangesSweep(drafts) {
+    // The natural order of drafts in the `scope` array is based on when they
+    // were accessed. By processing drafts in reverse natural order, we have a
+    // better chance of processing leaf nodes first. When a leaf node is known to
+    // have changed, we can avoid any traversal of its ancestor nodes.
+    for (var i = drafts.length - 1; i >= 0; i--) {
+      var state = drafts[i][internal_1.DRAFT_STATE];
+
+      if (!state.modified_) {
+        switch (state.type_) {
+          case internal_1.ProxyTypeES5Array:
+            if (hasArrayChanges(state)) internal_1.markChanged(state);
+            break;
+
+          case internal_1.ProxyTypeES5Object:
+            if (hasObjectChanges(state)) internal_1.markChanged(state);
+            break;
+        }
+      }
+    }
+  }
+
+  function markChangesRecursively(object) {
+    if (!object || _typeof(object) !== "object") return;
+    var state = object[internal_1.DRAFT_STATE];
+    if (!state) return;
+    var base_ = state.base_,
+        draft_ = state.draft_,
+        assigned_ = state.assigned_,
+        type_ = state.type_;
+
+    if (type_ === internal_1.ProxyTypeES5Object) {
+      // Look for added keys.
+      // probably there is a faster way to detect changes, as sweep + recurse seems to do some
+      // unnecessary work.
+      // also: probably we can store the information we detect here, to speed up tree finalization!
+      internal_1.each(draft_, function (key) {
+        if (key === internal_1.DRAFT_STATE) return; // The `undefined` check is a fast path for pre-existing keys.
+
+        if (base_[key] === undefined && !internal_1.has(base_, key)) {
+          assigned_[key] = true;
+          internal_1.markChanged(state);
+        } else if (!assigned_[key]) {
+          // Only untouched properties trigger recursion.
+          markChangesRecursively(draft_[key]);
+        }
+      }); // Look for removed keys.
+
+      internal_1.each(base_, function (key) {
+        // The `undefined` check is a fast path for pre-existing keys.
+        if (draft_[key] === undefined && !internal_1.has(draft_, key)) {
+          assigned_[key] = false;
+          internal_1.markChanged(state);
+        }
+      });
+    } else if (type_ === internal_1.ProxyTypeES5Array) {
+      if (hasArrayChanges(state)) {
+        internal_1.markChanged(state);
+        assigned_.length = true;
+      }
+
+      if (draft_.length < base_.length) {
+        for (var i = draft_.length; i < base_.length; i++) {
+          assigned_[i] = false;
+        }
+      } else {
+        for (var i = base_.length; i < draft_.length; i++) {
+          assigned_[i] = true;
+        }
+      } // Minimum count is enough, the other parts has been processed.
+
+
+      var min = Math.min(draft_.length, base_.length);
+
+      for (var i = 0; i < min; i++) {
+        // Only untouched indices trigger recursion.
+        if (assigned_[i] === undefined) markChangesRecursively(draft_[i]);
+      }
+    }
+  }
+
+  function hasObjectChanges(state) {
+    var base_ = state.base_,
+        draft_ = state.draft_; // Search for added keys and changed keys. Start at the back, because
+    // non-numeric keys are ordered by time of definition on the object.
+
+    var keys = internal_1.ownKeys(draft_);
+
+    for (var i = keys.length - 1; i >= 0; i--) {
+      var key = keys[i];
+      if (key === internal_1.DRAFT_STATE) continue;
+      var baseValue = base_[key]; // The `undefined` check is a fast path for pre-existing keys.
+
+      if (baseValue === undefined && !internal_1.has(base_, key)) {
+        return true;
+      } // Once a base key is deleted, future changes go undetected, because its
+      // descriptor is erased. This branch detects any missed changes.
+      else {
+          var value = draft_[key];
+          var state_1 = value && value[internal_1.DRAFT_STATE];
+
+          if (state_1 ? state_1.base_ !== baseValue : !internal_1.is(value, baseValue)) {
+            return true;
+          }
+        }
+    } // At this point, no keys were added or changed.
+    // Compare key count to determine if keys were deleted.
+
+
+    var baseIsDraft = !!base_[internal_1.DRAFT_STATE];
+    return keys.length !== internal_1.ownKeys(base_).length + (baseIsDraft ? 0 : 1); // + 1 to correct for DRAFT_STATE
+  }
+
+  function hasArrayChanges(state) {
+    var draft_ = state.draft_;
+    if (draft_.length !== state.base_.length) return true; // See #116
+    // If we first shorten the length, our array interceptors will be removed.
+    // If after that new items are added, result in the same original length,
+    // those last items will have no intercepting property.
+    // So if there is no own descriptor on the last position, we know that items were removed and added
+    // N.B.: splice, unshift, etc only shift values around, but not prop descriptors, so we only have to check
+    // the last one
+
+    var descriptor = Object.getOwnPropertyDescriptor(draft_, draft_.length - 1); // descriptor can be null, but only for newly created sparse arrays, eg. new Array(10)
+
+    if (descriptor && !descriptor.get) return true; // For all other cases, we don't have to compare, as they would have been picked up by the index setters
+
+    return false;
+  }
+
+  function hasChanges_(state) {
+    return state.type_ === internal_1.ProxyTypeES5Object ? hasObjectChanges(state) : hasArrayChanges(state);
+  }
+
+  function assertUnrevoked(state
+  /*ES5State | MapState | SetState*/
+  ) {
+    if (state.revoked_) internal_1.die(3, JSON.stringify(internal_1.latest(state)));
+  }
+
+  internal_1.loadPlugin("ES5", {
+    createES5Proxy_: createES5Proxy_,
+    willFinalizeES5_: willFinalizeES5_,
+    hasChanges_: hasChanges_
+  });
+}
+
+exports.enableES5 = enableES5;
+},{"../internal":"../node_modules/immer/src/internal.ts"}],"../node_modules/immer/src/plugins/patches.ts":[function(require,module,exports) {
+"use strict";
+
+function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.enablePatches = void 0;
+
+var internal_1 = require("../internal");
+
+function enablePatches() {
+  var REPLACE = "replace";
+  var ADD = "add";
+  var REMOVE = "remove";
+
+  function generatePatches_(state, basePath, patches, inversePatches) {
+    switch (state.type_) {
+      case internal_1.ProxyTypeProxyObject:
+      case internal_1.ProxyTypeES5Object:
+      case internal_1.ProxyTypeMap:
+        return generatePatchesFromAssigned(state, basePath, patches, inversePatches);
+
+      case internal_1.ProxyTypeES5Array:
+      case internal_1.ProxyTypeProxyArray:
+        return generateArrayPatches(state, basePath, patches, inversePatches);
+
+      case internal_1.ProxyTypeSet:
+        return generateSetPatches(state, basePath, patches, inversePatches);
+    }
+  }
+
+  function generateArrayPatches(state, basePath, patches, inversePatches) {
+    var _a, _b;
+
+    var base_ = state.base_,
+        assigned_ = state.assigned_;
+    var copy_ = state.copy_; // Reduce complexity by ensuring `base` is never longer.
+
+    if (copy_.length < base_.length) {
+      // @ts-ignore
+      ;
+      _a = [copy_, base_], base_ = _a[0], copy_ = _a[1];
+      _b = [inversePatches, patches], patches = _b[0], inversePatches = _b[1];
+    } // Process replaced indices.
+
+
+    for (var i = 0; i < base_.length; i++) {
+      if (assigned_[i] && copy_[i] !== base_[i]) {
+        var path = basePath.concat([i]);
+        patches.push({
+          op: REPLACE,
+          path: path,
+          // Need to maybe clone it, as it can in fact be the original value
+          // due to the base/copy inversion at the start of this function
+          value: clonePatchValueIfNeeded(copy_[i])
+        });
+        inversePatches.push({
+          op: REPLACE,
+          path: path,
+          value: clonePatchValueIfNeeded(base_[i])
+        });
+      }
+    } // Process added indices.
+
+
+    for (var i = base_.length; i < copy_.length; i++) {
+      var path = basePath.concat([i]);
+      patches.push({
+        op: ADD,
+        path: path,
+        // Need to maybe clone it, as it can in fact be the original value
+        // due to the base/copy inversion at the start of this function
+        value: clonePatchValueIfNeeded(copy_[i])
+      });
+    }
+
+    if (base_.length < copy_.length) {
+      inversePatches.push({
+        op: REPLACE,
+        path: basePath.concat(["length"]),
+        value: base_.length
+      });
+    }
+  } // This is used for both Map objects and normal objects.
+
+
+  function generatePatchesFromAssigned(state, basePath, patches, inversePatches) {
+    var base_ = state.base_,
+        copy_ = state.copy_;
+    internal_1.each(state.assigned_, function (key, assignedValue) {
+      var origValue = internal_1.get(base_, key);
+      var value = internal_1.get(copy_, key);
+      var op = !assignedValue ? REMOVE : internal_1.has(base_, key) ? REPLACE : ADD;
+      if (origValue === value && op === REPLACE) return;
+      var path = basePath.concat(key);
+      patches.push(op === REMOVE ? {
+        op: op,
+        path: path
+      } : {
+        op: op,
+        path: path,
+        value: value
+      });
+      inversePatches.push(op === ADD ? {
+        op: REMOVE,
+        path: path
+      } : op === REMOVE ? {
+        op: ADD,
+        path: path,
+        value: clonePatchValueIfNeeded(origValue)
+      } : {
+        op: REPLACE,
+        path: path,
+        value: clonePatchValueIfNeeded(origValue)
+      });
+    });
+  }
+
+  function generateSetPatches(state, basePath, patches, inversePatches) {
+    var base_ = state.base_,
+        copy_ = state.copy_;
+    var i = 0;
+    base_.forEach(function (value) {
+      if (!copy_.has(value)) {
+        var path = basePath.concat([i]);
+        patches.push({
+          op: REMOVE,
+          path: path,
+          value: value
+        });
+        inversePatches.unshift({
+          op: ADD,
+          path: path,
+          value: value
+        });
+      }
+
+      i++;
+    });
+    i = 0;
+    copy_.forEach(function (value) {
+      if (!base_.has(value)) {
+        var path = basePath.concat([i]);
+        patches.push({
+          op: ADD,
+          path: path,
+          value: value
+        });
+        inversePatches.unshift({
+          op: REMOVE,
+          path: path,
+          value: value
+        });
+      }
+
+      i++;
+    });
+  }
+
+  function generateReplacementPatches_(rootState, replacement, patches, inversePatches) {
+    patches.push({
+      op: REPLACE,
+      path: [],
+      value: replacement
+    });
+    inversePatches.push({
+      op: REPLACE,
+      path: [],
+      value: rootState.base_
+    });
+  }
+
+  function applyPatches_(draft, patches) {
+    patches.forEach(function (patch) {
+      var path = patch.path,
+          op = patch.op;
+      var base = draft;
+
+      for (var i = 0; i < path.length - 1; i++) {
+        base = internal_1.get(base, path[i]);
+        if (_typeof(base) !== "object") internal_1.die(15, path.join("/"));
+      }
+
+      var type = internal_1.getArchtype(base);
+      var value = deepClonePatchValue(patch.value); // used to clone patch to ensure original patch is not modified, see #411
+
+      var key = path[path.length - 1];
+
+      switch (op) {
+        case REPLACE:
+          switch (type) {
+            case internal_1.ArchtypeMap:
+              return base.set(key, value);
+
+            /* istanbul ignore next */
+
+            case internal_1.ArchtypeSet:
+              internal_1.die(16);
+
+            default:
+              // if value is an object, then it's assigned by reference
+              // in the following add or remove ops, the value field inside the patch will also be modifyed
+              // so we use value from the cloned patch
+              // @ts-ignore
+              return base[key] = value;
+          }
+
+        case ADD:
+          switch (type) {
+            case internal_1.ArchtypeArray:
+              return base.splice(key, 0, value);
+
+            case internal_1.ArchtypeMap:
+              return base.set(key, value);
+
+            case internal_1.ArchtypeSet:
+              return base.add(value);
+
+            default:
+              return base[key] = value;
+          }
+
+        case REMOVE:
+          switch (type) {
+            case internal_1.ArchtypeArray:
+              return base.splice(key, 1);
+
+            case internal_1.ArchtypeMap:
+              return base.delete(key);
+
+            case internal_1.ArchtypeSet:
+              return base.delete(patch.value);
+
+            default:
+              return delete base[key];
+          }
+
+        default:
+          internal_1.die(17, op);
+      }
+    });
+    return draft;
+  }
+
+  function deepClonePatchValue(obj) {
+    if (!internal_1.isDraftable(obj)) return obj;
+    if (Array.isArray(obj)) return obj.map(deepClonePatchValue);
+    if (internal_1.isMap(obj)) return new Map(Array.from(obj.entries()).map(function (_a) {
+      var k = _a[0],
+          v = _a[1];
+      return [k, deepClonePatchValue(v)];
+    }));
+    if (internal_1.isSet(obj)) return new Set(Array.from(obj).map(deepClonePatchValue));
+    var cloned = Object.create(Object.getPrototypeOf(obj));
+
+    for (var key in obj) {
+      cloned[key] = deepClonePatchValue(obj[key]);
+    }
+
+    return cloned;
+  }
+
+  function clonePatchValueIfNeeded(obj) {
+    if (internal_1.isDraft(obj)) {
+      return deepClonePatchValue(obj);
+    } else return obj;
+  }
+
+  internal_1.loadPlugin("Patches", {
+    applyPatches_: applyPatches_,
+    generatePatches_: generatePatches_,
+    generateReplacementPatches_: generateReplacementPatches_
+  });
+}
+
+exports.enablePatches = enablePatches;
+},{"../internal":"../node_modules/immer/src/internal.ts"}],"../node_modules/immer/src/plugins/mapset.ts":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.enableMapSet = void 0; // types only!
+
+var internal_1 = require("../internal");
+
+function enableMapSet() {
+  /* istanbul ignore next */
+  var _extendStatics = function extendStatics(d, b) {
+    _extendStatics = Object.setPrototypeOf || {
+      __proto__: []
+    } instanceof Array && function (d, b) {
+      d.__proto__ = b;
+    } || function (d, b) {
+      for (var p in b) {
+        if (b.hasOwnProperty(p)) d[p] = b[p];
+      }
+    };
+
+    return _extendStatics(d, b);
+  }; // Ugly hack to resolve #502 and inherit built in Map / Set
+
+
+  function __extends(d, b) {
+    _extendStatics(d, b);
+
+    function __() {
+      this.constructor = d;
+    }
+
+    d.prototype = ( // @ts-ignore
+    __.prototype = b.prototype, new __());
+  }
+
+  var DraftMap = function (_super) {
+    __extends(DraftMap, _super); // Create class manually, cause #502
+
+
+    function DraftMap(target, parent) {
+      this[internal_1.DRAFT_STATE] = {
+        type_: internal_1.ProxyTypeMap,
+        parent_: parent,
+        scope_: parent ? parent.scope_ : internal_1.getCurrentScope(),
+        modified_: false,
+        finalized_: false,
+        copy_: undefined,
+        assigned_: undefined,
+        base_: target,
+        draft_: this,
+        isManual_: false,
+        revoked_: false
+      };
+      return this;
+    }
+
+    var p = DraftMap.prototype;
+    Object.defineProperty(p, "size", {
+      get: function get() {
+        return internal_1.latest(this[internal_1.DRAFT_STATE]).size;
+      } // enumerable: false,
+      // configurable: true
+
+    });
+
+    p.has = function (key) {
+      return internal_1.latest(this[internal_1.DRAFT_STATE]).has(key);
+    };
+
+    p.set = function (key, value) {
+      var state = this[internal_1.DRAFT_STATE];
+      assertUnrevoked(state);
+
+      if (!internal_1.latest(state).has(key) || internal_1.latest(state).get(key) !== value) {
+        prepareMapCopy(state);
+        internal_1.markChanged(state);
+        state.assigned_.set(key, true);
+        state.copy_.set(key, value);
+        state.assigned_.set(key, true);
+      }
+
+      return this;
+    };
+
+    p.delete = function (key) {
+      if (!this.has(key)) {
+        return false;
+      }
+
+      var state = this[internal_1.DRAFT_STATE];
+      assertUnrevoked(state);
+      prepareMapCopy(state);
+      internal_1.markChanged(state);
+      state.assigned_.set(key, false);
+      state.copy_.delete(key);
+      return true;
+    };
+
+    p.clear = function () {
+      var state = this[internal_1.DRAFT_STATE];
+      assertUnrevoked(state);
+
+      if (internal_1.latest(state).size) {
+        prepareMapCopy(state);
+        internal_1.markChanged(state);
+        state.assigned_ = new Map();
+        internal_1.each(state.base_, function (key) {
+          state.assigned_.set(key, false);
+        });
+        state.copy_.clear();
+      }
+    };
+
+    p.forEach = function (cb, thisArg) {
+      var _this = this;
+
+      var state = this[internal_1.DRAFT_STATE];
+      internal_1.latest(state).forEach(function (_value, key, _map) {
+        cb.call(thisArg, _this.get(key), key, _this);
+      });
+    };
+
+    p.get = function (key) {
+      var state = this[internal_1.DRAFT_STATE];
+      assertUnrevoked(state);
+      var value = internal_1.latest(state).get(key);
+
+      if (state.finalized_ || !internal_1.isDraftable(value)) {
+        return value;
+      }
+
+      if (value !== state.base_.get(key)) {
+        return value; // either already drafted or reassigned
+      } // despite what it looks, this creates a draft only once, see above condition
+
+
+      var draft = internal_1.createProxy(state.scope_.immer_, value, state);
+      prepareMapCopy(state);
+      state.copy_.set(key, draft);
+      return draft;
+    };
+
+    p.keys = function () {
+      return internal_1.latest(this[internal_1.DRAFT_STATE]).keys();
+    };
+
+    p.values = function () {
+      var _a;
+
+      var _this = this;
+
+      var iterator = this.keys();
+      return _a = {}, _a[internal_1.iteratorSymbol] = function () {
+        return _this.values();
+      }, _a.next = function () {
+        var r = iterator.next();
+        /* istanbul ignore next */
+
+        if (r.done) return r;
+
+        var value = _this.get(r.value);
+
+        return {
+          done: false,
+          value: value
+        };
+      }, _a;
+    };
+
+    p.entries = function () {
+      var _a;
+
+      var _this = this;
+
+      var iterator = this.keys();
+      return _a = {}, _a[internal_1.iteratorSymbol] = function () {
+        return _this.entries();
+      }, _a.next = function () {
+        var r = iterator.next();
+        /* istanbul ignore next */
+
+        if (r.done) return r;
+
+        var value = _this.get(r.value);
+
+        return {
+          done: false,
+          value: [r.value, value]
+        };
+      }, _a;
+    };
+
+    p[internal_1.iteratorSymbol] = function () {
+      return this.entries();
+    };
+
+    return DraftMap;
+  }(Map);
+
+  function proxyMap_(target, parent) {
+    // @ts-ignore
+    return new DraftMap(target, parent);
+  }
+
+  function prepareMapCopy(state) {
+    if (!state.copy_) {
+      state.assigned_ = new Map();
+      state.copy_ = new Map(state.base_);
+    }
+  }
+
+  var DraftSet = function (_super) {
+    __extends(DraftSet, _super); // Create class manually, cause #502
+
+
+    function DraftSet(target, parent) {
+      this[internal_1.DRAFT_STATE] = {
+        type_: internal_1.ProxyTypeSet,
+        parent_: parent,
+        scope_: parent ? parent.scope_ : internal_1.getCurrentScope(),
+        modified_: false,
+        finalized_: false,
+        copy_: undefined,
+        base_: target,
+        draft_: this,
+        drafts_: new Map(),
+        revoked_: false,
+        isManual_: false
+      };
+      return this;
+    }
+
+    var p = DraftSet.prototype;
+    Object.defineProperty(p, "size", {
+      get: function get() {
+        return internal_1.latest(this[internal_1.DRAFT_STATE]).size;
+      } // enumerable: true,
+
+    });
+
+    p.has = function (value) {
+      var state = this[internal_1.DRAFT_STATE];
+      assertUnrevoked(state); // bit of trickery here, to be able to recognize both the value, and the draft of its value
+
+      if (!state.copy_) {
+        return state.base_.has(value);
+      }
+
+      if (state.copy_.has(value)) return true;
+      if (state.drafts_.has(value) && state.copy_.has(state.drafts_.get(value))) return true;
+      return false;
+    };
+
+    p.add = function (value) {
+      var state = this[internal_1.DRAFT_STATE];
+      assertUnrevoked(state);
+
+      if (!this.has(value)) {
+        prepareSetCopy(state);
+        internal_1.markChanged(state);
+        state.copy_.add(value);
+      }
+
+      return this;
+    };
+
+    p.delete = function (value) {
+      if (!this.has(value)) {
+        return false;
+      }
+
+      var state = this[internal_1.DRAFT_STATE];
+      assertUnrevoked(state);
+      prepareSetCopy(state);
+      internal_1.markChanged(state);
+      return state.copy_.delete(value) || (state.drafts_.has(value) ? state.copy_.delete(state.drafts_.get(value)) :
+      /* istanbul ignore next */
+      false);
+    };
+
+    p.clear = function () {
+      var state = this[internal_1.DRAFT_STATE];
+      assertUnrevoked(state);
+
+      if (internal_1.latest(state).size) {
+        prepareSetCopy(state);
+        internal_1.markChanged(state);
+        state.copy_.clear();
+      }
+    };
+
+    p.values = function () {
+      var state = this[internal_1.DRAFT_STATE];
+      assertUnrevoked(state);
+      prepareSetCopy(state);
+      return state.copy_.values();
+    };
+
+    p.entries = function entries() {
+      var state = this[internal_1.DRAFT_STATE];
+      assertUnrevoked(state);
+      prepareSetCopy(state);
+      return state.copy_.entries();
+    };
+
+    p.keys = function () {
+      return this.values();
+    };
+
+    p[internal_1.iteratorSymbol] = function () {
+      return this.values();
+    };
+
+    p.forEach = function forEach(cb, thisArg) {
+      var iterator = this.values();
+      var result = iterator.next();
+
+      while (!result.done) {
+        cb.call(thisArg, result.value, result.value, this);
+        result = iterator.next();
+      }
+    };
+
+    return DraftSet;
+  }(Set);
+
+  function proxySet_(target, parent) {
+    // @ts-ignore
+    return new DraftSet(target, parent);
+  }
+
+  function prepareSetCopy(state) {
+    if (!state.copy_) {
+      // create drafts for all entries to preserve insertion order
+      state.copy_ = new Set();
+      state.base_.forEach(function (value) {
+        if (internal_1.isDraftable(value)) {
+          var draft = internal_1.createProxy(state.scope_.immer_, value, state);
+          state.drafts_.set(value, draft);
+          state.copy_.add(draft);
+        } else {
+          state.copy_.add(value);
+        }
+      });
+    }
+  }
+
+  function assertUnrevoked(state
+  /*ES5State | MapState | SetState*/
+  ) {
+    if (state.revoked_) internal_1.die(3, JSON.stringify(internal_1.latest(state)));
+  }
+
+  internal_1.loadPlugin("MapSet", {
+    proxyMap_: proxyMap_,
+    proxySet_: proxySet_
+  });
+}
+
+exports.enableMapSet = enableMapSet;
+},{"../internal":"../node_modules/immer/src/internal.ts"}],"../node_modules/immer/src/plugins/all.ts":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.enableAllPlugins = void 0;
+
+var es5_1 = require("./es5");
+
+var mapset_1 = require("./mapset");
+
+var patches_1 = require("./patches");
+
+function enableAllPlugins() {
+  es5_1.enableES5();
+  mapset_1.enableMapSet();
+  patches_1.enablePatches();
+}
+
+exports.enableAllPlugins = enableAllPlugins;
+},{"./es5":"../node_modules/immer/src/plugins/es5.ts","./mapset":"../node_modules/immer/src/plugins/mapset.ts","./patches":"../node_modules/immer/src/plugins/patches.ts"}],"../node_modules/immer/src/immer.ts":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.enableAllPlugins = exports.enableMapSet = exports.enablePatches = exports.enableES5 = exports.Immer = exports.castImmutable = exports.castDraft = exports.finishDraft = exports.createDraft = exports.applyPatches = exports.setUseProxies = exports.setAutoFreeze = exports.produceWithPatches = exports.produce = exports.immerable = exports.nothing = exports.isDraftable = exports.isDraft = exports.current = exports.original = exports.PatchListener = exports.Patch = exports.Immutable = exports.Draft = void 0;
+
+var internal_1 = require("./internal");
+
+Object.defineProperty(exports, "Immer", {
+  enumerable: true,
+  get: function get() {
+    return internal_1.Immer;
+  }
+});
+
+var internal_2 = require("./internal");
+
+Object.defineProperty(exports, "Draft", {
+  enumerable: true,
+  get: function get() {
+    return internal_2.Draft;
+  }
+});
+Object.defineProperty(exports, "Immutable", {
+  enumerable: true,
+  get: function get() {
+    return internal_2.Immutable;
+  }
+});
+Object.defineProperty(exports, "Patch", {
+  enumerable: true,
+  get: function get() {
+    return internal_2.Patch;
+  }
+});
+Object.defineProperty(exports, "PatchListener", {
+  enumerable: true,
+  get: function get() {
+    return internal_2.PatchListener;
+  }
+});
+Object.defineProperty(exports, "original", {
+  enumerable: true,
+  get: function get() {
+    return internal_2.original;
+  }
+});
+Object.defineProperty(exports, "current", {
+  enumerable: true,
+  get: function get() {
+    return internal_2.current;
+  }
+});
+Object.defineProperty(exports, "isDraft", {
+  enumerable: true,
+  get: function get() {
+    return internal_2.isDraft;
+  }
+});
+Object.defineProperty(exports, "isDraftable", {
+  enumerable: true,
+  get: function get() {
+    return internal_2.isDraftable;
+  }
+});
+Object.defineProperty(exports, "nothing", {
+  enumerable: true,
+  get: function get() {
+    return internal_2.NOTHING;
+  }
+});
+Object.defineProperty(exports, "immerable", {
+  enumerable: true,
+  get: function get() {
+    return internal_2.DRAFTABLE;
+  }
+});
+var immer = new internal_1.Immer();
+/**
+ * The `produce` function takes a value and a "recipe function" (whose
+ * return value often depends on the base state). The recipe function is
+ * free to mutate its first argument however it wants. All mutations are
+ * only ever applied to a __copy__ of the base state.
+ *
+ * Pass only a function to create a "curried producer" which relieves you
+ * from passing the recipe function every time.
+ *
+ * Only plain objects and arrays are made mutable. All other objects are
+ * considered uncopyable.
+ *
+ * Note: This function is __bound__ to its `Immer` instance.
+ *
+ * @param {any} base - the initial state
+ * @param {Function} producer - function that receives a proxy of the base state as first argument and which can be freely modified
+ * @param {Function} patchListener - optional function that will be called with all the patches produced here
+ * @returns {any} a new state, or the initial state if nothing was modified
+ */
+
+exports.produce = immer.produce;
+exports.default = exports.produce;
+/**
+ * Like `produce`, but `produceWithPatches` always returns a tuple
+ * [nextState, patches, inversePatches] (instead of just the next state)
+ */
+
+exports.produceWithPatches = immer.produceWithPatches.bind(immer);
+/**
+ * Pass true to automatically freeze all copies created by Immer.
+ *
+ * By default, auto-freezing is disabled in production.
+ */
+
+exports.setAutoFreeze = immer.setAutoFreeze.bind(immer);
+/**
+ * Pass true to use the ES2015 `Proxy` class when creating drafts, which is
+ * always faster than using ES5 proxies.
+ *
+ * By default, feature detection is used, so calling this is rarely necessary.
+ */
+
+exports.setUseProxies = immer.setUseProxies.bind(immer);
+/**
+ * Apply an array of Immer patches to the first argument.
+ *
+ * This function is a producer, which means copy-on-write is in effect.
+ */
+
+exports.applyPatches = immer.applyPatches.bind(immer);
+/**
+ * Create an Immer draft from the given base state, which may be a draft itself.
+ * The draft can be modified until you finalize it with the `finishDraft` function.
+ */
+
+exports.createDraft = immer.createDraft.bind(immer);
+/**
+ * Finalize an Immer draft from a `createDraft` call, returning the base state
+ * (if no changes were made) or a modified copy. The draft must *not* be
+ * mutated afterwards.
+ *
+ * Pass a function as the 2nd argument to generate Immer patches based on the
+ * changes that were made.
+ */
+
+exports.finishDraft = immer.finishDraft.bind(immer);
+/**
+ * This function is actually a no-op, but can be used to cast an immutable type
+ * to an draft type and make TypeScript happy
+ *
+ * @param value
+ */
+
+function castDraft(value) {
+  return value;
+}
+
+exports.castDraft = castDraft;
+/**
+ * This function is actually a no-op, but can be used to cast a mutable type
+ * to an immutable type and make TypeScript happy
+ * @param value
+ */
+
+function castImmutable(value) {
+  return value;
+}
+
+exports.castImmutable = castImmutable;
+
+var es5_1 = require("./plugins/es5");
+
+Object.defineProperty(exports, "enableES5", {
+  enumerable: true,
+  get: function get() {
+    return es5_1.enableES5;
+  }
+});
+
+var patches_1 = require("./plugins/patches");
+
+Object.defineProperty(exports, "enablePatches", {
+  enumerable: true,
+  get: function get() {
+    return patches_1.enablePatches;
+  }
+});
+
+var mapset_1 = require("./plugins/mapset");
+
+Object.defineProperty(exports, "enableMapSet", {
+  enumerable: true,
+  get: function get() {
+    return mapset_1.enableMapSet;
+  }
+});
+
+var all_1 = require("./plugins/all");
+
+Object.defineProperty(exports, "enableAllPlugins", {
+  enumerable: true,
+  get: function get() {
+    return all_1.enableAllPlugins;
+  }
+});
+},{"./internal":"../node_modules/immer/src/internal.ts","./plugins/es5":"../node_modules/immer/src/plugins/es5.ts","./plugins/patches":"../node_modules/immer/src/plugins/patches.ts","./plugins/mapset":"../node_modules/immer/src/plugins/mapset.ts","./plugins/all":"../node_modules/immer/src/plugins/all.ts"}],"../node_modules/pullstate/dist/index.es.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -66642,7 +62530,7 @@ function registerInDevtools(stores, {
     }
   }
 }
-},{"fast-deep-equal/es6":"../node_modules/fast-deep-equal/es6/index.js","react":"../node_modules/react/index.js","immer":"../node_modules/immer/dist/immer.esm.js"}],"stores/LogoModel.ts":[function(require,module,exports) {
+},{"fast-deep-equal/es6":"../node_modules/fast-deep-equal/es6/index.js","react":"../node_modules/react/index.js","immer":"../node_modules/immer/src/immer.ts"}],"stores/LogoModel.ts":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -66657,13 +62545,13 @@ var _pullstate = require("pullstate");
 var UIStore = new _pullstate.Store({
   container: {
     width: 300,
-    height: 280,
+    height: 250,
     align: 'align-top',
     viewbox: {
       x: 0,
       y: 0,
-      width: 400,
-      height: 400
+      width: 300,
+      height: 250
     },
     style: {
       color: '#ABABCB'
@@ -66777,7 +62665,7 @@ var SelectColor = function SelectColor() {
 
 var _default = SelectColor;
 exports.default = _default;
-},{"react":"../node_modules/react/index.js","react-color":"../node_modules/react-color/es/index.js","~/stores/LogoModel":"stores/LogoModel.ts"}],"components/ui/SelectLayout.tsx":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js","react-color":"../node_modules/react-color/lib/index.js","~/stores/LogoModel":"stores/LogoModel.ts"}],"components/ui/SelectLayout.tsx":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -74340,25 +70228,25 @@ var SelectTypography = function SelectTypography() {
   }, React.createElement("h1", {
     className: "text-xl my-1 text-gray-500"
   }, "LOGO"), React.createElement("label", {
-    className: "my-1",
+    className: "block text-gray-700 text-sm font-bold my-2",
     htmlFor: "select-title-text"
   }, "Title"), React.createElement("input", {
     value: _LogoModel.default.useState(function (s) {
       return s.title.text;
     }),
-    className: "border p-1",
+    className: "shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline",
     onChange: function onChange(e) {
       return onTitleTextChange(e.target.value);
     }
   }), React.createElement("label", {
-    className: "my-1",
+    className: "block text-gray-700 text-sm font-bold my-2",
     htmlFor: "select-title-font-family"
   }, "Font Family"), React.createElement(_reactSelect.default, {
     id: "select-title-font-family",
     onChange: onTitleFontFamilyChange,
     options: fontOptions
   }), React.createElement("label", {
-    className: "my-1",
+    className: "block text-gray-700 text-sm font-bold my-2",
     htmlFor: "select-title-font-size"
   }, "Font Size"), React.createElement(_reactSelect.default, {
     id: "select-title-font-size",
@@ -74369,25 +70257,25 @@ var SelectTypography = function SelectTypography() {
   }, React.createElement("h1", {
     className: "text-xl my-1"
   }, "SLOGAN"), React.createElement("label", {
-    className: "my-1",
+    className: "block text-gray-700 text-sm font-bold my-2",
     htmlFor: "select-slogan-text"
   }, "Slogan"), React.createElement("input", {
     value: _LogoModel.default.useState(function (s) {
       return s.slogan.text;
     }),
-    className: "border m-b-1 p-1",
+    className: "shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline",
     onChange: function onChange(e) {
       return onSloganTextChange(e.target.value);
     }
   }), React.createElement("label", {
-    className: "my-1",
+    className: "block text-gray-700 text-sm font-bold my-2",
     htmlFor: "select-slogan-font-family"
   }, "Font Family"), React.createElement(_reactSelect.default, {
     id: "select-slogan-font-family",
     onChange: onSloganFontFamilyChange,
     options: fontOptions
   }), React.createElement("label", {
-    className: "my-1",
+    className: "block text-gray-700 text-sm font-bold my-2",
     htmlFor: "select-slogan-font-size"
   }, "Font Size"), React.createElement(_reactSelect.default, {
     id: "select-slogan-font-size",
@@ -74473,9 +70361,9 @@ var Creator = function Creator() {
   }, React.createElement("div", {
     className: "flex flex-row"
   }, React.createElement("div", {
-    className: "container flex justify-center max-content mx-8 my-4"
+    className: "container flex lg:px-32 lg:w-3/4 mx-8 my-4"
   }, React.createElement(_reactRouterDom.Link, {
-    className: "bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded",
+    className: "bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 max-content rounded",
     to: "/showcase"
   }, "Back")), React.createElement(_DownloadButton.default, null)), React.createElement("div", {
     className: "flex w-auto justify-center"
@@ -74554,6 +70442,7 @@ var Showcase = function Showcase() {
   var renderLogoList = function renderLogoList() {
     return _logos.default.map(function (logoSRC) {
       return React.createElement("button", {
+        className: "hover:border-2 hover:border-blue-600",
         key: logoSRC.id,
         onClick: function onClick() {
           return setLogo(logoSRC);
@@ -74561,13 +70450,13 @@ var Showcase = function Showcase() {
       }, React.createElement(_CreateLogo.default, {
         logoProps: Object.assign(Object.assign({}, store), {
           container: Object.assign(Object.assign({}, store.container), {
-            width: 150,
-            height: 150,
+            width: 300,
+            height: 250,
             viewbox: {
               x: 0,
               y: 0,
               width: 300,
-              height: 300
+              height: 250
             }
           }),
           logo: Object.assign(Object.assign({}, store.logo), {
@@ -74579,26 +70468,28 @@ var Showcase = function Showcase() {
   };
 
   return React.createElement("div", {
-    className: "flex flex-col items-center"
+    className: "static flex flex-col items-center"
   }, React.createElement("div", null, React.createElement(_reactRouterDom.Link, {
     className: "bg-blue-500 hover:bg-blue-700 text-white font-bold m-4 py-2 px-4 rounded",
     to: "/start"
   }, "Back")), React.createElement("div", {
-    className: "m-16 lg:w-3/5"
+    className: "m-4 lg:w-4/5"
   }, React.createElement("div", {
     className: "flex flex-col bg-orange-200 my-4"
   }, React.createElement("h1", {
-    className: "text-4xl text-center"
+    className: "text-2xl md:text-4xl font-bold text-center"
   }, "Choose from any of the logo templates"), React.createElement("p", {
-    className: "text-xl text-center"
+    className: "text-sm md:text-xl font-bold text-center"
   }, "You can change this information after your designs have been created")), React.createElement("div", null, React.createElement("div", {
     className: "flex flex-col items-center justify-center text-white bg-gradient-to-br from-gray-600 via-teal-700 to-gray-800"
   }, React.createElement("div", {
-    className: "grid gap-4 grid-cols-3"
-  }, renderLogoList()))), React.createElement("div", null, React.createElement(_reactRouterDom.Link, {
-    className: "bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded",
+    className: "grid gap-4 grid-cols-1 lg:grid-cols-3"
+  }, renderLogoList())))), React.createElement("div", {
+    className: "w-full flex justify-center absolute sticky bottom-0 bg-white"
+  }, React.createElement(_reactRouterDom.Link, {
+    className: " block w-4/5 lg:w-1/5 my-4 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded text-center",
     to: "/"
-  }, "Next"))));
+  }, "Next")));
 };
 
 var _default = Showcase;
@@ -74639,19 +70530,20 @@ var Start = function Start() {
   return React.createElement("div", {
     className: "flex content-center justify-center"
   }, React.createElement("div", {
-    className: "flex flex-col content-center justify-center bg-green-200 w-2/3 lg:w-2/5 m-8 p-4 "
+    className: "flex flex-col content-center justify-center bg-green-200 lg:w-2/5 m-4 lg:p-4 "
   }, React.createElement("div", {
-    className: "flex flex-col bg-orange-200 my-4"
+    className: "flex flex-col bg-orange-200 my-2"
   }, React.createElement("h1", {
-    className: "text-4xl text-center"
+    className: "text-2xl md:text-4xl font-bold text-center"
   }, "Add your business name"), React.createElement("p", {
-    className: "text-xl text-center"
+    className: "text-sm md:text-xl font-bold text-center"
   }, "You can change this information after you designs have been created")), React.createElement("div", {
-    className: "bg-blue-200 my-4"
+    className: "bg-blue-200 my-2"
   }, React.createElement("div", {
-    className: "flex flex-col mx-16 my-4"
+    className: "flex flex-col lg:mx-16 my-4"
   }, React.createElement("label", {
-    htmlFor: "logo-text-input"
+    className: "block text-gray-700 text-sm font-bold mb-2",
+    htmlFor: "logo-text-input text-md"
   }, "Logo Text"), React.createElement("input", {
     type: "text",
     id: "logo-text-input",
@@ -74660,10 +70552,12 @@ var Start = function Start() {
     }),
     onChange: function onChange(e) {
       return setTitleText(e.target.value);
-    }
+    },
+    className: "shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
   })), React.createElement("div", {
-    className: "flex flex-col mx-16 my-4"
+    className: "flex flex-col lg:mx-16 my-2 "
   }, React.createElement("label", {
+    className: "block text-gray-700 text-sm font-bold mb-2",
     htmlFor: "slogan-text-input"
   }, "Slogan text(Optional)"), React.createElement("input", {
     type: "text",
@@ -74673,12 +70567,15 @@ var Start = function Start() {
     }),
     onChange: function onChange(e) {
       return setSloganText(e.target.value);
-    }
-  }))), React.createElement("div", null, React.createElement(_reactRouterDom.Link, {
-    className: "bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded",
+    },
+    className: "shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+  }))), React.createElement("div", {
+    className: "flex flex-col lg:flex-row justify-center"
+  }, React.createElement(_reactRouterDom.Link, {
+    className: "bg-blue-500 m-1 lg:w-2/5 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded text-center",
     to: "/"
-  }, "Creator"), React.createElement(_reactRouterDom.Link, {
-    className: "bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded",
+  }, "Go to Creator"), React.createElement(_reactRouterDom.Link, {
+    className: "bg-blue-500 m-1 lg:w-2/5 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded text-center",
     to: "/showcase"
   }, "Next"))));
 };
@@ -74717,7 +70614,7 @@ var Application = function Application() {
 };
 
 (0, _reactDom.render)(_react.default.createElement(Application, null), document.getElementById("root"));
-},{"react":"../node_modules/react/index.js","react-dom":"../node_modules/react-dom/index.js","react-router-dom":"../node_modules/react-router-dom/esm/react-router-dom.js","./assets/styles/index.scss":"assets/styles/index.scss","./assets/styles/tailwind.css":"assets/styles/tailwind.css","./Creator":"Creator.tsx","./Showcase":"Showcase.tsx","./Start":"Start.tsx"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js","react-dom":"../node_modules/react-dom/index.js","react-router-dom":"../node_modules/react-router-dom/esm/react-router-dom.js","./assets/styles/index.scss":"assets/styles/index.scss","./assets/styles/tailwind.css":"assets/styles/tailwind.css","./Creator":"Creator.tsx","./Showcase":"Showcase.tsx","./Start":"Start.tsx"}],"../node_modules/.pnpm/parcel-bundler@1.12.4/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -74745,7 +70642,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49712" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49961" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
@@ -74921,5 +70818,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["../node_modules/parcel-bundler/src/builtins/hmr-runtime.js","index.tsx"], null)
+},{}]},{},["../node_modules/.pnpm/parcel-bundler@1.12.4/node_modules/parcel-bundler/src/builtins/hmr-runtime.js","index.tsx"], null)
 //# sourceMappingURL=/src.f69400ca.js.map

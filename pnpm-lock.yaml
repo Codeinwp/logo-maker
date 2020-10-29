@@ -3,6 +3,7 @@ dependencies:
   '@types/react-color': 3.0.4
   '@types/react-router-dom': 5.1.6
   '@types/react-select': 3.0.22
+  '@types/uuid': 8.3.0
   postcss-import: 12.0.1
   pullstate: 1.19.1_react@16.13.1
   react: 16.13.1
@@ -10,6 +11,7 @@ dependencies:
   react-dom: 16.13.1_react@16.13.1
   react-router-dom: 5.2.0_react@16.13.1
   react-select: 3.1.0_react-dom@16.13.1+react@16.13.1
+  uuid: 8.3.1
 devDependencies:
   '@fullhuman/postcss-purgecss': 3.0.0
   '@types/react': 16.9.51
@@ -1318,6 +1320,10 @@ packages:
     dev: false
     resolution:
       integrity: sha512-d2gQQ0IL6hXLnoRfVYZukQNWHuVsE75DzFTLPUuyyEhJS8G2VvlE+qfQQ91SJjaMqlURRCNIsX7Jcsw6cEuJlA==
+  /@types/uuid/8.3.0:
+    dev: false
+    resolution:
+      integrity: sha512-eQ9qFW/fhfGJF8WKHGEHZEyVWfZxrT+6CLIJGBcZPfxUh/+BnEj+UCGYMlr9qZuX/2AltsvwrGqp0LhEW8D0zQ==
   /@typescript-eslint/eslint-plugin/4.4.0_a71b0516f86a95383173f79e74386c73:
     dependencies:
       '@typescript-eslint/experimental-utils': 4.4.0_eslint@7.10.0+typescript@4.0.3
@@ -7161,6 +7167,11 @@ packages:
     hasBin: true
     resolution:
       integrity: sha512-HjSDRw6gZE5JMggctHBcjVak08+KEVhSIiDzFnT9S9aegmp85S/bReBVTb4QTFaRNptJ9kuYaNhnbNEOkbKb/A==
+  /uuid/8.3.1:
+    dev: false
+    hasBin: true
+    resolution:
+      integrity: sha512-FOmRr+FmWEIG8uhZv6C2bTgEVXsHk08kE7mPlrBbEe+c3r9pjceVPgupIfNIhc4yx55H69OXANrUaSuu9eInKg==
   /v8-compile-cache/2.1.1:
     dev: true
     resolution:
@@ -7314,6 +7325,7 @@ specifiers:
   '@types/react-dom': ^16.9.8
   '@types/react-router-dom': ^5.1.6
   '@types/react-select': ^3.0.22
+  '@types/uuid': ^8.3.0
   '@typescript-eslint/eslint-plugin': ^4.4.0
   '@typescript-eslint/parser': ^4.4.0
   autoprefixer: ^10.0.1
@@ -7337,3 +7349,4 @@ specifiers:
   sass: ^1.27.0
   tailwindcss: ^1.8.12
   typescript: ^4.0.3
+  uuid: ^8.3.1

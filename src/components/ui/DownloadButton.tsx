@@ -1,37 +1,37 @@
 import * as React from "react"
 
 const DownloadButton: React.FunctionComponent<unknown> = () => {
-    const downloadSVGasPNG = () => {
-        const svg = document.querySelector("#logo-image")?.childNodes[0]
+    // const downloadSVGasPNG = () => {
+    //     const svg = document.querySelector("#logo-image")?.childNodes[0]
 
-        if (!svg) {
-            return
-        }
-        const xml = new XMLSerializer().serializeToString(svg)
-        const svg64 = btoa(xml)
-        const image = "data:image/svg+xml;base64," + svg64
-        const element = document.createElement("a")
+    //     if (!svg) {
+    //         return
+    //     }
+    //     const xml = new XMLSerializer().serializeToString(svg)
+    //     const svg64 = btoa(xml)
+    //     const image = "data:image/svg+xml;base64," + svg64
+    //     const element = document.createElement("a")
 
-        const sourceImage = new Image()
+    //     const sourceImage = new Image()
 
-        sourceImage.onload = () => {
-            console.log("Load")
-            const canvas = document.createElement("canvas")
-            canvas.height = 280
-            canvas.width = 300
+    //     sourceImage.onload = () => {
+    //         console.log("Load")
+    //         const canvas = document.createElement("canvas")
+    //         canvas.height = 280
+    //         canvas.width = 300
 
-            const ctx = canvas.getContext("2d")
+    //         const ctx = canvas.getContext("2d")
 
-            ctx?.drawImage(sourceImage, 0, 0, 280, 300)
+    //         ctx?.drawImage(sourceImage, 0, 0, 280, 300)
 
-            element.download = "logo.png"
-            element.href = canvas.toDataURL("image/png")
-            element.click()
-            element.remove()
-        }
+    //         element.download = "logo.png"
+    //         element.href = canvas.toDataURL("image/png")
+    //         element.click()
+    //         element.remove()
+    //     }
 
-        sourceImage.src = image
-    }
+    //     sourceImage.src = image
+    // }
 
     const downloadSVG = () => {
         const svg = document.querySelector("#logo-image")?.innerHTML
@@ -51,17 +51,24 @@ const DownloadButton: React.FunctionComponent<unknown> = () => {
     return (
         <div className="container flex justify-center max-content mx-8 my-4">
             <button
-                className="m-2 box-content max-content bg-transparent bg-orange-600 font-semibold text-white py-2 px-4 rounded"
                 onClick={() => downloadSVG()}
+                className="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded inline-flex items-center"
             >
-                Download as SVG
+                <svg
+                    className="fill-current w-4 h-4 mr-2"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20"
+                >
+                    <path d="M13 8V2H7v6H2l8 8 8-8h-5zM0 18h20v2H0v-2z" />
+                </svg>
+                <span>Download</span>
             </button>
-            <button
+            {/* <button
                 className="m-2 box-content max-content bg-transparent bg-orange-600 font-semibold text-white py-2 px-4 rounded"
                 onClick={() => downloadSVGasPNG()}
             >
                 Download as PNG
-            </button>
+            </button> */}
         </div>
     )
 }

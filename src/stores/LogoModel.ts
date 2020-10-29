@@ -55,13 +55,13 @@ export type StoreProps = {
 export const UIStore = new Store<StoreProps>({
 	container : {
 		width: 300,
-		height: 280,
+		height: 250,
 		align: 'align-top',
 		viewbox: {
 			x: 0,
 			y: 0, 
-			width: 400,
-			height: 400
+			width: 300,
+			height: 250
 		},
 		style: {
 			color: '#ABABCB'

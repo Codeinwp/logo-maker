@@ -35,12 +35,14 @@
         "@types/react-color": "^3.0.4",
         "@types/react-router-dom": "^5.1.6",
         "@types/react-select": "^3.0.22",
+        "@types/uuid": "^8.3.0",
         "postcss-import": "^12.0.1",
         "pullstate": "^1.19.1",
         "react": "^16.13.1",
         "react-color": "^2.18.1",
         "react-dom": "^16.13.1",
         "react-router-dom": "^5.2.0",
-        "react-select": "^3.1.0"
+        "react-select": "^3.1.0",
+        "uuid": "^8.3.1"
     }
 }
