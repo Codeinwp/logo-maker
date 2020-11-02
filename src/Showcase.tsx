@@ -1,48 +1,55 @@
 import * as React from "react"
 import { Link } from "react-router-dom"
-import logos, { LogoSVGImport } from "./assets/logos"
+import logos from "./assets/logos"
 import CreateLogo from "./components/CreateLogo"
 import UIStore from "./stores/LogoModel"
 import ColorScheme from "color-scheme"
 
 const Showcase: React.FunctionComponent<unknown> = () => {
     const store = UIStore.useState((s) => s)
-    const scm = new ColorScheme()
 
-    const setLogo = (logo: LogoSVGImport) => {
-        UIStore.update((s) => {
-            s.logo.src = logo
-            console.log(s)
-        })
-    }
+    const [colors, setColors] = React.useState<string[]>([])
 
-    const generateColors = () => {
-        const colorsNum = new Set()
+    React.useEffect(() => {
+        const generateColors = () => {
+            const scm = new ColorScheme()
+            const colorsNum = new Set()
 
-        while (colorsNum.size !== logos.length) {
-            colorsNum.add(Math.floor(Math.random() * 360))
+            while (colorsNum.size !== logos.length) {
+                colorsNum.add(Math.floor(Math.random() * 360))
+            }
+
+            const colors: string[] = []
+            colorsNum.forEach((x) => {
+                scm.from_hue(x).scheme("mono").variation("hard").web_safe(true)
+
+                colors.push("#" + scm.colors()[1])
+            })
+
+            return colors
         }
-
-        const colors: string[] = []
-        colorsNum.forEach((x) => {
-            scm.from_hue(x).scheme("mono").variation("hard").web_safe(true)
-
-            colors.push("#" + scm.colors()[1])
-        })
-
-        return colors
-    }
+        setColors(generateColors())
+    }, [])
 
     const renderLogoList = () => {
+        const setOptions = (index: number) => {
+            UIStore.update((s) => {
+                s.logo.src = logos[index]
+                s.container.style.color = colors[index]
+            })
+        }
+
         return logos.map((logoSRC, index) => {
             // Create a random color scheme
-            const colors = generateColors()
 
             return (
                 <button
                     className="hover:border-2 hover:border-blue-600"
                     key={logoSRC.id}
-                    onClick={() => setLogo(logoSRC)}
+                    onClick={(e) => {
+                        e.preventDefault()
+                        setOptions(index)
+                    }}
                 >
                     <CreateLogo
                         logoProps={{
