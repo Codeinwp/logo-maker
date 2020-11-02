@@ -45019,6 +45019,7 @@ function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj;
 
 var CreateLogo = function CreateLogo(props) {
   var divRef = React.useRef(null);
+  var ID = props.id || "image-logo-".concat((0, _uuid.v4)());
   React.useEffect(function () {
     console.log(props.logoProps);
 
@@ -45052,7 +45053,7 @@ var CreateLogo = function CreateLogo(props) {
     }
   }, [props.logoProps]);
   return React.createElement("div", {
-    id: "image-logo-".concat((0, _uuid.v4)()),
+    id: ID,
     ref: divRef
   });
 };
@@ -45101,7 +45102,7 @@ var DownloadButton = function DownloadButton() {
   var downloadSVG = function downloadSVG() {
     var _a;
 
-    var svg = (_a = document.querySelector("#logo-image")) === null || _a === void 0 ? void 0 : _a.innerHTML;
+    var svg = (_a = document.querySelector("#image-logo")) === null || _a === void 0 ? void 0 : _a.innerHTML;
 
     if (!svg) {
       return;
@@ -70389,6 +70390,7 @@ var Creator = function Creator() {
   }, "Colors"))), React.createElement("div", {
     className: "flex justify-center lg:py-16 lg:w-1/3"
   }, React.createElement(_CreateLogo.default, {
+    id: "image-logo",
     logoProps: store
   })), React.createElement("div", {
     className: "m-2 lg:m-16 lg:w-1/4"
@@ -71133,6 +71135,7 @@ var Showcase = function Showcase() {
       setColors = _React$useState2[1];
 
   React.useEffect(function () {
+    // Generate the colors
     var generateColors = function generateColors() {
       var scm = new _colorScheme.default();
       var colorsNum = new Set();
@@ -71161,7 +71164,6 @@ var Showcase = function Showcase() {
     };
 
     return _logos.default.map(function (logoSRC, index) {
-      // Create a random color scheme
       return React.createElement("button", {
         className: "hover:border-2 hover:border-blue-600",
         key: logoSRC.id,

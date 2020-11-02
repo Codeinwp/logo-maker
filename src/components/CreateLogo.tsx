@@ -6,6 +6,7 @@ import { v4 as uuidv4 } from "uuid"
 import { TLogo, TLogoContainer, TSlogan, TTitle } from "~/stores/LogoModel"
 
 type CreateLogoPropsComponent = {
+    id?: string
     logoProps: {
         container: TLogoContainer
         logo: TLogo
@@ -18,6 +19,7 @@ const CreateLogo: React.FunctionComponent<CreateLogoPropsComponent> = (
     props: CreateLogoPropsComponent
 ) => {
     const divRef = React.useRef<HTMLDivElement>(null)
+    const ID = props.id || `image-logo-${uuidv4()}`
 
     React.useEffect(() => {
         console.log(props.logoProps)
@@ -56,7 +58,7 @@ const CreateLogo: React.FunctionComponent<CreateLogoPropsComponent> = (
         }
     }, [props.logoProps])
 
-    return <div id={`image-logo-${uuidv4()}`} ref={divRef}></div>
+    return <div id={ID} ref={divRef}></div>
 }
 
 export default CreateLogo

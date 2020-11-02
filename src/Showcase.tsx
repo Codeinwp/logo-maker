@@ -11,6 +11,7 @@ const Showcase: React.FunctionComponent<unknown> = () => {
     const [colors, setColors] = React.useState<string[]>([])
 
     React.useEffect(() => {
+        // Generate the colors
         const generateColors = () => {
             const scm = new ColorScheme()
             const colorsNum = new Set()
@@ -40,8 +41,6 @@ const Showcase: React.FunctionComponent<unknown> = () => {
         }
 
         return logos.map((logoSRC, index) => {
-            // Create a random color scheme
-
             return (
                 <button
                     className="hover:border-2 hover:border-blue-600"

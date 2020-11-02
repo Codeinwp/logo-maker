@@ -72,7 +72,7 @@ const Creator: React.FunctionComponent<unknown> = () => {
                         </div>
                     </div>
                     <div className="flex justify-center lg:py-16 lg:w-1/3">
-                        <CreateLogo logoProps={store} />
+                        <CreateLogo id="image-logo" logoProps={store} />
                     </div>
                     <div className="m-2 lg:m-16 lg:w-1/4">{renderRightSidePanel()}</div>
                 </div>

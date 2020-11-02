@@ -34,7 +34,7 @@ const DownloadButton: React.FunctionComponent<unknown> = () => {
     // }
 
     const downloadSVG = () => {
-        const svg = document.querySelector("#logo-image")?.innerHTML
+        const svg = document.querySelector("#image-logo")?.innerHTML
 
         if (!svg) {
             return
