@@ -22,16 +22,12 @@ export const moveToCenter = (
     
     // check if the svg has scaled
     const currentViewBox = draw.viewbox()
-    if (currentViewBox.width > viewbox.width) {
-        viewbox.width = currentViewBox.width 
-    }
 
-    if (currentViewBox.height > viewbox.height) {
-        viewbox.height = currentViewBox.height
-    }
+    const viewboxWidth = Math.max(viewbox.width, currentViewBox.width)
+    const viewboxHeight = Math.max(viewbox.height, currentViewBox.height) 
 
-    const xOffsetToCenter = viewbox.width / 2 - container.containerPos.cx
-	const yOffsetToCenter = viewbox.height / 2 - container.containerPos.cy
+    const xOffsetToCenter = viewboxWidth/ 2 - container.containerPos.cx
+	const yOffsetToCenter = viewboxHeight / 2 - container.containerPos.cy
 
 	// Apply the relocation
 	logoSVG.center( logoSVG.cx() + xOffsetToCenter, logoSVG.cy() + yOffsetToCenter )

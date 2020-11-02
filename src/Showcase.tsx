@@ -12,6 +12,7 @@ const Showcase: React.FunctionComponent<unknown> = () => {
     const setLogo = (logo: LogoSVGImport) => {
         UIStore.update((s) => {
             s.logo.src = logo
+            console.log(s)
         })
     }
 

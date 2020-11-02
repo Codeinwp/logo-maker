@@ -43930,17 +43930,10 @@ var moveToCenter = function moveToCenter(draw, viewbox, container) {
       sloganSVG = _container$containerE.sloganSVG; // check if the svg has scaled
 
   var currentViewBox = draw.viewbox();
-
-  if (currentViewBox.width > viewbox.width) {
-    viewbox.width = currentViewBox.width;
-  }
-
-  if (currentViewBox.height > viewbox.height) {
-    viewbox.height = currentViewBox.height;
-  }
-
-  var xOffsetToCenter = viewbox.width / 2 - container.containerPos.cx;
-  var yOffsetToCenter = viewbox.height / 2 - container.containerPos.cy; // Apply the relocation
+  var viewboxWidth = Math.max(viewbox.width, currentViewBox.width);
+  var viewboxHeight = Math.max(viewbox.height, currentViewBox.height);
+  var xOffsetToCenter = viewboxWidth / 2 - container.containerPos.cx;
+  var yOffsetToCenter = viewboxHeight / 2 - container.containerPos.cy; // Apply the relocation
 
   logoSVG.center(logoSVG.cx() + xOffsetToCenter, logoSVG.cy() + yOffsetToCenter);
   titleSVG.center(titleSVG.cx() + xOffsetToCenter, titleSVG.cy() + yOffsetToCenter);
@@ -71127,6 +71120,7 @@ var Showcase = function Showcase() {
   var setLogo = function setLogo(logo) {
     _LogoModel.default.update(function (s) {
       s.logo.src = logo;
+      console.log(s);
     });
   };
 
@@ -71353,7 +71347,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53953" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54641" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
