@@ -3,9 +3,11 @@ import { Link } from "react-router-dom"
 import logos, { LogoSVGImport } from "./assets/logos"
 import CreateLogo from "./components/CreateLogo"
 import UIStore from "./stores/LogoModel"
+import ColorScheme from "color-scheme"
 
 const Showcase: React.FunctionComponent<unknown> = () => {
     const store = UIStore.useState((s) => s)
+    const scm = new ColorScheme()
 
     const setLogo = (logo: LogoSVGImport) => {
         UIStore.update((s) => {
@@ -13,35 +15,60 @@ const Showcase: React.FunctionComponent<unknown> = () => {
         })
     }
 
+    const generateColors = () => {
+        const colorsNum = new Set()
+
+        while (colorsNum.size !== logos.length) {
+            colorsNum.add(Math.floor(Math.random() * 360))
+        }
+
+        const colors: string[] = []
+        colorsNum.forEach((x) => {
+            scm.from_hue(x).scheme("mono").variation("hard").web_safe(true)
+
+            colors.push("#" + scm.colors()[1])
+        })
+
+        return colors
+    }
+
     const renderLogoList = () => {
-        return logos.map((logoSRC) => (
-            <button
-                className="hover:border-2 hover:border-blue-600"
-                key={logoSRC.id}
-                onClick={() => setLogo(logoSRC)}
-            >
-                <CreateLogo
-                    logoProps={{
-                        ...store,
-                        container: {
-                            ...store.container,
-                            width: 300,
-                            height: 250,
-                            viewbox: {
-                                x: 0,
-                                y: 0,
+        return logos.map((logoSRC, index) => {
+            // Create a random color scheme
+            const colors = generateColors()
+
+            return (
+                <button
+                    className="hover:border-2 hover:border-blue-600"
+                    key={logoSRC.id}
+                    onClick={() => setLogo(logoSRC)}
+                >
+                    <CreateLogo
+                        logoProps={{
+                            ...store,
+                            container: {
+                                ...store.container,
                                 width: 300,
                                 height: 250,
+                                viewbox: {
+                                    x: 0,
+                                    y: 0,
+                                    width: 300,
+                                    height: 250,
+                                },
+                                style: {
+                                    color: colors[index],
+                                },
                             },
-                        },
-                        logo: {
-                            ...store.logo,
-                            src: logoSRC,
-                        },
-                    }}
-                />
-            </button>
-        ))
+                            logo: {
+                                ...store.logo,
+                                src: logoSRC,
+                            },
+                        }}
+                    />
+                </button>
+            )
+        })
     }
 
     return (

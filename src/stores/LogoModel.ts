@@ -73,7 +73,7 @@ export const UIStore = new Store<StoreProps>({
 		width: 100,
 		height: 100,
 		style: {
-			fill: '#FFA100'
+			fill: '#FFFFFF'
 		}
 	},
 
