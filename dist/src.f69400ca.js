@@ -70104,7 +70104,37 @@ exports.NonceProvider = NonceProvider;
 var index = (0, _stateManager04f734a2BrowserEsm.m)(_Select9fdb8cd0BrowserEsm.S);
 var _default = index;
 exports.default = _default;
-},{"react":"../node_modules/react/index.js","memoize-one":"../node_modules/memoize-one/dist/memoize-one.esm.js","@emotion/core":"../node_modules/@emotion/core/dist/core.browser.esm.js","react-dom":"../node_modules/react-dom/index.js","prop-types":"../node_modules/prop-types/index.js","./utils-06b0d5a4.browser.esm.js":"../node_modules/react-select/dist/utils-06b0d5a4.browser.esm.js","./index-4322c0ed.browser.esm.js":"../node_modules/react-select/dist/index-4322c0ed.browser.esm.js","./Select-9fdb8cd0.browser.esm.js":"../node_modules/react-select/dist/Select-9fdb8cd0.browser.esm.js","@emotion/css":"../node_modules/@emotion/css/dist/css.browser.esm.js","react-input-autosize":"../node_modules/react-input-autosize/lib/AutosizeInput.js","./stateManager-04f734a2.browser.esm.js":"../node_modules/react-select/dist/stateManager-04f734a2.browser.esm.js","@emotion/cache":"../node_modules/@emotion/cache/dist/cache.browser.esm.js"}],"components/ui/SelectTypography.tsx":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js","memoize-one":"../node_modules/memoize-one/dist/memoize-one.esm.js","@emotion/core":"../node_modules/@emotion/core/dist/core.browser.esm.js","react-dom":"../node_modules/react-dom/index.js","prop-types":"../node_modules/prop-types/index.js","./utils-06b0d5a4.browser.esm.js":"../node_modules/react-select/dist/utils-06b0d5a4.browser.esm.js","./index-4322c0ed.browser.esm.js":"../node_modules/react-select/dist/index-4322c0ed.browser.esm.js","./Select-9fdb8cd0.browser.esm.js":"../node_modules/react-select/dist/Select-9fdb8cd0.browser.esm.js","@emotion/css":"../node_modules/@emotion/css/dist/css.browser.esm.js","react-input-autosize":"../node_modules/react-input-autosize/lib/AutosizeInput.js","./stateManager-04f734a2.browser.esm.js":"../node_modules/react-select/dist/stateManager-04f734a2.browser.esm.js","@emotion/cache":"../node_modules/@emotion/cache/dist/cache.browser.esm.js"}],"assets/fonts/fonts.tsx":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = exports.presets = void 0;
+var fonts = ["Times New Romans", "Helvetica", "Open Sans", "Roboto", "Dancing Script", "Henny Penny", "Pacifico", "Amatic SC", "Alfa Slab One"];
+var presets = [{
+  title: "Open Sans",
+  slogan: "Roboto"
+}, {
+  title: "Alfa Slab One",
+  slogan: "Roboto"
+}, {
+  title: "Dancing Script",
+  slogan: "Roboto"
+}, {
+  title: "Henny Penny",
+  slogan: "Open Sans"
+}, {
+  title: "Pacifico",
+  slogan: "Open Sans"
+}, {
+  title: "Amatic SC",
+  slogan: "Open Sans"
+}];
+exports.presets = presets;
+var _default = fonts;
+exports.default = _default;
+},{}],"components/ui/SelectTypography.tsx":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -70115,6 +70145,8 @@ exports.default = void 0;
 var React = _interopRequireWildcard(require("react"));
 
 var _reactSelect = _interopRequireDefault(require("react-select"));
+
+var _fonts = _interopRequireDefault(require("~/assets/fonts/fonts"));
 
 var _LogoModel = _interopRequireDefault(require("~/stores/LogoModel"));
 
@@ -70137,16 +70169,12 @@ function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) return _arrayLikeToAr
 function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
 
 var SelectTypography = function SelectTypography() {
-  var fontOptions = [{
-    value: "Times New Romans",
-    label: "Times New Romans"
-  }, {
-    value: "Helvetica",
-    label: "Helvetica"
-  }, {
-    value: "Menlo",
-    label: "Menlo"
-  }];
+  var fontOptions = _fonts.default.map(function (font) {
+    return {
+      value: font,
+      label: font
+    };
+  });
 
   var titleSizeOptions = _toConsumableArray(Array(25).keys()).map(function (size) {
     return size + 38;
@@ -70215,6 +70243,22 @@ var SelectTypography = function SelectTypography() {
     });
   };
 
+  var defaultTitleFontFamily = _LogoModel.default.useState(function (s) {
+    return s.title.style.fontFamily;
+  });
+
+  var defaultTitleFontSize = _LogoModel.default.useState(function (s) {
+    return s.title.style.fontSize;
+  });
+
+  var defaultSloganFontFamily = _LogoModel.default.useState(function (s) {
+    return s.slogan.style.fontFamily;
+  });
+
+  var defaultSloganFontSize = _LogoModel.default.useState(function (s) {
+    return s.slogan.style.fontSize;
+  });
+
   return React.createElement("div", {
     className: "w-auto"
   }, React.createElement("div", {
@@ -70237,6 +70281,10 @@ var SelectTypography = function SelectTypography() {
     htmlFor: "select-title-font-family"
   }, "Font Family"), React.createElement(_reactSelect.default, {
     id: "select-title-font-family",
+    defaultValue: fontOptions.filter(function (_ref5) {
+      var value = _ref5.value;
+      return value === defaultTitleFontFamily;
+    }),
     onChange: onTitleFontFamilyChange,
     options: fontOptions
   }), React.createElement("label", {
@@ -70244,6 +70292,10 @@ var SelectTypography = function SelectTypography() {
     htmlFor: "select-title-font-size"
   }, "Font Size"), React.createElement(_reactSelect.default, {
     id: "select-title-font-size",
+    defaultValue: titleSizeOptions.filter(function (_ref6) {
+      var value = _ref6.value;
+      return value === defaultTitleFontSize;
+    }),
     options: titleSizeOptions,
     onChange: onTitleFontSizeChange
   })), React.createElement("div", {
@@ -70266,6 +70318,10 @@ var SelectTypography = function SelectTypography() {
     htmlFor: "select-slogan-font-family"
   }, "Font Family"), React.createElement(_reactSelect.default, {
     id: "select-slogan-font-family",
+    defaultValue: fontOptions.filter(function (_ref7) {
+      var value = _ref7.value;
+      return value === defaultSloganFontFamily;
+    }),
     onChange: onSloganFontFamilyChange,
     options: fontOptions
   }), React.createElement("label", {
@@ -70273,6 +70329,10 @@ var SelectTypography = function SelectTypography() {
     htmlFor: "select-slogan-font-size"
   }, "Font Size"), React.createElement(_reactSelect.default, {
     id: "select-slogan-font-size",
+    defaultValue: sloganSizeOptions.filter(function (_ref8) {
+      var value = _ref8.value;
+      return value === defaultSloganFontSize;
+    }),
     options: sloganSizeOptions,
     onChange: onSloganFontSizeChange
   })));
@@ -70280,7 +70340,7 @@ var SelectTypography = function SelectTypography() {
 
 var _default = SelectTypography;
 exports.default = _default;
-},{"react":"../node_modules/react/index.js","react-select":"../node_modules/react-select/dist/react-select.browser.esm.js","~/stores/LogoModel":"stores/LogoModel.ts"}],"Creator.tsx":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js","react-select":"../node_modules/react-select/dist/react-select.browser.esm.js","~/assets/fonts/fonts":"assets/fonts/fonts.tsx","~/stores/LogoModel":"stores/LogoModel.ts"}],"Creator.tsx":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -71106,6 +71166,8 @@ var _LogoModel = _interopRequireDefault(require("./stores/LogoModel"));
 
 var _colorScheme = _interopRequireDefault(require("color-scheme"));
 
+var _fonts = require("./assets/fonts/fonts");
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
@@ -71134,6 +71196,11 @@ var Showcase = function Showcase() {
       colors = _React$useState2[0],
       setColors = _React$useState2[1];
 
+  var _React$useState3 = React.useState([]),
+      _React$useState4 = _slicedToArray(_React$useState3, 2),
+      fontsList = _React$useState4[0],
+      setFontsList = _React$useState4[1];
+
   React.useEffect(function () {
     // Generate the colors
     var generateColors = function generateColors() {
@@ -71153,6 +71220,24 @@ var Showcase = function Showcase() {
     };
 
     setColors(generateColors());
+
+    var generateFonts = function generateFonts() {
+      var list = [];
+      var index = 0;
+
+      while (list.length < _logos.default.length) {
+        list.push(_fonts.presets[index]);
+        index++;
+
+        if (index >= _fonts.presets.length) {
+          index = 0;
+        }
+      }
+
+      return list;
+    };
+
+    setFontsList(generateFonts());
   }, []);
 
   var renderLogoList = function renderLogoList() {
@@ -71160,8 +71245,16 @@ var Showcase = function Showcase() {
       _LogoModel.default.update(function (s) {
         s.logo.src = _logos.default[index];
         s.container.style.color = colors[index];
+        s.title.style.fontFamily = fontsList[index].title;
+        s.slogan.style.fontFamily = fontsList[index].slogan;
       });
     };
+
+    if (!fontsList.length || !colors.length) {
+      return;
+    } else {
+      console.log(fontsList);
+    }
 
     return _logos.default.map(function (logoSRC, index) {
       return React.createElement("button", {
@@ -71188,6 +71281,16 @@ var Showcase = function Showcase() {
           }),
           logo: Object.assign(Object.assign({}, store.logo), {
             src: logoSRC
+          }),
+          title: Object.assign(Object.assign({}, store.title), {
+            style: Object.assign(Object.assign({}, store.title.style), {
+              fontFamily: fontsList[index].title
+            })
+          }),
+          slogan: Object.assign(Object.assign({}, store.slogan), {
+            style: Object.assign(Object.assign({}, store.slogan.style), {
+              fontFamily: fontsList[index].slogan
+            })
           })
         })
       }));
@@ -71221,7 +71324,7 @@ var Showcase = function Showcase() {
 
 var _default = Showcase;
 exports.default = _default;
-},{"react":"../node_modules/react/index.js","react-router-dom":"../node_modules/react-router-dom/esm/react-router-dom.js","./assets/logos":"assets/logos/index.ts","./components/CreateLogo":"components/CreateLogo.tsx","./stores/LogoModel":"stores/LogoModel.ts","color-scheme":"../node_modules/color-scheme/lib/color-scheme.js"}],"Start.tsx":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js","react-router-dom":"../node_modules/react-router-dom/esm/react-router-dom.js","./assets/logos":"assets/logos/index.ts","./components/CreateLogo":"components/CreateLogo.tsx","./stores/LogoModel":"stores/LogoModel.ts","color-scheme":"../node_modules/color-scheme/lib/color-scheme.js","./assets/fonts/fonts":"assets/fonts/fonts.tsx"}],"Start.tsx":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -71369,7 +71472,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54641" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "63423" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

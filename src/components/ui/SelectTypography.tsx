@@ -1,13 +1,13 @@
 import * as React from "react"
 import Select from "react-select"
+import fonts from "~/assets/fonts/fonts"
 import UIStore from "~/stores/LogoModel"
 
 const SelectTypography: React.FunctionComponent<unknown> = () => {
-    const fontOptions = [
-        { value: "Times New Romans", label: "Times New Romans" },
-        { value: "Helvetica", label: "Helvetica" },
-        { value: "Menlo", label: "Menlo" },
-    ]
+    const fontOptions = fonts.map((font) => ({
+        value: font,
+        label: font,
+    }))
 
     const titleSizeOptions = [...Array(25).keys()]
         .map((size) => size + 38)
@@ -64,6 +64,12 @@ const SelectTypography: React.FunctionComponent<unknown> = () => {
         })
     }
 
+    const defaultTitleFontFamily = UIStore.useState((s) => s.title.style.fontFamily)
+    const defaultTitleFontSize = UIStore.useState((s) => s.title.style.fontSize)
+
+    const defaultSloganFontFamily = UIStore.useState((s) => s.slogan.style.fontFamily)
+    const defaultSloganFontSize = UIStore.useState((s) => s.slogan.style.fontSize)
+
     return (
         <div className="w-auto">
             <div className="container m-4 flex flex-col">
@@ -87,6 +93,9 @@ const SelectTypography: React.FunctionComponent<unknown> = () => {
                 </label>
                 <Select
                     id="select-title-font-family"
+                    defaultValue={fontOptions.filter(
+                        ({ value }) => value === defaultTitleFontFamily
+                    )}
                     onChange={onTitleFontFamilyChange}
                     options={fontOptions}
                 />
@@ -98,6 +107,9 @@ const SelectTypography: React.FunctionComponent<unknown> = () => {
                 </label>
                 <Select
                     id="select-title-font-size"
+                    defaultValue={titleSizeOptions.filter(
+                        ({ value }) => value === defaultTitleFontSize
+                    )}
                     options={titleSizeOptions}
                     onChange={onTitleFontSizeChange}
                 />
@@ -123,6 +135,9 @@ const SelectTypography: React.FunctionComponent<unknown> = () => {
                 </label>
                 <Select
                     id="select-slogan-font-family"
+                    defaultValue={fontOptions.filter(
+                        ({ value }) => value === defaultSloganFontFamily
+                    )}
                     onChange={onSloganFontFamilyChange}
                     options={fontOptions}
                 />
@@ -134,6 +149,9 @@ const SelectTypography: React.FunctionComponent<unknown> = () => {
                 </label>
                 <Select
                     id="select-slogan-font-size"
+                    defaultValue={sloganSizeOptions.filter(
+                        ({ value }) => value === defaultSloganFontSize
+                    )}
                     options={sloganSizeOptions}
                     onChange={onSloganFontSizeChange}
                 />

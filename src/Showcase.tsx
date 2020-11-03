@@ -4,11 +4,13 @@ import logos from "./assets/logos"
 import CreateLogo from "./components/CreateLogo"
 import UIStore from "./stores/LogoModel"
 import ColorScheme from "color-scheme"
+import { presets } from "./assets/fonts/fonts"
 
 const Showcase: React.FunctionComponent<unknown> = () => {
     const store = UIStore.useState((s) => s)
 
     const [colors, setColors] = React.useState<string[]>([])
+    const [fontsList, setFontsList] = React.useState<{ title: string; slogan: string }[]>([])
 
     React.useEffect(() => {
         // Generate the colors
@@ -30,6 +32,23 @@ const Showcase: React.FunctionComponent<unknown> = () => {
             return colors
         }
         setColors(generateColors())
+
+        const generateFonts = () => {
+            const list = []
+
+            let index = 0
+            while (list.length < logos.length) {
+                list.push(presets[index])
+                index++
+                if (index >= presets.length) {
+                    index = 0
+                }
+            }
+
+            return list
+        }
+
+        setFontsList(generateFonts())
     }, [])
 
     const renderLogoList = () => {
@@ -37,7 +56,15 @@ const Showcase: React.FunctionComponent<unknown> = () => {
             UIStore.update((s) => {
                 s.logo.src = logos[index]
                 s.container.style.color = colors[index]
+                s.title.style.fontFamily = fontsList[index].title
+                s.slogan.style.fontFamily = fontsList[index].slogan
             })
+        }
+
+        if (!fontsList.length || !colors.length) {
+            return
+        } else {
+            console.log(fontsList)
         }
 
         return logos.map((logoSRC, index) => {
@@ -70,6 +97,20 @@ const Showcase: React.FunctionComponent<unknown> = () => {
                             logo: {
                                 ...store.logo,
                                 src: logoSRC,
+                            },
+                            title: {
+                                ...store.title,
+                                style: {
+                                    ...store.title.style,
+                                    fontFamily: fontsList[index].title,
+                                },
+                            },
+                            slogan: {
+                                ...store.slogan,
+                                style: {
+                                    ...store.slogan.style,
+                                    fontFamily: fontsList[index].slogan,
+                                },
                             },
                         }}
                     />
