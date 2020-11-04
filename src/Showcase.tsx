@@ -87,12 +87,12 @@ const Showcase: React.FunctionComponent<unknown> = () => {
                             container: {
                                 ...store.container,
                                 width: 300,
-                                height: 250,
+                                height: 300,
                                 viewbox: {
                                     x: 0,
                                     y: 0,
                                     width: 300,
-                                    height: 250,
+                                    height: 300,
                                 },
                                 style: {
                                     color: colors[index],

@@ -1,7 +1,7 @@
 import * as React from "react"
 import { SVG } from "@svgdotjs/svg.js"
-import { moveToCenter } from "./utility"
-import { alignLogoLeft, alignLogoRight, alignLogoTop } from "./alignFunctions"
+import { moveToCenter } from "../engine/utility"
+import { alignLogoLeft, alignLogoRight, alignLogoTop } from "../engine/alignFunctions"
 import { v4 as uuidv4 } from "uuid"
 import { TLogo, TLogoContainer, TSlogan, TTitle } from "~/stores/LogoModel"
 

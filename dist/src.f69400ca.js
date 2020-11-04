@@ -43992,7 +43992,7 @@ extend(Runner, getMethodsFor('Runner'));
 List.extend(getMethodNames());
 registerMorphableType([SVGNumber, Color, Box, Matrix, SVGArray, PointArray, PathArray]);
 makeMorphable();
-},{}],"components/utility.ts":[function(require,module,exports) {
+},{}],"engine/utility.ts":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -44020,7 +44020,41 @@ var moveToCenter = function moveToCenter(draw, viewbox, container) {
 };
 
 exports.moveToCenter = moveToCenter;
-},{}],"components/alignFunctions.ts":[function(require,module,exports) {
+},{}],"engine/settings.ts":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.settings = void 0;
+var settings = {
+  logo: {
+    margins: {
+      top: 0,
+      bottom: 0,
+      right: 0,
+      left: 0
+    }
+  },
+  title: {
+    margins: {
+      top: 2,
+      bottom: 2,
+      right: 2,
+      left: 2
+    }
+  },
+  slogan: {
+    margins: {
+      top: 2,
+      bottom: 2,
+      right: 2,
+      left: 2
+    }
+  }
+};
+exports.settings = settings;
+},{}],"engine/alignFunctions.ts":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -44029,6 +44063,8 @@ Object.defineProperty(exports, "__esModule", {
 exports.alignLogoRight = exports.alignLogoLeft = exports.alignLogoTop = void 0;
 
 var _svg = require("@svgdotjs/svg.js");
+
+var _settings = require("./settings");
 
 var autoScallingOffsetMargin = 100;
 
@@ -44044,26 +44080,39 @@ var alignLogoTop = function alignLogoTop(props, draw) {
   var svgRawDim = logoSVG.bbox(); // get the natural dimension to calculate the viewbox
 
   logoSVG.viewbox(0, 0, svgRawDim.width, svgRawDim.height).size(logo.width, logo.height).css('fill', logo.style.fill);
+  var logoDim = {
+    height: _settings.settings.logo.margins.top + logo.height + _settings.settings.logo.margins.bottom,
+    width: _settings.settings.logo.margins.left + logo.width + _settings.settings.logo.margins.bottom
+  };
   /*
          Add the title's SVG
      */
 
-  var titleSVG = draw.text(title.text).font({
+  var titleSVG = draw.plain(title.text).font({
     fill: title.style.color,
     family: title.style.fontFamily,
-    size: title.style.fontSize
-  }).move(0, 0);
-  var titleDim = titleSVG.rbox(draw);
+    size: title.style.fontSize + "px"
+  }).move(0, 0); // console.log(titleSVG.bbox(), titleSVG.rbox())
+
+  titleSVG.leading(0);
+  var titleDim = {
+    height: _settings.settings.title.margins.top + title.style.fontSize + _settings.settings.title.margins.bottom,
+    width: _settings.settings.title.margins.left + titleSVG.rbox(draw).width + _settings.settings.title.margins.bottom
+  };
   /*
          Add the slogan's SVG
      */
 
-  var sloganSVG = draw.text(slogan.text).font({
+  var sloganSVG = draw.plain(slogan.text).font({
     fill: slogan.style.color,
     family: slogan.style.fontFamily,
-    size: slogan.style.fontSize
+    size: slogan.style.fontSize + "px"
   }).move(0, 0);
-  var sloganDim = sloganSVG.rbox(draw);
+  sloganSVG.leading(0);
+  var sloganDim = {
+    height: _settings.settings.slogan.margins.top + slogan.style.fontSize + _settings.settings.slogan.margins.bottom,
+    width: _settings.settings.slogan.margins.left + sloganSVG.rbox(draw).width + _settings.settings.slogan.margins.bottom
+  };
   /*
          Align the elements
      */
@@ -44071,13 +44120,14 @@ var alignLogoTop = function alignLogoTop(props, draw) {
   // so the width of the container is equal with the width of the largest element
   // and the height is the sum of all the element's height
 
-  var widthContainer = Math.max(logo.width, titleDim.width, sloganDim.width);
-  var heightContainer = logo.height + titleDim.height + sloganDim.height;
+  var widthContainer = Math.max(logoDim.width, titleDim.width, sloganDim.width);
+  var heightContainer = logoDim.height + titleDim.height + sloganDim.height; // logo.height + titleDim.height + sloganDim.height
+
   var cx = widthContainer / 2;
   var cy = heightContainer / 2;
-  logoSVG.move(cx - logo.width / 2, 0);
-  titleSVG.move(cx - titleDim.width / 2, logo.height);
-  sloganSVG.move(cx - sloganDim.width / 2, logo.height + titleDim.height);
+  logoSVG.move(cx - logoDim.width / 2, 0);
+  titleSVG.move(cx - titleDim.width / 2, logoDim.height + _settings.settings.logo.margins.bottom + _settings.settings.title.margins.top);
+  sloganSVG.move(cx - sloganDim.width / 2, logoDim.height + titleDim.height + _settings.settings.slogan.margins.top + (titleSVG.rbox(draw).height - titleDim.height) * 0.3);
   var currentViewBox = draw.viewbox(); // AUTOSCAllING
   // check if the current element occupy more than the initial size of the viewbox 
 
@@ -44113,6 +44163,10 @@ var alignLogoLeft = function alignLogoLeft(props, draw) {
   var svgRawDim = logoSVG.bbox(); // get the natural dimension to calculate the viewbox
 
   logoSVG.viewbox(0, 0, svgRawDim.width, svgRawDim.height).size(logo.width, logo.height).css('fill', logo.style.fill);
+  var logoDim = {
+    height: _settings.settings.logo.margins.top + logo.height + _settings.settings.logo.margins.bottom,
+    width: _settings.settings.logo.margins.left + logo.width + _settings.settings.logo.margins.bottom
+  };
   /*
          Add the title's SVG
      */
@@ -44122,7 +44176,11 @@ var alignLogoLeft = function alignLogoLeft(props, draw) {
     family: title.style.fontFamily,
     size: title.style.fontSize
   }).move(0, 0);
-  var titleDim = titleSVG.rbox(draw);
+  titleSVG.leading(0);
+  var titleDim = {
+    height: _settings.settings.title.margins.top + title.style.fontSize + _settings.settings.title.margins.bottom,
+    width: _settings.settings.title.margins.left + titleSVG.rbox(draw).width + _settings.settings.title.margins.bottom
+  };
   /*
          Add the slogan's SVG
      */
@@ -44132,7 +44190,11 @@ var alignLogoLeft = function alignLogoLeft(props, draw) {
     family: slogan.style.fontFamily,
     size: slogan.style.fontSize
   }).move(0, 0);
-  var sloganDim = sloganSVG.rbox(draw); // the elements are vertically stacked,
+  sloganSVG.leading(0);
+  var sloganDim = {
+    height: _settings.settings.slogan.margins.top + slogan.style.fontSize + _settings.settings.slogan.margins.bottom,
+    width: _settings.settings.slogan.margins.left + sloganSVG.rbox(draw).width + _settings.settings.slogan.margins.bottom
+  }; // the elements are vertically stacked,
   // so the width of the container is equal with the width of the largest element
   // and the height is the sum of all the element's height
 
@@ -44144,9 +44206,9 @@ var alignLogoLeft = function alignLogoLeft(props, draw) {
   var textContainerHeight = titleDim.height + sloganDim.height;
   var ctx = textContainerWidth / 2;
   var cty = textContainerHeight / 2;
-  logoSVG.move(0, cy - logo.height / 2);
-  titleSVG.move(logo.width + ctx - titleDim.width / 2, cy - (cty - titleDim.height / 2) - titleDim.height / 2);
-  sloganSVG.move(logo.width + ctx - sloganDim.width / 2, cy + (cty - sloganDim.height / 2) - sloganDim.height / 2);
+  logoSVG.move(0, cy - logoDim.height / 2);
+  titleSVG.move(logoDim.width + ctx - titleDim.width / 2, cy - (cty - titleDim.height / 2) - titleDim.height / 2);
+  sloganSVG.move(logoDim.width + ctx - sloganDim.width / 2, cy + (cty - sloganDim.height / 2) - sloganDim.height / 2 + (titleSVG.rbox(draw).height - titleDim.height) * 0.3);
   var currentViewBox = draw.viewbox(); // AUTOSCAllING
   // check if the current element occupy more than the initial size of the viewbox 
 
@@ -44182,6 +44244,10 @@ var alignLogoRight = function alignLogoRight(props, draw) {
   var svgRawDim = logoSVG.bbox(); // get the natural dimension to calculate the viewbox
 
   logoSVG.viewbox(0, 0, svgRawDim.width, svgRawDim.height).size(logo.width, logo.height).css('fill', logo.style.fill);
+  var logoDim = {
+    height: _settings.settings.logo.margins.top + logo.height + _settings.settings.logo.margins.bottom,
+    width: _settings.settings.logo.margins.left + logo.width + _settings.settings.logo.margins.bottom
+  };
   /*
          Add the title's SVG
      */
@@ -44191,7 +44257,11 @@ var alignLogoRight = function alignLogoRight(props, draw) {
     family: title.style.fontFamily,
     size: title.style.fontSize
   }).move(0, 0);
-  var titleDim = titleSVG.rbox(draw);
+  titleSVG.leading(0);
+  var titleDim = {
+    height: _settings.settings.title.margins.top + title.style.fontSize + _settings.settings.title.margins.bottom,
+    width: _settings.settings.title.margins.left + titleSVG.rbox(draw).width + _settings.settings.title.margins.bottom
+  };
   /*
          Add the slogan's SVG
      */
@@ -44201,21 +44271,25 @@ var alignLogoRight = function alignLogoRight(props, draw) {
     family: slogan.style.fontFamily,
     size: slogan.style.fontSize
   }).move(0, 0);
-  var sloganDim = sloganSVG.rbox(draw); // the elements are vertically stacked,
+  sloganSVG.leading(0);
+  var sloganDim = {
+    height: _settings.settings.slogan.margins.top + slogan.style.fontSize + _settings.settings.slogan.margins.bottom,
+    width: _settings.settings.slogan.margins.left + sloganSVG.rbox(draw).width + _settings.settings.slogan.margins.bottom
+  }; // the elements are vertically stacked,
   // so the width of the container is equal with the width of the largest element
   // and the height is the sum of all the element's height
 
   var widthContainer = logo.width + Math.max(titleDim.width, sloganDim.width);
-  var heightContainer = Math.max(logo.height, titleDim.height + sloganDim.height);
+  var heightContainer = Math.max(logoDim.height, titleDim.height + sloganDim.height);
   var cx = widthContainer / 2;
   var cy = heightContainer / 2;
   var textContainerWidth = Math.max(titleDim.width, sloganDim.width);
   var textContainerHeight = titleDim.height + sloganDim.height;
   var ctx = textContainerWidth / 2;
   var cty = textContainerHeight / 2;
-  logoSVG.move(textContainerWidth, cy - logo.height / 2);
+  logoSVG.move(textContainerWidth, cy - logoDim.height / 2);
   titleSVG.move(ctx - titleDim.width / 2, cy - (cty - titleDim.height / 2) - titleDim.height / 2);
-  sloganSVG.move(ctx - sloganDim.width / 2, cy + (cty - sloganDim.height / 2) - sloganDim.height / 2);
+  sloganSVG.move(ctx - sloganDim.width / 2, cy + (cty - sloganDim.height / 2) - sloganDim.height / 2 + (titleSVG.rbox(draw).height - titleDim.height) * 0.3);
   var currentViewBox = draw.viewbox(); // AUTOSCAllING
   // check if the current element occupy more than the initial size of the viewbox 
 
@@ -44238,7 +44312,7 @@ var alignLogoRight = function alignLogoRight(props, draw) {
 };
 
 exports.alignLogoRight = alignLogoRight;
-},{"@svgdotjs/svg.js":"../node_modules/@svgdotjs/svg.js/dist/svg.esm.js"}],"../node_modules/uuid/dist/esm-browser/rng.js":[function(require,module,exports) {
+},{"@svgdotjs/svg.js":"../node_modules/@svgdotjs/svg.js/dist/svg.esm.js","./settings":"engine/settings.ts"}],"../node_modules/uuid/dist/esm-browser/rng.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -45085,9 +45159,9 @@ var React = _interopRequireWildcard(require("react"));
 
 var _svg = require("@svgdotjs/svg.js");
 
-var _utility = require("./utility");
+var _utility = require("../engine/utility");
 
-var _alignFunctions = require("./alignFunctions");
+var _alignFunctions = require("../engine/alignFunctions");
 
 var _uuid = require("uuid");
 
@@ -45137,7 +45211,7 @@ var CreateLogo = function CreateLogo(props) {
 
 var _default = CreateLogo;
 exports.default = _default;
-},{"react":"../node_modules/react/index.js","@svgdotjs/svg.js":"../node_modules/@svgdotjs/svg.js/dist/svg.esm.js","./utility":"components/utility.ts","./alignFunctions":"components/alignFunctions.ts","uuid":"../node_modules/uuid/dist/esm-browser/index.js"}],"components/ui/DownloadButton.tsx":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js","@svgdotjs/svg.js":"../node_modules/@svgdotjs/svg.js/dist/svg.esm.js","../engine/utility":"engine/utility.ts","../engine/alignFunctions":"engine/alignFunctions.ts","uuid":"../node_modules/uuid/dist/esm-browser/index.js"}],"components/ui/DownloadButton.tsx":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -71337,12 +71411,12 @@ var Showcase = function Showcase() {
         logoProps: Object.assign(Object.assign({}, store), {
           container: Object.assign(Object.assign({}, store.container), {
             width: 300,
-            height: 250,
+            height: 300,
             viewbox: {
               x: 0,
               y: 0,
               width: 300,
-              height: 250
+              height: 300
             },
             style: {
               color: colors[index]
@@ -71570,7 +71644,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52510" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53713" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
