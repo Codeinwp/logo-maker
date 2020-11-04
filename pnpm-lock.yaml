@@ -33,6 +33,7 @@ devDependencies:
   eslint-plugin-standard: 4.0.1_eslint@7.10.0
   gh-pages: 3.1.0
   parcel-bundler: 1.12.4
+  rimraf: 3.0.2
   sass: 1.27.0
   tailwindcss: 1.8.12
   typescript: 4.0.3
@@ -6426,6 +6427,13 @@ packages:
     hasBin: true
     resolution:
       integrity: sha512-uWjbaKIK3T1OSVptzX7Nl6PvQ3qAGtKEtVRjRuazjfL3Bx5eI409VZSqgND+4UNnmzLVdPj9FqFJNPqBZFve4w==
+  /rimraf/3.0.2:
+    dependencies:
+      glob: 7.1.6
+    dev: true
+    hasBin: true
+    resolution:
+      integrity: sha512-JZkJMZkAGFFPP2YqXZXPbMlMBgsxzE8ILs4lMIX/2o0L9UBw9O/Y3o6wFw/i9YLapcUJWwqbi3kdxIPdC62TIA==
   /ripemd160/2.0.2:
     dependencies:
       hash-base: 3.1.0
@@ -7607,6 +7615,7 @@ specifiers:
   react-dom: ^16.13.1
   react-router-dom: ^5.2.0
   react-select: ^3.1.0
+  rimraf: ^3.0.2
   sass: ^1.27.0
   tailwindcss: ^1.8.12
   typescript: ^4.0.3
