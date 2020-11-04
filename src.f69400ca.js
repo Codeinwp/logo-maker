@@ -71380,7 +71380,7 @@ var Showcase = function Showcase() {
     };
 
     setFontsList(generateFonts());
-  }, []);
+  }, [fontsStore]);
 
   var renderLogoList = function renderLogoList() {
     var setOptions = function setOptions(index) {
@@ -71392,7 +71392,8 @@ var Showcase = function Showcase() {
       });
     };
 
-    if (!fontsList.length || !colors.length || fontsStore.areFontsLoaded !== "active") {
+    if (!fontsList.length || !colors.length) {
+      // || fontsStore.areFontsLoaded !== "active") {
       console.log(fontsList.length, colors.length, fontsStore.areFontsLoaded);
       return;
     } else {
@@ -71644,7 +71645,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54424" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54681" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
