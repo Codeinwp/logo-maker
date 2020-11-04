@@ -20,13 +20,14 @@ const Showcase: React.FunctionComponent<unknown> = () => {
             const scm = new ColorScheme()
             const colorsNum = new Set()
 
-            while (colorsNum.size !== logos.length) {
-                colorsNum.add(Math.floor(Math.random() * 360))
+            const step = 360 / logos.length
+            for (let i = 0; i < logos.length; ++i) {
+                colorsNum.add(step * i)
             }
 
             const colors: string[] = []
             colorsNum.forEach((x) => {
-                scm.from_hue(x).scheme("mono").variation("hard").web_safe(true)
+                scm.from_hue(x).scheme("triade").distance(0.8).variation("hard").web_safe(true)
 
                 colors.push("#" + scm.colors()[1])
             })

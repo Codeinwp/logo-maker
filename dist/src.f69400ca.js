@@ -71273,14 +71273,15 @@ var Showcase = function Showcase() {
     var generateColors = function generateColors() {
       var scm = new _colorScheme.default();
       var colorsNum = new Set();
+      var step = 360 / _logos.default.length;
 
-      while (colorsNum.size !== _logos.default.length) {
-        colorsNum.add(Math.floor(Math.random() * 360));
+      for (var i = 0; i < _logos.default.length; ++i) {
+        colorsNum.add(step * i);
       }
 
       var colors = [];
       colorsNum.forEach(function (x) {
-        scm.from_hue(x).scheme("mono").variation("hard").web_safe(true);
+        scm.from_hue(x).scheme("triade").distance(0.8).variation("hard").web_safe(true);
         colors.push("#" + scm.colors()[1]);
       });
       return colors;
@@ -71569,7 +71570,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51860" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52510" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
