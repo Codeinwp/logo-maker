@@ -44127,7 +44127,7 @@ var alignLogoTop = function alignLogoTop(props, draw) {
   var cy = heightContainer / 2;
   logoSVG.move(cx - logoDim.width / 2, 0);
   titleSVG.move(cx - titleDim.width / 2, logoDim.height + _settings.settings.logo.margins.bottom + _settings.settings.title.margins.top);
-  sloganSVG.move(cx - sloganDim.width / 2, logoDim.height + titleDim.height + _settings.settings.slogan.margins.top + (titleSVG.rbox(draw).height - titleDim.height) * 0.3);
+  sloganSVG.move(cx - sloganDim.width / 2, logoDim.height + titleDim.height + _settings.settings.slogan.margins.top + (titleSVG.rbox(draw).height - titleDim.height) * 0.5);
   var currentViewBox = draw.viewbox(); // AUTOSCAllING
   // check if the current element occupy more than the initial size of the viewbox 
 
@@ -44208,7 +44208,7 @@ var alignLogoLeft = function alignLogoLeft(props, draw) {
   var cty = textContainerHeight / 2;
   logoSVG.move(0, cy - logoDim.height / 2);
   titleSVG.move(logoDim.width + ctx - titleDim.width / 2, cy - (cty - titleDim.height / 2) - titleDim.height / 2);
-  sloganSVG.move(logoDim.width + ctx - sloganDim.width / 2, cy + (cty - sloganDim.height / 2) - sloganDim.height / 2 + (titleSVG.rbox(draw).height - titleDim.height) * 0.3);
+  sloganSVG.move(logoDim.width + ctx - sloganDim.width / 2, cy + (cty - sloganDim.height / 2) - sloganDim.height / 2 + (titleSVG.rbox(draw).height - titleDim.height) * 0.5);
   var currentViewBox = draw.viewbox(); // AUTOSCAllING
   // check if the current element occupy more than the initial size of the viewbox 
 
@@ -44289,7 +44289,7 @@ var alignLogoRight = function alignLogoRight(props, draw) {
   var cty = textContainerHeight / 2;
   logoSVG.move(textContainerWidth, cy - logoDim.height / 2);
   titleSVG.move(ctx - titleDim.width / 2, cy - (cty - titleDim.height / 2) - titleDim.height / 2);
-  sloganSVG.move(ctx - sloganDim.width / 2, cy + (cty - sloganDim.height / 2) - sloganDim.height / 2 + (titleSVG.rbox(draw).height - titleDim.height) * 0.3);
+  sloganSVG.move(ctx - sloganDim.width / 2, cy + (cty - sloganDim.height / 2) - sloganDim.height / 2 + (titleSVG.rbox(draw).height - titleDim.height) * 0.5);
   var currentViewBox = draw.viewbox(); // AUTOSCAllING
   // check if the current element occupy more than the initial size of the viewbox 
 
@@ -62711,7 +62711,7 @@ var UIStore = new _pullstate.Store({
     }
   },
   title: {
-    text: 'Title',
+    text: 'Optimole',
     style: {
       color: '#FFFFFF',
       fontSize: 40,
@@ -62719,7 +62719,7 @@ var UIStore = new _pullstate.Store({
     }
   },
   slogan: {
-    text: 'Slogan',
+    text: 'An elegant choice',
     style: {
       color: '#FFFFFF',
       fontSize: 24,
@@ -71380,7 +71380,7 @@ var Showcase = function Showcase() {
     };
 
     setFontsList(generateFonts());
-  }, []);
+  }, [fontsStore]);
 
   var renderLogoList = function renderLogoList() {
     var setOptions = function setOptions(index) {
@@ -71392,7 +71392,8 @@ var Showcase = function Showcase() {
       });
     };
 
-    if (!fontsList.length || !colors.length || fontsStore.areFontsLoaded !== "active") {
+    if (!fontsList.length || !colors.length) {
+      // || fontsStore.areFontsLoaded !== "active") {
       console.log(fontsList.length, colors.length, fontsStore.areFontsLoaded);
       return;
     } else {
@@ -71411,12 +71412,12 @@ var Showcase = function Showcase() {
         logoProps: Object.assign(Object.assign({}, store), {
           container: Object.assign(Object.assign({}, store.container), {
             width: 300,
-            height: 300,
+            height: 250,
             viewbox: {
               x: 0,
               y: 0,
               width: 300,
-              height: 300
+              height: 250
             },
             style: {
               color: colors[index]
@@ -71606,7 +71607,7 @@ var Application = function Application() {
     });
   }, []);
 
-  return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement(_reactRouterDom.BrowserRouter, null, _react.default.createElement(_reactRouterDom.Switch, null, _react.default.createElement(_reactRouterDom.Route, {
+  return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement(_reactRouterDom.HashRouter, null, _react.default.createElement(_reactRouterDom.Switch, null, _react.default.createElement(_reactRouterDom.Route, {
     path: "/start"
   }, _react.default.createElement(_Start.default, null)), _react.default.createElement(_reactRouterDom.Route, {
     path: "/showcase"
@@ -71644,7 +71645,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53713" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54774" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

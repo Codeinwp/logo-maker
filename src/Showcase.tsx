@@ -52,7 +52,7 @@ const Showcase: React.FunctionComponent<unknown> = () => {
         }
 
         setFontsList(generateFonts())
-    }, [])
+    }, [fontsStore])
 
     const renderLogoList = () => {
         const setOptions = (index: number) => {
@@ -64,7 +64,8 @@ const Showcase: React.FunctionComponent<unknown> = () => {
             })
         }
 
-        if (!fontsList.length || !colors.length || fontsStore.areFontsLoaded !== "active") {
+        if (!fontsList.length || !colors.length) {
+            // || fontsStore.areFontsLoaded !== "active") {
             console.log(fontsList.length, colors.length, fontsStore.areFontsLoaded)
             return
         } else {
@@ -87,12 +88,12 @@ const Showcase: React.FunctionComponent<unknown> = () => {
                             container: {
                                 ...store.container,
                                 width: 300,
-                                height: 300,
+                                height: 250,
                                 viewbox: {
                                     x: 0,
                                     y: 0,
                                     width: 300,
-                                    height: 300,
+                                    height: 250,
                                 },
                                 style: {
                                     color: colors[index],

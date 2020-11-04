@@ -1,6 +1,6 @@
 import React from "react"
 import { render } from "react-dom"
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom"
+import { HashRouter as Router, Switch, Route } from "react-router-dom"
 import WebFont from "webfontloader"
 import fonts from "./assets/fonts/fonts"
 import "./assets/styles/index.scss"

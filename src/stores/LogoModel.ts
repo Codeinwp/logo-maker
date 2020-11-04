@@ -78,7 +78,7 @@ export const UIStore = new Store<StoreProps>({
 	},
 
 	title : {
-		text: 'Title',
+		text: 'Optimole',
 		style: {
 			color: '#FFFFFF',
 			fontSize: 40,
@@ -87,7 +87,7 @@ export const UIStore = new Store<StoreProps>({
 	},
 
 	slogan : {
-		text: 'Slogan',
+		text: 'An elegant choice',
 		style: {
 			color: '#FFFFFF',
 			fontSize: 24,

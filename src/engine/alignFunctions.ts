@@ -80,7 +80,7 @@ export const alignLogoTop = (props: LogoProps, draw: Svg) : ContainerData => {
 
     logoSVG.move(cx - logoDim.width / 2, 0)
     titleSVG.move(cx - titleDim.width / 2, logoDim.height + settings.logo.margins.bottom + settings.title.margins.top)
-    sloganSVG.move(cx - sloganDim.width / 2, logoDim.height + titleDim.height + settings.slogan.margins.top + (titleSVG.rbox(draw).height - titleDim.height) * 0.3)
+    sloganSVG.move(cx - sloganDim.width / 2, logoDim.height + titleDim.height + settings.slogan.margins.top + (titleSVG.rbox(draw).height - titleDim.height) * 0.5)
 
     const currentViewBox = draw.viewbox()
     
@@ -163,7 +163,7 @@ export const alignLogoLeft = (props: LogoProps, draw: Svg) : ContainerData => {
 
     logoSVG.move(0, cy - logoDim.height / 2)
     titleSVG.move(logoDim.width + ctx - titleDim.width / 2, cy - (cty - titleDim.height / 2) - titleDim.height / 2)
-    sloganSVG.move(logoDim.width + ctx - sloganDim.width / 2, cy + (cty - sloganDim.height / 2) - sloganDim.height / 2 + (titleSVG.rbox(draw).height - titleDim.height) * 0.3 )
+    sloganSVG.move(logoDim.width + ctx - sloganDim.width / 2, cy + (cty - sloganDim.height / 2) - sloganDim.height / 2 + (titleSVG.rbox(draw).height - titleDim.height) * 0.5 )
 
     const currentViewBox = draw.viewbox()
     
@@ -245,7 +245,7 @@ export const alignLogoRight = (props: LogoProps, draw: Svg) : ContainerData => {
 
     logoSVG.move(textContainerWidth, cy - logoDim.height / 2)
     titleSVG.move(ctx - titleDim.width / 2, cy - (cty - titleDim.height / 2) - titleDim.height / 2)
-    sloganSVG.move(ctx - sloganDim.width / 2, cy + (cty - sloganDim.height / 2) - sloganDim.height / 2 + (titleSVG.rbox(draw).height - titleDim.height) * 0.3)
+    sloganSVG.move(ctx - sloganDim.width / 2, cy + (cty - sloganDim.height / 2) - sloganDim.height / 2 + (titleSVG.rbox(draw).height - titleDim.height) * 0.5)
 
     const currentViewBox = draw.viewbox()
     
