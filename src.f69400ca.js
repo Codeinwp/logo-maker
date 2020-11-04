@@ -71606,9 +71606,7 @@ var Application = function Application() {
     });
   }, []);
 
-  return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement(_reactRouterDom.BrowserRouter, {
-    basename: "/logo-maker"
-  }, _react.default.createElement(_reactRouterDom.Switch, null, _react.default.createElement(_reactRouterDom.Route, {
+  return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement(_reactRouterDom.HashRouter, null, _react.default.createElement(_reactRouterDom.Switch, null, _react.default.createElement(_reactRouterDom.Route, {
     path: "/start"
   }, _react.default.createElement(_Start.default, null)), _react.default.createElement(_reactRouterDom.Route, {
     path: "/showcase"
@@ -71646,7 +71644,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54393" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54424" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
