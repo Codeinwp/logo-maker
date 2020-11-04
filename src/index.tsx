@@ -18,17 +18,22 @@ const Application: React.FunctionComponent<unknown> = () => {
             },
             loading: () => {
                 AssetsStore.update((s) => {
-                    s.areFontsLoaded = "loading"
+                    s.fonts.fontsStatus = "loading"
                 })
             },
             active: () => {
                 AssetsStore.update((s) => {
-                    s.areFontsLoaded = "active"
+                    s.fonts.fontsStatus = "active"
                 })
             },
             inactive: () => {
                 AssetsStore.update((s) => {
-                    s.areFontsLoaded = "inactive"
+                    s.fonts.fontsStatus = "inactive"
+                })
+            },
+            fontactive: (font) => {
+                AssetsStore.update((s) => {
+                    s.fonts.activeFonts.push(font)
                 })
             },
         })

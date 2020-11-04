@@ -1,9 +1,15 @@
 import { Store } from "pullstate";
 
 export type AssetsStoreProps = {
-	areFontsLoaded: "active" | "loading" | "inactive"
+	fonts: {
+		fontsStatus: "active" | "loading" | "inactive"
+		activeFonts: string[]
+	}
 }
 
 export const AssetsStore = new Store<AssetsStoreProps>({
-	areFontsLoaded: "inactive"
+	fonts: {
+		fontsStatus: "inactive",
+		activeFonts: []
+	}
 })

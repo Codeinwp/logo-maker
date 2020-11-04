@@ -1,5 +1,5 @@
 import * as React from "react"
-import UIStore from "~/stores/LogoModel"
+import UIStore from "~/stores/UIStore"
 
 export type LogoAlignOptions = "align-top" | "align-left" | "align-right"
 

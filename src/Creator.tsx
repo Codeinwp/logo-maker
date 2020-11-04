@@ -7,7 +7,7 @@ import SelectLayout from "./components/ui/SelectLayout"
 import SelectLogo from "./components/ui/SelectLogo"
 import SelectTypography from "./components/ui/SelectTypography"
 
-import UIStore from "./stores/LogoModel"
+import UIStore from "./stores/UIStore"
 
 type MenuOptions = "logo" | "typography" | "layout" | "colors"
 

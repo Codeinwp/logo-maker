@@ -1,7 +1,7 @@
 import * as React from "react"
 import logos, { LogoSVGImport } from "../../assets/logos"
 import LogoItem from "./LogoItem"
-import store from "../../stores/LogoModel"
+import store from "../../stores/UIStore"
 
 const SelectLogo: React.FunctionComponent<unknown> = () => {
     const setLogo = (logo: LogoSVGImport) => {

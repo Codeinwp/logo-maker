@@ -2,7 +2,7 @@ import * as React from "react"
 import { Link } from "react-router-dom"
 import logos from "./assets/logos"
 import CreateLogo from "./components/CreateLogo"
-import UIStore from "./stores/LogoModel"
+import UIStore from "./stores/UIStore"
 import ColorScheme from "color-scheme"
 import { presets } from "./assets/fonts/fonts"
 import { AssetsStore } from "./stores/AssetsStore"
@@ -65,11 +65,7 @@ const Showcase: React.FunctionComponent<unknown> = () => {
         }
 
         if (!fontsList.length || !colors.length) {
-            // || fontsStore.areFontsLoaded !== "active") {
-            console.log(fontsList.length, colors.length, fontsStore.areFontsLoaded)
             return
-        } else {
-            console.log(fontsList)
         }
 
         return logos.map((logoSRC, index) => {

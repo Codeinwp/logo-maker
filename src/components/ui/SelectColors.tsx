@@ -1,6 +1,6 @@
 import * as React from "react"
 import { SliderPicker } from "react-color"
-import UIStore from "~/stores/LogoModel"
+import UIStore from "~/stores/UIStore"
 
 const SelectColor: React.FunctionComponent<unknown> = () => {
     const onBackgroundColor = (value: { hex: string }) => {

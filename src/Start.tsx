@@ -1,6 +1,6 @@
 import * as React from "react"
 import { Link } from "react-router-dom"
-import UIStore from "./stores/LogoModel"
+import UIStore from "./stores/UIStore"
 
 const Start: React.FunctionComponent<unknown> = () => {
     const setTitleText = (value: string) => {
