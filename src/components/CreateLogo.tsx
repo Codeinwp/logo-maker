@@ -22,7 +22,7 @@ const CreateLogo: React.FunctionComponent<CreateLogoPropsComponent> = (
     const ID = props.id || `image-logo-${uuidv4()}`
 
     React.useEffect(() => {
-        console.log(props.logoProps)
+        // console.log(props.logoProps)
         if (divRef.current && props.logoProps) {
             /*
                 Create the SVG parent

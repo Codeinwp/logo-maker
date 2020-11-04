@@ -4,6 +4,7 @@ dependencies:
   '@types/react-router-dom': 5.1.6
   '@types/react-select': 3.0.22
   '@types/uuid': 8.3.0
+  '@types/webfontloader': 1.6.32
   color-scheme: 1.0.1
   postcss-import: 12.0.1
   pullstate: 1.19.1_react@16.13.1
@@ -13,6 +14,7 @@ dependencies:
   react-router-dom: 5.2.0_react@16.13.1
   react-select: 3.1.0_react-dom@16.13.1+react@16.13.1
   uuid: 8.3.1
+  webfontloader: 1.6.28
 devDependencies:
   '@fullhuman/postcss-purgecss': 3.0.0
   '@types/react': 16.9.51
@@ -1326,6 +1328,10 @@ packages:
     dev: false
     resolution:
       integrity: sha512-eQ9qFW/fhfGJF8WKHGEHZEyVWfZxrT+6CLIJGBcZPfxUh/+BnEj+UCGYMlr9qZuX/2AltsvwrGqp0LhEW8D0zQ==
+  /@types/webfontloader/1.6.32:
+    dev: false
+    resolution:
+      integrity: sha512-l83V/2iHvBTIlKUM1+UlabS/Jd65HVfKmqS+zPhwDlgldPtd5ujPDt0Y1es19xLWcN8NC3wwSTd71Qxbst+Kpw==
   /@typescript-eslint/eslint-plugin/4.4.0_a71b0516f86a95383173f79e74386c73:
     dependencies:
       '@typescript-eslint/experimental-utils': 4.4.0_eslint@7.10.0+typescript@4.0.3
@@ -7477,6 +7483,10 @@ packages:
     dev: true
     resolution:
       integrity: sha1-8LDc+RW8X/FSivrbLA4XtTLaL+g=
+  /webfontloader/1.6.28:
+    dev: false
+    resolution:
+      integrity: sha1-23hhKSU8tujq5UwvsF+HCvZnW64=
   /webidl-conversions/4.0.2:
     dev: true
     resolution:
@@ -7574,6 +7584,7 @@ specifiers:
   '@types/react-router-dom': ^5.1.6
   '@types/react-select': ^3.0.22
   '@types/uuid': ^8.3.0
+  '@types/webfontloader': ^1.6.32
   '@typescript-eslint/eslint-plugin': ^4.4.0
   '@typescript-eslint/parser': ^4.4.0
   autoprefixer: ^10.0.1
@@ -7600,3 +7611,4 @@ specifiers:
   tailwindcss: ^1.8.12
   typescript: ^4.0.3
   uuid: ^8.3.1
+  webfontloader: ^1.6.28

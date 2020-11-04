@@ -5,9 +5,11 @@ import CreateLogo from "./components/CreateLogo"
 import UIStore from "./stores/LogoModel"
 import ColorScheme from "color-scheme"
 import { presets } from "./assets/fonts/fonts"
+import { AssetsStore } from "./stores/AssetsStore"
 
 const Showcase: React.FunctionComponent<unknown> = () => {
     const store = UIStore.useState((s) => s)
+    const fontsStore = AssetsStore.useState((s) => s)
 
     const [colors, setColors] = React.useState<string[]>([])
     const [fontsList, setFontsList] = React.useState<{ title: string; slogan: string }[]>([])
@@ -61,7 +63,8 @@ const Showcase: React.FunctionComponent<unknown> = () => {
             })
         }
 
-        if (!fontsList.length || !colors.length) {
+        if (!fontsList.length || !colors.length || fontsStore.areFontsLoaded !== "active") {
+            console.log(fontsList.length, colors.length, fontsStore.areFontsLoaded)
             return
         } else {
             console.log(fontsList)
