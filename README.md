@@ -2,6 +2,14 @@
 
 Logo Maker is a react app build with [Typescript](https://www.typescriptlang.org/) created for designing simple logos.
 
+# Getting starter
+
+Before you venture in the development of the Logo Maker, you need to have:
+
+-   [Node Js](https://nodejs.org/en/) with npm & npx
+-   [Git](https://git-scm.com/)
+-   Text Editor / IDE (see Recomended Tools)
+
 ## Installation
 
 Using npm
@@ -33,7 +41,7 @@ The coding style is enforced using [ESLint](https://eslint.org/) with [Standard]
 
 [Prettier](https://prettier.io/) is used for formating and is [integrated with ESLint](https://github.com/prettier/eslint-config-prettier) (some rules might be disabled in case of conflict).
 
-### IDE
+### IDE / Text Editor
 
 -   Visual Studio Code
 
