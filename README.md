@@ -16,6 +16,7 @@ Using npm
 
 ```bash
 git clone https://github.com/Codeinwp/logo-maker.git
+cd logo-maker
 npm install
 ```
 
@@ -23,6 +24,7 @@ Using [pnpm](https://pnpm.js.org/) (recommended)
 
 ```bash
 git clone https://github.com/Codeinwp/logo-maker.git
+cd logo-maker
 pnpm install
 ```
 
@@ -30,6 +32,7 @@ Using yarn
 
 ```bash
 git clone https://github.com/Codeinwp/logo-maker.git
+cd logo-maker
 yarn install
 ```
 
