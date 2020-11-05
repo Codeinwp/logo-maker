@@ -30,7 +30,7 @@ const fonts = [
     "Georgia",
     "Lobster Two",
     "Orbitron",
-    "Parisienne"
+    "Parisienne",
 ]
 
 export const presets = [
@@ -72,11 +72,11 @@ export const presets = [
     },
     {
         title: "Cinzel Decorative",
-        slogan: "Lato"
+        slogan: "Lato",
     },
     {
         title: "Karla",
-        slogan: "Montserrat"
+        slogan: "Montserrat",
     },
     {
         title: "Libre Baskerville",

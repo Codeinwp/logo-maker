@@ -1,8 +1,8 @@
 import { LogoSVGImport } from "."
 
 const logo: LogoSVGImport = {
-	id: 'logo-10',
-	svg: `
+    id: "logo-10",
+    svg: `
 	<svg width="134" height="134" viewBox="0 0 134 134" xmlns="http://www.w3.org/2000/svg">
 <g clip-path="url(#clip0)">
 <path d="M56.6399 25.2617L67.0745 35.6963L84.966 17.8048C88.2416 14.5293 93.614 14.5293 96.9019 17.8048C100.177 21.0804 100.177 26.4528 96.9019 29.7407L73.0425 53.6002C69.7669 56.8757 64.3945 56.8757 61.1066 53.6002L44.704 37.1976C41.4284 33.922 41.4284 28.5496 44.704 25.2617C47.9919 21.9861 53.3519 21.9861 56.6399 25.2617Z"  />
@@ -16,7 +16,7 @@ const logo: LogoSVGImport = {
 </g>
 </svg>
 
-`
+`,
 }
 
 export default logo
