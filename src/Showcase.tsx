@@ -131,16 +131,16 @@ const Showcase: React.FunctionComponent<unknown> = () => {
                 </Link>
             </div>
             <div className="m-4 lg:w-4/5">
-                <div className="flex flex-col bg-orange-200 my-4">
-                    <h1 className="text-2xl md:text-4xl font-bold text-center">
+                <div className="flex flex-col my-4">
+                    <h1 className="text-2xl md:text-4xl font-bold text-center leading-none">
                         Choose from any of the logo templates
                     </h1>
-                    <p className="text-sm md:text-xl font-bold text-center">
+                    <p className="text-sm md:text-xl font-semibold lg:text-gray-600 lg:font-medium text-center my-2">
                         You can change this information after your designs have been created
                     </p>
                 </div>
                 <div>
-                    <div className="flex flex-col items-center justify-center text-white bg-gradient-to-br from-gray-600 via-teal-700 to-gray-800">
+                    <div className="flex flex-col items-center justify-center text-white ">
                         <div className="grid gap-4 grid-cols-1 lg:grid-cols-3">
                             {renderLogoList()}
                         </div>

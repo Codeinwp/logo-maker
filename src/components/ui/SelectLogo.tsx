@@ -18,7 +18,7 @@ const SelectLogo: React.FunctionComponent<unknown> = () => {
 
     return (
         <div>
-            <h1 className="text-xl text-gray-500">Logo Options</h1>
+            <h1 className="text-xl text-gray-500 text-normal">{`LOGO OPTIONS (${logos.length})`}</h1>
             <p className="my-2">Select a symbol for the logo</p>
             <div
                 className="h-32 lg:h-auto overflow-auto overscroll-auto md:overscroll-contain lg:overscroll-none grid grid-cols-3 gap-4"

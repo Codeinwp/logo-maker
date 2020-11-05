@@ -107116,6 +107116,10 @@ video {
     width: max-content;
 }
 
+body {
+    font-family: "Noto Sans", sans-serif;
+}
+
 /*@import url("https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Amatic+SC&family=Dancing+Script&family=Henny+Penny&family=Open+Sans&family=Pacifico&family=Roboto&display=swap");
 */
 

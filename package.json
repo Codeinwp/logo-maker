@@ -5,7 +5,7 @@
     "description": "",
     "main": "index.js",
     "scripts": {
-        "start": "parcel src/index.html --open",
+        "start": "npm run clean-build && parcel src/index.html --open",
         "build": "npm run clean-build && parcel build src/index.html --public-url ./",
         "deploy": "npm run build && gh-pages -d dist",
         "clean-build": "rimraf dist"

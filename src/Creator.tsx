@@ -29,8 +29,8 @@ const Creator: React.FunctionComponent<unknown> = () => {
     }
 
     return (
-        <div className="flex flex-col-reverse lg:flex-col">
-            <div className="flex flex-row">
+        <div className="static flex flex-col-reverse lg:flex-col">
+            <div className="flex flex-row z-10 sticky bottom-0 bg-white">
                 <div className="container flex lg:px-32 lg:w-3/4 mx-8 my-4">
                     <Link
                         className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 max-content rounded"

@@ -45273,7 +45273,7 @@ var DownloadButton = function DownloadButton() {
     onClick: function onClick() {
       return downloadSVG();
     },
-    className: "bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded inline-flex items-center"
+    className: "bg-orange-600 hover:bg-orange-400 text-white font-bold py-2 px-4 rounded inline-flex items-center"
   }, React.createElement("svg", {
     className: "fill-current w-4 h-4 mr-2",
     xmlns: "http://www.w3.org/2000/svg",
@@ -62838,21 +62838,21 @@ var SelectLayout = function SelectLayout() {
   }, "Select a symbol for the logo"), React.createElement("div", {
     className: "flex flex-col items-center items lg:items-start"
   }, React.createElement("button", {
-    className: "box-border w-auto p-2 my-4 border-2 border-blue-600 lg:border-gray-300 hover:border-blue-600 max-content rounded-lg",
+    className: "box-border h-24 w-4/5 p-2 my-4 border-2 border-blue-600 lg:border-gray-300 hover:border-blue-600 rounded-lg",
     onClick: function onClick() {
       return _UIStore.default.update(function (s) {
         s.container.align = "align-top";
       });
     }
   }, "Logo TOP"), React.createElement("button", {
-    className: "box-border w-auto p-2 my-4 border-2 hover:border-blue-600 max-content rounded-lg",
+    className: "box-border h-24 w-4/5 p-2 my-4 border-2 hover:border-blue-600  rounded-lg",
     onClick: function onClick() {
       return _UIStore.default.update(function (s) {
         s.container.align = "align-left";
       });
     }
   }, "Logo LEFT"), React.createElement("button", {
-    className: "box-border w-auto p-2 my-4 border-2 hover:border-blue-600 max-content rounded-lg",
+    className: "box-border h-24 w-4/5 p-2 my-4 border-2 hover:border-blue-600 rounded-lg",
     onClick: function onClick() {
       return _UIStore.default.update(function (s) {
         s.container.align = "align-right";
@@ -62944,8 +62944,8 @@ var SelectLogo = function SelectLogo() {
   };
 
   return React.createElement("div", null, React.createElement("h1", {
-    className: "text-xl text-gray-500"
-  }, "Logo Options"), React.createElement("p", {
+    className: "text-xl text-gray-500 text-normal"
+  }, "LOGO OPTIONS (".concat(_logos.default.length, ")")), React.createElement("p", {
     className: "my-2"
   }, "Select a symbol for the logo"), React.createElement("div", {
     className: "h-32 lg:h-auto overflow-auto overscroll-auto md:overscroll-contain lg:overscroll-none grid grid-cols-3 gap-4"
@@ -70400,9 +70400,9 @@ var SelectTypography = function SelectTypography() {
   });
 
   return React.createElement("div", {
-    className: "w-auto"
+    className: "w-auto overflow-y-auto overscroll-auto lg:overflow-y-visible lg:overscroll-none"
   }, React.createElement("div", {
-    className: "container m-4 flex flex-col"
+    className: "container m-2 p-2 flex flex-col"
   }, React.createElement("h1", {
     className: "text-xl my-1 text-gray-500"
   }, "LOGO"), React.createElement("label", {
@@ -70439,7 +70439,7 @@ var SelectTypography = function SelectTypography() {
     options: titleSizeOptions,
     onChange: onTitleFontSizeChange
   })), React.createElement("div", {
-    className: "container m-4 flex flex-col"
+    className: "container m-2 p-2 flex flex-col"
   }, React.createElement("h1", {
     className: "text-xl my-1"
   }, "SLOGAN"), React.createElement("label", {
@@ -70551,9 +70551,9 @@ var Creator = function Creator() {
   };
 
   return React.createElement("div", {
-    className: "flex flex-col-reverse lg:flex-col"
+    className: "static flex flex-col-reverse lg:flex-col"
   }, React.createElement("div", {
-    className: "flex flex-row"
+    className: "flex flex-row z-10 sticky bottom-0 bg-white"
   }, React.createElement("div", {
     className: "container flex lg:px-32 lg:w-3/4 mx-8 my-4"
   }, React.createElement(_reactRouterDom.Link, {
@@ -71450,13 +71450,13 @@ var Showcase = function Showcase() {
   }, "Back")), React.createElement("div", {
     className: "m-4 lg:w-4/5"
   }, React.createElement("div", {
-    className: "flex flex-col bg-orange-200 my-4"
+    className: "flex flex-col my-4"
   }, React.createElement("h1", {
-    className: "text-2xl md:text-4xl font-bold text-center"
+    className: "text-2xl md:text-4xl font-bold text-center leading-none"
   }, "Choose from any of the logo templates"), React.createElement("p", {
-    className: "text-sm md:text-xl font-bold text-center"
+    className: "text-sm md:text-xl font-semibold lg:text-gray-600 lg:font-medium text-center my-2"
   }, "You can change this information after your designs have been created")), React.createElement("div", null, React.createElement("div", {
-    className: "flex flex-col items-center justify-center text-white bg-gradient-to-br from-gray-600 via-teal-700 to-gray-800"
+    className: "flex flex-col items-center justify-center text-white "
   }, React.createElement("div", {
     className: "grid gap-4 grid-cols-1 lg:grid-cols-3"
   }, renderLogoList())))), React.createElement("div", {
@@ -71505,17 +71505,17 @@ var Start = function Start() {
   return React.createElement("div", {
     className: "flex content-center justify-center"
   }, React.createElement("div", {
-    className: "flex flex-col content-center justify-center bg-green-200 lg:w-2/5 m-4 lg:p-4 "
+    className: "flex flex-col content-center justify-center lg:w-3/5 m-4 p-4 "
   }, React.createElement("div", {
-    className: "flex flex-col bg-orange-200 my-2"
+    className: "flex flex-col my-2"
   }, React.createElement("h1", {
-    className: "text-2xl md:text-4xl font-bold text-center"
+    className: "text-2xl md:text-4xl font-bold text-center font-nato-sans"
   }, "Add your business name"), React.createElement("p", {
-    className: "text-sm md:text-xl font-bold text-center"
+    className: "text-sm md:text-xl font-semibold lg:text-gray-600 lg:font-medium text-center"
   }, "You can change this information after you designs have been created")), React.createElement("div", {
-    className: "bg-blue-200 my-2"
+    className: " my-2 lg:py-2 lg:px-8"
   }, React.createElement("div", {
-    className: "flex flex-col lg:mx-16 my-4"
+    className: "flex flex-col lg:mx-16 my-4 p-1"
   }, React.createElement("label", {
     className: "block text-gray-700 text-sm font-bold mb-2",
     htmlFor: "logo-text-input text-md"
@@ -71530,7 +71530,7 @@ var Start = function Start() {
     },
     className: "shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
   })), React.createElement("div", {
-    className: "flex flex-col lg:mx-16 my-2 "
+    className: "flex flex-col lg:mx-16 my-2 p-1"
   }, React.createElement("label", {
     className: "block text-gray-700 text-sm font-bold mb-2",
     htmlFor: "slogan-text-input"
@@ -71651,7 +71651,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50563" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52881" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

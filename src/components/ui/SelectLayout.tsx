@@ -10,7 +10,7 @@ const SelectLayout: React.FunctionComponent<unknown> = () => {
             <p className="my-1">Select a symbol for the logo</p>
             <div className="flex flex-col items-center items lg:items-start">
                 <button
-                    className="box-border w-auto p-2 my-4 border-2 border-blue-600 lg:border-gray-300 hover:border-blue-600 max-content rounded-lg"
+                    className="box-border h-24 w-4/5 p-2 my-4 border-2 border-blue-600 lg:border-gray-300 hover:border-blue-600 rounded-lg"
                     onClick={() =>
                         UIStore.update((s) => {
                             s.container.align = "align-top"
@@ -20,7 +20,7 @@ const SelectLayout: React.FunctionComponent<unknown> = () => {
                     Logo TOP
                 </button>
                 <button
-                    className="box-border w-auto p-2 my-4 border-2 hover:border-blue-600 max-content rounded-lg"
+                    className="box-border h-24 w-4/5 p-2 my-4 border-2 hover:border-blue-600  rounded-lg"
                     onClick={() =>
                         UIStore.update((s) => {
                             s.container.align = "align-left"
@@ -30,7 +30,7 @@ const SelectLayout: React.FunctionComponent<unknown> = () => {
                     Logo LEFT
                 </button>
                 <button
-                    className="box-border w-auto p-2 my-4 border-2 hover:border-blue-600 max-content rounded-lg"
+                    className="box-border h-24 w-4/5 p-2 my-4 border-2 hover:border-blue-600 rounded-lg"
                     onClick={() =>
                         UIStore.update((s) => {
                             s.container.align = "align-right"
