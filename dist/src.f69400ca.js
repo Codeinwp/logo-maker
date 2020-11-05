@@ -62943,12 +62943,14 @@ var SelectLogo = function SelectLogo() {
     });
   };
 
-  return React.createElement("div", null, React.createElement("h1", {
+  return React.createElement("div", {
+    className: "h-auto"
+  }, React.createElement("h1", {
     className: "text-xl text-gray-500 text-normal"
   }, "LOGO OPTIONS (".concat(_logos.default.length, ")")), React.createElement("p", {
     className: "my-2"
   }, "Select a symbol for the logo"), React.createElement("div", {
-    className: "h-32 lg:h-auto overflow-auto overscroll-auto md:overscroll-contain lg:overscroll-none grid grid-cols-3 gap-4"
+    className: "h-42 lg:h-auto overflow-auto overscroll-auto md:overscroll-contain lg:overscroll-none grid grid-cols-3 gap-4"
   }, renderLogos()));
 };
 
@@ -71651,7 +71653,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52881" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53143" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
