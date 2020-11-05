@@ -44131,7 +44131,7 @@ var alignLogoTop = function alignLogoTop(props, draw) {
   var currentViewBox = draw.viewbox(); // AUTOSCAllING
   // check if the current element occupy more than the initial size of the viewbox 
 
-  draw.viewbox(0, 0, currentViewBox.width < widthContainer ? widthContainer + autoScallingOffsetMargin : currentViewBox.width, currentViewBox.height < heightContainer ? heightContainer + autoScallingOffsetMargin : currentViewBox.height);
+  draw.viewbox(0, 0, currentViewBox.width > widthContainer ? widthContainer + autoScallingOffsetMargin : currentViewBox.width, currentViewBox.height > heightContainer ? heightContainer + autoScallingOffsetMargin : currentViewBox.height);
   return {
     containerPos: {
       x: 0,
@@ -44212,7 +44212,7 @@ var alignLogoLeft = function alignLogoLeft(props, draw) {
   var currentViewBox = draw.viewbox(); // AUTOSCAllING
   // check if the current element occupy more than the initial size of the viewbox 
 
-  draw.viewbox(0, 0, currentViewBox.width < widthContainer ? widthContainer + autoScallingOffsetMargin : currentViewBox.width, currentViewBox.height < heightContainer ? heightContainer + autoScallingOffsetMargin : currentViewBox.height);
+  draw.viewbox(0, 0, currentViewBox.width > widthContainer ? widthContainer + autoScallingOffsetMargin : currentViewBox.width, currentViewBox.height > heightContainer ? heightContainer + autoScallingOffsetMargin : currentViewBox.height);
   return {
     containerPos: {
       x: 0,
@@ -44293,7 +44293,7 @@ var alignLogoRight = function alignLogoRight(props, draw) {
   var currentViewBox = draw.viewbox(); // AUTOSCAllING
   // check if the current element occupy more than the initial size of the viewbox 
 
-  draw.viewbox(0, 0, currentViewBox.width < widthContainer ? widthContainer + autoScallingOffsetMargin : currentViewBox.width, currentViewBox.height < heightContainer ? heightContainer + autoScallingOffsetMargin : currentViewBox.height);
+  draw.viewbox(0, 0, currentViewBox.width > widthContainer ? widthContainer + autoScallingOffsetMargin : currentViewBox.width, currentViewBox.height > heightContainer ? heightContainer + autoScallingOffsetMargin : currentViewBox.height);
   return {
     containerPos: {
       x: 0,
@@ -71651,7 +71651,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55185" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50563" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

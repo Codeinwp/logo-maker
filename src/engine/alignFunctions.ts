@@ -86,7 +86,7 @@ export const alignLogoTop = (props: LogoProps, draw: Svg) : ContainerData => {
     
     // AUTOSCAllING
     // check if the current element occupy more than the initial size of the viewbox 
-    draw.viewbox(0, 0, currentViewBox.width < widthContainer ? widthContainer + autoScallingOffsetMargin : currentViewBox.width, currentViewBox.height < heightContainer ? heightContainer + autoScallingOffsetMargin : currentViewBox.height)
+    draw.viewbox(0, 0, currentViewBox.width > widthContainer ? widthContainer + autoScallingOffsetMargin : currentViewBox.width, currentViewBox.height > heightContainer ? heightContainer + autoScallingOffsetMargin : currentViewBox.height)
 
 
     return {
@@ -169,7 +169,7 @@ export const alignLogoLeft = (props: LogoProps, draw: Svg) : ContainerData => {
     
     // AUTOSCAllING
     // check if the current element occupy more than the initial size of the viewbox 
-    draw.viewbox(0, 0, currentViewBox.width < widthContainer ? widthContainer + autoScallingOffsetMargin : currentViewBox.width, currentViewBox.height < heightContainer ? heightContainer + autoScallingOffsetMargin : currentViewBox.height)
+    draw.viewbox(0, 0, currentViewBox.width > widthContainer ? widthContainer + autoScallingOffsetMargin : currentViewBox.width, currentViewBox.height > heightContainer ? heightContainer + autoScallingOffsetMargin : currentViewBox.height)
 
     return {
         containerPos: {
@@ -251,7 +251,7 @@ export const alignLogoRight = (props: LogoProps, draw: Svg) : ContainerData => {
     
     // AUTOSCAllING
     // check if the current element occupy more than the initial size of the viewbox 
-    draw.viewbox(0, 0, currentViewBox.width < widthContainer ? widthContainer + autoScallingOffsetMargin : currentViewBox.width, currentViewBox.height < heightContainer ? heightContainer + autoScallingOffsetMargin : currentViewBox.height)
+    draw.viewbox(0, 0, currentViewBox.width > widthContainer ? widthContainer + autoScallingOffsetMargin : currentViewBox.width, currentViewBox.height > heightContainer ? heightContainer + autoScallingOffsetMargin : currentViewBox.height)
 
     return {
         containerPos: {
