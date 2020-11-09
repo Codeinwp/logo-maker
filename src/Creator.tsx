@@ -13,7 +13,7 @@ type MenuOptions = "logo" | "typography" | "layout" | "colors"
 
 const Creator: React.FunctionComponent<unknown> = () => {
     const [menuOption, setMenuOption] = React.useState<MenuOptions>("logo")
-    const store = UIStore.useState((s) => s)
+    let store = { ...UIStore.useState((s) => s) }
 
     const renderRightSidePanel = () => {
         switch (menuOption) {
@@ -28,6 +28,16 @@ const Creator: React.FunctionComponent<unknown> = () => {
         }
     }
 
+    if (window.screen.width >= 1024) {
+        store = {
+            ...store,
+            container: {
+                ...store.container,
+                width: 500,
+                height: 500,
+            },
+        }
+    }
     return (
         <div className="static flex flex-col-reverse lg:flex-col">
             <div className="flex flex-row z-10 sticky bottom-0 bg-white">

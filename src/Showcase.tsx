@@ -7,12 +7,16 @@ import ColorScheme from "color-scheme"
 import { presets } from "./assets/fonts/fonts"
 import { AssetsStore } from "./stores/AssetsStore"
 
+const defaultFontsList = new Array(logos.length).fill("Arial")
+
 const Showcase: React.FunctionComponent<unknown> = () => {
     const store = UIStore.useState((s) => s)
     const fontsStore = AssetsStore.useState((s) => s)
 
     const [colors, setColors] = React.useState<string[]>([])
-    const [fontsList, setFontsList] = React.useState<{ title: string; slogan: string }[]>([])
+    const [fontsList, setFontsList] = React.useState<{ title: string; slogan: string }[]>(
+        defaultFontsList
+    )
 
     React.useEffect(() => {
         // Generate the colors
@@ -64,11 +68,11 @@ const Showcase: React.FunctionComponent<unknown> = () => {
             })
         }
 
-        if (!fontsList.length || !colors.length) {
+        if (!colors.length) {
             return
         }
-
-        return logos.map((logoSRC, index) => {
+        console.time("render-logos")
+        const result = logos.map((logoSRC, index) => {
             return (
                 <button
                     className="hover:border-2 hover:border-blue-600"
@@ -118,13 +122,15 @@ const Showcase: React.FunctionComponent<unknown> = () => {
                 </button>
             )
         })
+        console.timeEnd("render-logos")
+        return result
     }
 
     return (
         <div className="static flex flex-col items-center">
-            <div>
+            <div className="w-full m-4 px-16 py-2">
                 <Link
-                    className="bg-blue-500 hover:bg-blue-700 text-white font-bold m-4 py-2 px-4 rounded"
+                    className="self-start bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
                     to="/start"
                 >
                     Back
