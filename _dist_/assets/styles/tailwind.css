@@ -1,0 +1,29 @@
+@tailwind base;
+
+/* Your own custom base styles */
+
+/* Start purging... */
+@tailwind components;
+/* Stop purging. */
+
+/* Your own custom component styles */
+
+/* Start purging... */
+@tailwind utilities;
+/* Stop purging. */
+
+@import "../../../web_modules/tailwindcss/dist/base.css";
+@import "../../../web_modules/tailwindcss/dist/components.css";
+@import "../../../web_modules/tailwindcss/dist/utilities.css";
+
+/* Your own custom utilities */
+.max-content {
+    width: max-content;
+}
+
+body {
+    font-family: "Noto Sans", sans-serif;
+}
+
+/*@import url("https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Amatic+SC&family=Dancing+Script&family=Henny+Penny&family=Open+Sans&family=Pacifico&family=Roboto&display=swap");
+*/

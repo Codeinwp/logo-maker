@@ -1,0 +1,12 @@
+import Logo1 from "./logo1.js";
+import Logo2 from "./logo2.js";
+import Logo3 from "./logo3.js";
+import Logo4 from "./logo4.js";
+import Logo5 from "./logo5.js";
+import Logo6 from "./logo6.js";
+import Logo7 from "./logo7.js";
+import Logo8 from "./logo8.js";
+import Logo9 from "./logo9.js";
+import Logo10 from "./logo10.js";
+export {Logo1, Logo2, Logo3, Logo4, Logo5, Logo6, Logo7, Logo8, Logo9, Logo10};
+export default [Logo1, Logo2, Logo3, Logo4, Logo5, Logo6, Logo7, Logo8, Logo9, Logo10];
