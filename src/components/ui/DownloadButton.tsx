@@ -1,6 +1,9 @@
 import * as React from "react"
+import classnames from "classnames"
 
-const DownloadButton: React.FunctionComponent<unknown> = () => {
+const DownloadButton: React.FunctionComponent<{ className?: string }> = (props: {
+    className?: string
+}) => {
     // const downloadSVGasPNG = () => {
     //     const svg = document.querySelector("#logo-image")?.childNodes[0]
 
@@ -49,7 +52,7 @@ const DownloadButton: React.FunctionComponent<unknown> = () => {
     }
 
     return (
-        <div className="container flex justify-center max-content mx-8 my-4">
+        <div className={classnames("box-border flex justify-center max-content", classnames)}>
             <button
                 onClick={() => downloadSVG()}
                 className="bg-orange-600 hover:bg-orange-400 text-white font-bold py-2 px-4 rounded inline-flex items-center"

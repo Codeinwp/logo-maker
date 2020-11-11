@@ -1,7 +1,7 @@
-import { LogoAlignOptions } from "~/components/ui/SelectLayout"
 import { Logo1, LogoSVGImport } from "../assets/logos"
 
 import { Store } from "pullstate"
+import { LogoAlignOptions } from "../components/ui/SelectLayout"
 
 export type TLogoContainer = {
     width: number

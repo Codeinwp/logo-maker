@@ -1,20 +1,29 @@
-@tailwind base;
-
-/* Your own custom base styles */
-
-/* Start purging... */
-@tailwind components;
-/* Stop purging. */
-
-/* Your own custom component styles */
-
-/* Start purging... */
-@tailwind utilities;
-/* Stop purging. */
+@import 'tailwindcss/dist/base.css';
+@import 'tailwindcss/dist/components.css';
+@import 'tailwindcss/dist/utilities.css';
 
 /* Your own custom utilities */
 .max-content {
     width: max-content;
+}
+
+.color-ui-blue-active {
+    border-color:#43C2D1;
+}
+
+.color-ui-blue-inactive {
+    border-color: #8B8B9C;
+}
+
+.color-ui-blue-inactive:hover {
+    border-color:#43C2D1;
+}
+
+.logo-maker-logo {
+    color: #FF7F66;
+    font-size: 18px;
+    font-weight: 700;
+    font-style: normal;
 }
 
 body {

@@ -5,12 +5,12 @@
 //     export default content
 // }
 
-declare module "*.svg" {
-    const content: string
-    export default content
-}
+// declare module "*.svg" {
+//     const content: string
+//     export default content
+// }
 
-declare module "color-scheme" {
-    const ColorScheme: any
-    export default ColorScheme
-}
+// declare module "color-scheme" {
+//     const ColorScheme: any
+//     export default ColorScheme
+// }

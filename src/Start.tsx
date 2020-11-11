@@ -1,5 +1,7 @@
 import * as React from "react"
 import { Link } from "react-router-dom"
+import BackUI from "./assets/ui/BackUI"
+import ThemeisleUI from "./assets/ui/ThemeisleUI"
 import UIStore from "./stores/UIStore"
 
 const Start: React.FunctionComponent<unknown> = () => {
@@ -16,7 +18,11 @@ const Start: React.FunctionComponent<unknown> = () => {
     }
 
     return (
-        <div className="flex content-center justify-center">
+        <div className="flex flex-col items-center justify-center">
+            <div className="relative flex flex-row mt-4 mb-2 lg:mb-16 w-full items-center justify-center">
+                <BackUI className="absolute left-0 top-0 ml-24" />
+                <ThemeisleUI />
+            </div>
             <div className="flex flex-col content-center justify-center lg:w-3/5 m-4 p-4 ">
                 <div className="flex flex-col my-2">
                     <h1 className="text-2xl md:text-4xl font-bold text-center font-nato-sans">
@@ -60,13 +66,7 @@ const Start: React.FunctionComponent<unknown> = () => {
                 </div>
                 <div className="flex flex-col lg:flex-row justify-center">
                     <Link
-                        className="bg-blue-500 m-1 lg:w-2/5 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded text-center"
-                        to="/"
-                    >
-                        Go to Creator
-                    </Link>
-                    <Link
-                        className="bg-blue-500 m-1 lg:w-2/5 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded text-center"
+                        className="bg-blue-500 m-1 lg:w-1/5 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded text-center"
                         to="/showcase"
                     >
                         Next

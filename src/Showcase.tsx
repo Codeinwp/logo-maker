@@ -6,6 +6,8 @@ import UIStore from "./stores/UIStore"
 import ColorScheme from "color-scheme"
 import { presets } from "./assets/fonts/fonts"
 import { AssetsStore } from "./stores/AssetsStore"
+import BackUI from "./assets/ui/BackUI"
+import ThemeisleUI from "./assets/ui/ThemeisleUI"
 
 const defaultFontsList = new Array(logos.length).fill("Arial")
 
@@ -128,13 +130,9 @@ const Showcase: React.FunctionComponent<unknown> = () => {
 
     return (
         <div className="static flex flex-col items-center">
-            <div className="w-full m-4 px-16 py-2">
-                <Link
-                    className="self-start bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-                    to="/start"
-                >
-                    Back
-                </Link>
+            <div className="relative flex flex-row mt-4 mb-2 lg:mb-16 w-full items-center justify-center">
+                <BackUI className="absolute left-0 top-0 ml-24" />
+                <ThemeisleUI />
             </div>
             <div className="m-4 lg:w-4/5">
                 <div className="flex flex-col my-4">

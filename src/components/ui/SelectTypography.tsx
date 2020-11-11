@@ -1,7 +1,7 @@
 import * as React from "react"
 import Select from "react-select"
-import { AssetsStore } from "~/stores/AssetsStore"
-import UIStore from "~/stores/UIStore"
+import { AssetsStore } from "../../stores/AssetsStore"
+import UIStore from "../../stores/UIStore"
 
 const SelectTypography: React.FunctionComponent<unknown> = () => {
     const fontOptions = AssetsStore.useState((s) => s.fonts.activeFonts).map((font) => ({
