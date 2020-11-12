@@ -114,10 +114,10 @@ export const alignLogoTop = (props: LogoProps, draw: Svg): ContainerData => {
     draw.viewbox(
         0,
         0,
-        currentViewBox.width > widthContainer
+        currentViewBox.width < widthContainer
             ? widthContainer + autoScallingOffsetMargin
             : currentViewBox.width,
-        currentViewBox.height > heightContainer
+        currentViewBox.height < heightContainer
             ? heightContainer + autoScallingOffsetMargin
             : currentViewBox.height
     )
@@ -230,10 +230,10 @@ export const alignLogoLeft = (props: LogoProps, draw: Svg): ContainerData => {
     draw.viewbox(
         0,
         0,
-        currentViewBox.width > widthContainer
+        currentViewBox.width < widthContainer
             ? widthContainer + autoScallingOffsetMargin
             : currentViewBox.width,
-        currentViewBox.height > heightContainer
+        currentViewBox.height < heightContainer
             ? heightContainer + autoScallingOffsetMargin
             : currentViewBox.height
     )
@@ -342,10 +342,10 @@ export const alignLogoRight = (props: LogoProps, draw: Svg): ContainerData => {
     draw.viewbox(
         0,
         0,
-        currentViewBox.width > widthContainer
+        currentViewBox.width < widthContainer
             ? widthContainer + autoScallingOffsetMargin
             : currentViewBox.width,
-        currentViewBox.height > heightContainer
+        currentViewBox.height < heightContainer
             ? heightContainer + autoScallingOffsetMargin
             : currentViewBox.height
     )
