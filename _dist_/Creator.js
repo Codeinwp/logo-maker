@@ -1,5 +1,10 @@
 import * as React from "../web_modules/react.js";
-import {Link} from "../web_modules/react-router-dom.js";
+import BackUI2 from "./assets/ui/BackUI.js";
+import ColorsUIsvg2 from "./assets/ui/ColorsUIsvg.js";
+import LayoutUIsvg2 from "./assets/ui/LayoutUIsvg.js";
+import LogoUIsvg2 from "./assets/ui/LogoUIsvg.js";
+import ThemeisleUI2 from "./assets/ui/ThemeisleUI.js";
+import TypographyUIsvg2 from "./assets/ui/TypographyUIsvg.js";
 import CreateLogo2 from "./components/CreateLogo.js";
 import DownloadButton2 from "./components/ui/DownloadButton.js";
 import SelectColor from "./components/ui/SelectColors.js";
@@ -14,10 +19,10 @@ const Creator = () => {
     switch (menuOption) {
       case "logo":
         return /* @__PURE__ */ React.createElement(SelectLogo2, null);
-      case "layout":
-        return /* @__PURE__ */ React.createElement(SelectLayout2, null);
       case "typography":
         return /* @__PURE__ */ React.createElement(SelectTypography2, null);
+      case "layout":
+        return /* @__PURE__ */ React.createElement(SelectLayout2, null);
       case "colors":
         return /* @__PURE__ */ React.createElement(SelectColor, null);
     }
@@ -33,15 +38,17 @@ const Creator = () => {
     };
   }
   return /* @__PURE__ */ React.createElement("div", {
-    className: "static flex flex-col-reverse lg:flex-col"
+    className: "static lg:relative flex flex-col-reverse lg:flex-col"
   }, /* @__PURE__ */ React.createElement("div", {
-    className: "flex flex-row z-10 sticky bottom-0 bg-white"
-  }, /* @__PURE__ */ React.createElement("div", {
-    className: "container flex lg:px-32 lg:w-3/4 mx-8 my-4"
-  }, /* @__PURE__ */ React.createElement(Link, {
-    className: "bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 max-content rounded",
+    className: "z-10 sticky bottom-0 bg-white lg:absolute lg:right-0 lg:top-0 lg:mr-24 lg:mt-4 lg:bg-transparent"
+  }, /* @__PURE__ */ React.createElement(DownloadButton2, {
+    className: "h-24 "
+  })), /* @__PURE__ */ React.createElement("div", {
+    className: "relative flex flex-row mt-4 mb-2 lg:mb-16 w-full items-center justify-center"
+  }, /* @__PURE__ */ React.createElement(BackUI2, {
+    className: "absolute left-0 top-0 ml-24",
     to: "/showcase"
-  }, "Back")), /* @__PURE__ */ React.createElement(DownloadButton2, null)), /* @__PURE__ */ React.createElement("div", {
+  }), /* @__PURE__ */ React.createElement(ThemeisleUI2, null)), /* @__PURE__ */ React.createElement("div", {
     className: "flex w-auto justify-center"
   }, /* @__PURE__ */ React.createElement("div", {
     className: "flex flex-initial flex-col lg:flex-row lg:w-full lg:justify-evenly"
@@ -49,19 +56,35 @@ const Creator = () => {
     className: "box-border flex w-auto justify-center lg:max-content  lg:justify-end  lg:m-16 lg:w-1/4 lg:m-1"
   }, /* @__PURE__ */ React.createElement("div", {
     className: "grid h-20 grid-cols-2 lg:h-40 lg:grid-cols-1 lg:gap-2"
-  }, /* @__PURE__ */ React.createElement("button", {
+  }, /* @__PURE__ */ React.createElement("div", {
+    className: "flex flex-row"
+  }, /* @__PURE__ */ React.createElement(LogoUIsvg2, {
+    isSelected: menuOption === "logo"
+  }), /* @__PURE__ */ React.createElement("button", {
     onClick: () => setMenuOption("logo"),
     className: "box-border w-auto p-2 text-left bg-transparent text-gray-500 font-semibold hover:text-black"
-  }, "Logo"), /* @__PURE__ */ React.createElement("button", {
+  }, "Logo")), /* @__PURE__ */ React.createElement("div", {
+    className: "flex flex-row"
+  }, /* @__PURE__ */ React.createElement(TypographyUIsvg2, {
+    isSelected: menuOption === "typography"
+  }), /* @__PURE__ */ React.createElement("button", {
     onClick: () => setMenuOption("typography"),
     className: "box-border w-auto p-2 text-left bg-transparent text-gray-500 font-semibold hover:text-black"
-  }, "Typography"), /* @__PURE__ */ React.createElement("button", {
+  }, "Typography")), /* @__PURE__ */ React.createElement("div", {
+    className: "flex flex-row"
+  }, /* @__PURE__ */ React.createElement(LayoutUIsvg2, {
+    isSelected: menuOption === "layout"
+  }), /* @__PURE__ */ React.createElement("button", {
     onClick: () => setMenuOption("layout"),
     className: "box-border w-auto p-2 text-left bg-transparent text-gray-500 font-semibold hover:text-black"
-  }, "Layout"), /* @__PURE__ */ React.createElement("button", {
+  }, "Layout")), /* @__PURE__ */ React.createElement("div", {
+    className: "flex flex-row"
+  }, /* @__PURE__ */ React.createElement(ColorsUIsvg2, {
+    isSelected: menuOption === "colors"
+  }), /* @__PURE__ */ React.createElement("button", {
     onClick: () => setMenuOption("colors"),
     className: "box-border w-auto p-2 text-left bg-transparent text-gray-500 font-semibold hover:text-black"
-  }, "Colors"))), /* @__PURE__ */ React.createElement("div", {
+  }, "Colors")))), /* @__PURE__ */ React.createElement("div", {
     className: "flex justify-center lg:py-16 lg:w-1/3"
   }, /* @__PURE__ */ React.createElement(CreateLogo2, {
     id: "image-logo",

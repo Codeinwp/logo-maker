@@ -1,5 +1,7 @@
 import * as React from "../web_modules/react.js";
 import {Link} from "../web_modules/react-router-dom.js";
+import BackUI2 from "./assets/ui/BackUI.js";
+import ThemeisleUI2 from "./assets/ui/ThemeisleUI.js";
 import UIStore2 from "./stores/UIStore.js";
 const Start = () => {
   const setTitleText = (value) => {
@@ -13,8 +15,12 @@ const Start = () => {
     });
   };
   return /* @__PURE__ */ React.createElement("div", {
-    className: "flex content-center justify-center"
+    className: "flex flex-col items-center justify-center"
   }, /* @__PURE__ */ React.createElement("div", {
+    className: "relative flex flex-row mt-4 mb-2 lg:mb-16 w-full items-center justify-center"
+  }, /* @__PURE__ */ React.createElement(BackUI2, {
+    className: "absolute left-0 top-0 ml-24"
+  }), /* @__PURE__ */ React.createElement(ThemeisleUI2, null)), /* @__PURE__ */ React.createElement("div", {
     className: "flex flex-col content-center justify-center lg:w-3/5 m-4 p-4 "
   }, /* @__PURE__ */ React.createElement("div", {
     className: "flex flex-col my-2"
@@ -49,10 +55,7 @@ const Start = () => {
   }))), /* @__PURE__ */ React.createElement("div", {
     className: "flex flex-col lg:flex-row justify-center"
   }, /* @__PURE__ */ React.createElement(Link, {
-    className: "bg-blue-500 m-1 lg:w-2/5 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded text-center",
-    to: "/"
-  }, "Go to Creator"), /* @__PURE__ */ React.createElement(Link, {
-    className: "bg-blue-500 m-1 lg:w-2/5 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded text-center",
+    className: "bg-blue-500 m-1 lg:w-1/5 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded text-center",
     to: "/showcase"
   }, "Next"))));
 };

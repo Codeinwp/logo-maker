@@ -6,6 +6,8 @@ import UIStore2 from "./stores/UIStore.js";
 import ColorScheme from "../web_modules/color-scheme.js";
 import {presets} from "./assets/fonts/fonts.js";
 import {AssetsStore as AssetsStore2} from "./stores/AssetsStore.js";
+import BackUI2 from "./assets/ui/BackUI.js";
+import ThemeisleUI2 from "./assets/ui/ThemeisleUI.js";
 const defaultFontsList = new Array(logos2.length).fill("Arial");
 const Showcase = () => {
   const store = UIStore2.useState((s) => s);
@@ -107,11 +109,10 @@ const Showcase = () => {
   return /* @__PURE__ */ React.createElement("div", {
     className: "static flex flex-col items-center"
   }, /* @__PURE__ */ React.createElement("div", {
-    className: "w-full m-4 px-16 py-2"
-  }, /* @__PURE__ */ React.createElement(Link, {
-    className: "self-start bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded",
-    to: "/start"
-  }, "Back")), /* @__PURE__ */ React.createElement("div", {
+    className: "relative flex flex-row mt-4 mb-2 lg:mb-16 w-full items-center justify-center"
+  }, /* @__PURE__ */ React.createElement(BackUI2, {
+    className: "absolute left-0 top-0 ml-24"
+  }), /* @__PURE__ */ React.createElement(ThemeisleUI2, null)), /* @__PURE__ */ React.createElement("div", {
     className: "m-4 lg:w-4/5"
   }, /* @__PURE__ */ React.createElement("div", {
     className: "flex flex-col my-4"

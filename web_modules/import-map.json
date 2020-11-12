@@ -1,6 +1,7 @@
 {
   "imports": {
     "@svgdotjs/svg.js": "./@svgdotjs/svgjs.js",
+    "classnames": "./classnames.js",
     "color-scheme": "./color-scheme.js",
     "pullstate": "./pullstate.js",
     "react": "./react.js",

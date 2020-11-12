@@ -1,5 +1,6 @@
 import * as React from "../../../web_modules/react.js";
-const DownloadButton = () => {
+import classnames2 from "../../../web_modules/classnames.js";
+const DownloadButton = (props) => {
   const downloadSVG = () => {
     const svg = document.querySelector("#image-logo")?.innerHTML;
     if (!svg) {
@@ -13,7 +14,7 @@ const DownloadButton = () => {
     element.remove();
   };
   return /* @__PURE__ */ React.createElement("div", {
-    className: "container flex justify-center max-content mx-8 my-4"
+    className: classnames2("box-border flex justify-center max-content", classnames2)
   }, /* @__PURE__ */ React.createElement("button", {
     onClick: () => downloadSVG(),
     className: "bg-orange-600 hover:bg-orange-400 text-white font-bold py-2 px-4 rounded inline-flex items-center"
