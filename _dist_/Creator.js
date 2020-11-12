@@ -42,9 +42,9 @@ const Creator = () => {
   }, /* @__PURE__ */ React.createElement("div", {
     className: "order-last z-10 p-2 h-16 sticky bottom-0 bg-white flex w-auto justify-center lg:order-1 lg:absolute lg:right-0 lg:top-0 lg:mr-24 lg:mt-4 lg:bg-transparent"
   }, /* @__PURE__ */ React.createElement(DownloadButton2, {
-    className: "w-4/5 lg:w-24"
+    className: "w-4/5 lg:w-40"
   })), /* @__PURE__ */ React.createElement("div", {
-    className: "relative flex flex-row mt-4 mb-2 lg:mb-16 w-full items-center justify-center"
+    className: "relative flex flex-row mt-8 mb-2 lg:mb-16 w-full items-center justify-center"
   }, /* @__PURE__ */ React.createElement(BackUI2, {
     className: "absolute left-0 top-0 ml-24 invisible lg:visible",
     to: "/showcase"
