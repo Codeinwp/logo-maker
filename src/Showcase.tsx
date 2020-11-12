@@ -15,6 +15,7 @@ const Showcase: React.FunctionComponent<unknown> = () => {
     const store = UIStore.useState((s) => s)
     const fontsStore = AssetsStore.useState((s) => s)
 
+    const [option, setOption] = React.useState<number>(0)
     const [colors, setColors] = React.useState<string[]>([])
     const [fontsList, setFontsList] = React.useState<{ title: string; slogan: string }[]>(
         defaultFontsList
@@ -60,16 +61,16 @@ const Showcase: React.FunctionComponent<unknown> = () => {
         setFontsList(generateFonts())
     }, [fontsStore])
 
-    const renderLogoList = () => {
-        const setOptions = (index: number) => {
-            UIStore.update((s) => {
-                s.logo.src = logos[index]
-                s.container.style.color = colors[index]
-                s.title.style.fontFamily = fontsList[index].title
-                s.slogan.style.fontFamily = fontsList[index].slogan
-            })
-        }
+    const setTemplate = (index: number) => {
+        UIStore.update((s) => {
+            s.logo.src = logos[index]
+            s.container.style.color = colors[index]
+            s.title.style.fontFamily = fontsList[index].title
+            s.slogan.style.fontFamily = fontsList[index].slogan
+        })
+    }
 
+    const renderLogoList = () => {
         if (!colors.length) {
             return
         }
@@ -77,11 +78,13 @@ const Showcase: React.FunctionComponent<unknown> = () => {
         const result = logos.map((logoSRC, index) => {
             return (
                 <button
-                    className="hover:border-2 hover:border-blue-600"
+                    className={`${
+                        index === option ? "border-4 border-blue-600" : "border-white"
+                    } border-4 hover:border-blue-600 `}
                     key={logoSRC.id}
-                    onClick={(e) => {
-                        e.preventDefault()
-                        setOptions(index)
+                    onClick={() => {
+                        // e.preventDefault()
+                        setOption(index)
                     }}
                 >
                     <CreateLogo
@@ -131,7 +134,7 @@ const Showcase: React.FunctionComponent<unknown> = () => {
     return (
         <div className="static flex flex-col items-center">
             <div className="relative flex flex-row mt-4 mb-2 lg:mb-16 w-full items-center justify-center">
-                <BackUI className="absolute left-0 top-0 ml-24" />
+                <BackUI className="absolute left-0 top-0 ml-24 invisible lg:visible" />
                 <ThemeisleUI />
             </div>
             <div className="m-4 lg:w-4/5">
@@ -155,6 +158,7 @@ const Showcase: React.FunctionComponent<unknown> = () => {
                 <Link
                     className=" block w-4/5 lg:w-1/5 my-4 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded text-center"
                     to="/"
+                    onClick={() => setTemplate(option)}
                 >
                     Next
                 </Link>

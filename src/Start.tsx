@@ -20,7 +20,7 @@ const Start: React.FunctionComponent<unknown> = () => {
     return (
         <div className="flex flex-col items-center justify-center">
             <div className="relative flex flex-row mt-4 mb-2 lg:mb-16 w-full items-center justify-center">
-                <BackUI className="absolute left-0 top-0 ml-24" />
+                <BackUI className="absolute left-0 top-0 ml-24 " />
                 <ThemeisleUI />
             </div>
             <div className="flex flex-col content-center justify-center lg:w-3/5 m-4 p-4 ">

@@ -4,6 +4,7 @@ import { LogoSVGImport } from "../../assets/logos"
 
 type SelectLogoProps = {
     logo: LogoSVGImport
+    isSelected?: boolean
     onClick: (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void
 }
 
@@ -18,9 +19,13 @@ const LogoItem: React.FunctionComponent<SelectLogoProps> = (props: SelectLogoPro
             svgItem
                 .viewbox(0, 0, svgItem.bbox().width, svgItem.bbox().height)
                 .size(50, 50)
-                .addClass("border-2 hover:border-blue-500 p-1 rounded")
+                .addClass(
+                    `border-2 hover:border-blue-500 p-1 rounded ${
+                        props?.isSelected ? "border-blue-500" : ""
+                    }`
+                )
         }
-    }, [logo.svg])
+    }, [logo.svg, props?.isSelected])
 
     return (
         <button

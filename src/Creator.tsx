@@ -1,5 +1,4 @@
 import * as React from "react"
-import classnames from "classnames"
 import BackUI from "./assets/ui/BackUI"
 import ColorsUIsvg from "./assets/ui/ColorsUIsvg"
 import LayoutUIsvg from "./assets/ui/LayoutUIsvg"
@@ -45,17 +44,20 @@ const Creator: React.FunctionComponent<unknown> = () => {
         }
     }
     return (
-        <div className="static lg:relative flex flex-col-reverse lg:flex-col">
-            <div className="z-10 sticky bottom-0 bg-white lg:absolute lg:right-0 lg:top-0 lg:mr-24 lg:mt-4 lg:bg-transparent">
-                <DownloadButton className="h-24 " />
+        <div className="static lg:relative flex flex-col lg:flex-col">
+            <div className="order-last z-10 p-2 h-16 sticky bottom-0 bg-white flex w-auto justify-center lg:order-1 lg:absolute lg:right-0 lg:top-0 lg:mr-24 lg:mt-4 lg:bg-transparent">
+                <DownloadButton className="w-4/5 lg:w-24" />
             </div>
             <div className="relative flex flex-row mt-4 mb-2 lg:mb-16 w-full items-center justify-center">
-                <BackUI className="absolute left-0 top-0 ml-24" to="/showcase" />
+                <BackUI
+                    className="absolute left-0 top-0 ml-24 invisible lg:visible"
+                    to="/showcase"
+                />
                 <ThemeisleUI />
             </div>
             <div className="flex w-auto justify-center">
                 <div className="flex flex-initial flex-col lg:flex-row lg:w-full lg:justify-evenly">
-                    <div className="box-border flex w-auto justify-center lg:max-content  lg:justify-end  lg:m-16 lg:w-1/4 lg:m-1">
+                    <div className="box-border flex w-auto justify-center m-2 lg:max-content  lg:justify-end  lg:m-16 lg:w-1/4 lg:m-1">
                         <div className="grid h-20 grid-cols-2 lg:h-40 lg:grid-cols-1 lg:gap-2">
                             <div className="flex flex-row">
                                 <LogoUIsvg isSelected={menuOption === "logo"} />
