@@ -40,7 +40,7 @@ const Creator = () => {
   return /* @__PURE__ */ React.createElement("div", {
     className: "static lg:relative flex flex-col-reverse lg:flex-col"
   }, /* @__PURE__ */ React.createElement("div", {
-    className: "z-10 sticky bottom-0 bg-white lg:absolute lg:right-0 lg:top-0 lg:mr-24 lg:mt-4 lg:bg-transparent"
+    className: "z-10 h-24 sticky bottom-0 bg-white lg:absolute lg:right-0 lg:top-0 lg:mr-24 lg:mt-4 lg:bg-transparent"
   }, /* @__PURE__ */ React.createElement(DownloadButton2, {
     className: "h-24 "
   })), /* @__PURE__ */ React.createElement("div", {

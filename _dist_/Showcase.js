@@ -12,6 +12,7 @@ const defaultFontsList = new Array(logos2.length).fill("Arial");
 const Showcase = () => {
   const store = UIStore2.useState((s) => s);
   const fontsStore = AssetsStore2.useState((s) => s);
+  const [option, setOption] = React.useState(0);
   const [colors, setColors] = React.useState([]);
   const [fontsList, setFontsList] = React.useState(defaultFontsList);
   React.useEffect(() => {
@@ -44,26 +45,25 @@ const Showcase = () => {
     };
     setFontsList(generateFonts());
   }, [fontsStore]);
+  const setTemplate = (index) => {
+    UIStore2.update((s) => {
+      s.logo.src = logos2[index];
+      s.container.style.color = colors[index];
+      s.title.style.fontFamily = fontsList[index].title;
+      s.slogan.style.fontFamily = fontsList[index].slogan;
+    });
+  };
   const renderLogoList = () => {
-    const setOptions = (index) => {
-      UIStore2.update((s) => {
-        s.logo.src = logos2[index];
-        s.container.style.color = colors[index];
-        s.title.style.fontFamily = fontsList[index].title;
-        s.slogan.style.fontFamily = fontsList[index].slogan;
-      });
-    };
     if (!colors.length) {
       return;
     }
     console.time("render-logos");
     const result = logos2.map((logoSRC, index) => {
       return /* @__PURE__ */ React.createElement("button", {
-        className: "hover:border-2 hover:border-blue-600",
+        className: `${index === option ? "border-4 border-blue-600" : "border-white"} border-4 hover:border-blue-600 `,
         key: logoSRC.id,
-        onClick: (e) => {
-          e.preventDefault();
-          setOptions(index);
+        onClick: () => {
+          setOption(index);
         }
       }, /* @__PURE__ */ React.createElement(CreateLogo2, {
         logoProps: {
@@ -128,7 +128,8 @@ const Showcase = () => {
     className: "w-full flex justify-center absolute sticky bottom-0 bg-white"
   }, /* @__PURE__ */ React.createElement(Link, {
     className: " block w-4/5 lg:w-1/5 my-4 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded text-center",
-    to: "/"
+    to: "/",
+    onClick: () => setTemplate(option)
   }, "Next")));
 };
 export default Showcase;
