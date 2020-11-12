@@ -46,9 +46,9 @@ const Creator: React.FunctionComponent<unknown> = () => {
     return (
         <div className="static lg:relative flex flex-col lg:flex-col">
             <div className="order-last z-10 p-2 h-16 sticky bottom-0 bg-white flex w-auto justify-center lg:order-1 lg:absolute lg:right-0 lg:top-0 lg:mr-24 lg:mt-4 lg:bg-transparent">
-                <DownloadButton className="w-4/5 lg:w-24" />
+                <DownloadButton className="w-4/5 lg:w-40" />
             </div>
-            <div className="relative flex flex-row mt-4 mb-2 lg:mb-16 w-full items-center justify-center">
+            <div className="relative flex flex-row mt-8 mb-2 lg:mb-16 w-full items-center justify-center">
                 <BackUI
                     className="absolute left-0 top-0 ml-24 invisible lg:visible"
                     to="/showcase"
