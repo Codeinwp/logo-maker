@@ -14,10 +14,10 @@ const DownloadButton = (props) => {
     element.remove();
   };
   return /* @__PURE__ */ React.createElement("div", {
-    className: classnames2("box-border flex justify-center max-content", classnames2)
+    className: classnames2("box-border flex justify-center", props?.className)
   }, /* @__PURE__ */ React.createElement("button", {
     onClick: () => downloadSVG(),
-    className: "bg-orange-600 hover:bg-orange-400 text-white font-bold py-2 px-4 rounded inline-flex items-center"
+    className: "w-full bg-orange-600 hover:bg-orange-400 text-white font-bold py-2 px-4 rounded inline-flex items-center justify-center"
   }, /* @__PURE__ */ React.createElement("svg", {
     className: "fill-current w-4 h-4 mr-2",
     xmlns: "http://www.w3.org/2000/svg",

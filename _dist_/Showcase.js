@@ -111,7 +111,7 @@ const Showcase = () => {
   }, /* @__PURE__ */ React.createElement("div", {
     className: "relative flex flex-row mt-4 mb-2 lg:mb-16 w-full items-center justify-center"
   }, /* @__PURE__ */ React.createElement(BackUI2, {
-    className: "absolute left-0 top-0 ml-24"
+    className: "absolute left-0 top-0 ml-24 invisible lg:visible"
   }), /* @__PURE__ */ React.createElement(ThemeisleUI2, null)), /* @__PURE__ */ React.createElement("div", {
     className: "m-4 lg:w-4/5"
   }, /* @__PURE__ */ React.createElement("div", {

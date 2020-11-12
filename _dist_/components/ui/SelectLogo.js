@@ -3,16 +3,18 @@ import logos2 from "../../assets/logos/index.js";
 import LogoItem2 from "./LogoItem.js";
 import store from "../../stores/UIStore.js";
 const SelectLogo = () => {
+  const selectedLogoID = store.useState((s) => s.logo.src.id);
   const setLogo = (logo) => {
     store.update((s) => {
       s.logo.src = logo;
     });
   };
   const renderLogos = () => {
-    return logos2.map((logo, index) => /* @__PURE__ */ React.createElement(LogoItem2, {
+    return logos2.map((logo) => /* @__PURE__ */ React.createElement(LogoItem2, {
       onClick: () => setLogo(logo),
-      key: index,
-      logo
+      key: logo.id,
+      logo,
+      isSelected: selectedLogoID === logo.id
     }));
   };
   return /* @__PURE__ */ React.createElement("div", {

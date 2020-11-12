@@ -7,9 +7,9 @@ const LogoItem = (props) => {
     if (itemRef.current) {
       itemRef.current.textContent = "";
       const svgItem = SVG().addTo(itemRef.current).svg(logo.svg);
-      svgItem.viewbox(0, 0, svgItem.bbox().width, svgItem.bbox().height).size(50, 50).addClass("border-2 hover:border-blue-500 p-1 rounded");
+      svgItem.viewbox(0, 0, svgItem.bbox().width, svgItem.bbox().height).size(50, 50).addClass(`border-2 hover:border-blue-500 p-1 rounded ${props?.isSelected ? "border-blue-500" : ""}`);
     }
-  }, [logo.svg]);
+  }, [logo.svg, props?.isSelected]);
   return /* @__PURE__ */ React.createElement("button", {
     onClick,
     style: {width: "max-content", height: "max-content"},

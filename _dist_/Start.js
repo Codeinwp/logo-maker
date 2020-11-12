@@ -19,7 +19,7 @@ const Start = () => {
   }, /* @__PURE__ */ React.createElement("div", {
     className: "relative flex flex-row mt-4 mb-2 lg:mb-16 w-full items-center justify-center"
   }, /* @__PURE__ */ React.createElement(BackUI2, {
-    className: "absolute left-0 top-0 ml-24"
+    className: "absolute left-0 top-0 ml-24 invisible lg:visible"
   }), /* @__PURE__ */ React.createElement(ThemeisleUI2, null)), /* @__PURE__ */ React.createElement("div", {
     className: "flex flex-col content-center justify-center lg:w-3/5 m-4 p-4 "
   }, /* @__PURE__ */ React.createElement("div", {
