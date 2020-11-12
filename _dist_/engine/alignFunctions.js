@@ -38,7 +38,7 @@ export const alignLogoTop = (props, draw) => {
   titleSVG.move(cx - titleDim.width / 2, logoDim.height + settings2.logo.margins.bottom + settings2.title.margins.top);
   sloganSVG.move(cx - sloganDim.width / 2, logoDim.height + titleDim.height + settings2.slogan.margins.top + (titleSVG.rbox(draw).height - titleDim.height) * 0.5);
   const currentViewBox = draw.viewbox();
-  draw.viewbox(0, 0, currentViewBox.width > widthContainer ? widthContainer + autoScallingOffsetMargin : currentViewBox.width, currentViewBox.height > heightContainer ? heightContainer + autoScallingOffsetMargin : currentViewBox.height);
+  draw.viewbox(0, 0, currentViewBox.width < widthContainer ? widthContainer + autoScallingOffsetMargin : currentViewBox.width, currentViewBox.height < heightContainer ? heightContainer + autoScallingOffsetMargin : currentViewBox.height);
   return {
     containerPos: {
       x: 0,
@@ -96,7 +96,7 @@ export const alignLogoLeft = (props, draw) => {
   titleSVG.move(logoDim.width + ctx - titleDim.width / 2, cy - (cty - titleDim.height / 2) - titleDim.height / 2);
   sloganSVG.move(logoDim.width + ctx - sloganDim.width / 2, cy + (cty - sloganDim.height / 2) - sloganDim.height / 2 + (titleSVG.rbox(draw).height - titleDim.height) * 0.5);
   const currentViewBox = draw.viewbox();
-  draw.viewbox(0, 0, currentViewBox.width > widthContainer ? widthContainer + autoScallingOffsetMargin : currentViewBox.width, currentViewBox.height > heightContainer ? heightContainer + autoScallingOffsetMargin : currentViewBox.height);
+  draw.viewbox(0, 0, currentViewBox.width < widthContainer ? widthContainer + autoScallingOffsetMargin : currentViewBox.width, currentViewBox.height < heightContainer ? heightContainer + autoScallingOffsetMargin : currentViewBox.height);
   return {
     containerPos: {
       x: 0,
@@ -154,7 +154,7 @@ export const alignLogoRight = (props, draw) => {
   titleSVG.move(ctx - titleDim.width / 2, cy - (cty - titleDim.height / 2) - titleDim.height / 2);
   sloganSVG.move(ctx - sloganDim.width / 2, cy + (cty - sloganDim.height / 2) - sloganDim.height / 2 + (titleSVG.rbox(draw).height - titleDim.height) * 0.5);
   const currentViewBox = draw.viewbox();
-  draw.viewbox(0, 0, currentViewBox.width > widthContainer ? widthContainer + autoScallingOffsetMargin : currentViewBox.width, currentViewBox.height > heightContainer ? heightContainer + autoScallingOffsetMargin : currentViewBox.height);
+  draw.viewbox(0, 0, currentViewBox.width < widthContainer ? widthContainer + autoScallingOffsetMargin : currentViewBox.width, currentViewBox.height < heightContainer ? heightContainer + autoScallingOffsetMargin : currentViewBox.height);
   return {
     containerPos: {
       x: 0,
