@@ -40,7 +40,7 @@ const Start = () => {
     id: "logo-text-input",
     value: UIStore2.useState((s) => s.title.text),
     onChange: (e) => setTitleText(e.target.value),
-    className: "shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+    className: "appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
   })), /* @__PURE__ */ React.createElement("div", {
     className: "flex flex-col lg:mx-16 my-2 p-1"
   }, /* @__PURE__ */ React.createElement("label", {
@@ -51,7 +51,7 @@ const Start = () => {
     id: "slogan-text-input",
     value: UIStore2.useState((s) => s.slogan.text),
     onChange: (e) => setSloganText(e.target.value),
-    className: "shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+    className: "appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
   }))), /* @__PURE__ */ React.createElement("div", {
     className: "flex flex-col lg:flex-row justify-center"
   }, /* @__PURE__ */ React.createElement(Link, {

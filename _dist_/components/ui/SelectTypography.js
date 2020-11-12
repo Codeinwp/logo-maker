@@ -61,7 +61,7 @@ const SelectTypography = () => {
     htmlFor: "select-title-text"
   }, "Title"), /* @__PURE__ */ React.createElement("input", {
     value: UIStore2.useState((s) => s.title.text),
-    className: "shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline",
+    className: "appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline",
     onChange: (e) => onTitleTextChange(e.target.value)
   }), /* @__PURE__ */ React.createElement("label", {
     className: "block text-gray-700 text-sm font-bold my-2",
@@ -88,7 +88,7 @@ const SelectTypography = () => {
     htmlFor: "select-slogan-text"
   }, "Slogan"), /* @__PURE__ */ React.createElement("input", {
     value: UIStore2.useState((s) => s.slogan.text),
-    className: "shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline",
+    className: "appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline",
     onChange: (e) => onSloganTextChange(e.target.value)
   }), /* @__PURE__ */ React.createElement("label", {
     className: "block text-gray-700 text-sm font-bold my-2",

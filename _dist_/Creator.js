@@ -62,28 +62,28 @@ const Creator = () => {
     isSelected: menuOption === "logo"
   }), /* @__PURE__ */ React.createElement("button", {
     onClick: () => setMenuOption("logo"),
-    className: "box-border w-auto p-2 text-left bg-transparent text-gray-500 font-semibold hover:text-black"
+    className: `box-border w-auto p-2 text-left bg-transparent font-semibold hover:text-black ${menuOption === "logo" ? "text-black" : "text-gray-500"}`
   }, "Logo")), /* @__PURE__ */ React.createElement("div", {
     className: "flex flex-row"
   }, /* @__PURE__ */ React.createElement(TypographyUIsvg2, {
     isSelected: menuOption === "typography"
   }), /* @__PURE__ */ React.createElement("button", {
     onClick: () => setMenuOption("typography"),
-    className: "box-border w-auto p-2 text-left bg-transparent text-gray-500 font-semibold hover:text-black"
+    className: `box-border w-auto p-2 text-left bg-transparent font-semibold hover:text-black ${menuOption === "typography" ? "text-black" : "text-gray-500"}`
   }, "Typography")), /* @__PURE__ */ React.createElement("div", {
     className: "flex flex-row"
   }, /* @__PURE__ */ React.createElement(LayoutUIsvg2, {
     isSelected: menuOption === "layout"
   }), /* @__PURE__ */ React.createElement("button", {
     onClick: () => setMenuOption("layout"),
-    className: "box-border w-auto p-2 text-left bg-transparent text-gray-500 font-semibold hover:text-black"
+    className: `box-border w-auto p-2 text-left bg-transparent font-semibold hover:text-black ${menuOption === "layout" ? "text-black" : "text-gray-500"}`
   }, "Layout")), /* @__PURE__ */ React.createElement("div", {
     className: "flex flex-row"
   }, /* @__PURE__ */ React.createElement(ColorsUIsvg2, {
     isSelected: menuOption === "colors"
   }), /* @__PURE__ */ React.createElement("button", {
     onClick: () => setMenuOption("colors"),
-    className: "box-border w-auto p-2 text-left bg-transparent text-gray-500 font-semibold hover:text-black"
+    className: `box-border w-auto p-2 text-left bg-transparent font-semibold hover:text-black ${menuOption === "colors" ? "text-black" : "text-gray-500"}`
   }, "Colors")))), /* @__PURE__ */ React.createElement("div", {
     className: "flex justify-center lg:py-16 lg:w-1/3"
   }, /* @__PURE__ */ React.createElement(CreateLogo2, {
