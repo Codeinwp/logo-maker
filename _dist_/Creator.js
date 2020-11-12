@@ -53,7 +53,7 @@ const Creator = () => {
   }, /* @__PURE__ */ React.createElement("div", {
     className: "flex flex-initial flex-col lg:flex-row lg:w-full lg:justify-evenly"
   }, /* @__PURE__ */ React.createElement("div", {
-    className: "box-border flex w-auto justify-center lg:max-content  lg:justify-end  lg:m-16 lg:w-1/4 lg:m-1"
+    className: "box-border flex w-auto justify-center m-2 lg:max-content  lg:justify-end  lg:m-16 lg:w-1/4 lg:m-1"
   }, /* @__PURE__ */ React.createElement("div", {
     className: "grid h-20 grid-cols-2 lg:h-40 lg:grid-cols-1 lg:gap-2"
   }, /* @__PURE__ */ React.createElement("div", {
