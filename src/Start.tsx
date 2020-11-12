@@ -45,7 +45,7 @@ const Start: React.FunctionComponent<unknown> = () => {
                             id="logo-text-input"
                             value={UIStore.useState((s) => s.title.text)}
                             onChange={(e) => setTitleText(e.target.value)}
-                            className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                            className="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                         />
                     </div>
                     <div className="flex flex-col lg:mx-16 my-2 p-1">
@@ -60,7 +60,7 @@ const Start: React.FunctionComponent<unknown> = () => {
                             id="slogan-text-input"
                             value={UIStore.useState((s) => s.slogan.text)}
                             onChange={(e) => setSloganText(e.target.value)}
-                            className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                            className="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                         />
                     </div>
                 </div>

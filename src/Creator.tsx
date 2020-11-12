@@ -1,5 +1,5 @@
 import * as React from "react"
-import { Link } from "react-router-dom"
+import classnames from "classnames"
 import BackUI from "./assets/ui/BackUI"
 import ColorsUIsvg from "./assets/ui/ColorsUIsvg"
 import LayoutUIsvg from "./assets/ui/LayoutUIsvg"
@@ -61,7 +61,9 @@ const Creator: React.FunctionComponent<unknown> = () => {
                                 <LogoUIsvg isSelected={menuOption === "logo"} />
                                 <button
                                     onClick={() => setMenuOption("logo")}
-                                    className="box-border w-auto p-2 text-left bg-transparent text-gray-500 font-semibold hover:text-black"
+                                    className={`box-border w-auto p-2 text-left bg-transparent font-semibold hover:text-black ${
+                                        menuOption === "logo" ? "text-black" : "text-gray-500"
+                                    }`}
                                 >
                                     Logo
                                 </button>
@@ -70,7 +72,9 @@ const Creator: React.FunctionComponent<unknown> = () => {
                                 <TypographyUIsvg isSelected={menuOption === "typography"} />
                                 <button
                                     onClick={() => setMenuOption("typography")}
-                                    className="box-border w-auto p-2 text-left bg-transparent text-gray-500 font-semibold hover:text-black"
+                                    className={`box-border w-auto p-2 text-left bg-transparent font-semibold hover:text-black ${
+                                        menuOption === "typography" ? "text-black" : "text-gray-500"
+                                    }`}
                                 >
                                     Typography
                                 </button>
@@ -79,7 +83,9 @@ const Creator: React.FunctionComponent<unknown> = () => {
                                 <LayoutUIsvg isSelected={menuOption === "layout"} />
                                 <button
                                     onClick={() => setMenuOption("layout")}
-                                    className="box-border w-auto p-2 text-left bg-transparent text-gray-500 font-semibold hover:text-black"
+                                    className={`box-border w-auto p-2 text-left bg-transparent font-semibold hover:text-black ${
+                                        menuOption === "layout" ? "text-black" : "text-gray-500"
+                                    }`}
                                 >
                                     Layout
                                 </button>
@@ -88,7 +94,9 @@ const Creator: React.FunctionComponent<unknown> = () => {
                                 <ColorsUIsvg isSelected={menuOption === "colors"} />
                                 <button
                                     onClick={() => setMenuOption("colors")}
-                                    className="box-border w-auto p-2 text-left bg-transparent text-gray-500 font-semibold hover:text-black"
+                                    className={`box-border w-auto p-2 text-left bg-transparent font-semibold hover:text-black ${
+                                        menuOption === "colors" ? "text-black" : "text-gray-500"
+                                    }`}
                                 >
                                     Colors
                                 </button>
