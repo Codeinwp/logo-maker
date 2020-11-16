@@ -5,7 +5,7 @@ const ThemeisleUI: React.FunctionComponent<unknown> = () => {
     return (
         <div className="flex flex-row items-center">
             <img src={themeisleImg} />
-            <p className="block m-1 logo-maker-logo">LogoMaker</p>
+            <p className="block logo-maker-logo mx-1">LogoMaker</p>
         </div>
     )
 }

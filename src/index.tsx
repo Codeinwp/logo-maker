@@ -11,7 +11,7 @@ import Showcase from "./Showcase"
 import Start from "./Start"
 import { AssetsStore } from "./stores/AssetsStore"
 
-const Application: React.FunctionComponent<unknown> = () => {
+export const Application: React.FunctionComponent<unknown> = () => {
     React.useEffect(() => {
         WebFont.load({
             google: {
