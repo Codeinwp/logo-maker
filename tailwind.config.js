@@ -5,6 +5,11 @@ module.exports = {
   },
   purge: [],
   theme: {
+    textColor: {
+      'tiblue': '#32456B',
+      'tigray': '#939393',
+      'tigrayalt': '#6A6A6A',
+    },
     extend: {},
   },
   variants: {},
