@@ -49,6 +49,8 @@ devDependencies:
   eslint-plugin-standard: 4.1.0_eslint@7.13.0
   file-loader: 6.2.0
   gh-pages: 3.1.0
+  postcss: 8.1.7
+  postcss-cli: 8.2.0_postcss@8.1.7
   prettier: 2.1.2
   sass: 1.29.0
   snowpack: 2.17.0
@@ -2479,6 +2481,12 @@ packages:
     dev: true
     resolution:
       integrity: sha1-x57Zf380y48robyXkLzDZkdLS3k=
+  /at-least-node/1.0.0:
+    dev: true
+    engines:
+      node: '>= 4.0.0'
+    resolution:
+      integrity: sha512-+q/t7Ekv1EDY2l6Gda6LLiX14rU9TV20Wa3ofeQmwPFZbOMo9DXrLbOjFaaclkXKWidIaopwAObQDqwWtGUjqg==
   /atob/2.1.2:
     dev: true
     engines:
@@ -5251,6 +5259,17 @@ packages:
       node: '>=6 <7 || >=8'
     resolution:
       integrity: sha512-yhlQgA6mnOJUKOsRUFsgJdQCvkKhcz8tlZG5HBQfReYZy46OwLcY+Zia0mtdHsOo9y/hP+CxMN0TU9QxoOtG4g==
+  /fs-extra/9.0.1:
+    dependencies:
+      at-least-node: 1.0.0
+      graceful-fs: 4.2.4
+      jsonfile: 6.1.0
+      universalify: 1.0.0
+    dev: true
+    engines:
+      node: '>=10'
+    resolution:
+      integrity: sha512-h2iAoN838FqAFJY2/qVpzFXy+EBxfVE220PalAqQLDVsFOHLJrZvut5puAbCdNv6WJk+B8ihI+k0c7JK5erwqQ==
   /fs-minipass/2.1.0:
     dependencies:
       minipass: 3.1.3
@@ -5336,6 +5355,12 @@ packages:
       node: '>=4'
     resolution:
       integrity: sha512-jp4tHawyV7+fkkSKyvjuLZswblUtz+SQKzSWnBbii16BuZksJlU1wuBYXY75r+duh/llF1ur6oNwi+2ZzjKZ7g==
+  /get-stdin/8.0.0:
+    dev: true
+    engines:
+      node: '>=10'
+    resolution:
+      integrity: sha512-sY22aA6xchAzprjyqmSEQv4UbAAzRN0L2dQB0NlN5acTTK9Don6nhoc3eAbUnpZiCANAMfd/+40kVdKfFygohg==
   /get-stream/2.3.1:
     dependencies:
       object-assign: 4.1.1
@@ -5892,6 +5917,14 @@ packages:
     dev: false
     resolution:
       integrity: sha512-BxCs6pJwhgSEUEOZjywW7OA8DXVzfHjkBelSEl0A+nEu0+zS4cFVdNOONvt55N4WOm8Pu4xqSPYxhm1Lv2iBBA==
+  /import-cwd/3.0.0:
+    dependencies:
+      import-from: 3.0.0
+    dev: true
+    engines:
+      node: '>=8'
+    resolution:
+      integrity: sha512-4pnzH16plW+hgvRECbDWpQl3cqtvSofHWh44met7ESfZ8UZOWWddm8hEyDTqREJ9RbYHY8gi8DqmaelApoOGMg==
   /import-fresh/2.0.0:
     dependencies:
       caller-path: 2.0.0
@@ -5909,6 +5942,14 @@ packages:
       node: '>=6'
     resolution:
       integrity: sha512-cTPNrlvJT6twpYy+YmKUKrTSjWFs3bjYjAhCwm+z4EOCubZxAuO+hHpRN64TqjEaYSHs7tJAE0w1CKMGmsG/lw==
+  /import-from/3.0.0:
+    dependencies:
+      resolve-from: 5.0.0
+    dev: true
+    engines:
+      node: '>=8'
+    resolution:
+      integrity: sha512-CiuXOFFSzkU5x/CR0+z7T91Iht4CXgfCxVOFRhh2Zyhg5wOpWvvDLQUsWl+gcN+QscYBjez8hDCt85O7RLDttQ==
   /import-lazy/3.1.0:
     dev: true
     engines:
@@ -6519,6 +6560,14 @@ packages:
       graceful-fs: 4.2.4
     resolution:
       integrity: sha1-h3Gq4HmbZAdrdmQPygWPnBDjPss=
+  /jsonfile/6.1.0:
+    dependencies:
+      universalify: 2.0.0
+    dev: true
+    optionalDependencies:
+      graceful-fs: 4.2.4
+    resolution:
+      integrity: sha512-5dgndWOriYSm5cnYaJNhalLNDKOqFwyDB/rr1E9ZsGciGvKPs8R2xYGCacuf3z6K1YKDz182fd+fY3cn3pMqXQ==
   /jsonschema/1.2.11:
     dev: true
     resolution:
@@ -6808,6 +6857,22 @@ packages:
     dev: true
     resolution:
       integrity: sha1-soqmKIorn8ZRA1x3EfZathkDMaY=
+  /lodash.difference/4.5.0:
+    dev: true
+    resolution:
+      integrity: sha1-nMtOUF1Ia5FlE0V3KIWi3yf9AXw=
+  /lodash.forown/4.4.0:
+    dev: true
+    resolution:
+      integrity: sha1-hRFc8E9z75ZuztUlEdOJPMRmg68=
+  /lodash.get/4.4.2:
+    dev: true
+    resolution:
+      integrity: sha1-LRd/ZS+jHpObRDjVNBSZ36OCXpk=
+  /lodash.groupby/4.6.0:
+    dev: true
+    resolution:
+      integrity: sha1-Cwih3PaDl8OXhVwyOXg4Mt90A9E=
   /lodash.memoize/4.1.2:
     dev: true
     resolution:
@@ -6827,6 +6892,14 @@ packages:
   /lodash/4.17.20:
     resolution:
       integrity: sha512-PlhdFcillOINfeV7Ni6oF1TAEayyZBoZ8bcshTHqOYJYlrqzRK5hagpagky5o4HfCzzd1TRkXPMFq6cKk9rGmA==
+  /log-symbols/4.0.0:
+    dependencies:
+      chalk: 4.1.0
+    dev: true
+    engines:
+      node: '>=10'
+    resolution:
+      integrity: sha512-FN8JBzLx6CzeMrB0tg6pqlGU1wCrXW+ZXGH481kfsBqer0hToTIiHdjH4Mq8xJUbvATujKCvaREGWpGUionraA==
   /log-update/4.0.0:
     dependencies:
       ansi-escapes: 4.3.1
@@ -8038,6 +8111,29 @@ packages:
     dev: true
     resolution:
       integrity: sha512-1tKHutbGtLtEZF6PT4JSihCHfIVldU72mZ8SdZHIYriIZ9fh9k9aWSppaT8rHsyI3dX+KSR+W+Ix9BMY3AODrg==
+  /postcss-cli/8.2.0_postcss@8.1.7:
+    dependencies:
+      chalk: 4.1.0
+      chokidar: 3.4.3
+      dependency-graph: 0.9.0
+      fs-extra: 9.0.1
+      get-stdin: 8.0.0
+      globby: 11.0.1
+      postcss: 8.1.7
+      postcss-load-config: 3.0.0
+      postcss-reporter: 7.0.1_postcss@8.1.7
+      pretty-hrtime: 1.0.3
+      read-cache: 1.0.0
+      slash: 3.0.0
+      yargs: 16.1.1
+    dev: true
+    engines:
+      node: '>=10'
+    hasBin: true
+    peerDependencies:
+      postcss: ^8.0.0
+    resolution:
+      integrity: sha512-N7tgPpB/2yXk/04irc/RiImCkftVw42STaploQBeOT1xvrIkyG+YW+TsHAJ57xWwL+b0AjXnqs5/RL/1XIh2Lw==
   /postcss-colormin/4.0.3:
     dependencies:
       browserslist: 4.14.7
@@ -8118,6 +8214,15 @@ packages:
     dev: true
     resolution:
       integrity: sha512-zS59pAk3deu6dVHyrGqmC3oDXBdNdajk4k1RyxeVXCrcEDBUBHoIhE4QTsmhxgzXxsaqFDAkUZfmMa5f/N/79w==
+  /postcss-load-config/3.0.0:
+    dependencies:
+      cosmiconfig: 7.0.0
+      import-cwd: 3.0.0
+    dev: true
+    engines:
+      node: '>= 10'
+    resolution:
+      integrity: sha512-lErrN8imuEF1cSiHBV8MiR7HeuzlDpCGNtaMyYHlOBuJHHOGw6S4xOMZp8BbXPr7AGQp14L6PZDlIOpfFJ6f7w==
   /postcss-merge-longhand/4.0.11:
     dependencies:
       css-color-names: 0.0.4
@@ -8422,6 +8527,23 @@ packages:
       node: '>=6.9.0'
     resolution:
       integrity: sha512-EEVig1Q2QJ4ELpJXMZR8Vt5DQx8/mo+dGWSR7vWXqcob2gQLyQGsionYcGKATXvQzMPn6DSN1vTN7yFximdIAg==
+  /postcss-reporter/7.0.1_postcss@8.1.7:
+    dependencies:
+      colorette: 1.2.1
+      lodash.difference: 4.5.0
+      lodash.forown: 4.4.0
+      lodash.get: 4.4.2
+      lodash.groupby: 4.6.0
+      lodash.sortby: 4.7.0
+      log-symbols: 4.0.0
+      postcss: 8.1.7
+    dev: true
+    engines:
+      node: '>=10'
+    peerDependencies:
+      postcss: ^8.1.0
+    resolution:
+      integrity: sha512-R9AK80KIqqMb+lwGRBcRkXS7r96VCTxrZvvrfibyA/dWjqctwx7leHMCC05A9HbW8PnChwOWwrmISwp5HQu5wg==
   /postcss-selector-parser/3.1.2:
     dependencies:
       dot-prop: 5.3.0
@@ -8913,7 +9035,6 @@ packages:
   /read-cache/1.0.0:
     dependencies:
       pify: 2.3.0
-    dev: false
     resolution:
       integrity: sha1-5mTvMRYRZsl1HNvo28+GtftY93Q=
   /read-pkg-up/2.0.0:
@@ -10574,6 +10695,18 @@ packages:
       node: '>= 4.0.0'
     resolution:
       integrity: sha512-rBJeI5CXAlmy1pV+617WB9J63U6XcazHHF2f2dbJix4XzpUF0RS3Zbj0FGIOCAva5P/d/GBOYaACQ1w+0azUkg==
+  /universalify/1.0.0:
+    dev: true
+    engines:
+      node: '>= 10.0.0'
+    resolution:
+      integrity: sha512-rb6X1W158d7pRQBg5gkR8uPaSfiids68LTJQYOtEUhoJUWBdaQHsuT/EUduxXYxcrt4r5PJ4fuHW1MHT6p0qug==
+  /universalify/2.0.0:
+    dev: true
+    engines:
+      node: '>= 10.0.0'
+    resolution:
+      integrity: sha512-hAZsKq7Yy11Zu1DE0OzWjw7nnLZmJZYTDZZyEFHZdUhV8FkH5MCfoU1XMaxXovpyW5nq5scPqq0ZDP9Zyl04oQ==
   /unpipe/1.0.0:
     dev: true
     engines:
@@ -11014,6 +11147,20 @@ packages:
       node: '>=10'
     resolution:
       integrity: sha512-upWFJOmDdHN0syLuESuvXDmrRcWd1QafJolHskzaw79uZa7/x53gxQKiR07W59GWY1tFhhU/Th9DrtSfpS782g==
+  /yargs/16.1.1:
+    dependencies:
+      cliui: 7.0.4
+      escalade: 3.1.1
+      get-caller-file: 2.0.5
+      require-directory: 2.1.1
+      string-width: 4.2.0
+      y18n: 5.0.5
+      yargs-parser: 20.2.4
+    dev: true
+    engines:
+      node: '>=10'
+    resolution:
+      integrity: sha512-hAD1RcFP/wfgfxgMVswPE+z3tlPFtxG8/yWUrG2i17sTWGCGqWnxKcLTF4cUKDUK8fzokwsmO9H0TDkRbMHy8w==
   /yauzl/2.10.0:
     dependencies:
       buffer-crc32: 0.2.13
@@ -11068,6 +11215,8 @@ specifiers:
   eslint-plugin-standard: ^4.0.1
   file-loader: ^6.2.0
   gh-pages: ^3.1.0
+  postcss: ^8.1.7
+  postcss-cli: ^8.2.0
   postcss-import: ^12.0.1
   prettier: ^2.0.5
   pullstate: ^1.19.1

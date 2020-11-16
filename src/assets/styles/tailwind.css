@@ -1,6 +1,11 @@
-@import 'tailwindcss/dist/base.css';
+/* @import 'tailwindcss/dist/base.css';
 @import 'tailwindcss/dist/components.css';
 @import 'tailwindcss/dist/utilities.css';
+*/
+
+@import 'tailwindcss/base';
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
 
 /* Your own custom utilities */
 .max-content {
