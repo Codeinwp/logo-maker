@@ -3,9 +3,9 @@ import themeisleImg from "./themeisle.png"
 
 const ThemeisleUI: React.FunctionComponent<unknown> = () => {
     return (
-        <div className="flex flex-row items-center">
+        <div className="logo-holder">
             <img src={themeisleImg} />
-            <p className="block logo-maker-logo mx-1">LogoMaker</p>
+            <span className="">LogoMaker</span>
         </div>
     )
 }

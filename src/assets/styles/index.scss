@@ -1,3 +1,99 @@
-.title {
-    font-size: 40px;
+@import "constants";
+
+body {
+    margin: 0;
 }
+.logo-maker {
+    max-width: 1140px;
+    margin: 15px auto;
+    font-family: $noto;
+    .top-section {
+        position: relative;
+        text-align: center;
+        .back {
+            display: inline-block;
+            position: absolute;
+            left: 0;
+            a {
+                display: flex;
+                align-items: center;
+                text-decoration: none;
+                p {
+                    color: #585858;
+                    text-transform: uppercase;
+                    font-size: 14px;
+                    font-weight: 600;
+                    margin-left: 13px;
+                }
+            }
+        }
+        .logo-holder {
+            display: inline-flex;
+            align-items: center;
+            span {
+                font-size: 18px;
+                font-weight: 700;
+                color: $orange;
+                margin: 1px 0 0 4px;
+            }
+        }
+    }
+    .content-section {
+        margin-top: 115px;
+        .titles {
+            text-align: center;
+            h1 {
+                color: $blue;
+                font-size: 36px;
+                font-weight: 700;
+                margin: 0 0 8px;
+            }
+            p {
+                color: #939393;
+                font-size: 18px;
+                font-weight: 500;
+                margin: 0;
+            }
+        }
+    }
+    .step1 {
+        margin: 50px auto 25px;
+        max-width: 480px;
+        label {
+            display: block;
+            font-size: 14px;
+            color: #6A6A6A;
+            margin-bottom: 8px;
+        }
+        input {
+            width: 100%;
+            color: $black;
+            font-weight: 500;
+            font-family: $noto;
+            padding: 18px 13px;
+            margin-bottom: 20px;
+            border: 1px solid #E7E7E7;
+            border-radius: 4px;
+            &:focus {
+                outline: none;
+                border-color: $light-blue;
+                transition: $transition;
+            }
+        }
+    }
+    .next {
+        text-align: center;
+        a {
+            color: #fff;
+            background-color: $light-blue;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 14px;
+            font-weight: 700;
+            line-height: 36px;
+            padding: 14px 80px;
+            border-radius: 4px;
+        }
+    }
+}
+
