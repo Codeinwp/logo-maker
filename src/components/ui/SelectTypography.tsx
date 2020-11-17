@@ -71,8 +71,8 @@ const SelectTypography: React.FunctionComponent<unknown> = () => {
     const defaultSloganFontSize = UIStore.useState((s) => s.slogan.style.fontSize)
 
     return (
-        <div className="w-auto overflow-y-auto overscroll-auto lg:overflow-y-visible lg:overscroll-none">
-            <div className="container m-2 p-2 flex flex-col">
+        <div className="select-typography w-auto overflow-y-auto overscroll-auto lg:overflow-y-visible lg:overscroll-none">
+            <div className="title-options container m-2 p-2 flex flex-col">
                 <h1 className="text-xl my-1 text-gray-500">LOGO</h1>
                 <label
                     className="block text-gray-700 text-sm font-bold my-2"
@@ -114,7 +114,7 @@ const SelectTypography: React.FunctionComponent<unknown> = () => {
                     onChange={onTitleFontSizeChange}
                 />
             </div>
-            <div className="container m-2 p-2 flex flex-col">
+            <div className="slogan-options container m-2 p-2 flex flex-col">
                 <h1 className="text-xl my-1">SLOGAN</h1>
                 <label
                     className="block text-gray-700 text-sm font-bold my-2"

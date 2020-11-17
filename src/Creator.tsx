@@ -44,22 +44,22 @@ const Creator: React.FunctionComponent<unknown> = () => {
         }
     }
     return (
-        <div className="static lg:relative flex flex-col lg:flex-col">
-            <div className="order-last z-10 p-2 h-16 sticky bottom-0 bg-white flex w-auto justify-center lg:order-1 lg:absolute lg:right-0 lg:top-0 lg:mr-24 lg:mt-4 lg:bg-transparent">
+        <div className="logo-creator static lg:relative flex flex-col lg:flex-col">
+            <div className="download-section order-last z-10 p-2 h-16 sticky bottom-0 bg-white flex w-auto justify-center lg:order-1 lg:absolute lg:right-0 lg:top-0 lg:mr-24 lg:mt-4 lg:bg-transparent">
                 <DownloadButton className="w-4/5 lg:w-40" />
             </div>
-            <div className="relative flex flex-row mt-8 mb-2 lg:mb-16 w-full items-center justify-center">
+            <div className="top-section relative flex flex-row mt-8 mb-2 lg:mb-16 w-full items-center justify-center">
                 <BackUI
                     className="absolute left-0 top-0 ml-24 invisible lg:visible"
                     to="/showcase"
                 />
                 <ThemeisleUI />
             </div>
-            <div className="flex w-auto justify-center">
-                <div className="flex flex-initial flex-col lg:flex-row lg:w-full lg:justify-evenly">
-                    <div className="box-border flex w-auto justify-center m-2 lg:max-content  lg:justify-end lg:w-1/4 lg:m-16">
-                        <div className="grid h-20 grid-cols-2 lg:h-40 lg:grid-cols-1 lg:gap-2">
-                            <div className="flex flex-row">
+            <div className="main-section flex w-auto justify-center">
+                <div className="container flex flex-initial flex-col lg:flex-row lg:w-full lg:justify-evenly">
+                    <div className="left-menu box-border flex w-auto justify-center m-2 lg:max-content  lg:justify-end lg:w-1/4 lg:m-16">
+                        <div className="options grid h-20 grid-cols-2 lg:h-40 lg:grid-cols-1 lg:gap-2">
+                            <div className="option flex flex-row">
                                 <LogoUIsvg isSelected={menuOption === "logo"} />
                                 <button
                                     onClick={() => setMenuOption("logo")}
@@ -70,7 +70,7 @@ const Creator: React.FunctionComponent<unknown> = () => {
                                     Logo
                                 </button>
                             </div>
-                            <div className="flex flex-row">
+                            <div className="option flex flex-row">
                                 <TypographyUIsvg isSelected={menuOption === "typography"} />
                                 <button
                                     onClick={() => setMenuOption("typography")}
@@ -81,7 +81,7 @@ const Creator: React.FunctionComponent<unknown> = () => {
                                     Typography
                                 </button>
                             </div>
-                            <div className="flex flex-row">
+                            <div className="option flex flex-row">
                                 <LayoutUIsvg isSelected={menuOption === "layout"} />
                                 <button
                                     onClick={() => setMenuOption("layout")}
@@ -92,7 +92,7 @@ const Creator: React.FunctionComponent<unknown> = () => {
                                     Layout
                                 </button>
                             </div>
-                            <div className="flex flex-row">
+                            <div className="option flex flex-row">
                                 <ColorsUIsvg isSelected={menuOption === "colors"} />
                                 <button
                                     onClick={() => setMenuOption("colors")}
@@ -105,10 +105,10 @@ const Creator: React.FunctionComponent<unknown> = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="flex justify-center lg:py-16 lg:w-1/3">
+                    <div className="logo flex justify-center lg:py-16 lg:w-1/3">
                         <CreateLogo id="image-logo" logoProps={store} />
                     </div>
-                    <div className="m-2 lg:m-16 lg:w-1/4">{renderRightSidePanel()}</div>
+                    <div className="right-menu m-2 lg:m-16 lg:w-1/4">{renderRightSidePanel()}</div>
                 </div>
             </div>
         </div>

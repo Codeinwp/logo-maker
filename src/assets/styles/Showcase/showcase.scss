@@ -1,0 +1,99 @@
+@use "../common.scss" as default;
+
+.logo-showcase {
+    max-width: 1140px;
+    margin: 15px auto;
+    font-family: $noto;
+    .top-section {
+        position: relative;
+        text-align: center;
+        .back {
+           @include default.back;
+        }
+        .logo-holder {
+			@include default.logo-holder
+        }
+    }
+    .content-section {
+        margin-top: 115px;
+        .titles {
+            text-align: center;
+            h1 {
+                color: $blue;
+                font-size: 36px;
+                font-weight: 700;
+                margin: 0 0 8px;
+            }
+            p {
+                color: #939393;
+                font-size: 18px;
+                font-weight: 500;
+                margin: 0;
+            }
+		}
+		.content {
+			margin-top: 100px;
+			.logos-container {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				justify-content: center;
+				
+				.logos {
+					display: grid;
+					gap: 1rem;
+					grid-template-columns: repeat(1, minmax(0, 1fr));
+
+					@media(min-width: 1024px) {
+						grid-template-columns: repeat(3, minmax(0, 1fr));
+					}
+
+					.logo {
+						border-width: 4px;
+						border-color: white;
+						background-color: white;
+						padding: 0px;
+
+						&.active {
+							border-color: blue;
+						}
+
+						&:hover {
+							border-color: blue;
+						}
+					}
+				}
+			}
+		}
+    }
+    
+    .next {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		position: sticky;
+		bottom: 0;
+		background-color: white;
+		padding: 5px;
+		
+        a {
+			text-align: center;
+            color: #fff;
+            background-color: $light-blue;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 20px;
+            font-weight: 700;
+            line-height: 36px;
+            padding: 12px 80px;
+			border-radius: 4px;
+			width: 80%;
+
+			@media(min-width: 1024px) {
+				font-size: 14px;
+				padding: 12px 80px;
+				width: unset;
+			}
+        }
+    }
+}

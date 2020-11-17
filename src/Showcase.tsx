@@ -78,7 +78,7 @@ const Showcase: React.FunctionComponent<unknown> = () => {
         const result = logos.map((logoSRC, index) => {
             return (
                 <button
-                    className={`${
+                    className={`logo ${
                         index === option ? "border-4 border-blue-600" : "border-white"
                     } border-4 hover:border-blue-600 `}
                     key={logoSRC.id}
@@ -132,13 +132,13 @@ const Showcase: React.FunctionComponent<unknown> = () => {
     }
 
     return (
-        <div className="static flex flex-col items-center">
-            <div className="relative flex flex-row mt-4 mb-2 lg:mb-16 w-full items-center justify-center">
+        <div className="logo-showcase static flex flex-col items-center">
+            <div className="top-section relative flex flex-row mt-4 mb-2 lg:mb-16 w-full items-center justify-center">
                 <BackUI className="absolute left-0 top-0 ml-24 invisible lg:visible" />
                 <ThemeisleUI />
             </div>
-            <div className="m-4 lg:w-4/5">
-                <div className="flex flex-col my-4">
+            <div className="content-section m-4 lg:w-4/5">
+                <div className="titles flex flex-col my-4">
                     <h1 className="text-2xl md:text-4xl font-bold text-center leading-none">
                         Choose from any of the logo templates
                     </h1>
@@ -146,17 +146,17 @@ const Showcase: React.FunctionComponent<unknown> = () => {
                         You can change this information after your designs have been created
                     </p>
                 </div>
-                <div>
-                    <div className="flex flex-col items-center justify-center text-white ">
-                        <div className="grid gap-4 grid-cols-1 lg:grid-cols-3">
+                <div className="content">
+                    <div className="logos-container flex flex-col items-center justify-center text-white ">
+                        <div className="logos grid gap-4 grid-cols-1 lg:grid-cols-3">
                             {renderLogoList()}
                         </div>
                     </div>
                 </div>
             </div>
-            <div className="w-full flex justify-center absolute sticky bottom-0 bg-white">
+            <div className="next w-full flex justify-center sticky bottom-0 bg-white">
                 <Link
-                    className=" block w-4/5 lg:w-1/5 my-4 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded text-center"
+                    className="block w-4/5 lg:w-1/5 my-4 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded text-center"
                     to="/"
                     onClick={() => setTemplate(option)}
                 >

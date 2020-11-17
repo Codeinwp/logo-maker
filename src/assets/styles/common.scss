@@ -1,0 +1,34 @@
+@import "constants";
+
+@mixin back {
+	display: inline-block;
+	position: absolute;
+	left: 0;
+	visibility: hidden;
+	a {
+		display: flex;
+		align-items: center;
+		text-decoration: none;
+		p {
+			color: #585858;
+			text-transform: uppercase;
+			font-size: 14px;
+			font-weight: 600;
+			margin-left: 13px;
+		}
+	}
+
+	@media(min-width: 1024px) {
+		visibility: visible;
+	}
+}
+@mixin logo-holder {
+	display: inline-flex;
+	align-items: center;
+	span {
+		font-size: 18px;
+		font-weight: 700;
+		color: $orange;
+		margin: 1px 0 0 4px;
+	}
+}

@@ -9,10 +9,10 @@ module.exports = {
     '@snowpack/plugin-dotenv',
     '@snowpack/plugin-typescript',
     "@snowpack/plugin-sass",
-    [
-      "@snowpack/plugin-build-script",
-      { "cmd": "postcss", "input": [".css"], "output": [".css"] }
-    ],
+    // [
+    //   "@snowpack/plugin-build-script",
+    //   { "cmd": "postcss", "input": [".css"], "output": [".css"] }
+    // ],
     ["@snowpack/plugin-webpack"],
   ],
   install: [

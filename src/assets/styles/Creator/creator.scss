@@ -1,0 +1,130 @@
+@use "../common.scss" as default;
+@use "download-button.scss" as dlButton;
+@use "select-colors.scss" as sc;
+@use "select-layout.scss" as sly;
+@use "select-logo.scss" as sl;
+@use "select-typography.scss" as st;
+
+
+.logo-creator {
+    max-width: 1140px;
+    margin: 15px auto;
+	font-family: $noto;
+	position: static;
+	display: flex;
+	flex-direction: column;
+
+	@media(min-width: 1024px) {
+		position: relative;
+	}
+
+	.download-section {
+		order: 9999;
+		z-index: 10;
+		padding: 4px;
+		position: sticky;
+		bottom: 0;
+		background-color: white;
+		height: 50px;
+
+		@media(min-width: 1024px) {
+			position: absolute;
+			right: 0;
+			top: 0;
+			margin-right: 20px;
+			background-color: transparent;
+		}
+
+		.download-button {
+			@include dlButton.download-button;
+		}
+
+	}
+
+    .top-section {
+        position: relative;
+        text-align: center;
+        .back {
+           @include default.back;
+        }
+        .logo-holder {
+			@include default.logo-holder
+        }
+    }
+    
+    .main-section {
+		margin-top: 100px;
+		.container {
+			display: flex;
+			flex-direction: column;
+			
+
+			@media(min-width: 1024px) {
+				flex-direction: row;
+			}
+
+			.left-menu {
+				display: flex;
+				justify-content: center;
+				width: 30%;
+				padding: 20px;
+				
+				@media(min-width: 1024px) {
+					justify-content: flex-end;
+				}
+
+				.options {
+					display: grid;
+					gap: 4rem;
+					grid-template-columns: repeat(2, minmax(0, 1fr));
+					height: max-content;
+
+					@media(min-width: 1024px) {
+						gap: 0.5rem;
+						grid-template-columns: repeat(1, minmax(0, 1fr));
+					}
+
+					.option {
+						display: inline-flex;
+						height: max-content;
+
+						button {
+							font-weight: 500;
+							font-size: 16px;
+							line-height: 22px;
+							background-color: transparent;
+						}
+					}
+				}
+			}
+
+			.logo {
+				display: flex;
+				justify-content: center;
+			}
+
+			.right-menu {
+				padding: 20px;
+				display: flex;
+				justify-content: center;
+				width: 40%;
+
+				.select-logo {
+					@include sl.select-logo;
+				}
+
+				.select-typography {
+					@include st.select-typography;
+				}
+
+				.select-layout {
+					@include sly.select-layout;
+				}
+
+				.select-colors {
+					@include sc.select-colors;
+				}
+			}
+		}
+	}
+}

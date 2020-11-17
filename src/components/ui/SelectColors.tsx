@@ -28,7 +28,7 @@ const SelectColor: React.FunctionComponent<unknown> = () => {
     }
 
     return (
-        <div>
+        <div className="select-colors">
             <h1 className="text-xl text-gray-500">COLOR PALETTE</h1>
             <p className="my-1">Background Color</p>
             <SliderPicker
