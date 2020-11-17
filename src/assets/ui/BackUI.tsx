@@ -7,8 +7,8 @@ const BackUI: React.FunctionComponent<{ className?: string; to?: string }> = (pr
     to?: string
 }) => {
     return (
-        <div className={classnames("flex flex-row items-center", props?.className)}>
-            <Link className="flex flex-row items-center" to={props.to || "/start"}>
+        <div className="back">
+            <Link className="" to={props.to || "/start"}>
                 <svg
                     width="42"
                     height="42"
@@ -25,7 +25,7 @@ const BackUI: React.FunctionComponent<{ className?: string; to?: string }> = (pr
                         strokeLinejoin="round"
                     />
                 </svg>
-                <p className="font-bold px-2 text-base">Back</p>
+                <p>Back</p>
             </Link>
         </div>
     )
