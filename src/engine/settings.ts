@@ -23,6 +23,14 @@ type TSettings = {
             left: number
         }
     }
+    textContainer: {
+        margins: {
+            top: number
+            bottom: number
+            right: number
+            left: number
+        }
+    }
 }
 
 export const settings: TSettings = {
@@ -50,4 +58,12 @@ export const settings: TSettings = {
             left: 2,
         },
     },
+    textContainer: {
+        margins: {
+            top: 0,
+            bottom: 0,
+            right: 10,
+            left: 10,
+        },
+    }
 }
