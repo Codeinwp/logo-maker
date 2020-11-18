@@ -205,12 +205,13 @@ export const alignLogoLeft = (props: LogoProps, draw: Svg): ContainerData => {
     const cx = widthContainer / 2
     const cy = heightContainer / 2
 
+    // Calculate the dimension for the box that contains the title and the slogan
     const textContainerWidth = Math.max(titleDim.width, sloganDim.width) + settings.textContainer.margins.left + settings.textContainer.margins.right
     const textContainerHeight = titleDim.height + sloganDim.height + settings.textContainer.margins.top + settings.textContainer.margins.bottom
     const ctx = textContainerWidth / 2
     const cty = textContainerHeight / 2
     
-
+    // Move elements to their position
     logoSVG.move(0, cy - logoDim.height / 2)
     titleSVG.move(
         logoDim.width + ctx - titleDim.width / 2,
@@ -222,10 +223,10 @@ export const alignLogoLeft = (props: LogoProps, draw: Svg): ContainerData => {
         cy + (cty - titleDim.height / 2) + sloganDim.height / 2
     )
 
-    const currentViewBox = draw.viewbox()
-
+    
     // AUTOSCAllING
     // check if the current element occupy more than the initial size of the viewbox
+    const currentViewBox = draw.viewbox()
     draw.viewbox(
         0,
         0,
@@ -324,7 +325,7 @@ export const alignLogoRight = (props: LogoProps, draw: Svg): ContainerData => {
     const ctx = textContainerWidth / 2
     const cty = textContainerHeight / 2
 
-    logoSVG.move(textContainerWidth + settings.textContainer.margins.right , cy - logoDim.height / 2)
+    logoSVG.move(textContainerWidth , cy - logoDim.height / 2)
     titleSVG.move(ctx - titleDim.width / 2, cy - titleDim.height / 2)
     sloganSVG.move(
         ctx - sloganDim.width / 2,
