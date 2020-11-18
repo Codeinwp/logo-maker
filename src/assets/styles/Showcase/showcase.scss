@@ -2,7 +2,7 @@
 @import "../constants";
 
 .logo-showcase {
-    max-width: 1140px;
+    max-width: 1470px;
     margin: 15px auto;
     font-family: $noto;
     .top-section {
@@ -33,74 +33,52 @@
             }
 		}
 		.content {
-			margin-top: 100px;
+			margin: 50px auto 100px;
 			display: flex;
 			flex-direction: column;
 			align-items: center;
 			justify-content: center;
-
 			.logos-container {
 				display: flex;
-				flex-direction: column;
-				align-items: center;
+				flex-wrap: wrap;
 				justify-content: center;
-				
-				.logos {
-					display: grid;
-					gap: 1rem;
-					grid-template-columns: repeat(1, minmax(0, 1fr));
-
-					@media(min-width: 1024px) {
-						grid-template-columns: repeat(3, minmax(0, 1fr));
+				.logo {
+					padding: 0;
+					margin: 10px;
+					border: none;
+					background: transparent;
+					svg {
+						border-radius: 10px;
 					}
+					&:focus {
+						outline: none;
+					}
+					&.active,
+					&:hover {
 
-					.logo {
-						border-width: 4px;
-						border-color: white;
-						background-color: white;
-						padding: 0px;
-						margin: 3px;
-
-						&.active {
-							border-color: blue;
-						}
-
-						&:hover {
-							border-color: blue;
-						}
 					}
 				}
 			}
 		}
     }
-    
-    .next {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		position: sticky;
+	.next {
+		position: fixed;
 		bottom: 0;
-		background-color: white;
-		padding: 5px;
-		
-        a {
-			text-align: center;
-            color: #fff;
-            background-color: $light-blue;
-            text-decoration: none;
-            text-transform: uppercase;
-            font-size: 20px;
-            font-weight: 700;
-            line-height: 36px;
-            padding: 12px 80px;
+		width: 100%;
+		left: 0;
+		background: #fff;
+		text-align: center;
+		padding: 25px 0;
+		a {
+			color: #fff;
+			background-color: $light-blue;
+			text-decoration: none;
+			text-transform: uppercase;
+			font-size: 14px;
+			font-weight: 700;
+			line-height: 36px;
+			padding: 14px 80px;
 			border-radius: 4px;
-			width: 80%;
-
-			@media(min-width: 1024px) {
-				font-size: 14px;
-				padding: 12px 80px;
-				width: unset;
-			}
-        }
-    }
+		}
+	}
 }

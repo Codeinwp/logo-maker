@@ -92,13 +92,13 @@ const Showcase: React.FunctionComponent<unknown> = () => {
                             ...store,
                             container: {
                                 ...store.container,
-                                width: 300,
-                                height: 250,
+                                width: 345,
+                                height: 280,
                                 viewbox: {
                                     x: 0,
                                     y: 0,
-                                    width: 300,
-                                    height: 250,
+                                    width: 345,
+                                    height: 280,
                                 },
                                 style: {
                                     color: colors[index],
@@ -143,9 +143,7 @@ const Showcase: React.FunctionComponent<unknown> = () => {
                     <p>You can change this information after your designs have been created</p>
                 </div>
                 <div className="content">
-                    <div>
-                        <div>{renderLogoList()}</div>
-                    </div>
+                    <div className="logos-container">{renderLogoList()}</div>
                 </div>
             </div>
             <div className="next">
