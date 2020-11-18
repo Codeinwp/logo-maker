@@ -334,7 +334,7 @@ export const alignLogoRight = (props: LogoProps, draw: Svg): ContainerData => {
 
     const currentViewBox = draw.viewbox()
 
-    // AUTOSCAllING
+    // AUTOSCAllING 
     // check if the current element occupy more than the initial size of the viewbox
     draw.viewbox(
         0,

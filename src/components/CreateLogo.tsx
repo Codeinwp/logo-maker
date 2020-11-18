@@ -55,6 +55,8 @@ const CreateLogo: React.FunctionComponent<CreateLogoPropsComponent> = (
             }
 
             moveToCenter(draw, container.viewbox, getAlignedLogo())
+
+            // addEmbeddedFont(draw, props.logoProps.title.style.fontFamily)
         }
     }, [props.logoProps])
 

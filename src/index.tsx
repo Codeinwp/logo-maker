@@ -7,6 +7,7 @@ import "./assets/styles/index.scss"
 // import "./index.css"
 // import "./assets/scss/style.scss"
 import Creator from "./Creator"
+import { generateUrlForFonts } from "./engine/googleFonts"
 import Showcase from "./Showcase"
 import Start from "./Start"
 import { AssetsStore } from "./stores/AssetsStore"
@@ -38,6 +39,11 @@ export const Application: React.FunctionComponent<unknown> = () => {
                 })
             },
         })
+
+        const googleFontsLink = document.createElement("link")
+        googleFontsLink.rel = "stylesheet"
+        googleFontsLink.href = generateUrlForFonts(fonts)
+        document.querySelector("head")?.appendChild(googleFontsLink)
     }, [])
 
     return (
