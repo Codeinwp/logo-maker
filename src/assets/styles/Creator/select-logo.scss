@@ -30,12 +30,11 @@
 		button {
 			height: max-content;
 			height: max-content;
+			background-color: white;
+			border-width: 3px solid gray;
+			border-radius: 2px;
 
 			svg {
-				border-width: 5px;
-				border-radius: 3px;
-				border-color: gray;
-
 				&:hover {
 					border-color: blue;
 				}

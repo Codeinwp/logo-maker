@@ -60,6 +60,8 @@
 						background-color: white;
 						padding: 0px;
 						margin: 3px;
+						height: max-content;
+						width: max-content;
 
 						&.active {
 							border-color: blue;
