@@ -1,3 +1,50 @@
 @mixin select-logo {
-	
+	height: auto;
+	width: auto;
+	h1 {
+		color: #939393;
+		font-size: 16px;
+		line-height: 22px;
+		font-weight: 400;
+	}
+
+	p {
+		font-size: 14px;
+		font-weight: 600;
+		line-height: 19px;
+	}
+
+	.logo-list {
+		height: 100px;
+		overflow: auto;
+		overscroll-behavior: contain;
+		display: grid;
+		grid-template-columns: repeat(3, minmax(0, 1fr));
+		gap: 4px;
+
+		@media(min-width: 1024px) {
+			height: auto;
+			overscroll-behavior: none;
+		}
+
+		button {
+			height: max-content;
+			height: max-content;
+
+			svg {
+				border-width: 5px;
+				border-radius: 3px;
+				border-color: gray;
+
+				&:hover {
+					border-color: blue;
+				}
+
+				&.active {
+					border-color: blue;
+				}
+			}
+		}
+
+	}
 }

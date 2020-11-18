@@ -11,6 +11,8 @@ import SelectColor from "./components/ui/SelectColors"
 import SelectLayout from "./components/ui/SelectLayout"
 import SelectLogo from "./components/ui/SelectLogo"
 import SelectTypography from "./components/ui/SelectTypography"
+import classnames from "classnames"
+import "../src/assets/styles/Creator/creator.scss"
 
 import UIStore from "./stores/UIStore"
 
@@ -44,71 +46,60 @@ const Creator: React.FunctionComponent<unknown> = () => {
         }
     }
     return (
-        <div className="logo-creator static lg:relative flex flex-col lg:flex-col">
-            <div className="download-section order-last z-10 p-2 h-16 sticky bottom-0 bg-white flex w-auto justify-center lg:order-1 lg:absolute lg:right-0 lg:top-0 lg:mr-24 lg:mt-4 lg:bg-transparent">
-                <DownloadButton className="w-4/5 lg:w-40" />
+        <div className="logo-creator">
+            <div className="download-section">
+                <DownloadButton />
             </div>
-            <div className="top-section relative flex flex-row mt-8 mb-2 lg:mb-16 w-full items-center justify-center">
-                <BackUI
-                    className="absolute left-0 top-0 ml-24 invisible lg:visible"
-                    to="/showcase"
-                />
+            <div className="top-section">
+                <BackUI to="/showcase" />
                 <ThemeisleUI />
             </div>
-            <div className="main-section flex w-auto justify-center">
-                <div className="container flex flex-initial flex-col lg:flex-row lg:w-full lg:justify-evenly">
-                    <div className="left-menu box-border flex w-auto justify-center m-2 lg:max-content  lg:justify-end lg:w-1/4 lg:m-16">
-                        <div className="options grid h-20 grid-cols-2 lg:h-40 lg:grid-cols-1 lg:gap-2">
-                            <div className="option flex flex-row">
+            <div className="main-section">
+                <div className="container">
+                    <div className="left-menu">
+                        <div className="options">
+                            <div className="option">
                                 <LogoUIsvg isSelected={menuOption === "logo"} />
                                 <button
                                     onClick={() => setMenuOption("logo")}
-                                    className={`box-border w-auto p-2 text-left bg-transparent font-semibold hover:text-black ${
-                                        menuOption === "logo" ? "text-black" : "text-gray-500"
-                                    }`}
+                                    className={classnames({ active: menuOption === "logo" })}
                                 >
                                     Logo
                                 </button>
                             </div>
-                            <div className="option flex flex-row">
+                            <div className="option">
                                 <TypographyUIsvg isSelected={menuOption === "typography"} />
                                 <button
                                     onClick={() => setMenuOption("typography")}
-                                    className={`box-border w-auto p-2 text-left bg-transparent font-semibold hover:text-black ${
-                                        menuOption === "typography" ? "text-black" : "text-gray-500"
-                                    }`}
+                                    className={classnames({ active: menuOption === "typography" })}
                                 >
                                     Typography
                                 </button>
                             </div>
-                            <div className="option flex flex-row">
+                            <div className="option">
                                 <LayoutUIsvg isSelected={menuOption === "layout"} />
                                 <button
                                     onClick={() => setMenuOption("layout")}
-                                    className={`box-border w-auto p-2 text-left bg-transparent font-semibold hover:text-black ${
-                                        menuOption === "layout" ? "text-black" : "text-gray-500"
-                                    }`}
+                                    className={classnames({ active: menuOption === "layout" })}
                                 >
                                     Layout
                                 </button>
                             </div>
-                            <div className="option flex flex-row">
+                            <div className="option">
                                 <ColorsUIsvg isSelected={menuOption === "colors"} />
                                 <button
                                     onClick={() => setMenuOption("colors")}
-                                    className={`box-border w-auto p-2 text-left bg-transparent font-semibold hover:text-black ${
-                                        menuOption === "colors" ? "text-black" : "text-gray-500"
-                                    }`}
+                                    className={classnames({ active: menuOption === "colors" })}
                                 >
                                     Colors
                                 </button>
                             </div>
                         </div>
                     </div>
-                    <div className="logo flex justify-center lg:py-16 lg:w-1/3">
+                    <div className="logo">
                         <CreateLogo id="image-logo" logoProps={store} />
                     </div>
-                    <div className="right-menu m-2 lg:m-16 lg:w-1/4">{renderRightSidePanel()}</div>
+                    <div className="right-menu">{renderRightSidePanel()}</div>
                 </div>
             </div>
         </div>

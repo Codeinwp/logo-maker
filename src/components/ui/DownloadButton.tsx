@@ -52,16 +52,8 @@ const DownloadButton: React.FunctionComponent<{ className?: string }> = (props: 
     }
 
     return (
-        <div
-            className={classnames(
-                "download-button box-border flex justify-center",
-                props?.className
-            )}
-        >
-            <button
-                onClick={() => downloadSVG()}
-                className="w-full bg-orange-600 hover:bg-orange-400 text-white font-bold py-2 px-4 rounded inline-flex items-center justify-center"
-            >
+        <div className={classnames("download-button", props?.className)}>
+            <button onClick={() => downloadSVG()}>
                 <svg
                     className="fill-current w-4 h-4 mr-2"
                     xmlns="http://www.w3.org/2000/svg"

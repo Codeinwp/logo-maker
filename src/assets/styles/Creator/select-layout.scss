@@ -1,3 +1,83 @@
 @mixin select-layout {
-	
+	display: flex;
+	flex-direction: column;
+
+	h1 {
+		color: #939393;
+		font-size: 16px;
+		line-height: 22px;
+		font-weight: 400;
+	}
+
+	p {
+		font-size: 14px;
+		font-weight: 600;
+		line-height: 19px;
+		margin-top: 1px;
+		margin-bottom: 5px;
+	}
+
+	.options {
+		display: flex;
+		flex-direction: column;;
+		align-items: center;
+
+		@media(min-width: 1024px) {
+			height: auto;
+			align-items: flex-start;
+		}
+
+		button {
+			box-sizing: border-box;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			height: 121px;
+			width: 168px;
+			border: 2px solid;
+			border-radius: 2px;
+			padding: 5px;
+			margin-bottom: 10px;
+
+			font-size: 14px;
+			font-weight: 600;
+			line-height: 19px;
+			color: #333333;
+
+			&.active {
+				border-color: blue;
+			}
+			
+
+			.align-top {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				justify-content: center;
+				margin: 3px;
+
+				svg {
+					margin: 1px;
+				}
+			}
+
+			.align-left {
+				display: flex;
+				flex-direction: row;
+				align-items: center;
+				justify-content: center;
+				margin: 3px;
+
+			}
+
+			.align-right {
+				display: flex;
+				flex-direction: row-reverse;
+				align-items: center;
+				justify-content: center;
+				margin: 3px;
+			}
+		}
+	}
 }

@@ -3,6 +3,7 @@ import { Link } from "react-router-dom"
 import BackUI from "./assets/ui/BackUI"
 import ThemeisleUI from "./assets/ui/ThemeisleUI"
 import UIStore from "./stores/UIStore"
+import "../src/assets/styles/Start/start.scss"
 
 const Start: React.FunctionComponent<unknown> = () => {
     const setTitleText = (value: string) => {

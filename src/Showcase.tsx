@@ -8,6 +8,8 @@ import { presets } from "./assets/fonts/fonts"
 import { AssetsStore } from "./stores/AssetsStore"
 import BackUI from "./assets/ui/BackUI"
 import ThemeisleUI from "./assets/ui/ThemeisleUI"
+import classnames from "classnames"
+import "../src/assets/styles/Showcase/showcase.scss"
 
 const defaultFontsList = new Array(logos.length).fill("Arial")
 
@@ -78,9 +80,7 @@ const Showcase: React.FunctionComponent<unknown> = () => {
         const result = logos.map((logoSRC, index) => {
             return (
                 <button
-                    className={`logo ${
-                        index === option ? "border-4 border-blue-600" : "border-white"
-                    } border-4 hover:border-blue-600 `}
+                    className={classnames("logo", { active: index === option })}
                     key={logoSRC.id}
                     onClick={() => {
                         // e.preventDefault()
@@ -132,34 +132,24 @@ const Showcase: React.FunctionComponent<unknown> = () => {
     }
 
     return (
-        <div className="logo-showcase static flex flex-col items-center">
-            <div className="top-section relative flex flex-row mt-4 mb-2 lg:mb-16 w-full items-center justify-center">
-                <BackUI className="absolute left-0 top-0 ml-24 invisible lg:visible" />
+        <div className="logo-showcase">
+            <div className="top-section">
+                <BackUI className="absolute" />
                 <ThemeisleUI />
             </div>
-            <div className="content-section m-4 lg:w-4/5">
-                <div className="titles flex flex-col my-4">
-                    <h1 className="text-2xl md:text-4xl font-bold text-center leading-none">
-                        Choose from any of the logo templates
-                    </h1>
-                    <p className="text-sm md:text-xl font-semibold lg:text-gray-600 lg:font-medium text-center my-2">
-                        You can change this information after your designs have been created
-                    </p>
+            <div className="content-section">
+                <div className="titles">
+                    <h1>Choose from any of the logo templates</h1>
+                    <p>You can change this information after your designs have been created</p>
                 </div>
                 <div className="content">
-                    <div className="logos-container flex flex-col items-center justify-center text-white ">
-                        <div className="logos grid gap-4 grid-cols-1 lg:grid-cols-3">
-                            {renderLogoList()}
-                        </div>
+                    <div>
+                        <div>{renderLogoList()}</div>
                     </div>
                 </div>
             </div>
-            <div className="next w-full flex justify-center sticky bottom-0 bg-white">
-                <Link
-                    className="block w-4/5 lg:w-1/5 my-4 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded text-center"
-                    to="/"
-                    onClick={() => setTemplate(option)}
-                >
+            <div className="next">
+                <Link className="block" to="/" onClick={() => setTemplate(option)}>
                     Next
                 </Link>
             </div>

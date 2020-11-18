@@ -24,11 +24,11 @@ const SelectLogo: React.FunctionComponent<unknown> = () => {
     }
 
     return (
-        <div className="h-auto">
-            <h1 className="text-xl text-gray-500 text-normal">{`LOGO OPTIONS (${logos.length})`}</h1>
-            <p className="my-2">Select a symbol for the logo</p>
+        <div className="select-logo">
+            <h1>{`LOGO OPTIONS (${logos.length})`}</h1>
+            <p>Select a symbol for the logo</p>
             <div
-                className="h-42 lg:h-auto overflow-auto overscroll-auto md:overscroll-contain lg:overscroll-none grid grid-cols-3 gap-4"
+                className="logo-list"
                 // style={{ maxHeight: 150 + "px", overflow: "auto" }}
             >
                 {renderLogos()}

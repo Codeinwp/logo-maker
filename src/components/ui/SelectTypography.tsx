@@ -71,26 +71,15 @@ const SelectTypography: React.FunctionComponent<unknown> = () => {
     const defaultSloganFontSize = UIStore.useState((s) => s.slogan.style.fontSize)
 
     return (
-        <div className="select-typography w-auto overflow-y-auto overscroll-auto lg:overflow-y-visible lg:overscroll-none">
-            <div className="title-options container m-2 p-2 flex flex-col">
-                <h1 className="text-xl my-1 text-gray-500">LOGO</h1>
-                <label
-                    className="block text-gray-700 text-sm font-bold my-2"
-                    htmlFor="select-title-text"
-                >
-                    Title
-                </label>
+        <div className="select-typography">
+            <div className="title-options">
+                <h1>LOGO</h1>
+                <label htmlFor="select-title-text">Title</label>
                 <input
                     value={UIStore.useState((s) => s.title.text)}
-                    className="appearance-none border border-gray-400 rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:border-blue-600"
                     onChange={(e) => onTitleTextChange(e.target.value)}
                 />
-                <label
-                    className="block text-gray-700 text-sm font-bold my-2"
-                    htmlFor="select-title-font-family"
-                >
-                    Font Family
-                </label>
+                <label htmlFor="select-title-font-family">Font Family</label>
                 <Select
                     id="select-title-font-family"
                     defaultValue={fontOptions.filter(
@@ -99,12 +88,7 @@ const SelectTypography: React.FunctionComponent<unknown> = () => {
                     onChange={onTitleFontFamilyChange}
                     options={fontOptions}
                 />
-                <label
-                    className="block text-gray-700 text-sm font-bold my-2"
-                    htmlFor="select-title-font-size"
-                >
-                    Font Size
-                </label>
+                <label htmlFor="select-title-font-size">Font Size</label>
                 <Select
                     id="select-title-font-size"
                     defaultValue={titleSizeOptions.filter(
@@ -114,25 +98,14 @@ const SelectTypography: React.FunctionComponent<unknown> = () => {
                     onChange={onTitleFontSizeChange}
                 />
             </div>
-            <div className="slogan-options container m-2 p-2 flex flex-col">
-                <h1 className="text-xl my-1">SLOGAN</h1>
-                <label
-                    className="block text-gray-700 text-sm font-bold my-2"
-                    htmlFor="select-slogan-text"
-                >
-                    Slogan
-                </label>
+            <div className="slogan-options">
+                <h1>SLOGAN</h1>
+                <label htmlFor="select-slogan-text">Slogan</label>
                 <input
                     value={UIStore.useState((s) => s.slogan.text)}
-                    className="appearance-none border border-gray-400 rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:border-blue-600"
                     onChange={(e) => onSloganTextChange(e.target.value)}
                 />
-                <label
-                    className="block text-gray-700 text-sm font-bold my-2"
-                    htmlFor="select-slogan-font-family"
-                >
-                    Font Family
-                </label>
+                <label htmlFor="select-slogan-font-family">Font Family</label>
                 <Select
                     id="select-slogan-font-family"
                     defaultValue={fontOptions.filter(
@@ -141,12 +114,7 @@ const SelectTypography: React.FunctionComponent<unknown> = () => {
                     onChange={onSloganFontFamilyChange}
                     options={fontOptions}
                 />
-                <label
-                    className="block text-gray-700 text-sm font-bold my-2"
-                    htmlFor="select-slogan-font-size"
-                >
-                    Font Size
-                </label>
+                <label htmlFor="select-slogan-font-size">Font Size</label>
                 <Select
                     id="select-slogan-font-size"
                     defaultValue={sloganSizeOptions.filter(

@@ -4,7 +4,7 @@
 @use "select-layout.scss" as sly;
 @use "select-logo.scss" as sl;
 @use "select-typography.scss" as st;
-
+@import "../constants";
 
 .logo-creator {
     max-width: 1140px;
