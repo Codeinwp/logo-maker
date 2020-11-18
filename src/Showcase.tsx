@@ -143,8 +143,8 @@ const Showcase: React.FunctionComponent<unknown> = () => {
                     <p>You can change this information after your designs have been created</p>
                 </div>
                 <div className="content">
-                    <div>
-                        <div>{renderLogoList()}</div>
+                    <div className="logos-container">
+                        <div className="logos">{renderLogoList()}</div>
                     </div>
                 </div>
             </div>
