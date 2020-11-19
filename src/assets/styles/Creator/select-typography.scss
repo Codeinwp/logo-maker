@@ -1,96 +1,65 @@
 @import "../constants.scss";
 
 @mixin select-typography {
-	width: auto;
-	overflow-y: auto;
-	overscroll-behavior: auto;
-
-	@media(min-width: 1024px) {
-		overflow-y: visible;
-		overscroll-behavior: none;
-	}
-
-	.title-options {
-		width: 100%;
-		margin: 3px;
-		padding: 3px;
-
-		display: flex;
-		flex-direction: column;
-
-		h1 {
-			font-size: 16px;
-			font-weight: 400;
-			line-height: 22px;
-			color: #939393;
-			margin-bottom: 10px;
-		}
-
-		label {
-			display: block;
-			font-weight: 500;
-			font-size: 14px;
-			line-height: 19px;
-
-			margin-bottom: 10px;
-		}
-
-		input {
-            width: 100%;
-            color: $black;
-            font-weight: 500;
-            font-family: $noto;
-            padding: 18px 13px;
-            margin-bottom: 20px;
-            border: 1px solid #E7E7E7;
-            border-radius: 4px;
-            &:focus {
-                outline: none;
-                border-color: $light-blue;
-                transition: $transition;
-            }
-        }
-	}
-
+	width: 100%;
+	.title-options,
 	.slogan-options {
 		width: 100%;
-		margin: 3px;
-		padding: 3px;
-
 		display: flex;
 		flex-direction: column;
 
-		h1 {
-			font-size: 16px;
-			font-weight: 400;
-			line-height: 22px;
-			color: #939393;
-			margin-bottom: 10px;
+	}
+	.title-options {
+		margin-bottom: 30px;
+	}
+	h1 {
+		font-size: 16px;
+		font-weight: 400;
+		line-height: 22px;
+		color: #939393;
+		margin: 0 0 15px;
+	}
+
+	label {
+		display: block;
+		font-weight: 500;
+		font-size: 14px;
+		line-height: 19px;
+		color: #6A6A6A;
+		margin-bottom: 5px;
+	}
+	input {
+		color: $black;
+		font-weight: 500;
+		font-family: $noto;
+		padding: 10px 13px;
+		margin-bottom: 20px;
+		border: 1px solid #E7E7E7;
+		border-radius: 4px;
+		&:focus {
+			outline: none;
+			border-color: $light-blue;
+			transition: $transition;
 		}
-
-		label {
-			display: block;
-			font-weight: 500;
-			font-size: 14px;
-			line-height: 19px;
-
-			margin-bottom: 10px;
+	}
+	.font-select {
+		margin-bottom: 20px;
+		font-size: 14px;
+		& > div {
+			border: 1px solid #e7e7e7;
+			& > div {
+				margin: 0 0 0 13px;
+				padding: 0;
+			}
 		}
-
 		input {
-            width: 100%;
-            color: $black;
-            font-weight: 500;
-            font-family: $noto;
-            padding: 18px 13px;
-            margin-bottom: 20px;
-            border: 1px solid #E7E7E7;
-            border-radius: 4px;
-            &:focus {
-                outline: none;
-                border-color: $light-blue;
-                transition: $transition;
-            }
-        }
+			padding: 0;
+		}
+		span {
+			width: 0;
+		}
+		svg {
+			fill: #323232;
+		}
 	}
 }
