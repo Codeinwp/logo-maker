@@ -12,6 +12,7 @@ export const Application = () => {
   React.useEffect(() => {
     const googleFontsLink = document.createElement("link");
     googleFontsLink.rel = "stylesheet";
+    googleFontsLink.type = "text/css";
     googleFontsLink.href = generateUrlForFonts(fonts2);
     googleFontsLink.onerror = () => {
       console.log("An error occurred loading the Google's fonts stylesheet!");
