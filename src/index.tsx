@@ -41,6 +41,7 @@ export const Application: React.FunctionComponent<unknown> = () => {
 
         const googleFontsLink = document.createElement("link")
         googleFontsLink.rel = "stylesheet"
+        googleFontsLink.type = "text/css"
         googleFontsLink.href = generateUrlForFonts(fonts)
         googleFontsLink.onerror = () => {
             console.log("An error occurred loading the Google's fonts stylesheet!")
