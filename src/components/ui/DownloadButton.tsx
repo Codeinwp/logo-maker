@@ -1,9 +1,13 @@
 import * as React from "react"
 import classnames from "classnames"
+import { UIStore } from "../../stores/UIStore"
+import { generateUrlForFont } from "../../engine/googleFonts"
 
 const DownloadButton: React.FunctionComponent<{ className?: string }> = (props: {
     className?: string
 }) => {
+    const font = UIStore.useState((s) => s.title.style.fontFamily)
+
     // const downloadSVGasPNG = () => {
     //     const svg = document.querySelector("#logo-image")?.childNodes[0]
 
@@ -37,11 +41,19 @@ const DownloadButton: React.FunctionComponent<{ className?: string }> = (props: 
     // }
 
     const downloadSVG = () => {
-        const svg = document.querySelector("#image-logo")?.innerHTML
+        const node = document.querySelector("#image-logo")?.cloneNode(true)
 
-        if (!svg) {
+        if (!node) {
             return
         }
+        // const defs = document.createElement("defs")
+        const style = document.createElement("style")
+        style.innerHTML = `
+                @import url("${generateUrlForFont(font)}");
+        `
+        node.firstChild?.appendChild(style)
+
+        const svg = (node as Element).innerHTML
 
         const blob = new Blob([svg.toString()])
         const element = document.createElement("a")

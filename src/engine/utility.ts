@@ -34,3 +34,7 @@ export const moveToCenter = (
 
     return container.containerElems
 }
+
+// export const addEmbeddedFont = (draw: Svg, font: string): void => {
+//     draw.font(font,`url("${generateUrlForFonts([font])}")`)
+// }

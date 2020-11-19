@@ -17,11 +17,16 @@ const Showcase: React.FunctionComponent<unknown> = () => {
     const store = UIStore.useState((s) => s)
     const fontsStore = AssetsStore.useState((s) => s)
 
+    const [fontStatus, setFontsStatus] = React.useState<"active" | "loading" | "inactive">(
+        "inactive"
+    )
     const [option, setOption] = React.useState<number>(0)
     const [colors, setColors] = React.useState<string[]>([])
     const [fontsList, setFontsList] = React.useState<{ title: string; slogan: string }[]>(
         defaultFontsList
     )
+
+    console.log(fontStatus)
 
     React.useEffect(() => {
         // Generate the colors
@@ -61,6 +66,7 @@ const Showcase: React.FunctionComponent<unknown> = () => {
         }
 
         setFontsList(generateFonts())
+        setFontsStatus("active")
     }, [fontsStore])
 
     const setTemplate = (index: number) => {
