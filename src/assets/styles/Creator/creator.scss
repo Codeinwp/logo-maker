@@ -7,7 +7,7 @@
 @import "../constants";
 
 .logo-creator {
-    max-width: 1140px;
+	max-width: 1470px;
     margin: 15px auto;
 	font-family: $noto;
 	position: static;
@@ -20,18 +20,14 @@
 
 	.download-section {
 		order: 9999;
-		z-index: 10;
 		padding: 4px;
 		position: sticky;
 		bottom: 0;
 		background-color: white;
-		height: 50px;
-
 		@media(min-width: 1024px) {
 			position: absolute;
 			right: 0;
 			top: 0;
-			margin-right: 20px;
 			background-color: transparent;
 		}
 
@@ -51,13 +47,13 @@
 			@include default.logo-holder
         }
     }
-    
+
     .main-section {
 		margin-top: 100px;
 		.container {
 			display: flex;
 			flex-direction: column;
-			
+
 
 			@media(min-width: 1024px) {
 				flex-direction: row;
@@ -65,13 +61,9 @@
 
 			.left-menu {
 				display: flex;
-				justify-content: center;
-				width: 40%;
+				justify-content: flex-start;
+				width: 30%;
 				padding: 20px;
-				
-				@media(min-width: 1024px) {
-					justify-content: flex-end;
-				}
 
 				.options {
 					display: grid;
@@ -87,12 +79,24 @@
 					.option {
 						display: inline-flex;
 						height: max-content;
+						margin-bottom: 30px;
 
 						button {
 							font-weight: 500;
 							font-size: 16px;
 							line-height: 22px;
 							background-color: transparent;
+							border: none;
+							padding: 0;
+							margin-left: 15px;
+							color: #8B8B9C;
+							transition: $transition;
+							&.active {
+								color: #333333;
+							}
+							&:focus {
+								outline: none;
+							}
 						}
 					}
 				}
@@ -101,12 +105,15 @@
 			.logo {
 				display: flex;
 				justify-content: center;
+				#image-logo {
+					padding: 30px;
+					background: #F5F7F9;
+				}
 			}
 
 			.right-menu {
-				padding: 20px;
+				padding: 0 0 0 30px;
 				display: flex;
-				justify-content: center;
 				width: 40%;
 
 				.select-logo {

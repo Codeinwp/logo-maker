@@ -15,35 +15,33 @@
 	}
 
 	.logo-list {
-		height: 100px;
+		max-height: 690px;
 		overflow: auto;
 		overscroll-behavior: contain;
 		display: grid;
 		grid-template-columns: repeat(3, minmax(0, 1fr));
 		gap: 4px;
-
-		@media(min-width: 1024px) {
-			height: auto;
-			overscroll-behavior: none;
-		}
-
+		border: 1px solid #E7E7E7;
+		border-radius: 14px;
+		padding: 15px;
 		button {
-			height: max-content;
-			height: max-content;
-			background-color: white;
-			border-width: 3px solid gray;
-			border-radius: 2px;
-
+			background: transparent;
+			border: none;
+			&:focus {
+				outline: none;
+			}
 			svg {
-				&:hover {
-					border-color: blue;
-				}
+				border: 2px solid #F1F1F1;
+				padding: 10px;
+				background: transparent;
+				border-radius: 20px;
+				transition: .3s ease all;
+				&:hover,
 
 				&.active {
-					border-color: blue;
+					border: 2px solid #43C2D1;
 				}
 			}
 		}
-
 	}
 }

@@ -40,8 +40,8 @@ const Creator: React.FunctionComponent<unknown> = () => {
             ...store,
             container: {
                 ...store.container,
-                width: 500,
-                height: 500,
+                width: 765,
+                height: 625,
             },
         }
     }

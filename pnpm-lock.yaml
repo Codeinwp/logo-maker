@@ -8,6 +8,7 @@ dependencies:
   '@types/webfontloader': 1.6.32
   classnames: 2.2.6
   color-scheme: 1.0.1
+  constants: 0.0.2
   postcss-import: 12.0.1
   pullstate: 1.20.2_react@17.0.1
   react: 17.0.1
@@ -3392,6 +3393,12 @@ packages:
     dev: true
     resolution:
       integrity: sha1-wguW2MYXdIqvHBYCF2DNJ/y4y3U=
+  /constants/0.0.2:
+    dev: false
+    engines:
+      node: '>= 0.4'
+    resolution:
+      integrity: sha1-+XO887abZJOzs2RXIxJPurziUJQ=
   /contains-path/0.1.0:
     dev: true
     engines:
@@ -11026,6 +11033,7 @@ specifiers:
   babel-loader: ^8.2.1
   classnames: ^2.2.6
   color-scheme: ^1.0.1
+  constants: 0.0.2
   core-js: ^3.7.0
   css-loader: ^5.0.1
   eslint: ^7.10.0
