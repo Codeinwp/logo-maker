@@ -7,14 +7,13 @@
 		font-size: 16px;
 		line-height: 22px;
 		font-weight: 400;
+		margin: 0 0 15px;
 	}
 
 	p {
 		font-size: 14px;
 		font-weight: 600;
-		line-height: 19px;
-		margin-top: 1px;
-		margin-bottom: 5px;
+		margin: 0 0 12px;
 	}
 
 	.options {
@@ -35,22 +34,25 @@
 			justify-content: center;
 			height: 121px;
 			width: 168px;
-			border: 2px solid;
+			border: 2px solid #F1F1F1;
 			border-radius: 10px;
 			padding: 5px;
-			margin-bottom: 10px;
-
+			margin-bottom: 20px;
 			font-size: 14px;
-			font-weight: 600;
+			font-weight: 500;
 			line-height: 19px;
-			color: #333333;
-
+			color: #8B8B9C;
 			background-color: white;
-
 			&.active {
-				border-color: blue;
+				border-color: #43C2D1;
+				span {
+					color: #333333;
+					font-weight: 600;
+				}
 			}
-			
+			span {
+				margin-top: 10px;
+			}
 
 			.align-top {
 				display: flex;
@@ -79,6 +81,9 @@
 				align-items: center;
 				justify-content: center;
 				margin: 3px;
+			}
+			&:focus {
+				outline: none;
 			}
 		}
 	}
