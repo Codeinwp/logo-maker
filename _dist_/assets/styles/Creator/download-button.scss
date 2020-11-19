@@ -1,0 +1,19 @@
+@mixin download-button {
+	box-sizing: border-box;
+	display: flex;
+	justify-content: center;
+	button {
+		background-color: #FF7F66;
+		color: white;
+		font-size: 14px;
+		font-weight: 600;
+		line-height: 36px;
+		padding: 6px 26px;
+		border-radius: 4px;
+		border: none;
+		z-index: 10;
+		&:focus {
+			outline: none;
+		}
+	}
+}

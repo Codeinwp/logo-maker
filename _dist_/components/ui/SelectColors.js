@@ -22,26 +22,18 @@ const SelectColor = () => {
       s.logo.style.fill = value.hex;
     });
   };
-  return /* @__PURE__ */ React.createElement("div", null, /* @__PURE__ */ React.createElement("h1", {
-    className: "text-xl text-gray-500"
-  }, "COLOR PALETTE"), /* @__PURE__ */ React.createElement("p", {
-    className: "my-1"
-  }, "Background Color"), /* @__PURE__ */ React.createElement(SliderPicker, {
+  return /* @__PURE__ */ React.createElement("div", {
+    className: "select-colors"
+  }, /* @__PURE__ */ React.createElement("h1", null, "COLOR PALETTE"), /* @__PURE__ */ React.createElement("p", null, "Background Color"), /* @__PURE__ */ React.createElement(SliderPicker, {
     color: UIStore2.useState((s) => s.container.style.color),
     onChangeComplete: onBackgroundColor
-  }), /* @__PURE__ */ React.createElement("p", {
-    className: "my-1"
-  }, "Logo Color"), /* @__PURE__ */ React.createElement(SliderPicker, {
+  }), /* @__PURE__ */ React.createElement("p", null, "Logo Color"), /* @__PURE__ */ React.createElement(SliderPicker, {
     color: UIStore2.useState((s) => s.logo.style.fill),
     onChangeComplete: onLogoColor
-  }), /* @__PURE__ */ React.createElement("p", {
-    className: "my-1"
-  }, "Title Color"), /* @__PURE__ */ React.createElement(SliderPicker, {
+  }), /* @__PURE__ */ React.createElement("p", null, "Title Color"), /* @__PURE__ */ React.createElement(SliderPicker, {
     color: UIStore2.useState((s) => s.title.style.color),
     onChangeComplete: onTitleColor
-  }), /* @__PURE__ */ React.createElement("p", {
-    className: "my-1"
-  }, "Slogan Color"), /* @__PURE__ */ React.createElement(SliderPicker, {
+  }), /* @__PURE__ */ React.createElement("p", null, "Slogan Color"), /* @__PURE__ */ React.createElement(SliderPicker, {
     color: UIStore2.useState((s) => s.slogan.style.color),
     onChangeComplete: onSloganColor
   }));

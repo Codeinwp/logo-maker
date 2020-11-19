@@ -1,5 +1,6 @@
 import {SVG} from "../../../web_modules/@svgdotjs/svgjs.js";
 import * as React from "../../../web_modules/react.js";
+import classnames2 from "../../../web_modules/classnames.js";
 const LogoItem = (props) => {
   const {onClick, logo} = props;
   const itemRef = React.useRef(null);
@@ -7,12 +8,11 @@ const LogoItem = (props) => {
     if (itemRef.current) {
       itemRef.current.textContent = "";
       const svgItem = SVG().addTo(itemRef.current).svg(logo.svg);
-      svgItem.viewbox(0, 0, svgItem.bbox().width, svgItem.bbox().height).size(50, 50).addClass(`border-2 hover:border-blue-500 p-1 rounded ${props?.isSelected ? "border-blue-500" : ""}`);
+      svgItem.viewbox(0, 0, svgItem.bbox().width, svgItem.bbox().height).size(50, 50).addClass(classnames2({active: props?.isSelected}));
     }
   }, [logo.svg, props?.isSelected]);
   return /* @__PURE__ */ React.createElement("button", {
     onClick,
-    style: {width: "max-content", height: "max-content"},
     ref: itemRef
   });
 };

@@ -18,13 +18,9 @@ const SelectLogo = () => {
     }));
   };
   return /* @__PURE__ */ React.createElement("div", {
-    className: "h-auto"
-  }, /* @__PURE__ */ React.createElement("h1", {
-    className: "text-xl text-gray-500 text-normal"
-  }, `LOGO OPTIONS (${logos2.length})`), /* @__PURE__ */ React.createElement("p", {
-    className: "my-2"
-  }, "Select a symbol for the logo"), /* @__PURE__ */ React.createElement("div", {
-    className: "h-42 lg:h-auto overflow-auto overscroll-auto md:overscroll-contain lg:overscroll-none grid grid-cols-3 gap-4"
+    className: "select-logo"
+  }, /* @__PURE__ */ React.createElement("h1", null, `LOGO OPTIONS (${logos2.length})`), /* @__PURE__ */ React.createElement("p", null, "Select a symbol for the logo"), /* @__PURE__ */ React.createElement("div", {
+    className: "logo-list"
   }, renderLogos()));
 };
 export default SelectLogo;

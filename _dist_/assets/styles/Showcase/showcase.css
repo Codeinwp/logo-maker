@@ -1,0 +1,108 @@
+.logo-showcase {
+  max-width: 1470px;
+  margin: 15px auto;
+  font-family: "Noto Sans", sans-serif;
+}
+.logo-showcase .top-section {
+  position: relative;
+  text-align: center;
+}
+.logo-showcase .top-section .back {
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  visibility: hidden;
+}
+.logo-showcase .top-section .back a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+.logo-showcase .top-section .back a p {
+  color: #585858;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 600;
+  margin-left: 13px;
+}
+@media (min-width: 1024px) {
+  .logo-showcase .top-section .back {
+    visibility: visible;
+  }
+}
+.logo-showcase .top-section .logo-holder {
+  display: inline-flex;
+  align-items: center;
+}
+.logo-showcase .top-section .logo-holder span {
+  font-size: 18px;
+  font-weight: 700;
+  color: #FF7F66;
+  margin: 1px 0 0 4px;
+}
+.logo-showcase .content-section {
+  margin-top: 115px;
+}
+.logo-showcase .content-section .titles {
+  text-align: center;
+}
+.logo-showcase .content-section .titles h1 {
+  color: #32456B;
+  font-size: 36px;
+  font-weight: 700;
+  margin: 0 0 8px;
+}
+.logo-showcase .content-section .titles p {
+  color: #939393;
+  font-size: 18px;
+  font-weight: 500;
+  margin: 0;
+}
+.logo-showcase .content-section .content {
+  margin: 50px auto 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.logo-showcase .content-section .content .logos-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.logo-showcase .content-section .content .logos-container .logo {
+  padding: 0;
+  margin: 10px;
+  border: none;
+  background: transparent;
+  transition: all 0.2s ease-in-out;
+}
+.logo-showcase .content-section .content .logos-container .logo svg {
+  border-radius: 10px;
+}
+.logo-showcase .content-section .content .logos-container .logo:focus {
+  outline: none;
+}
+.logo-showcase .content-section .content .logos-container .logo.active, .logo-showcase .content-section .content .logos-container .logo:hover {
+  transform: scale(1.05);
+}
+.logo-showcase .next {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  left: 0;
+  background: #fff;
+  text-align: center;
+  padding: 25px 0;
+}
+.logo-showcase .next a {
+  color: #fff;
+  background-color: #43C2D1;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 36px;
+  padding: 14px 80px;
+  border-radius: 4px;
+}

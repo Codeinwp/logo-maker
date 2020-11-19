@@ -1,0 +1,343 @@
+.logo-creator {
+  max-width: 1470px;
+  margin: 15px auto;
+  font-family: "Noto Sans", sans-serif;
+  position: static;
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 1024px) {
+  .logo-creator {
+    position: relative;
+  }
+}
+.logo-creator .download-section {
+  order: 9999;
+  padding: 4px;
+  position: sticky;
+  bottom: 0;
+  height: 100px;
+  background-color: white;
+}
+@media (min-width: 1024px) {
+  .logo-creator .download-section {
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-color: transparent;
+  }
+}
+.logo-creator .download-section .download-button {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+}
+.logo-creator .download-section .download-button button {
+  background-color: #FF7F66;
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 36px;
+  padding: 6px 26px;
+  border-radius: 4px;
+  border: none;
+  z-index: 10;
+}
+.logo-creator .download-section .download-button button:focus {
+  outline: none;
+}
+.logo-creator .top-section {
+  position: relative;
+  text-align: center;
+}
+.logo-creator .top-section .back {
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  visibility: hidden;
+}
+.logo-creator .top-section .back a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+.logo-creator .top-section .back a p {
+  color: #585858;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 600;
+  margin-left: 13px;
+}
+@media (min-width: 1024px) {
+  .logo-creator .top-section .back {
+    visibility: visible;
+  }
+}
+.logo-creator .top-section .logo-holder {
+  display: inline-flex;
+  align-items: center;
+}
+.logo-creator .top-section .logo-holder span {
+  font-size: 18px;
+  font-weight: 700;
+  color: #FF7F66;
+  margin: 1px 0 0 4px;
+}
+.logo-creator .main-section {
+  margin-top: 100px;
+}
+.logo-creator .main-section .container {
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 1024px) {
+  .logo-creator .main-section .container {
+    flex-direction: row;
+  }
+}
+.logo-creator .main-section .container .left-menu {
+  display: flex;
+  justify-content: flex-start;
+  width: 30%;
+  padding: 20px;
+}
+.logo-creator .main-section .container .left-menu .options {
+  display: grid;
+  gap: 4rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  height: max-content;
+}
+@media (min-width: 1024px) {
+  .logo-creator .main-section .container .left-menu .options {
+    gap: 0.5rem;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+}
+.logo-creator .main-section .container .left-menu .options .option {
+  display: inline-flex;
+  height: max-content;
+  margin-bottom: 30px;
+}
+.logo-creator .main-section .container .left-menu .options .option button {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 22px;
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  margin-left: 15px;
+  color: #8B8B9C;
+  transition: 0.3s ease all;
+}
+.logo-creator .main-section .container .left-menu .options .option button.active {
+  color: #333333;
+}
+.logo-creator .main-section .container .left-menu .options .option button:focus {
+  outline: none;
+}
+.logo-creator .main-section .container .logo {
+  display: flex;
+  justify-content: center;
+}
+.logo-creator .main-section .container .logo #image-logo {
+  padding: 30px;
+  background: #F5F7F9;
+}
+.logo-creator .main-section .container .right-menu {
+  padding: 0 0 0 30px;
+  display: flex;
+  width: 40%;
+}
+.logo-creator .main-section .container .right-menu .select-logo {
+  height: auto;
+  width: auto;
+}
+.logo-creator .main-section .container .right-menu .select-logo h1 {
+  color: #939393;
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 400;
+}
+.logo-creator .main-section .container .right-menu .select-logo p {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 19px;
+}
+.logo-creator .main-section .container .right-menu .select-logo .logo-list {
+  max-height: 690px;
+  overflow: auto;
+  overscroll-behavior: contain;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 4px;
+  border: 1px solid #E7E7E7;
+  border-radius: 14px;
+  padding: 15px;
+}
+.logo-creator .main-section .container .right-menu .select-logo .logo-list button {
+  background: transparent;
+  border: none;
+}
+.logo-creator .main-section .container .right-menu .select-logo .logo-list button:focus {
+  outline: none;
+}
+.logo-creator .main-section .container .right-menu .select-logo .logo-list button svg {
+  border: 2px solid #F1F1F1;
+  padding: 10px;
+  background: transparent;
+  border-radius: 20px;
+  transition: 0.3s ease all;
+}
+.logo-creator .main-section .container .right-menu .select-logo .logo-list button svg:hover, .logo-creator .main-section .container .right-menu .select-logo .logo-list button svg.active {
+  border: 2px solid #43C2D1;
+}
+.logo-creator .main-section .container .right-menu .select-typography {
+  width: 100%;
+}
+.logo-creator .main-section .container .right-menu .select-typography .title-options,
+.logo-creator .main-section .container .right-menu .select-typography .slogan-options {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.logo-creator .main-section .container .right-menu .select-typography .title-options {
+  margin-bottom: 30px;
+}
+.logo-creator .main-section .container .right-menu .select-typography h1 {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22px;
+  color: #939393;
+  margin: 0 0 15px;
+}
+.logo-creator .main-section .container .right-menu .select-typography label {
+  display: block;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 19px;
+  color: #6A6A6A;
+  margin-bottom: 5px;
+}
+.logo-creator .main-section .container .right-menu .select-typography input {
+  color: #393939;
+  font-weight: 500;
+  font-family: "Noto Sans", sans-serif;
+  padding: 10px 13px;
+  margin-bottom: 20px;
+  border: 1px solid #E7E7E7;
+  border-radius: 4px;
+}
+.logo-creator .main-section .container .right-menu .select-typography input:focus {
+  outline: none;
+  border-color: #43C2D1;
+  transition: 0.3s ease all;
+}
+.logo-creator .main-section .container .right-menu .select-typography .font-select {
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+.logo-creator .main-section .container .right-menu .select-typography .font-select > div {
+  border: 1px solid #e7e7e7;
+}
+.logo-creator .main-section .container .right-menu .select-typography .font-select > div > div {
+  margin: 0 0 0 13px;
+  padding: 0;
+}
+.logo-creator .main-section .container .right-menu .select-typography .font-select input {
+  padding: 0;
+}
+.logo-creator .main-section .container .right-menu .select-typography .font-select span {
+  width: 0;
+}
+.logo-creator .main-section .container .right-menu .select-typography .font-select svg {
+  fill: #323232;
+}
+.logo-creator .main-section .container .right-menu .select-layout {
+  display: flex;
+  flex-direction: column;
+}
+.logo-creator .main-section .container .right-menu .select-layout h1 {
+  color: #939393;
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 400;
+}
+.logo-creator .main-section .container .right-menu .select-layout p {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 19px;
+  margin-top: 1px;
+  margin-bottom: 5px;
+}
+.logo-creator .main-section .container .right-menu .select-layout .options {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media (min-width: 1024px) {
+  .logo-creator .main-section .container .right-menu .select-layout .options {
+    height: auto;
+    align-items: flex-start;
+  }
+}
+.logo-creator .main-section .container .right-menu .select-layout .options button {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 121px;
+  width: 168px;
+  border: 2px solid;
+  border-radius: 10px;
+  padding: 5px;
+  margin-bottom: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 19px;
+  color: #333333;
+  background-color: white;
+}
+.logo-creator .main-section .container .right-menu .select-layout .options button.active {
+  border-color: blue;
+}
+.logo-creator .main-section .container .right-menu .select-layout .options button .align-top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 3px;
+}
+.logo-creator .main-section .container .right-menu .select-layout .options button .align-top svg {
+  margin: 1px;
+}
+.logo-creator .main-section .container .right-menu .select-layout .options button .align-left {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin: 3px;
+}
+.logo-creator .main-section .container .right-menu .select-layout .options button .align-right {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: center;
+  margin: 3px;
+}
+.logo-creator .main-section .container .right-menu .select-colors {
+  width: 80%;
+}
+.logo-creator .main-section .container .right-menu .select-colors h1 {
+  color: #939393;
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 400;
+}
+.logo-creator .main-section .container .right-menu .select-colors p {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 19px;
+  margin-top: 1px;
+  margin-bottom: 1px;
+}

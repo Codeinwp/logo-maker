@@ -17,8 +17,8 @@ export const alignLogoTop = (props, draw) => {
   }).move(0, 0);
   titleSVG.leading(0);
   const titleDim = {
-    height: settings2.title.margins.top + title.style.fontSize + settings2.title.margins.bottom,
-    width: settings2.title.margins.left + titleSVG.rbox(draw).width + settings2.title.margins.bottom
+    height: settings2.title.margins.top + titleSVG.bbox().height + settings2.title.margins.bottom,
+    width: settings2.title.margins.left + titleSVG.bbox().width + settings2.title.margins.bottom
   };
   const sloganSVG = draw.plain(slogan.text).font({
     fill: slogan.style.color,
@@ -27,8 +27,8 @@ export const alignLogoTop = (props, draw) => {
   }).move(0, 0);
   sloganSVG.leading(0);
   const sloganDim = {
-    height: settings2.slogan.margins.top + slogan.style.fontSize + settings2.slogan.margins.bottom,
-    width: settings2.slogan.margins.left + sloganSVG.rbox(draw).width + settings2.slogan.margins.bottom
+    height: settings2.slogan.margins.top + sloganSVG.bbox().height + settings2.slogan.margins.bottom,
+    width: settings2.slogan.margins.left + sloganSVG.bbox().width + settings2.slogan.margins.bottom
   };
   const widthContainer = Math.max(logoDim.width, titleDim.width, sloganDim.width);
   const heightContainer = logoDim.height + titleDim.height + sloganDim.height;
@@ -71,8 +71,8 @@ export const alignLogoLeft = (props, draw) => {
   }).move(0, 0);
   titleSVG.leading(0);
   const titleDim = {
-    height: settings2.title.margins.top + title.style.fontSize + settings2.title.margins.bottom,
-    width: settings2.title.margins.left + titleSVG.rbox(draw).width + settings2.title.margins.bottom
+    height: settings2.title.margins.top + titleSVG.bbox().height + settings2.title.margins.bottom,
+    width: settings2.title.margins.left + titleSVG.bbox().width + settings2.title.margins.bottom
   };
   const sloganSVG = draw.text(slogan.text).font({
     fill: slogan.style.color,
@@ -81,22 +81,22 @@ export const alignLogoLeft = (props, draw) => {
   }).move(0, 0);
   sloganSVG.leading(0);
   const sloganDim = {
-    height: settings2.slogan.margins.top + slogan.style.fontSize + settings2.slogan.margins.bottom,
-    width: settings2.slogan.margins.left + sloganSVG.rbox(draw).width + settings2.slogan.margins.bottom
+    height: settings2.slogan.margins.top + sloganSVG.bbox().height + settings2.slogan.margins.bottom,
+    width: settings2.slogan.margins.left + sloganSVG.bbox().width + settings2.slogan.margins.bottom
   };
   const widthContainer = logo.width + Math.max(titleDim.width, sloganDim.width);
   const heightContainer = Math.max(logo.height, titleDim.height + sloganDim.height);
   const cx = widthContainer / 2;
   const cy = heightContainer / 2;
-  const textContainerWidth = Math.max(titleDim.width, sloganDim.width);
-  const textContainerHeight = titleDim.height + sloganDim.height;
+  const textContainerWidth = Math.max(titleDim.width, sloganDim.width) + settings2.textContainer.margins.left + settings2.textContainer.margins.right;
+  const textContainerHeight = titleDim.height + sloganDim.height + settings2.textContainer.margins.top + settings2.textContainer.margins.bottom;
   const ctx = textContainerWidth / 2;
   const cty = textContainerHeight / 2;
   logoSVG.move(0, cy - logoDim.height / 2);
-  titleSVG.move(logoDim.width + ctx - titleDim.width / 2, cy - (cty - titleDim.height / 2) - titleDim.height / 2);
-  sloganSVG.move(logoDim.width + ctx - sloganDim.width / 2, cy + (cty - sloganDim.height / 2) - sloganDim.height / 2 + (titleSVG.rbox(draw).height - titleDim.height) * 0.5);
+  titleSVG.move(logoDim.width + ctx - titleDim.width / 2, cy - titleDim.height / 2);
+  sloganSVG.move(logoDim.width + ctx - sloganDim.width / 2, cy + (cty - titleDim.height / 2) + sloganDim.height / 2);
   const currentViewBox = draw.viewbox();
-  draw.viewbox(0, 0, currentViewBox.width < widthContainer ? widthContainer + autoScallingOffsetMargin : currentViewBox.width, currentViewBox.height < heightContainer ? heightContainer + autoScallingOffsetMargin : currentViewBox.height);
+  draw.viewbox(0, 0, currentViewBox.width < widthContainer ? widthContainer : currentViewBox.width + autoScallingOffsetMargin, currentViewBox.height < heightContainer ? heightContainer : currentViewBox.height + autoScallingOffsetMargin);
   return {
     containerPos: {
       x: 0,
@@ -129,8 +129,8 @@ export const alignLogoRight = (props, draw) => {
   }).move(0, 0);
   titleSVG.leading(0);
   const titleDim = {
-    height: settings2.title.margins.top + title.style.fontSize + settings2.title.margins.bottom,
-    width: settings2.title.margins.left + titleSVG.rbox(draw).width + settings2.title.margins.bottom
+    height: settings2.title.margins.top + titleSVG.bbox().height + settings2.title.margins.bottom,
+    width: settings2.title.margins.left + titleSVG.bbox().width + settings2.title.margins.bottom
   };
   const sloganSVG = draw.text(slogan.text).font({
     fill: slogan.style.color,
@@ -139,22 +139,22 @@ export const alignLogoRight = (props, draw) => {
   }).move(0, 0);
   sloganSVG.leading(0);
   const sloganDim = {
-    height: settings2.slogan.margins.top + slogan.style.fontSize + settings2.slogan.margins.bottom,
-    width: settings2.slogan.margins.left + sloganSVG.rbox(draw).width + settings2.slogan.margins.bottom
+    height: settings2.slogan.margins.top + sloganSVG.bbox().height + settings2.slogan.margins.bottom,
+    width: settings2.slogan.margins.left + sloganSVG.bbox().width + settings2.slogan.margins.bottom
   };
   const widthContainer = logo.width + Math.max(titleDim.width, sloganDim.width);
   const heightContainer = Math.max(logoDim.height, titleDim.height + sloganDim.height);
   const cx = widthContainer / 2;
   const cy = heightContainer / 2;
-  const textContainerWidth = Math.max(titleDim.width, sloganDim.width);
-  const textContainerHeight = titleDim.height + sloganDim.height;
+  const textContainerWidth = Math.max(titleDim.width, sloganDim.width) + settings2.textContainer.margins.left + settings2.textContainer.margins.right;
+  const textContainerHeight = titleDim.height + sloganDim.height + settings2.textContainer.margins.top + settings2.textContainer.margins.bottom;
   const ctx = textContainerWidth / 2;
   const cty = textContainerHeight / 2;
   logoSVG.move(textContainerWidth, cy - logoDim.height / 2);
-  titleSVG.move(ctx - titleDim.width / 2, cy - (cty - titleDim.height / 2) - titleDim.height / 2);
-  sloganSVG.move(ctx - sloganDim.width / 2, cy + (cty - sloganDim.height / 2) - sloganDim.height / 2 + (titleSVG.rbox(draw).height - titleDim.height) * 0.5);
+  titleSVG.move(ctx - titleDim.width / 2, cy - titleDim.height / 2);
+  sloganSVG.move(ctx - sloganDim.width / 2, cy + (cty - titleDim.height / 2) + sloganDim.height / 2);
   const currentViewBox = draw.viewbox();
-  draw.viewbox(0, 0, currentViewBox.width < widthContainer ? widthContainer + autoScallingOffsetMargin : currentViewBox.width, currentViewBox.height < heightContainer ? heightContainer + autoScallingOffsetMargin : currentViewBox.height);
+  draw.viewbox(0, 0, currentViewBox.width < widthContainer ? widthContainer : currentViewBox.width + autoScallingOffsetMargin, currentViewBox.height < heightContainer ? heightContainer : currentViewBox.height + autoScallingOffsetMargin);
   return {
     containerPos: {
       x: 0,

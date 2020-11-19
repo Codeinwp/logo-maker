@@ -8,13 +8,17 @@ import {presets} from "./assets/fonts/fonts.js";
 import {AssetsStore as AssetsStore2} from "./stores/AssetsStore.js";
 import BackUI2 from "./assets/ui/BackUI.js";
 import ThemeisleUI2 from "./assets/ui/ThemeisleUI.js";
+import classnames2 from "../web_modules/classnames.js";
+import "./assets/styles/Showcase/showcase.css.proxy.js";
 const defaultFontsList = new Array(logos2.length).fill("Arial");
 const Showcase = () => {
   const store = UIStore2.useState((s) => s);
   const fontsStore = AssetsStore2.useState((s) => s);
+  const [fontStatus, setFontsStatus] = React.useState("inactive");
   const [option, setOption] = React.useState(0);
   const [colors, setColors] = React.useState([]);
   const [fontsList, setFontsList] = React.useState(defaultFontsList);
+  console.log(fontStatus);
   React.useEffect(() => {
     const generateColors = () => {
       const scm = new ColorScheme();
@@ -44,6 +48,7 @@ const Showcase = () => {
       return list;
     };
     setFontsList(generateFonts());
+    setFontsStatus("active");
   }, [fontsStore]);
   const setTemplate = (index) => {
     UIStore2.update((s) => {
@@ -60,7 +65,7 @@ const Showcase = () => {
     console.time("render-logos");
     const result = logos2.map((logoSRC, index) => {
       return /* @__PURE__ */ React.createElement("button", {
-        className: `${index === option ? "border-4 border-blue-600" : "border-white"} border-4 hover:border-blue-600 `,
+        className: classnames2("logo", {active: index === option}),
         key: logoSRC.id,
         onClick: () => {
           setOption(index);
@@ -70,13 +75,13 @@ const Showcase = () => {
           ...store,
           container: {
             ...store.container,
-            width: 300,
-            height: 250,
+            width: 345,
+            height: 280,
             viewbox: {
               x: 0,
               y: 0,
-              width: 300,
-              height: 250
+              width: 345,
+              height: 280
             },
             style: {
               color: colors[index]
@@ -107,27 +112,23 @@ const Showcase = () => {
     return result;
   };
   return /* @__PURE__ */ React.createElement("div", {
-    className: "static flex flex-col items-center"
+    className: "logo-showcase"
   }, /* @__PURE__ */ React.createElement("div", {
-    className: "relative flex flex-row mt-4 mb-2 lg:mb-16 w-full items-center justify-center"
+    className: "top-section"
   }, /* @__PURE__ */ React.createElement(BackUI2, {
-    className: "absolute left-0 top-0 ml-24 invisible lg:visible"
+    className: "absolute"
   }), /* @__PURE__ */ React.createElement(ThemeisleUI2, null)), /* @__PURE__ */ React.createElement("div", {
-    className: "m-4 lg:w-4/5"
+    className: "content-section"
   }, /* @__PURE__ */ React.createElement("div", {
-    className: "flex flex-col my-4"
-  }, /* @__PURE__ */ React.createElement("h1", {
-    className: "text-2xl md:text-4xl font-bold text-center leading-none"
-  }, "Choose from any of the logo templates"), /* @__PURE__ */ React.createElement("p", {
-    className: "text-sm md:text-xl font-semibold lg:text-gray-600 lg:font-medium text-center my-2"
-  }, "You can change this information after your designs have been created")), /* @__PURE__ */ React.createElement("div", null, /* @__PURE__ */ React.createElement("div", {
-    className: "flex flex-col items-center justify-center text-white "
+    className: "titles"
+  }, /* @__PURE__ */ React.createElement("h1", null, "Choose from any of the logo templates"), /* @__PURE__ */ React.createElement("p", null, "You can change this information after your designs have been created")), /* @__PURE__ */ React.createElement("div", {
+    className: "content"
   }, /* @__PURE__ */ React.createElement("div", {
-    className: "grid gap-4 grid-cols-1 lg:grid-cols-3"
-  }, renderLogoList())))), /* @__PURE__ */ React.createElement("div", {
-    className: "w-full flex justify-center absolute sticky bottom-0 bg-white"
+    className: "logos-container"
+  }, renderLogoList()))), /* @__PURE__ */ React.createElement("div", {
+    className: "next"
   }, /* @__PURE__ */ React.createElement(Link, {
-    className: " block w-4/5 lg:w-1/5 my-4 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded text-center",
+    className: "block",
     to: "/",
     onClick: () => setTemplate(option)
   }, "Next")));

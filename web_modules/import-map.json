@@ -9,10 +9,6 @@
     "react-dom": "./react-dom.js",
     "react-router-dom": "./react-router-dom.js",
     "react-select": "./react-select.js",
-    "tailwindcss/dist/base.css": "./tailwindcss/dist/base.css",
-    "tailwindcss/dist/components.css": "./tailwindcss/dist/components.css",
-    "tailwindcss/dist/utilities.css": "./tailwindcss/dist/utilities.css",
-    "uuid": "./uuid.js",
-    "webfontloader": "./webfontloader.js"
+    "uuid": "./uuid.js"
   }
 }

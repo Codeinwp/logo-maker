@@ -1,0 +1,99 @@
+.logo-maker {
+  max-width: 1470px;
+  margin: 15px auto;
+  font-family: "Noto Sans", sans-serif;
+}
+.logo-maker .top-section {
+  position: relative;
+  text-align: center;
+}
+.logo-maker .top-section .back {
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  visibility: hidden;
+}
+.logo-maker .top-section .back a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+.logo-maker .top-section .back a p {
+  color: #585858;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 600;
+  margin-left: 13px;
+}
+@media (min-width: 1024px) {
+  .logo-maker .top-section .back {
+    visibility: visible;
+  }
+}
+.logo-maker .top-section .logo-holder {
+  display: inline-flex;
+  align-items: center;
+}
+.logo-maker .top-section .logo-holder span {
+  font-size: 18px;
+  font-weight: 700;
+  color: #FF7F66;
+  margin: 1px 0 0 4px;
+}
+.logo-maker .content-section {
+  margin-top: 115px;
+}
+.logo-maker .content-section .titles {
+  text-align: center;
+}
+.logo-maker .content-section .titles h1 {
+  color: #32456B;
+  font-size: 36px;
+  font-weight: 700;
+  margin: 0 0 8px;
+}
+.logo-maker .content-section .titles p {
+  color: #939393;
+  font-size: 18px;
+  font-weight: 500;
+  margin: 0;
+}
+.logo-maker .step1 {
+  margin: 50px auto 25px;
+  max-width: 480px;
+}
+.logo-maker .step1 label {
+  display: block;
+  font-size: 14px;
+  color: #6A6A6A;
+  margin-bottom: 8px;
+}
+.logo-maker .step1 input {
+  width: 100%;
+  color: #393939;
+  font-weight: 500;
+  font-family: "Noto Sans", sans-serif;
+  padding: 18px 13px;
+  margin-bottom: 20px;
+  border: 1px solid #E7E7E7;
+  border-radius: 4px;
+}
+.logo-maker .step1 input:focus {
+  outline: none;
+  border-color: #43C2D1;
+  transition: 0.3s ease all;
+}
+.logo-maker .next {
+  text-align: center;
+}
+.logo-maker .next a {
+  color: #fff;
+  background-color: #43C2D1;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 36px;
+  padding: 14px 80px;
+  border-radius: 4px;
+}

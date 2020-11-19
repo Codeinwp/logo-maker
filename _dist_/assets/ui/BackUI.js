@@ -1,11 +1,10 @@
 import * as React from "../../../web_modules/react.js";
-import classnames2 from "../../../web_modules/classnames.js";
 import {Link} from "../../../web_modules/react-router-dom.js";
 const BackUI = (props) => {
   return /* @__PURE__ */ React.createElement("div", {
-    className: classnames2("flex flex-row items-center", props?.className)
+    className: "back"
   }, /* @__PURE__ */ React.createElement(Link, {
-    className: "flex flex-row items-center",
+    className: "",
     to: props.to || "/start"
   }, /* @__PURE__ */ React.createElement("svg", {
     width: "42",
@@ -25,8 +24,6 @@ const BackUI = (props) => {
     strokeWidth: "1.5",
     strokeLinecap: "round",
     strokeLinejoin: "round"
-  })), /* @__PURE__ */ React.createElement("p", {
-    className: "font-bold px-2 text-base"
-  }, "Back")));
+  })), /* @__PURE__ */ React.createElement("p", null, "Back")));
 };
 export default BackUI;
