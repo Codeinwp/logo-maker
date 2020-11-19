@@ -47,6 +47,7 @@
 					margin: 10px;
 					border: none;
 					background: transparent;
+					transition: all .2s ease-in-out;
 					svg {
 						border-radius: 10px;
 					}
@@ -55,7 +56,7 @@
 					}
 					&.active,
 					&:hover {
-
+						transform: scale(1.05);
 					}
 				}
 			}

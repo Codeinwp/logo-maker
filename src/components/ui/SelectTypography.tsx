@@ -65,11 +65,12 @@ const SelectTypography: React.FunctionComponent<unknown> = () => {
     }
 
     const disableBoxShadow = {
-        control: ( base ) => ({
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        control: (base: any) => ({
             ...base,
-            boxShadow: "none"
-        })
-    };
+            boxShadow: "none",
+        }),
+    }
 
     const defaultTitleFontFamily = UIStore.useState((s) => s.title.style.fontFamily)
     const defaultTitleFontSize = UIStore.useState((s) => s.title.style.fontSize)
