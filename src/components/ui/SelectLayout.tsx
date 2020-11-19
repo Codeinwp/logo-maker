@@ -29,7 +29,7 @@ const SelectLayout: React.FunctionComponent<unknown> = () => {
                             isSelected={alignOption === "align-top"}
                         />
                     </div>
-                    Logo TOP
+                    <span>Logo TOP</span>
                 </button>
                 <button
                     className={classnames("box-border", { active: alignOption === "align-left" })}
@@ -46,7 +46,7 @@ const SelectLayout: React.FunctionComponent<unknown> = () => {
                             isSelected={alignOption === "align-left"}
                         />
                     </div>
-                    Logo LEFT
+                    <span>Logo LEFT</span>
                 </button>
                 <button
                     className={classnames("align-right", { active: alignOption === "align-right" })}
@@ -60,7 +60,7 @@ const SelectLayout: React.FunctionComponent<unknown> = () => {
                         <LogoUIsvg isSelected={alignOption === "align-right"} />
                         <HorizontalLineUIsvg isSelected={alignOption === "align-right"} />
                     </div>
-                    Logo RIGHT
+                    <span>Logo RIGHT</span>
                 </button>
             </div>
         </div>

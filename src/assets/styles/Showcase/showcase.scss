@@ -56,7 +56,7 @@
 					}
 					&.active,
 					&:hover {
-						transform: scale(1.05);
+						transform: scale(1.03);
 					}
 				}
 			}
@@ -81,5 +81,11 @@
 			padding: 14px 80px;
 			border-radius: 4px;
 		}
+	}
+}
+
+@media (max-width: 1440px) {
+	.logo-showcase {
+		max-width: 90%;
 	}
 }
