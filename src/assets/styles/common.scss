@@ -1,10 +1,23 @@
 @import "constants";
 
+@mixin logo-maker-container {
+	max-width: 1470px;
+	margin: 15px auto;
+	font-family: $noto;
+	@media (max-width: 1440px) {
+		max-width: 90%;
+	}
+	@media (max-width: 600px) {
+		max-width: 100%;
+		margin: 15px 30px;
+	}
+}
+
 @mixin back {
 	display: inline-block;
 	position: absolute;
 	left: 0;
-	visibility: hidden;
+	visibility: visible;
 	a {
 		display: flex;
 		align-items: center;
@@ -18,10 +31,32 @@
 		}
 	}
 
-	@media(min-width: 1024px) {
-		visibility: visible;
+	@media(max-width: 600px) {
+		visibility: hidden;
 	}
 }
+
+@mixin next {
+	text-align: center;
+	a {
+		color: #fff;
+		background-color: $light-blue;
+		text-decoration: none;
+		text-transform: uppercase;
+		font-size: 14px;
+		font-weight: 700;
+		line-height: 36px;
+		padding: 14px 80px;
+		border-radius: 4px;
+	}
+	@media (max-width: 600px) {
+		a {
+			display: block;
+			padding: 7px;
+		}
+	}
+}
+
 @mixin logo-holder {
 	display: inline-flex;
 	align-items: center;
@@ -30,5 +65,51 @@
 		font-weight: 700;
 		color: $orange;
 		margin: 1px 0 0 4px;
+	}
+}
+
+@mixin top-section {
+	position: relative;
+	text-align: center;
+	.back {
+		@include back;
+	}
+	.logo-holder {
+		@include logo-holder;
+	}
+	@media (max-width: 600px) {
+		text-align: left;
+	}
+}
+
+@mixin content-section-titles {
+	margin-top: 115px;
+	.titles {
+		text-align: center;
+		h1 {
+			color: $blue;
+			font-size: 36px;
+			font-weight: 700;
+			margin: 0 0 8px;
+		}
+		p {
+			color: #939393;
+			font-size: 18px;
+			font-weight: 500;
+			margin: 0;
+		}
+	}
+	@media (max-width: 600px) {
+		margin-top: 60px;
+		.titles {
+			text-align: left;
+			h1 {
+				font-size: 24px;
+			}
+			p {
+				font-size: 16px;
+				color: #393939;
+			}
+		}
 	}
 }

@@ -2,36 +2,14 @@
 @import "../constants";
 
 .logo-maker {
-    max-width: 1470px;
-    margin: 15px auto;
-    font-family: $noto;
+    &.logo-maker-container {
+        @include default.logo-maker-container
+    }
     .top-section {
-        position: relative;
-        text-align: center;
-        .back {
-           @include default.back;
-        }
-        .logo-holder {
-			@include default.logo-holder
-        }
+        @include default.top-section;
     }
     .content-section {
-        margin-top: 115px;
-        .titles {
-            text-align: center;
-            h1 {
-                color: $blue;
-                font-size: 36px;
-                font-weight: 700;
-                margin: 0 0 8px;
-            }
-            p {
-                color: #939393;
-                font-size: 18px;
-                font-weight: 500;
-                margin: 0;
-            }
-        }
+        @include default.content-section-titles;
     }
     .step1 {
         margin: 50px auto 25px;
@@ -59,17 +37,13 @@
         }
     }
     .next {
-        text-align: center;
-        a {
-            color: #fff;
-            background-color: $light-blue;
-            text-decoration: none;
-            text-transform: uppercase;
-            font-size: 14px;
-            font-weight: 700;
-            line-height: 36px;
-            padding: 14px 80px;
-            border-radius: 4px;
-        }
+        @include default.next;
+    }
+}
+
+@media (max-width: 600px) {
+    .logo-maker .step1 {
+        margin: 35px auto 5px;
+        max-width: 100%;
     }
 }

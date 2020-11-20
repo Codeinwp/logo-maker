@@ -46,13 +46,13 @@ const Creator: React.FunctionComponent<unknown> = () => {
         }
     }
     return (
-        <div className="logo-creator">
-            <div className="download-section">
-                <DownloadButton />
-            </div>
+        <div className="logo-creator logo-maker-container">
             <div className="top-section">
                 <BackUI to="/showcase" />
                 <ThemeisleUI />
+                <div className="download-section">
+                    <DownloadButton />
+                </div>
             </div>
             <div className="main-section">
                 <div className="container">

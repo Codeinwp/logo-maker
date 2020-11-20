@@ -19,7 +19,7 @@ const Start: React.FunctionComponent<unknown> = () => {
     }
 
     return (
-        <div className="logo-maker">
+        <div className="logo-maker logo-maker-container">
             <div className="top-section">
                 <BackUI />
                 <ThemeisleUI />

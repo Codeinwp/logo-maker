@@ -2,36 +2,14 @@
 @import "../constants";
 
 .logo-showcase {
-    max-width: 1470px;
-    margin: 15px auto;
-    font-family: $noto;
+    &.logo-maker-container {
+		@include default.logo-maker-container;
+	}
     .top-section {
-        position: relative;
-        text-align: center;
-        .back {
-           @include default.back;
-        }
-        .logo-holder {
-			@include default.logo-holder
-        }
+		@include default.top-section;
     }
     .content-section {
-        margin-top: 115px;
-        .titles {
-            text-align: center;
-            h1 {
-                color: $blue;
-                font-size: 36px;
-                font-weight: 700;
-                margin: 0 0 8px;
-            }
-            p {
-                color: #939393;
-                font-size: 18px;
-                font-weight: 500;
-                margin: 0;
-            }
-		}
+        @include default.content-section-titles;
 		.content {
 			margin: 50px auto 100px;
 			display: flex;
@@ -63,29 +41,42 @@
 		}
     }
 	.next {
+		@include default.next;
 		position: fixed;
 		bottom: 0;
 		width: 100%;
 		left: 0;
 		background: #fff;
-		text-align: center;
 		padding: 25px 0;
-		a {
-			color: #fff;
-			background-color: $light-blue;
-			text-decoration: none;
-			text-transform: uppercase;
-			font-size: 14px;
-			font-weight: 700;
-			line-height: 36px;
-			padding: 14px 80px;
-			border-radius: 4px;
+		@media (max-width: 600px) {
+			padding: 25px 30px;
 		}
 	}
 }
 
-@media (max-width: 1440px) {
-	.logo-showcase {
-		max-width: 90%;
+@media (max-width: 811px) {
+	.logo-showcase .content-section .content .logos-container .logo svg  {
+		max-width: 250px;
+		height: auto;
+	}
+}
+
+@media (max-width: 600px) {
+	.logo-showcase .content-section .content {
+		margin-top: 20px;
+		.logos-container .logo {
+			margin: 5px;
+			svg {
+				max-width: 200px;
+				height: auto;
+			}
+		}
+	}
+}
+
+@media (max-width: 480px) {
+	.logo-showcase .content-section .content .logos-container .logo svg  {
+		max-width: 300px;
+		height: auto;
 	}
 }
