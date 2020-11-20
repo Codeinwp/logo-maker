@@ -7,9 +7,9 @@
 @import "../constants";
 
 .logo-creator {
-	max-width: 1470px;
-    margin: 15px auto;
-	font-family: $noto;
+	&.logo-maker-container {
+		@include default.logo-maker-container
+	}
 	position: static;
 	display: flex;
 	flex-direction: column;
@@ -19,35 +19,18 @@
 	}
 
 	.download-section {
-		order: 9999;
-		padding: 4px;
-		position: sticky;
-		bottom: 0;
-		height: 100px;
-		background-color: white;
-		@media(min-width: 1024px) {
-			position: absolute;
-			right: 0;
-			top: 0;
-			background-color: transparent;
-		}
-
+		display: inline-block;
+		position: absolute;
+		right: 0;
 		.download-button {
 			@include dlButton.download-button;
 		}
 
 	}
 
-    .top-section {
-        position: relative;
-        text-align: center;
-        .back {
-           @include default.back;
-        }
-        .logo-holder {
-			@include default.logo-holder
-        }
-    }
+	.top-section {
+		@include default.top-section;
+	}
 
     .main-section {
 		margin-top: 100px;
@@ -64,24 +47,13 @@
 				display: flex;
 				justify-content: flex-start;
 				width: 30%;
-				padding: 20px;
-
+				padding: 0 20px 0 10px;
 				.options {
-					display: grid;
-					gap: 4rem;
-					grid-template-columns: repeat(2, minmax(0, 1fr));
-					height: max-content;
-
-					@media(min-width: 1024px) {
-						gap: 0.5rem;
-						grid-template-columns: repeat(1, minmax(0, 1fr));
-					}
-
+					display: flex;
+					flex-direction: column;
 					.option {
-						display: inline-flex;
-						height: max-content;
+						display: flex;
 						margin-bottom: 30px;
-
 						button {
 							font-weight: 500;
 							font-size: 16px;
@@ -92,6 +64,7 @@
 							margin-left: 15px;
 							color: #8B8B9C;
 							transition: $transition;
+							cursor: pointer;
 							&.active {
 								color: #333333;
 							}
@@ -131,6 +104,67 @@
 
 				.select-colors {
 					@include sc.select-colors;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 1440px) {
+	#image-logo svg {
+		max-width: 550px;
+		height: auto;
+	}
+}
+
+@media (max-width: 600px) {
+	.logo-creator {
+		.top-section {
+			position: static;
+		}
+		.download-section {
+			position: fixed;
+			bottom: 0;
+			width: 100%;
+			background: #fff;
+			padding: 25px 30px;
+			z-index: 1;
+			.download-button button {
+				width: 100%;
+				padding: 7px;
+			}
+		}
+		.main-section {
+			margin-top: 60px;
+			.container {
+				.logo {
+					margin-bottom: 30px;
+					#image-logo {
+						padding: 0;
+					}
+				}
+				.right-menu {
+					width: 100%;
+					padding: 0;
+					.select-colors,
+					.select-layout {
+						width: 100%;
+						.options button {
+							width: 100%;
+						}
+					}
+				}
+				.left-menu {
+					width: 100%;
+					padding: 0;
+					.options {
+						flex-direction: row;
+						flex-wrap: wrap;
+						width: 100%;
+						.option {
+							flex-basis: 50%;
+						}
+					}
 				}
 			}
 		}

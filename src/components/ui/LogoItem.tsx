@@ -19,7 +19,7 @@ const LogoItem: React.FunctionComponent<SelectLogoProps> = (props: SelectLogoPro
             const svgItem = SVG().addTo(itemRef.current).svg(logo.svg)
             svgItem
                 .viewbox(0, 0, svgItem.bbox().width, svgItem.bbox().height)
-                .size(50, 50)
+                .size(77, 77)
                 .addClass(classnames({ active: props?.isSelected }))
         }
     }, [logo.svg, props?.isSelected])

@@ -138,7 +138,7 @@ const Showcase: React.FunctionComponent<unknown> = () => {
     }
 
     return (
-        <div className="logo-showcase">
+        <div className="logo-showcase logo-maker-container">
             <div className="top-section">
                 <BackUI className="absolute" />
                 <ThemeisleUI />

@@ -17,18 +17,16 @@
 	}
 
 	.logo-list {
-		max-height: 690px;
-		overflow: auto;
-		overscroll-behavior: contain;
-		display: grid;
-		grid-template-columns: repeat(3, minmax(0, 1fr));
-		gap: 4px;
+		//max-height: 690px;
+		max-height: 200px;
+		overflow-y: scroll;
 		border: 1px solid #E7E7E7;
 		border-radius: 14px;
 		padding: 15px;
 		button {
 			background: transparent;
 			border: none;
+			padding: 5px;
 			&:focus {
 				outline: none;
 			}
