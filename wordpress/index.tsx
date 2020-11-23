@@ -1,14 +1,15 @@
+import * as React from 'react'
 import { registerBlockType } from '@wordpress/blocks';
 import { __ } from '@wordpress/i18n';
-
+import { Application } from "../src/Application";
 /**
  * Internal dependencies
  */
 // import edit from './edit';
 // import save from './save';
 
-registerBlockType( 'mkaz/tsblock', {
-	title: __( 'Tsblock', 'tsblock' ),
+registerBlockType( 'themeisle/logo-maker', {
+	title: __( 'Logo Maker' ),
 	description: __(
 		'An example typescript block.',
 		'tsblock'
@@ -20,6 +21,6 @@ registerBlockType( 'mkaz/tsblock', {
 		html: false,
 	},
 	attributes: {},
-	edit: () => null,
+	edit: () => (<Application />),
 	save: () => null,
 } );

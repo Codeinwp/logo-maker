@@ -1,73 +1,37 @@
 <?php
 
 /**
- * Plugin Name: Logo Maker
+ * Plugin Name: Logo Maker WordPress Plugin
  * Plugin URI: https://github.com/WordPress/gutenberg-examples
- * Description: This is a plugin demonstrating how to register new blocks for the Gutenberg editor.
- * Version: 1.1.0
- * Author: the Gutenberg Team
+ * Description: Logo Maker as a plugin for WordPress
+ * Author: Soare Robert Daniel
  *
  * @package gutenberg-examples
  */
 
 defined('ABSPATH') || exit;
 
-/**
- * Load all translations for our plugin from the MO file.
- */
-add_action('init', 'gutenberg_examples_03_esnext_load_textdomain');
-
-function gutenberg_examples_03_esnext_load_textdomain()
-{
-	load_plugin_textdomain('gutenberg-examples', false, basename(__DIR__) . '/languages');
-}
-
-/**
- * Registers all block assets so that they can be enqueued through Gutenberg in
- * the corresponding context.
- *
- * Passes translations to JavaScript.
- */
 function logo_maker_init()
 {
+	$dir = dirname(__FILE__);
 
-	// automatically load dependencies and version
-	$asset_file = include(plugin_dir_path(__FILE__) . 'build/index.asset.php');
-
+	$script_asset_path = "$dir/plugin_build/index.asset.php";
+	if (!file_exists($script_asset_path)) {
+		throw new Error(
+			'You need to run `npm start` or `npm run build` for the "plugins/qr-code-generator-block" block first.'
+		);
+	}
+	$index_js     = 'plugin_build/index.js';
+	$script_asset = require($script_asset_path);
 	wp_register_script(
-		'gutenberg-examples-03-esnext',
-		plugins_url('plugin_build/index.js', __FILE__),
-		$asset_file['dependencies'],
-		$asset_file['version']
+		'logo-maker-editor-script',
+		plugins_url($index_js, __FILE__),
+		$script_asset['dependencies'],
+		$script_asset['version']
 	);
 
-	// wp_register_style(
-	// 	'gutenberg-examples-03-esnext-editor',
-	// 	plugins_url('editor.css', __FILE__),
-	// 	array('wp-edit-blocks'),
-	// 	filemtime(plugin_dir_path(__FILE__) . 'editor.css')
-	// );
-
-	// wp_register_style(
-	// 	'gutenberg-examples-03-esnext',
-	// 	plugins_url('style.css', __FILE__),
-	// 	array(),
-	// 	filemtime(plugin_dir_path(__FILE__) . 'style.css')
-	// );
-
-	register_block_type('gutenberg-examples/logo-maker', array(
-		'style' => 'gutenberg-examples-03-esnext',
-		// 'editor_style' => 'gutenberg-examples-03-esnext-editor',
-		// 'editor_script' => 'gutenberg-examples-03-esnext',
+	register_block_type('themesisle/logo-maker-plugin', array(
+		'editor_script' => 'logo-maker-editor-script',
 	));
-
-	if (function_exists('wp_set_script_translations')) {
-		/**
-		 * May be extended to wp_set_script_translations( 'my-handle', 'my-domain',
-		 * plugin_dir_path( MY_PLUGIN ) . 'languages' ) ). For details see
-		 * https://make.wordpress.org/core/2018/11/09/new-javascript-i18n-support-in-wordpress/
-		 */
-		wp_set_script_translations('gutenberg-examples-03-esnext', 'gutenberg-examples');
-	}
 }
 add_action('init', 'logo_maker_init');
