@@ -8,7 +8,7 @@
 
 .logo-creator {
 	&.logo-maker-container {
-		@include default.logo-maker-container
+		@include default.logo-maker-container;
 	}
 	position: static;
 	display: flex;
@@ -17,7 +17,6 @@
 	@media(min-width: 1024px) {
 		position: relative;
 	}
-
 	.download-section {
 		display: inline-block;
 		position: absolute;
@@ -30,6 +29,11 @@
 
 	.top-section {
 		@include default.top-section;
+		@media (max-width:1023px) {
+			.back {
+				left: 30px;
+			}
+		}
 	}
 
     .main-section {
@@ -112,12 +116,12 @@
 
 @media (max-width: 1440px) {
 	#image-logo svg {
-		max-width: 550px;
+		max-width: 100%;
 		height: auto;
 	}
 }
 
-@media (max-width: 600px) {
+@media (max-width: 1023px) {
 	.logo-creator {
 		.top-section {
 			position: static;
@@ -146,6 +150,7 @@
 				.right-menu {
 					width: 100%;
 					padding: 0;
+					margin-bottom: 100px;
 					.select-colors,
 					.select-layout {
 						width: 100%;
@@ -168,5 +173,11 @@
 				}
 			}
 		}
+	}
+}
+
+@media (max-width: 360px) {
+	.logo-creator .main-section .container .left-menu .options .option button {
+		margin-left: 5px;
 	}
 }
