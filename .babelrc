@@ -1,0 +1,39 @@
+{
+	"presets": [
+		"@wordpress/babel-preset-default",
+		[
+			"@babel/preset-env",
+			{
+				"targets": {
+					"esmodules": true
+				}
+			}
+		],
+		"@wordpress/babel-preset-default",
+		[
+			"@babel/preset-react",
+			{
+				"flow": false,
+				"typescript": true
+			}
+		],
+		[
+			"@babel/typescript",
+			{
+				"allExtensions": true,
+				"isTSX": true
+			}
+		]
+	],
+	"plugins": [
+		"@babel/plugin-proposal-optional-chaining",
+		[
+			"@babel/plugin-transform-runtime",
+			{
+				"useESModules": true,
+				"regenerator": true
+			}
+		],
+		"@babel/plugin-proposal-class-properties"
+	]
+}
