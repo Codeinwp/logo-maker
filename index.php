@@ -42,7 +42,7 @@ function logo_maker_assets()
     $post = get_post();
     if (has_block("themeisle/logo-maker", $post)) {
         $dir = dirname(__FILE__);
-        $script_asset_path = "$dir/plugin_build/index.asset.php";
+        $script_asset_path = "$dir/plugin_build/logo-maker.asset.php";
 
         if (!file_exists($script_asset_path)) {
             throw new Error(
