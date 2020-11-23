@@ -2,8 +2,13 @@ const path = require("path");
 const defaultConfig = require("@wordpress/scripts/config/webpack.config");
 
 module.exports = {
+	mode: 'development',
+	devtool: 'inline-source-map',
 	...defaultConfig,
-	entry: "./wordpress/index.tsx",
+	entry: {
+		"index": "./wordpress/index.tsx",
+		"logo-maker": "./src/index.tsx"
+	},
 	module: {
 		...defaultConfig.module,
 		rules: [
@@ -39,7 +44,7 @@ module.exports = {
 
 	output: {
 		// ...defaultConfig.output,
-		filename: "index.js",
+		filename: "[name].js",
 		path: path.resolve(__dirname, "plugin_build"),
 	},
 };

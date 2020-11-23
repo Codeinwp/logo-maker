@@ -1,7 +1,6 @@
 import * as React from 'react'
 import { registerBlockType } from '@wordpress/blocks';
 import { __ } from '@wordpress/i18n';
-import { Application } from "../src/Application";
 /**
  * Internal dependencies
  */
@@ -21,6 +20,6 @@ registerBlockType( 'themeisle/logo-maker', {
 		html: false,
 	},
 	attributes: {},
-	edit: () => (<Application />),
-	save: () => null,
+	edit: () => (<p>Logo Maker Placeholder. Please make this page an empty or the site might not desplay correctly.</p>),
+	save: () => (<div id="themeisle-logo-maker-root" />),
 } );
