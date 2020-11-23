@@ -35,16 +35,15 @@ const Creator: React.FunctionComponent<unknown> = () => {
         }
     }
 
-    if (window.screen.width >= 1024) {
-        store = {
-            ...store,
-            container: {
-                ...store.container,
-                width: 765,
-                height: 625,
-            },
-        }
+    store = {
+        ...store,
+        container: {
+            ...store.container,
+            width: 765,
+            height: 625,
+        },
     }
+
     return (
         <div className="logo-creator logo-maker-container">
             <div className="top-section">
