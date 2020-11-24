@@ -1,8 +1,10 @@
 // used for importing the fonts with a HTML link 
 export function generateUrlForFonts(fonts: string[]): string {
+	fonts.sort()
 	const formatFont = fonts.map(f => `family=${f.split(" ").join("+")}`)
 	return `https://fonts.googleapis.com/css2?${formatFont.join("&")}&display=swap`
 }
+
 
 // used for link embedded in the SVG
 export function generateUrlForFont(font: string): string {

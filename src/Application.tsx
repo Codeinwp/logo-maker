@@ -1,5 +1,6 @@
 import * as React from "react"
 import { HashRouter as Router, Switch, Route } from "react-router-dom"
+import { fontsList } from "./assets/fonts"
 import fonts from "./assets/fonts/fonts"
 import "./assets/styles/index.scss"
 // import "./index.css"
@@ -49,18 +50,18 @@ export const Application: React.FunctionComponent<unknown> = () => {
         document.querySelector("head")?.appendChild(googleFontsLink)
 
         document.fonts.ready.then(() => {
-            const fontSet = new Set<string>()
+            // const fontSet = new Set<string>()
 
-            // document.fonts.forEach(f => {
+            // // document.fonts.forEach(f => {
+            // //     fontSet.add(f.family)
+            // // });
+
+            // for (const f of document.fonts) {
             //     fontSet.add(f.family)
-            // });
-
-            for (const f of document.fonts) {
-                fontSet.add(f.family)
-            }
+            // }
 
             AssetsStore.update((s) => {
-                s.fonts.activeFonts = Array.from(fontSet)
+                s.fonts.activeFonts = fontsList // Array.from(fontSet)
             })
         })
     }, [])

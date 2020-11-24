@@ -1,6 +1,6 @@
 import * as React from "react"
 import Select from "react-select"
-import fonts from "../../assets/fonts/fonts"
+import { fontsList as fonts } from "../../assets/fonts/index"
 import UIStore from "../../stores/UIStore"
 
 const SelectTypography: React.FunctionComponent<unknown> = () => {

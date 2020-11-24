@@ -1,11 +1,10 @@
 import { Font } from './index'
 
-export const sansFonts: string [] = [
+export const serifFonts: string [] = [
 	"Antic Slab",
 	"Bitter",
 	"Castro",
 	"Crimson Text",
-	"Libre Baskerville",
 	"Lora",
 	"Marriweather",
 	"Noto Serif",
@@ -14,4 +13,4 @@ export const sansFonts: string [] = [
 	"Zilla Slab",
 ] 
 
-export default sansFonts.sort().map<Font>((f) => {return { family: f, fallback: "serif" }})
+export default serifFonts.sort().map<Font>((f) => {return { family: f, fallback: "serif" }})

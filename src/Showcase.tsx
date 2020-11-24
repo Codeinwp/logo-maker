@@ -4,14 +4,14 @@ import logos from "./assets/logos"
 import CreateLogo from "./components/CreateLogo"
 import UIStore from "./stores/UIStore"
 import ColorScheme from "color-scheme"
-import { presets } from "./assets/fonts/fonts"
+import { presets } from "./assets/fonts/index"
 import { AssetsStore } from "./stores/AssetsStore"
 import BackUI from "./assets/ui/BackUI"
 import ThemeisleUI from "./assets/ui/ThemeisleUI"
 import classnames from "classnames"
 import "../src/assets/styles/Showcase/showcase.scss"
 
-const defaultFontsList = new Array(logos.length).fill("Arial")
+const defaultFontsList = new Array(logos.length).fill("sans-serif")
 
 const Showcase: React.FunctionComponent<unknown> = () => {
     const store = UIStore.useState((s) => s)
@@ -66,7 +66,7 @@ const Showcase: React.FunctionComponent<unknown> = () => {
         }
 
         setFontsList(generateFonts())
-        setFontsStatus("active")
+        setFontsStatus(fontsStore.fonts.fontsStatus)
     }, [fontsStore])
 
     const setTemplate = (index: number) => {

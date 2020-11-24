@@ -13,7 +13,7 @@ import SelectLogo from "./components/ui/SelectLogo"
 import SelectTypography from "./components/ui/SelectTypography"
 import classnames from "classnames"
 import "../src/assets/styles/Creator/creator.scss"
-
+import { fontsForSvg, fontsList as fL } from "./assets/fonts/index"
 import UIStore from "./stores/UIStore"
 
 type MenuOptions = "logo" | "typography" | "layout" | "colors"
@@ -41,6 +41,20 @@ const Creator: React.FunctionComponent<unknown> = () => {
             ...store.container,
             width: 765,
             height: 625,
+        },
+        title: {
+            ...store.title,
+            style: {
+                ...store.title.style,
+                fontFamily: fontsForSvg[fL.findIndex((f) => f === store.title.style.fontFamily)],
+            },
+        },
+        slogan: {
+            ...store.slogan,
+            style: {
+                ...store.slogan.style,
+                fontFamily: fontsForSvg[fL.findIndex((f) => f === store.slogan.style.fontFamily)],
+            },
         },
     }
 
