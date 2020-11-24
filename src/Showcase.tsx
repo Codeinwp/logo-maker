@@ -153,7 +153,7 @@ const Showcase: React.FunctionComponent<unknown> = () => {
                 </div>
             </div>
             <div className="next">
-                <Link className="block" to="/" onClick={() => setTemplate(option)}>
+                <Link className="block" to="/creator" onClick={() => setTemplate(option)}>
                     Next
                 </Link>
             </div>

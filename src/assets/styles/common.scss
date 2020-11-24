@@ -59,6 +59,9 @@
 @mixin logo-holder {
 	display: inline-flex;
 	align-items: center;
+	a {
+		height: 44px;
+	}
 	span {
 		font-size: 18px;
 		font-weight: 700;

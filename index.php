@@ -61,7 +61,7 @@ function logo_maker_assets()
             $script_asset['dependencies'],
             $script_asset['version']
         );
-        wp_enqueue_script("logo-maker-asset-map", plugins_url($source_map, __FILE__), null, null, true);
+        //  wp_enqueue_script("logo-maker-asset-map", plugins_url($source_map, __FILE__), null, null, true);
     }
 }
 

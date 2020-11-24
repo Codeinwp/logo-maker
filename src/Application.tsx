@@ -69,14 +69,14 @@ export const Application: React.FunctionComponent<unknown> = () => {
         <React.Fragment>
             <Router>
                 <Switch>
-                    <Route path="/start">
-                        <Start />
+                    <Route path="/creator">
+                        <Creator />
                     </Route>
                     <Route path="/showcase">
                         <Showcase />
                     </Route>
                     <Route path="/">
-                        <Creator />
+                        <Start />
                     </Route>
                 </Switch>
             </Router>
