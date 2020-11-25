@@ -23,7 +23,11 @@
 		border: 1px solid #E7E7E7;
 		border-radius: 14px;
 		padding: 15px;
+		scrollbar-width: thin;
+		display: flex;
+		flex-wrap: wrap;
 		button {
+			flex-grow: 1;
 			background: transparent;
 			border: none;
 			padding: 5px;
@@ -42,6 +46,10 @@
 					border: 2px solid #43C2D1;
 				}
 			}
+		}
+
+		@media(min-width: 1024px) {
+			max-height: 400px;
 		}
 	}
 }

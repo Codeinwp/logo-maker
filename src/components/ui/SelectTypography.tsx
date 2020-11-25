@@ -4,6 +4,8 @@ import { fontsList as fonts } from "../../assets/fonts/index"
 import UIStore from "../../stores/UIStore"
 
 const SelectTypography: React.FunctionComponent<unknown> = () => {
+    console.log(UIStore.useState((s) => s))
+
     const fontOptions = fonts.map((font) => ({
         value: font,
         label: font,
@@ -92,9 +94,9 @@ const SelectTypography: React.FunctionComponent<unknown> = () => {
                     id="select-title-font-family"
                     className="font-select"
                     isSearchable={false}
-                    defaultValue={fontOptions.filter(
-                        ({ value }) => value === defaultTitleFontFamily
-                    )}
+                    defaultValue={
+                        fontOptions.filter(({ value }) => value === defaultTitleFontFamily)[0]
+                    }
                     onChange={onTitleFontFamilyChange}
                     options={fontOptions}
                     styles={disableBoxShadow}

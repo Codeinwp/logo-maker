@@ -21,39 +21,54 @@ const fonts = [...serif, ...sans].sort((a: Font, b:Font) => {
 
 export const fontsForSvg = fonts.map<string>(f => `'${f.family}', '${f.fallback}'`)
 
+// export const presets = [
+// 	{
+// 		title: "Roboto",
+// 		slogan: "Open Sans"
+// 	},
+// 	{
+// 		title: "Open Sans",
+// 		slogan: "Roboto"
+// 	},
+// 	{
+// 		title: "Zilla Slab",
+// 		slogan: "Open Sans"
+// 	},
+// 	{
+// 		title: "Roboto Slab",
+// 		slogan: "Roboto"
+// 	},
+// 	{
+// 		title: "Roboto Slab",
+// 		slogan: "Lato"
+// 	},
+// 	{
+// 		title: "Bitter",
+// 		slogan: "Lato"
+// 	},
+// 	{
+// 		title: "Zilla Slab",
+// 		slogan: "Roboto"
+// 	},
+// 	{
+// 		title: "Roboto",
+// 		slogan: "Noto Sans JP"
+// 	},
+// ]
+
 export const presets = [
 	{
-		title: "Roboto",
-		slogan: "Open Sans"
+		title: "Times New Roman",
+		slogan: "Helvetica"
 	},
 	{
-		title: "Open Sans",
-		slogan: "Roboto"
+		title: "Helvetica",
+		slogan: "Times New Roman"
 	},
 	{
-		title: "Zilla Slab",
-		slogan: "Open Sans"
-	},
-	{
-		title: "Roboto Slab",
-		slogan: "Roboto"
-	},
-	{
-		title: "Roboto Slab",
-		slogan: "Lato"
-	},
-	{
-		title: "Bitter",
-		slogan: "Lato"
-	},
-	{
-		title: "Zilla Slab",
-		slogan: "Roboto"
-	},
-	{
-		title: "Roboto",
-		slogan: "Noto Sans JP"
-	},
+		title: "Georgia",
+		slogan: "sans-serif"
+	}
 ]
 
 export default fonts

@@ -1,6 +1,7 @@
 import * as React from "react"
-import { SliderPicker } from "react-color"
+import { SliderPicker, TwitterPicker } from "react-color"
 import UIStore from "../../stores/UIStore"
+import colors from "../../assets/colors"
 
 const SelectColor: React.FunctionComponent<unknown> = () => {
     const onBackgroundColor = (value: { hex: string }) => {
@@ -31,25 +32,13 @@ const SelectColor: React.FunctionComponent<unknown> = () => {
         <div className="select-colors">
             <h1>COLOR PALETTE</h1>
             <p>Background Color</p>
-            <SliderPicker
-                color={UIStore.useState((s) => s.container.style.color)}
-                onChangeComplete={onBackgroundColor}
-            />
+            <TwitterPicker colors={colors} onChangeComplete={onBackgroundColor} />
             <p>Logo Color</p>
-            <SliderPicker
-                color={UIStore.useState((s) => s.logo.style.fill)}
-                onChangeComplete={onLogoColor}
-            />
+            <TwitterPicker colors={colors} onChangeComplete={onLogoColor} />
             <p>Title Color</p>
-            <SliderPicker
-                color={UIStore.useState((s) => s.title.style.color)}
-                onChangeComplete={onTitleColor}
-            />
+            <TwitterPicker colors={colors} onChangeComplete={onTitleColor} />
             <p>Slogan Color</p>
-            <SliderPicker
-                color={UIStore.useState((s) => s.slogan.style.color)}
-                onChangeComplete={onSloganColor}
-            />
+            <TwitterPicker colors={colors} onChangeComplete={onSloganColor} />
         </div>
     )
 }

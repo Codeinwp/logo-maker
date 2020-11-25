@@ -72,47 +72,81 @@ const Creator: React.FunctionComponent<unknown> = () => {
                     <div className="left-menu">
                         <div className="options">
                             <div className="option">
-                                <LogoUIsvg isSelected={menuOption === "logo"} />
-                                <button
-                                    onClick={() => setMenuOption("logo")}
+                                <a
+                                    onClick={() => {
+                                        // document
+                                        //     .querySelector<HTMLDivElement>("#right-menu")
+                                        //     ?.scrollTo()
+
+                                        window.scrollTo(
+                                            0,
+                                            document.querySelector<HTMLDivElement>("#right-menu")
+                                                ?.offsetTop || 0
+                                        )
+                                        setMenuOption("logo")
+                                    }}
                                     className={classnames({ active: menuOption === "logo" })}
                                 >
+                                    <LogoUIsvg isSelected={menuOption === "logo"} />
                                     Logo
-                                </button>
+                                </a>
                             </div>
                             <div className="option">
-                                <TypographyUIsvg isSelected={menuOption === "typography"} />
-                                <button
-                                    onClick={() => setMenuOption("typography")}
+                                <a
+                                    onClick={() => {
+                                        window.scrollTo(
+                                            0,
+                                            document.querySelector<HTMLDivElement>("#right-menu")
+                                                ?.offsetTop || 0
+                                        )
+                                        setMenuOption("typography")
+                                    }}
                                     className={classnames({ active: menuOption === "typography" })}
                                 >
+                                    <TypographyUIsvg isSelected={menuOption === "typography"} />
                                     Typography
-                                </button>
+                                </a>
                             </div>
                             <div className="option">
-                                <LayoutUIsvg isSelected={menuOption === "layout"} />
-                                <button
-                                    onClick={() => setMenuOption("layout")}
+                                <a
+                                    onClick={() => {
+                                        window.scrollTo(
+                                            0,
+                                            document.querySelector<HTMLDivElement>("#right-menu")
+                                                ?.offsetTop || 0
+                                        )
+                                        setMenuOption("layout")
+                                    }}
                                     className={classnames({ active: menuOption === "layout" })}
                                 >
+                                    <LayoutUIsvg isSelected={menuOption === "layout"} />
                                     Layout
-                                </button>
+                                </a>
                             </div>
                             <div className="option">
-                                <ColorsUIsvg isSelected={menuOption === "colors"} />
-                                <button
-                                    onClick={() => setMenuOption("colors")}
+                                <a
+                                    onClick={() => {
+                                        window.scrollTo(
+                                            0,
+                                            document.querySelector<HTMLDivElement>("#right-menu")
+                                                ?.offsetTop || 0
+                                        )
+                                        setMenuOption("colors")
+                                    }}
                                     className={classnames({ active: menuOption === "colors" })}
                                 >
+                                    <ColorsUIsvg isSelected={menuOption === "colors"} />
                                     Colors
-                                </button>
+                                </a>
                             </div>
                         </div>
                     </div>
                     <div className="logo">
                         <CreateLogo id="image-logo" logoProps={store} />
                     </div>
-                    <div className="right-menu">{renderRightSidePanel()}</div>
+                    <div id="right-menu" className="right-menu">
+                        {renderRightSidePanel()}
+                    </div>
                 </div>
             </div>
         </div>

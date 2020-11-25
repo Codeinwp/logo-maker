@@ -42081,13 +42081,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router-dom */ "./node_modules/.pnpm/react-router-dom@5.2.0_react@17.0.1/node_modules/react-router-dom/esm/react-router-dom.js");
-/* harmony import */ var _assets_fonts_fonts__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./assets/fonts/fonts */ "./src/assets/fonts/fonts.ts");
-/* harmony import */ var _assets_styles_index_scss__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./assets/styles/index.scss */ "./src/assets/styles/index.scss");
-/* harmony import */ var _Creator__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./Creator */ "./src/Creator.tsx");
-/* harmony import */ var _engine_googleFonts__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./engine/googleFonts */ "./src/engine/googleFonts.ts");
-/* harmony import */ var _Showcase__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./Showcase */ "./src/Showcase.tsx");
-/* harmony import */ var _Start__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./Start */ "./src/Start.tsx");
-/* harmony import */ var _stores_AssetsStore__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./stores/AssetsStore */ "./src/stores/AssetsStore.ts");
+/* harmony import */ var _assets_fonts__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./assets/fonts */ "./src/assets/fonts/index.ts");
+/* harmony import */ var _assets_fonts_fonts__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./assets/fonts/fonts */ "./src/assets/fonts/fonts.ts");
+/* harmony import */ var _assets_styles_index_scss__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./assets/styles/index.scss */ "./src/assets/styles/index.scss");
+/* harmony import */ var _Creator__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./Creator */ "./src/Creator.tsx");
+/* harmony import */ var _engine_googleFonts__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./engine/googleFonts */ "./src/engine/googleFonts.ts");
+/* harmony import */ var _Showcase__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./Showcase */ "./src/Showcase.tsx");
+/* harmony import */ var _Start__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./Start */ "./src/Start.tsx");
+/* harmony import */ var _stores_AssetsStore__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./stores/AssetsStore */ "./src/stores/AssetsStore.ts");
+
 
 
 
@@ -42130,21 +42132,21 @@ const Application = () => {
         const googleFontsLink = document.createElement("link");
         googleFontsLink.rel = "stylesheet";
         googleFontsLink.type = "text/css";
-        googleFontsLink.href = Object(_engine_googleFonts__WEBPACK_IMPORTED_MODULE_5__["generateUrlForFonts"])(_assets_fonts_fonts__WEBPACK_IMPORTED_MODULE_2__["default"]);
+        googleFontsLink.href = Object(_engine_googleFonts__WEBPACK_IMPORTED_MODULE_6__["generateUrlForFonts"])(_assets_fonts_fonts__WEBPACK_IMPORTED_MODULE_3__["default"]);
         googleFontsLink.onerror = () => {
             console.log("An error occurred loading the Google's fonts stylesheet!");
         };
         (_a = document.querySelector("head")) === null || _a === void 0 ? void 0 : _a.appendChild(googleFontsLink);
         document.fonts.ready.then(() => {
-            const fontSet = new Set();
-            // document.fonts.forEach(f => {
+            // const fontSet = new Set<string>()
+            // // document.fonts.forEach(f => {
+            // //     fontSet.add(f.family)
+            // // });
+            // for (const f of document.fonts) {
             //     fontSet.add(f.family)
-            // });
-            for (const f of document.fonts) {
-                fontSet.add(f.family);
-            }
-            _stores_AssetsStore__WEBPACK_IMPORTED_MODULE_8__["AssetsStore"].update((s) => {
-                s.fonts.activeFonts = Array.from(fontSet);
+            // }
+            _stores_AssetsStore__WEBPACK_IMPORTED_MODULE_9__["AssetsStore"].update((s) => {
+                s.fonts.activeFonts = _assets_fonts__WEBPACK_IMPORTED_MODULE_2__["fontsList"]; // Array.from(fontSet)
             });
         });
     }, []);
@@ -42152,11 +42154,11 @@ const Application = () => {
         react__WEBPACK_IMPORTED_MODULE_0__["createElement"](react_router_dom__WEBPACK_IMPORTED_MODULE_1__["HashRouter"], null,
             react__WEBPACK_IMPORTED_MODULE_0__["createElement"](react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Switch"], null,
                 react__WEBPACK_IMPORTED_MODULE_0__["createElement"](react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], { path: "/creator" },
-                    react__WEBPACK_IMPORTED_MODULE_0__["createElement"](_Creator__WEBPACK_IMPORTED_MODULE_4__["default"], null)),
+                    react__WEBPACK_IMPORTED_MODULE_0__["createElement"](_Creator__WEBPACK_IMPORTED_MODULE_5__["default"], null)),
                 react__WEBPACK_IMPORTED_MODULE_0__["createElement"](react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], { path: "/showcase" },
-                    react__WEBPACK_IMPORTED_MODULE_0__["createElement"](_Showcase__WEBPACK_IMPORTED_MODULE_6__["default"], null)),
+                    react__WEBPACK_IMPORTED_MODULE_0__["createElement"](_Showcase__WEBPACK_IMPORTED_MODULE_7__["default"], null)),
                 react__WEBPACK_IMPORTED_MODULE_0__["createElement"](react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], { path: "/" },
-                    react__WEBPACK_IMPORTED_MODULE_0__["createElement"](_Start__WEBPACK_IMPORTED_MODULE_7__["default"], null))))));
+                    react__WEBPACK_IMPORTED_MODULE_0__["createElement"](_Start__WEBPACK_IMPORTED_MODULE_8__["default"], null))))));
 };
 /* harmony default export */ __webpack_exports__["default"] = (Application);
 
@@ -42189,7 +42191,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! classnames */ "./node_modules/.pnpm/classnames@2.2.6/node_modules/classnames/index.js");
 /* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_13___default = /*#__PURE__*/__webpack_require__.n(classnames__WEBPACK_IMPORTED_MODULE_13__);
 /* harmony import */ var _src_assets_styles_Creator_creator_scss__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ../src/assets/styles/Creator/creator.scss */ "./src/assets/styles/Creator/creator.scss");
-/* harmony import */ var _stores_UIStore__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./stores/UIStore */ "./src/stores/UIStore.ts");
+/* harmony import */ var _assets_fonts_index__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./assets/fonts/index */ "./src/assets/fonts/index.ts");
+/* harmony import */ var _stores_UIStore__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./stores/UIStore */ "./src/stores/UIStore.ts");
+
 
 
 
@@ -42208,7 +42212,7 @@ __webpack_require__.r(__webpack_exports__);
 
 const Creator = () => {
     const [menuOption, setMenuOption] = react__WEBPACK_IMPORTED_MODULE_0__["useState"]("logo");
-    let store = { ..._stores_UIStore__WEBPACK_IMPORTED_MODULE_15__["default"].useState((s) => s) };
+    let store = { ..._stores_UIStore__WEBPACK_IMPORTED_MODULE_16__["default"].useState((s) => s) };
     const renderRightSidePanel = () => {
         switch (menuOption) {
             case "logo":
@@ -42227,6 +42231,20 @@ const Creator = () => {
             ...store.container,
             width: 765,
             height: 625,
+        },
+        title: {
+            ...store.title,
+            style: {
+                ...store.title.style,
+                fontFamily: _assets_fonts_index__WEBPACK_IMPORTED_MODULE_15__["fontsForSvg"][_assets_fonts_index__WEBPACK_IMPORTED_MODULE_15__["fontsList"].findIndex((f) => f === store.title.style.fontFamily)],
+            },
+        },
+        slogan: {
+            ...store.slogan,
+            style: {
+                ...store.slogan.style,
+                fontFamily: _assets_fonts_index__WEBPACK_IMPORTED_MODULE_15__["fontsForSvg"][_assets_fonts_index__WEBPACK_IMPORTED_MODULE_15__["fontsList"].findIndex((f) => f === store.slogan.style.fontFamily)],
+            },
         },
     };
     return (react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("div", { className: "logo-creator logo-maker-container" },
@@ -42277,7 +42295,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _stores_UIStore__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./stores/UIStore */ "./src/stores/UIStore.ts");
 /* harmony import */ var color_scheme__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! color-scheme */ "./node_modules/.pnpm/color-scheme@1.0.1/node_modules/color-scheme/lib/color-scheme.js");
 /* harmony import */ var color_scheme__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(color_scheme__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _assets_fonts_fonts__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./assets/fonts/fonts */ "./src/assets/fonts/fonts.ts");
+/* harmony import */ var _assets_fonts_index__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./assets/fonts/index */ "./src/assets/fonts/index.ts");
 /* harmony import */ var _stores_AssetsStore__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./stores/AssetsStore */ "./src/stores/AssetsStore.ts");
 /* harmony import */ var _assets_ui_BackUI__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./assets/ui/BackUI */ "./src/assets/ui/BackUI.tsx");
 /* harmony import */ var _assets_ui_ThemeisleUI__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./assets/ui/ThemeisleUI */ "./src/assets/ui/ThemeisleUI.tsx");
@@ -42296,7 +42314,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-const defaultFontsList = new Array(_assets_logos__WEBPACK_IMPORTED_MODULE_2__["default"].length).fill("Arial");
+const defaultFontsList = new Array(_assets_logos__WEBPACK_IMPORTED_MODULE_2__["default"].length).fill("sans-serif");
 const Showcase = () => {
     const store = _stores_UIStore__WEBPACK_IMPORTED_MODULE_4__["default"].useState((s) => s);
     const fontsStore = _stores_AssetsStore__WEBPACK_IMPORTED_MODULE_7__["AssetsStore"].useState((s) => s);
@@ -42326,16 +42344,16 @@ const Showcase = () => {
             const list = [];
             let index = 0;
             while (list.length < _assets_logos__WEBPACK_IMPORTED_MODULE_2__["default"].length) {
-                list.push(_assets_fonts_fonts__WEBPACK_IMPORTED_MODULE_6__["presets"][index]);
+                list.push(_assets_fonts_index__WEBPACK_IMPORTED_MODULE_6__["presets"][index]);
                 index++;
-                if (index >= _assets_fonts_fonts__WEBPACK_IMPORTED_MODULE_6__["presets"].length) {
+                if (index >= _assets_fonts_index__WEBPACK_IMPORTED_MODULE_6__["presets"].length) {
                     index = 0;
                 }
             }
             return list;
         };
         setFontsList(generateFonts());
-        setFontsStatus("active");
+        setFontsStatus(fontsStore.fonts.fontsStatus);
     }, [fontsStore]);
     const setTemplate = (index) => {
         _stores_UIStore__WEBPACK_IMPORTED_MODULE_4__["default"].update((s) => {
@@ -42466,6 +42484,36 @@ const Start = () => {
 
 /***/ }),
 
+/***/ "./src/assets/colors/index.ts":
+/*!************************************!*\
+  !*** ./src/assets/colors/index.ts ***!
+  \************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+const colors = [
+    "#FFB800",
+    "#9DAB86",
+    "#6E5477",
+    "#31446C",
+    "#FF7A29",
+    "#3B798C",
+    "#FFB800",
+    "#4267CF",
+    "#3146CC",
+    "#00949D",
+    "#6E5477",
+    "#31446C",
+    "#926900",
+    "#0A4447",
+];
+/* harmony default export */ __webpack_exports__["default"] = (colors);
+
+
+/***/ }),
+
 /***/ "./src/assets/fonts/fonts.ts":
 /*!***********************************!*\
   !*** ./src/assets/fonts/fonts.ts ***!
@@ -42574,6 +42622,143 @@ const presets = [
 ];
 fonts.sort();
 /* harmony default export */ __webpack_exports__["default"] = (fonts);
+
+
+/***/ }),
+
+/***/ "./src/assets/fonts/index.ts":
+/*!***********************************!*\
+  !*** ./src/assets/fonts/index.ts ***!
+  \***********************************/
+/*! exports provided: fontsList, fontsForSvg, presets, default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "fontsList", function() { return fontsList; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "fontsForSvg", function() { return fontsForSvg; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "presets", function() { return presets; });
+/* harmony import */ var _serif__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./serif */ "./src/assets/fonts/serif.ts");
+/* harmony import */ var _sans__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./sans */ "./src/assets/fonts/sans.ts");
+
+
+const fontsList = [..._serif__WEBPACK_IMPORTED_MODULE_0__["serifFonts"], ..._sans__WEBPACK_IMPORTED_MODULE_1__["sansFonts"]].sort();
+const fonts = [..._serif__WEBPACK_IMPORTED_MODULE_0__["default"], ..._sans__WEBPACK_IMPORTED_MODULE_1__["default"]].sort((a, b) => {
+    if (a.family < b.family) {
+        return -1;
+    }
+    if (a.family > b.family) {
+        return 1;
+    }
+    return 0;
+});
+const fontsForSvg = fonts.map(f => `'${f.family}', '${f.fallback}'`);
+// export const presets = [
+// 	{
+// 		title: "Roboto",
+// 		slogan: "Open Sans"
+// 	},
+// 	{
+// 		title: "Open Sans",
+// 		slogan: "Roboto"
+// 	},
+// 	{
+// 		title: "Zilla Slab",
+// 		slogan: "Open Sans"
+// 	},
+// 	{
+// 		title: "Roboto Slab",
+// 		slogan: "Roboto"
+// 	},
+// 	{
+// 		title: "Roboto Slab",
+// 		slogan: "Lato"
+// 	},
+// 	{
+// 		title: "Bitter",
+// 		slogan: "Lato"
+// 	},
+// 	{
+// 		title: "Zilla Slab",
+// 		slogan: "Roboto"
+// 	},
+// 	{
+// 		title: "Roboto",
+// 		slogan: "Noto Sans JP"
+// 	},
+// ]
+const presets = [
+    {
+        title: "Times New Roman",
+        slogan: "Helvetica"
+    },
+    {
+        title: "Helvetica",
+        slogan: "Times New Roman"
+    },
+    {
+        title: "Georgia",
+        slogan: "sans-serif"
+    }
+];
+/* harmony default export */ __webpack_exports__["default"] = (fonts);
+
+
+/***/ }),
+
+/***/ "./src/assets/fonts/sans.ts":
+/*!**********************************!*\
+  !*** ./src/assets/fonts/sans.ts ***!
+  \**********************************/
+/*! exports provided: sansFonts, default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "sansFonts", function() { return sansFonts; });
+const sansFonts = [
+    "Arial",
+    "Helvetica",
+    "Impact"
+    // "Lato",
+    // "Noto Sans JP",
+    // "Noto Sans",
+    // "Open Sans",
+    // "PT Sans",
+    // "Raleway",
+    // "Robota",
+    // "Ubuntu",
+];
+/* harmony default export */ __webpack_exports__["default"] = (sansFonts.sort().map(f => { return { family: f, fallback: "sans-serif" }; }));
+
+
+/***/ }),
+
+/***/ "./src/assets/fonts/serif.ts":
+/*!***********************************!*\
+  !*** ./src/assets/fonts/serif.ts ***!
+  \***********************************/
+/*! exports provided: serifFonts, default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "serifFonts", function() { return serifFonts; });
+const serifFonts = [
+    // "Antic Slab",
+    // "Bitter",
+    // "Castro",
+    // "Crimson Text",
+    "Georgia",
+    "Times New Roman"
+    // "Lora",
+    // "Marriweather",
+    // "Noto Serif",
+    // "PT Serif",
+    // "Roboto Slab",
+    // "Zilla Slab",
+];
+/* harmony default export */ __webpack_exports__["default"] = (serifFonts.sort().map((f) => { return { family: f, fallback: "serif" }; }));
 
 
 /***/ }),
@@ -43283,16 +43468,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! classnames */ "./node_modules/.pnpm/classnames@2.2.6/node_modules/classnames/index.js");
 /* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(classnames__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _stores_UIStore__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../stores/UIStore */ "./src/stores/UIStore.ts");
-/* harmony import */ var _engine_googleFonts__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../engine/googleFonts */ "./src/engine/googleFonts.ts");
-
-
 
 
 const DownloadButton = (props) => {
-    const font = _stores_UIStore__WEBPACK_IMPORTED_MODULE_2__["UIStore"].useState((s) => s.title.style.fontFamily);
+    // const fonts = [
+    //     UIStore.useState((s) => s.title.style.fontFamily),
+    //     UIStore.useState((s) => s.slogan.style.fontFamily),
+    // ]
     // const downloadSVGasPNG = () => {
-    //     const svg = document.querySelector("#logo-image")?.childNodes[0]
+    //     const svg = document.querySelector("#image-logo")?.childNodes[0]
     //     if (!svg) {
     //         return
     //     }
@@ -43316,17 +43500,18 @@ const DownloadButton = (props) => {
     //     sourceImage.src = image
     // }
     const downloadSVG = () => {
-        var _a, _b;
+        var _a;
         const node = (_a = document.querySelector("#image-logo")) === null || _a === void 0 ? void 0 : _a.cloneNode(true);
         if (!node) {
             return;
         }
         // const defs = document.createElement("defs")
-        const style = document.createElement("style");
-        style.innerHTML = `
-                @import url("${Object(_engine_googleFonts__WEBPACK_IMPORTED_MODULE_3__["generateUrlForFont"])(font)}");
-        `;
-        (_b = node.firstChild) === null || _b === void 0 ? void 0 : _b.appendChild(style);
+        // const style = document.createElement("style")
+        // style.innerHTML = `
+        //         @import url("${generateUrlForFont(fonts[0])}");
+        //         @import url("${generateUrlForFont(fonts[1])}");
+        // `
+        // node.firstChild?.appendChild(style)
         const svg = node.innerHTML;
         const blob = new Blob([svg.toString()]);
         const element = document.createElement("a");
@@ -43394,6 +43579,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react_color__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-color */ "./node_modules/.pnpm/react-color@2.19.3_react@17.0.1/node_modules/react-color/es/index.js");
 /* harmony import */ var _stores_UIStore__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../stores/UIStore */ "./src/stores/UIStore.ts");
+/* harmony import */ var _assets_colors__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../assets/colors */ "./src/assets/colors/index.ts");
+
 
 
 
@@ -43421,13 +43608,13 @@ const SelectColor = () => {
     return (react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("div", { className: "select-colors" },
         react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("h1", null, "COLOR PALETTE"),
         react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("p", null, "Background Color"),
-        react__WEBPACK_IMPORTED_MODULE_0__["createElement"](react_color__WEBPACK_IMPORTED_MODULE_1__["SliderPicker"], { color: _stores_UIStore__WEBPACK_IMPORTED_MODULE_2__["default"].useState((s) => s.container.style.color), onChangeComplete: onBackgroundColor }),
+        react__WEBPACK_IMPORTED_MODULE_0__["createElement"](react_color__WEBPACK_IMPORTED_MODULE_1__["TwitterPicker"], { colors: _assets_colors__WEBPACK_IMPORTED_MODULE_3__["default"], onChangeComplete: onBackgroundColor }),
         react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("p", null, "Logo Color"),
-        react__WEBPACK_IMPORTED_MODULE_0__["createElement"](react_color__WEBPACK_IMPORTED_MODULE_1__["SliderPicker"], { color: _stores_UIStore__WEBPACK_IMPORTED_MODULE_2__["default"].useState((s) => s.logo.style.fill), onChangeComplete: onLogoColor }),
+        react__WEBPACK_IMPORTED_MODULE_0__["createElement"](react_color__WEBPACK_IMPORTED_MODULE_1__["TwitterPicker"], { colors: _assets_colors__WEBPACK_IMPORTED_MODULE_3__["default"], onChangeComplete: onLogoColor }),
         react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("p", null, "Title Color"),
-        react__WEBPACK_IMPORTED_MODULE_0__["createElement"](react_color__WEBPACK_IMPORTED_MODULE_1__["SliderPicker"], { color: _stores_UIStore__WEBPACK_IMPORTED_MODULE_2__["default"].useState((s) => s.title.style.color), onChangeComplete: onTitleColor }),
+        react__WEBPACK_IMPORTED_MODULE_0__["createElement"](react_color__WEBPACK_IMPORTED_MODULE_1__["TwitterPicker"], { colors: _assets_colors__WEBPACK_IMPORTED_MODULE_3__["default"], onChangeComplete: onTitleColor }),
         react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("p", null, "Slogan Color"),
-        react__WEBPACK_IMPORTED_MODULE_0__["createElement"](react_color__WEBPACK_IMPORTED_MODULE_1__["SliderPicker"], { color: _stores_UIStore__WEBPACK_IMPORTED_MODULE_2__["default"].useState((s) => s.slogan.style.color), onChangeComplete: onSloganColor })));
+        react__WEBPACK_IMPORTED_MODULE_0__["createElement"](react_color__WEBPACK_IMPORTED_MODULE_1__["TwitterPicker"], { colors: _assets_colors__WEBPACK_IMPORTED_MODULE_3__["default"], onChangeComplete: onSloganColor })));
 };
 /* harmony default export */ __webpack_exports__["default"] = (SelectColor);
 
@@ -43538,14 +43725,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react_select__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-select */ "./node_modules/.pnpm/react-select@3.1.1_react-dom@17.0.1+react@17.0.1/node_modules/react-select/dist/react-select.browser.esm.js");
-/* harmony import */ var _assets_fonts_fonts__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../assets/fonts/fonts */ "./src/assets/fonts/fonts.ts");
+/* harmony import */ var _assets_fonts_index__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../assets/fonts/index */ "./src/assets/fonts/index.ts");
 /* harmony import */ var _stores_UIStore__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../stores/UIStore */ "./src/stores/UIStore.ts");
 
 
 
 
 const SelectTypography = () => {
-    const fontOptions = _assets_fonts_fonts__WEBPACK_IMPORTED_MODULE_2__["default"].map((font) => ({
+    console.log(_stores_UIStore__WEBPACK_IMPORTED_MODULE_3__["default"].useState((s) => s));
+    const fontOptions = _assets_fonts_index__WEBPACK_IMPORTED_MODULE_2__["fontsList"].map((font) => ({
         value: font,
         label: font,
     }));
@@ -43613,7 +43801,7 @@ const SelectTypography = () => {
             react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("label", { htmlFor: "select-title-text" }, "Text"),
             react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("input", { value: _stores_UIStore__WEBPACK_IMPORTED_MODULE_3__["default"].useState((s) => s.title.text), onChange: (e) => onTitleTextChange(e.target.value) }),
             react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("label", { htmlFor: "select-title-font-family" }, "Font Family"),
-            react__WEBPACK_IMPORTED_MODULE_0__["createElement"](react_select__WEBPACK_IMPORTED_MODULE_1__["default"], { id: "select-title-font-family", className: "font-select", isSearchable: false, defaultValue: fontOptions.filter(({ value }) => value === defaultTitleFontFamily), onChange: onTitleFontFamilyChange, options: fontOptions, styles: disableBoxShadow }),
+            react__WEBPACK_IMPORTED_MODULE_0__["createElement"](react_select__WEBPACK_IMPORTED_MODULE_1__["default"], { id: "select-title-font-family", className: "font-select", isSearchable: false, defaultValue: fontOptions.filter(({ value }) => value === defaultTitleFontFamily)[0], onChange: onTitleFontFamilyChange, options: fontOptions, styles: disableBoxShadow }),
             react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("label", { htmlFor: "select-title-font-size" }, "Font Size"),
             react__WEBPACK_IMPORTED_MODULE_0__["createElement"](react_select__WEBPACK_IMPORTED_MODULE_1__["default"], { id: "select-title-font-size", className: "font-select", isSearchable: false, defaultValue: titleSizeOptions.filter(({ value }) => value === defaultTitleFontSize), options: titleSizeOptions, onChange: onTitleFontSizeChange, styles: disableBoxShadow })),
         react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("div", { className: "slogan-options" },
@@ -43930,6 +44118,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "generateUrlForFont", function() { return generateUrlForFont; });
 // used for importing the fonts with a HTML link 
 function generateUrlForFonts(fonts) {
+    fonts.sort();
     const formatFont = fonts.map(f => `family=${f.split(" ").join("+")}`);
     return `https://fonts.googleapis.com/css2?${formatFont.join("&")}&display=swap`;
 }
@@ -44039,8 +44228,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-window.addEventListener('load', (event) => {
-    console.log(document.querySelector("#themeisle-logo-maker-root"));
+window.addEventListener("load", (event) => {
     Object(react_dom__WEBPACK_IMPORTED_MODULE_1__["render"])(react__WEBPACK_IMPORTED_MODULE_0__["createElement"](_Application__WEBPACK_IMPORTED_MODULE_2__["default"], null), document.querySelector("#themeisle-logo-maker-root"));
 });
 
