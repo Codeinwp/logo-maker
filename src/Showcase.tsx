@@ -1,14 +1,15 @@
 import * as React from "react"
 import { Link } from "react-router-dom"
-import logos from "./assets/logos"
+import logos from "./assets/logos/index"
 import CreateLogo from "./components/CreateLogo"
 import UIStore from "./stores/UIStore"
-import ColorScheme from "color-scheme"
+
 import { presets } from "./assets/fonts/index"
 import { AssetsStore } from "./stores/AssetsStore"
 import BackUI from "./assets/ui/BackUI"
 import ThemeisleUI from "./assets/ui/ThemeisleUI"
 import classnames from "classnames"
+import presetColors from "./assets/colors"
 import "../src/assets/styles/Showcase/showcase.scss"
 
 const defaultFontsList = new Array(logos.length).fill("sans-serif")
@@ -31,21 +32,32 @@ const Showcase: React.FunctionComponent<unknown> = () => {
     React.useEffect(() => {
         // Generate the colors
         const generateColors = () => {
-            const scm = new ColorScheme()
-            const colorsNum = new Set()
+            // const scm = new ColorScheme()
+            // const colorsNum = new Set()
 
-            const step = 360 / logos.length
-            for (let i = 0; i < logos.length; ++i) {
-                colorsNum.add(step * i)
-            }
+            // const step = 360 / logos.length
+            // for (let i = 0; i < logos.length; ++i) {
+            //     colorsNum.add(step * i)
+            // }
 
+            // const colors: string[] = []
+            // colorsNum.forEach((x) => {
+            //     scm.from_hue(x).scheme("triade").distance(0.8).variation("hard").web_safe(true)
+
+            //     colors.push("#" + scm.colors()[1])
+            // })
             const colors: string[] = []
-            colorsNum.forEach((x) => {
-                scm.from_hue(x).scheme("triade").distance(0.8).variation("hard").web_safe(true)
-
-                colors.push("#" + scm.colors()[1])
-            })
-
+            let index = 0
+            while (colors.length < logos.length) {
+                if (presetColors[index] !== "#fff") {
+                    colors.push(presetColors[index])
+                }
+                index++
+                if (index >= presetColors.length) {
+                    index = 0
+                }
+            }
+            console.log(presetColors, colors)
             return colors
         }
         setColors(generateColors())

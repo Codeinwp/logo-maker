@@ -1,4 +1,5 @@
-import { Logo1, LogoSVGImport } from "../assets/logos"
+import { LogoSVGImport } from "../assets/logos/index"
+import { Logo1 } from "../assets/logos/set1/index"
 
 import { Store } from "pullstate"
 import { LogoAlignOptions } from "../components/ui/SelectLayout"

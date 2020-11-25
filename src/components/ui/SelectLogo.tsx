@@ -1,5 +1,5 @@
 import * as React from "react"
-import logos, { LogoSVGImport } from "../../assets/logos"
+import logos, { LogoSVGImport } from "../../assets/logos/index"
 import LogoItem from "./LogoItem"
 import store from "../../stores/UIStore"
 

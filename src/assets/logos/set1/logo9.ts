@@ -1,4 +1,4 @@
-import { LogoSVGImport } from "."
+import { LogoSVGImport } from "../index"
 
 const logo: LogoSVGImport = {
     id: "logo-9",
