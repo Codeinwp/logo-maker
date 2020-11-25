@@ -3,7 +3,8 @@ import { TLogo, TLogoContainer, TSlogan, TTitle } from "../stores/UIStore"
 import { settings } from "./settings"
 import { Elements } from "./utility"
 
-const autoScallingOffsetMargin = 100
+const autoScallingFactor = 1.3
+const marginFactor = 0.70
 
 export type ContainerData = {
     containerPos: {
@@ -55,11 +56,22 @@ export const alignLogoTop = (props: LogoProps, draw: Svg): ContainerData => {
         .move(0, 0)
     // console.log(titleSVG.bbox(), titleSVG.rbox())
     titleSVG.leading(0)
-    const titleDim = {
-        height: settings.title.margins.top + titleSVG.bbox().height + settings.title.margins.bottom,
-        width:
-            settings.title.margins.left + titleSVG.bbox().width + settings.title.margins.bottom,
+
+    let titleDim;
+    if(props.title.text === "") {
+        titleDim = {
+            width: 0,
+            height: 0
+        }
+    } else {
+        titleDim = {
+            height: settings.title.margins.top + titleSVG.bbox().height + settings.title.margins.bottom,
+            width:
+                settings.title.margins.left + titleSVG.bbox().width + settings.title.margins.bottom,
+        }
     }
+
+    
 
     /*
            Add the slogan's SVG
@@ -73,13 +85,19 @@ export const alignLogoTop = (props: LogoProps, draw: Svg): ContainerData => {
         })
         .move(0, 0)
     sloganSVG.leading(0)
-    const sloganDim = {
-        height:
-            settings.slogan.margins.top + sloganSVG.bbox().height + settings.slogan.margins.bottom,
-        width:
-            settings.slogan.margins.left +
-            sloganSVG.bbox().width +
-            settings.slogan.margins.bottom,
+
+    let sloganDim;
+    if(props.slogan.text === "") {
+        sloganDim = {
+            width: 0,
+            height: 0
+        }
+    } else {
+        sloganDim = {
+            height: settings.slogan.margins.top + sloganSVG.bbox().height + settings.slogan.margins.bottom,
+            width:
+                settings.slogan.margins.left + sloganSVG.bbox().width + settings.slogan.margins.bottom,
+        }
     }
 
     /*
@@ -114,12 +132,8 @@ export const alignLogoTop = (props: LogoProps, draw: Svg): ContainerData => {
     draw.viewbox(
         0,
         0,
-        currentViewBox.width < widthContainer
-            ? widthContainer + autoScallingOffsetMargin
-            : currentViewBox.width,
-        currentViewBox.height < heightContainer
-            ? heightContainer + autoScallingOffsetMargin
-            : currentViewBox.height
+        currentViewBox.width  * marginFactor < widthContainer ? widthContainer * autoScallingFactor : currentViewBox.width,
+        currentViewBox.height * marginFactor < heightContainer  ? heightContainer * autoScallingFactor : currentViewBox.height,
     )
 
     return {
@@ -170,32 +184,49 @@ export const alignLogoLeft = (props: LogoProps, draw: Svg): ContainerData => {
         })
         .move(0, 0)
     titleSVG.leading(0)
-    const titleDim = {
-        height: settings.title.margins.top + titleSVG.bbox().height + settings.title.margins.bottom,
-        width:
-            settings.title.margins.left + titleSVG.bbox().width + settings.title.margins.bottom,
+    let titleDim;
+    if(props.title.text === "") {
+        titleDim = {
+            width: 0,
+            height: 0
+        }
+    } else {
+        titleDim = {
+            height: settings.title.margins.top + titleSVG.bbox().height + settings.title.margins.bottom,
+            width:
+                settings.title.margins.left + titleSVG.bbox().width + settings.title.margins.bottom,
+        }
     }
 
+    
+
     /*
-          Add the slogan's SVG
-      */
+           Add the slogan's SVG
+       */
     const sloganSVG = draw
-        .text(slogan.text)
+        .plain(slogan.text)
         .font({
             fill: slogan.style.color,
             family: slogan.style.fontFamily,
-            size: slogan.style.fontSize,
+            size: slogan.style.fontSize + "px",
         })
         .move(0, 0)
     sloganSVG.leading(0)
-    const sloganDim = {
-        height:
-            settings.slogan.margins.top + sloganSVG.bbox().height + settings.slogan.margins.bottom,
-        width:
-            settings.slogan.margins.left +
-            sloganSVG.bbox().width +
-            settings.slogan.margins.bottom,
+
+    let sloganDim;
+    if(props.slogan.text === "") {
+        sloganDim = {
+            width: 0,
+            height: 0
+        }
+    } else {
+        sloganDim = {
+            height: settings.slogan.margins.top + sloganSVG.bbox().height + settings.slogan.margins.bottom,
+            width:
+                settings.slogan.margins.left + sloganSVG.bbox().width + settings.slogan.margins.bottom,
+        }
     }
+
 
     // the elements are vertically stacked,
     // so the width of the container is equal with the width of the largest element
@@ -230,12 +261,8 @@ export const alignLogoLeft = (props: LogoProps, draw: Svg): ContainerData => {
     draw.viewbox(
         0,
         0,
-        currentViewBox.width < widthContainer
-            ? widthContainer 
-            : currentViewBox.width  + autoScallingOffsetMargin,
-        currentViewBox.height < heightContainer
-            ? heightContainer 
-            : currentViewBox.height + autoScallingOffsetMargin
+        currentViewBox.width * marginFactor < widthContainer  ? widthContainer * autoScallingFactor : currentViewBox.width,
+        currentViewBox.height * marginFactor < heightContainer ? heightContainer * autoScallingFactor : currentViewBox.height,
     )
 
     return {
@@ -285,32 +312,49 @@ export const alignLogoRight = (props: LogoProps, draw: Svg): ContainerData => {
         })
         .move(0, 0)
     titleSVG.leading(0)
-    const titleDim = {
-        height: settings.title.margins.top + titleSVG.bbox().height + settings.title.margins.bottom,
-        width:
-            settings.title.margins.left + titleSVG.bbox().width + settings.title.margins.bottom,
+    let titleDim;
+    if(props.title.text === "") {
+        titleDim = {
+            width: 0,
+            height: 0
+        }
+    } else {
+        titleDim = {
+            height: settings.title.margins.top + titleSVG.bbox().height + settings.title.margins.bottom,
+            width:
+                settings.title.margins.left + titleSVG.bbox().width + settings.title.margins.bottom,
+        }
     }
 
+    
+
     /*
-          Add the slogan's SVG
-      */
+           Add the slogan's SVG
+       */
     const sloganSVG = draw
-        .text(slogan.text)
+        .plain(slogan.text)
         .font({
             fill: slogan.style.color,
             family: slogan.style.fontFamily,
-            size: slogan.style.fontSize,
+            size: slogan.style.fontSize + "px",
         })
         .move(0, 0)
     sloganSVG.leading(0)
-    const sloganDim = {
-        height:
-            settings.slogan.margins.top + sloganSVG.bbox().height + settings.slogan.margins.bottom,
-        width:
-            settings.slogan.margins.left +
-            sloganSVG.bbox().width +
-            settings.slogan.margins.bottom,
+
+    let sloganDim;
+    if(props.slogan.text === "") {
+        sloganDim = {
+            width: 0,
+            height: 0
+        }
+    } else {
+        sloganDim = {
+            height: settings.slogan.margins.top + sloganSVG.bbox().height + settings.slogan.margins.bottom,
+            width:
+                settings.slogan.margins.left + sloganSVG.bbox().width + settings.slogan.margins.bottom,
+        }
     }
+
 
     // the elements are vertically stacked,
     // so the width of the container is equal with the width of the largest element
@@ -339,12 +383,8 @@ export const alignLogoRight = (props: LogoProps, draw: Svg): ContainerData => {
     draw.viewbox(
         0,
         0,
-        currentViewBox.width < widthContainer
-            ? widthContainer 
-            : currentViewBox.width + autoScallingOffsetMargin,
-        currentViewBox.height < heightContainer
-            ? heightContainer 
-            : currentViewBox.height + autoScallingOffsetMargin
+        currentViewBox.width * marginFactor < widthContainer ? widthContainer * autoScallingFactor : currentViewBox.width,
+        currentViewBox.height * marginFactor< heightContainer ? heightContainer * autoScallingFactor : currentViewBox.height,
     )
 
     return {

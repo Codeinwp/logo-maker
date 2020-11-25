@@ -61,7 +61,7 @@ export const UIStore = new Store<StoreProps>({
         viewbox: {
             x: 0,
             y: 0,
-            width: 300,
+            width: 250,
             height: 250,
         },
         style: {
