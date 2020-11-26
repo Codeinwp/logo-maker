@@ -109,18 +109,14 @@ __webpack_require__.r(__webpack_exports__);
  */
 // import edit from './edit';
 // import save from './save';
-Object(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_1__["registerBlockType"])('themeisle/logo-maker', {
-    title: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__["__"])('Logo Maker'),
-    description: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__["__"])('An example typescript block.', 'tsblock'),
-    category: 'widgets',
-    icon: 'smiley',
-    supports: {
-        // Removes support for an HTML mode.
-        html: false,
-    },
+Object(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_1__["registerBlockType"])("themeisle/logo-maker", {
+    title: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__["__"])("Logo Maker"),
+    description: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__["__"])("Put the logo maker on the site."),
+    category: "widgets",
+    icon: "smiley",
     attributes: {},
-    edit: () => (react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("p", null, "Logo Maker Placeholder. Please make this page an empty or the site might not desplay correctly.")),
-    save: () => (react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("div", { id: "themeisle-logo-maker-root" })),
+    edit: () => (react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("p", null, "Logo Maker Placeholder. Please make this page empty or the site might not desplay correctly.")),
+    save: () => react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("div", { id: "themeisle-logo-maker-root" }),
 });
 
 

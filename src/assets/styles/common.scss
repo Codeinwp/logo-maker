@@ -19,7 +19,7 @@
 	left: 0;
 	visibility: visible;
 	a {
-		display: flex;
+		display: inline-flex;
 		align-items: center;
 		text-decoration: none;
 		p {
@@ -28,6 +28,9 @@
 			font-size: 14px;
 			font-weight: 600;
 			margin-left: 13px;
+			padding-bottom: 0px;
+			margin-bottom: 0px;
+			margin-top: 0px;
 		}
 	}
 	@media(max-width: 600px) {
@@ -59,6 +62,10 @@
 @mixin logo-holder {
 	display: inline-flex;
 	align-items: center;
+	img {
+		max-width: 134px;
+		max-height: 44px;
+	}
 	a {
 		height: 44px;
 	}

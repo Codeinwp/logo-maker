@@ -2,11 +2,12 @@
 
 /**
  * Plugin Name: Logo Maker WordPress Plugin
- * Plugin URI: https://github.com/WordPress/gutenberg-examples
- * Description: Logo Maker as a plugin for WordPress
+ * Plugin URI: https://github.com/Codeinwp/logo-maker
+ * Description: Logo Maker as plugin for WordPress
+ * Version: 1.0.0
  * Author: Soare Robert Daniel
  *
- * @package gutenberg-examples
+ * @package logo-maker
  */
 
 defined('ABSPATH') || exit;
