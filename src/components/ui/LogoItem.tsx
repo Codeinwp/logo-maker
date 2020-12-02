@@ -1,4 +1,4 @@
-import { Svg, SVG } from "@svgdotjs/svg.js"
+import { SVG } from "@svgdotjs/svg.js"
 import * as React from "react"
 import { LogoSVGImport } from "../../assets/logos/index"
 import classnames from "classnames"
