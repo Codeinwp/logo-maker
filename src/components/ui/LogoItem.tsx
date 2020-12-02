@@ -1,4 +1,4 @@
-import { SVG } from "@svgdotjs/svg.js"
+import { Svg, SVG } from "@svgdotjs/svg.js"
 import * as React from "react"
 import { LogoSVGImport } from "../../assets/logos/index"
 import classnames from "classnames"
@@ -17,14 +17,22 @@ const LogoItem: React.FunctionComponent<SelectLogoProps> = (props: SelectLogoPro
         if (itemRef.current) {
             itemRef.current.textContent = ""
             const svgItem = SVG().addTo(itemRef.current).svg(logo.svg)
+
+            const logoSVG = svgItem.first().node as SVGElement
+            logoSVG.removeAttribute("viewBox")
+            logoSVG.setAttribute(
+                "viewBox",
+                `-7 -7 0${svgItem.bbox().width + 10} ${svgItem.bbox().height + 10}`
+            )
             svgItem
-                .viewbox(0, 0, svgItem.bbox().width, svgItem.bbox().height)
+                .viewbox(0, 0, svgItem.bbox().width + 13, svgItem.bbox().height + 13)
                 .size(77, 77)
                 .addClass(classnames({ active: props?.isSelected }))
+            // eslint-disable-next-line @typescript-eslint/no-explicit-any
         }
     }, [logo.svg, props?.isSelected])
 
-    return <button onClick={onClick} ref={itemRef}></button>
+    return <button name={logo.id} onClick={onClick} ref={itemRef}></button>
 }
 
 export default LogoItem

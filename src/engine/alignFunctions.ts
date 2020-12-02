@@ -35,7 +35,7 @@ export const alignLogoTop = (props: LogoProps, draw: Svg): ContainerData => {
     const logoSVG = SVG().addTo(draw).svg(logo.src.svg)
     const svgRawDim = logoSVG.bbox() // get the natural dimension to calculate the viewbox
     logoSVG
-        .viewbox(0, 0, svgRawDim.width, svgRawDim.height)
+        .viewbox(0, 0, svgRawDim.width, svgRawDim.height + 4)
         .size(logo.width, logo.height)
         .css("fill", logo.style.fill)
     const logoDim = {
@@ -164,7 +164,7 @@ export const alignLogoLeft = (props: LogoProps, draw: Svg): ContainerData => {
     const svgRawDim = logoSVG.bbox() // get the natural dimension to calculate the viewbox
 
     logoSVG
-        .viewbox(0, 0, svgRawDim.width, svgRawDim.height)
+        .viewbox(0, 0, svgRawDim.width, svgRawDim.height + 4)
         .size(logo.width, logo.height)
         .css("fill", logo.style.fill)
     const logoDim = {
@@ -293,7 +293,7 @@ export const alignLogoRight = (props: LogoProps, draw: Svg): ContainerData => {
     const svgRawDim = logoSVG.bbox() // get the natural dimension to calculate the viewbox
 
     logoSVG
-        .viewbox(0, 0, svgRawDim.width, svgRawDim.height)
+        .viewbox(0, 0, svgRawDim.width, svgRawDim.height + 4)
         .size(logo.width, logo.height)
         .css("fill", logo.style.fill)
     const logoDim = {
