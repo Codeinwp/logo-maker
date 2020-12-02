@@ -60,7 +60,7 @@ const CreateLogo: React.FunctionComponent<CreateLogoPropsComponent> = (
 
             // addEmbeddedFont(draw, props.logoProps.title.style.fontFamily)
         }
-    }, [props.logoProps])
+    }, [props?.className, props.logoProps])
 
     return <div id={ID} ref={divRef}></div>
 }
