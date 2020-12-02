@@ -97,7 +97,7 @@ const SelectColor: React.FunctionComponent<unknown> = () => {
                         slogan: value,
                     })
                     UIStore.update((s) => {
-                        s.title.style.color = value
+                        s.slogan.style.color = value
                     })
                     break
             }

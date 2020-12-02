@@ -44266,7 +44266,7 @@ const SelectColor = () => {
                         slogan: value,
                     });
                     _stores_UIStore__WEBPACK_IMPORTED_MODULE_2__["default"].update((s) => {
-                        s.title.style.color = value;
+                        s.slogan.style.color = value;
                     });
                     break;
             }
