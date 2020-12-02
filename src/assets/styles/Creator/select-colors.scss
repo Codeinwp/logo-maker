@@ -1,3 +1,5 @@
+@import "../constants";
+
 @mixin select-colors {
 	width: 80%;
 	h1 {
@@ -13,5 +15,53 @@
 		font-weight: 600;
 		line-height: 19px;
 		margin: 20px 0 10px;
+	}
+
+	.container {
+		display: flex;
+		width: 100%;
+		flex-direction: column;
+
+		.input-field {
+			width: 100%;
+			display: inline-flex;
+			align-items: center;
+			margin-bottom: 5px;
+
+			button {
+				height: 36px;
+				min-width: 36px;
+				max-width: 36px;
+				box-sizing: border-box;
+				border: 1px solid #E7E7E7;
+				border-radius: 4px;
+				
+
+				&:hover, &.active {
+					outline: none;
+					border-color: $light-blue;
+					transition: $transition;
+				}
+				
+				&:hover {
+					transform: scale(1.1);
+				}
+			}
+
+			input {
+				margin-left: 10px;
+				color: $black;
+				font-weight: 500;
+				font-family: $noto;
+				padding: 10px 13px;
+				border: 1px solid #E7E7E7;
+				border-radius: 4px;
+				&:focus {
+					outline: none;
+					border-color: $light-blue;
+					transition: $transition;
+				}
+			}
+		}
 	}
 }
