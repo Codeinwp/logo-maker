@@ -25,7 +25,7 @@ const LogoItem: React.FunctionComponent<SelectLogoProps> = (props: SelectLogoPro
                 `-7 -7 0${svgItem.bbox().width + 10} ${svgItem.bbox().height + 10}`
             )
             svgItem
-                .viewbox(0, 0, svgItem.bbox().width + 13, svgItem.bbox().height + 13)
+                .viewbox(0, 0, svgItem.bbox().width + 14, svgItem.bbox().height + 14)
                 .size(77, 77)
                 .addClass(classnames({ active: props?.isSelected }))
             // eslint-disable-next-line @typescript-eslint/no-explicit-any

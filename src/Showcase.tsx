@@ -106,6 +106,7 @@ const Showcase: React.FunctionComponent<unknown> = () => {
                     }}
                 >
                     <CreateLogo
+                        className={classnames({ active: index === option })}
                         logoProps={{
                             ...store,
                             container: {

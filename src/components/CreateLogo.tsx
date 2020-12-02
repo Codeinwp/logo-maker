@@ -7,6 +7,7 @@ import { TLogo, TLogoContainer, TSlogan, TTitle } from "~/src/stores/UIStore"
 
 type CreateLogoPropsComponent = {
     id?: string
+    className?: string
     logoProps: {
         container: TLogoContainer
         logo: TLogo
@@ -37,6 +38,7 @@ const CreateLogo: React.FunctionComponent<CreateLogoPropsComponent> = (
                 .size(container.width, container.height)
                 .viewbox(vb.x, vb.y, vb.width, vb.height)
                 .css("background-color", container.style.color)
+                .addClass(props?.className || "")
 
             const getAlignedLogo = () => {
                 switch (props.logoProps.container.align) {
