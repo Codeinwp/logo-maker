@@ -14,3 +14,16 @@ html {
 body {
     margin: 0;
 }
+
+/* Hacks for WordPress*/
+.single-page-container, main {
+    background-color: white;
+}
+
+footer {
+    display: none;
+}
+
+.copyright {
+    display: none;
+}

@@ -17,13 +17,18 @@
         label {
             display: block;
             font-size: 14px;
+            font-weight: 500;
+            line-height: 19px;
             color: #6A6A6A;
             margin-bottom: 8px;
         }
         input {
+            height: 54px;
             width: 100%;
             color: $black;
+            font-size: 14px;
             font-weight: 500;
+            line-height: 19.07px;
             font-family: $noto;
             padding: 18px 13px;
             margin-bottom: 20px;

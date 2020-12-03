@@ -45,7 +45,7 @@ export const settings: TSettings = {
     title: {
         margins: {
             top: 3,
-            bottom: 5,
+            bottom: 3,
             right: 0,
             left: 0,
         },

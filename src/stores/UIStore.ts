@@ -82,7 +82,7 @@ export const UIStore = new Store<StoreProps>({
         text: "Optimole",
         style: {
             color: "#FFFFFF",
-            fontSize: 40,
+            fontSize: 53,
             fontFamily: "Helvetica",
         },
     },

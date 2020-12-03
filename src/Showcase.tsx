@@ -134,8 +134,8 @@ const Showcase: React.FunctionComponent<unknown> = () => {
                                 viewbox: {
                                     x: 0,
                                     y: 0,
-                                    width: 380,
-                                    height: 320,
+                                    width: 100,
+                                    height: 100,
                                 },
                                 style: {
                                     color: colors[index],
@@ -150,6 +150,7 @@ const Showcase: React.FunctionComponent<unknown> = () => {
                                 style: {
                                     ...store.title.style,
                                     fontFamily: fontsList[index].title,
+                                    fontSize: 24,
                                 },
                             },
                             slogan: {
@@ -157,6 +158,7 @@ const Showcase: React.FunctionComponent<unknown> = () => {
                                 style: {
                                     ...store.slogan.style,
                                     fontFamily: fontsList[index].slogan,
+                                    fontSize: 12,
                                 },
                             },
                         }}

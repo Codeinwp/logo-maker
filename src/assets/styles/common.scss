@@ -61,16 +61,14 @@
 
 @mixin logo-holder {
 	display: inline-flex;
-	align-items: center;
 	img {
 		max-width: 134px;
 		max-height: 44px;
 	}
-	a {
+	.logo-maker-name {
+		margin-top: 2.5px;
 		height: 44px;
-	}
-	span {
-		height: 44px;
+		line-height: 24.52px;
 		display: inline-grid;
 		align-content: center;
 		font-size: 18px;
@@ -102,12 +100,14 @@
 			color: $blue;
 			font-size: 36px;
 			font-weight: 700;
+			line-height: 49.03px;
 			margin: 0 0 8px;
 		}
 		p {
 			color: #939393;
 			font-size: 18px;
 			font-weight: 500;
+			line-height: 24.52px;
 			margin: 0;
 		}
 	}
