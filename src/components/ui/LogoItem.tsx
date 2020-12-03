@@ -32,7 +32,7 @@ const LogoItem: React.FunctionComponent<SelectLogoProps> = (props: SelectLogoPro
         }
     }, [logo.svg, props?.isSelected])
 
-    return <button name={logo.id} onClick={onClick} ref={itemRef}></button>
+    return <button onClick={onClick} ref={itemRef}></button>
 }
 
 export default LogoItem

@@ -77,12 +77,15 @@ const Creator: React.FunctionComponent<unknown> = () => {
                                         // document
                                         //     .querySelector<HTMLDivElement>("#right-menu")
                                         //     ?.scrollTo()
-
-                                        window.scrollTo(
-                                            0,
-                                            document.querySelector<HTMLDivElement>("#right-menu")
-                                                ?.offsetTop || 0
-                                        )
+                                        if (window.innerHeight <= 812) {
+                                            console.log(window.innerHeight)
+                                            window.scrollTo(
+                                                0,
+                                                document.querySelector<HTMLDivElement>(
+                                                    "#right-menu"
+                                                )?.offsetTop || 0
+                                            )
+                                        }
                                         setMenuOption("logo")
                                     }}
                                     className={classnames({ active: menuOption === "logo" })}
@@ -94,11 +97,14 @@ const Creator: React.FunctionComponent<unknown> = () => {
                             <div className="option">
                                 <a
                                     onClick={() => {
-                                        window.scrollTo(
-                                            0,
-                                            document.querySelector<HTMLDivElement>("#right-menu")
-                                                ?.offsetTop || 0
-                                        )
+                                        if (window.innerHeight <= 812) {
+                                            window.scrollTo(
+                                                0,
+                                                document.querySelector<HTMLDivElement>(
+                                                    "#right-menu"
+                                                )?.offsetTop || 0
+                                            )
+                                        }
                                         setMenuOption("typography")
                                     }}
                                     className={classnames({ active: menuOption === "typography" })}
@@ -110,11 +116,14 @@ const Creator: React.FunctionComponent<unknown> = () => {
                             <div className="option">
                                 <a
                                     onClick={() => {
-                                        window.scrollTo(
-                                            0,
-                                            document.querySelector<HTMLDivElement>("#right-menu")
-                                                ?.offsetTop || 0
-                                        )
+                                        if (window.innerHeight <= 812) {
+                                            window.scrollTo(
+                                                0,
+                                                document.querySelector<HTMLDivElement>(
+                                                    "#right-menu"
+                                                )?.offsetTop || 0
+                                            )
+                                        }
                                         setMenuOption("layout")
                                     }}
                                     className={classnames({ active: menuOption === "layout" })}
@@ -126,11 +135,14 @@ const Creator: React.FunctionComponent<unknown> = () => {
                             <div className="option">
                                 <a
                                     onClick={() => {
-                                        window.scrollTo(
-                                            0,
-                                            document.querySelector<HTMLDivElement>("#right-menu")
-                                                ?.offsetTop || 0
-                                        )
+                                        if (window.innerHeight <= 812) {
+                                            window.scrollTo(
+                                                0,
+                                                document.querySelector<HTMLDivElement>(
+                                                    "#right-menu"
+                                                )?.offsetTop || 0
+                                            )
+                                        }
                                         setMenuOption("colors")
                                     }}
                                     className={classnames({ active: menuOption === "colors" })}
