@@ -65,6 +65,11 @@
 		max-width: 134px;
 		max-height: 44px;
 	}
+
+	a {
+		max-height: 44px;
+	}
+
 	.logo-maker-name {
 		margin-top: 2.5px;
 		height: 44px;
@@ -74,7 +79,7 @@
 		font-size: 18px;
 		font-weight: 700;
 		color: $orange;
-		margin: 1px 0 0 4px;
+		margin: 1.6px 0 0 4px;
 	}
 }
 
