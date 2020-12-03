@@ -5,29 +5,25 @@ import CreateLogo from "./components/CreateLogo"
 import UIStore from "./stores/UIStore"
 
 import { presets } from "./assets/fonts/index"
-import { AssetsStore } from "./stores/AssetsStore"
+
 import BackUI from "./assets/ui/BackUI"
 import ThemeisleUI from "./assets/ui/ThemeisleUI"
 import classnames from "classnames"
 import presetColors from "./assets/colors"
 import "../src/assets/styles/Showcase/showcase.scss"
+import { LogoAlignOptions } from "./components/ui/SelectLayout"
 
 const defaultFontsList = new Array(logos.length).fill("sans-serif")
 
 const Showcase: React.FunctionComponent<unknown> = () => {
     const store = UIStore.useState((s) => s)
-    const fontsStore = AssetsStore.useState((s) => s)
 
-    const [fontStatus, setFontsStatus] = React.useState<"active" | "loading" | "inactive">(
-        "inactive"
-    )
     const [option, setOption] = React.useState<number>(0)
     const [colors, setColors] = React.useState<string[]>([])
+    const [aligns, setAligns] = React.useState<LogoAlignOptions[]>([])
     const [fontsList, setFontsList] = React.useState<{ title: string; slogan: string }[]>(
         defaultFontsList
     )
-
-    console.log(fontStatus)
 
     React.useEffect(() => {
         // Generate the colors
@@ -78,13 +74,34 @@ const Showcase: React.FunctionComponent<unknown> = () => {
         }
 
         setFontsList(generateFonts())
-        setFontsStatus(fontsStore.fonts.fontsStatus)
-    }, [fontsStore])
+
+        const generateAlignsOption = () => {
+            const list: LogoAlignOptions[] = []
+            for (let i = 0; i < logos.length; ++i) {
+                const option = Math.floor(Math.random() * 3 + 1)
+                switch (option) {
+                    case 1:
+                        list.push("align-left")
+                        break
+                    case 2:
+                        list.push("align-right")
+                        break
+                    case 3:
+                        list.push("align-top")
+                        break
+                }
+            }
+
+            return list
+        }
+        setAligns(generateAlignsOption)
+    }, [])
 
     const setTemplate = (index: number) => {
         UIStore.update((s) => {
             s.logo.src = logos[index]
             s.container.style.color = colors[index]
+            s.container.align = aligns[index]
             s.title.style.fontFamily = fontsList[index].title
             s.slogan.style.fontFamily = fontsList[index].slogan
         })
@@ -94,7 +111,7 @@ const Showcase: React.FunctionComponent<unknown> = () => {
         if (!colors.length) {
             return
         }
-        console.time("render-logos")
+
         const result = logos.map((logoSRC, index) => {
             return (
                 <button
@@ -113,11 +130,12 @@ const Showcase: React.FunctionComponent<unknown> = () => {
                                 ...store.container,
                                 width: 345,
                                 height: 280,
+                                align: aligns[index],
                                 viewbox: {
                                     x: 0,
                                     y: 0,
-                                    width: 345,
-                                    height: 280,
+                                    width: 380,
+                                    height: 320,
                                 },
                                 style: {
                                     color: colors[index],
@@ -146,7 +164,7 @@ const Showcase: React.FunctionComponent<unknown> = () => {
                 </button>
             )
         })
-        console.timeEnd("render-logos")
+
         return result
     }
 

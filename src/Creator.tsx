@@ -68,7 +68,7 @@ const Creator: React.FunctionComponent<unknown> = () => {
                 </div>
             </div>
             <div className="main-section">
-                <div className="container">
+                <div className="main-container">
                     <div className="left-menu">
                         <div className="options">
                             <div className="option">

@@ -5,7 +5,8 @@
     "plugin-build": "webpack",
     "format": "prettier --write \"src/**/*.{js,jsx,ts,tsx}\"",
     "lint": "eslint \"src/**/*.{js,jsx,ts,tsx}\"",
-    "gh-deploy": "npm run build && gh-pages -d build"
+    "gh-deploy": "npm run build && gh-pages -d build",
+    "linux:make-zip": "npm run plugin-build && zip -r logo_maker_plugin.zip index.php plugin_build && mv logo_maker_plugin.zip development/"
   },
   "dependencies": {
     "@svgdotjs/svg.js": "^3.0.16",
