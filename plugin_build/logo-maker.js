@@ -41807,10 +41807,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router-dom */ "./node_modules/.pnpm/react-router-dom@5.2.0_react@17.0.1/node_modules/react-router-dom/esm/react-router-dom.js");
-/* harmony import */ var _assets_ui_BackUI__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./assets/ui/BackUI */ "./src/assets/ui/BackUI.tsx");
-/* harmony import */ var _assets_ui_ThemeisleUI__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./assets/ui/ThemeisleUI */ "./src/assets/ui/ThemeisleUI.tsx");
-/* harmony import */ var _stores_UIStore__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./stores/UIStore */ "./src/stores/UIStore.ts");
-/* harmony import */ var _src_assets_styles_Start_start_scss__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../src/assets/styles/Start/start.scss */ "./src/assets/styles/Start/start.scss");
+/* harmony import */ var _assets_ui_ThemeisleUI__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./assets/ui/ThemeisleUI */ "./src/assets/ui/ThemeisleUI.tsx");
+/* harmony import */ var _stores_UIStore__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./stores/UIStore */ "./src/stores/UIStore.ts");
+/* harmony import */ var _src_assets_styles_Start_start_scss__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../src/assets/styles/Start/start.scss */ "./src/assets/styles/Start/start.scss");
+/* harmony import */ var _assets_ui_BackUI__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./assets/ui/BackUI */ "./src/assets/ui/BackUI.tsx");
 
 
 
@@ -41819,28 +41819,38 @@ __webpack_require__.r(__webpack_exports__);
 
 const Start = () => {
     const setTitleText = (value) => {
-        _stores_UIStore__WEBPACK_IMPORTED_MODULE_4__["default"].update((s) => {
+        _stores_UIStore__WEBPACK_IMPORTED_MODULE_3__["default"].update((s) => {
             s.title.text = value;
         });
     };
     const setSloganText = (value) => {
-        _stores_UIStore__WEBPACK_IMPORTED_MODULE_4__["default"].update((s) => {
+        _stores_UIStore__WEBPACK_IMPORTED_MODULE_3__["default"].update((s) => {
             s.slogan.text = value;
         });
     };
+    react__WEBPACK_IMPORTED_MODULE_0__["useEffect"](() => {
+        if (!logomaker.parentLink) {
+            console.log("Parent link was not provided. The back button from the start page will point to itself as default behaviour!");
+        }
+    }, []);
     return (react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("div", { className: "logo-maker logo-maker-container" },
         react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("div", { className: "top-section" },
-            react__WEBPACK_IMPORTED_MODULE_0__["createElement"](_assets_ui_BackUI__WEBPACK_IMPORTED_MODULE_2__["default"], null),
-            react__WEBPACK_IMPORTED_MODULE_0__["createElement"](_assets_ui_ThemeisleUI__WEBPACK_IMPORTED_MODULE_3__["default"], null)),
+            !logomaker.parentLink ? (react__WEBPACK_IMPORTED_MODULE_0__["createElement"](_assets_ui_BackUI__WEBPACK_IMPORTED_MODULE_5__["default"], null)) : (react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("div", { className: "back" },
+                react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("a", { href: logomaker.parentLink },
+                    react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("svg", { width: "42", height: "42", viewBox: "0 0 42 42", fill: "none", xmlns: "http://www.w3.org/2000/svg" },
+                        react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("circle", { cx: "21", cy: "21", r: "20.5", fill: "white", stroke: "#E7E7E7" }),
+                        react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("path", { d: "M23 17L19 21L23 25", stroke: "#585858", strokeWidth: "1.5", strokeLinecap: "round", strokeLinejoin: "round" })),
+                    react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("p", null, "Back")))),
+            react__WEBPACK_IMPORTED_MODULE_0__["createElement"](_assets_ui_ThemeisleUI__WEBPACK_IMPORTED_MODULE_2__["default"], null)),
         react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("div", { className: "content-section" },
             react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("div", { className: "titles" },
                 react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("h1", null, "Add your business name"),
                 react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("p", null, "You can change this information after you designs have been created")),
             react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("div", { className: "step1" },
                 react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("label", null, "Logo Text"),
-                react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("input", { type: "text", id: "logo-text-input", value: _stores_UIStore__WEBPACK_IMPORTED_MODULE_4__["default"].useState((s) => s.title.text), onChange: (e) => setTitleText(e.target.value) }),
+                react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("input", { type: "text", id: "logo-text-input", value: _stores_UIStore__WEBPACK_IMPORTED_MODULE_3__["default"].useState((s) => s.title.text), onChange: (e) => setTitleText(e.target.value) }),
                 react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("label", null, "Slogan text (Optional)"),
-                react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("input", { type: "text", id: "slogan-text-input", value: _stores_UIStore__WEBPACK_IMPORTED_MODULE_4__["default"].useState((s) => s.slogan.text), onChange: (e) => setSloganText(e.target.value) })),
+                react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("input", { type: "text", id: "slogan-text-input", value: _stores_UIStore__WEBPACK_IMPORTED_MODULE_3__["default"].useState((s) => s.slogan.text), onChange: (e) => setSloganText(e.target.value) })),
             react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("div", { className: "next" },
                 react__WEBPACK_IMPORTED_MODULE_0__["createElement"](react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], { to: "/showcase" }, "Next")))));
 };

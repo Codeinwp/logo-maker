@@ -67,3 +67,10 @@ declare module "color-scheme" {
   const ColorScheme: any
   export default ColorScheme
 }
+
+/* objects loaded from php scripts PHP (e.g index.php) */
+
+type LogoMaker = {
+  parentLink: string
+}
+declare const logomaker: LogoMaker

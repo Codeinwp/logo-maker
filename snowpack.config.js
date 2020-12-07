@@ -26,7 +26,7 @@ module.exports = {
   },
   buildOptions: {
     /* ... */
-    baseUrl: '/logo-maker',
+    baseUrl: '/logo-maker-editor',
     clean: true
   },
   proxy: {

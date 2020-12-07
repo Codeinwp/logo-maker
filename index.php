@@ -35,6 +35,8 @@ function logo_maker_init()
         'editor_script' => 'logo-maker-editor-script',
     ));
 
+
+
     add_action('enqueue_block_assets', 'logo_maker_assets');
 }
 
@@ -63,6 +65,15 @@ function logo_maker_assets()
             $script_asset['version']
         );
         //  wp_enqueue_script("logo-maker-asset-map", plugins_url($source_map, __FILE__), null, null, true);
+        $parent_link = "";
+        if ($post->post_parent) {
+            $parent_link = get_permalink($post->post_parent);
+        }
+        wp_localize_script('logo-maker-asset', 'logomaker', array(
+            'parentLink' => $parent_link
+            //If we are logged in, nonce is invalid unless we pass X-WP-Nonce,
+            // which is problematic on cached environment. For now we use a hardcoded token.
+        ));
     }
 }
 

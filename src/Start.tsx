@@ -1,9 +1,9 @@
 import * as React from "react"
 import { Link } from "react-router-dom"
-import BackUI from "./assets/ui/BackUI"
 import ThemeisleUI from "./assets/ui/ThemeisleUI"
 import UIStore from "./stores/UIStore"
 import "../src/assets/styles/Start/start.scss"
+import BackUI from "./assets/ui/BackUI"
 
 const Start: React.FunctionComponent<unknown> = () => {
     const setTitleText = (value: string) => {
@@ -18,10 +18,43 @@ const Start: React.FunctionComponent<unknown> = () => {
         })
     }
 
+    React.useEffect(() => {
+        if (!logomaker.parentLink) {
+            console.log(
+                "Parent link was not provided by WordPress. The back button from the start page will point to itself as default behaviour!"
+            )
+        }
+    }, [])
+
     return (
         <div className="logo-maker logo-maker-container">
             <div className="top-section">
-                <BackUI />
+                {!logomaker.parentLink ? (
+                    <BackUI />
+                ) : (
+                    <div className="back">
+                        <a href={logomaker.parentLink}>
+                            <svg
+                                width="42"
+                                height="42"
+                                viewBox="0 0 42 42"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <circle cx="21" cy="21" r="20.5" fill="white" stroke="#E7E7E7" />
+                                <path
+                                    d="M23 17L19 21L23 25"
+                                    stroke="#585858"
+                                    strokeWidth="1.5"
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                />
+                            </svg>
+                            <p>Back</p>
+                        </a>
+                    </div>
+                )}
+
                 <ThemeisleUI />
             </div>
             <div className="content-section">
