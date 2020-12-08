@@ -22,7 +22,7 @@ type MenuOptions = "logo" | "typography" | "layout" | "colors"
 
 const Creator: React.FunctionComponent<unknown> = () => {
     const [menuOption, setMenuOption] = React.useState<MenuOptions>("logo")
-    let store = { ...UIStore.useState((s) => s) }
+    let store = UIStore.useState()
 
     const renderRightSidePanel = () => {
         switch (menuOption) {
@@ -38,14 +38,25 @@ const Creator: React.FunctionComponent<unknown> = () => {
     }
 
     React.useEffect(() => {
-        const logoContainer = document.querySelector("#image-logo")?.cloneNode(true) as HTMLElement
+        // after creating a new link, destroy the previouse one
+        const unsubscribeFromRemovingOldURL = ExportStore.subscribe(
+            (s) => s.svg.svgDownloadLink,
+            (currentLink, states, oldLink) => {
+                URL.revokeObjectURL(oldLink) // destroy the previous link or it might fill up the memory
+            }
+        )
 
+        const logoContainer = document.querySelector("#image-logo")?.cloneNode(true) as HTMLElement
         if (logoContainer) {
             ExportStore.update((s) => {
                 s.svg.svgDownloadLink = exportSVGfromDOMviaLink(logoContainer)
             })
         }
-    })
+
+        return () => {
+            unsubscribeFromRemovingOldURL()
+        }
+    }, [store])
 
     store = {
         ...store,
