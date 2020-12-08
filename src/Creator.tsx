@@ -46,15 +46,17 @@ const Creator: React.FunctionComponent<unknown> = () => {
             }
         )
 
+        return () => {
+            unsubscribeFromRemovingOldURL()
+        }
+    }, [])
+
+    React.useEffect(() => {
         const logoContainer = document.querySelector("#image-logo")?.cloneNode(true) as HTMLElement
         if (logoContainer) {
             ExportStore.update((s) => {
                 s.svg.svgDownloadLink = exportSVGfromDOMviaLink(logoContainer)
             })
-        }
-
-        return () => {
-            unsubscribeFromRemovingOldURL()
         }
     }, [store])
 

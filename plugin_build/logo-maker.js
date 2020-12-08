@@ -41535,20 +41535,22 @@ const Creator = () => {
         }
     };
     react__WEBPACK_IMPORTED_MODULE_0__["useEffect"](() => {
-        var _a;
         // after creating a new link, destroy the previouse one
         const unsubscribeFromRemovingOldURL = _stores_ExportsStore__WEBPACK_IMPORTED_MODULE_16__["ExportStore"].subscribe((s) => s.svg.svgDownloadLink, (currentLink, states, oldLink) => {
             URL.revokeObjectURL(oldLink); // destroy the previous link or it might fill up the memory
         });
+        return () => {
+            unsubscribeFromRemovingOldURL();
+        };
+    }, []);
+    react__WEBPACK_IMPORTED_MODULE_0__["useEffect"](() => {
+        var _a;
         const logoContainer = (_a = document.querySelector("#image-logo")) === null || _a === void 0 ? void 0 : _a.cloneNode(true);
         if (logoContainer) {
             _stores_ExportsStore__WEBPACK_IMPORTED_MODULE_16__["ExportStore"].update((s) => {
                 s.svg.svgDownloadLink = Object(_engine_export__WEBPACK_IMPORTED_MODULE_17__["exportSVGfromDOMviaLink"])(logoContainer);
             });
         }
-        return () => {
-            unsubscribeFromRemovingOldURL();
-        };
     }, [store]);
     store = {
         ...store,
