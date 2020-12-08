@@ -15,4 +15,23 @@
 			outline: none;
 		}
 	}
+
+	a {
+		background-color: #FF7F66;
+		text-decoration: none;
+		color: white;
+		font-size: 14px;
+		font-weight: 600;
+		line-height: 36px;
+		padding: 6px 26px;
+		border-radius: 4px;
+		border: none;
+		&:focus {
+			outline: none;
+		}
+
+		&:hover {
+			filter: grayscale(0.1);;
+		}
+	}
 }

@@ -13,8 +13,10 @@ import SelectLogo from "./components/ui/SelectLogo"
 import SelectTypography from "./components/ui/SelectTypography"
 import classnames from "classnames"
 import "../src/assets/styles/Creator/creator.scss"
-import { fontsForSvg, fontsList as fL } from "./assets/fonts/index"
+// import { fontsForSvg, fontsList as fL } from "./assets/fonts/index"
 import UIStore from "./stores/UIStore"
+import { ExportStore } from "./stores/ExportsStore"
+import { exportSVGfromDOMviaLink } from "./engine/export"
 
 type MenuOptions = "logo" | "typography" | "layout" | "colors"
 
@@ -35,6 +37,16 @@ const Creator: React.FunctionComponent<unknown> = () => {
         }
     }
 
+    React.useEffect(() => {
+        const logoContainer = document.querySelector("#image-logo")?.cloneNode(true) as HTMLElement
+
+        if (logoContainer) {
+            ExportStore.update((s) => {
+                s.svg.svgDownloadLink = exportSVGfromDOMviaLink(logoContainer)
+            })
+        }
+    })
+
     store = {
         ...store,
         container: {
@@ -42,20 +54,20 @@ const Creator: React.FunctionComponent<unknown> = () => {
             width: 765,
             height: 625,
         },
-        title: {
-            ...store.title,
-            style: {
-                ...store.title.style,
-                fontFamily: fontsForSvg[fL.findIndex((f) => f === store.title.style.fontFamily)],
-            },
-        },
-        slogan: {
-            ...store.slogan,
-            style: {
-                ...store.slogan.style,
-                fontFamily: fontsForSvg[fL.findIndex((f) => f === store.slogan.style.fontFamily)],
-            },
-        },
+        // title: {
+        //     ...store.title,
+        //     style: {
+        //         ...store.title.style,
+        //         fontFamily: fontsForSvg[fL.findIndex((f) => f === store.title.style.fontFamily)],
+        //     },
+        // },
+        // slogan: {
+        //     ...store.slogan,
+        //     style: {
+        //         ...store.slogan.style,
+        //         fontFamily: fontsForSvg[fL.findIndex((f) => f === store.slogan.style.fontFamily)],
+        //     },
+        // },
     }
 
     return (

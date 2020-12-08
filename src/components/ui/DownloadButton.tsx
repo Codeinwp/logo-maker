@@ -1,5 +1,6 @@
 import * as React from "react"
 import classnames from "classnames"
+import { ExportStore } from "../../stores/ExportsStore"
 
 const DownloadButton: React.FunctionComponent<{ className?: string }> = (props: {
     className?: string
@@ -41,35 +42,41 @@ const DownloadButton: React.FunctionComponent<{ className?: string }> = (props: 
     //     sourceImage.src = image
     // }
 
-    const downloadSVG = () => {
-        const node = document.querySelector("#image-logo")?.cloneNode(true)
+    // const downloadSVG = () => {
+    //     const node = document.querySelector("#image-logo")?.cloneNode(true)
 
-        if (!node) {
-            return
-        }
-        // const defs = document.createElement("defs")
-        // const style = document.createElement("style")
-        // style.innerHTML = `
-        //         @import url("${generateUrlForFont(fonts[0])}");
-        //         @import url("${generateUrlForFont(fonts[1])}");
-        // `
-        // node.firstChild?.appendChild(style)
+    //     if (!node) {
+    //         return
+    //     }
+    //     // const defs = document.createElement("defs")
+    //     // const style = document.createElement("style")
+    //     // style.innerHTML = `
+    //     //         @import url("${generateUrlForFont(fonts[0])}");
+    //     //         @import url("${generateUrlForFont(fonts[1])}");
+    //     // `
+    //     // node.firstChild?.appendChild(style)
 
-        const svg = (node as Element).innerHTML
+    //     const svg = (node as Element).innerHTML
 
-        const blob = new Blob([svg.toString()])
-        const element = document.createElement("a")
-        element.download = "logo.svg"
-        element.href = window.URL.createObjectURL(blob)
-        element.click()
-        element.remove()
-    }
+    //     const blob = new Blob([svg.toString()])
+    //     const element = document.createElement("a")
+    //     element.download = "logo.svg"
+    //     element.href = window.URL.createObjectURL(blob)
+    //     element.click()
+    //     element.remove()
+    // }
 
     return (
         <div className={classnames("download-button", props?.className)}>
-            <button onClick={() => downloadSVG()}>
+            <a
+                href={ExportStore.useState((s) => s.svg.svgDownloadLink)}
+                download={`logo.${ExportStore.useState((s) => s.svg.extension)}`}
+            >
                 <span>Download</span>
-            </button>
+            </a>
+            {/* <button onClick={() => downloadSVG()}>
+                <span>Download</span>
+            </button> */}
             {/* <button
                 className="m-2 box-content max-content bg-transparent bg-orange-600 font-semibold text-white py-2 px-4 rounded"
                 onClick={() => downloadSVGasPNG()}
