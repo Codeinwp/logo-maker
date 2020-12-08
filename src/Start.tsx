@@ -19,7 +19,7 @@ const Start: React.FunctionComponent<unknown> = () => {
     }
 
     React.useEffect(() => {
-        if (!logomaker.parentLink) {
+        if (!window.logomaker?.parentLink) {
             console.log(
                 "Parent link was not provided by WordPress. The back button from the start page will point to itself as default behaviour!"
             )
@@ -29,11 +29,11 @@ const Start: React.FunctionComponent<unknown> = () => {
     return (
         <div className="logo-maker logo-maker-container">
             <div className="top-section">
-                {!logomaker.parentLink ? (
+                {!window.logomaker?.parentLink ? (
                     <BackUI />
                 ) : (
                     <div className="back">
-                        <a href={logomaker.parentLink}>
+                        <a href={window.logomaker?.parentLink}>
                             <svg
                                 width="42"
                                 height="42"

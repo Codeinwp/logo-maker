@@ -21,8 +21,8 @@ export const moveToCenter = (
     // check if the svg has scaled
     const currentViewBox = draw.viewbox()
 
-    const viewboxWidth = currentViewBox.width //Math.max(viewbox.width, currentViewBox.width)
-    const viewboxHeight = currentViewBox.height //Math.max(viewbox.height, currentViewBox.height)
+    const viewboxWidth = currentViewBox.width // Math.max(viewbox.width, currentViewBox.width)
+    const viewboxHeight = currentViewBox.height // Math.max(viewbox.height, currentViewBox.height)
 
     const xOffsetToCenter = viewboxWidth / 2 - container.containerPos.cx
     const yOffsetToCenter = viewboxHeight / 2 - container.containerPos.cy

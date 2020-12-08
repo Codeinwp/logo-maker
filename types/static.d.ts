@@ -73,4 +73,19 @@ declare module "color-scheme" {
 type LogoMaker = {
   parentLink: string
 }
-declare const logomaker: LogoMaker
+
+// declare const logomaker: LogoMaker | undefined
+ 
+
+// declare global {
+//   interface Window {
+//     logomaker: LogoMaker
+//   }
+// }
+
+export {}
+declare global {
+  interface Window {
+    logomaker: LogoMaker;
+  }
+}

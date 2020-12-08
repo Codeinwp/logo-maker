@@ -38,6 +38,7 @@ export const alignLogoTop = (props: LogoProps, draw: Svg): ContainerData => {
         .viewbox(0, 0, svgRawDim.width + 4, svgRawDim.height + 4)
         .size(logo.width, logo.height)
         .css("fill", logo.style.fill)
+        
     const logoDim = {
         height: settings.logo.margins.top + logo.height + settings.logo.margins.bottom,
         width: settings.logo.margins.left + logo.width + settings.logo.margins.bottom,
@@ -47,12 +48,13 @@ export const alignLogoTop = (props: LogoProps, draw: Svg): ContainerData => {
            Add the title's SVG
        */
     const titleSVG = draw
-        .plain(title.text)
+        .text(title.text)
         .font({
             fill: title.style.color,
             family: title.style.fontFamily,
             size: title.style.fontSize + "px",
         })
+        .leading(1)
         .move(0, 0)
     // console.log(titleSVG.bbox(), titleSVG.rbox())
     titleSVG.leading(0)
@@ -77,12 +79,13 @@ export const alignLogoTop = (props: LogoProps, draw: Svg): ContainerData => {
            Add the slogan's SVG
        */
     const sloganSVG = draw
-        .plain(slogan.text)
+        .text(slogan.text)
         .font({
             fill: slogan.style.color,
             family: slogan.style.fontFamily,
             size: slogan.style.fontSize + "px",
         })
+        .leading(1)
         .move(0, 0)
     sloganSVG.leading(0)
 
@@ -182,6 +185,7 @@ export const alignLogoLeft = (props: LogoProps, draw: Svg): ContainerData => {
             family: title.style.fontFamily,
             size: title.style.fontSize,
         })
+        .leading(1)
         .move(0, 0)
     titleSVG.leading(0)
     let titleDim;
@@ -204,12 +208,13 @@ export const alignLogoLeft = (props: LogoProps, draw: Svg): ContainerData => {
            Add the slogan's SVG
        */
     const sloganSVG = draw
-        .plain(slogan.text)
+        .text(slogan.text)
         .font({
             fill: slogan.style.color,
             family: slogan.style.fontFamily,
             size: slogan.style.fontSize + "px",
         })
+        .leading(1)
         .move(0, 0)
     sloganSVG.leading(0)
 
@@ -310,6 +315,7 @@ export const alignLogoRight = (props: LogoProps, draw: Svg): ContainerData => {
             family: title.style.fontFamily,
             size: title.style.fontSize,
         })
+        .leading(1)
         .move(0, 0)
     titleSVG.leading(0)
     let titleDim;
@@ -332,12 +338,13 @@ export const alignLogoRight = (props: LogoProps, draw: Svg): ContainerData => {
            Add the slogan's SVG
        */
     const sloganSVG = draw
-        .plain(slogan.text)
+        .text(slogan.text)
         .font({
             fill: slogan.style.color,
             family: slogan.style.fontFamily,
             size: slogan.style.fontSize + "px",
         })
+        .leading(1)
         .move(0, 0)
     sloganSVG.leading(0)
 
