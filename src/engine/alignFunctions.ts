@@ -53,6 +53,7 @@ export const alignLogoTop = (props: LogoProps, draw: Svg): ContainerData => {
             fill: title.style.color,
             family: title.style.fontFamily,
             size: title.style.fontSize + "px",
+            weight: '400'
         })
         .leading(1)
         .move(0, 0)
@@ -84,6 +85,7 @@ export const alignLogoTop = (props: LogoProps, draw: Svg): ContainerData => {
             fill: slogan.style.color,
             family: slogan.style.fontFamily,
             size: slogan.style.fontSize + "px",
+            weight: '400'
         })
         .leading(1)
         .move(0, 0)
@@ -184,6 +186,7 @@ export const alignLogoLeft = (props: LogoProps, draw: Svg): ContainerData => {
             fill: title.style.color,
             family: title.style.fontFamily,
             size: title.style.fontSize,
+            weight: '400'
         })
         .leading(1)
         .move(0, 0)
@@ -213,6 +216,7 @@ export const alignLogoLeft = (props: LogoProps, draw: Svg): ContainerData => {
             fill: slogan.style.color,
             family: slogan.style.fontFamily,
             size: slogan.style.fontSize + "px",
+            weight: '400'
         })
         .leading(1)
         .move(0, 0)
@@ -314,6 +318,7 @@ export const alignLogoRight = (props: LogoProps, draw: Svg): ContainerData => {
             fill: title.style.color,
             family: title.style.fontFamily,
             size: title.style.fontSize,
+            weight: '400'
         })
         .leading(1)
         .move(0, 0)
@@ -343,6 +348,7 @@ export const alignLogoRight = (props: LogoProps, draw: Svg): ContainerData => {
             fill: slogan.style.color,
             family: slogan.style.fontFamily,
             size: slogan.style.fontSize + "px",
+            weight: '400'
         })
         .leading(1)
         .move(0, 0)
