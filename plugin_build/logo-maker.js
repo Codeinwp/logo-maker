@@ -47521,7 +47521,7 @@ const alignLogoRight = (props, draw) => {
 /*!******************************!*\
   !*** ./src/engine/export.ts ***!
   \******************************/
-/*! exports provided: exportAsSVGfromDOMviaLink, generateCanvasFromSVG, exportImagesfromCANVAS, createZipFromSVG, exportAsZipFromSVGviaLink, downloadAsZipFromSVGviaClick */
+/*! exports provided: exportAsSVGfromDOMviaLink, generateCanvasFromSVG, exportImagesfromCANVAS, addToZipFromSVG, exportAsZipFromSVGviaLink, createZipWithPresets, downloadAsZipFromSVGviaClick */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -47529,8 +47529,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "exportAsSVGfromDOMviaLink", function() { return exportAsSVGfromDOMviaLink; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "generateCanvasFromSVG", function() { return generateCanvasFromSVG; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "exportImagesfromCANVAS", function() { return exportImagesfromCANVAS; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "createZipFromSVG", function() { return createZipFromSVG; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "addToZipFromSVG", function() { return addToZipFromSVG; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "exportAsZipFromSVGviaLink", function() { return exportAsZipFromSVGviaLink; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "createZipWithPresets", function() { return createZipWithPresets; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "downloadAsZipFromSVGviaClick", function() { return downloadAsZipFromSVGviaClick; });
 /* harmony import */ var jszip__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jszip */ "./node_modules/.pnpm/jszip@3.5.0/node_modules/jszip/dist/jszip.min.js");
 /* harmony import */ var jszip__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jszip__WEBPACK_IMPORTED_MODULE_0__);
@@ -47547,11 +47548,13 @@ function generateCanvasFromSVG(svg) {
         const img = new Image();
         const canvas = document.createElement("canvas");
         const context = canvas.getContext("2d");
+        const width = Number(svg.getAttribute("width")) || 765;
+        const height = Number(svg.getAttribute("height")) || 625;
         // const {width, height} = svg.getBoundingClientRect() - not working
         img.onload = () => {
-            canvas.width = 765;
-            canvas.height = 625;
-            context === null || context === void 0 ? void 0 : context.drawImage(img, 0, 0, 765, 625);
+            canvas.width = width;
+            canvas.height = height;
+            context === null || context === void 0 ? void 0 : context.drawImage(img, 0, 0, width, height);
             // clean up the URL of the img's src
             window.URL.revokeObjectURL(img.src);
             resolve(canvas);
@@ -47570,35 +47573,73 @@ function getBase64String(dataURL) {
     const idx = dataURL.indexOf("base64,") + "base64,".length;
     return dataURL.substring(idx);
 }
-async function createZipFromSVG(svg, formats, includeSVG) {
+async function addToZipFromSVG(svg, zip, formats, includeSVG) {
     // Create images
     const canvas = await generateCanvasFromSVG(svg);
     const imgs = formats.map((f) => ({
         ext: f,
         dataURL: exportImagesfromCANVAS(canvas, f),
     }));
-    // Create ZIP file
-    const zip = new jszip__WEBPACK_IMPORTED_MODULE_0___default.a();
-    const folder = zip.folder("logos-by-logomaker");
     imgs.forEach((img) => {
-        folder === null || folder === void 0 ? void 0 : folder.file(`logo.${img.ext}`, getBase64String(img.dataURL), { base64: true });
+        zip === null || zip === void 0 ? void 0 : zip.file(`${svg.getAttribute("name") || "logo"}.${img.ext}`, getBase64String(img.dataURL), { base64: true });
     });
     if (includeSVG) {
-        folder === null || folder === void 0 ? void 0 : folder.file("logo.svg", new Blob([svg.outerHTML], { type: "image/svg+xml;charset=utf-8" }));
+        zip === null || zip === void 0 ? void 0 : zip.file(`${svg.getAttribute("name") || "logo"}.svg`, new Blob([svg.outerHTML], { type: "image/svg+xml;charset=utf-8" }));
     }
     return zip;
 }
 async function exportAsZipFromSVGviaLink(svg, formats, includeSVG) {
-    const zip = await createZipFromSVG(svg, formats, includeSVG);
+    const zip = await addToZipFromSVG(svg, new jszip__WEBPACK_IMPORTED_MODULE_0___default.a(), formats, includeSVG);
     const link = await zip.generateAsync({ type: "blob" }).then((content) => {
         return URL.createObjectURL(content);
     });
     return link;
 }
-function downloadAsZipFromSVGviaClick(svg, formats, includeSVG) {
-    createZipFromSVG(svg, formats, includeSVG).then((zip) => zip.generateAsync({ type: "blob" }).then((content) => {
+const presetsFormat = [
+    {
+        name: "default_765_625",
+        width: 765,
+        height: 625,
+    },
+    {
+        name: "facebook_profile_1000x1000",
+        width: 1000,
+        height: 1000,
+    },
+    {
+        name: "twitter_profile_1000x1000",
+        width: 1000,
+        height: 1000,
+    },
+];
+function createSVGsWithPreset(svg) {
+    return presetsFormat.map((preset) => {
+        const _svg = svg.cloneNode(true);
+        _svg.removeAttribute("width");
+        _svg.removeAttribute("height");
+        _svg.setAttribute("height", preset.height.toString());
+        _svg.setAttribute("width", preset.width.toString());
+        _svg.setAttribute("name", preset.name);
+        return _svg;
+    });
+}
+async function createZipWithPresets(svg, formats, includeSVG) {
+    let zip = new jszip__WEBPACK_IMPORTED_MODULE_0___default.a();
+    for (const _svg of createSVGsWithPreset(svg)) {
+        zip = await addToZipFromSVG(_svg, zip, formats, includeSVG);
+    }
+    return zip;
+}
+async function downloadAsZipFromSVGviaClick(svg, formats, includeSVG) {
+    // addToZipFromSVG(svg, new JSZip(), formats, includeSVG).then((zip) =>
+    //     zip.generateAsync({ type: "blob" }).then((content) => {
+    //         FileSaver.saveAs(content, "logos")
+    //     })
+    // )
+    const zip = await createZipWithPresets(svg, formats, includeSVG);
+    zip.generateAsync({ type: "blob" }).then((content) => {
         file_saver__WEBPACK_IMPORTED_MODULE_1___default.a.saveAs(content, "logos");
-    }));
+    });
 }
 
 
