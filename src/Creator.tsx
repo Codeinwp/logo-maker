@@ -16,7 +16,7 @@ import "../src/assets/styles/Creator/creator.scss"
 // import { fontsForSvg, fontsList as fL } from "./assets/fonts/index"
 import UIStore from "./stores/UIStore"
 import { ExportStore } from "./stores/ExportsStore"
-import { exportSVGfromDOMviaLink } from "./engine/export"
+import { exportAsSVGfromDOMviaLink, exportAsZipFromSVGviaLink } from "./engine/export"
 
 type MenuOptions = "logo" | "typography" | "layout" | "colors"
 
@@ -40,7 +40,7 @@ const Creator: React.FunctionComponent<unknown> = () => {
     React.useEffect(() => {
         // after creating a new link, destroy the previouse one
         const unsubscribeFromRemovingOldURL = ExportStore.subscribe(
-            (s) => s.svg.svgDownloadLink,
+            (s) => s.downloadLink,
             (currentLink, states, oldLink) => {
                 URL.revokeObjectURL(oldLink) // destroy the previous link or it might fill up the memory
             }
@@ -52,12 +52,17 @@ const Creator: React.FunctionComponent<unknown> = () => {
     }, [])
 
     React.useEffect(() => {
-        const logoContainer = document.querySelector("#image-logo")?.cloneNode(true) as HTMLElement
-        if (logoContainer) {
-            ExportStore.update((s) => {
-                s.svg.svgDownloadLink = exportSVGfromDOMviaLink(logoContainer)
-            })
+        async function createLink(): Promise<void> {
+            const logoSVG = document.querySelector("#image-logo svg")?.cloneNode(true) as SVGElement
+            if (logoSVG) {
+                const link = await exportAsZipFromSVGviaLink(logoSVG, ["jpg", "png"], true)
+                ExportStore.update((s) => {
+                    s.downloadLink = link
+                    s.extension = "zip"
+                })
+            }
         }
+        createLink()
     }, [store])
 
     store = {

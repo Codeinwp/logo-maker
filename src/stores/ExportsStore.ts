@@ -1,15 +1,11 @@
 import { Store } from "pullstate"
 
 export type ExportStoreProps = {
-	svg: {
-		svgDownloadLink: string
-		extension: 'svg'
-	}
+	downloadLink: string
+	extension:  "svg" | "zip" | "png"
 }
 
 export const ExportStore = new Store<ExportStoreProps>({
-	svg: {
-		svgDownloadLink: "",
-		extension: "svg"
-	}
+	downloadLink: "",
+	extension: "zip"
 })

@@ -69,8 +69,8 @@ const DownloadButton: React.FunctionComponent<{ className?: string }> = (props: 
     return (
         <div className={classnames("download-button", props?.className)}>
             <a
-                href={ExportStore.useState((s) => s.svg.svgDownloadLink)}
-                download={`logo.${ExportStore.useState((s) => s.svg.extension)}`}
+                href={ExportStore.useState((s) => s.downloadLink)}
+                download={`logo.${ExportStore.useState((s) => s.extension)}`}
             >
                 <span>Download</span>
             </a>
