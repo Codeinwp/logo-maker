@@ -1,6 +1,7 @@
 import * as React from "react"
 import classnames from "classnames"
 import { ExportStore } from "../../stores/ExportsStore"
+import { downloadAsZipFromSVGviaClick } from "../../engine/export"
 
 const DownloadButton: React.FunctionComponent<{ className?: string }> = (props: {
     className?: string
@@ -68,15 +69,24 @@ const DownloadButton: React.FunctionComponent<{ className?: string }> = (props: 
 
     return (
         <div className={classnames("download-button", props?.className)}>
-            <a
+            {/* <a
                 href={ExportStore.useState((s) => s.downloadLink)}
                 download={`logo.${ExportStore.useState((s) => s.extension)}`}
             >
                 <span>Download</span>
-            </a>
-            {/* <button onClick={() => downloadSVG()}>
+            </a> */}
+            <button
+                onClick={() => {
+                    const logoSVG = document
+                        .querySelector("#image-logo svg")
+                        ?.cloneNode(true) as SVGElement
+                    if (logoSVG) {
+                        downloadAsZipFromSVGviaClick(logoSVG, ["jpg", "png"], true)
+                    }
+                }}
+            >
                 <span>Download</span>
-            </button> */}
+            </button>
             {/* <button
                 className="m-2 box-content max-content bg-transparent bg-orange-600 font-semibold text-white py-2 px-4 rounded"
                 onClick={() => downloadSVGasPNG()}

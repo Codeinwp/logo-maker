@@ -16739,6 +16739,23 @@ module.exports = function equal(a, b) {
 
 /***/ }),
 
+/***/ "./node_modules/.pnpm/file-saver@2.0.5/node_modules/file-saver/dist/FileSaver.min.js":
+/*!*******************************************************************************************!*\
+  !*** ./node_modules/.pnpm/file-saver@2.0.5/node_modules/file-saver/dist/FileSaver.min.js ***!
+  \*******************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+/* WEBPACK VAR INJECTION */(function(global) {var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;(function(a,b){if(true)!(__WEBPACK_AMD_DEFINE_ARRAY__ = [], __WEBPACK_AMD_DEFINE_FACTORY__ = (b),
+				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
+				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
+				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));else {}})(this,function(){"use strict";function b(a,b){return"undefined"==typeof b?b={autoBom:!1}:"object"!=typeof b&&(console.warn("Deprecated: Expected third argument to be a object"),b={autoBom:!b}),b.autoBom&&/^\s*(?:text\/\S*|application\/xml|\S*\/\S*\+xml)\s*;.*charset\s*=\s*utf-8/i.test(a.type)?new Blob(["\uFEFF",a],{type:a.type}):a}function c(a,b,c){var d=new XMLHttpRequest;d.open("GET",a),d.responseType="blob",d.onload=function(){g(d.response,b,c)},d.onerror=function(){console.error("could not download file")},d.send()}function d(a){var b=new XMLHttpRequest;b.open("HEAD",a,!1);try{b.send()}catch(a){}return 200<=b.status&&299>=b.status}function e(a){try{a.dispatchEvent(new MouseEvent("click"))}catch(c){var b=document.createEvent("MouseEvents");b.initMouseEvent("click",!0,!0,window,0,0,0,80,20,!1,!1,!1,!1,0,null),a.dispatchEvent(b)}}var f="object"==typeof window&&window.window===window?window:"object"==typeof self&&self.self===self?self:"object"==typeof global&&global.global===global?global:void 0,a=f.navigator&&/Macintosh/.test(navigator.userAgent)&&/AppleWebKit/.test(navigator.userAgent)&&!/Safari/.test(navigator.userAgent),g=f.saveAs||("object"!=typeof window||window!==f?function(){}:"download"in HTMLAnchorElement.prototype&&!a?function(b,g,h){var i=f.URL||f.webkitURL,j=document.createElement("a");g=g||b.name||"download",j.download=g,j.rel="noopener","string"==typeof b?(j.href=b,j.origin===location.origin?e(j):d(j.href)?c(b,g,h):e(j,j.target="_blank")):(j.href=i.createObjectURL(b),setTimeout(function(){i.revokeObjectURL(j.href)},4E4),setTimeout(function(){e(j)},0))}:"msSaveOrOpenBlob"in navigator?function(f,g,h){if(g=g||f.name||"download","string"!=typeof f)navigator.msSaveOrOpenBlob(b(f,h),g);else if(d(f))c(f,g,h);else{var i=document.createElement("a");i.href=f,i.target="_blank",setTimeout(function(){e(i)})}}:function(b,d,e,g){if(g=g||open("","_blank"),g&&(g.document.title=g.document.body.innerText="downloading..."),"string"==typeof b)return c(b,d,e);var h="application/octet-stream"===b.type,i=/constructor/i.test(f.HTMLElement)||f.safari,j=/CriOS\/[\d]+/.test(navigator.userAgent);if((j||h&&i||a)&&"undefined"!=typeof FileReader){var k=new FileReader;k.onloadend=function(){var a=k.result;a=j?a:a.replace(/^data:[^;]*;/,"data:attachment/file;"),g?g.location.href=a:location=a,g=null},k.readAsDataURL(b)}else{var l=f.URL||f.webkitURL,m=l.createObjectURL(b);g?g.location=m:location.href=m,g=null,setTimeout(function(){l.revokeObjectURL(m)},4E4)}});f.saveAs=g.saveAs=g, true&&(module.exports=g)});
+
+
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../../../webpack@4.44.2_webpack-cli@4.2.0/node_modules/webpack/buildin/global.js */ "./node_modules/.pnpm/webpack@4.44.2_webpack-cli@4.2.0/node_modules/webpack/buildin/global.js")))
+
+/***/ }),
+
 /***/ "./node_modules/.pnpm/history@4.10.1/node_modules/history/esm/history.js":
 /*!*******************************************************************************!*\
   !*** ./node_modules/.pnpm/history@4.10.1/node_modules/history/esm/history.js ***!
@@ -46678,7 +46695,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! classnames */ "./node_modules/.pnpm/classnames@2.2.6/node_modules/classnames/index.js");
 /* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(classnames__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _stores_ExportsStore__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../stores/ExportsStore */ "./src/stores/ExportsStore.ts");
+/* harmony import */ var _engine_export__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../engine/export */ "./src/engine/export.ts");
 
 
 
@@ -46732,7 +46749,14 @@ const DownloadButton = (props) => {
     //     element.remove()
     // }
     return (react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("div", { className: classnames__WEBPACK_IMPORTED_MODULE_1___default()("download-button", props === null || props === void 0 ? void 0 : props.className) },
-        react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("a", { href: _stores_ExportsStore__WEBPACK_IMPORTED_MODULE_2__["ExportStore"].useState((s) => s.downloadLink), download: `logo.${_stores_ExportsStore__WEBPACK_IMPORTED_MODULE_2__["ExportStore"].useState((s) => s.extension)}` },
+        react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("button", { onClick: () => {
+                var _a;
+                const logoSVG = (_a = document
+                    .querySelector("#image-logo svg")) === null || _a === void 0 ? void 0 : _a.cloneNode(true);
+                if (logoSVG) {
+                    Object(_engine_export__WEBPACK_IMPORTED_MODULE_2__["downloadAsZipFromSVGviaClick"])(logoSVG, ["jpg", "png"], true);
+                }
+            } },
             react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("span", null, "Download"))));
 };
 /* harmony default export */ __webpack_exports__["default"] = (DownloadButton);
@@ -47497,7 +47521,7 @@ const alignLogoRight = (props, draw) => {
 /*!******************************!*\
   !*** ./src/engine/export.ts ***!
   \******************************/
-/*! exports provided: exportAsSVGfromDOMviaLink, generateCanvasFromSVG, exportImagesfromCANVAS, exportAsZipFromSVGviaLink */
+/*! exports provided: exportAsSVGfromDOMviaLink, generateCanvasFromSVG, exportImagesfromCANVAS, createZipFromSVG, exportAsZipFromSVGviaLink, downloadAsZipFromSVGviaClick */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -47505,19 +47529,24 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "exportAsSVGfromDOMviaLink", function() { return exportAsSVGfromDOMviaLink; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "generateCanvasFromSVG", function() { return generateCanvasFromSVG; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "exportImagesfromCANVAS", function() { return exportImagesfromCANVAS; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "createZipFromSVG", function() { return createZipFromSVG; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "exportAsZipFromSVGviaLink", function() { return exportAsZipFromSVGviaLink; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "downloadAsZipFromSVGviaClick", function() { return downloadAsZipFromSVGviaClick; });
 /* harmony import */ var jszip__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jszip */ "./node_modules/.pnpm/jszip@3.5.0/node_modules/jszip/dist/jszip.min.js");
 /* harmony import */ var jszip__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jszip__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var file_saver__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! file-saver */ "./node_modules/.pnpm/file-saver@2.0.5/node_modules/file-saver/dist/FileSaver.min.js");
+/* harmony import */ var file_saver__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(file_saver__WEBPACK_IMPORTED_MODULE_1__);
+
 
 function exportAsSVGfromDOMviaLink(svg) {
-    const blob = new Blob([svg.outerHTML], { type: 'image/svg+xml;charset=utf-8' });
+    const blob = new Blob([svg.outerHTML], { type: "image/svg+xml;charset=utf-8" });
     return window.URL.createObjectURL(blob);
 }
 function generateCanvasFromSVG(svg) {
     return new Promise((resolve) => {
         const img = new Image();
-        const canvas = document.createElement('canvas');
-        const context = canvas.getContext('2d');
+        const canvas = document.createElement("canvas");
+        const context = canvas.getContext("2d");
         // const {width, height} = svg.getBoundingClientRect() - not working
         img.onload = () => {
             canvas.width = 765;
@@ -47538,27 +47567,38 @@ function exportImagesfromCANVAS(canvas, format) {
     return canvas.toDataURL(`image/${format}`);
 }
 function getBase64String(dataURL) {
-    const idx = dataURL.indexOf('base64,') + 'base64,'.length;
+    const idx = dataURL.indexOf("base64,") + "base64,".length;
     return dataURL.substring(idx);
 }
-async function exportAsZipFromSVGviaLink(svg, formats, includeSVG) {
+async function createZipFromSVG(svg, formats, includeSVG) {
     // Create images
     const canvas = await generateCanvasFromSVG(svg);
-    const imgs = formats.map(f => ({
+    const imgs = formats.map((f) => ({
         ext: f,
-        dataURL: exportImagesfromCANVAS(canvas, f)
+        dataURL: exportImagesfromCANVAS(canvas, f),
     }));
     // Create ZIP file
     const zip = new jszip__WEBPACK_IMPORTED_MODULE_0___default.a();
     const folder = zip.folder("logos-by-logomaker");
-    imgs.forEach(img => {
+    imgs.forEach((img) => {
         folder === null || folder === void 0 ? void 0 : folder.file(`logo.${img.ext}`, getBase64String(img.dataURL), { base64: true });
     });
     if (includeSVG) {
-        folder === null || folder === void 0 ? void 0 : folder.file("logo.svg", new Blob([svg.outerHTML], { type: 'image/svg+xml;charset=utf-8' }));
+        folder === null || folder === void 0 ? void 0 : folder.file("logo.svg", new Blob([svg.outerHTML], { type: "image/svg+xml;charset=utf-8" }));
     }
-    const link = await zip.generateAsync({ type: "blob" }).then(content => URL.createObjectURL(content));
+    return zip;
+}
+async function exportAsZipFromSVGviaLink(svg, formats, includeSVG) {
+    const zip = await createZipFromSVG(svg, formats, includeSVG);
+    const link = await zip.generateAsync({ type: "blob" }).then((content) => {
+        return URL.createObjectURL(content);
+    });
     return link;
+}
+function downloadAsZipFromSVGviaClick(svg, formats, includeSVG) {
+    createZipFromSVG(svg, formats, includeSVG).then((zip) => zip.generateAsync({ type: "blob" }).then((content) => {
+        file_saver__WEBPACK_IMPORTED_MODULE_1___default.a.saveAs(content, "logos");
+    }));
 }
 
 
