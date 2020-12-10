@@ -45,14 +45,14 @@ export const settings: TSettings = {
     title: {
         margins: {
             top: 3,
-            bottom: 3,
+            bottom: 0,
             right: 0,
             left: 0,
         },
     },
     slogan: {
         margins: {
-            top: 2,
+            top: 0,
             bottom: 0,
             right: 0,
             left: 0,
