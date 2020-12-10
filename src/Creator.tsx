@@ -15,6 +15,7 @@ import classnames from "classnames"
 import "../src/assets/styles/Creator/creator.scss"
 // import { fontsForSvg, fontsList as fL } from "./assets/fonts/index"
 import UIStore from "./stores/UIStore"
+import ReactGA from "react-ga"
 
 type MenuOptions = "logo" | "typography" | "layout" | "colors"
 
@@ -34,6 +35,10 @@ const Creator: React.FunctionComponent<unknown> = () => {
                 return <SelectColor />
         }
     }
+
+    React.useEffect(() => {
+        ReactGA.pageview(window.location.pathname + window.location.search)
+    }, [])
 
     // React.useEffect(() => {
     //     // after creating a new link, destroy the previouse one

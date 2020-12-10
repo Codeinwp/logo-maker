@@ -69,8 +69,14 @@ function logo_maker_assets()
         if ($post->post_parent) {
             $parent_link = get_permalink($post->post_parent);
         }
+
+        if (!defined('BLOGNAME_GA_CODE')) {
+            define('BLOGNAME_GA_CODE', 'UA-46661241-6');
+        }
+
         wp_localize_script('logo-maker-asset', 'logomaker', array(
-            'parentLink' => $parent_link
+            'parentLink'           => $parent_link,
+            'googleAnalyticsCode'  => BLOGNAME_GA_CODE,
             //If we are logged in, nonce is invalid unless we pass X-WP-Nonce,
             // which is problematic on cached environment. For now we use a hardcoded token.
         ));

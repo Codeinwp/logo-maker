@@ -11,8 +11,15 @@ import Showcase from "./Showcase"
 import Start from "./Start"
 import { AssetsStore } from "./stores/AssetsStore"
 
+import ReactGA from "react-ga"
+
 export const Application: React.FunctionComponent<unknown> = () => {
     React.useEffect(() => {
+        if (window.logomaker?.googleAnalyticsCode) {
+            ReactGA.initialize(window.logomaker.googleAnalyticsCode)
+            ReactGA.set({ anonymizeIp: true })
+        }
+
         // WebFont.load({
         //     google: {
         //         families: fonts,
