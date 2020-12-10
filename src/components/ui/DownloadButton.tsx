@@ -1,6 +1,6 @@
 import * as React from "react"
 import classnames from "classnames"
-import { ExportStore } from "../../stores/ExportsStore"
+
 import { downloadAsZipFromSVGviaClick } from "../../engine/export"
 
 const DownloadButton: React.FunctionComponent<{ className?: string }> = (props: {
@@ -81,7 +81,7 @@ const DownloadButton: React.FunctionComponent<{ className?: string }> = (props: 
                         .querySelector("#image-logo svg")
                         ?.cloneNode(true) as SVGElement
                     if (logoSVG) {
-                        downloadAsZipFromSVGviaClick(logoSVG, ["jpg", "png"], true)
+                        downloadAsZipFromSVGviaClick(logoSVG, ["png"], true)
                     }
                 }}
             >

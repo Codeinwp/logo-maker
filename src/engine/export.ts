@@ -94,11 +94,16 @@ export async function exportAsZipFromSVGviaLink(
     return link
 }
 
-const presetsFormat = [
+const presetsFormat: { name: string; width: number; height: number }[] = [
     {
         name: "default_765_625",
         width: 765,
         height: 625,
+    },
+    {
+        name: "wordpress_logo_512x512",
+        width: 512,
+        height: 512,
     },
     {
         name: "facebook_profile_1000x1000",
@@ -106,9 +111,44 @@ const presetsFormat = [
         height: 1000,
     },
     {
+        name: "facebook_cover_1640x624",
+        width: 1640,
+        height: 624,
+    },
+    {
         name: "twitter_profile_1000x1000",
         width: 1000,
         height: 1000,
+    },
+    {
+        name: "favicon_32x32",
+        width: 32,
+        height: 32,
+    },
+    {
+        name: "instagram_profile_1000x1000",
+        width: 1000,
+        height: 1000,
+    },
+    {
+        name: "linkedin_profile_1000x1000",
+        width: 1000,
+        height: 1000,
+    },
+    {
+        name: "linkedin_banner_1536x768",
+        width: 1536,
+        height: 768,
+    },
+    {
+        name: "youtube_profile_800x800",
+        width: 800,
+        height: 800,
+    },
+    {
+        name: "wallpaper_1920x1080",
+        width: 1920,
+        height: 1080,
     },
 ]
 
@@ -134,7 +174,14 @@ export async function createZipWithPresets(
     let zip = new JSZip()
 
     for (const _svg of createSVGsWithPreset(svg)) {
-        zip = await addToZipFromSVG(_svg, zip, formats, includeSVG)
+        zip = await addToZipFromSVG(_svg, zip, formats, false)
+    }
+
+    if (includeSVG) {
+        zip?.file(
+            `${"logo-svg"}.svg`,
+            new Blob([svg.outerHTML], { type: "image/svg+xml;charset=utf-8" })
+        )
     }
 
     return zip

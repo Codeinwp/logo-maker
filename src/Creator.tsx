@@ -15,8 +15,6 @@ import classnames from "classnames"
 import "../src/assets/styles/Creator/creator.scss"
 // import { fontsForSvg, fontsList as fL } from "./assets/fonts/index"
 import UIStore from "./stores/UIStore"
-import { ExportStore } from "./stores/ExportsStore"
-import { exportAsSVGfromDOMviaLink, exportAsZipFromSVGviaLink } from "./engine/export"
 
 type MenuOptions = "logo" | "typography" | "layout" | "colors"
 
@@ -37,33 +35,33 @@ const Creator: React.FunctionComponent<unknown> = () => {
         }
     }
 
-    React.useEffect(() => {
-        // after creating a new link, destroy the previouse one
-        const unsubscribeFromRemovingOldURL = ExportStore.subscribe(
-            (s) => s.downloadLink,
-            (currentLink, states, oldLink) => {
-                URL.revokeObjectURL(oldLink) // destroy the previous link or it might fill up the memory
-            }
-        )
+    // React.useEffect(() => {
+    //     // after creating a new link, destroy the previouse one
+    //     const unsubscribeFromRemovingOldURL = ExportStore.subscribe(
+    //         (s) => s.downloadLink,
+    //         (currentLink, states, oldLink) => {
+    //             URL.revokeObjectURL(oldLink) // destroy the previous link or it might fill up the memory
+    //         }
+    //     )
 
-        return () => {
-            unsubscribeFromRemovingOldURL()
-        }
-    }, [])
+    //     return () => {
+    //         unsubscribeFromRemovingOldURL()
+    //     }
+    // }, [])
 
-    React.useEffect(() => {
-        async function createLink(): Promise<void> {
-            const logoSVG = document.querySelector("#image-logo svg")?.cloneNode(true) as SVGElement
-            if (logoSVG) {
-                const link = await exportAsZipFromSVGviaLink(logoSVG, ["jpg", "png"], true)
-                ExportStore.update((s) => {
-                    s.downloadLink = link
-                    s.extension = "zip"
-                })
-            }
-        }
-        createLink()
-    }, [store])
+    // React.useEffect(() => {
+    //     async function createLink(): Promise<void> {
+    //         const logoSVG = document.querySelector("#image-logo svg")?.cloneNode(true) as SVGElement
+    //         if (logoSVG) {
+    //             const link = await exportAsZipFromSVGviaLink(logoSVG, ["jpg", "png"], true)
+    //             ExportStore.update((s) => {
+    //                 s.downloadLink = link
+    //                 s.extension = "zip"
+    //             })
+    //         }
+    //     }
+    //     createLink()
+    // }, [store])
 
     store = {
         ...store,
