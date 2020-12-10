@@ -1,25 +1,27 @@
-import serif,{serifFonts} from './serif'
-import sans,{sansFonts} from './sans'
+import serif, { serifFonts } from "./serif"
+import sans, { sansFonts } from "./sans"
+import { monospaceFonts } from "./monospaced"
+import { cursiveFonts } from "./cursive"
 
 export type Font = {
-	family: string
-	fallback: string
+    family: string
+    fallback: string
 }
 
-export const fontsList = [...serifFonts, ...sansFonts].sort()
+export const fontsList = [...serifFonts, ...sansFonts, ...monospaceFonts, ...cursiveFonts].sort()
 
-const fonts = [...serif, ...sans].sort((a: Font, b:Font) => {
-	if (a.family < b.family) {
-		return -1;
-	  }
-	  if (a.family > b.family) {
-		return 1;
-	  }
-	  
-	  return 0;
+const fonts = [...serif, ...sans].sort((a: Font, b: Font) => {
+    if (a.family < b.family) {
+        return -1
+    }
+    if (a.family > b.family) {
+        return 1
+    }
+
+    return 0
 })
 
-export const fontsForSvg = fonts.map<string>(f => `'${f.family}', '${f.fallback}'`)
+export const fontsForSvg = fonts.map<string>((f) => `'${f.family}', '${f.fallback}'`)
 
 // export const presets = [
 // 	{
@@ -57,19 +59,50 @@ export const fontsForSvg = fonts.map<string>(f => `'${f.family}', '${f.fallback}
 // ]
 
 export const presets = [
-	{
-		title: "Times New Roman",
-		slogan: "Helvetica"
-	},
-	{
-		title: "Helvetica",
-		slogan: "Times New Roman"
-	},
-	{
-		title: "Georgia",
-		slogan: "sans-serif"
-	}
+    {
+        title: "Times New Roman",
+        slogan: "Helvetica",
+    },
+    {
+        title: "Helvetica",
+        slogan: "Times New Roman",
+    },
+    {
+        title: "Georgia",
+        slogan: "sans-serif",
+    },
+    {
+        title: "Impact",
+        slogan: "Verdana",
+    },
+    {
+        title: "Verdana",
+        slogan: "Arial",
+    },
+    {
+        title: "Courier New",
+        slogan: "Arial",
+    },
+    {
+        title: "Verdana",
+        slogan: "sans-serif",
+    },
+    {
+        title: "Tohoma",
+        slogan: "Verdana",
+    },
+    {
+        title: "Garamond",
+        slogan: "Verdana",
+    },
+    {
+        title: "Courier New",
+        slogan: "Georgia",
+    },
+    {
+        title: "Arial",
+        slogan: "Georgia",
+    },
 ]
 
 export default fonts
-

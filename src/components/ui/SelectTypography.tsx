@@ -4,22 +4,20 @@ import { fontsList as fonts } from "../../assets/fonts/index"
 import UIStore from "../../stores/UIStore"
 
 const SelectTypography: React.FunctionComponent<unknown> = () => {
-    console.log(UIStore.useState((s) => s))
-
     const fontOptions = fonts.map((font) => ({
         value: font,
         label: font,
     }))
 
-    const titleSizeOptions = [...Array(25).keys()]
-        .map((size) => size + 38)
+    const titleSizeOptions = [...Array(35).keys()]
+        .map((size) => size + 20)
         .map((size) => ({
             value: size,
             label: size.toString(),
         }))
 
-    const sloganSizeOptions = [...Array(25).keys()]
-        .map((size) => size + 18)
+    const sloganSizeOptions = [...Array(35).keys()]
+        .map((size) => size + 12)
         .map((size) => ({
             value: size,
             label: size.toString(),
@@ -33,7 +31,6 @@ const SelectTypography: React.FunctionComponent<unknown> = () => {
 
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const onTitleFontFamilyChange = ({ value }: any) => {
-        console.log(value)
         UIStore.update((s) => {
             s.title.style.fontFamily = value
         })

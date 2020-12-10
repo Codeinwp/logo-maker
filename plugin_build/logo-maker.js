@@ -16478,7 +16478,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_pnpm_css_loader_5_0_1_webpack_4_44_2_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()(_node_modules_pnpm_css_loader_5_0_1_webpack_4_44_2_node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0___default.a);
 // Module
-___CSS_LOADER_EXPORT___.push([module.i, ".logo-showcase.logo-maker-container {\n  max-width: 1470px;\n  margin: 15px auto;\n  font-family: \"Noto Sans\", sans-serif;\n}\n@media (max-width: 1440px) {\n  .logo-showcase.logo-maker-container {\n    max-width: 90%;\n  }\n}\n@media (max-width: 600px) {\n  .logo-showcase.logo-maker-container {\n    max-width: 100%;\n    margin: 15px 30px;\n  }\n}\n.logo-showcase .top-section {\n  position: relative;\n  text-align: center;\n}\n.logo-showcase .top-section .back {\n  display: inline-block;\n  position: absolute;\n  left: 0;\n  visibility: visible;\n}\n.logo-showcase .top-section .back a {\n  display: inline-flex;\n  align-items: center;\n  text-decoration: none;\n}\n.logo-showcase .top-section .back a p {\n  color: #585858;\n  text-transform: uppercase;\n  font-size: 14px;\n  font-weight: 600;\n  margin-left: 13px;\n  padding-bottom: 0px;\n  margin-bottom: 0px;\n  margin-top: 0px;\n}\n@media (max-width: 600px) {\n  .logo-showcase .top-section .back {\n    visibility: hidden;\n  }\n}\n.logo-showcase .top-section .logo-holder {\n  display: inline-flex;\n}\n.logo-showcase .top-section .logo-holder img {\n  max-width: 134px;\n  max-height: 44px;\n}\n.logo-showcase .top-section .logo-holder a {\n  max-height: 44px;\n}\n.logo-showcase .top-section .logo-holder .logo-maker-name {\n  margin-top: 2.5px;\n  height: 44px;\n  line-height: 24.52px;\n  display: inline-grid;\n  align-content: center;\n  font-size: 18px;\n  font-weight: 700;\n  color: #FF7F66;\n  margin: 1.6px 0 0 4px;\n}\n@media (max-width: 600px) {\n  .logo-showcase .top-section {\n    text-align: left;\n  }\n}\n.logo-showcase .content-section {\n  margin-top: 115px;\n}\n.logo-showcase .content-section .titles {\n  text-align: center;\n}\n.logo-showcase .content-section .titles h1 {\n  color: #32456B;\n  font-size: 36px;\n  font-weight: 700;\n  line-height: 49.03px;\n  margin: 0 0 8px;\n}\n.logo-showcase .content-section .titles p {\n  color: #939393;\n  font-size: 18px;\n  font-weight: 500;\n  line-height: 24.52px;\n  margin: 0;\n}\n@media (max-width: 600px) {\n  .logo-showcase .content-section {\n    margin-top: 60px;\n  }\n  .logo-showcase .content-section .titles {\n    text-align: left;\n  }\n  .logo-showcase .content-section .titles h1 {\n    font-size: 24px;\n  }\n  .logo-showcase .content-section .titles p {\n    font-size: 16px;\n    color: #393939;\n  }\n}\n.logo-showcase .content-section .content {\n  margin: 50px auto 100px;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  justify-content: center;\n}\n.logo-showcase .content-section .content .logos-container {\n  display: flex;\n  flex-wrap: wrap;\n  justify-content: center;\n}\n.logo-showcase .content-section .content .logos-container .logo {\n  padding: 0;\n  margin: 10px;\n  border: none;\n  background: transparent;\n  transition: all 0.2s ease-in-out;\n}\n.logo-showcase .content-section .content .logos-container .logo svg {\n  border-radius: 10px;\n  border: 2px solid transparent;\n}\n.logo-showcase .content-section .content .logos-container .logo svg.active {\n  border-color: #43C2D1;\n}\n.logo-showcase .content-section .content .logos-container .logo:focus {\n  outline: none;\n}\n.logo-showcase .content-section .content .logos-container .logo.active, .logo-showcase .content-section .content .logos-container .logo:hover {\n  transform: scale(1.03);\n}\n.logo-showcase .next {\n  text-align: center;\n  position: fixed;\n  bottom: 0;\n  width: 100%;\n  left: 0;\n  background: #fff;\n  padding: 25px 0;\n  z-index: 100;\n}\n.logo-showcase .next a {\n  color: #fff;\n  background-color: #43C2D1;\n  text-decoration: none;\n  text-transform: uppercase;\n  font-size: 14px;\n  font-weight: 700;\n  line-height: 36px;\n  padding: 14px 80px;\n  border-radius: 4px;\n}\n@media (max-width: 600px) {\n  .logo-showcase .next a {\n    display: block;\n    padding: 7px;\n  }\n}\n@media (max-width: 600px) {\n  .logo-showcase .next {\n    padding: 25px 30px;\n  }\n}\n\n@media (max-width: 811px) {\n  .logo-showcase .content-section .content .logos-container .logo svg {\n    max-width: 250px;\n    height: auto;\n  }\n}\n@media (max-width: 600px) {\n  .logo-showcase .content-section .content {\n    margin-top: 20px;\n  }\n  .logo-showcase .content-section .content .logos-container .logo {\n    margin: 5px;\n  }\n  .logo-showcase .content-section .content .logos-container .logo svg {\n    max-width: 200px;\n    height: auto;\n  }\n}\n@media (max-width: 480px) {\n  .logo-showcase .content-section .content .logos-container .logo svg {\n    max-width: 300px;\n    height: auto;\n  }\n}", "",{"version":3,"sources":["webpack://./src/assets/styles/Showcase/showcase.scss","webpack://./src/assets/styles/common.scss","webpack://./src/assets/styles/_constants.scss"],"names":[],"mappings":"AAII;ECDH,iBAAA;EACA,iBAAA;EACA,oCCLM;AFIP;ACEC;EDFG;ICGF,cAAA;EDCA;AACF;ACAC;EDLG;ICMF,eAAA;IACA,iBAAA;EDGA;AACF;AARI;EC+EH,kBAAA;EACA,kBAAA;ADpED;ACqEC;EAxEA,qBAAA;EACA,kBAAA;EACA,OAAA;EACA,mBAAA;ADMD;ACLC;EACC,oBAAA;EACA,mBAAA;EACA,qBAAA;ADOF;ACNE;EACC,cAAA;EACA,yBAAA;EACA,eAAA;EACA,gBAAA;EACA,iBAAA;EACA,mBAAA;EACA,kBAAA;EACA,eAAA;ADQH;ACLC;EAqDA;IApDC,kBAAA;EDQA;AACF;AC8CC;EA7BA,oBAAA;ADdD;ACeC;EACC,gBAAA;EACA,gBAAA;ADbF;ACgBC;EACC,gBAAA;ADdF;ACiBC;EACC,iBAAA;EACA,YAAA;EACA,oBAAA;EACA,oBAAA;EACA,qBAAA;EACA,eAAA;EACA,gBAAA;EACA,cC9EO;ED+EP,qBAAA;ADfF;AC4BC;EDvFG;ICwFF,gBAAA;EDzBA;AACF;AA7DI;EC0FH,iBAAA;AD1BD;AC2BC;EACC,kBAAA;ADzBF;AC0BE;EACC,cCvGI;EDwGJ,eAAA;EACA,gBAAA;EACA,oBAAA;EACA,eAAA;ADxBH;AC0BE;EACC,cAAA;EACA,eAAA;EACA,gBAAA;EACA,oBAAA;EACA,SAAA;ADxBH;AC2BC;ED5GG;IC6GF,gBAAA;EDxBA;ECyBA;IACC,gBAAA;EDvBD;ECwBC;IACC,eAAA;EDtBF;ECwBC;IACC,eAAA;IACA,cAAA;EDtBF;AACF;AA9FE;EACC,uBAAA;EACA,aAAA;EACA,sBAAA;EACA,mBAAA;EACA,uBAAA;AAgGH;AA/FG;EACC,aAAA;EACA,eAAA;EACA,uBAAA;AAiGJ;AAhGI;EACC,UAAA;EACA,YAAA;EACA,YAAA;EACA,uBAAA;EACA,gCAAA;AAkGL;AAjGK;EACC,mBAAA;EACA,6BAAA;AAmGN;AAjGM;EACC,qBE9BM;AFiIb;AAhGK;EACC,aAAA;AAkGN;AAhGK;EAEC,sBAAA;AAiGN;AA3FC;ECNA,kBAAA;EDQC,eAAA;EACA,SAAA;EACA,WAAA;EACA,OAAA;EACA,gBAAA;EACA,eAAA;EACA,YAAA;AA6FF;AC1GC;EACC,WAAA;EACA,yBCzCW;ED0CX,qBAAA;EACA,yBAAA;EACA,eAAA;EACA,gBAAA;EACA,iBAAA;EACA,kBAAA;EACA,kBAAA;AD4GF;AC1GC;EACC;IACC,cAAA;IACA,YAAA;ED4GD;AACF;AA7GE;EATD;IAUE,kBAAA;EAgHD;AACF;;AA5GA;EACC;IACC,gBAAA;IACA,YAAA;EA+GA;AACF;AA5GA;EACC;IACC,gBAAA;EA8GA;EA7GA;IACC,WAAA;EA+GD;EA9GC;IACC,gBAAA;IACA,YAAA;EAgHF;AACF;AA3GA;EACC;IACC,gBAAA;IACA,YAAA;EA6GA;AACF","sourcesContent":["@use \"../common.scss\" as default;\r\n@import \"../constants\";\r\n\r\n.logo-showcase {\r\n    &.logo-maker-container {\r\n\t\t@include default.logo-maker-container;\r\n\t}\r\n    .top-section {\r\n\t\t@include default.top-section;\r\n    }\r\n    .content-section {\r\n        @include default.content-section-titles;\r\n\t\t.content {\r\n\t\t\tmargin: 50px auto 100px;\r\n\t\t\tdisplay: flex;\r\n\t\t\tflex-direction: column;\r\n\t\t\talign-items: center;\r\n\t\t\tjustify-content: center;\r\n\t\t\t.logos-container {\r\n\t\t\t\tdisplay: flex;\r\n\t\t\t\tflex-wrap: wrap;\r\n\t\t\t\tjustify-content: center;\r\n\t\t\t\t.logo {\r\n\t\t\t\t\tpadding: 0;\r\n\t\t\t\t\tmargin: 10px;\r\n\t\t\t\t\tborder: none;\r\n\t\t\t\t\tbackground: transparent;\r\n\t\t\t\t\ttransition: all .2s ease-in-out;\r\n\t\t\t\t\tsvg {\r\n\t\t\t\t\t\tborder-radius: 10px;\r\n\t\t\t\t\t\tborder: 2px solid transparent;\r\n\r\n\t\t\t\t\t\t&.active {\r\n\t\t\t\t\t\t\tborder-color: $light-blue;\r\n\t\t\t\t\t\t}\r\n\t\t\t\t\t}\r\n\t\t\t\t\t&:focus {\r\n\t\t\t\t\t\toutline: none;\r\n\t\t\t\t\t}\r\n\t\t\t\t\t&.active,\r\n\t\t\t\t\t&:hover {\r\n\t\t\t\t\t\ttransform: scale(1.03);\r\n\t\t\t\t\t}\r\n\t\t\t\t}\r\n\t\t\t}\r\n\t\t}\r\n    }\r\n\t.next {\r\n\t\t@include default.next;\r\n\t\tposition: fixed;\r\n\t\tbottom: 0;\r\n\t\twidth: 100%;\r\n\t\tleft: 0;\r\n\t\tbackground: #fff;\r\n\t\tpadding: 25px 0;\r\n\t\tz-index: 100;\r\n\t\t@media (max-width: 600px) {\r\n\t\t\tpadding: 25px 30px;\r\n\t\t}\r\n\t}\r\n}\r\n\r\n@media (max-width: 811px) {\r\n\t.logo-showcase .content-section .content .logos-container .logo svg  {\r\n\t\tmax-width: 250px;\r\n\t\theight: auto;\r\n\t}\r\n}\r\n\r\n@media (max-width: 600px) {\r\n\t.logo-showcase .content-section .content {\r\n\t\tmargin-top: 20px;\r\n\t\t.logos-container .logo {\r\n\t\t\tmargin: 5px;\r\n\t\t\tsvg {\r\n\t\t\t\tmax-width: 200px;\r\n\t\t\t\theight: auto;\r\n\t\t\t}\r\n\t\t}\r\n\t}\r\n}\r\n\r\n@media (max-width: 480px) {\r\n\t.logo-showcase .content-section .content .logos-container .logo svg  {\r\n\t\tmax-width: 300px;\r\n\t\theight: auto;\r\n\t}\r\n}\r\n","@import \"constants\";\r\n\r\n@mixin logo-maker-container {\r\n\tmax-width: 1470px;\r\n\tmargin: 15px auto;\r\n\tfont-family: $noto;\r\n\t@media (max-width: 1440px) {\r\n\t\tmax-width: 90%;\r\n\t}\r\n\t@media (max-width: 600px) {\r\n\t\tmax-width: 100%;\r\n\t\tmargin: 15px 30px;\r\n\t}\r\n}\r\n\r\n@mixin back {\r\n\tdisplay: inline-block;\r\n\tposition: absolute;\r\n\tleft: 0;\r\n\tvisibility: visible;\r\n\ta {\r\n\t\tdisplay: inline-flex;\r\n\t\talign-items: center;\r\n\t\ttext-decoration: none;\r\n\t\tp {\r\n\t\t\tcolor: #585858;\r\n\t\t\ttext-transform: uppercase;\r\n\t\t\tfont-size: 14px;\r\n\t\t\tfont-weight: 600;\r\n\t\t\tmargin-left: 13px;\r\n\t\t\tpadding-bottom: 0px;\r\n\t\t\tmargin-bottom: 0px;\r\n\t\t\tmargin-top: 0px;\r\n\t\t}\r\n\t}\r\n\t@media(max-width: 600px) {\r\n\t\tvisibility: hidden;\r\n\t}\r\n}\r\n\r\n@mixin next {\r\n\ttext-align: center;\r\n\ta {\r\n\t\tcolor: #fff;\r\n\t\tbackground-color: $light-blue;\r\n\t\ttext-decoration: none;\r\n\t\ttext-transform: uppercase;\r\n\t\tfont-size: 14px;\r\n\t\tfont-weight: 700;\r\n\t\tline-height: 36px;\r\n\t\tpadding: 14px 80px;\r\n\t\tborder-radius: 4px;\r\n\t}\r\n\t@media (max-width: 600px) {\r\n\t\ta {\r\n\t\t\tdisplay: block;\r\n\t\t\tpadding: 7px;\r\n\t\t}\r\n\t}\r\n}\r\n\r\n@mixin logo-holder {\r\n\tdisplay: inline-flex;\r\n\timg {\r\n\t\tmax-width: 134px;\r\n\t\tmax-height: 44px;\r\n\t}\r\n\r\n\ta {\r\n\t\tmax-height: 44px;\r\n\t}\r\n\r\n\t.logo-maker-name {\r\n\t\tmargin-top: 2.5px;\r\n\t\theight: 44px;\r\n\t\tline-height: 24.52px;\r\n\t\tdisplay: inline-grid;\r\n\t\talign-content: center;\r\n\t\tfont-size: 18px;\r\n\t\tfont-weight: 700;\r\n\t\tcolor: $orange;\r\n\t\tmargin: 1.6px 0 0 4px;\r\n\t}\r\n}\r\n\r\n@mixin top-section {\r\n\tposition: relative;\r\n\ttext-align: center;\r\n\t.back {\r\n\t\t@include back;\r\n\t}\r\n\t.logo-holder {\r\n\t\t@include logo-holder;\r\n\t}\r\n\t@media (max-width: 600px) {\r\n\t\ttext-align: left;\r\n\t}\r\n}\r\n\r\n@mixin content-section-titles {\r\n\tmargin-top: 115px;\r\n\t.titles {\r\n\t\ttext-align: center;\r\n\t\th1 {\r\n\t\t\tcolor: $blue;\r\n\t\t\tfont-size: 36px;\r\n\t\t\tfont-weight: 700;\r\n\t\t\tline-height: 49.03px;\r\n\t\t\tmargin: 0 0 8px;\r\n\t\t}\r\n\t\tp {\r\n\t\t\tcolor: #939393;\r\n\t\t\tfont-size: 18px;\r\n\t\t\tfont-weight: 500;\r\n\t\t\tline-height: 24.52px;\r\n\t\t\tmargin: 0;\r\n\t\t}\r\n\t}\r\n\t@media (max-width: 600px) {\r\n\t\tmargin-top: 60px;\r\n\t\t.titles {\r\n\t\t\ttext-align: left;\r\n\t\t\th1 {\r\n\t\t\t\tfont-size: 24px;\r\n\t\t\t}\r\n\t\t\tp {\r\n\t\t\t\tfont-size: 16px;\r\n\t\t\t\tcolor: #393939;\r\n\t\t\t}\r\n\t\t}\r\n\t}\r\n}\r\n","$noto: 'Noto Sans', sans-serif;\n$blue: #32456B;\n$orange: #FF7F66;\n$light-blue: #43C2D1;\n$black: #393939;\n$transition: .3s ease all;\n"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.i, ".logo-showcase.logo-maker-container {\n  max-width: 1470px;\n  margin: 15px auto;\n  font-family: \"Noto Sans\", sans-serif;\n}\n@media (max-width: 1440px) {\n  .logo-showcase.logo-maker-container {\n    max-width: 90%;\n  }\n}\n@media (max-width: 600px) {\n  .logo-showcase.logo-maker-container {\n    max-width: 100%;\n    margin: 15px 30px;\n  }\n}\n.logo-showcase .top-section {\n  position: relative;\n  text-align: center;\n}\n.logo-showcase .top-section .back {\n  display: inline-block;\n  position: absolute;\n  left: 0;\n  visibility: visible;\n}\n.logo-showcase .top-section .back a {\n  display: inline-flex;\n  align-items: center;\n  text-decoration: none;\n}\n.logo-showcase .top-section .back a p {\n  color: #585858;\n  text-transform: uppercase;\n  font-size: 14px;\n  font-weight: 600;\n  margin-left: 13px;\n  padding-bottom: 0px;\n  margin-bottom: 0px;\n  margin-top: 0px;\n}\n@media (max-width: 600px) {\n  .logo-showcase .top-section .back {\n    visibility: hidden;\n  }\n}\n.logo-showcase .top-section .logo-holder {\n  display: inline-flex;\n}\n.logo-showcase .top-section .logo-holder img {\n  max-width: 134px;\n  max-height: 44px;\n}\n.logo-showcase .top-section .logo-holder a {\n  max-height: 44px;\n}\n.logo-showcase .top-section .logo-holder .logo-maker-name {\n  margin-top: 2.5px;\n  height: 44px;\n  line-height: 24.52px;\n  display: inline-grid;\n  align-content: center;\n  font-size: 18px;\n  font-weight: 700;\n  color: #FF7F66;\n  margin: 1.6px 0 0 4px;\n}\n@media (max-width: 600px) {\n  .logo-showcase .top-section {\n    text-align: left;\n  }\n}\n.logo-showcase .content-section {\n  margin-top: 115px;\n}\n.logo-showcase .content-section .titles {\n  text-align: center;\n}\n.logo-showcase .content-section .titles h1 {\n  color: #32456B;\n  font-size: 36px;\n  font-weight: 700;\n  line-height: 49.03px;\n  margin: 0 0 8px;\n}\n.logo-showcase .content-section .titles p {\n  color: #939393;\n  font-size: 18px;\n  font-weight: 500;\n  line-height: 24.52px;\n  margin: 0;\n}\n@media (max-width: 600px) {\n  .logo-showcase .content-section {\n    margin-top: 60px;\n  }\n  .logo-showcase .content-section .titles {\n    text-align: left;\n  }\n  .logo-showcase .content-section .titles h1 {\n    font-size: 24px;\n  }\n  .logo-showcase .content-section .titles p {\n    font-size: 16px;\n    color: #393939;\n  }\n}\n.logo-showcase .content-section .content {\n  margin: 50px auto 100px;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  justify-content: center;\n}\n.logo-showcase .content-section .content .logos-container {\n  display: flex;\n  flex-wrap: wrap;\n  justify-content: center;\n}\n.logo-showcase .content-section .content .logos-container .logo {\n  padding: 0;\n  margin: 10px;\n  border: none;\n  background: transparent;\n  transition: all 0.2s ease-in-out;\n}\n.logo-showcase .content-section .content .logos-container .logo svg {\n  border-radius: 10px;\n  border: 4px solid transparent;\n}\n.logo-showcase .content-section .content .logos-container .logo svg.active, .logo-showcase .content-section .content .logos-container .logo svg:hover {\n  border-color: #43C2D1;\n}\n.logo-showcase .content-section .content .logos-container .logo:focus {\n  outline: none;\n}\n.logo-showcase .content-section .content .logos-container .logo.active, .logo-showcase .content-section .content .logos-container .logo:hover {\n  transform: scale(1.03);\n}\n.logo-showcase .next {\n  text-align: center;\n  position: fixed;\n  bottom: 0;\n  width: 100%;\n  left: 0;\n  background: #fff;\n  padding: 25px 0;\n  z-index: 100;\n}\n.logo-showcase .next a {\n  color: #fff;\n  background-color: #43C2D1;\n  text-decoration: none;\n  text-transform: uppercase;\n  font-size: 14px;\n  font-weight: 700;\n  line-height: 36px;\n  padding: 14px 80px;\n  border-radius: 4px;\n}\n@media (max-width: 600px) {\n  .logo-showcase .next a {\n    display: block;\n    padding: 7px;\n  }\n}\n@media (max-width: 600px) {\n  .logo-showcase .next {\n    padding: 25px 30px;\n  }\n}\n\n@media (max-width: 811px) {\n  .logo-showcase .content-section .content .logos-container .logo svg {\n    max-width: 250px;\n    height: auto;\n  }\n}\n@media (max-width: 600px) {\n  .logo-showcase .content-section .content {\n    margin-top: 20px;\n  }\n  .logo-showcase .content-section .content .logos-container .logo {\n    margin: 5px;\n  }\n  .logo-showcase .content-section .content .logos-container .logo svg {\n    max-width: 200px;\n    height: auto;\n  }\n}\n@media (max-width: 480px) {\n  .logo-showcase .content-section .content .logos-container .logo svg {\n    max-width: 300px;\n    height: auto;\n  }\n}", "",{"version":3,"sources":["webpack://./src/assets/styles/Showcase/showcase.scss","webpack://./src/assets/styles/common.scss","webpack://./src/assets/styles/_constants.scss"],"names":[],"mappings":"AAII;ECDH,iBAAA;EACA,iBAAA;EACA,oCCLM;AFIP;ACEC;EDFG;ICGF,cAAA;EDCA;AACF;ACAC;EDLG;ICMF,eAAA;IACA,iBAAA;EDGA;AACF;AARI;EC+EH,kBAAA;EACA,kBAAA;ADpED;ACqEC;EAxEA,qBAAA;EACA,kBAAA;EACA,OAAA;EACA,mBAAA;ADMD;ACLC;EACC,oBAAA;EACA,mBAAA;EACA,qBAAA;ADOF;ACNE;EACC,cAAA;EACA,yBAAA;EACA,eAAA;EACA,gBAAA;EACA,iBAAA;EACA,mBAAA;EACA,kBAAA;EACA,eAAA;ADQH;ACLC;EAqDA;IApDC,kBAAA;EDQA;AACF;AC8CC;EA7BA,oBAAA;ADdD;ACeC;EACC,gBAAA;EACA,gBAAA;ADbF;ACgBC;EACC,gBAAA;ADdF;ACiBC;EACC,iBAAA;EACA,YAAA;EACA,oBAAA;EACA,oBAAA;EACA,qBAAA;EACA,eAAA;EACA,gBAAA;EACA,cC9EO;ED+EP,qBAAA;ADfF;AC4BC;EDvFG;ICwFF,gBAAA;EDzBA;AACF;AA7DI;EC0FH,iBAAA;AD1BD;AC2BC;EACC,kBAAA;ADzBF;AC0BE;EACC,cCvGI;EDwGJ,eAAA;EACA,gBAAA;EACA,oBAAA;EACA,eAAA;ADxBH;AC0BE;EACC,cAAA;EACA,eAAA;EACA,gBAAA;EACA,oBAAA;EACA,SAAA;ADxBH;AC2BC;ED5GG;IC6GF,gBAAA;EDxBA;ECyBA;IACC,gBAAA;EDvBD;ECwBC;IACC,eAAA;EDtBF;ECwBC;IACC,eAAA;IACA,cAAA;EDtBF;AACF;AA9FE;EACC,uBAAA;EACA,aAAA;EACA,sBAAA;EACA,mBAAA;EACA,uBAAA;AAgGH;AA/FG;EACC,aAAA;EACA,eAAA;EACA,uBAAA;AAiGJ;AAhGI;EACC,UAAA;EACA,YAAA;EACA,YAAA;EACA,uBAAA;EACA,gCAAA;AAkGL;AAjGK;EACC,mBAAA;EACA,6BAAA;AAmGN;AAjGM;EAEC,qBE/BM;AFiIb;AA/FK;EACC,aAAA;AAiGN;AA/FK;EAEC,sBAAA;AAgGN;AA1FC;ECPA,kBAAA;EDSC,eAAA;EACA,SAAA;EACA,WAAA;EACA,OAAA;EACA,gBAAA;EACA,eAAA;EACA,YAAA;AA4FF;AC1GC;EACC,WAAA;EACA,yBCzCW;ED0CX,qBAAA;EACA,yBAAA;EACA,eAAA;EACA,gBAAA;EACA,iBAAA;EACA,kBAAA;EACA,kBAAA;AD4GF;AC1GC;EACC;IACC,cAAA;IACA,YAAA;ED4GD;AACF;AA5GE;EATD;IAUE,kBAAA;EA+GD;AACF;;AA3GA;EACC;IACC,gBAAA;IACA,YAAA;EA8GA;AACF;AA3GA;EACC;IACC,gBAAA;EA6GA;EA5GA;IACC,WAAA;EA8GD;EA7GC;IACC,gBAAA;IACA,YAAA;EA+GF;AACF;AA1GA;EACC;IACC,gBAAA;IACA,YAAA;EA4GA;AACF","sourcesContent":["@use \"../common.scss\" as default;\r\n@import \"../constants\";\r\n\r\n.logo-showcase {\r\n    &.logo-maker-container {\r\n\t\t@include default.logo-maker-container;\r\n\t}\r\n    .top-section {\r\n\t\t@include default.top-section;\r\n    }\r\n    .content-section {\r\n        @include default.content-section-titles;\r\n\t\t.content {\r\n\t\t\tmargin: 50px auto 100px;\r\n\t\t\tdisplay: flex;\r\n\t\t\tflex-direction: column;\r\n\t\t\talign-items: center;\r\n\t\t\tjustify-content: center;\r\n\t\t\t.logos-container {\r\n\t\t\t\tdisplay: flex;\r\n\t\t\t\tflex-wrap: wrap;\r\n\t\t\t\tjustify-content: center;\r\n\t\t\t\t.logo {\r\n\t\t\t\t\tpadding: 0;\r\n\t\t\t\t\tmargin: 10px;\r\n\t\t\t\t\tborder: none;\r\n\t\t\t\t\tbackground: transparent;\r\n\t\t\t\t\ttransition: all .2s ease-in-out;\r\n\t\t\t\t\tsvg {\r\n\t\t\t\t\t\tborder-radius: 10px;\r\n\t\t\t\t\t\tborder: 4px solid transparent;\r\n\r\n\t\t\t\t\t\t&.active,\r\n\t\t\t\t\t\t&:hover {\r\n\t\t\t\t\t\t\tborder-color: $light-blue;\r\n\t\t\t\t\t\t}\r\n\t\t\t\t\t}\r\n\t\t\t\t\t&:focus {\r\n\t\t\t\t\t\toutline: none;\r\n\t\t\t\t\t}\r\n\t\t\t\t\t&.active,\r\n\t\t\t\t\t&:hover {\r\n\t\t\t\t\t\ttransform: scale(1.03);\r\n\t\t\t\t\t}\r\n\t\t\t\t}\r\n\t\t\t}\r\n\t\t}\r\n    }\r\n\t.next {\r\n\t\t@include default.next;\r\n\t\tposition: fixed;\r\n\t\tbottom: 0;\r\n\t\twidth: 100%;\r\n\t\tleft: 0;\r\n\t\tbackground: #fff;\r\n\t\tpadding: 25px 0;\r\n\t\tz-index: 100;\r\n\t\t@media (max-width: 600px) {\r\n\t\t\tpadding: 25px 30px;\r\n\t\t}\r\n\t}\r\n}\r\n\r\n@media (max-width: 811px) {\r\n\t.logo-showcase .content-section .content .logos-container .logo svg  {\r\n\t\tmax-width: 250px;\r\n\t\theight: auto;\r\n\t}\r\n}\r\n\r\n@media (max-width: 600px) {\r\n\t.logo-showcase .content-section .content {\r\n\t\tmargin-top: 20px;\r\n\t\t.logos-container .logo {\r\n\t\t\tmargin: 5px;\r\n\t\t\tsvg {\r\n\t\t\t\tmax-width: 200px;\r\n\t\t\t\theight: auto;\r\n\t\t\t}\r\n\t\t}\r\n\t}\r\n}\r\n\r\n@media (max-width: 480px) {\r\n\t.logo-showcase .content-section .content .logos-container .logo svg  {\r\n\t\tmax-width: 300px;\r\n\t\theight: auto;\r\n\t}\r\n}\r\n","@import \"constants\";\r\n\r\n@mixin logo-maker-container {\r\n\tmax-width: 1470px;\r\n\tmargin: 15px auto;\r\n\tfont-family: $noto;\r\n\t@media (max-width: 1440px) {\r\n\t\tmax-width: 90%;\r\n\t}\r\n\t@media (max-width: 600px) {\r\n\t\tmax-width: 100%;\r\n\t\tmargin: 15px 30px;\r\n\t}\r\n}\r\n\r\n@mixin back {\r\n\tdisplay: inline-block;\r\n\tposition: absolute;\r\n\tleft: 0;\r\n\tvisibility: visible;\r\n\ta {\r\n\t\tdisplay: inline-flex;\r\n\t\talign-items: center;\r\n\t\ttext-decoration: none;\r\n\t\tp {\r\n\t\t\tcolor: #585858;\r\n\t\t\ttext-transform: uppercase;\r\n\t\t\tfont-size: 14px;\r\n\t\t\tfont-weight: 600;\r\n\t\t\tmargin-left: 13px;\r\n\t\t\tpadding-bottom: 0px;\r\n\t\t\tmargin-bottom: 0px;\r\n\t\t\tmargin-top: 0px;\r\n\t\t}\r\n\t}\r\n\t@media(max-width: 600px) {\r\n\t\tvisibility: hidden;\r\n\t}\r\n}\r\n\r\n@mixin next {\r\n\ttext-align: center;\r\n\ta {\r\n\t\tcolor: #fff;\r\n\t\tbackground-color: $light-blue;\r\n\t\ttext-decoration: none;\r\n\t\ttext-transform: uppercase;\r\n\t\tfont-size: 14px;\r\n\t\tfont-weight: 700;\r\n\t\tline-height: 36px;\r\n\t\tpadding: 14px 80px;\r\n\t\tborder-radius: 4px;\r\n\t}\r\n\t@media (max-width: 600px) {\r\n\t\ta {\r\n\t\t\tdisplay: block;\r\n\t\t\tpadding: 7px;\r\n\t\t}\r\n\t}\r\n}\r\n\r\n@mixin logo-holder {\r\n\tdisplay: inline-flex;\r\n\timg {\r\n\t\tmax-width: 134px;\r\n\t\tmax-height: 44px;\r\n\t}\r\n\r\n\ta {\r\n\t\tmax-height: 44px;\r\n\t}\r\n\r\n\t.logo-maker-name {\r\n\t\tmargin-top: 2.5px;\r\n\t\theight: 44px;\r\n\t\tline-height: 24.52px;\r\n\t\tdisplay: inline-grid;\r\n\t\talign-content: center;\r\n\t\tfont-size: 18px;\r\n\t\tfont-weight: 700;\r\n\t\tcolor: $orange;\r\n\t\tmargin: 1.6px 0 0 4px;\r\n\t}\r\n}\r\n\r\n@mixin top-section {\r\n\tposition: relative;\r\n\ttext-align: center;\r\n\t.back {\r\n\t\t@include back;\r\n\t}\r\n\t.logo-holder {\r\n\t\t@include logo-holder;\r\n\t}\r\n\t@media (max-width: 600px) {\r\n\t\ttext-align: left;\r\n\t}\r\n}\r\n\r\n@mixin content-section-titles {\r\n\tmargin-top: 115px;\r\n\t.titles {\r\n\t\ttext-align: center;\r\n\t\th1 {\r\n\t\t\tcolor: $blue;\r\n\t\t\tfont-size: 36px;\r\n\t\t\tfont-weight: 700;\r\n\t\t\tline-height: 49.03px;\r\n\t\t\tmargin: 0 0 8px;\r\n\t\t}\r\n\t\tp {\r\n\t\t\tcolor: #939393;\r\n\t\t\tfont-size: 18px;\r\n\t\t\tfont-weight: 500;\r\n\t\t\tline-height: 24.52px;\r\n\t\t\tmargin: 0;\r\n\t\t}\r\n\t}\r\n\t@media (max-width: 600px) {\r\n\t\tmargin-top: 60px;\r\n\t\t.titles {\r\n\t\t\ttext-align: left;\r\n\t\t\th1 {\r\n\t\t\t\tfont-size: 24px;\r\n\t\t\t}\r\n\t\t\tp {\r\n\t\t\t\tfont-size: 16px;\r\n\t\t\t\tcolor: #393939;\r\n\t\t\t}\r\n\t\t}\r\n\t}\r\n}\r\n","$noto: 'Noto Sans', sans-serif;\n$blue: #32456B;\n$orange: #FF7F66;\n$light-blue: #43C2D1;\n$black: #393939;\n$transition: .3s ease all;\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ __webpack_exports__["default"] = (___CSS_LOADER_EXPORT___);
 
@@ -44083,8 +44083,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_13___default = /*#__PURE__*/__webpack_require__.n(classnames__WEBPACK_IMPORTED_MODULE_13__);
 /* harmony import */ var _src_assets_styles_Creator_creator_scss__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ../src/assets/styles/Creator/creator.scss */ "./src/assets/styles/Creator/creator.scss");
 /* harmony import */ var _stores_UIStore__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./stores/UIStore */ "./src/stores/UIStore.ts");
-/* harmony import */ var _stores_ExportsStore__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./stores/ExportsStore */ "./src/stores/ExportsStore.ts");
-/* harmony import */ var _engine_export__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./engine/export */ "./src/engine/export.ts");
 
 
 
@@ -44102,8 +44100,6 @@ __webpack_require__.r(__webpack_exports__);
 
 // import { fontsForSvg, fontsList as fL } from "./assets/fonts/index"
 
-
-
 const Creator = () => {
     const [menuOption, setMenuOption] = react__WEBPACK_IMPORTED_MODULE_0__["useState"]("logo");
     let store = _stores_UIStore__WEBPACK_IMPORTED_MODULE_15__["default"].useState();
@@ -44119,29 +44115,31 @@ const Creator = () => {
                 return react__WEBPACK_IMPORTED_MODULE_0__["createElement"](_components_ui_SelectColors__WEBPACK_IMPORTED_MODULE_9__["default"], null);
         }
     };
-    react__WEBPACK_IMPORTED_MODULE_0__["useEffect"](() => {
-        // after creating a new link, destroy the previouse one
-        const unsubscribeFromRemovingOldURL = _stores_ExportsStore__WEBPACK_IMPORTED_MODULE_16__["ExportStore"].subscribe((s) => s.downloadLink, (currentLink, states, oldLink) => {
-            URL.revokeObjectURL(oldLink); // destroy the previous link or it might fill up the memory
-        });
-        return () => {
-            unsubscribeFromRemovingOldURL();
-        };
-    }, []);
-    react__WEBPACK_IMPORTED_MODULE_0__["useEffect"](() => {
-        async function createLink() {
-            var _a;
-            const logoSVG = (_a = document.querySelector("#image-logo svg")) === null || _a === void 0 ? void 0 : _a.cloneNode(true);
-            if (logoSVG) {
-                const link = await Object(_engine_export__WEBPACK_IMPORTED_MODULE_17__["exportAsZipFromSVGviaLink"])(logoSVG, ["jpg", "png"], true);
-                _stores_ExportsStore__WEBPACK_IMPORTED_MODULE_16__["ExportStore"].update((s) => {
-                    s.downloadLink = link;
-                    s.extension = "zip";
-                });
-            }
-        }
-        createLink();
-    }, [store]);
+    // React.useEffect(() => {
+    //     // after creating a new link, destroy the previouse one
+    //     const unsubscribeFromRemovingOldURL = ExportStore.subscribe(
+    //         (s) => s.downloadLink,
+    //         (currentLink, states, oldLink) => {
+    //             URL.revokeObjectURL(oldLink) // destroy the previous link or it might fill up the memory
+    //         }
+    //     )
+    //     return () => {
+    //         unsubscribeFromRemovingOldURL()
+    //     }
+    // }, [])
+    // React.useEffect(() => {
+    //     async function createLink(): Promise<void> {
+    //         const logoSVG = document.querySelector("#image-logo svg")?.cloneNode(true) as SVGElement
+    //         if (logoSVG) {
+    //             const link = await exportAsZipFromSVGviaLink(logoSVG, ["jpg", "png"], true)
+    //             ExportStore.update((s) => {
+    //                 s.downloadLink = link
+    //                 s.extension = "zip"
+    //             })
+    //         }
+    //     }
+    //     createLink()
+    // }, [store])
     store = {
         ...store,
         container: {
@@ -44329,11 +44327,16 @@ const Showcase = () => {
             return;
         }
         const result = _assets_logos_index__WEBPACK_IMPORTED_MODULE_2__["default"].map((logoSRC, index) => {
-            return (react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("button", { className: classnames__WEBPACK_IMPORTED_MODULE_8___default()("logo", { active: index === option }), key: logoSRC.id, onClick: () => {
+            return (react__WEBPACK_IMPORTED_MODULE_0__["createElement"](react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], { to: "/creator", className: classnames__WEBPACK_IMPORTED_MODULE_8___default()("logo"), key: logoSRC.id, onClick: () => {
                     // e.preventDefault()
                     setOption(index);
+                    setTemplate(index);
                 } },
-                react__WEBPACK_IMPORTED_MODULE_0__["createElement"](_components_CreateLogo__WEBPACK_IMPORTED_MODULE_3__["default"], { className: classnames__WEBPACK_IMPORTED_MODULE_8___default()({ active: index === option }), logoProps: {
+                react__WEBPACK_IMPORTED_MODULE_0__["createElement"](_components_CreateLogo__WEBPACK_IMPORTED_MODULE_3__["default"]
+                // className={classnames({ active: index === option })}
+                , { 
+                    // className={classnames({ active: index === option })}
+                    logoProps: {
                         ...store,
                         container: {
                             ...store.container,
@@ -44385,7 +44388,11 @@ const Showcase = () => {
             react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("div", { className: "content" },
                 react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("div", { className: "logos-container" }, renderLogoList()))),
         react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("div", { className: "next" },
-            react__WEBPACK_IMPORTED_MODULE_0__["createElement"](react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], { className: "block", to: "/creator", onClick: () => setTemplate(option) }, "Next"))));
+            react__WEBPACK_IMPORTED_MODULE_0__["createElement"](react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], { className: "block", to: "/creator", onClick: () => {
+                    if (option) {
+                        setTemplate(option);
+                    }
+                } }, "Next"))));
 };
 /* harmony default export */ __webpack_exports__["default"] = (Showcase);
 
@@ -44486,6 +44493,24 @@ const colors = [
     "#292929"
 ];
 /* harmony default export */ __webpack_exports__["default"] = (colors);
+
+
+/***/ }),
+
+/***/ "./src/assets/fonts/cursive.ts":
+/*!*************************************!*\
+  !*** ./src/assets/fonts/cursive.ts ***!
+  \*************************************/
+/*! exports provided: cursiveFonts, default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "cursiveFonts", function() { return cursiveFonts; });
+const cursiveFonts = ["Brush Script MT"];
+/* harmony default export */ __webpack_exports__["default"] = (cursiveFonts.sort().map((f) => {
+    return { family: f, fallback: "cursive" };
+}));
 
 
 /***/ }),
@@ -44616,9 +44641,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "presets", function() { return presets; });
 /* harmony import */ var _serif__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./serif */ "./src/assets/fonts/serif.ts");
 /* harmony import */ var _sans__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./sans */ "./src/assets/fonts/sans.ts");
+/* harmony import */ var _monospaced__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./monospaced */ "./src/assets/fonts/monospaced.ts");
+/* harmony import */ var _cursive__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./cursive */ "./src/assets/fonts/cursive.ts");
 
 
-const fontsList = [..._serif__WEBPACK_IMPORTED_MODULE_0__["serifFonts"], ..._sans__WEBPACK_IMPORTED_MODULE_1__["sansFonts"]].sort();
+
+
+const fontsList = [..._serif__WEBPACK_IMPORTED_MODULE_0__["serifFonts"], ..._sans__WEBPACK_IMPORTED_MODULE_1__["sansFonts"], ..._monospaced__WEBPACK_IMPORTED_MODULE_2__["monospaceFonts"], ..._cursive__WEBPACK_IMPORTED_MODULE_3__["cursiveFonts"]].sort();
 const fonts = [..._serif__WEBPACK_IMPORTED_MODULE_0__["default"], ..._sans__WEBPACK_IMPORTED_MODULE_1__["default"]].sort((a, b) => {
     if (a.family < b.family) {
         return -1;
@@ -44628,7 +44657,7 @@ const fonts = [..._serif__WEBPACK_IMPORTED_MODULE_0__["default"], ..._sans__WEBP
     }
     return 0;
 });
-const fontsForSvg = fonts.map(f => `'${f.family}', '${f.fallback}'`);
+const fontsForSvg = fonts.map((f) => `'${f.family}', '${f.fallback}'`);
 // export const presets = [
 // 	{
 // 		title: "Roboto",
@@ -44666,18 +44695,68 @@ const fontsForSvg = fonts.map(f => `'${f.family}', '${f.fallback}'`);
 const presets = [
     {
         title: "Times New Roman",
-        slogan: "Helvetica"
+        slogan: "Helvetica",
     },
     {
         title: "Helvetica",
-        slogan: "Times New Roman"
+        slogan: "Times New Roman",
     },
     {
         title: "Georgia",
-        slogan: "sans-serif"
-    }
+        slogan: "sans-serif",
+    },
+    {
+        title: "Impact",
+        slogan: "Verdana",
+    },
+    {
+        title: "Verdana",
+        slogan: "Arial",
+    },
+    {
+        title: "Courier New",
+        slogan: "Arial",
+    },
+    {
+        title: "Verdana",
+        slogan: "sans-serif",
+    },
+    {
+        title: "Tohoma",
+        slogan: "Verdana",
+    },
+    {
+        title: "Garamond",
+        slogan: "Verdana",
+    },
+    {
+        title: "Courier New",
+        slogan: "Georgia",
+    },
+    {
+        title: "Arial",
+        slogan: "Georgia",
+    },
 ];
 /* harmony default export */ __webpack_exports__["default"] = (fonts);
+
+
+/***/ }),
+
+/***/ "./src/assets/fonts/monospaced.ts":
+/*!****************************************!*\
+  !*** ./src/assets/fonts/monospaced.ts ***!
+  \****************************************/
+/*! exports provided: monospaceFonts, default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "monospaceFonts", function() { return monospaceFonts; });
+const monospaceFonts = ["Courier New"];
+/* harmony default export */ __webpack_exports__["default"] = (monospaceFonts.sort().map((f) => {
+    return { family: f, fallback: "monospace" };
+}));
 
 
 /***/ }),
@@ -44695,17 +44774,13 @@ __webpack_require__.r(__webpack_exports__);
 const sansFonts = [
     "Arial",
     "Helvetica",
-    "Impact"
-    // "Lato",
-    // "Noto Sans JP",
-    // "Noto Sans",
-    // "Open Sans",
-    // "PT Sans",
-    // "Raleway",
-    // "Robota",
-    // "Ubuntu",
+    "Impact",
+    "Verdana",
+    "Tahoma",
 ];
-/* harmony default export */ __webpack_exports__["default"] = (sansFonts.sort().map(f => { return { family: f, fallback: "sans-serif" }; }));
+/* harmony default export */ __webpack_exports__["default"] = (sansFonts.sort().map((f) => {
+    return { family: f, fallback: "sans-serif" };
+}));
 
 
 /***/ }),
@@ -44726,15 +44801,12 @@ const serifFonts = [
     // "Castro",
     // "Crimson Text",
     "Georgia",
-    "Times New Roman"
-    // "Lora",
-    // "Marriweather",
-    // "Noto Serif",
-    // "PT Serif",
-    // "Roboto Slab",
-    // "Zilla Slab",
+    "Times New Roman",
+    "Garamond",
 ];
-/* harmony default export */ __webpack_exports__["default"] = (serifFonts.sort().map((f) => { return { family: f, fallback: "serif" }; }));
+/* harmony default export */ __webpack_exports__["default"] = (serifFonts.sort().map((f) => {
+    return { family: f, fallback: "serif" };
+}));
 
 
 /***/ }),
@@ -46754,7 +46826,7 @@ const DownloadButton = (props) => {
                 const logoSVG = (_a = document
                     .querySelector("#image-logo svg")) === null || _a === void 0 ? void 0 : _a.cloneNode(true);
                 if (logoSVG) {
-                    Object(_engine_export__WEBPACK_IMPORTED_MODULE_2__["downloadAsZipFromSVGviaClick"])(logoSVG, ["jpg", "png"], true);
+                    Object(_engine_export__WEBPACK_IMPORTED_MODULE_2__["downloadAsZipFromSVGviaClick"])(logoSVG, ["png"], true);
                 }
             } },
             react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("span", null, "Download"))));
@@ -47095,19 +47167,18 @@ __webpack_require__.r(__webpack_exports__);
 
 
 const SelectTypography = () => {
-    console.log(_stores_UIStore__WEBPACK_IMPORTED_MODULE_3__["default"].useState((s) => s));
     const fontOptions = _assets_fonts_index__WEBPACK_IMPORTED_MODULE_2__["fontsList"].map((font) => ({
         value: font,
         label: font,
     }));
-    const titleSizeOptions = [...Array(25).keys()]
-        .map((size) => size + 38)
+    const titleSizeOptions = [...Array(35).keys()]
+        .map((size) => size + 20)
         .map((size) => ({
         value: size,
         label: size.toString(),
     }));
-    const sloganSizeOptions = [...Array(25).keys()]
-        .map((size) => size + 18)
+    const sloganSizeOptions = [...Array(35).keys()]
+        .map((size) => size + 12)
         .map((size) => ({
         value: size,
         label: size.toString(),
@@ -47119,7 +47190,6 @@ const SelectTypography = () => {
     };
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const onTitleFontFamilyChange = ({ value }) => {
-        console.log(value);
         _stores_UIStore__WEBPACK_IMPORTED_MODULE_3__["default"].update((s) => {
             s.title.style.fontFamily = value;
         });
@@ -47198,7 +47268,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 const autoScallingFactor = 1.3;
-const marginFactor = 0.70;
+const marginFactor = 0.7;
 const alignLogoTop = (props, draw) => {
     const { logo, title, slogan } = props;
     /*
@@ -47223,7 +47293,7 @@ const alignLogoTop = (props, draw) => {
         fill: title.style.color,
         family: title.style.fontFamily,
         size: title.style.fontSize + "px",
-        weight: '400'
+        weight: "400",
     })
         .leading(1)
         .move(0, 0);
@@ -47233,7 +47303,7 @@ const alignLogoTop = (props, draw) => {
     if (props.title.text === "") {
         titleDim = {
             width: 0,
-            height: 0
+            height: 0,
         };
     }
     else {
@@ -47242,6 +47312,7 @@ const alignLogoTop = (props, draw) => {
             width: _settings__WEBPACK_IMPORTED_MODULE_1__["settings"].title.margins.left + titleSVG.bbox().width + _settings__WEBPACK_IMPORTED_MODULE_1__["settings"].title.margins.bottom,
         };
     }
+    console.log(titleSVG.bbox());
     /*
            Add the slogan's SVG
        */
@@ -47251,7 +47322,7 @@ const alignLogoTop = (props, draw) => {
         fill: slogan.style.color,
         family: slogan.style.fontFamily,
         size: slogan.style.fontSize + "px",
-        weight: '400'
+        weight: "400",
     })
         .leading(1)
         .move(0, 0);
@@ -47260,13 +47331,17 @@ const alignLogoTop = (props, draw) => {
     if (props.slogan.text === "") {
         sloganDim = {
             width: 0,
-            height: 0
+            height: 0,
         };
     }
     else {
         sloganDim = {
-            height: _settings__WEBPACK_IMPORTED_MODULE_1__["settings"].slogan.margins.top + sloganSVG.bbox().height + _settings__WEBPACK_IMPORTED_MODULE_1__["settings"].slogan.margins.bottom,
-            width: _settings__WEBPACK_IMPORTED_MODULE_1__["settings"].slogan.margins.left + sloganSVG.bbox().width + _settings__WEBPACK_IMPORTED_MODULE_1__["settings"].slogan.margins.bottom,
+            height: _settings__WEBPACK_IMPORTED_MODULE_1__["settings"].slogan.margins.top +
+                sloganSVG.bbox().height +
+                _settings__WEBPACK_IMPORTED_MODULE_1__["settings"].slogan.margins.bottom,
+            width: _settings__WEBPACK_IMPORTED_MODULE_1__["settings"].slogan.margins.left +
+                sloganSVG.bbox().width +
+                _settings__WEBPACK_IMPORTED_MODULE_1__["settings"].slogan.margins.bottom,
         };
     }
     /*
@@ -47280,15 +47355,16 @@ const alignLogoTop = (props, draw) => {
     const cx = widthContainer / 2;
     const cy = heightContainer / 2;
     logoSVG.move(cx - logoDim.width / 2, 0);
-    titleSVG.move(cx - titleDim.width / 2, logoDim.height + _settings__WEBPACK_IMPORTED_MODULE_1__["settings"].logo.margins.bottom + _settings__WEBPACK_IMPORTED_MODULE_1__["settings"].title.margins.top);
-    sloganSVG.move(cx - sloganDim.width / 2, logoDim.height +
-        titleDim.height +
-        _settings__WEBPACK_IMPORTED_MODULE_1__["settings"].slogan.margins.top +
-        (titleSVG.rbox(draw).height - titleDim.height) * 0.5);
+    titleSVG.move(cx - titleDim.width / 2, logoDim.height);
+    sloganSVG.move(cx - sloganDim.width / 2, logoDim.height + titleDim.height);
     const currentViewBox = draw.viewbox();
     // AUTOSCAllING
     // check if the current element occupy more than the initial size of the viewbox
-    draw.viewbox(0, 0, currentViewBox.width * marginFactor < widthContainer ? widthContainer * autoScallingFactor : currentViewBox.width, currentViewBox.height * marginFactor < heightContainer ? heightContainer * autoScallingFactor : currentViewBox.height);
+    draw.viewbox(0, 0, currentViewBox.width * marginFactor < widthContainer
+        ? widthContainer * autoScallingFactor
+        : currentViewBox.width, currentViewBox.height * marginFactor < heightContainer
+        ? heightContainer * autoScallingFactor
+        : currentViewBox.height);
     return {
         containerPos: {
             x: 0,
@@ -47329,7 +47405,7 @@ const alignLogoLeft = (props, draw) => {
         fill: title.style.color,
         family: title.style.fontFamily,
         size: title.style.fontSize,
-        weight: '400'
+        weight: "400",
     })
         .leading(1)
         .move(0, 0);
@@ -47338,7 +47414,7 @@ const alignLogoLeft = (props, draw) => {
     if (props.title.text === "") {
         titleDim = {
             width: 0,
-            height: 0
+            height: 0,
         };
     }
     else {
@@ -47356,7 +47432,7 @@ const alignLogoLeft = (props, draw) => {
         fill: slogan.style.color,
         family: slogan.style.fontFamily,
         size: slogan.style.fontSize + "px",
-        weight: '400'
+        weight: "400",
     })
         .leading(1)
         .move(0, 0);
@@ -47365,13 +47441,17 @@ const alignLogoLeft = (props, draw) => {
     if (props.slogan.text === "") {
         sloganDim = {
             width: 0,
-            height: 0
+            height: 0,
         };
     }
     else {
         sloganDim = {
-            height: _settings__WEBPACK_IMPORTED_MODULE_1__["settings"].slogan.margins.top + sloganSVG.bbox().height + _settings__WEBPACK_IMPORTED_MODULE_1__["settings"].slogan.margins.bottom,
-            width: _settings__WEBPACK_IMPORTED_MODULE_1__["settings"].slogan.margins.left + sloganSVG.bbox().width + _settings__WEBPACK_IMPORTED_MODULE_1__["settings"].slogan.margins.bottom,
+            height: _settings__WEBPACK_IMPORTED_MODULE_1__["settings"].slogan.margins.top +
+                sloganSVG.bbox().height +
+                _settings__WEBPACK_IMPORTED_MODULE_1__["settings"].slogan.margins.bottom,
+            width: _settings__WEBPACK_IMPORTED_MODULE_1__["settings"].slogan.margins.left +
+                sloganSVG.bbox().width +
+                _settings__WEBPACK_IMPORTED_MODULE_1__["settings"].slogan.margins.bottom,
         };
     }
     // the elements are vertically stacked,
@@ -47382,18 +47462,29 @@ const alignLogoLeft = (props, draw) => {
     const cx = widthContainer / 2;
     const cy = heightContainer / 2;
     // Calculate the dimension for the box that contains the title and the slogan
-    const textContainerWidth = Math.max(titleDim.width, sloganDim.width) + _settings__WEBPACK_IMPORTED_MODULE_1__["settings"].textContainer.margins.left + _settings__WEBPACK_IMPORTED_MODULE_1__["settings"].textContainer.margins.right;
-    const textContainerHeight = titleDim.height + sloganDim.height + _settings__WEBPACK_IMPORTED_MODULE_1__["settings"].textContainer.margins.top + _settings__WEBPACK_IMPORTED_MODULE_1__["settings"].textContainer.margins.bottom;
+    const textContainerWidth = Math.max(titleDim.width, sloganDim.width) +
+        _settings__WEBPACK_IMPORTED_MODULE_1__["settings"].textContainer.margins.left +
+        _settings__WEBPACK_IMPORTED_MODULE_1__["settings"].textContainer.margins.right;
+    // const textContainerHeight =
+    //     titleDim.height +
+    //     sloganDim.height +
+    //     settings.textContainer.margins.top +
+    //     settings.textContainer.margins.bottom
     const ctx = textContainerWidth / 2;
-    const cty = textContainerHeight / 2;
+    // const cty = textContainerHeight / 2
     // Move elements to their position
     logoSVG.move(0, cy - logoDim.height / 2);
     titleSVG.move(logoDim.width + ctx - titleDim.width / 2, cy - titleDim.height / 2);
-    sloganSVG.move(logoDim.width + ctx - sloganDim.width / 2, cy + (cty - titleDim.height / 2) + sloganDim.height / 2);
+    sloganSVG.move(logoDim.width + ctx - sloganDim.width / 2, cy + titleDim.height / 2 // + sloganDim.height / 2
+    );
     // AUTOSCAllING
     // check if the current element occupy more than the initial size of the viewbox
     const currentViewBox = draw.viewbox();
-    draw.viewbox(0, 0, currentViewBox.width * marginFactor < widthContainer ? widthContainer * autoScallingFactor : currentViewBox.width, currentViewBox.height * marginFactor < heightContainer ? heightContainer * autoScallingFactor : currentViewBox.height);
+    draw.viewbox(0, 0, currentViewBox.width * marginFactor < widthContainer
+        ? widthContainer * autoScallingFactor
+        : currentViewBox.width, currentViewBox.height * marginFactor < heightContainer
+        ? heightContainer * autoScallingFactor
+        : currentViewBox.height);
     return {
         containerPos: {
             x: 0,
@@ -47434,7 +47525,7 @@ const alignLogoRight = (props, draw) => {
         fill: title.style.color,
         family: title.style.fontFamily,
         size: title.style.fontSize,
-        weight: '400'
+        weight: "400",
     })
         .leading(1)
         .move(0, 0);
@@ -47443,7 +47534,7 @@ const alignLogoRight = (props, draw) => {
     if (props.title.text === "") {
         titleDim = {
             width: 0,
-            height: 0
+            height: 0,
         };
     }
     else {
@@ -47461,7 +47552,7 @@ const alignLogoRight = (props, draw) => {
         fill: slogan.style.color,
         family: slogan.style.fontFamily,
         size: slogan.style.fontSize + "px",
-        weight: '400'
+        weight: "400",
     })
         .leading(1)
         .move(0, 0);
@@ -47470,13 +47561,17 @@ const alignLogoRight = (props, draw) => {
     if (props.slogan.text === "") {
         sloganDim = {
             width: 0,
-            height: 0
+            height: 0,
         };
     }
     else {
         sloganDim = {
-            height: _settings__WEBPACK_IMPORTED_MODULE_1__["settings"].slogan.margins.top + sloganSVG.bbox().height + _settings__WEBPACK_IMPORTED_MODULE_1__["settings"].slogan.margins.bottom,
-            width: _settings__WEBPACK_IMPORTED_MODULE_1__["settings"].slogan.margins.left + sloganSVG.bbox().width + _settings__WEBPACK_IMPORTED_MODULE_1__["settings"].slogan.margins.bottom,
+            height: _settings__WEBPACK_IMPORTED_MODULE_1__["settings"].slogan.margins.top +
+                sloganSVG.bbox().height +
+                _settings__WEBPACK_IMPORTED_MODULE_1__["settings"].slogan.margins.bottom,
+            width: _settings__WEBPACK_IMPORTED_MODULE_1__["settings"].slogan.margins.left +
+                sloganSVG.bbox().width +
+                _settings__WEBPACK_IMPORTED_MODULE_1__["settings"].slogan.margins.bottom,
         };
     }
     // the elements are vertically stacked,
@@ -47486,17 +47581,27 @@ const alignLogoRight = (props, draw) => {
     const heightContainer = Math.max(logoDim.height, titleDim.height + sloganDim.height);
     const cx = widthContainer / 2;
     const cy = heightContainer / 2;
-    const textContainerWidth = Math.max(titleDim.width, sloganDim.width) + _settings__WEBPACK_IMPORTED_MODULE_1__["settings"].textContainer.margins.left + _settings__WEBPACK_IMPORTED_MODULE_1__["settings"].textContainer.margins.right;
-    const textContainerHeight = titleDim.height + sloganDim.height + _settings__WEBPACK_IMPORTED_MODULE_1__["settings"].textContainer.margins.top + _settings__WEBPACK_IMPORTED_MODULE_1__["settings"].textContainer.margins.bottom;
+    const textContainerWidth = Math.max(titleDim.width, sloganDim.width) +
+        _settings__WEBPACK_IMPORTED_MODULE_1__["settings"].textContainer.margins.left +
+        _settings__WEBPACK_IMPORTED_MODULE_1__["settings"].textContainer.margins.right;
+    // const textContainerHeight =
+    //     titleDim.height +
+    //     sloganDim.height +
+    //     settings.textContainer.margins.top +
+    //     settings.textContainer.margins.bottom
     const ctx = textContainerWidth / 2;
-    const cty = textContainerHeight / 2;
+    // const cty = textContainerHeight / 2
     logoSVG.move(textContainerWidth, cy - logoDim.height / 2);
     titleSVG.move(ctx - titleDim.width / 2, cy - titleDim.height / 2);
-    sloganSVG.move(ctx - sloganDim.width / 2, cy + (cty - titleDim.height / 2) + sloganDim.height / 2);
+    sloganSVG.move(ctx - sloganDim.width / 2, cy + titleDim.height / 2); // + sloganDim.height / 2)
     const currentViewBox = draw.viewbox();
-    // AUTOSCAllING 
+    // AUTOSCAllING
     // check if the current element occupy more than the initial size of the viewbox
-    draw.viewbox(0, 0, currentViewBox.width * marginFactor < widthContainer ? widthContainer * autoScallingFactor : currentViewBox.width, currentViewBox.height * marginFactor < heightContainer ? heightContainer * autoScallingFactor : currentViewBox.height);
+    draw.viewbox(0, 0, currentViewBox.width * marginFactor < widthContainer
+        ? widthContainer * autoScallingFactor
+        : currentViewBox.width, currentViewBox.height * marginFactor < heightContainer
+        ? heightContainer * autoScallingFactor
+        : currentViewBox.height);
     return {
         containerPos: {
             x: 0,
@@ -47602,14 +47707,54 @@ const presetsFormat = [
         height: 625,
     },
     {
+        name: "wordpress_logo_512x512",
+        width: 512,
+        height: 512,
+    },
+    {
         name: "facebook_profile_1000x1000",
         width: 1000,
         height: 1000,
     },
     {
+        name: "facebook_cover_1640x624",
+        width: 1640,
+        height: 624,
+    },
+    {
         name: "twitter_profile_1000x1000",
         width: 1000,
         height: 1000,
+    },
+    {
+        name: "favicon_32x32",
+        width: 32,
+        height: 32,
+    },
+    {
+        name: "instagram_profile_1000x1000",
+        width: 1000,
+        height: 1000,
+    },
+    {
+        name: "linkedin_profile_1000x1000",
+        width: 1000,
+        height: 1000,
+    },
+    {
+        name: "linkedin_banner_1536x768",
+        width: 1536,
+        height: 768,
+    },
+    {
+        name: "youtube_profile_800x800",
+        width: 800,
+        height: 800,
+    },
+    {
+        name: "wallpaper_1920x1080",
+        width: 1920,
+        height: 1080,
     },
 ];
 function createSVGsWithPreset(svg) {
@@ -47626,7 +47771,10 @@ function createSVGsWithPreset(svg) {
 async function createZipWithPresets(svg, formats, includeSVG) {
     let zip = new jszip__WEBPACK_IMPORTED_MODULE_0___default.a();
     for (const _svg of createSVGsWithPreset(svg)) {
-        zip = await addToZipFromSVG(_svg, zip, formats, includeSVG);
+        zip = await addToZipFromSVG(_svg, zip, formats, false);
+    }
+    if (includeSVG) {
+        zip === null || zip === void 0 ? void 0 : zip.file(`${"logo-svg"}.svg`, new Blob([svg.outerHTML], { type: "image/svg+xml;charset=utf-8" }));
     }
     return zip;
 }
@@ -47700,7 +47848,7 @@ const settings = {
     },
     slogan: {
         margins: {
-            top: 0,
+            top: 2,
             bottom: 0,
             right: 0,
             left: 0,
@@ -47713,7 +47861,7 @@ const settings = {
             right: 10,
             left: 10,
         },
-    }
+    },
 };
 
 
@@ -47792,26 +47940,6 @@ const AssetsStore = new pullstate__WEBPACK_IMPORTED_MODULE_0__["Store"]({
         fontsStatus: "inactive",
         activeFonts: [],
     },
-});
-
-
-/***/ }),
-
-/***/ "./src/stores/ExportsStore.ts":
-/*!************************************!*\
-  !*** ./src/stores/ExportsStore.ts ***!
-  \************************************/
-/*! exports provided: ExportStore */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ExportStore", function() { return ExportStore; });
-/* harmony import */ var pullstate__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! pullstate */ "./node_modules/.pnpm/pullstate@1.20.3_react@17.0.1/node_modules/pullstate/dist/index.es.js");
-
-const ExportStore = new pullstate__WEBPACK_IMPORTED_MODULE_0__["Store"]({
-    downloadLink: "",
-    extension: "zip"
 });
 
 

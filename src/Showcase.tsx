@@ -114,16 +114,18 @@ const Showcase: React.FunctionComponent<unknown> = () => {
 
         const result = logos.map((logoSRC, index) => {
             return (
-                <button
-                    className={classnames("logo", { active: index === option })}
+                <Link
+                    to="/creator"
+                    className={classnames("logo")} //, { active: index === option })}
                     key={logoSRC.id}
                     onClick={() => {
                         // e.preventDefault()
                         setOption(index)
+                        setTemplate(index)
                     }}
                 >
                     <CreateLogo
-                        className={classnames({ active: index === option })}
+                        // className={classnames({ active: index === option })}
                         logoProps={{
                             ...store,
                             container: {
@@ -163,7 +165,7 @@ const Showcase: React.FunctionComponent<unknown> = () => {
                             },
                         }}
                     />
-                </button>
+                </Link>
             )
         })
 
@@ -186,7 +188,15 @@ const Showcase: React.FunctionComponent<unknown> = () => {
                 </div>
             </div>
             <div className="next">
-                <Link className="block" to="/creator" onClick={() => setTemplate(option)}>
+                <Link
+                    className="block"
+                    to="/creator"
+                    onClick={() => {
+                        if (option) {
+                            setTemplate(option)
+                        }
+                    }}
+                >
                     Next
                 </Link>
             </div>

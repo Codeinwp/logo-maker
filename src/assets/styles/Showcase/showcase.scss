@@ -28,9 +28,10 @@
 					transition: all .2s ease-in-out;
 					svg {
 						border-radius: 10px;
-						border: 2px solid transparent;
+						border: 4px solid transparent;
 
-						&.active {
+						&.active,
+						&:hover {
 							border-color: $light-blue;
 						}
 					}

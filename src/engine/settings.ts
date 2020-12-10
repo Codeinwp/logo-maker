@@ -52,7 +52,7 @@ export const settings: TSettings = {
     },
     slogan: {
         margins: {
-            top: 0,
+            top: 2,
             bottom: 0,
             right: 0,
             left: 0,
@@ -65,5 +65,5 @@ export const settings: TSettings = {
             right: 10,
             left: 10,
         },
-    }
+    },
 }
