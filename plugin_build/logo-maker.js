@@ -47702,14 +47702,32 @@ async function exportAsZipFromSVGviaLink(svg, formats, includeSVG) {
 }
 const presetsFormat = [
     {
-        name: "default_765_625",
+        name: "default_765x625",
         width: 765,
         height: 625,
+    },
+    {
+        name: "default_transparent_765x625",
+        width: 765,
+        height: 625,
+        isTransparent: true,
+    },
+    {
+        name: "default_transparent_1000x1000",
+        width: 1000,
+        height: 1000,
+        isTransparent: true,
     },
     {
         name: "wordpress_logo_512x512",
         width: 512,
         height: 512,
+    },
+    {
+        name: "wordpress_logo_transparent_512x512",
+        width: 512,
+        height: 512,
+        isTransparent: true,
     },
     {
         name: "facebook_profile_1000x1000",
@@ -47725,6 +47743,11 @@ const presetsFormat = [
         name: "twitter_profile_1000x1000",
         width: 1000,
         height: 1000,
+    },
+    {
+        name: "twitter_header_1500x500",
+        width: 1500,
+        height: 500,
     },
     {
         name: "favicon_32x32",
@@ -47752,6 +47775,16 @@ const presetsFormat = [
         height: 800,
     },
     {
+        name: "pinterest_profile_330x330",
+        width: 330,
+        height: 330,
+    },
+    {
+        name: "pinterest_board_800x800",
+        width: 800,
+        height: 800,
+    },
+    {
         name: "wallpaper_1920x1080",
         width: 1920,
         height: 1080,
@@ -47765,6 +47798,9 @@ function createSVGsWithPreset(svg) {
         _svg.setAttribute("height", preset.height.toString());
         _svg.setAttribute("width", preset.width.toString());
         _svg.setAttribute("name", preset.name);
+        if (preset.isTransparent) {
+            _svg.style.backgroundColor = "transparent";
+        }
         return _svg;
     });
 }
@@ -47786,7 +47822,7 @@ async function downloadAsZipFromSVGviaClick(svg, formats, includeSVG) {
     // )
     const zip = await createZipWithPresets(svg, formats, includeSVG);
     zip.generateAsync({ type: "blob" }).then((content) => {
-        file_saver__WEBPACK_IMPORTED_MODULE_1___default.a.saveAs(content, "logos");
+        file_saver__WEBPACK_IMPORTED_MODULE_1___default.a.saveAs(content, "LogoMakerExport");
     });
 }
 
