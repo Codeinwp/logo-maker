@@ -28,7 +28,7 @@ const Showcase: React.FunctionComponent<unknown> = () => {
     )
 
     React.useEffect(() => {
-        ReactGA.pageview(window.location.pathname + window.location.search)
+        ReactGA.pageview(window.location.pathname + window.location.hash + window.location.search)
 
         // Generate the colors
         const generateColors = () => {

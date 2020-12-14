@@ -26,7 +26,7 @@ const Start: React.FunctionComponent<unknown> = () => {
                 "Parent link was not provided by WordPress. The back button from the start page will point to itself as default behaviour!"
             )
         }
-        ReactGA.pageview(window.location.pathname + window.location.search)
+        ReactGA.pageview(window.location.pathname + window.location.hash + window.location.search)
     }, [])
 
     return (

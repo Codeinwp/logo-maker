@@ -45257,7 +45257,7 @@ const Creator = () => {
         }
     };
     react__WEBPACK_IMPORTED_MODULE_0__["useEffect"](() => {
-        react_ga__WEBPACK_IMPORTED_MODULE_16__["default"].pageview(window.location.pathname + window.location.search);
+        react_ga__WEBPACK_IMPORTED_MODULE_16__["default"].pageview(window.location.pathname + window.location.hash + window.location.search);
     }, []);
     // React.useEffect(() => {
     //     // after creating a new link, destroy the previouse one
@@ -45398,7 +45398,7 @@ const Showcase = () => {
     const [aligns, setAligns] = react__WEBPACK_IMPORTED_MODULE_0__["useState"]([]);
     const [fontsList, setFontsList] = react__WEBPACK_IMPORTED_MODULE_0__["useState"](defaultFontsList);
     react__WEBPACK_IMPORTED_MODULE_0__["useEffect"](() => {
-        react_ga__WEBPACK_IMPORTED_MODULE_11__["default"].pageview(window.location.pathname + window.location.search);
+        react_ga__WEBPACK_IMPORTED_MODULE_11__["default"].pageview(window.location.pathname + window.location.hash + window.location.search);
         // Generate the colors
         const generateColors = () => {
             // const scm = new ColorScheme()
@@ -45587,7 +45587,7 @@ const Start = () => {
         if (!((_a = window.logomaker) === null || _a === void 0 ? void 0 : _a.parentLink)) {
             console.log("Parent link was not provided by WordPress. The back button from the start page will point to itself as default behaviour!");
         }
-        react_ga__WEBPACK_IMPORTED_MODULE_6__["default"].pageview(window.location.pathname + window.location.search);
+        react_ga__WEBPACK_IMPORTED_MODULE_6__["default"].pageview(window.location.pathname + window.location.hash + window.location.search);
     }, []);
     return (react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("div", { className: "logo-maker logo-maker-container" },
         react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("div", { className: "top-section" },
