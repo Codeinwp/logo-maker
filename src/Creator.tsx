@@ -16,11 +16,13 @@ import "../src/assets/styles/Creator/creator.scss"
 // import { fontsForSvg, fontsList as fL } from "./assets/fonts/index"
 import UIStore from "./stores/UIStore"
 import ReactGA from "react-ga"
+import { downloadAsZipFromSVGviaLink } from "./engine/export"
 
 type MenuOptions = "logo" | "typography" | "layout" | "colors"
 
 const Creator: React.FunctionComponent<unknown> = () => {
     const [menuOption, setMenuOption] = React.useState<MenuOptions>("logo")
+    const [downloadLink, setDownloadLink] = React.useState<string>("")
     let store = UIStore.useState()
 
     const renderRightSidePanel = () => {
@@ -54,19 +56,22 @@ const Creator: React.FunctionComponent<unknown> = () => {
     //     }
     // }, [])
 
-    // React.useEffect(() => {
-    //     async function createLink(): Promise<void> {
-    //         const logoSVG = document.querySelector("#image-logo svg")?.cloneNode(true) as SVGElement
-    //         if (logoSVG) {
-    //             const link = await exportAsZipFromSVGviaLink(logoSVG, ["jpg", "png"], true)
-    //             ExportStore.update((s) => {
-    //                 s.downloadLink = link
-    //                 s.extension = "zip"
-    //             })
-    //         }
-    //     }
-    //     createLink()
-    // }, [store])
+    React.useEffect(() => {
+        async function createLink(): Promise<void> {
+            const logoSVG = document.querySelector("#image-logo svg")?.cloneNode(true) as SVGElement
+            if (logoSVG) {
+                const link = await downloadAsZipFromSVGviaLink(logoSVG, ["png"], true)
+
+                // // clean the old link
+                // if (downloadLink) {
+                //     URL.revokeObjectURL(downloadLink)
+                // }
+
+                setDownloadLink(link)
+            }
+        }
+        createLink()
+    }, [store])
 
     store = {
         ...store,
@@ -97,7 +102,7 @@ const Creator: React.FunctionComponent<unknown> = () => {
                 <BackUI to="/showcase" />
                 <ThemeisleUI />
                 <div className="download-section">
-                    <DownloadButton />
+                    <DownloadButton downloadLink={downloadLink} />
                 </div>
             </div>
             <div className="main-section">

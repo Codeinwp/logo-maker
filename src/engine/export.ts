@@ -80,19 +80,19 @@ export async function addToZipFromSVG(
     return zip
 }
 
-export async function exportAsZipFromSVGviaLink(
-    svg: SVGElement,
-    formats: ("png" | "jpg" | "webp")[],
-    includeSVG?: boolean
-): Promise<string> {
-    const zip = await addToZipFromSVG(svg, new JSZip(), formats, includeSVG)
+// export async function exportAsZipFromSVGviaLink(
+//     svg: SVGElement,
+//     formats: ("png" | "jpg" | "webp")[],
+//     includeSVG?: boolean
+// ): Promise<string> {
+//     const zip = await addToZipFromSVG(svg, new JSZip(), formats, includeSVG)
 
-    const link = await zip.generateAsync({ type: "blob" }).then((content) => {
-        return URL.createObjectURL(content)
-    })
+//     const link = await zip.generateAsync({ type: "blob" }).then((content) => {
+//         return URL.createObjectURL(content)
+//     })
 
-    return link
-}
+//     return link
+// }
 
 const presetsFormat: { name: string; width: number; height: number; isTransparent?: boolean }[] = [
     {
@@ -224,6 +224,18 @@ export async function createZipWithPresets(
     return zip
 }
 
+export async function downloadAsZipFromSVGviaLink(
+    svg: SVGElement,
+    formats: ("png" | "jpg" | "webp")[],
+    includeSVG?: boolean
+): Promise<string> {
+    const zip = await createZipWithPresets(svg, formats, includeSVG)
+
+    const content = await zip.generateAsync({ type: "base64", mimeType: "application/zip" })
+
+    return "data:application/zip; base64," + content
+}
+
 export async function downloadAsZipFromSVGviaClick(
     svg: SVGElement,
     formats: ("png" | "jpg" | "webp")[],
@@ -236,7 +248,7 @@ export async function downloadAsZipFromSVGviaClick(
     // )
 
     const zip = await createZipWithPresets(svg, formats, includeSVG)
-    zip.generateAsync({ type: "blob" }).then((content) => {
+    zip.generateAsync({ type: "blob", mimeType: "application/zip" }).then((content) => {
         FileSaver.saveAs(content, "LogoMakerExport")
     })
 }

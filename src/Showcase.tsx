@@ -98,7 +98,7 @@ const Showcase: React.FunctionComponent<unknown> = () => {
 
             return list
         }
-        setAligns(generateAlignsOption)
+        setAligns(generateAlignsOption())
     }, [])
 
     const setTemplate = (index: number) => {
