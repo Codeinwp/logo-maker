@@ -2,7 +2,17 @@
 
 Logo Maker is a react app build with [Typescript](https://www.typescriptlang.org/) created for designing simple logos.
 
-# Getting starter
+## Instalation on Wordpress
+
+The easy way: go to `/development` and download the zip file, then upload it on the `wp-admin/plugins.php`
+
+The hard way: go to plugin folder of the WordPress and then `git clone https://github.com/Codeinwp/logo-maker.git`
+
+**In order to make the `back button` on the Start page to work you need to assing in WordPrees a parent page to the page that host the Logo Maker.**
+
+**Make sure that the page that host the Logo Maker is empty.**
+
+## Getting starter on development
 
 Before you venture in the development of the Logo Maker, you need to have:
 
