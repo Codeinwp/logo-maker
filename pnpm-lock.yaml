@@ -17,6 +17,7 @@ dependencies:
   react: 17.0.1
   react-color: 2.19.3_react@17.0.1
   react-dom: 17.0.1_react@17.0.1
+  react-ga: 3.3.0_react@17.0.1
   react-router-dom: 5.2.0_react@17.0.1
   react-select: 3.1.1_react-dom@17.0.1+react@17.0.1
   uuid: 8.3.1
@@ -2160,11 +2161,11 @@ packages:
     dev: true
     resolution:
       integrity: sha512-M4BwiTJjHmLq6kjON7ZoI2JMlBvpY3BYSdiP6s/qCT3jb1s9/DeJF0JELpAxiVSIxXDzfNKe+r7yedMIoLbknQ==
-  /@types/node/14.14.11:
+  /@types/node/14.14.12:
     dev: true
     optional: true
     resolution:
-      integrity: sha512-BJ97wAUuU3NUiUCp44xzUFquQEvnk1wu7q4CMEUYKJWjdkr0YWYDsm4RFtAvxYsNjLsKcrFt6RvK8r+mnzMbEQ==
+      integrity: sha512-ASH8OPHMNlkdjrEdmoILmzFfsJICvhBsFfAum4aKZ/9U4B6M6tTmTPh+f3ttWdD74CEGV5XvXWkbyfSdXaTd7g==
   /@types/node/14.14.9:
     dev: true
     resolution:
@@ -2385,7 +2386,7 @@ packages:
       integrity: sha512-z8PNtlhrj7eJNLmrAivM7rjBESG6JwC5xP3RVk12i/8HVP7Xnx/sEmERnRImyEuUaJfO942X0qMOYsoupaJbZQ==
   /@types/yauzl/2.9.1:
     dependencies:
-      '@types/node': 14.14.11
+      '@types/node': 14.14.12
     dev: true
     optional: true
     resolution:
@@ -12178,6 +12179,15 @@ packages:
       react: 17.0.1
     resolution:
       integrity: sha512-6eV150oJZ9U2t9svnsspTMrWNyHc6chX0KzDeAOXftRa8bNeOKTTfCJ7KorIwenkHd2xqVTBTCZd79yk/lx/Ug==
+  /react-ga/3.3.0_react@17.0.1:
+    dependencies:
+      react: 17.0.1
+    dev: false
+    peerDependencies:
+      prop-types: ^15.6.0
+      react: ^15.6.2 || ^16.0 || ^17
+    resolution:
+      integrity: sha512-o8RScHj6Lb8cwy3GMrVH6NJvL+y0zpJvKtc0+wmH7Bt23rszJmnqEQxRbyrqUzk9DTJIHoP42bfO5rswC9SWBQ==
   /react-input-autosize/2.2.2_react@17.0.1:
     dependencies:
       prop-types: 15.7.2
@@ -15653,6 +15663,7 @@ specifiers:
   react: ^17.0.1
   react-color: ^2.19.3
   react-dom: ^17.0.1
+  react-ga: ^3.3.0
   react-router-dom: ^5.2.0
   react-select: ^3.1.0
   sass: ^1.29.0

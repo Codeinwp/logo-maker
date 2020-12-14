@@ -2,6 +2,7 @@ import * as React from "react"
 import classnames from "classnames"
 
 import { downloadAsZipFromSVGviaClick } from "../../engine/export"
+import ReactGA from "react-ga"
 
 const DownloadButton: React.FunctionComponent<{ className?: string }> = (props: {
     className?: string
@@ -82,6 +83,12 @@ const DownloadButton: React.FunctionComponent<{ className?: string }> = (props: 
                         ?.cloneNode(true) as SVGElement
                     if (logoSVG) {
                         downloadAsZipFromSVGviaClick(logoSVG, ["png"], true)
+                        ReactGA.event({
+                            category: "Logo Maker Creator",
+                            action: "Click to download",
+                            label: "Download",
+                            value: 1,
+                        })
                     }
                 }}
             >

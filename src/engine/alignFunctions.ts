@@ -75,7 +75,7 @@ export const alignLogoTop = (props: LogoProps, draw: Svg): ContainerData => {
         }
     }
 
-    console.log(titleSVG.bbox())
+    // console.log(titleSVG.bbox())
 
     /*
            Add the slogan's SVG

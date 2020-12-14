@@ -13,6 +13,8 @@ import presetColors from "./assets/colors"
 import "../src/assets/styles/Showcase/showcase.scss"
 import { LogoAlignOptions } from "./components/ui/SelectLayout"
 
+import ReactGA from "react-ga"
+
 const defaultFontsList = new Array(logos.length).fill("sans-serif")
 
 const Showcase: React.FunctionComponent<unknown> = () => {
@@ -26,6 +28,8 @@ const Showcase: React.FunctionComponent<unknown> = () => {
     )
 
     React.useEffect(() => {
+        ReactGA.pageview(window.location.pathname + window.location.hash + window.location.search)
+
         // Generate the colors
         const generateColors = () => {
             // const scm = new ColorScheme()
@@ -53,7 +57,7 @@ const Showcase: React.FunctionComponent<unknown> = () => {
                     index = 0
                 }
             }
-            console.log(presetColors, colors)
+            // console.log(presetColors, colors)
             return colors
         }
         setColors(generateColors())
