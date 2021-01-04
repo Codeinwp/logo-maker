@@ -20,6 +20,13 @@ export const Application: React.FunctionComponent<unknown> = () => {
             ReactGA.set({ anonymizeIp: true })
         }
 
+        // const save = localStorage.getItem("logo-maker-themeisle")
+        // if (save) {
+        //     const content = JSON.parse(save)
+
+        //     if (content)
+        // }
+
         // WebFont.load({
         //     google: {
         //         families: fonts,

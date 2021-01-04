@@ -107,6 +107,10 @@
 			font-weight: 700;
 			line-height: 49.03px;
 			margin: 0 0 8px;
+
+			@media (max-width: 600px) {
+				line-height: 32.69px;
+			}
 		}
 		p {
 			color: #939393;
