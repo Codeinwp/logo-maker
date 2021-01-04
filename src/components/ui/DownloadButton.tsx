@@ -70,7 +70,7 @@ const DownloadButton: React.FunctionComponent<{
 
     return (
         <div className={classnames("download-button", props?.className)}>
-            <a
+            {/* <a
                 target="_blank"
                 rel="noreferrer"
                 download="LogoMakerExport.zip"
@@ -91,14 +91,31 @@ const DownloadButton: React.FunctionComponent<{
                 }}
             >
                 <span>Download</span>
-            </a>
-            {/* <button
+            </a> */}
+            <button
                 onClick={() => {
-                    const logoSVG = document
-                        .querySelector("#image-logo svg")
-                        ?.cloneNode(true) as SVGElement
-                    if (logoSVG) {
-                        downloadAsZipFromSVGviaClick(logoSVG, ["png"], true)
+
+                    if (props.downloadLink) {
+
+                        const a = document.createElement("a")
+
+                        a.style.display = "none"
+                        a.href = props.downloadLink;
+                        a.download = "logo.zip";
+
+                        document.body.appendChild(a)
+                        a.click()
+
+                        alert("Download Complet")
+
+
+                        setTimeout(() => {
+                            if (props.downloadLink) {
+                                URL.revokeObjectURL(props.downloadLink)
+                                document.body.removeChild(a)
+                            }
+                        }, 1000)
+
                         ReactGA.event({
                             category: "Logo Maker Creator",
                             action: "Click to download",
@@ -109,7 +126,7 @@ const DownloadButton: React.FunctionComponent<{
                 }}
             >
                 <span>Download</span>
-            </button> */}
+            </button>
             {/* <button
                 className="m-2 box-content max-content bg-transparent bg-orange-600 font-semibold text-white py-2 px-4 rounded"
                 onClick={() => downloadSVGasPNG()}

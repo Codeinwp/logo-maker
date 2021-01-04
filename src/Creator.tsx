@@ -16,7 +16,7 @@ import "../src/assets/styles/Creator/creator.scss"
 // import { fontsForSvg, fontsList as fL } from "./assets/fonts/index"
 import UIStore from "./stores/UIStore"
 import ReactGA from "react-ga"
-import { downloadAsZipFromSVGviaLink } from "./engine/export"
+import { downloadAsZipFromSVGviaLinkBlob } from "./engine/export"
 
 type MenuOptions = "logo" | "typography" | "layout" | "colors"
 
@@ -60,7 +60,7 @@ const Creator: React.FunctionComponent<unknown> = () => {
         async function createLink(): Promise<void> {
             const logoSVG = document.querySelector("#image-logo svg")?.cloneNode(true) as SVGElement
             if (logoSVG) {
-                const link = await downloadAsZipFromSVGviaLink(logoSVG, ["png"], true)
+                const link = await downloadAsZipFromSVGviaLinkBlob(logoSVG, ["png"], true)
 
                 // // clean the old link
                 // if (downloadLink) {

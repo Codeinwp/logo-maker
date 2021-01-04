@@ -27,11 +27,15 @@ export function generateCanvasFromSVG(svg: SVGElement): Promise<HTMLCanvasElemen
             resolve(canvas)
         }
 
-        img.onerror = () => {
-            console.log("Image no found")
+        img.onerror = (ev) => {
+            console.log("Image not found", ev)
+
+            // This will work even in Safari for Mac
+            img.src = "data:image/svg+xml," + svg.outerHTML
         }
 
         img.src = exportAsSVGfromDOMviaLink(svg)
+
     })
 
     // return canvas
@@ -233,7 +237,7 @@ export async function downloadAsZipFromSVGviaLink(
 
     const content = await zip.generateAsync({ type: "base64", mimeType: "application/zip" })
 
-    return "data:application/zip; base64," + content
+    return "data:application/zip; Content-disposition: attachment; base64," + content
 }
 
 export async function downloadAsZipFromSVGviaClick(
@@ -251,4 +255,16 @@ export async function downloadAsZipFromSVGviaClick(
     zip.generateAsync({ type: "blob", mimeType: "application/zip" }).then((content) => {
         FileSaver.saveAs(content, "LogoMakerExport")
     })
+}
+
+export async function downloadAsZipFromSVGviaLinkBlob(
+    svg: SVGElement,
+    formats: ("png" | "jpg" | "webp")[],
+    includeSVG?: boolean
+): Promise<string> {
+    const zip = await createZipWithPresets(svg, formats, includeSVG)
+
+    const blob = await zip.generateAsync({ type: "blob", mimeType: "application/zip" })
+
+    return URL.createObjectURL(blob);
 }

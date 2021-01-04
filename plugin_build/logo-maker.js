@@ -45279,7 +45279,7 @@ const Creator = () => {
             var _a;
             const logoSVG = (_a = document.querySelector("#image-logo svg")) === null || _a === void 0 ? void 0 : _a.cloneNode(true);
             if (logoSVG) {
-                const link = await Object(_engine_export__WEBPACK_IMPORTED_MODULE_17__["downloadAsZipFromSVGviaLink"])(logoSVG, ["png"], true);
+                const link = await Object(_engine_export__WEBPACK_IMPORTED_MODULE_17__["downloadAsZipFromSVGviaLinkBlob"])(logoSVG, ["png"], true);
                 // // clean the old link
                 // if (downloadLink) {
                 //     URL.revokeObjectURL(downloadLink)
@@ -47976,12 +47976,21 @@ const DownloadButton = (props) => {
     //     element.remove()
     // }
     return (react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("div", { className: classnames__WEBPACK_IMPORTED_MODULE_1___default()("download-button", props === null || props === void 0 ? void 0 : props.className) },
-        react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("a", { target: "_blank", rel: "noreferrer", download: "LogoMakerExport.zip", href: props.downloadLink || " ", onClick: () => {
-                var _a;
-                const logoSVG = (_a = document
-                    .querySelector("#image-logo svg")) === null || _a === void 0 ? void 0 : _a.cloneNode(true);
-                if (logoSVG) {
-                    // downloadAsZipFromSVGviaClick(logoSVG, ["png"], true)
+        react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("button", { onClick: () => {
+                if (props.downloadLink) {
+                    const a = document.createElement("a");
+                    a.style.display = "none";
+                    a.href = props.downloadLink;
+                    a.download = "logo.zip";
+                    document.body.appendChild(a);
+                    a.click();
+                    alert("Download Complet");
+                    setTimeout(() => {
+                        if (props.downloadLink) {
+                            URL.revokeObjectURL(props.downloadLink);
+                            document.body.removeChild(a);
+                        }
+                    }, 1000);
                     react_ga__WEBPACK_IMPORTED_MODULE_2__["default"].event({
                         category: "Logo Maker Creator",
                         action: "Click to download",
@@ -48787,7 +48796,7 @@ const alignLogoRight = (props, draw) => {
 /*!******************************!*\
   !*** ./src/engine/export.ts ***!
   \******************************/
-/*! exports provided: exportAsSVGfromDOMviaLink, generateCanvasFromSVG, exportImagesfromCANVAS, addToZipFromSVG, createZipWithPresets, downloadAsZipFromSVGviaLink, downloadAsZipFromSVGviaClick */
+/*! exports provided: exportAsSVGfromDOMviaLink, generateCanvasFromSVG, exportImagesfromCANVAS, addToZipFromSVG, createZipWithPresets, downloadAsZipFromSVGviaLink, downloadAsZipFromSVGviaClick, downloadAsZipFromSVGviaLinkBlob */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -48799,6 +48808,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "createZipWithPresets", function() { return createZipWithPresets; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "downloadAsZipFromSVGviaLink", function() { return downloadAsZipFromSVGviaLink; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "downloadAsZipFromSVGviaClick", function() { return downloadAsZipFromSVGviaClick; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "downloadAsZipFromSVGviaLinkBlob", function() { return downloadAsZipFromSVGviaLinkBlob; });
 /* harmony import */ var jszip__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jszip */ "./node_modules/.pnpm/jszip@3.5.0/node_modules/jszip/dist/jszip.min.js");
 /* harmony import */ var jszip__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jszip__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var file_saver__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! file-saver */ "./node_modules/.pnpm/file-saver@2.0.5/node_modules/file-saver/dist/FileSaver.min.js");
@@ -48825,8 +48835,10 @@ function generateCanvasFromSVG(svg) {
             window.URL.revokeObjectURL(img.src);
             resolve(canvas);
         };
-        img.onerror = () => {
-            console.log("Image no found");
+        img.onerror = (ev) => {
+            console.log("Image not found", ev);
+            // This will work even in Safari for Mac
+            img.src = "data:image/svg+xml," + svg.outerHTML;
         };
         img.src = exportAsSVGfromDOMviaLink(svg);
     });
@@ -48982,7 +48994,7 @@ async function createZipWithPresets(svg, formats, includeSVG) {
 async function downloadAsZipFromSVGviaLink(svg, formats, includeSVG) {
     const zip = await createZipWithPresets(svg, formats, includeSVG);
     const content = await zip.generateAsync({ type: "base64", mimeType: "application/zip" });
-    return "data:application/zip; base64," + content;
+    return "data:application/zip; Content-disposition: attachment; base64," + content;
 }
 async function downloadAsZipFromSVGviaClick(svg, formats, includeSVG) {
     // addToZipFromSVG(svg, new JSZip(), formats, includeSVG).then((zip) =>
@@ -48994,6 +49006,11 @@ async function downloadAsZipFromSVGviaClick(svg, formats, includeSVG) {
     zip.generateAsync({ type: "blob", mimeType: "application/zip" }).then((content) => {
         file_saver__WEBPACK_IMPORTED_MODULE_1___default.a.saveAs(content, "LogoMakerExport");
     });
+}
+async function downloadAsZipFromSVGviaLinkBlob(svg, formats, includeSVG) {
+    const zip = await createZipWithPresets(svg, formats, includeSVG);
+    const blob = await zip.generateAsync({ type: "blob", mimeType: "application/zip" });
+    return URL.createObjectURL(blob);
 }
 
 
