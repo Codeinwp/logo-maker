@@ -12,20 +12,19 @@ import Start from "./Start"
 import { AssetsStore } from "./stores/AssetsStore"
 
 import ReactGA from "react-ga"
+import UIStore from "./stores/UIStore"
+
+
 
 export const Application: React.FunctionComponent<unknown> = () => {
+
     React.useEffect(() => {
         if (window.logomaker?.googleAnalyticsCode) {
             ReactGA.initialize(window.logomaker.googleAnalyticsCode)
             ReactGA.set({ anonymizeIp: true })
         }
 
-        // const save = localStorage.getItem("logo-maker-themeisle")
-        // if (save) {
-        //     const content = JSON.parse(save)
 
-        //     if (content)
-        // }
 
         // WebFont.load({
         //     google: {

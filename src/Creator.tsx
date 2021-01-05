@@ -62,10 +62,10 @@ const Creator: React.FunctionComponent<unknown> = () => {
             if (logoSVG) {
                 const link = await downloadAsZipFromSVGviaLinkBlob(logoSVG, ["png"], true)
 
-                // // clean the old link
-                // if (downloadLink) {
-                //     URL.revokeObjectURL(downloadLink)
-                // }
+                // clean the old link
+                if (downloadLink) {
+                    URL.revokeObjectURL(downloadLink)
+                }
 
                 setDownloadLink(link)
             }
@@ -73,28 +73,10 @@ const Creator: React.FunctionComponent<unknown> = () => {
         createLink()
     }, [store])
 
-    store = {
-        ...store,
-        container: {
-            ...store.container,
-            width: 765,
-            height: 625,
-        },
-        // title: {
-        //     ...store.title,
-        //     style: {
-        //         ...store.title.style,
-        //         fontFamily: fontsForSvg[fL.findIndex((f) => f === store.title.style.fontFamily)],
-        //     },
-        // },
-        // slogan: {
-        //     ...store.slogan,
-        //     style: {
-        //         ...store.slogan.style,
-        //         fontFamily: fontsForSvg[fL.findIndex((f) => f === store.slogan.style.fontFamily)],
-        //     },
-        // },
-    }
+    React.useEffect(() => {
+        console.log("Set session")
+        sessionStorage.setItem("logo-maker-themeisle", JSON.stringify(store))
+    }, [store])
 
     return (
         <div className="logo-creator logo-maker-container">

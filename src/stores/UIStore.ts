@@ -53,10 +53,10 @@ export type StoreProps = {
     slogan: TSlogan
 }
 
-export const UIStore = new Store<StoreProps>({
+export const UIStore = new Store<StoreProps>(JSON.parse(sessionStorage.getItem("logo-maker-themeisle") || "null") || {
     container: {
-        width: 300,
-        height: 250,
+        width: 765,
+        height: 625,
         align: "align-top",
         viewbox: {
             x: 0,

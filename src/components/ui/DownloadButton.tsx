@@ -106,15 +106,7 @@ const DownloadButton: React.FunctionComponent<{
                         document.body.appendChild(a)
                         a.click()
 
-                        alert("Download Complet")
-
-
-                        setTimeout(() => {
-                            if (props.downloadLink) {
-                                URL.revokeObjectURL(props.downloadLink)
-                                document.body.removeChild(a)
-                            }
-                        }, 1000)
+                        alert("Download Completed.")
 
                         ReactGA.event({
                             category: "Logo Maker Creator",
