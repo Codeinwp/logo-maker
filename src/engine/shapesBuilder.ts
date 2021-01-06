@@ -8,7 +8,7 @@ export interface BaseShapheBuilder {
     slogan: Text
 }
 
-export function defaultShapes(parent: Svg, componentsProps: LogoProps): BaseShapheBuilder {
+export function buildDefaultShapes(parent: Svg, componentsProps: LogoProps): BaseShapheBuilder {
     const { logo: pLogo, title: pTitle, slogan: pSlogan } = componentsProps
 
     // Create SVGs

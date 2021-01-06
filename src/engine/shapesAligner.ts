@@ -1,3 +1,5 @@
+import { Svg } from "@svgdotjs/svg.js"
+
 import { BaseShapheBuilder } from "./shapesBuilder"
 import { settings } from "./settings"
 
@@ -21,8 +23,8 @@ function calculateDimesionsForBaseShape(shapes: BaseShapheBuilder): BaseShapeDim
 
     // Calculate the dimensions for the shapes, including the settings 
     const logoDim = {
-        height: settings.logo.margins.top + logo.bbox().height + settings.logo.margins.bottom,
-        width: settings.logo.margins.left + logo.bbox().width + settings.logo.margins.bottom,
+        height: settings.logo.margins.top + logo.height() + settings.logo.margins.bottom,
+        width: settings.logo.margins.left + logo.width() + settings.logo.margins.bottom,
     }
 
     let titleDim
@@ -62,45 +64,73 @@ function calculateDimesionsForBaseShape(shapes: BaseShapheBuilder): BaseShapeDim
     }
 }
 
-export function alignLogoTop<S extends BaseShapheBuilder>(shapes: S) {
+export function autoscallingBaseShapes(parent: Svg, containerWidth: number, containerHeight: number) {
+    const autoScallingFactor = 1.3
+    const marginSize = 0.2 // percentage
+
+    const currentViewBox = parent.viewbox()
+
+    parent.viewbox(
+        0,
+        0,
+        Math.max(currentViewBox.width * (1 + marginSize), containerWidth * (1 + marginSize)),
+        Math.max(currentViewBox.height * (1 + marginSize), containerHeight * (1 + marginSize))
+    )
+}
+
+interface BaseAlignerOutput {
+    containerWidth: number
+    containerHeight: number
+}
+
+export function alignLogoTop<S extends BaseShapheBuilder>(shapes: S): BaseAlignerOutput {
     const { logo, title, slogan } = shapes
     const { logoDim, titleDim, sloganDim } = calculateDimesionsForBaseShape(shapes)
 
     // the elements are vertically stacked,
     // so the width of the container is equal with the width of the largest element
     // and the height is the sum of all the element's height
-    const widthContainer = Math.max(logoDim.width, titleDim.width, sloganDim.width)
-    const heightContainer = logoDim.height + titleDim.height + sloganDim.height // logo.height + titleDim.height + sloganDim.height
-    const cx = widthContainer / 2
-    // const cy = heightContainer / 2
+    const containerWidth = Math.max(logoDim.width, titleDim.width, sloganDim.width)
+    const containerHeight = logoDim.height + titleDim.height + sloganDim.height // logo.height + titleDim.height + sloganDim.height
+    const cx = containerWidth / 2
+    // const cy = containerHeight / 2
 
     logo.move(cx - logoDim.width / 2, 0)
     title.move(cx - titleDim.width / 2, logoDim.height)
     slogan.move(cx - sloganDim.width / 2, logoDim.height + titleDim.height)
+
+    return {
+        containerHeight,
+        containerWidth
+    }
 }
 
-export function alignLogoLeft<S extends BaseShapheBuilder>(shapes: S) {
+export function alignLogoLeft<S extends BaseShapheBuilder>(shapes: S): BaseAlignerOutput {
     const { logo, title, slogan } = shapes
     const { logoDim, titleDim, sloganDim } = calculateDimesionsForBaseShape(shapes)
 
-    // the elements are vertically stacked,
-    // so the width of the container is equal with the width of the largest element
-    // and the height is the sum of all the element's height
-    const widthContainer = logoDim.width + Math.max(titleDim.width, sloganDim.width)
-    const heightContainer = Math.max(logoDim.height, titleDim.height + sloganDim.height)
-    // const cx = widthContainer / 2
-    const cy = heightContainer / 2
 
     // Calculate the dimension for the box that contains the title and the slogan
     const textContainerWidth =
         Math.max(titleDim.width, sloganDim.width) +
         settings.textContainer.margins.left +
         settings.textContainer.margins.right
-    // const textContainerHeight =
-    //     titleDim.height +
-    //     sloganDim.height +
-    //     settings.textContainer.margins.top +
-    //     settings.textContainer.margins.bottom
+    const textContainerHeight =
+        titleDim.height +
+        sloganDim.height +
+        settings.textContainer.margins.top +
+        settings.textContainer.margins.bottom
+
+    // the elements are vertically stacked,
+    // so the width of the container is equal with the width of the largest element
+    // and the height is the sum of all the element's height
+
+    const containerHeight = Math.max(logoDim.height, textContainerHeight)
+    const containerWidth = logoDim.width + textContainerWidth
+    // const cx = containerWidth / 2
+    const cy = containerHeight / 2
+
+
     const ctx = textContainerWidth / 2
     // const cty = textContainerHeight / 2
 
@@ -112,33 +142,62 @@ export function alignLogoLeft<S extends BaseShapheBuilder>(shapes: S) {
         logoDim.width + ctx - sloganDim.width / 2,
         cy + titleDim.height / 2 // + sloganDim.height / 2
     )
+
+    return {
+        containerHeight,
+        containerWidth
+    }
 }
 
-export function alignLogoRight<S extends BaseShapheBuilder>(shapes: S) {
+export function alignLogoRight<S extends BaseShapheBuilder>(shapes: S): BaseAlignerOutput {
     const { logo, title, slogan } = shapes
     const { logoDim, titleDim, sloganDim } = calculateDimesionsForBaseShape(shapes)
 
-    // the elements are vertically stacked,
-    // so the width of the container is equal with the width of the largest element
-    // and the height is the sum of all the element's height
-    const widthContainer = logoDim.width + Math.max(titleDim.width, sloganDim.width)
-    const heightContainer = Math.max(logoDim.height, titleDim.height + sloganDim.height)
-    const cx = widthContainer / 2
-    const cy = heightContainer / 2
 
+    // Calculate the dimension for the box that contains the title and the slogan
     const textContainerWidth =
         Math.max(titleDim.width, sloganDim.width) +
         settings.textContainer.margins.left +
         settings.textContainer.margins.right
-    // const textContainerHeight =
-    //     titleDim.height +
-    //     sloganDim.height +
-    //     settings.textContainer.margins.top +
-    //     settings.textContainer.margins.bottom
+    const textContainerHeight =
+        titleDim.height +
+        sloganDim.height +
+        settings.textContainer.margins.top +
+        settings.textContainer.margins.bottom
+
+    // the elements are vertically stacked,
+    // so the width of the container is equal with the width of the largest element
+    // and the height is the sum of all the element's height
+
+    const containerHeight = Math.max(logoDim.height, textContainerHeight)
+    const containerWidth = logoDim.width + textContainerWidth
+
+
+    const cx = containerWidth / 2
+    const cy = containerHeight / 2
+
     const ctx = textContainerWidth / 2
     // const cty = textContainerHeight / 2
 
     logo.move(textContainerWidth, cy - logoDim.height / 2)
     title.move(ctx - titleDim.width / 2, cy - titleDim.height / 2)
     slogan.move(ctx - sloganDim.width / 2, cy + titleDim.height / 2) // + sloganDim.height / 2)
+
+    return {
+        containerHeight,
+        containerWidth
+    }
+}
+
+export function alignShapesToCenter<S extends BaseShapheBuilder>(parent: Svg, shapes: S, properties: BaseAlignerOutput) {
+    const { logo, title, slogan } = shapes
+    const currentViewBox = parent.viewbox()
+
+    const xOffsetToCenter = currentViewBox.width / 2 - properties.containerWidth / 2
+    const yOffsetToCenter = currentViewBox.height / 2 - properties.containerHeight / 2
+
+    logo.center(logo.cx() + xOffsetToCenter, logo.cy() + yOffsetToCenter)
+    title.center(title.cx() + xOffsetToCenter, title.cy() + yOffsetToCenter)
+    slogan.center(slogan.cx() + xOffsetToCenter, slogan.cy() + yOffsetToCenter)
+
 }
