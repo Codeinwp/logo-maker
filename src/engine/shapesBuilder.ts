@@ -16,7 +16,7 @@ export function buildDefaultShapes(parent: Svg, componentsProps: LogoProps): Bas
     const slogan = parent.text(pSlogan.text)
 
     // Apply other properties
-    logo.viewbox(0, 0, logo.bbox().width, logo.bbox().height)
+    logo.viewbox(0, 0, logo.bbox().width, logo.bbox().height + 5)
         .size(pLogo.width, pLogo.height)
         .css("fill", pLogo.style.fill)
 
