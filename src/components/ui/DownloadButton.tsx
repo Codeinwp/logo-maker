@@ -21,8 +21,6 @@ const DownloadButton: React.FunctionComponent<{
                         document.body.appendChild(a)
                         a.click()
 
-                        alert("Download Completed.")
-
                         ReactGA.event({
                             category: "Logo Maker Creator",
                             action: "Click to download",
