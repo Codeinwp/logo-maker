@@ -15,7 +15,35 @@ import { LogoAlignOptions } from "./components/ui/SelectLayout"
 
 import ReactGA from "react-ga"
 
-const defaultFontsList = new Array(logos.length).fill("sans-serif")
+function fillArrayWithRepeat<T>(
+    array: T[],
+    desiredLength: number,
+    filter?: (x: T) => boolean
+): T[] {
+    const _array: T[] = []
+    let index = 0
+
+    if (filter === undefined) {
+        // if the filter is not defined, assign a function that will pass anything
+        filter = () => true
+    }
+
+    while (_array.length < desiredLength) {
+        if (filter(array[index])) {
+            _array.push(array[index])
+        } else {
+            console.log("Invalid")
+        }
+
+        if (index < array.length - 1) {
+            index++
+        } else {
+            index = 0
+        }
+    }
+
+    return _array
+}
 
 const Showcase: React.FunctionComponent<unknown> = () => {
     const store = UIStore.useState((s) => s)
@@ -23,61 +51,13 @@ const Showcase: React.FunctionComponent<unknown> = () => {
     const [option, setOption] = React.useState<number>(0)
     const [colors, setColors] = React.useState<string[]>([])
     const [aligns, setAligns] = React.useState<LogoAlignOptions[]>([])
-    const [fontsList, setFontsList] = React.useState<{ title: string; slogan: string }[]>(
-        defaultFontsList
-    )
+    const [fontsList, setFontsList] = React.useState<{ title: string; slogan: string }[]>([])
 
     React.useEffect(() => {
         ReactGA.pageview(window.location.pathname + window.location.hash + window.location.search)
 
-        // Generate the colors
-        const generateColors = () => {
-            // const scm = new ColorScheme()
-            // const colorsNum = new Set()
-
-            // const step = 360 / logos.length
-            // for (let i = 0; i < logos.length; ++i) {
-            //     colorsNum.add(step * i)
-            // }
-
-            // const colors: string[] = []
-            // colorsNum.forEach((x) => {
-            //     scm.from_hue(x).scheme("triade").distance(0.8).variation("hard").web_safe(true)
-
-            //     colors.push("#" + scm.colors()[1])
-            // })
-            const colors: string[] = []
-            let index = 0
-            while (colors.length < logos.length) {
-                if (presetColors[index] !== "#fff") {
-                    colors.push(presetColors[index])
-                }
-                index++
-                if (index >= presetColors.length) {
-                    index = 0
-                }
-            }
-            // console.log(presetColors, colors)
-            return colors
-        }
-        setColors(generateColors())
-
-        const generateFonts = () => {
-            const list = []
-
-            let index = 0
-            while (list.length < logos.length) {
-                list.push(presets[index])
-                index++
-                if (index >= presets.length) {
-                    index = 0
-                }
-            }
-
-            return list
-        }
-
-        setFontsList(generateFonts())
+        setColors(fillArrayWithRepeat(presetColors, logos.length, (x) => x !== "#fff"))
+        setFontsList(fillArrayWithRepeat(presets, logos.length))
 
         const generateAlignsOption = () => {
             const list: LogoAlignOptions[] = []
@@ -112,8 +92,8 @@ const Showcase: React.FunctionComponent<unknown> = () => {
     }
 
     const renderLogoList = () => {
-        if (!colors.length) {
-            return
+        if (!colors.length && !fontsList.length && !aligns.length) {
+            return <div className="content-loader"></div>
         }
 
         const result = logos.map((logoSRC, index) => {

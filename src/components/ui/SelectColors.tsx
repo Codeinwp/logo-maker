@@ -59,7 +59,7 @@ const SelectColor: React.FunctionComponent<unknown> = () => {
                 break
         }
 
-        // before send it to store, check if the value is a valid hex color
+        // before send it to the store, check if the value is a valid hex color
         // reference: https://stackoverflow.com/questions/8027423/how-to-check-if-a-string-is-a-valid-hex-color-representation/8027444
         // check it on: https://regexr.com/
         if (/^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$/i.test(value)) {

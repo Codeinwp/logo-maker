@@ -21,7 +21,7 @@ interface BaseShapeDimensions {
 function calculateDimesionsForBaseShape(shapes: BaseShapheBuilder): BaseShapeDimensions {
     const { logo, title, slogan } = shapes
 
-    // Calculate the dimensions for the shapes, including the settings 
+    // Calculate the dimensions for the shapes, including the settings
     const logoDim = {
         height: settings.logo.margins.top + logo.height() + settings.logo.margins.bottom,
         width: settings.logo.margins.left + logo.width() + settings.logo.margins.bottom,
@@ -32,8 +32,7 @@ function calculateDimesionsForBaseShape(shapes: BaseShapheBuilder): BaseShapeDim
         titleDim = {
             height:
                 settings.title.margins.top + title.bbox().height + settings.title.margins.bottom,
-            width:
-                settings.title.margins.left + title.bbox().width + settings.title.margins.bottom,
+            width: settings.title.margins.left + title.bbox().width + settings.title.margins.bottom,
         }
     } else {
         titleDim = {
@@ -60,12 +59,15 @@ function calculateDimesionsForBaseShape(shapes: BaseShapheBuilder): BaseShapeDim
     return {
         logoDim,
         titleDim,
-        sloganDim
+        sloganDim,
     }
 }
 
-export function autoscallingBaseShapes(parent: Svg, containerWidth: number, containerHeight: number) {
-    const autoScallingFactor = 1.3
+export function autoscallingBaseShapes(
+    parent: Svg,
+    containerWidth: number,
+    containerHeight: number
+): void {
     const marginSize = 0.2 // percentage
 
     const currentViewBox = parent.viewbox()
@@ -101,14 +103,13 @@ export function alignLogoTop<S extends BaseShapheBuilder>(shapes: S): BaseAligne
 
     return {
         containerHeight,
-        containerWidth
+        containerWidth,
     }
 }
 
 export function alignLogoLeft<S extends BaseShapheBuilder>(shapes: S): BaseAlignerOutput {
     const { logo, title, slogan } = shapes
     const { logoDim, titleDim, sloganDim } = calculateDimesionsForBaseShape(shapes)
-
 
     // Calculate the dimension for the box that contains the title and the slogan
     const textContainerWidth =
@@ -130,7 +131,6 @@ export function alignLogoLeft<S extends BaseShapheBuilder>(shapes: S): BaseAlign
     // const cx = containerWidth / 2
     const cy = containerHeight / 2
 
-
     const ctx = textContainerWidth / 2
     // const cty = textContainerHeight / 2
 
@@ -145,14 +145,13 @@ export function alignLogoLeft<S extends BaseShapheBuilder>(shapes: S): BaseAlign
 
     return {
         containerHeight,
-        containerWidth
+        containerWidth,
     }
 }
 
 export function alignLogoRight<S extends BaseShapheBuilder>(shapes: S): BaseAlignerOutput {
     const { logo, title, slogan } = shapes
     const { logoDim, titleDim, sloganDim } = calculateDimesionsForBaseShape(shapes)
-
 
     // Calculate the dimension for the box that contains the title and the slogan
     const textContainerWidth =
@@ -172,8 +171,7 @@ export function alignLogoRight<S extends BaseShapheBuilder>(shapes: S): BaseAlig
     const containerHeight = Math.max(logoDim.height, textContainerHeight)
     const containerWidth = logoDim.width + textContainerWidth
 
-
-    const cx = containerWidth / 2
+    // const cx = containerWidth / 2
     const cy = containerHeight / 2
 
     const ctx = textContainerWidth / 2
@@ -185,11 +183,15 @@ export function alignLogoRight<S extends BaseShapheBuilder>(shapes: S): BaseAlig
 
     return {
         containerHeight,
-        containerWidth
+        containerWidth,
     }
 }
 
-export function alignShapesToCenter<S extends BaseShapheBuilder>(parent: Svg, shapes: S, properties: BaseAlignerOutput) {
+export function alignShapesToCenter<S extends BaseShapheBuilder>(
+    parent: Svg,
+    shapes: S,
+    properties: BaseAlignerOutput
+): void {
     const { logo, title, slogan } = shapes
     const currentViewBox = parent.viewbox()
 
@@ -199,5 +201,4 @@ export function alignShapesToCenter<S extends BaseShapheBuilder>(parent: Svg, sh
     logo.center(logo.cx() + xOffsetToCenter, logo.cy() + yOffsetToCenter)
     title.center(title.cx() + xOffsetToCenter, title.cy() + yOffsetToCenter)
     slogan.center(slogan.cx() + xOffsetToCenter, slogan.cy() + yOffsetToCenter)
-
 }

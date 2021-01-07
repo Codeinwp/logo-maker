@@ -13,7 +13,6 @@ import Logo50 from "./logo50"
 // Useful for importing only some specific logos
 export { Logo41, Logo42, Logo43, Logo44, Logo45, Logo46, Logo47, Logo48, Logo49, Logo50 }
 
-
 // Export a list with all the logos
 // Useful for rendering a select input or a preview with all the logos available
 export default [Logo41, Logo42, Logo43, Logo44, Logo45, Logo46, Logo47, Logo48, Logo49, Logo50]

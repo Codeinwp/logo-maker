@@ -16739,23 +16739,6 @@ module.exports = function equal(a, b) {
 
 /***/ }),
 
-/***/ "./node_modules/.pnpm/file-saver@2.0.5/node_modules/file-saver/dist/FileSaver.min.js":
-/*!*******************************************************************************************!*\
-  !*** ./node_modules/.pnpm/file-saver@2.0.5/node_modules/file-saver/dist/FileSaver.min.js ***!
-  \*******************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-/* WEBPACK VAR INJECTION */(function(global) {var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;(function(a,b){if(true)!(__WEBPACK_AMD_DEFINE_ARRAY__ = [], __WEBPACK_AMD_DEFINE_FACTORY__ = (b),
-				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
-				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
-				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));else {}})(this,function(){"use strict";function b(a,b){return"undefined"==typeof b?b={autoBom:!1}:"object"!=typeof b&&(console.warn("Deprecated: Expected third argument to be a object"),b={autoBom:!b}),b.autoBom&&/^\s*(?:text\/\S*|application\/xml|\S*\/\S*\+xml)\s*;.*charset\s*=\s*utf-8/i.test(a.type)?new Blob(["\uFEFF",a],{type:a.type}):a}function c(a,b,c){var d=new XMLHttpRequest;d.open("GET",a),d.responseType="blob",d.onload=function(){g(d.response,b,c)},d.onerror=function(){console.error("could not download file")},d.send()}function d(a){var b=new XMLHttpRequest;b.open("HEAD",a,!1);try{b.send()}catch(a){}return 200<=b.status&&299>=b.status}function e(a){try{a.dispatchEvent(new MouseEvent("click"))}catch(c){var b=document.createEvent("MouseEvents");b.initMouseEvent("click",!0,!0,window,0,0,0,80,20,!1,!1,!1,!1,0,null),a.dispatchEvent(b)}}var f="object"==typeof window&&window.window===window?window:"object"==typeof self&&self.self===self?self:"object"==typeof global&&global.global===global?global:void 0,a=f.navigator&&/Macintosh/.test(navigator.userAgent)&&/AppleWebKit/.test(navigator.userAgent)&&!/Safari/.test(navigator.userAgent),g=f.saveAs||("object"!=typeof window||window!==f?function(){}:"download"in HTMLAnchorElement.prototype&&!a?function(b,g,h){var i=f.URL||f.webkitURL,j=document.createElement("a");g=g||b.name||"download",j.download=g,j.rel="noopener","string"==typeof b?(j.href=b,j.origin===location.origin?e(j):d(j.href)?c(b,g,h):e(j,j.target="_blank")):(j.href=i.createObjectURL(b),setTimeout(function(){i.revokeObjectURL(j.href)},4E4),setTimeout(function(){e(j)},0))}:"msSaveOrOpenBlob"in navigator?function(f,g,h){if(g=g||f.name||"download","string"!=typeof f)navigator.msSaveOrOpenBlob(b(f,h),g);else if(d(f))c(f,g,h);else{var i=document.createElement("a");i.href=f,i.target="_blank",setTimeout(function(){e(i)})}}:function(b,d,e,g){if(g=g||open("","_blank"),g&&(g.document.title=g.document.body.innerText="downloading..."),"string"==typeof b)return c(b,d,e);var h="application/octet-stream"===b.type,i=/constructor/i.test(f.HTMLElement)||f.safari,j=/CriOS\/[\d]+/.test(navigator.userAgent);if((j||h&&i||a)&&"undefined"!=typeof FileReader){var k=new FileReader;k.onloadend=function(){var a=k.result;a=j?a:a.replace(/^data:[^;]*;/,"data:attachment/file;"),g?g.location.href=a:location=a,g=null},k.readAsDataURL(b)}else{var l=f.URL||f.webkitURL,m=l.createObjectURL(b);g?g.location=m:location.href=m,g=null,setTimeout(function(){l.revokeObjectURL(m)},4E4)}});f.saveAs=g.saveAs=g, true&&(module.exports=g)});
-
-
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../../../webpack@4.44.2_webpack-cli@4.2.0/node_modules/webpack/buildin/global.js */ "./node_modules/.pnpm/webpack@4.44.2_webpack-cli@4.2.0/node_modules/webpack/buildin/global.js")))
-
-/***/ }),
-
 /***/ "./node_modules/.pnpm/history@4.10.1/node_modules/history/esm/history.js":
 /*!*******************************************************************************!*\
   !*** ./node_modules/.pnpm/history@4.10.1/node_modules/history/esm/history.js ***!
@@ -45119,8 +45102,6 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-// import "./index.css"
-// import "./assets/scss/style.scss"
 
 
 
@@ -45239,7 +45220,6 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-// import { fontsForSvg, fontsList as fL } from "./assets/fonts/index"
 
 
 
@@ -45262,18 +45242,6 @@ const Creator = () => {
     react__WEBPACK_IMPORTED_MODULE_0__["useEffect"](() => {
         react_ga__WEBPACK_IMPORTED_MODULE_16__["default"].pageview(window.location.pathname + window.location.hash + window.location.search);
     }, []);
-    // React.useEffect(() => {
-    //     // after creating a new link, destroy the previouse one
-    //     const unsubscribeFromRemovingOldURL = ExportStore.subscribe(
-    //         (s) => s.downloadLink,
-    //         (currentLink, states, oldLink) => {
-    //             URL.revokeObjectURL(oldLink) // destroy the previous link or it might fill up the memory
-    //         }
-    //     )
-    //     return () => {
-    //         unsubscribeFromRemovingOldURL()
-    //     }
-    // }, [])
     react__WEBPACK_IMPORTED_MODULE_0__["useEffect"](() => {
         async function createLink() {
             var _a;
@@ -47854,8 +47822,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _svgdotjs_svg_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @svgdotjs/svg.js */ "./node_modules/.pnpm/@svgdotjs/svg.js@3.0.16/node_modules/@svgdotjs/svg.js/dist/svg.esm.js");
-/* harmony import */ var _engine_utility__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../engine/utility */ "./src/engine/utility.ts");
-/* harmony import */ var _engine_alignFunctions__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../engine/alignFunctions */ "./src/engine/alignFunctions.ts");
+/* harmony import */ var _engine_shapesAligner__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../engine/shapesAligner */ "./src/engine/shapesAligner.ts");
+/* harmony import */ var _engine_shapesBuilder__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../engine/shapesBuilder */ "./src/engine/shapesBuilder.ts");
 /* harmony import */ var uuid__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! uuid */ "./node_modules/.pnpm/uuid@8.3.1/node_modules/uuid/dist/esm-browser/index.js");
 
 
@@ -47880,20 +47848,44 @@ const CreateLogo = (props) => {
                 .viewbox(vb.x, vb.y, vb.width, vb.height)
                 .css("background-color", container.style.color)
                 .addClass((props === null || props === void 0 ? void 0 : props.className) || "");
-            const getAlignedLogo = () => {
-                switch (props.logoProps.container.align) {
-                    case "align-top":
-                        return Object(_engine_alignFunctions__WEBPACK_IMPORTED_MODULE_3__["alignLogoTop"])(props.logoProps, draw);
-                    case "align-left":
-                        return Object(_engine_alignFunctions__WEBPACK_IMPORTED_MODULE_3__["alignLogoLeft"])(props.logoProps, draw);
-                    case "align-right":
-                        return Object(_engine_alignFunctions__WEBPACK_IMPORTED_MODULE_3__["alignLogoRight"])(props.logoProps, draw);
-                    default:
-                        console.log("Invalid Type. The logo will be aligned top as a fallback option!");
-                        return Object(_engine_alignFunctions__WEBPACK_IMPORTED_MODULE_3__["alignLogoTop"])(props.logoProps, draw);
-                }
-            };
-            Object(_engine_utility__WEBPACK_IMPORTED_MODULE_2__["moveToCenter"])(draw, container.viewbox, getAlignedLogo());
+            // const getAlignedLogo = () => {
+            //     switch (props.logoProps.container.align) {
+            //         case "align-top":
+            //             return alignLogoTop(props.logoProps, draw)
+            //         case "align-left":
+            //             return alignLogoLeft(props.logoProps, draw)
+            //         case "align-right":
+            //             return alignLogoRight(props.logoProps, draw)
+            //         default:
+            //             console.log(
+            //                 "Invalid Type. The logo will be aligned top as a fallback option!"
+            //             )
+            //             return alignLogoTop(props.logoProps, draw)
+            //     }
+            // }
+            // moveToCenter(draw, container.viewbox, getAlignedLogo())
+            let shapes;
+            let alignerProps;
+            switch (props.logoProps.container.align) {
+                case "align-top":
+                    shapes = Object(_engine_shapesBuilder__WEBPACK_IMPORTED_MODULE_3__["buildDefaultShapes"])(draw, props.logoProps);
+                    alignerProps = Object(_engine_shapesAligner__WEBPACK_IMPORTED_MODULE_2__["alignLogoTop"])(shapes);
+                    break;
+                case "align-left":
+                    shapes = Object(_engine_shapesBuilder__WEBPACK_IMPORTED_MODULE_3__["buildDefaultShapes"])(draw, props.logoProps);
+                    alignerProps = Object(_engine_shapesAligner__WEBPACK_IMPORTED_MODULE_2__["alignLogoLeft"])(shapes);
+                    break;
+                case "align-right":
+                    shapes = Object(_engine_shapesBuilder__WEBPACK_IMPORTED_MODULE_3__["buildDefaultShapes"])(draw, props.logoProps);
+                    alignerProps = Object(_engine_shapesAligner__WEBPACK_IMPORTED_MODULE_2__["alignLogoRight"])(shapes);
+                    break;
+                default:
+                    console.log("Invalid Type. The logo will be aligned top as a fallback option!");
+                    shapes = Object(_engine_shapesBuilder__WEBPACK_IMPORTED_MODULE_3__["buildDefaultShapes"])(draw, props.logoProps);
+                    alignerProps = Object(_engine_shapesAligner__WEBPACK_IMPORTED_MODULE_2__["alignLogoTop"])(shapes);
+            }
+            Object(_engine_shapesAligner__WEBPACK_IMPORTED_MODULE_2__["autoscallingBaseShapes"])(draw, alignerProps.containerWidth, alignerProps.containerHeight);
+            Object(_engine_shapesAligner__WEBPACK_IMPORTED_MODULE_2__["alignShapesToCenter"])(draw, shapes, alignerProps);
             // addEmbeddedFont(draw, props.logoProps.title.style.fontFamily)
         }
     }, [props === null || props === void 0 ? void 0 : props.className, props.logoProps]);
@@ -47922,54 +47914,6 @@ __webpack_require__.r(__webpack_exports__);
 
 
 const DownloadButton = (props) => {
-    // const fonts = [
-    //     UIStore.useState((s) => s.title.style.fontFamily),
-    //     UIStore.useState((s) => s.slogan.style.fontFamily),
-    // ]
-    // const downloadSVGasPNG = () => {
-    //     const svg = document.querySelector("#image-logo")?.childNodes[0]
-    //     if (!svg) {
-    //         return
-    //     }
-    //     const xml = new XMLSerializer().serializeToString(svg)
-    //     const svg64 = btoa(xml)
-    //     const image = "data:image/svg+xml;base64," + svg64
-    //     const element = document.createElement("a")
-    //     const sourceImage = new Image()
-    //     sourceImage.onload = () => {
-    //         console.log("Load")
-    //         const canvas = document.createElement("canvas")
-    //         canvas.height = 280
-    //         canvas.width = 300
-    //         const ctx = canvas.getContext("2d")
-    //         ctx?.drawImage(sourceImage, 0, 0, 280, 300)
-    //         element.download = "logo.png"
-    //         element.href = canvas.toDataURL("image/png")
-    //         element.click()
-    //         element.remove()
-    //     }
-    //     sourceImage.src = image
-    // }
-    // const downloadSVG = () => {
-    //     const node = document.querySelector("#image-logo")?.cloneNode(true)
-    //     if (!node) {
-    //         return
-    //     }
-    //     // const defs = document.createElement("defs")
-    //     // const style = document.createElement("style")
-    //     // style.innerHTML = `
-    //     //         @import url("${generateUrlForFont(fonts[0])}");
-    //     //         @import url("${generateUrlForFont(fonts[1])}");
-    //     // `
-    //     // node.firstChild?.appendChild(style)
-    //     const svg = (node as Element).innerHTML
-    //     const blob = new Blob([svg.toString()])
-    //     const element = document.createElement("a")
-    //     element.download = "logo.svg"
-    //     element.href = window.URL.createObjectURL(blob)
-    //     element.click()
-    //     element.remove()
-    // }
     return (react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("div", { className: classnames__WEBPACK_IMPORTED_MODULE_1___default()("download-button", props === null || props === void 0 ? void 0 : props.className) },
         react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("button", { onClick: () => {
                 if (props.downloadLink) {
@@ -47991,6 +47935,76 @@ const DownloadButton = (props) => {
             react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("span", null, "Download"))));
 };
 /* harmony default export */ __webpack_exports__["default"] = (DownloadButton);
+// const fonts = [
+//     UIStore.useState((s) => s.title.style.fontFamily),
+//     UIStore.useState((s) => s.slogan.style.fontFamily),
+// ]
+// const downloadSVGasPNG = () => {
+//     const svg = document.querySelector("#image-logo")?.childNodes[0]
+//     if (!svg) {
+//         return
+//     }
+//     const xml = new XMLSerializer().serializeToString(svg)
+//     const svg64 = btoa(xml)
+//     const image = "data:image/svg+xml;base64," + svg64
+//     const element = document.createElement("a")
+//     const sourceImage = new Image()
+//     sourceImage.onload = () => {
+//         console.log("Load")
+//         const canvas = document.createElement("canvas")
+//         canvas.height = 280
+//         canvas.width = 300
+//         const ctx = canvas.getContext("2d")
+//         ctx?.drawImage(sourceImage, 0, 0, 280, 300)
+//         element.download = "logo.png"
+//         element.href = canvas.toDataURL("image/png")
+//         element.click()
+//         element.remove()
+//     }
+//     sourceImage.src = image
+// }
+// const downloadSVG = () => {
+//     const node = document.querySelector("#image-logo")?.cloneNode(true)
+//     if (!node) {
+//         return
+//     }
+//     // const defs = document.createElement("defs")
+//     // const style = document.createElement("style")
+//     // style.innerHTML = `
+//     //         @import url("${generateUrlForFont(fonts[0])}");
+//     //         @import url("${generateUrlForFont(fonts[1])}");
+//     // `
+//     // node.firstChild?.appendChild(style)
+//     const svg = (node as Element).innerHTML
+//     const blob = new Blob([svg.toString()])
+//     const element = document.createElement("a")
+//     element.download = "logo.svg"
+//     element.href = window.URL.createObjectURL(blob)
+//     element.click()
+//     element.remove()
+// }
+/* <a
+            target="_blank"
+            rel="noreferrer"
+            download="LogoMakerExport.zip"
+            href={props.downloadLink || " "}
+            onClick={() => {
+                const logoSVG = document
+                    .querySelector("#image-logo svg")
+                    ?.cloneNode(true) as SVGElement
+                if (logoSVG) {
+                    // downloadAsZipFromSVGviaClick(logoSVG, ["png"], true)
+                    ReactGA.event({
+                        category: "Logo Maker Creator",
+                        action: "Click to download",
+                        label: "Download",
+                        value: 1,
+                    })
+                }
+            }}
+        >
+            <span>Download</span>
+        </a> */ 
 
 
 /***/ }),
@@ -48103,7 +48117,7 @@ const SelectColor = () => {
                 });
                 break;
         }
-        // before send it to store, check if the value is a valid hex color
+        // before send it to the store, check if the value is a valid hex color
         // reference: https://stackoverflow.com/questions/8027423/how-to-check-if-a-string-is-a-valid-hex-color-representation/8027444
         // check it on: https://regexr.com/
         if (/^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$/i.test(value)) {
@@ -48325,23 +48339,23 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+const fontOptions = _assets_fonts_index__WEBPACK_IMPORTED_MODULE_2__["fontsList"].map((font) => ({
+    value: font,
+    label: font,
+}));
+const titleSizeOptions = [...Array(35).keys()]
+    .map((size) => size + 20)
+    .map((size) => ({
+    value: size,
+    label: size.toString(),
+}));
+const sloganSizeOptions = [...Array(35).keys()]
+    .map((size) => size + 12)
+    .map((size) => ({
+    value: size,
+    label: size.toString(),
+}));
 const SelectTypography = () => {
-    const fontOptions = _assets_fonts_index__WEBPACK_IMPORTED_MODULE_2__["fontsList"].map((font) => ({
-        value: font,
-        label: font,
-    }));
-    const titleSizeOptions = [...Array(35).keys()]
-        .map((size) => size + 20)
-        .map((size) => ({
-        value: size,
-        label: size.toString(),
-    }));
-    const sloganSizeOptions = [...Array(35).keys()]
-        .map((size) => size + 12)
-        .map((size) => ({
-        value: size,
-        label: size.toString(),
-    }));
     const onTitleTextChange = (value) => {
         _stores_UIStore__WEBPACK_IMPORTED_MODULE_3__["default"].update((s) => {
             s.title.text = value;
@@ -48410,399 +48424,22 @@ const SelectTypography = () => {
 
 /***/ }),
 
-/***/ "./src/engine/alignFunctions.ts":
-/*!**************************************!*\
-  !*** ./src/engine/alignFunctions.ts ***!
-  \**************************************/
-/*! exports provided: alignLogoTop, alignLogoLeft, alignLogoRight */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "alignLogoTop", function() { return alignLogoTop; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "alignLogoLeft", function() { return alignLogoLeft; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "alignLogoRight", function() { return alignLogoRight; });
-/* harmony import */ var _svgdotjs_svg_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @svgdotjs/svg.js */ "./node_modules/.pnpm/@svgdotjs/svg.js@3.0.16/node_modules/@svgdotjs/svg.js/dist/svg.esm.js");
-/* harmony import */ var _settings__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./settings */ "./src/engine/settings.ts");
-
-
-const autoScallingFactor = 1.3;
-const marginFactor = 0.7;
-const alignLogoTop = (props, draw) => {
-    const { logo, title, slogan } = props;
-    /*
-          Add the logo's SVG
-    */
-    const logoSVG = Object(_svgdotjs_svg_js__WEBPACK_IMPORTED_MODULE_0__["SVG"])().addTo(draw).svg(logo.src.svg);
-    const svgRawDim = logoSVG.bbox(); // get the natural dimension to calculate the viewbox
-    logoSVG
-        .viewbox(0, 0, svgRawDim.width + 4, svgRawDim.height + 4)
-        .size(logo.width, logo.height)
-        .css("fill", logo.style.fill);
-    const logoDim = {
-        height: _settings__WEBPACK_IMPORTED_MODULE_1__["settings"].logo.margins.top + logo.height + _settings__WEBPACK_IMPORTED_MODULE_1__["settings"].logo.margins.bottom,
-        width: _settings__WEBPACK_IMPORTED_MODULE_1__["settings"].logo.margins.left + logo.width + _settings__WEBPACK_IMPORTED_MODULE_1__["settings"].logo.margins.bottom,
-    };
-    /*
-           Add the title's SVG
-       */
-    const titleSVG = draw
-        .text(title.text)
-        .font({
-        fill: title.style.color,
-        family: title.style.fontFamily,
-        size: title.style.fontSize + "px",
-        weight: "400",
-    })
-        .leading(1)
-        .move(0, 0);
-    // console.log(titleSVG.bbox(), titleSVG.rbox())
-    titleSVG.leading(0);
-    let titleDim;
-    if (props.title.text === "") {
-        titleDim = {
-            width: 0,
-            height: 0,
-        };
-    }
-    else {
-        titleDim = {
-            height: _settings__WEBPACK_IMPORTED_MODULE_1__["settings"].title.margins.top + titleSVG.bbox().height + _settings__WEBPACK_IMPORTED_MODULE_1__["settings"].title.margins.bottom,
-            width: _settings__WEBPACK_IMPORTED_MODULE_1__["settings"].title.margins.left + titleSVG.bbox().width + _settings__WEBPACK_IMPORTED_MODULE_1__["settings"].title.margins.bottom,
-        };
-    }
-    // console.log(titleSVG.bbox())
-    /*
-           Add the slogan's SVG
-       */
-    const sloganSVG = draw
-        .text(slogan.text)
-        .font({
-        fill: slogan.style.color,
-        family: slogan.style.fontFamily,
-        size: slogan.style.fontSize + "px",
-        weight: "400",
-    })
-        .leading(1)
-        .move(0, 0);
-    sloganSVG.leading(0);
-    let sloganDim;
-    if (props.slogan.text === "") {
-        sloganDim = {
-            width: 0,
-            height: 0,
-        };
-    }
-    else {
-        sloganDim = {
-            height: _settings__WEBPACK_IMPORTED_MODULE_1__["settings"].slogan.margins.top +
-                sloganSVG.bbox().height +
-                _settings__WEBPACK_IMPORTED_MODULE_1__["settings"].slogan.margins.bottom,
-            width: _settings__WEBPACK_IMPORTED_MODULE_1__["settings"].slogan.margins.left +
-                sloganSVG.bbox().width +
-                _settings__WEBPACK_IMPORTED_MODULE_1__["settings"].slogan.margins.bottom,
-        };
-    }
-    /*
-           Align the elements
-       */
-    // the elements are vertically stacked,
-    // so the width of the container is equal with the width of the largest element
-    // and the height is the sum of all the element's height
-    const widthContainer = Math.max(logoDim.width, titleDim.width, sloganDim.width);
-    const heightContainer = logoDim.height + titleDim.height + sloganDim.height; // logo.height + titleDim.height + sloganDim.height
-    const cx = widthContainer / 2;
-    const cy = heightContainer / 2;
-    logoSVG.move(cx - logoDim.width / 2, 0);
-    titleSVG.move(cx - titleDim.width / 2, logoDim.height);
-    sloganSVG.move(cx - sloganDim.width / 2, logoDim.height + titleDim.height);
-    const currentViewBox = draw.viewbox();
-    // AUTOSCAllING
-    // check if the current element occupy more than the initial size of the viewbox
-    draw.viewbox(0, 0, currentViewBox.width * marginFactor < widthContainer
-        ? widthContainer * autoScallingFactor
-        : currentViewBox.width, currentViewBox.height * marginFactor < heightContainer
-        ? heightContainer * autoScallingFactor
-        : currentViewBox.height);
-    return {
-        containerPos: {
-            x: 0,
-            y: 0,
-            cx,
-            cy,
-            width: widthContainer,
-            height: heightContainer,
-        },
-        containerElems: {
-            logoSVG,
-            titleSVG,
-            sloganSVG,
-        },
-    };
-};
-const alignLogoLeft = (props, draw) => {
-    const { logo, title, slogan } = props;
-    /*
-          Add the logo's SVG
-    */
-    const logoSVG = Object(_svgdotjs_svg_js__WEBPACK_IMPORTED_MODULE_0__["SVG"])().addTo(draw).svg(logo.src.svg);
-    const svgRawDim = logoSVG.bbox(); // get the natural dimension to calculate the viewbox
-    logoSVG
-        .viewbox(0, 0, svgRawDim.width + 4, svgRawDim.height + 4)
-        .size(logo.width, logo.height)
-        .css("fill", logo.style.fill);
-    const logoDim = {
-        height: _settings__WEBPACK_IMPORTED_MODULE_1__["settings"].logo.margins.top + logo.height + _settings__WEBPACK_IMPORTED_MODULE_1__["settings"].logo.margins.bottom,
-        width: _settings__WEBPACK_IMPORTED_MODULE_1__["settings"].logo.margins.left + logo.width + _settings__WEBPACK_IMPORTED_MODULE_1__["settings"].logo.margins.bottom,
-    };
-    /*
-          Add the title's SVG
-      */
-    const titleSVG = draw
-        .text(title.text)
-        .font({
-        fill: title.style.color,
-        family: title.style.fontFamily,
-        size: title.style.fontSize,
-        weight: "400",
-    })
-        .leading(1)
-        .move(0, 0);
-    titleSVG.leading(0);
-    let titleDim;
-    if (props.title.text === "") {
-        titleDim = {
-            width: 0,
-            height: 0,
-        };
-    }
-    else {
-        titleDim = {
-            height: _settings__WEBPACK_IMPORTED_MODULE_1__["settings"].title.margins.top + titleSVG.bbox().height + _settings__WEBPACK_IMPORTED_MODULE_1__["settings"].title.margins.bottom,
-            width: _settings__WEBPACK_IMPORTED_MODULE_1__["settings"].title.margins.left + titleSVG.bbox().width + _settings__WEBPACK_IMPORTED_MODULE_1__["settings"].title.margins.bottom,
-        };
-    }
-    /*
-           Add the slogan's SVG
-       */
-    const sloganSVG = draw
-        .text(slogan.text)
-        .font({
-        fill: slogan.style.color,
-        family: slogan.style.fontFamily,
-        size: slogan.style.fontSize + "px",
-        weight: "400",
-    })
-        .leading(1)
-        .move(0, 0);
-    sloganSVG.leading(0);
-    let sloganDim;
-    if (props.slogan.text === "") {
-        sloganDim = {
-            width: 0,
-            height: 0,
-        };
-    }
-    else {
-        sloganDim = {
-            height: _settings__WEBPACK_IMPORTED_MODULE_1__["settings"].slogan.margins.top +
-                sloganSVG.bbox().height +
-                _settings__WEBPACK_IMPORTED_MODULE_1__["settings"].slogan.margins.bottom,
-            width: _settings__WEBPACK_IMPORTED_MODULE_1__["settings"].slogan.margins.left +
-                sloganSVG.bbox().width +
-                _settings__WEBPACK_IMPORTED_MODULE_1__["settings"].slogan.margins.bottom,
-        };
-    }
-    // the elements are vertically stacked,
-    // so the width of the container is equal with the width of the largest element
-    // and the height is the sum of all the element's height
-    const widthContainer = logo.width + Math.max(titleDim.width, sloganDim.width);
-    const heightContainer = Math.max(logo.height, titleDim.height + sloganDim.height);
-    const cx = widthContainer / 2;
-    const cy = heightContainer / 2;
-    // Calculate the dimension for the box that contains the title and the slogan
-    const textContainerWidth = Math.max(titleDim.width, sloganDim.width) +
-        _settings__WEBPACK_IMPORTED_MODULE_1__["settings"].textContainer.margins.left +
-        _settings__WEBPACK_IMPORTED_MODULE_1__["settings"].textContainer.margins.right;
-    // const textContainerHeight =
-    //     titleDim.height +
-    //     sloganDim.height +
-    //     settings.textContainer.margins.top +
-    //     settings.textContainer.margins.bottom
-    const ctx = textContainerWidth / 2;
-    // const cty = textContainerHeight / 2
-    // Move elements to their position
-    logoSVG.move(0, cy - logoDim.height / 2);
-    titleSVG.move(logoDim.width + ctx - titleDim.width / 2, cy - titleDim.height / 2);
-    sloganSVG.move(logoDim.width + ctx - sloganDim.width / 2, cy + titleDim.height / 2 // + sloganDim.height / 2
-    );
-    // AUTOSCAllING
-    // check if the current element occupy more than the initial size of the viewbox
-    const currentViewBox = draw.viewbox();
-    draw.viewbox(0, 0, currentViewBox.width * marginFactor < widthContainer
-        ? widthContainer * autoScallingFactor
-        : currentViewBox.width, currentViewBox.height * marginFactor < heightContainer
-        ? heightContainer * autoScallingFactor
-        : currentViewBox.height);
-    return {
-        containerPos: {
-            x: 0,
-            y: 0,
-            cx,
-            cy,
-            width: widthContainer,
-            height: heightContainer,
-        },
-        containerElems: {
-            logoSVG,
-            titleSVG,
-            sloganSVG,
-        },
-    };
-};
-const alignLogoRight = (props, draw) => {
-    const { logo, title, slogan } = props;
-    /*
-          Add the logo's SVG
-    */
-    const logoSVG = Object(_svgdotjs_svg_js__WEBPACK_IMPORTED_MODULE_0__["SVG"])().addTo(draw).svg(logo.src.svg);
-    const svgRawDim = logoSVG.bbox(); // get the natural dimension to calculate the viewbox
-    logoSVG
-        .viewbox(0, 0, svgRawDim.width + 4, svgRawDim.height + 4)
-        .size(logo.width, logo.height)
-        .css("fill", logo.style.fill);
-    const logoDim = {
-        height: _settings__WEBPACK_IMPORTED_MODULE_1__["settings"].logo.margins.top + logo.height + _settings__WEBPACK_IMPORTED_MODULE_1__["settings"].logo.margins.bottom,
-        width: _settings__WEBPACK_IMPORTED_MODULE_1__["settings"].logo.margins.left + logo.width + _settings__WEBPACK_IMPORTED_MODULE_1__["settings"].logo.margins.bottom,
-    };
-    /*
-          Add the title's SVG
-      */
-    const titleSVG = draw
-        .text(title.text)
-        .font({
-        fill: title.style.color,
-        family: title.style.fontFamily,
-        size: title.style.fontSize,
-        weight: "400",
-    })
-        .leading(1)
-        .move(0, 0);
-    titleSVG.leading(0);
-    let titleDim;
-    if (props.title.text === "") {
-        titleDim = {
-            width: 0,
-            height: 0,
-        };
-    }
-    else {
-        titleDim = {
-            height: _settings__WEBPACK_IMPORTED_MODULE_1__["settings"].title.margins.top + titleSVG.bbox().height + _settings__WEBPACK_IMPORTED_MODULE_1__["settings"].title.margins.bottom,
-            width: _settings__WEBPACK_IMPORTED_MODULE_1__["settings"].title.margins.left + titleSVG.bbox().width + _settings__WEBPACK_IMPORTED_MODULE_1__["settings"].title.margins.bottom,
-        };
-    }
-    /*
-           Add the slogan's SVG
-       */
-    const sloganSVG = draw
-        .text(slogan.text)
-        .font({
-        fill: slogan.style.color,
-        family: slogan.style.fontFamily,
-        size: slogan.style.fontSize + "px",
-        weight: "400",
-    })
-        .leading(1)
-        .move(0, 0);
-    sloganSVG.leading(0);
-    let sloganDim;
-    if (props.slogan.text === "") {
-        sloganDim = {
-            width: 0,
-            height: 0,
-        };
-    }
-    else {
-        sloganDim = {
-            height: _settings__WEBPACK_IMPORTED_MODULE_1__["settings"].slogan.margins.top +
-                sloganSVG.bbox().height +
-                _settings__WEBPACK_IMPORTED_MODULE_1__["settings"].slogan.margins.bottom,
-            width: _settings__WEBPACK_IMPORTED_MODULE_1__["settings"].slogan.margins.left +
-                sloganSVG.bbox().width +
-                _settings__WEBPACK_IMPORTED_MODULE_1__["settings"].slogan.margins.bottom,
-        };
-    }
-    // the elements are vertically stacked,
-    // so the width of the container is equal with the width of the largest element
-    // and the height is the sum of all the element's height
-    const widthContainer = logo.width + Math.max(titleDim.width, sloganDim.width);
-    const heightContainer = Math.max(logoDim.height, titleDim.height + sloganDim.height);
-    const cx = widthContainer / 2;
-    const cy = heightContainer / 2;
-    const textContainerWidth = Math.max(titleDim.width, sloganDim.width) +
-        _settings__WEBPACK_IMPORTED_MODULE_1__["settings"].textContainer.margins.left +
-        _settings__WEBPACK_IMPORTED_MODULE_1__["settings"].textContainer.margins.right;
-    // const textContainerHeight =
-    //     titleDim.height +
-    //     sloganDim.height +
-    //     settings.textContainer.margins.top +
-    //     settings.textContainer.margins.bottom
-    const ctx = textContainerWidth / 2;
-    // const cty = textContainerHeight / 2
-    logoSVG.move(textContainerWidth, cy - logoDim.height / 2);
-    titleSVG.move(ctx - titleDim.width / 2, cy - titleDim.height / 2);
-    sloganSVG.move(ctx - sloganDim.width / 2, cy + titleDim.height / 2); // + sloganDim.height / 2)
-    const currentViewBox = draw.viewbox();
-    // AUTOSCAllING
-    // check if the current element occupy more than the initial size of the viewbox
-    draw.viewbox(0, 0, currentViewBox.width * marginFactor < widthContainer
-        ? widthContainer * autoScallingFactor
-        : currentViewBox.width, currentViewBox.height * marginFactor < heightContainer
-        ? heightContainer * autoScallingFactor
-        : currentViewBox.height);
-    return {
-        containerPos: {
-            x: 0,
-            y: 0,
-            cx,
-            cy,
-            width: widthContainer,
-            height: heightContainer,
-        },
-        containerElems: {
-            logoSVG,
-            titleSVG,
-            sloganSVG,
-        },
-    };
-};
-
-
-/***/ }),
-
 /***/ "./src/engine/export.ts":
 /*!******************************!*\
   !*** ./src/engine/export.ts ***!
   \******************************/
-/*! exports provided: exportAsSVGfromDOMviaLink, generateCanvasFromSVG, exportImagesfromCANVAS, addToZipFromSVG, createZipWithPresets, downloadAsZipFromSVGviaLink, downloadAsZipFromSVGviaClick, downloadAsZipFromSVGviaLinkBlob */
+/*! exports provided: exportAsSVGfromDOMviaLink, generateCanvasFromSVG, addToZipFromSVG, createZipWithPresets, downloadAsZipFromSVGviaLinkBlob */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "exportAsSVGfromDOMviaLink", function() { return exportAsSVGfromDOMviaLink; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "generateCanvasFromSVG", function() { return generateCanvasFromSVG; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "exportImagesfromCANVAS", function() { return exportImagesfromCANVAS; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "addToZipFromSVG", function() { return addToZipFromSVG; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "createZipWithPresets", function() { return createZipWithPresets; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "downloadAsZipFromSVGviaLink", function() { return downloadAsZipFromSVGviaLink; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "downloadAsZipFromSVGviaClick", function() { return downloadAsZipFromSVGviaClick; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "downloadAsZipFromSVGviaLinkBlob", function() { return downloadAsZipFromSVGviaLinkBlob; });
 /* harmony import */ var jszip__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jszip */ "./node_modules/.pnpm/jszip@3.5.0/node_modules/jszip/dist/jszip.min.js");
 /* harmony import */ var jszip__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jszip__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var file_saver__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! file-saver */ "./node_modules/.pnpm/file-saver@2.0.5/node_modules/file-saver/dist/FileSaver.min.js");
-/* harmony import */ var file_saver__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(file_saver__WEBPACK_IMPORTED_MODULE_1__);
-
 
 function exportAsSVGfromDOMviaLink(svg) {
     const blob = new Blob([svg.outerHTML], { type: "image/svg+xml;charset=utf-8" });
@@ -48826,15 +48463,12 @@ function generateCanvasFromSVG(svg) {
         };
         img.onerror = (ev) => {
             console.log("Image not found", ev);
-            // This will work even in Safari for Mac
+            // This will work even in Safari for Mac & iOS
             img.src = "data:image/svg+xml," + svg.outerHTML;
         };
         img.src = exportAsSVGfromDOMviaLink(svg);
     });
     // return canvas
-}
-function exportImagesfromCANVAS(canvas, format) {
-    return canvas.toDataURL(`image/${format}`);
 }
 function getBase64String(dataURL) {
     const idx = dataURL.indexOf("base64,") + "base64,".length;
@@ -48845,7 +48479,7 @@ async function addToZipFromSVG(svg, zip, formats, includeSVG) {
     const canvas = await generateCanvasFromSVG(svg);
     const imgs = formats.map((f) => ({
         ext: f,
-        dataURL: exportImagesfromCANVAS(canvas, f),
+        dataURL: canvas.toDataURL(`image/${f}`),
     }));
     imgs.forEach((img) => {
         zip === null || zip === void 0 ? void 0 : zip.file(`${svg.getAttribute("name") || "logo"}.${img.ext}`, getBase64String(img.dataURL), { base64: true });
@@ -48855,17 +48489,6 @@ async function addToZipFromSVG(svg, zip, formats, includeSVG) {
     }
     return zip;
 }
-// export async function exportAsZipFromSVGviaLink(
-//     svg: SVGElement,
-//     formats: ("png" | "jpg" | "webp")[],
-//     includeSVG?: boolean
-// ): Promise<string> {
-//     const zip = await addToZipFromSVG(svg, new JSZip(), formats, includeSVG)
-//     const link = await zip.generateAsync({ type: "blob" }).then((content) => {
-//         return URL.createObjectURL(content)
-//     })
-//     return link
-// }
 const presetsFormat = [
     {
         name: "default_765x625",
@@ -48980,27 +48603,42 @@ async function createZipWithPresets(svg, formats, includeSVG) {
     }
     return zip;
 }
-async function downloadAsZipFromSVGviaLink(svg, formats, includeSVG) {
-    const zip = await createZipWithPresets(svg, formats, includeSVG);
-    const content = await zip.generateAsync({ type: "base64", mimeType: "application/zip" });
-    return "data:application/zip; Content-disposition: attachment; base64," + content;
-}
-async function downloadAsZipFromSVGviaClick(svg, formats, includeSVG) {
-    // addToZipFromSVG(svg, new JSZip(), formats, includeSVG).then((zip) =>
-    //     zip.generateAsync({ type: "blob" }).then((content) => {
-    //         FileSaver.saveAs(content, "logos")
-    //     })
-    // )
-    const zip = await createZipWithPresets(svg, formats, includeSVG);
-    zip.generateAsync({ type: "blob", mimeType: "application/zip" }).then((content) => {
-        file_saver__WEBPACK_IMPORTED_MODULE_1___default.a.saveAs(content, "LogoMakerExport");
-    });
-}
 async function downloadAsZipFromSVGviaLinkBlob(svg, formats, includeSVG) {
     const zip = await createZipWithPresets(svg, formats, includeSVG);
     const blob = await zip.generateAsync({ type: "blob", mimeType: "application/zip" });
     return URL.createObjectURL(blob);
 }
+// Legacy & For reference
+// export async function exportAsZipFromSVGviaLink(
+//     svg: SVGElement,
+//     formats: ("png" | "jpg" | "webp")[],
+//     includeSVG?: boolean
+// ): Promise<string> {
+//     const zip = await addToZipFromSVG(svg, new JSZip(), formats, includeSVG)
+//     const link = await zip.generateAsync({ type: "blob" }).then((content) => {
+//         return URL.createObjectURL(content)
+//     })
+//     return link
+// }
+// export async function downloadAsZipFromSVGviaLink(
+//     svg: SVGElement,
+//     formats: ("png" | "jpg" | "webp")[],
+//     includeSVG?: boolean
+// ): Promise<string> {
+//     const zip = await createZipWithPresets(svg, formats, includeSVG)
+//     const content = await zip.generateAsync({ type: "base64", mimeType: "application/zip" })
+//     return "data:application/zip; Content-disposition: attachment; base64," + content
+// }
+// export async function downloadAsZipFromSVGviaClick(
+//     svg: SVGElement,
+//     formats: ("png" | "jpg" | "webp")[],
+//     includeSVG?: boolean
+// ): Promise<void> {
+//     const zip = await createZipWithPresets(svg, formats, includeSVG)
+//     zip.generateAsync({ type: "blob", mimeType: "application/zip" }).then((content) => {
+//         FileSaver.saveAs(content, "LogoMakerExport")
+//     })
+// }
 
 
 /***/ }),
@@ -49079,34 +48717,201 @@ const settings = {
 
 /***/ }),
 
-/***/ "./src/engine/utility.ts":
-/*!*******************************!*\
-  !*** ./src/engine/utility.ts ***!
-  \*******************************/
-/*! exports provided: moveToCenter */
+/***/ "./src/engine/shapesAligner.ts":
+/*!*************************************!*\
+  !*** ./src/engine/shapesAligner.ts ***!
+  \*************************************/
+/*! exports provided: autoscallingBaseShapes, alignLogoTop, alignLogoLeft, alignLogoRight, alignShapesToCenter */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "moveToCenter", function() { return moveToCenter; });
-const moveToCenter = (draw, viewbox, container) => {
-    // Compute the center
-    const { logoSVG, titleSVG, sloganSVG } = container.containerElems;
-    // check if the svg has scaled
-    const currentViewBox = draw.viewbox();
-    const viewboxWidth = currentViewBox.width; // Math.max(viewbox.width, currentViewBox.width)
-    const viewboxHeight = currentViewBox.height; // Math.max(viewbox.height, currentViewBox.height)
-    const xOffsetToCenter = viewboxWidth / 2 - container.containerPos.cx;
-    const yOffsetToCenter = viewboxHeight / 2 - container.containerPos.cy;
-    // Apply the relocation
-    logoSVG.center(logoSVG.cx() + xOffsetToCenter, logoSVG.cy() + yOffsetToCenter);
-    titleSVG.center(titleSVG.cx() + xOffsetToCenter, titleSVG.cy() + yOffsetToCenter);
-    sloganSVG.center(sloganSVG.cx() + xOffsetToCenter, sloganSVG.cy() + yOffsetToCenter);
-    return container.containerElems;
-};
-// export const addEmbeddedFont = (draw: Svg, font: string): void => {
-//     draw.font(font,`url("${generateUrlForFonts([font])}")`)
-// }
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "autoscallingBaseShapes", function() { return autoscallingBaseShapes; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "alignLogoTop", function() { return alignLogoTop; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "alignLogoLeft", function() { return alignLogoLeft; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "alignLogoRight", function() { return alignLogoRight; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "alignShapesToCenter", function() { return alignShapesToCenter; });
+/* harmony import */ var _settings__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./settings */ "./src/engine/settings.ts");
+
+function calculateDimesionsForBaseShape(shapes) {
+    const { logo, title, slogan } = shapes;
+    // Calculate the dimensions for the shapes, including the settings 
+    const logoDim = {
+        height: _settings__WEBPACK_IMPORTED_MODULE_0__["settings"].logo.margins.top + logo.height() + _settings__WEBPACK_IMPORTED_MODULE_0__["settings"].logo.margins.bottom,
+        width: _settings__WEBPACK_IMPORTED_MODULE_0__["settings"].logo.margins.left + logo.width() + _settings__WEBPACK_IMPORTED_MODULE_0__["settings"].logo.margins.bottom,
+    };
+    let titleDim;
+    if (title.length() > 0) {
+        titleDim = {
+            height: _settings__WEBPACK_IMPORTED_MODULE_0__["settings"].title.margins.top + title.bbox().height + _settings__WEBPACK_IMPORTED_MODULE_0__["settings"].title.margins.bottom,
+            width: _settings__WEBPACK_IMPORTED_MODULE_0__["settings"].title.margins.left + title.bbox().width + _settings__WEBPACK_IMPORTED_MODULE_0__["settings"].title.margins.bottom,
+        };
+    }
+    else {
+        titleDim = {
+            width: 0,
+            height: 0,
+        };
+    }
+    let sloganDim;
+    if (slogan.length() > 0) {
+        sloganDim = {
+            height: _settings__WEBPACK_IMPORTED_MODULE_0__["settings"].slogan.margins.top + slogan.bbox().height + _settings__WEBPACK_IMPORTED_MODULE_0__["settings"].slogan.margins.bottom,
+            width: _settings__WEBPACK_IMPORTED_MODULE_0__["settings"].slogan.margins.left + slogan.bbox().width + _settings__WEBPACK_IMPORTED_MODULE_0__["settings"].slogan.margins.bottom,
+        };
+    }
+    else {
+        sloganDim = {
+            width: 0,
+            height: 0,
+        };
+    }
+    return {
+        logoDim,
+        titleDim,
+        sloganDim
+    };
+}
+function autoscallingBaseShapes(parent, containerWidth, containerHeight) {
+    const autoScallingFactor = 1.3;
+    const marginSize = 0.2; // percentage
+    const currentViewBox = parent.viewbox();
+    parent.viewbox(0, 0, Math.max(currentViewBox.width * (1 + marginSize), containerWidth * (1 + marginSize)), Math.max(currentViewBox.height * (1 + marginSize), containerHeight * (1 + marginSize)));
+}
+function alignLogoTop(shapes) {
+    const { logo, title, slogan } = shapes;
+    const { logoDim, titleDim, sloganDim } = calculateDimesionsForBaseShape(shapes);
+    // the elements are vertically stacked,
+    // so the width of the container is equal with the width of the largest element
+    // and the height is the sum of all the element's height
+    const containerWidth = Math.max(logoDim.width, titleDim.width, sloganDim.width);
+    const containerHeight = logoDim.height + titleDim.height + sloganDim.height; // logo.height + titleDim.height + sloganDim.height
+    const cx = containerWidth / 2;
+    // const cy = containerHeight / 2
+    logo.move(cx - logoDim.width / 2, 0);
+    title.move(cx - titleDim.width / 2, logoDim.height);
+    slogan.move(cx - sloganDim.width / 2, logoDim.height + titleDim.height);
+    return {
+        containerHeight,
+        containerWidth
+    };
+}
+function alignLogoLeft(shapes) {
+    const { logo, title, slogan } = shapes;
+    const { logoDim, titleDim, sloganDim } = calculateDimesionsForBaseShape(shapes);
+    // Calculate the dimension for the box that contains the title and the slogan
+    const textContainerWidth = Math.max(titleDim.width, sloganDim.width) +
+        _settings__WEBPACK_IMPORTED_MODULE_0__["settings"].textContainer.margins.left +
+        _settings__WEBPACK_IMPORTED_MODULE_0__["settings"].textContainer.margins.right;
+    const textContainerHeight = titleDim.height +
+        sloganDim.height +
+        _settings__WEBPACK_IMPORTED_MODULE_0__["settings"].textContainer.margins.top +
+        _settings__WEBPACK_IMPORTED_MODULE_0__["settings"].textContainer.margins.bottom;
+    // the elements are vertically stacked,
+    // so the width of the container is equal with the width of the largest element
+    // and the height is the sum of all the element's height
+    const containerHeight = Math.max(logoDim.height, textContainerHeight);
+    const containerWidth = logoDim.width + textContainerWidth;
+    // const cx = containerWidth / 2
+    const cy = containerHeight / 2;
+    const ctx = textContainerWidth / 2;
+    // const cty = textContainerHeight / 2
+    // Move elements to their position
+    logo.move(0, cy - logoDim.height / 2);
+    title.move(logoDim.width + ctx - titleDim.width / 2, cy - titleDim.height / 2);
+    slogan.move(logoDim.width + ctx - sloganDim.width / 2, cy + titleDim.height / 2 // + sloganDim.height / 2
+    );
+    return {
+        containerHeight,
+        containerWidth
+    };
+}
+function alignLogoRight(shapes) {
+    const { logo, title, slogan } = shapes;
+    const { logoDim, titleDim, sloganDim } = calculateDimesionsForBaseShape(shapes);
+    // Calculate the dimension for the box that contains the title and the slogan
+    const textContainerWidth = Math.max(titleDim.width, sloganDim.width) +
+        _settings__WEBPACK_IMPORTED_MODULE_0__["settings"].textContainer.margins.left +
+        _settings__WEBPACK_IMPORTED_MODULE_0__["settings"].textContainer.margins.right;
+    const textContainerHeight = titleDim.height +
+        sloganDim.height +
+        _settings__WEBPACK_IMPORTED_MODULE_0__["settings"].textContainer.margins.top +
+        _settings__WEBPACK_IMPORTED_MODULE_0__["settings"].textContainer.margins.bottom;
+    // the elements are vertically stacked,
+    // so the width of the container is equal with the width of the largest element
+    // and the height is the sum of all the element's height
+    const containerHeight = Math.max(logoDim.height, textContainerHeight);
+    const containerWidth = logoDim.width + textContainerWidth;
+    const cx = containerWidth / 2;
+    const cy = containerHeight / 2;
+    const ctx = textContainerWidth / 2;
+    // const cty = textContainerHeight / 2
+    logo.move(textContainerWidth, cy - logoDim.height / 2);
+    title.move(ctx - titleDim.width / 2, cy - titleDim.height / 2);
+    slogan.move(ctx - sloganDim.width / 2, cy + titleDim.height / 2); // + sloganDim.height / 2)
+    return {
+        containerHeight,
+        containerWidth
+    };
+}
+function alignShapesToCenter(parent, shapes, properties) {
+    const { logo, title, slogan } = shapes;
+    const currentViewBox = parent.viewbox();
+    const xOffsetToCenter = currentViewBox.width / 2 - properties.containerWidth / 2;
+    const yOffsetToCenter = currentViewBox.height / 2 - properties.containerHeight / 2;
+    logo.center(logo.cx() + xOffsetToCenter, logo.cy() + yOffsetToCenter);
+    title.center(title.cx() + xOffsetToCenter, title.cy() + yOffsetToCenter);
+    slogan.center(slogan.cx() + xOffsetToCenter, slogan.cy() + yOffsetToCenter);
+}
+
+
+/***/ }),
+
+/***/ "./src/engine/shapesBuilder.ts":
+/*!*************************************!*\
+  !*** ./src/engine/shapesBuilder.ts ***!
+  \*************************************/
+/*! exports provided: buildDefaultShapes */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "buildDefaultShapes", function() { return buildDefaultShapes; });
+/* harmony import */ var _svgdotjs_svg_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @svgdotjs/svg.js */ "./node_modules/.pnpm/@svgdotjs/svg.js@3.0.16/node_modules/@svgdotjs/svg.js/dist/svg.esm.js");
+
+function buildDefaultShapes(parent, componentsProps) {
+    const { logo: pLogo, title: pTitle, slogan: pSlogan } = componentsProps;
+    // Create SVGs
+    const logo = Object(_svgdotjs_svg_js__WEBPACK_IMPORTED_MODULE_0__["SVG"])().addTo(parent).svg(pLogo.src.svg);
+    const title = parent.text(pTitle.text);
+    const slogan = parent.text(pSlogan.text);
+    // Apply other properties
+    logo.viewbox(0, 0, logo.bbox().width + 4, logo.bbox().height + 4)
+        .size(pLogo.width, pLogo.height)
+        .css("fill", pLogo.style.fill);
+    title.font({
+        fill: pTitle.style.color,
+        family: pTitle.style.fontFamily,
+        size: pTitle.style.fontSize + "px",
+        weight: "400",
+    })
+        .leading(0);
+    slogan.font({
+        fill: pSlogan.style.color,
+        family: pSlogan.style.fontFamily,
+        size: pSlogan.style.fontSize + "px",
+        weight: "400",
+    })
+        .leading(0);
+    // Move to an arbitrary position (Optional)
+    title.move(0, 0);
+    slogan.move(0, 0);
+    return {
+        logo,
+        title,
+        slogan
+    };
+}
 
 
 /***/ }),

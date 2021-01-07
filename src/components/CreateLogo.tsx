@@ -1,7 +1,12 @@
 import * as React from "react"
 import { SVG } from "@svgdotjs/svg.js"
-import { moveToCenter } from "../engine/utility"
-import { alignLogoLeft, alignLogoRight, alignLogoTop, autoscallingBaseShapes, alignShapesToCenter } from "../engine/shapesAligner"
+import {
+    alignLogoLeft,
+    alignLogoRight,
+    alignLogoTop,
+    autoscallingBaseShapes,
+    alignShapesToCenter,
+} from "../engine/shapesAligner"
 import { buildDefaultShapes } from "../engine/shapesBuilder"
 import { v4 as uuidv4 } from "uuid"
 import { TLogo, TLogoContainer, TSlogan, TTitle } from "~/src/stores/UIStore"
@@ -59,34 +64,30 @@ const CreateLogo: React.FunctionComponent<CreateLogoPropsComponent> = (
 
             // moveToCenter(draw, container.viewbox, getAlignedLogo())
 
-            let shapes;
-            let alignerProps;
+            let shapes
+            let alignerProps
 
             switch (props.logoProps.container.align) {
                 case "align-top":
                     shapes = buildDefaultShapes(draw, props.logoProps)
                     alignerProps = alignLogoTop(shapes)
-                    break;
+                    break
                 case "align-left":
                     shapes = buildDefaultShapes(draw, props.logoProps)
                     alignerProps = alignLogoLeft(shapes)
-                    break;
+                    break
                 case "align-right":
                     shapes = buildDefaultShapes(draw, props.logoProps)
                     alignerProps = alignLogoRight(shapes)
-                    break;
+                    break
                 default:
-                    console.log(
-                        "Invalid Type. The logo will be aligned top as a fallback option!"
-                    )
+                    console.log("Invalid Type. The logo will be aligned top as a fallback option!")
                     shapes = buildDefaultShapes(draw, props.logoProps)
                     alignerProps = alignLogoTop(shapes)
             }
 
             autoscallingBaseShapes(draw, alignerProps.containerWidth, alignerProps.containerHeight)
             alignShapesToCenter(draw, shapes, alignerProps)
-
-
 
             // addEmbeddedFont(draw, props.logoProps.title.style.fontFamily)
         }

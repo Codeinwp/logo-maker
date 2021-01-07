@@ -3,28 +3,19 @@ import { HashRouter as Router, Switch, Route } from "react-router-dom"
 import { fontsList } from "./assets/fonts"
 import fonts from "./assets/fonts/fonts"
 import "./assets/styles/index.scss"
-// import "./index.css"
-// import "./assets/scss/style.scss"
 import Creator from "./Creator"
 import { generateUrlForFonts } from "./engine/googleFonts"
 import Showcase from "./Showcase"
 import Start from "./Start"
 import { AssetsStore } from "./stores/AssetsStore"
-
 import ReactGA from "react-ga"
-import UIStore from "./stores/UIStore"
-
-
 
 export const Application: React.FunctionComponent<unknown> = () => {
-
     React.useEffect(() => {
         if (window.logomaker?.googleAnalyticsCode) {
             ReactGA.initialize(window.logomaker.googleAnalyticsCode)
             ReactGA.set({ anonymizeIp: true })
         }
-
-
 
         // WebFont.load({
         //     google: {

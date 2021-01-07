@@ -3,26 +3,26 @@ import Select from "react-select"
 import { fontsList as fonts } from "../../assets/fonts/index"
 import UIStore from "../../stores/UIStore"
 
-const SelectTypography: React.FunctionComponent<unknown> = () => {
-    const fontOptions = fonts.map((font) => ({
-        value: font,
-        label: font,
+const fontOptions = fonts.map((font) => ({
+    value: font,
+    label: font,
+}))
+
+const titleSizeOptions = [...Array(35).keys()]
+    .map((size) => size + 20)
+    .map((size) => ({
+        value: size,
+        label: size.toString(),
     }))
 
-    const titleSizeOptions = [...Array(35).keys()]
-        .map((size) => size + 20)
-        .map((size) => ({
-            value: size,
-            label: size.toString(),
-        }))
+const sloganSizeOptions = [...Array(35).keys()]
+    .map((size) => size + 12)
+    .map((size) => ({
+        value: size,
+        label: size.toString(),
+    }))
 
-    const sloganSizeOptions = [...Array(35).keys()]
-        .map((size) => size + 12)
-        .map((size) => ({
-            value: size,
-            label: size.toString(),
-        }))
-
+const SelectTypography: React.FunctionComponent<unknown> = () => {
     const onTitleTextChange = (value: string) => {
         UIStore.update((s) => {
             s.title.text = value

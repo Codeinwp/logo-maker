@@ -12,7 +12,7 @@ import Logo10 from "./logo10"
 // Export a obejct with all the logos
 // Useful for importing only some specific logos
 export { Logo1, Logo2, Logo3, Logo4, Logo5, Logo6, Logo7, Logo8, Logo9, Logo10 }
-export const logosObj = {Logo1, Logo2, Logo3, Logo4, Logo5, Logo6, Logo7, Logo8, Logo9, Logo10}
+export const logosObj = { Logo1, Logo2, Logo3, Logo4, Logo5, Logo6, Logo7, Logo8, Logo9, Logo10 }
 
 // Export a list with all the logos
 // Useful for rendering a select input or a preview with all the logos available
