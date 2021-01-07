@@ -130,9 +130,24 @@ const presetsFormat: { name: string; width: number; height: number; isTransparen
         height: 32,
     },
     {
-        name: "instagram_profile_1000x1000",
-        width: 1000,
-        height: 1000,
+        name: "instagram_portrait_1080x1350",
+        width: 1080,
+        height: 1350,
+    },
+    {
+        name: "instagram_photo_1080x1080",
+        width: 1080,
+        height: 1080,
+    },
+    {
+        name: "instagram_landscape_1080x608",
+        width: 1080,
+        height: 608,
+    },
+    {
+        name: "instagram_stories_1080x1920",
+        width: 1080,
+        height: 1920,
     },
     {
         name: "linkedin_profile_1000x1000",
