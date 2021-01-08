@@ -1,14 +1,16 @@
 import * as React from "react"
 import { HashRouter as Router, Switch, Route } from "react-router-dom"
-import { fontsList } from "./assets/fonts"
-import fonts from "./assets/fonts/fonts"
 import "./assets/styles/index.scss"
 import Creator from "./Creator"
-import { generateUrlForFonts } from "./engine/googleFonts"
 import Showcase from "./Showcase"
 import Start from "./Start"
-import { AssetsStore } from "./stores/AssetsStore"
 import ReactGA from "react-ga"
+
+/**
+ * This is the main entry point of the application
+ * 
+ * This component also initializes the Google Analytics library using the global object `window.logomaker.googleAnalyticsCode`
+ */
 
 export const Application: React.FunctionComponent<unknown> = () => {
     React.useEffect(() => {
@@ -43,31 +45,31 @@ export const Application: React.FunctionComponent<unknown> = () => {
         //     },
         // })
 
-        const googleFontsLink = document.createElement("link")
-        googleFontsLink.rel = "stylesheet"
-        googleFontsLink.type = "text/css"
-        googleFontsLink.href = generateUrlForFonts(fonts)
-        googleFontsLink.onerror = () => {
-            console.log("An error occurred loading the Google's fonts stylesheet!")
-        }
+        // const googleFontsLink = document.createElement("link")
+        // googleFontsLink.rel = "stylesheet"
+        // googleFontsLink.type = "text/css"
+        // googleFontsLink.href = generateUrlForFonts(fonts)
+        // googleFontsLink.onerror = () => {
+        //     console.log("An error occurred loading the Google's fonts stylesheet!")
+        // }
 
-        document.querySelector("head")?.appendChild(googleFontsLink)
+        // document.querySelector("head")?.appendChild(googleFontsLink)
 
-        document.fonts.ready.then(() => {
-            // const fontSet = new Set<string>()
+        // document.fonts.ready.then(() => {
+        //     // const fontSet = new Set<string>()
 
-            // // document.fonts.forEach(f => {
-            // //     fontSet.add(f.family)
-            // // });
+        //     // // document.fonts.forEach(f => {
+        //     // //     fontSet.add(f.family)
+        //     // // });
 
-            // for (const f of document.fonts) {
-            //     fontSet.add(f.family)
-            // }
+        //     // for (const f of document.fonts) {
+        //     //     fontSet.add(f.family)
+        //     // }
 
-            AssetsStore.update((s) => {
-                s.fonts.activeFonts = fontsList // Array.from(fontSet)
-            })
-        })
+        //     AssetsStore.update((s) => {
+        //         s.fonts.activeFonts = fontsList // Array.from(fontSet)
+        //     })
+        // })
     }, [])
 
     return (

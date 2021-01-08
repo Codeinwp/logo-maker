@@ -31,8 +31,6 @@ function fillArrayWithRepeat<T>(
     while (_array.length < desiredLength) {
         if (filter(array[index])) {
             _array.push(array[index])
-        } else {
-            console.log("Invalid")
         }
 
         if (index < array.length - 1) {

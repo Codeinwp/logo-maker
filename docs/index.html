@@ -96,6 +96,16 @@
 <span style="color: #795E26">cd</span><span style="color: #000000"> logo-maker</span>
 <span style="color: #000000">yarn install</span>
 </code></pre>
+				<a href="#npm-commmands" id="npm-commmands" style="color: inherit; text-decoration: none;">
+					<h2>Npm Commmands</h2>
+				</a>
+				<p><code>npm run start</code> - start the development server using Snowpack - it&#39;s fast and run separatly from WordPress - use it for prototyping and quick testing</p>
+				<p><code>npm run start-plugin</code> - start the development server in WordPress using Webpack - the project must be in <code>plugin</code> folder and activated - use it for testing the app as block in WordPress</p>
+				<p><code>npm run plugin-build</code> - created an optimased version for the app as a WordPress block</p>
+				<p><code>npm run linux:make-zip</code> - this will start the <code>plugin-build</code> and pack it in a zip file in <code>./development</code> folder - use the zip to install the plugin on stagging site for testing - this will work on system that supports linux environment and command - <strong>must run <code>./delopment/linux_setup.sh</code> for installing the zip command</strong></p>
+				<p><code>npm run gen-docs</code> - generate the docs</p>
+				<p><code>npm run format</code> - format the Typescript file in <code>./src</code> folder using Prettier</p>
+				<p><code>npm run lint</code> - check for issues in the Typescript file in <code>./src</code> folder using EsLint</p>
 				<a href="#recomended-tools" id="recomended-tools" style="color: inherit; text-decoration: none;">
 					<h2>Recomended Tools</h2>
 				</a>
@@ -115,6 +125,7 @@
 									<li>  Gruvbox Minor</li>
 									<li>  Path Intellisense</li>
 									<li>  vscode-icons</li>
+									<li>  Visual Studio IntelliCode</li>
 								</ul>
 							</li>
 						</ul>
