@@ -11,8 +11,18 @@
 		padding: 6px 26px;
 		border-radius: 4px;
 		border: none;
+		text-align: center;
+		cursor: pointer;
+		transition: all 0.5s;
 		&:focus {
 			outline: none;
+		}
+
+		span {
+			cursor: pointer;
+			display: inline-block;
+			position: relative;
+			transition: 0.5s;
 		}
 	}
 

@@ -13,7 +13,7 @@ import SelectLogo from "./components/ui/SelectLogo"
 import SelectTypography from "./components/ui/SelectTypography"
 import classnames from "classnames"
 import "../src/assets/styles/Creator/creator.scss"
-// import { fontsForSvg, fontsList as fL } from "./assets/fonts/index"
+
 import UIStore from "./stores/UIStore"
 import ReactGA from "react-ga"
 import { downloadAsZipFromSVGviaLinkBlob } from "./engine/export"
@@ -23,7 +23,7 @@ type MenuOptions = "logo" | "typography" | "layout" | "colors"
 const Creator: React.FunctionComponent<unknown> = () => {
     const [menuOption, setMenuOption] = React.useState<MenuOptions>("logo")
     const [downloadLink, setDownloadLink] = React.useState<string>("")
-    let store = UIStore.useState()
+    const store = UIStore.useState()
 
     const renderRightSidePanel = () => {
         switch (menuOption) {
@@ -42,20 +42,6 @@ const Creator: React.FunctionComponent<unknown> = () => {
         ReactGA.pageview(window.location.pathname + window.location.hash + window.location.search)
     }, [])
 
-    // React.useEffect(() => {
-    //     // after creating a new link, destroy the previouse one
-    //     const unsubscribeFromRemovingOldURL = ExportStore.subscribe(
-    //         (s) => s.downloadLink,
-    //         (currentLink, states, oldLink) => {
-    //             URL.revokeObjectURL(oldLink) // destroy the previous link or it might fill up the memory
-    //         }
-    //     )
-
-    //     return () => {
-    //         unsubscribeFromRemovingOldURL()
-    //     }
-    // }, [])
-
     React.useEffect(() => {
         async function createLink(): Promise<void> {
             const logoSVG = document.querySelector("#image-logo svg")?.cloneNode(true) as SVGElement
@@ -71,10 +57,9 @@ const Creator: React.FunctionComponent<unknown> = () => {
             }
         }
         createLink()
-    }, [store])
+    }, [downloadLink])
 
     React.useEffect(() => {
-        console.log("Set session")
         sessionStorage.setItem("logo-maker-themeisle", JSON.stringify(store))
     }, [store])
 

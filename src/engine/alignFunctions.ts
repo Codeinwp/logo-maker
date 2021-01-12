@@ -1,3 +1,5 @@
+// LEGACY
+
 import { SVG, Svg } from "@svgdotjs/svg.js"
 import { TLogo, TLogoContainer, TSlogan, TTitle } from "../stores/UIStore"
 import { settings } from "./settings"

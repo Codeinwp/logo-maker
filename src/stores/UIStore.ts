@@ -53,48 +53,50 @@ export type StoreProps = {
     slogan: TSlogan
 }
 
-export const UIStore = new Store<StoreProps>(JSON.parse(sessionStorage.getItem("logo-maker-themeisle") || "null") || {
-    container: {
-        width: 765,
-        height: 625,
-        align: "align-top",
-        viewbox: {
-            x: 0,
-            y: 0,
-            width: 250,
-            height: 250,
+export const UIStore = new Store<StoreProps>(
+    JSON.parse(sessionStorage.getItem("logo-maker-themeisle") || "null") || {
+        container: {
+            width: 765,
+            height: 625,
+            align: "align-top",
+            viewbox: {
+                x: 0,
+                y: 0,
+                width: 250,
+                height: 250,
+            },
+            style: {
+                color: "#ABABCB",
+            },
         },
-        style: {
-            color: "#ABABCB",
-        },
-    },
 
-    logo: {
-        src: Logo1,
-        width: 100,
-        height: 100,
-        style: {
-            fill: "#FFFFFF",
+        logo: {
+            src: Logo1,
+            width: 100,
+            height: 100,
+            style: {
+                fill: "#FFFFFF",
+            },
         },
-    },
 
-    title: {
-        text: "Optimole",
-        style: {
-            color: "#FFFFFF",
-            fontSize: 53,
-            fontFamily: "Helvetica",
+        title: {
+            text: "Optimole",
+            style: {
+                color: "#FFFFFF",
+                fontSize: 53,
+                fontFamily: "Helvetica",
+            },
         },
-    },
 
-    slogan: {
-        text: "An elegant choice",
-        style: {
-            color: "#FFFFFF",
-            fontSize: 24,
-            fontFamily: "Helvetica",
+        slogan: {
+            text: "An elegant choice",
+            style: {
+                color: "#FFFFFF",
+                fontSize: 24,
+                fontFamily: "Helvetica",
+            },
         },
-    },
-})
+    }
+)
 
 export default UIStore

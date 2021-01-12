@@ -16453,7 +16453,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_pnpm_css_loader_5_0_1_webpack_4_44_2_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()(_node_modules_pnpm_css_loader_5_0_1_webpack_4_44_2_node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0___default.a);
 // Module
-___CSS_LOADER_EXPORT___.push([module.i, ".logo-creator {\n  position: static;\n  display: flex;\n  flex-direction: column;\n}\n.logo-creator.logo-maker-container {\n  max-width: 1470px;\n  margin: 15px auto;\n  font-family: \"Noto Sans\", sans-serif;\n}\n@media (max-width: 1440px) {\n  .logo-creator.logo-maker-container {\n    max-width: 90%;\n  }\n}\n@media (max-width: 600px) {\n  .logo-creator.logo-maker-container {\n    max-width: 100%;\n    margin: 15px 15px;\n  }\n}\n@media (min-width: 1024px) {\n  .logo-creator {\n    position: relative;\n  }\n}\n.logo-creator .download-section {\n  display: inline-block;\n  position: absolute;\n  right: 0;\n}\n.logo-creator .download-section .download-button {\n  box-sizing: border-box;\n  display: flex;\n  justify-content: center;\n}\n.logo-creator .download-section .download-button button {\n  background-color: #FF7F66;\n  color: white;\n  font-size: 14px;\n  font-weight: 600;\n  line-height: 36px;\n  padding: 6px 26px;\n  border-radius: 4px;\n  border: none;\n}\n.logo-creator .download-section .download-button button:focus {\n  outline: none;\n}\n.logo-creator .download-section .download-button a {\n  background-color: #FF7F66;\n  text-decoration: none;\n  color: white;\n  font-size: 14px;\n  font-weight: 600;\n  line-height: 36px;\n  padding: 6px 26px;\n  border-radius: 4px;\n  border: none;\n}\n.logo-creator .download-section .download-button a:focus {\n  outline: none;\n}\n.logo-creator .download-section .download-button a:hover {\n  filter: grayscale(0.1);\n}\n.logo-creator .top-section {\n  position: relative;\n  text-align: center;\n}\n.logo-creator .top-section .back {\n  display: inline-block;\n  position: absolute;\n  left: 0;\n  visibility: visible;\n}\n.logo-creator .top-section .back a {\n  display: inline-flex;\n  align-items: center;\n  text-decoration: none;\n}\n.logo-creator .top-section .back a p {\n  color: #585858;\n  text-transform: uppercase;\n  font-size: 14px;\n  font-weight: 600;\n  margin-left: 13px;\n  padding-bottom: 0px;\n  margin-bottom: 0px;\n  margin-top: 0px;\n}\n@media (max-width: 600px) {\n  .logo-creator .top-section .back {\n    visibility: hidden;\n  }\n}\n.logo-creator .top-section .logo-holder {\n  display: inline-flex;\n}\n.logo-creator .top-section .logo-holder img {\n  max-width: 134px;\n  max-height: 44px;\n}\n.logo-creator .top-section .logo-holder a {\n  max-height: 44px;\n}\n.logo-creator .top-section .logo-holder .logo-maker-name {\n  margin-top: 2.5px;\n  height: 44px;\n  line-height: 24.52px;\n  display: inline-grid;\n  align-content: center;\n  font-size: 18px;\n  font-weight: 700;\n  color: #FF7F66;\n  margin: 1px 0 0 4px;\n}\n@media (max-width: 600px) {\n  .logo-creator .top-section {\n    text-align: left;\n  }\n}\n@media (max-width: 1023px) {\n  .logo-creator .top-section .back {\n    left: 30px;\n  }\n}\n.logo-creator .main-section {\n  margin-top: 100px;\n}\n.logo-creator .main-section .main-container {\n  display: flex;\n  flex-direction: column;\n}\n@media (min-width: 1024px) {\n  .logo-creator .main-section .main-container {\n    flex-direction: row;\n  }\n}\n.logo-creator .main-section .main-container .left-menu {\n  display: flex;\n  justify-content: flex-start;\n  width: 30%;\n  padding: 0 20px 0 10px;\n}\n.logo-creator .main-section .main-container .left-menu .options {\n  display: flex;\n  flex-direction: column;\n}\n.logo-creator .main-section .main-container .left-menu .options .option {\n  display: flex;\n  margin-bottom: 30px;\n}\n.logo-creator .main-section .main-container .left-menu .options .option button, .logo-creator .main-section .main-container .left-menu .options .option a {\n  display: grid;\n  grid-template-columns: auto auto;\n  column-gap: 10px;\n  align-items: center;\n  justify-content: center;\n  align-content: center;\n  font-weight: 500;\n  font-size: 16px;\n  line-height: 22px;\n  background-color: transparent;\n  border: none;\n  padding: 0;\n  margin-left: 15px;\n  color: #8B8B9C;\n  transition: 0.3s ease all;\n  cursor: pointer;\n}\n.logo-creator .main-section .main-container .left-menu .options .option button.active, .logo-creator .main-section .main-container .left-menu .options .option a.active {\n  color: #333333;\n}\n.logo-creator .main-section .main-container .left-menu .options .option button:focus, .logo-creator .main-section .main-container .left-menu .options .option a:focus {\n  outline: none;\n}\n.logo-creator .main-section .main-container .logo {\n  display: flex;\n  justify-content: center;\n  height: max-content;\n}\n.logo-creator .main-section .main-container .logo #image-logo {\n  padding: 30px;\n  background: #F5F7F9;\n}\n.logo-creator .main-section .main-container .right-menu {\n  padding: 0 0 0 30px;\n  display: flex;\n  width: 40%;\n}\n.logo-creator .main-section .main-container .right-menu .select-logo {\n  height: auto;\n  width: auto;\n}\n.logo-creator .main-section .main-container .right-menu .select-logo h1 {\n  color: #939393;\n  font-size: 16px;\n  line-height: 22px;\n  font-weight: 400;\n  margin: 0 0 15px;\n}\n.logo-creator .main-section .main-container .right-menu .select-logo p {\n  font-size: 14px;\n  font-weight: 600;\n  line-height: 19px;\n  margin: 0 0 12px;\n}\n.logo-creator .main-section .main-container .right-menu .select-logo .logo-list {\n  max-height: 200px;\n  overflow-y: scroll;\n  border: 1px solid #E7E7E7;\n  border-radius: 14px;\n  padding: 15px;\n  scrollbar-width: thin;\n  display: flex;\n  flex-wrap: wrap;\n}\n.logo-creator .main-section .main-container .right-menu .select-logo .logo-list button {\n  flex-grow: 1;\n  background: transparent;\n  border: none;\n  padding: 5px;\n}\n.logo-creator .main-section .main-container .right-menu .select-logo .logo-list button:focus {\n  outline: none;\n}\n.logo-creator .main-section .main-container .right-menu .select-logo .logo-list button svg {\n  border: 2px solid #F1F1F1;\n  padding: 10px;\n  background: transparent;\n  border-radius: 20px;\n  transition: 0.3s ease all;\n}\n.logo-creator .main-section .main-container .right-menu .select-logo .logo-list button svg:hover, .logo-creator .main-section .main-container .right-menu .select-logo .logo-list button svg.active {\n  border: 2px solid #43C2D1;\n}\n@media (min-width: 1024px) {\n  .logo-creator .main-section .main-container .right-menu .select-logo .logo-list {\n    max-height: 596px;\n  }\n}\n.logo-creator .main-section .main-container .right-menu .select-typography {\n  width: 100%;\n  z-index: 4;\n  margin-bottom: 200px;\n}\n.logo-creator .main-section .main-container .right-menu .select-typography .title-options,\n.logo-creator .main-section .main-container .right-menu .select-typography .slogan-options {\n  width: 100%;\n  display: flex;\n  flex-direction: column;\n}\n.logo-creator .main-section .main-container .right-menu .select-typography .title-options {\n  margin-bottom: 30px;\n}\n.logo-creator .main-section .main-container .right-menu .select-typography h1 {\n  font-size: 16px;\n  font-weight: 400;\n  line-height: 22px;\n  color: #939393;\n  margin: 0 0 15px;\n}\n.logo-creator .main-section .main-container .right-menu .select-typography label {\n  display: block;\n  font-weight: 500;\n  font-size: 14px;\n  line-height: 19px;\n  color: #6A6A6A;\n  margin-bottom: 5px;\n}\n.logo-creator .main-section .main-container .right-menu .select-typography input {\n  color: #393939;\n  font-weight: 500;\n  font-family: \"Noto Sans\", sans-serif;\n  padding: 10px 13px;\n  margin-bottom: 20px;\n  border: 1px solid #E7E7E7;\n  border-radius: 4px;\n}\n.logo-creator .main-section .main-container .right-menu .select-typography input:focus {\n  outline: none;\n  border-color: #43C2D1;\n  transition: 0.3s ease all;\n}\n.logo-creator .main-section .main-container .right-menu .select-typography .font-select {\n  margin-bottom: 20px;\n  font-size: 14px;\n}\n.logo-creator .main-section .main-container .right-menu .select-typography .font-select > div {\n  border: 1px solid #e7e7e7;\n}\n.logo-creator .main-section .main-container .right-menu .select-typography .font-select > div > div {\n  margin: 0 0 0 13px;\n  padding: 0;\n}\n.logo-creator .main-section .main-container .right-menu .select-typography .font-select input {\n  padding: 0;\n}\n.logo-creator .main-section .main-container .right-menu .select-typography .font-select span {\n  width: 0;\n}\n.logo-creator .main-section .main-container .right-menu .select-typography .font-select svg {\n  fill: #323232;\n}\n.logo-creator .main-section .main-container .right-menu .select-layout {\n  display: flex;\n  flex-direction: column;\n}\n.logo-creator .main-section .main-container .right-menu .select-layout h1 {\n  color: #939393;\n  font-size: 16px;\n  line-height: 22px;\n  font-weight: 400;\n  margin: 0 0 15px;\n}\n.logo-creator .main-section .main-container .right-menu .select-layout p {\n  font-size: 14px;\n  font-weight: 600;\n  margin: 0 0 12px;\n}\n.logo-creator .main-section .main-container .right-menu .select-layout .options {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n}\n@media (min-width: 1024px) {\n  .logo-creator .main-section .main-container .right-menu .select-layout .options {\n    height: auto;\n    align-items: flex-start;\n  }\n}\n.logo-creator .main-section .main-container .right-menu .select-layout .options button {\n  box-sizing: border-box;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  justify-content: center;\n  height: 121px;\n  width: 168px;\n  border: 2px solid #F1F1F1;\n  border-radius: 10px;\n  padding: 5px;\n  margin-bottom: 20px;\n  font-size: 14px;\n  font-weight: 500;\n  line-height: 19px;\n  color: #8B8B9C;\n  background-color: white;\n}\n.logo-creator .main-section .main-container .right-menu .select-layout .options button.active {\n  border-color: #43C2D1;\n}\n.logo-creator .main-section .main-container .right-menu .select-layout .options button.active span {\n  color: #333333;\n  font-weight: 600;\n}\n.logo-creator .main-section .main-container .right-menu .select-layout .options button span {\n  margin-top: 10px;\n}\n.logo-creator .main-section .main-container .right-menu .select-layout .options button .align-top {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  justify-content: center;\n  margin: 3px;\n}\n.logo-creator .main-section .main-container .right-menu .select-layout .options button .align-top svg {\n  margin: 1px;\n}\n.logo-creator .main-section .main-container .right-menu .select-layout .options button .align-left {\n  display: flex;\n  flex-direction: row;\n  align-items: center;\n  justify-content: center;\n  margin: 3px;\n}\n.logo-creator .main-section .main-container .right-menu .select-layout .options button .align-right {\n  display: flex;\n  flex-direction: row-reverse;\n  align-items: center;\n  justify-content: center;\n  margin: 3px;\n}\n.logo-creator .main-section .main-container .right-menu .select-layout .options button:focus {\n  outline: none;\n}\n.logo-creator .main-section .main-container .right-menu .select-colors {\n  width: 80%;\n}\n.logo-creator .main-section .main-container .right-menu .select-colors h1 {\n  color: #939393;\n  font-size: 16px;\n  line-height: 22px;\n  font-weight: 400;\n  margin: 0 0 15px;\n}\n.logo-creator .main-section .main-container .right-menu .select-colors p {\n  font-size: 14px;\n  font-weight: 600;\n  line-height: 19px;\n  margin: 20px 0 10px;\n}\n.logo-creator .main-section .main-container .right-menu .select-colors .container {\n  display: flex;\n  width: 100%;\n  flex-direction: column;\n}\n.logo-creator .main-section .main-container .right-menu .select-colors .container .input-field {\n  width: 100%;\n  display: inline-flex;\n  align-items: center;\n  margin-bottom: 5px;\n}\n.logo-creator .main-section .main-container .right-menu .select-colors .container .input-field button {\n  height: 36px;\n  min-width: 36px;\n  max-width: 36px;\n  box-sizing: border-box;\n  border: 1px solid #E7E7E7;\n  border-radius: 4px;\n}\n.logo-creator .main-section .main-container .right-menu .select-colors .container .input-field button:hover, .logo-creator .main-section .main-container .right-menu .select-colors .container .input-field button.active {\n  outline: none;\n  border-color: #43C2D1;\n  transition: 0.3s ease all;\n}\n.logo-creator .main-section .main-container .right-menu .select-colors .container .input-field button:hover {\n  transform: scale(1.1);\n}\n.logo-creator .main-section .main-container .right-menu .select-colors .container .input-field input {\n  margin-left: 10px;\n  color: #393939;\n  font-weight: 500;\n  font-family: \"Noto Sans\", sans-serif;\n  padding: 10px 13px;\n  border: 1px solid #E7E7E7;\n  border-radius: 4px;\n}\n.logo-creator .main-section .main-container .right-menu .select-colors .container .input-field input:focus {\n  outline: none;\n  border-color: #43C2D1;\n  transition: 0.3s ease all;\n}\n\n@media (max-width: 1440px) {\n  #image-logo svg {\n    max-width: 100%;\n    height: auto;\n  }\n}\n@media (max-width: 1023px) {\n  .logo-creator .top-section {\n    position: static;\n  }\n  .logo-creator .download-section {\n    position: fixed;\n    bottom: 0;\n    width: 100%;\n    background: #fff;\n    padding: 25px 30px;\n    z-index: 100;\n  }\n  .logo-creator .download-section .download-button button {\n    width: 100%;\n    padding: 7px;\n  }\n  .logo-creator .main-section {\n    margin-top: 60px;\n  }\n  .logo-creator .main-section .main-container .logo {\n    margin-bottom: 30px;\n  }\n  .logo-creator .main-section .main-container .logo #image-logo {\n    padding: 0;\n  }\n  .logo-creator .main-section .main-container .right-menu {\n    width: 100%;\n    padding: 0;\n    margin-bottom: 100px;\n  }\n  .logo-creator .main-section .main-container .right-menu .select-colors,\n.logo-creator .main-section .main-container .right-menu .select-layout {\n    width: 100%;\n  }\n  .logo-creator .main-section .main-container .right-menu .select-colors .options button,\n.logo-creator .main-section .main-container .right-menu .select-layout .options button {\n    width: 100%;\n  }\n  .logo-creator .main-section .main-container .left-menu {\n    width: 100%;\n    padding: 0;\n  }\n  .logo-creator .main-section .main-container .left-menu .options {\n    flex-direction: row;\n    flex-wrap: wrap;\n    width: 100%;\n  }\n  .logo-creator .main-section .main-container .left-menu .options .option {\n    flex-basis: 49%;\n    /* This will work for phone with width 360 like S9 */\n  }\n}\n@media (max-width: 360px) {\n  .logo-creator .main-section .container .left-menu .options .option button {\n    margin-left: 5px;\n  }\n}", "",{"version":3,"sources":["webpack://./src/assets/styles/Creator/creator.scss","webpack://./src/assets/styles/common.scss","webpack://./src/assets/styles/_constants.scss","webpack://./src/assets/styles/Creator/download-button.scss","webpack://./src/assets/styles/Creator/select-logo.scss","webpack://./src/assets/styles/Creator/select-typography.scss","webpack://./src/assets/styles/Creator/select-layout.scss","webpack://./src/assets/styles/Creator/select-colors.scss"],"names":[],"mappings":"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","sourcesContent":["@use \"../common.scss\" as default;\r\n@use \"download-button.scss\" as dlButton;\r\n@use \"select-colors.scss\" as sc;\r\n@use \"select-layout.scss\" as sly;\r\n@use \"select-logo.scss\" as sl;\r\n@use \"select-typography.scss\" as st;\r\n@import \"../constants\";\r\n\r\n.logo-creator {\r\n\t&.logo-maker-container {\r\n\t\t@include default.logo-maker-container;\r\n\t}\r\n\tposition: static;\r\n\tdisplay: flex;\r\n\tflex-direction: column;\r\n\r\n\t@media(min-width: 1024px) {\r\n\t\tposition: relative;\r\n\t}\r\n\t.download-section {\r\n\t\tdisplay: inline-block;\r\n\t\tposition: absolute;\r\n\t\tright: 0;\r\n\t\t.download-button {\r\n\t\t\t@include dlButton.download-button;\r\n\t\t}\r\n\r\n\t}\r\n\r\n\t.top-section {\r\n\t\t@include default.top-section;\r\n\t\t@media (max-width:1023px) {\r\n\t\t\t.back {\r\n\t\t\t\tleft: 30px;\r\n\t\t\t}\r\n\t\t}\r\n\t}\r\n\r\n    .main-section {\r\n\t\tmargin-top: 100px;\r\n\t\t.main-container {\r\n\t\t\tdisplay: flex;\r\n\t\t\tflex-direction: column;\r\n\r\n\r\n\t\t\t@media(min-width: 1024px) {\r\n\t\t\t\tflex-direction: row;\r\n\t\t\t}\r\n\r\n\t\t\t.left-menu {\r\n\t\t\t\tdisplay: flex;\r\n\t\t\t\tjustify-content: flex-start;\r\n\t\t\t\twidth: 30%;\r\n\t\t\t\tpadding: 0 20px 0 10px;\r\n\t\t\t\t.options {\r\n\t\t\t\t\tdisplay: flex;\r\n\t\t\t\t\tflex-direction: column;\r\n\t\t\t\t\t.option {\r\n\t\t\t\t\t\tdisplay: flex;\r\n\t\t\t\t\t\tmargin-bottom: 30px;\r\n\t\t\t\t\t\tbutton, a {\r\n\t\t\t\t\t\t\tdisplay: grid;\r\n\t\t\t\t\t\t\tgrid-template-columns: auto auto;\r\n\t\t\t\t\t\t\tcolumn-gap: 10px;\r\n\t\t\t\t\t\t\talign-items: center;\r\n\t\t\t\t\t\t\tjustify-content: center;\r\n\t\t\t\t\t\t\talign-content: center;\r\n\t\t\t\t\t\t\tfont-weight: 500;\r\n\t\t\t\t\t\t\tfont-size: 16px;\r\n\t\t\t\t\t\t\tline-height: 22px;\r\n\t\t\t\t\t\t\tbackground-color: transparent;\r\n\t\t\t\t\t\t\tborder: none;\r\n\t\t\t\t\t\t\tpadding: 0;\r\n\t\t\t\t\t\t\tmargin-left: 15px;\r\n\t\t\t\t\t\t\tcolor: #8B8B9C;\r\n\t\t\t\t\t\t\ttransition: $transition;\r\n\t\t\t\t\t\t\tcursor: pointer;\r\n\t\t\t\t\t\t\t&.active {\r\n\t\t\t\t\t\t\t\tcolor: #333333;\r\n\t\t\t\t\t\t\t}\r\n\t\t\t\t\t\t\t&:focus {\r\n\t\t\t\t\t\t\t\toutline: none;\r\n\t\t\t\t\t\t\t}\r\n\t\t\t\t\t\t}\r\n\t\t\t\t\t}\r\n\t\t\t\t}\r\n\t\t\t}\r\n\r\n\t\t\t.logo {\r\n\t\t\t\tdisplay: flex;\r\n\t\t\t\tjustify-content: center;\r\n\t\t\t\t#image-logo {\r\n\t\t\t\t\tpadding: 30px;\r\n\t\t\t\t\tbackground: #F5F7F9;\r\n\t\t\t\t}\r\n\t\t\t\theight: max-content;\r\n\t\t\t}\r\n\r\n\t\t\t.right-menu {\r\n\t\t\t\tpadding: 0 0 0 30px;\r\n\t\t\t\tdisplay: flex;\r\n\t\t\t\twidth: 40%;\r\n\r\n\t\t\t\t.select-logo {\r\n\t\t\t\t\t@include sl.select-logo;\r\n\t\t\t\t}\r\n\r\n\t\t\t\t.select-typography {\r\n\t\t\t\t\t@include st.select-typography;\r\n\t\t\t\t}\r\n\r\n\t\t\t\t.select-layout {\r\n\t\t\t\t\t@include sly.select-layout;\r\n\t\t\t\t}\r\n\r\n\t\t\t\t.select-colors {\r\n\t\t\t\t\t@include sc.select-colors;\r\n\t\t\t\t}\r\n\t\t\t}\r\n\t\t}\r\n\t}\r\n}\r\n\r\n@media (max-width: 1440px) {\r\n\t#image-logo svg {\r\n\t\tmax-width: 100%;\r\n\t\theight: auto;\r\n\t}\r\n}\r\n\r\n@media (max-width: 1023px) {\r\n\t.logo-creator {\r\n\t\t.top-section {\r\n\t\t\tposition: static;\r\n\t\t}\r\n\t\t.download-section {\r\n\t\t\tposition: fixed;\r\n\t\t\tbottom: 0;\r\n\t\t\twidth: 100%;\r\n\t\t\tbackground: #fff;\r\n\t\t\tpadding: 25px 30px;\r\n\t\t\tz-index: 100;\r\n\t\t\t.download-button button {\r\n\t\t\t\twidth: 100%;\r\n\t\t\t\tpadding: 7px;\r\n\t\t\t}\r\n\t\t}\r\n\t\t.main-section {\r\n\t\t\tmargin-top: 60px;\r\n\t\t\t.main-container {\r\n\t\t\t\t.logo {\r\n\t\t\t\t\tmargin-bottom: 30px;\r\n\t\t\t\t\t#image-logo {\r\n\t\t\t\t\t\tpadding: 0;\r\n\t\t\t\t\t}\r\n\t\t\t\t}\r\n\t\t\t\t.right-menu {\r\n\t\t\t\t\twidth: 100%;\r\n\t\t\t\t\tpadding: 0;\r\n\t\t\t\t\tmargin-bottom: 100px;\r\n\t\t\t\t\t.select-colors,\r\n\t\t\t\t\t.select-layout {\r\n\t\t\t\t\t\twidth: 100%;\r\n\t\t\t\t\t\t.options button {\r\n\t\t\t\t\t\t\twidth: 100%;\r\n\t\t\t\t\t\t}\r\n\t\t\t\t\t}\r\n\t\t\t\t}\r\n\t\t\t\t.left-menu {\r\n\t\t\t\t\twidth: 100%;\r\n\t\t\t\t\tpadding: 0;\r\n\t\t\t\t\t.options {\r\n\t\t\t\t\t\tflex-direction: row;\r\n\t\t\t\t\t\tflex-wrap: wrap;\r\n\t\t\t\t\t\twidth: 100%;\r\n\t\t\t\t\t\t.option {\r\n\t\t\t\t\t\t\tflex-basis: 49%; /* This will work for phone with width 360 like S9 */\r\n\t\t\t\t\t\t}\r\n\t\t\t\t\t}\r\n\t\t\t\t}\r\n\t\t\t}\r\n\t\t}\r\n\t}\r\n}\r\n\r\n@media (max-width: 360px) {\r\n\t.logo-creator .main-section .container .left-menu .options .option button {\r\n\t\tmargin-left: 5px;\r\n\t}\r\n}\r\n","@import \"constants\";\r\n\r\n@mixin logo-maker-container {\r\n\tmax-width: 1470px;\r\n\tmargin: 15px auto;\r\n\tfont-family: $noto;\r\n\t@media (max-width: 1440px) {\r\n\t\tmax-width: 90%;\r\n\t}\r\n\t@media (max-width: 600px) {\r\n\t\tmax-width: 100%;\r\n\t\tmargin: 15px 15px;\r\n\t}\r\n}\r\n\r\n@mixin back {\r\n\tdisplay: inline-block;\r\n\tposition: absolute;\r\n\tleft: 0;\r\n\tvisibility: visible;\r\n\ta {\r\n\t\tdisplay: inline-flex;\r\n\t\talign-items: center;\r\n\t\ttext-decoration: none;\r\n\t\tp {\r\n\t\t\tcolor: #585858;\r\n\t\t\ttext-transform: uppercase;\r\n\t\t\tfont-size: 14px;\r\n\t\t\tfont-weight: 600;\r\n\t\t\tmargin-left: 13px;\r\n\t\t\tpadding-bottom: 0px;\r\n\t\t\tmargin-bottom: 0px;\r\n\t\t\tmargin-top: 0px;\r\n\t\t}\r\n\t}\r\n\t@media(max-width: 600px) {\r\n\t\tvisibility: hidden;\r\n\t}\r\n}\r\n\r\n@mixin next {\r\n\ttext-align: center;\r\n\ta {\r\n\t\tcolor: #fff;\r\n\t\tbackground-color: $light-blue;\r\n\t\ttext-decoration: none;\r\n\t\ttext-transform: uppercase;\r\n\t\tfont-size: 14px;\r\n\t\tfont-weight: 700;\r\n\t\tline-height: 36px;\r\n\t\tpadding: 14px 80px;\r\n\t\tborder-radius: 4px;\r\n\t}\r\n\t@media (max-width: 600px) {\r\n\t\ta {\r\n\t\t\tdisplay: block;\r\n\t\t\tpadding: 7px;\r\n\t\t}\r\n\t}\r\n}\r\n\r\n@mixin logo-holder {\r\n\tdisplay: inline-flex;\r\n\timg {\r\n\t\tmax-width: 134px;\r\n\t\tmax-height: 44px;\r\n\t}\r\n\r\n\ta {\r\n\t\tmax-height: 44px;\r\n\t}\r\n\r\n\t.logo-maker-name {\r\n\t\tmargin-top: 2.5px;\r\n\t\theight: 44px;\r\n\t\tline-height: 24.52px;\r\n\t\tdisplay: inline-grid;\r\n\t\talign-content: center;\r\n\t\tfont-size: 18px;\r\n\t\tfont-weight: 700;\r\n\t\tcolor: $orange;\r\n\t\tmargin: 1px 0 0 4px;\r\n\t}\r\n}\r\n\r\n@mixin top-section {\r\n\tposition: relative;\r\n\ttext-align: center;\r\n\t.back {\r\n\t\t@include back;\r\n\t}\r\n\t.logo-holder {\r\n\t\t@include logo-holder;\r\n\t}\r\n\t@media (max-width: 600px) {\r\n\t\ttext-align: left;\r\n\t}\r\n}\r\n\r\n@mixin content-section-titles {\r\n\tmargin-top: 115px;\r\n\t.titles {\r\n\t\ttext-align: center;\r\n\t\th1 {\r\n\t\t\tcolor: $blue;\r\n\t\t\tfont-size: 36px;\r\n\t\t\tfont-weight: 700;\r\n\t\t\tline-height: 49.03px;\r\n\t\t\tmargin: 0 0 8px;\r\n\r\n\t\t\t@media (max-width: 600px) {\r\n\t\t\t\tline-height: 32.69px;\r\n\t\t\t}\r\n\t\t}\r\n\t\tp {\r\n\t\t\tcolor: #939393;\r\n\t\t\tfont-size: 18px;\r\n\t\t\tfont-weight: 500;\r\n\t\t\tline-height: 24.52px;\r\n\t\t\tmargin: 0;\r\n\t\t}\r\n\t}\r\n\t@media (max-width: 600px) {\r\n\t\tmargin-top: 60px;\r\n\t\t.titles {\r\n\t\t\ttext-align: left;\r\n\t\t\th1 {\r\n\t\t\t\tfont-size: 24px;\r\n\t\t\t}\r\n\t\t\tp {\r\n\t\t\t\tfont-size: 16px;\r\n\t\t\t\tcolor: #393939;\r\n\t\t\t}\r\n\t\t}\r\n\t}\r\n}\r\n","$noto: 'Noto Sans', sans-serif;\n$blue: #32456B;\n$orange: #FF7F66;\n$light-blue: #43C2D1;\n$black: #393939;\n$transition: .3s ease all;\n","@mixin download-button {\r\n\tbox-sizing: border-box;\r\n\tdisplay: flex;\r\n\tjustify-content: center;\r\n\tbutton {\r\n\t\tbackground-color: #FF7F66;\r\n\t\tcolor: white;\r\n\t\tfont-size: 14px;\r\n\t\tfont-weight: 600;\r\n\t\tline-height: 36px;\r\n\t\tpadding: 6px 26px;\r\n\t\tborder-radius: 4px;\r\n\t\tborder: none;\r\n\t\t&:focus {\r\n\t\t\toutline: none;\r\n\t\t}\r\n\t}\r\n\r\n\ta {\r\n\t\tbackground-color: #FF7F66;\r\n\t\ttext-decoration: none;\r\n\t\tcolor: white;\r\n\t\tfont-size: 14px;\r\n\t\tfont-weight: 600;\r\n\t\tline-height: 36px;\r\n\t\tpadding: 6px 26px;\r\n\t\tborder-radius: 4px;\r\n\t\tborder: none;\r\n\t\t&:focus {\r\n\t\t\toutline: none;\r\n\t\t}\r\n\r\n\t\t&:hover {\r\n\t\t\tfilter: grayscale(0.1);;\r\n\t\t}\r\n\t}\r\n}\r\n","@mixin select-logo {\r\n\theight: auto;\r\n\twidth: auto;\r\n\th1 {\r\n\t\tcolor: #939393;\r\n\t\tfont-size: 16px;\r\n\t\tline-height: 22px;\r\n\t\tfont-weight: 400;\r\n\t\tmargin: 0 0 15px;\r\n\t}\r\n\r\n\tp {\r\n\t\tfont-size: 14px;\r\n\t\tfont-weight: 600;\r\n\t\tline-height: 19px;\r\n\t\tmargin: 0 0 12px;\r\n\t}\r\n\r\n\t.logo-list {\r\n\t\t//max-height: 690px;\r\n\t\tmax-height: 200px;\r\n\t\toverflow-y: scroll;\r\n\t\tborder: 1px solid #E7E7E7;\r\n\t\tborder-radius: 14px;\r\n\t\tpadding: 15px;\r\n\t\tscrollbar-width: thin;\r\n\t\tdisplay: flex;\r\n\t\tflex-wrap: wrap;\r\n\t\tbutton {\r\n\t\t\tflex-grow: 1;\r\n\t\t\tbackground: transparent;\r\n\t\t\tborder: none;\r\n\t\t\tpadding: 5px;\r\n\t\t\t&:focus {\r\n\t\t\t\toutline: none;\r\n\t\t\t}\r\n\t\t\tsvg {\r\n\t\t\t\tborder: 2px solid #F1F1F1;\r\n\t\t\t\tpadding: 10px;\r\n\t\t\t\tbackground: transparent;\r\n\t\t\t\tborder-radius: 20px;\r\n\t\t\t\ttransition: .3s ease all;\r\n\t\t\t\t&:hover,\r\n\r\n\t\t\t\t&.active {\r\n\t\t\t\t\tborder: 2px solid #43C2D1;\r\n\t\t\t\t}\r\n\t\t\t}\r\n\t\t}\r\n\r\n\t\t@media(min-width: 1024px) {\r\n\t\t\tmax-height: 596px;\r\n\t\t}\r\n\t}\r\n}\r\n","@import \"../constants.scss\";\r\n\r\n@mixin select-typography {\r\n\twidth: 100%;\r\n\tz-index: 4;\r\n\tmargin-bottom: 200px;\r\n\r\n\t.title-options,\r\n\t.slogan-options {\r\n\t\twidth: 100%;\r\n\t\tdisplay: flex;\r\n\t\tflex-direction: column;\r\n\r\n\t}\r\n\t.title-options {\r\n\t\tmargin-bottom: 30px;\r\n\t}\r\n\th1 {\r\n\t\tfont-size: 16px;\r\n\t\tfont-weight: 400;\r\n\t\tline-height: 22px;\r\n\t\tcolor: #939393;\r\n\t\tmargin: 0 0 15px;\r\n\t}\r\n\r\n\tlabel {\r\n\t\tdisplay: block;\r\n\t\tfont-weight: 500;\r\n\t\tfont-size: 14px;\r\n\t\tline-height: 19px;\r\n\t\tcolor: #6A6A6A;\r\n\t\tmargin-bottom: 5px;\r\n\t}\r\n\tinput {\r\n\t\tcolor: $black;\r\n\t\tfont-weight: 500;\r\n\t\tfont-family: $noto;\r\n\t\tpadding: 10px 13px;\r\n\t\tmargin-bottom: 20px;\r\n\t\tborder: 1px solid #E7E7E7;\r\n\t\tborder-radius: 4px;\r\n\t\t&:focus {\r\n\t\t\toutline: none;\r\n\t\t\tborder-color: $light-blue;\r\n\t\t\ttransition: $transition;\r\n\t\t}\r\n\t}\r\n\t.font-select {\r\n\t\tmargin-bottom: 20px;\r\n\t\tfont-size: 14px;\r\n\t\t& > div {\r\n\t\t\tborder: 1px solid #e7e7e7;\r\n\t\t\t& > div {\r\n\t\t\t\tmargin: 0 0 0 13px;\r\n\t\t\t\tpadding: 0;\r\n\t\t\t}\r\n\t\t}\r\n\t\tinput {\r\n\t\t\tpadding: 0;\r\n\t\t}\r\n\t\tspan {\r\n\t\t\twidth: 0;\r\n\t\t}\r\n\t\tsvg {\r\n\t\t\tfill: #323232;\r\n\t\t}\r\n\t}\r\n}\r\n","@mixin select-layout {\r\n\tdisplay: flex;\r\n\tflex-direction: column;\r\n\r\n\th1 {\r\n\t\tcolor: #939393;\r\n\t\tfont-size: 16px;\r\n\t\tline-height: 22px;\r\n\t\tfont-weight: 400;\r\n\t\tmargin: 0 0 15px;\r\n\t}\r\n\r\n\tp {\r\n\t\tfont-size: 14px;\r\n\t\tfont-weight: 600;\r\n\t\tmargin: 0 0 12px;\r\n\t}\r\n\r\n\t.options {\r\n\t\tdisplay: flex;\r\n\t\tflex-direction: column;;\r\n\t\talign-items: center;\r\n\r\n\t\t@media(min-width: 1024px) {\r\n\t\t\theight: auto;\r\n\t\t\talign-items: flex-start;\r\n\t\t}\r\n\r\n\t\tbutton {\r\n\t\t\tbox-sizing: border-box;\r\n\t\t\tdisplay: flex;\r\n\t\t\tflex-direction: column;\r\n\t\t\talign-items: center;\r\n\t\t\tjustify-content: center;\r\n\t\t\theight: 121px;\r\n\t\t\twidth: 168px;\r\n\t\t\tborder: 2px solid #F1F1F1;\r\n\t\t\tborder-radius: 10px;\r\n\t\t\tpadding: 5px;\r\n\t\t\tmargin-bottom: 20px;\r\n\t\t\tfont-size: 14px;\r\n\t\t\tfont-weight: 500;\r\n\t\t\tline-height: 19px;\r\n\t\t\tcolor: #8B8B9C;\r\n\t\t\tbackground-color: white;\r\n\t\t\t&.active {\r\n\t\t\t\tborder-color: #43C2D1;\r\n\t\t\t\tspan {\r\n\t\t\t\t\tcolor: #333333;\r\n\t\t\t\t\tfont-weight: 600;\r\n\t\t\t\t}\r\n\t\t\t}\r\n\t\t\tspan {\r\n\t\t\t\tmargin-top: 10px;\r\n\t\t\t}\r\n\r\n\t\t\t.align-top {\r\n\t\t\t\tdisplay: flex;\r\n\t\t\t\tflex-direction: column;\r\n\t\t\t\talign-items: center;\r\n\t\t\t\tjustify-content: center;\r\n\t\t\t\tmargin: 3px;\r\n\r\n\t\t\t\tsvg {\r\n\t\t\t\t\tmargin: 1px;\r\n\t\t\t\t}\r\n\t\t\t}\r\n\r\n\t\t\t.align-left {\r\n\t\t\t\tdisplay: flex;\r\n\t\t\t\tflex-direction: row;\r\n\t\t\t\talign-items: center;\r\n\t\t\t\tjustify-content: center;\r\n\t\t\t\tmargin: 3px;\r\n\r\n\t\t\t}\r\n\r\n\t\t\t.align-right {\r\n\t\t\t\tdisplay: flex;\r\n\t\t\t\tflex-direction: row-reverse;\r\n\t\t\t\talign-items: center;\r\n\t\t\t\tjustify-content: center;\r\n\t\t\t\tmargin: 3px;\r\n\t\t\t}\r\n\t\t\t&:focus {\r\n\t\t\t\toutline: none;\r\n\t\t\t}\r\n\t\t}\r\n\t}\r\n}\r\n","@import \"../constants\";\r\n\r\n@mixin select-colors {\r\n\twidth: 80%;\r\n\th1 {\r\n\t\tcolor: #939393;\r\n\t\tfont-size: 16px;\r\n\t\tline-height: 22px;\r\n\t\tfont-weight: 400;\r\n\t\tmargin: 0 0 15px;\r\n\t}\r\n\r\n\tp {\r\n\t\tfont-size: 14px;\r\n\t\tfont-weight: 600;\r\n\t\tline-height: 19px;\r\n\t\tmargin: 20px 0 10px;\r\n\t}\r\n\r\n\t.container {\r\n\t\tdisplay: flex;\r\n\t\twidth: 100%;\r\n\t\tflex-direction: column;\r\n\r\n\t\t.input-field {\r\n\t\t\twidth: 100%;\r\n\t\t\tdisplay: inline-flex;\r\n\t\t\talign-items: center;\r\n\t\t\tmargin-bottom: 5px;\r\n\r\n\t\t\tbutton {\r\n\t\t\t\theight: 36px;\r\n\t\t\t\tmin-width: 36px;\r\n\t\t\t\tmax-width: 36px;\r\n\t\t\t\tbox-sizing: border-box;\r\n\t\t\t\tborder: 1px solid #E7E7E7;\r\n\t\t\t\tborder-radius: 4px;\r\n\t\t\t\t\r\n\r\n\t\t\t\t&:hover, &.active {\r\n\t\t\t\t\toutline: none;\r\n\t\t\t\t\tborder-color: $light-blue;\r\n\t\t\t\t\ttransition: $transition;\r\n\t\t\t\t}\r\n\t\t\t\t\r\n\t\t\t\t&:hover {\r\n\t\t\t\t\ttransform: scale(1.1);\r\n\t\t\t\t}\r\n\t\t\t}\r\n\r\n\t\t\tinput {\r\n\t\t\t\tmargin-left: 10px;\r\n\t\t\t\tcolor: $black;\r\n\t\t\t\tfont-weight: 500;\r\n\t\t\t\tfont-family: $noto;\r\n\t\t\t\tpadding: 10px 13px;\r\n\t\t\t\tborder: 1px solid #E7E7E7;\r\n\t\t\t\tborder-radius: 4px;\r\n\t\t\t\t&:focus {\r\n\t\t\t\t\toutline: none;\r\n\t\t\t\t\tborder-color: $light-blue;\r\n\t\t\t\t\ttransition: $transition;\r\n\t\t\t\t}\r\n\t\t\t}\r\n\t\t}\r\n\t}\r\n}\r\n"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.i, ".logo-creator {\n  position: static;\n  display: flex;\n  flex-direction: column;\n}\n.logo-creator.logo-maker-container {\n  max-width: 1470px;\n  margin: 15px auto;\n  font-family: \"Noto Sans\", sans-serif;\n}\n@media (max-width: 1440px) {\n  .logo-creator.logo-maker-container {\n    max-width: 90%;\n  }\n}\n@media (max-width: 600px) {\n  .logo-creator.logo-maker-container {\n    max-width: 100%;\n    margin: 15px 15px;\n  }\n}\n@media (min-width: 1024px) {\n  .logo-creator {\n    position: relative;\n  }\n}\n.logo-creator .download-section {\n  display: inline-block;\n  position: absolute;\n  right: 0;\n}\n.logo-creator .download-section .download-button {\n  box-sizing: border-box;\n  display: flex;\n  justify-content: center;\n}\n.logo-creator .download-section .download-button button {\n  background-color: #FF7F66;\n  color: white;\n  font-size: 14px;\n  font-weight: 600;\n  line-height: 36px;\n  padding: 6px 26px;\n  border-radius: 4px;\n  border: none;\n  text-align: center;\n  cursor: pointer;\n  transition: all 0.5s;\n}\n.logo-creator .download-section .download-button button:focus {\n  outline: none;\n}\n.logo-creator .download-section .download-button button span {\n  cursor: pointer;\n  display: inline-block;\n  position: relative;\n  transition: 0.5s;\n}\n.logo-creator .download-section .download-button a {\n  background-color: #FF7F66;\n  text-decoration: none;\n  color: white;\n  font-size: 14px;\n  font-weight: 600;\n  line-height: 36px;\n  padding: 6px 26px;\n  border-radius: 4px;\n  border: none;\n}\n.logo-creator .download-section .download-button a:focus {\n  outline: none;\n}\n.logo-creator .download-section .download-button a:hover {\n  filter: grayscale(0.1);\n}\n.logo-creator .top-section {\n  position: relative;\n  text-align: center;\n}\n.logo-creator .top-section .back {\n  display: inline-block;\n  position: absolute;\n  left: 0;\n  visibility: visible;\n}\n.logo-creator .top-section .back a {\n  display: inline-flex;\n  align-items: center;\n  text-decoration: none;\n}\n.logo-creator .top-section .back a p {\n  color: #585858;\n  text-transform: uppercase;\n  font-size: 14px;\n  font-weight: 600;\n  margin-left: 13px;\n  padding-bottom: 0px;\n  margin-bottom: 0px;\n  margin-top: 0px;\n}\n@media (max-width: 600px) {\n  .logo-creator .top-section .back {\n    visibility: hidden;\n  }\n}\n.logo-creator .top-section .logo-holder {\n  display: inline-flex;\n}\n.logo-creator .top-section .logo-holder img {\n  max-width: 134px;\n  max-height: 44px;\n}\n.logo-creator .top-section .logo-holder a {\n  max-height: 44px;\n}\n.logo-creator .top-section .logo-holder .logo-maker-name {\n  margin-top: 2.5px;\n  height: 44px;\n  line-height: 24.52px;\n  display: inline-grid;\n  align-content: center;\n  font-size: 18px;\n  font-weight: 700;\n  color: #FF7F66;\n  margin: 1px 0 0 4px;\n}\n@media (max-width: 600px) {\n  .logo-creator .top-section {\n    text-align: left;\n  }\n}\n@media (max-width: 1023px) {\n  .logo-creator .top-section .back {\n    left: 30px;\n  }\n}\n.logo-creator .main-section {\n  margin-top: 100px;\n}\n.logo-creator .main-section .main-container {\n  display: flex;\n  flex-direction: column;\n}\n@media (min-width: 1024px) {\n  .logo-creator .main-section .main-container {\n    flex-direction: row;\n  }\n}\n.logo-creator .main-section .main-container .left-menu {\n  display: flex;\n  justify-content: flex-start;\n  width: 30%;\n  padding: 0 20px 0 10px;\n}\n.logo-creator .main-section .main-container .left-menu .options {\n  display: flex;\n  flex-direction: column;\n}\n.logo-creator .main-section .main-container .left-menu .options .option {\n  display: flex;\n  margin-bottom: 30px;\n}\n.logo-creator .main-section .main-container .left-menu .options .option button, .logo-creator .main-section .main-container .left-menu .options .option a {\n  display: grid;\n  grid-template-columns: auto auto;\n  column-gap: 10px;\n  align-items: center;\n  justify-content: center;\n  align-content: center;\n  font-weight: 500;\n  font-size: 16px;\n  line-height: 22px;\n  background-color: transparent;\n  border: none;\n  padding: 0;\n  margin-left: 15px;\n  color: #8B8B9C;\n  transition: 0.3s ease all;\n  cursor: pointer;\n}\n.logo-creator .main-section .main-container .left-menu .options .option button.active, .logo-creator .main-section .main-container .left-menu .options .option a.active {\n  color: #333333;\n}\n.logo-creator .main-section .main-container .left-menu .options .option button:focus, .logo-creator .main-section .main-container .left-menu .options .option a:focus {\n  outline: none;\n}\n.logo-creator .main-section .main-container .logo {\n  display: flex;\n  justify-content: center;\n  height: max-content;\n}\n.logo-creator .main-section .main-container .logo #image-logo {\n  padding: 30px;\n  background: #F5F7F9;\n}\n.logo-creator .main-section .main-container .right-menu {\n  padding: 0 0 0 30px;\n  display: flex;\n  width: 40%;\n}\n.logo-creator .main-section .main-container .right-menu .select-logo {\n  height: auto;\n  width: auto;\n}\n.logo-creator .main-section .main-container .right-menu .select-logo h1 {\n  color: #939393;\n  font-size: 16px;\n  line-height: 22px;\n  font-weight: 400;\n  margin: 0 0 15px;\n}\n.logo-creator .main-section .main-container .right-menu .select-logo p {\n  font-size: 14px;\n  font-weight: 600;\n  line-height: 19px;\n  margin: 0 0 12px;\n}\n.logo-creator .main-section .main-container .right-menu .select-logo .logo-list {\n  max-height: 200px;\n  overflow-y: scroll;\n  border: 1px solid #E7E7E7;\n  border-radius: 14px;\n  padding: 15px;\n  scrollbar-width: thin;\n  display: flex;\n  flex-wrap: wrap;\n}\n.logo-creator .main-section .main-container .right-menu .select-logo .logo-list button {\n  flex-grow: 1;\n  background: transparent;\n  border: none;\n  padding: 5px;\n}\n.logo-creator .main-section .main-container .right-menu .select-logo .logo-list button:focus {\n  outline: none;\n}\n.logo-creator .main-section .main-container .right-menu .select-logo .logo-list button svg {\n  border: 2px solid #F1F1F1;\n  padding: 10px;\n  background: transparent;\n  border-radius: 20px;\n  transition: 0.3s ease all;\n}\n.logo-creator .main-section .main-container .right-menu .select-logo .logo-list button svg:hover, .logo-creator .main-section .main-container .right-menu .select-logo .logo-list button svg.active {\n  border: 2px solid #43C2D1;\n}\n@media (min-width: 1024px) {\n  .logo-creator .main-section .main-container .right-menu .select-logo .logo-list {\n    max-height: 596px;\n  }\n}\n.logo-creator .main-section .main-container .right-menu .select-typography {\n  width: 100%;\n  z-index: 4;\n  margin-bottom: 200px;\n}\n.logo-creator .main-section .main-container .right-menu .select-typography .title-options,\n.logo-creator .main-section .main-container .right-menu .select-typography .slogan-options {\n  width: 100%;\n  display: flex;\n  flex-direction: column;\n}\n.logo-creator .main-section .main-container .right-menu .select-typography .title-options {\n  margin-bottom: 30px;\n}\n.logo-creator .main-section .main-container .right-menu .select-typography h1 {\n  font-size: 16px;\n  font-weight: 400;\n  line-height: 22px;\n  color: #939393;\n  margin: 0 0 15px;\n}\n.logo-creator .main-section .main-container .right-menu .select-typography label {\n  display: block;\n  font-weight: 500;\n  font-size: 14px;\n  line-height: 19px;\n  color: #6A6A6A;\n  margin-bottom: 5px;\n}\n.logo-creator .main-section .main-container .right-menu .select-typography input {\n  color: #393939;\n  font-weight: 500;\n  font-family: \"Noto Sans\", sans-serif;\n  padding: 10px 13px;\n  margin-bottom: 20px;\n  border: 1px solid #E7E7E7;\n  border-radius: 4px;\n}\n.logo-creator .main-section .main-container .right-menu .select-typography input:focus {\n  outline: none;\n  border-color: #43C2D1;\n  transition: 0.3s ease all;\n}\n.logo-creator .main-section .main-container .right-menu .select-typography .font-select {\n  margin-bottom: 20px;\n  font-size: 14px;\n}\n.logo-creator .main-section .main-container .right-menu .select-typography .font-select > div {\n  border: 1px solid #e7e7e7;\n}\n.logo-creator .main-section .main-container .right-menu .select-typography .font-select > div > div {\n  margin: 0 0 0 13px;\n  padding: 0;\n}\n.logo-creator .main-section .main-container .right-menu .select-typography .font-select input {\n  padding: 0;\n}\n.logo-creator .main-section .main-container .right-menu .select-typography .font-select span {\n  width: 0;\n}\n.logo-creator .main-section .main-container .right-menu .select-typography .font-select svg {\n  fill: #323232;\n}\n.logo-creator .main-section .main-container .right-menu .select-layout {\n  display: flex;\n  flex-direction: column;\n}\n.logo-creator .main-section .main-container .right-menu .select-layout h1 {\n  color: #939393;\n  font-size: 16px;\n  line-height: 22px;\n  font-weight: 400;\n  margin: 0 0 15px;\n}\n.logo-creator .main-section .main-container .right-menu .select-layout p {\n  font-size: 14px;\n  font-weight: 600;\n  margin: 0 0 12px;\n}\n.logo-creator .main-section .main-container .right-menu .select-layout .options {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n}\n@media (min-width: 1024px) {\n  .logo-creator .main-section .main-container .right-menu .select-layout .options {\n    height: auto;\n    align-items: flex-start;\n  }\n}\n.logo-creator .main-section .main-container .right-menu .select-layout .options button {\n  box-sizing: border-box;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  justify-content: center;\n  height: 121px;\n  width: 168px;\n  border: 2px solid #F1F1F1;\n  border-radius: 10px;\n  padding: 5px;\n  margin-bottom: 20px;\n  font-size: 14px;\n  font-weight: 500;\n  line-height: 19px;\n  color: #8B8B9C;\n  background-color: white;\n}\n.logo-creator .main-section .main-container .right-menu .select-layout .options button.active {\n  border-color: #43C2D1;\n}\n.logo-creator .main-section .main-container .right-menu .select-layout .options button.active span {\n  color: #333333;\n  font-weight: 600;\n}\n.logo-creator .main-section .main-container .right-menu .select-layout .options button span {\n  margin-top: 10px;\n}\n.logo-creator .main-section .main-container .right-menu .select-layout .options button .align-top {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  justify-content: center;\n  margin: 3px;\n}\n.logo-creator .main-section .main-container .right-menu .select-layout .options button .align-top svg {\n  margin: 1px;\n}\n.logo-creator .main-section .main-container .right-menu .select-layout .options button .align-left {\n  display: flex;\n  flex-direction: row;\n  align-items: center;\n  justify-content: center;\n  margin: 3px;\n}\n.logo-creator .main-section .main-container .right-menu .select-layout .options button .align-right {\n  display: flex;\n  flex-direction: row-reverse;\n  align-items: center;\n  justify-content: center;\n  margin: 3px;\n}\n.logo-creator .main-section .main-container .right-menu .select-layout .options button:focus {\n  outline: none;\n}\n.logo-creator .main-section .main-container .right-menu .select-colors {\n  width: 80%;\n}\n.logo-creator .main-section .main-container .right-menu .select-colors h1 {\n  color: #939393;\n  font-size: 16px;\n  line-height: 22px;\n  font-weight: 400;\n  margin: 0 0 15px;\n}\n.logo-creator .main-section .main-container .right-menu .select-colors p {\n  font-size: 14px;\n  font-weight: 600;\n  line-height: 19px;\n  margin: 20px 0 10px;\n}\n.logo-creator .main-section .main-container .right-menu .select-colors .container {\n  display: flex;\n  width: 100%;\n  flex-direction: column;\n}\n.logo-creator .main-section .main-container .right-menu .select-colors .container .input-field {\n  width: 100%;\n  display: inline-flex;\n  align-items: center;\n  margin-bottom: 5px;\n}\n.logo-creator .main-section .main-container .right-menu .select-colors .container .input-field button {\n  height: 36px;\n  min-width: 36px;\n  max-width: 36px;\n  box-sizing: border-box;\n  border: 1px solid #E7E7E7;\n  border-radius: 4px;\n}\n.logo-creator .main-section .main-container .right-menu .select-colors .container .input-field button:hover, .logo-creator .main-section .main-container .right-menu .select-colors .container .input-field button.active {\n  outline: none;\n  border-color: #43C2D1;\n  transition: 0.3s ease all;\n}\n.logo-creator .main-section .main-container .right-menu .select-colors .container .input-field button:hover {\n  transform: scale(1.1);\n}\n.logo-creator .main-section .main-container .right-menu .select-colors .container .input-field input {\n  margin-left: 10px;\n  color: #393939;\n  font-weight: 500;\n  font-family: \"Noto Sans\", sans-serif;\n  padding: 10px 13px;\n  border: 1px solid #E7E7E7;\n  border-radius: 4px;\n}\n.logo-creator .main-section .main-container .right-menu .select-colors .container .input-field input:focus {\n  outline: none;\n  border-color: #43C2D1;\n  transition: 0.3s ease all;\n}\n\n@media (max-width: 1440px) {\n  #image-logo svg {\n    max-width: 100%;\n    height: auto;\n  }\n}\n@media (max-width: 1023px) {\n  .logo-creator .top-section {\n    position: static;\n  }\n  .logo-creator .download-section {\n    position: fixed;\n    bottom: 0;\n    width: 100%;\n    background: #fff;\n    padding: 25px 30px;\n    z-index: 100;\n  }\n  .logo-creator .download-section .download-button button {\n    width: 100%;\n    padding: 7px;\n  }\n  .logo-creator .main-section {\n    margin-top: 60px;\n  }\n  .logo-creator .main-section .main-container .logo {\n    margin-bottom: 30px;\n  }\n  .logo-creator .main-section .main-container .logo #image-logo {\n    padding: 0;\n  }\n  .logo-creator .main-section .main-container .right-menu {\n    width: 100%;\n    padding: 0;\n    margin-bottom: 100px;\n  }\n  .logo-creator .main-section .main-container .right-menu .select-colors,\n.logo-creator .main-section .main-container .right-menu .select-layout {\n    width: 100%;\n  }\n  .logo-creator .main-section .main-container .right-menu .select-colors .options button,\n.logo-creator .main-section .main-container .right-menu .select-layout .options button {\n    width: 100%;\n  }\n  .logo-creator .main-section .main-container .left-menu {\n    width: 100%;\n    padding: 0;\n  }\n  .logo-creator .main-section .main-container .left-menu .options {\n    flex-direction: row;\n    flex-wrap: wrap;\n    width: 100%;\n  }\n  .logo-creator .main-section .main-container .left-menu .options .option {\n    flex-basis: 49%;\n    /* This will work for phone with width 360 like S9 */\n  }\n}\n@media (max-width: 360px) {\n  .logo-creator .main-section .container .left-menu .options .option button {\n    margin-left: 5px;\n  }\n}", "",{"version":3,"sources":["webpack://./src/assets/styles/Creator/creator.scss","webpack://./src/assets/styles/common.scss","webpack://./src/assets/styles/_constants.scss","webpack://./src/assets/styles/Creator/download-button.scss","webpack://./src/assets/styles/Creator/select-logo.scss","webpack://./src/assets/styles/Creator/select-typography.scss","webpack://./src/assets/styles/Creator/select-layout.scss","webpack://./src/assets/styles/Creator/select-colors.scss"],"names":[],"mappings":"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","sourcesContent":["@use \"../common.scss\" as default;\r\n@use \"download-button.scss\" as dlButton;\r\n@use \"select-colors.scss\" as sc;\r\n@use \"select-layout.scss\" as sly;\r\n@use \"select-logo.scss\" as sl;\r\n@use \"select-typography.scss\" as st;\r\n@import \"../constants\";\r\n\r\n.logo-creator {\r\n\t&.logo-maker-container {\r\n\t\t@include default.logo-maker-container;\r\n\t}\r\n\tposition: static;\r\n\tdisplay: flex;\r\n\tflex-direction: column;\r\n\r\n\t@media(min-width: 1024px) {\r\n\t\tposition: relative;\r\n\t}\r\n\t.download-section {\r\n\t\tdisplay: inline-block;\r\n\t\tposition: absolute;\r\n\t\tright: 0;\r\n\t\t.download-button {\r\n\t\t\t@include dlButton.download-button;\r\n\t\t}\r\n\r\n\t}\r\n\r\n\t.top-section {\r\n\t\t@include default.top-section;\r\n\t\t@media (max-width:1023px) {\r\n\t\t\t.back {\r\n\t\t\t\tleft: 30px;\r\n\t\t\t}\r\n\t\t}\r\n\t}\r\n\r\n    .main-section {\r\n\t\tmargin-top: 100px;\r\n\t\t.main-container {\r\n\t\t\tdisplay: flex;\r\n\t\t\tflex-direction: column;\r\n\r\n\r\n\t\t\t@media(min-width: 1024px) {\r\n\t\t\t\tflex-direction: row;\r\n\t\t\t}\r\n\r\n\t\t\t.left-menu {\r\n\t\t\t\tdisplay: flex;\r\n\t\t\t\tjustify-content: flex-start;\r\n\t\t\t\twidth: 30%;\r\n\t\t\t\tpadding: 0 20px 0 10px;\r\n\t\t\t\t.options {\r\n\t\t\t\t\tdisplay: flex;\r\n\t\t\t\t\tflex-direction: column;\r\n\t\t\t\t\t.option {\r\n\t\t\t\t\t\tdisplay: flex;\r\n\t\t\t\t\t\tmargin-bottom: 30px;\r\n\t\t\t\t\t\tbutton, a {\r\n\t\t\t\t\t\t\tdisplay: grid;\r\n\t\t\t\t\t\t\tgrid-template-columns: auto auto;\r\n\t\t\t\t\t\t\tcolumn-gap: 10px;\r\n\t\t\t\t\t\t\talign-items: center;\r\n\t\t\t\t\t\t\tjustify-content: center;\r\n\t\t\t\t\t\t\talign-content: center;\r\n\t\t\t\t\t\t\tfont-weight: 500;\r\n\t\t\t\t\t\t\tfont-size: 16px;\r\n\t\t\t\t\t\t\tline-height: 22px;\r\n\t\t\t\t\t\t\tbackground-color: transparent;\r\n\t\t\t\t\t\t\tborder: none;\r\n\t\t\t\t\t\t\tpadding: 0;\r\n\t\t\t\t\t\t\tmargin-left: 15px;\r\n\t\t\t\t\t\t\tcolor: #8B8B9C;\r\n\t\t\t\t\t\t\ttransition: $transition;\r\n\t\t\t\t\t\t\tcursor: pointer;\r\n\t\t\t\t\t\t\t&.active {\r\n\t\t\t\t\t\t\t\tcolor: #333333;\r\n\t\t\t\t\t\t\t}\r\n\t\t\t\t\t\t\t&:focus {\r\n\t\t\t\t\t\t\t\toutline: none;\r\n\t\t\t\t\t\t\t}\r\n\t\t\t\t\t\t}\r\n\t\t\t\t\t}\r\n\t\t\t\t}\r\n\t\t\t}\r\n\r\n\t\t\t.logo {\r\n\t\t\t\tdisplay: flex;\r\n\t\t\t\tjustify-content: center;\r\n\t\t\t\t#image-logo {\r\n\t\t\t\t\tpadding: 30px;\r\n\t\t\t\t\tbackground: #F5F7F9;\r\n\t\t\t\t}\r\n\t\t\t\theight: max-content;\r\n\t\t\t}\r\n\r\n\t\t\t.right-menu {\r\n\t\t\t\tpadding: 0 0 0 30px;\r\n\t\t\t\tdisplay: flex;\r\n\t\t\t\twidth: 40%;\r\n\r\n\t\t\t\t.select-logo {\r\n\t\t\t\t\t@include sl.select-logo;\r\n\t\t\t\t}\r\n\r\n\t\t\t\t.select-typography {\r\n\t\t\t\t\t@include st.select-typography;\r\n\t\t\t\t}\r\n\r\n\t\t\t\t.select-layout {\r\n\t\t\t\t\t@include sly.select-layout;\r\n\t\t\t\t}\r\n\r\n\t\t\t\t.select-colors {\r\n\t\t\t\t\t@include sc.select-colors;\r\n\t\t\t\t}\r\n\t\t\t}\r\n\t\t}\r\n\t}\r\n}\r\n\r\n@media (max-width: 1440px) {\r\n\t#image-logo svg {\r\n\t\tmax-width: 100%;\r\n\t\theight: auto;\r\n\t}\r\n}\r\n\r\n@media (max-width: 1023px) {\r\n\t.logo-creator {\r\n\t\t.top-section {\r\n\t\t\tposition: static;\r\n\t\t}\r\n\t\t.download-section {\r\n\t\t\tposition: fixed;\r\n\t\t\tbottom: 0;\r\n\t\t\twidth: 100%;\r\n\t\t\tbackground: #fff;\r\n\t\t\tpadding: 25px 30px;\r\n\t\t\tz-index: 100;\r\n\t\t\t.download-button button {\r\n\t\t\t\twidth: 100%;\r\n\t\t\t\tpadding: 7px;\r\n\t\t\t}\r\n\t\t}\r\n\t\t.main-section {\r\n\t\t\tmargin-top: 60px;\r\n\t\t\t.main-container {\r\n\t\t\t\t.logo {\r\n\t\t\t\t\tmargin-bottom: 30px;\r\n\t\t\t\t\t#image-logo {\r\n\t\t\t\t\t\tpadding: 0;\r\n\t\t\t\t\t}\r\n\t\t\t\t}\r\n\t\t\t\t.right-menu {\r\n\t\t\t\t\twidth: 100%;\r\n\t\t\t\t\tpadding: 0;\r\n\t\t\t\t\tmargin-bottom: 100px;\r\n\t\t\t\t\t.select-colors,\r\n\t\t\t\t\t.select-layout {\r\n\t\t\t\t\t\twidth: 100%;\r\n\t\t\t\t\t\t.options button {\r\n\t\t\t\t\t\t\twidth: 100%;\r\n\t\t\t\t\t\t}\r\n\t\t\t\t\t}\r\n\t\t\t\t}\r\n\t\t\t\t.left-menu {\r\n\t\t\t\t\twidth: 100%;\r\n\t\t\t\t\tpadding: 0;\r\n\t\t\t\t\t.options {\r\n\t\t\t\t\t\tflex-direction: row;\r\n\t\t\t\t\t\tflex-wrap: wrap;\r\n\t\t\t\t\t\twidth: 100%;\r\n\t\t\t\t\t\t.option {\r\n\t\t\t\t\t\t\tflex-basis: 49%; /* This will work for phone with width 360 like S9 */\r\n\t\t\t\t\t\t}\r\n\t\t\t\t\t}\r\n\t\t\t\t}\r\n\t\t\t}\r\n\t\t}\r\n\t}\r\n}\r\n\r\n@media (max-width: 360px) {\r\n\t.logo-creator .main-section .container .left-menu .options .option button {\r\n\t\tmargin-left: 5px;\r\n\t}\r\n}\r\n","@import \"constants\";\r\n\r\n@mixin logo-maker-container {\r\n\tmax-width: 1470px;\r\n\tmargin: 15px auto;\r\n\tfont-family: $noto;\r\n\t@media (max-width: 1440px) {\r\n\t\tmax-width: 90%;\r\n\t}\r\n\t@media (max-width: 600px) {\r\n\t\tmax-width: 100%;\r\n\t\tmargin: 15px 15px;\r\n\t}\r\n}\r\n\r\n@mixin back {\r\n\tdisplay: inline-block;\r\n\tposition: absolute;\r\n\tleft: 0;\r\n\tvisibility: visible;\r\n\ta {\r\n\t\tdisplay: inline-flex;\r\n\t\talign-items: center;\r\n\t\ttext-decoration: none;\r\n\t\tp {\r\n\t\t\tcolor: #585858;\r\n\t\t\ttext-transform: uppercase;\r\n\t\t\tfont-size: 14px;\r\n\t\t\tfont-weight: 600;\r\n\t\t\tmargin-left: 13px;\r\n\t\t\tpadding-bottom: 0px;\r\n\t\t\tmargin-bottom: 0px;\r\n\t\t\tmargin-top: 0px;\r\n\t\t}\r\n\t}\r\n\t@media(max-width: 600px) {\r\n\t\tvisibility: hidden;\r\n\t}\r\n}\r\n\r\n@mixin next {\r\n\ttext-align: center;\r\n\ta {\r\n\t\tcolor: #fff;\r\n\t\tbackground-color: $light-blue;\r\n\t\ttext-decoration: none;\r\n\t\ttext-transform: uppercase;\r\n\t\tfont-size: 14px;\r\n\t\tfont-weight: 700;\r\n\t\tline-height: 36px;\r\n\t\tpadding: 14px 80px;\r\n\t\tborder-radius: 4px;\r\n\t}\r\n\t@media (max-width: 600px) {\r\n\t\ta {\r\n\t\t\tdisplay: block;\r\n\t\t\tpadding: 7px;\r\n\t\t}\r\n\t}\r\n}\r\n\r\n@mixin logo-holder {\r\n\tdisplay: inline-flex;\r\n\timg {\r\n\t\tmax-width: 134px;\r\n\t\tmax-height: 44px;\r\n\t}\r\n\r\n\ta {\r\n\t\tmax-height: 44px;\r\n\t}\r\n\r\n\t.logo-maker-name {\r\n\t\tmargin-top: 2.5px;\r\n\t\theight: 44px;\r\n\t\tline-height: 24.52px;\r\n\t\tdisplay: inline-grid;\r\n\t\talign-content: center;\r\n\t\tfont-size: 18px;\r\n\t\tfont-weight: 700;\r\n\t\tcolor: $orange;\r\n\t\tmargin: 1px 0 0 4px;\r\n\t}\r\n}\r\n\r\n@mixin top-section {\r\n\tposition: relative;\r\n\ttext-align: center;\r\n\t.back {\r\n\t\t@include back;\r\n\t}\r\n\t.logo-holder {\r\n\t\t@include logo-holder;\r\n\t}\r\n\t@media (max-width: 600px) {\r\n\t\ttext-align: left;\r\n\t}\r\n}\r\n\r\n@mixin content-section-titles {\r\n\tmargin-top: 115px;\r\n\t.titles {\r\n\t\ttext-align: center;\r\n\t\th1 {\r\n\t\t\tcolor: $blue;\r\n\t\t\tfont-size: 36px;\r\n\t\t\tfont-weight: 700;\r\n\t\t\tline-height: 49.03px;\r\n\t\t\tmargin: 0 0 8px;\r\n\r\n\t\t\t@media (max-width: 600px) {\r\n\t\t\t\tline-height: 32.69px;\r\n\t\t\t}\r\n\t\t}\r\n\t\tp {\r\n\t\t\tcolor: #939393;\r\n\t\t\tfont-size: 18px;\r\n\t\t\tfont-weight: 500;\r\n\t\t\tline-height: 24.52px;\r\n\t\t\tmargin: 0;\r\n\t\t}\r\n\t}\r\n\t@media (max-width: 600px) {\r\n\t\tmargin-top: 60px;\r\n\t\t.titles {\r\n\t\t\ttext-align: left;\r\n\t\t\th1 {\r\n\t\t\t\tfont-size: 24px;\r\n\t\t\t}\r\n\t\t\tp {\r\n\t\t\t\tfont-size: 16px;\r\n\t\t\t\tcolor: #393939;\r\n\t\t\t}\r\n\t\t}\r\n\t}\r\n}\r\n","$noto: 'Noto Sans', sans-serif;\n$blue: #32456B;\n$orange: #FF7F66;\n$light-blue: #43C2D1;\n$black: #393939;\n$transition: .3s ease all;\n","@mixin download-button {\r\n\tbox-sizing: border-box;\r\n\tdisplay: flex;\r\n\tjustify-content: center;\r\n\tbutton {\r\n\t\tbackground-color: #FF7F66;\r\n\t\tcolor: white;\r\n\t\tfont-size: 14px;\r\n\t\tfont-weight: 600;\r\n\t\tline-height: 36px;\r\n\t\tpadding: 6px 26px;\r\n\t\tborder-radius: 4px;\r\n\t\tborder: none;\r\n\t\ttext-align: center;\r\n\t\tcursor: pointer;\r\n\t\ttransition: all 0.5s;\r\n\t\t&:focus {\r\n\t\t\toutline: none;\r\n\t\t}\r\n\r\n\t\tspan {\r\n\t\t\tcursor: pointer;\r\n\t\t\tdisplay: inline-block;\r\n\t\t\tposition: relative;\r\n\t\t\ttransition: 0.5s;\r\n\t\t}\r\n\t}\r\n\r\n\ta {\r\n\t\tbackground-color: #FF7F66;\r\n\t\ttext-decoration: none;\r\n\t\tcolor: white;\r\n\t\tfont-size: 14px;\r\n\t\tfont-weight: 600;\r\n\t\tline-height: 36px;\r\n\t\tpadding: 6px 26px;\r\n\t\tborder-radius: 4px;\r\n\t\tborder: none;\r\n\t\t&:focus {\r\n\t\t\toutline: none;\r\n\t\t}\r\n\r\n\t\t&:hover {\r\n\t\t\tfilter: grayscale(0.1);;\r\n\t\t}\r\n\t}\r\n}\r\n","@mixin select-logo {\r\n\theight: auto;\r\n\twidth: auto;\r\n\th1 {\r\n\t\tcolor: #939393;\r\n\t\tfont-size: 16px;\r\n\t\tline-height: 22px;\r\n\t\tfont-weight: 400;\r\n\t\tmargin: 0 0 15px;\r\n\t}\r\n\r\n\tp {\r\n\t\tfont-size: 14px;\r\n\t\tfont-weight: 600;\r\n\t\tline-height: 19px;\r\n\t\tmargin: 0 0 12px;\r\n\t}\r\n\r\n\t.logo-list {\r\n\t\t//max-height: 690px;\r\n\t\tmax-height: 200px;\r\n\t\toverflow-y: scroll;\r\n\t\tborder: 1px solid #E7E7E7;\r\n\t\tborder-radius: 14px;\r\n\t\tpadding: 15px;\r\n\t\tscrollbar-width: thin;\r\n\t\tdisplay: flex;\r\n\t\tflex-wrap: wrap;\r\n\t\tbutton {\r\n\t\t\tflex-grow: 1;\r\n\t\t\tbackground: transparent;\r\n\t\t\tborder: none;\r\n\t\t\tpadding: 5px;\r\n\t\t\t&:focus {\r\n\t\t\t\toutline: none;\r\n\t\t\t}\r\n\t\t\tsvg {\r\n\t\t\t\tborder: 2px solid #F1F1F1;\r\n\t\t\t\tpadding: 10px;\r\n\t\t\t\tbackground: transparent;\r\n\t\t\t\tborder-radius: 20px;\r\n\t\t\t\ttransition: .3s ease all;\r\n\t\t\t\t&:hover,\r\n\r\n\t\t\t\t&.active {\r\n\t\t\t\t\tborder: 2px solid #43C2D1;\r\n\t\t\t\t}\r\n\t\t\t}\r\n\t\t}\r\n\r\n\t\t@media(min-width: 1024px) {\r\n\t\t\tmax-height: 596px;\r\n\t\t}\r\n\t}\r\n}\r\n","@import \"../constants.scss\";\r\n\r\n@mixin select-typography {\r\n\twidth: 100%;\r\n\tz-index: 4;\r\n\tmargin-bottom: 200px;\r\n\r\n\t.title-options,\r\n\t.slogan-options {\r\n\t\twidth: 100%;\r\n\t\tdisplay: flex;\r\n\t\tflex-direction: column;\r\n\r\n\t}\r\n\t.title-options {\r\n\t\tmargin-bottom: 30px;\r\n\t}\r\n\th1 {\r\n\t\tfont-size: 16px;\r\n\t\tfont-weight: 400;\r\n\t\tline-height: 22px;\r\n\t\tcolor: #939393;\r\n\t\tmargin: 0 0 15px;\r\n\t}\r\n\r\n\tlabel {\r\n\t\tdisplay: block;\r\n\t\tfont-weight: 500;\r\n\t\tfont-size: 14px;\r\n\t\tline-height: 19px;\r\n\t\tcolor: #6A6A6A;\r\n\t\tmargin-bottom: 5px;\r\n\t}\r\n\tinput {\r\n\t\tcolor: $black;\r\n\t\tfont-weight: 500;\r\n\t\tfont-family: $noto;\r\n\t\tpadding: 10px 13px;\r\n\t\tmargin-bottom: 20px;\r\n\t\tborder: 1px solid #E7E7E7;\r\n\t\tborder-radius: 4px;\r\n\t\t&:focus {\r\n\t\t\toutline: none;\r\n\t\t\tborder-color: $light-blue;\r\n\t\t\ttransition: $transition;\r\n\t\t}\r\n\t}\r\n\t.font-select {\r\n\t\tmargin-bottom: 20px;\r\n\t\tfont-size: 14px;\r\n\t\t& > div {\r\n\t\t\tborder: 1px solid #e7e7e7;\r\n\t\t\t& > div {\r\n\t\t\t\tmargin: 0 0 0 13px;\r\n\t\t\t\tpadding: 0;\r\n\t\t\t}\r\n\t\t}\r\n\t\tinput {\r\n\t\t\tpadding: 0;\r\n\t\t}\r\n\t\tspan {\r\n\t\t\twidth: 0;\r\n\t\t}\r\n\t\tsvg {\r\n\t\t\tfill: #323232;\r\n\t\t}\r\n\t}\r\n}\r\n","@mixin select-layout {\r\n\tdisplay: flex;\r\n\tflex-direction: column;\r\n\r\n\th1 {\r\n\t\tcolor: #939393;\r\n\t\tfont-size: 16px;\r\n\t\tline-height: 22px;\r\n\t\tfont-weight: 400;\r\n\t\tmargin: 0 0 15px;\r\n\t}\r\n\r\n\tp {\r\n\t\tfont-size: 14px;\r\n\t\tfont-weight: 600;\r\n\t\tmargin: 0 0 12px;\r\n\t}\r\n\r\n\t.options {\r\n\t\tdisplay: flex;\r\n\t\tflex-direction: column;;\r\n\t\talign-items: center;\r\n\r\n\t\t@media(min-width: 1024px) {\r\n\t\t\theight: auto;\r\n\t\t\talign-items: flex-start;\r\n\t\t}\r\n\r\n\t\tbutton {\r\n\t\t\tbox-sizing: border-box;\r\n\t\t\tdisplay: flex;\r\n\t\t\tflex-direction: column;\r\n\t\t\talign-items: center;\r\n\t\t\tjustify-content: center;\r\n\t\t\theight: 121px;\r\n\t\t\twidth: 168px;\r\n\t\t\tborder: 2px solid #F1F1F1;\r\n\t\t\tborder-radius: 10px;\r\n\t\t\tpadding: 5px;\r\n\t\t\tmargin-bottom: 20px;\r\n\t\t\tfont-size: 14px;\r\n\t\t\tfont-weight: 500;\r\n\t\t\tline-height: 19px;\r\n\t\t\tcolor: #8B8B9C;\r\n\t\t\tbackground-color: white;\r\n\t\t\t&.active {\r\n\t\t\t\tborder-color: #43C2D1;\r\n\t\t\t\tspan {\r\n\t\t\t\t\tcolor: #333333;\r\n\t\t\t\t\tfont-weight: 600;\r\n\t\t\t\t}\r\n\t\t\t}\r\n\t\t\tspan {\r\n\t\t\t\tmargin-top: 10px;\r\n\t\t\t}\r\n\r\n\t\t\t.align-top {\r\n\t\t\t\tdisplay: flex;\r\n\t\t\t\tflex-direction: column;\r\n\t\t\t\talign-items: center;\r\n\t\t\t\tjustify-content: center;\r\n\t\t\t\tmargin: 3px;\r\n\r\n\t\t\t\tsvg {\r\n\t\t\t\t\tmargin: 1px;\r\n\t\t\t\t}\r\n\t\t\t}\r\n\r\n\t\t\t.align-left {\r\n\t\t\t\tdisplay: flex;\r\n\t\t\t\tflex-direction: row;\r\n\t\t\t\talign-items: center;\r\n\t\t\t\tjustify-content: center;\r\n\t\t\t\tmargin: 3px;\r\n\r\n\t\t\t}\r\n\r\n\t\t\t.align-right {\r\n\t\t\t\tdisplay: flex;\r\n\t\t\t\tflex-direction: row-reverse;\r\n\t\t\t\talign-items: center;\r\n\t\t\t\tjustify-content: center;\r\n\t\t\t\tmargin: 3px;\r\n\t\t\t}\r\n\t\t\t&:focus {\r\n\t\t\t\toutline: none;\r\n\t\t\t}\r\n\t\t}\r\n\t}\r\n}\r\n","@import \"../constants\";\r\n\r\n@mixin select-colors {\r\n\twidth: 80%;\r\n\th1 {\r\n\t\tcolor: #939393;\r\n\t\tfont-size: 16px;\r\n\t\tline-height: 22px;\r\n\t\tfont-weight: 400;\r\n\t\tmargin: 0 0 15px;\r\n\t}\r\n\r\n\tp {\r\n\t\tfont-size: 14px;\r\n\t\tfont-weight: 600;\r\n\t\tline-height: 19px;\r\n\t\tmargin: 20px 0 10px;\r\n\t}\r\n\r\n\t.container {\r\n\t\tdisplay: flex;\r\n\t\twidth: 100%;\r\n\t\tflex-direction: column;\r\n\r\n\t\t.input-field {\r\n\t\t\twidth: 100%;\r\n\t\t\tdisplay: inline-flex;\r\n\t\t\talign-items: center;\r\n\t\t\tmargin-bottom: 5px;\r\n\r\n\t\t\tbutton {\r\n\t\t\t\theight: 36px;\r\n\t\t\t\tmin-width: 36px;\r\n\t\t\t\tmax-width: 36px;\r\n\t\t\t\tbox-sizing: border-box;\r\n\t\t\t\tborder: 1px solid #E7E7E7;\r\n\t\t\t\tborder-radius: 4px;\r\n\t\t\t\t\r\n\r\n\t\t\t\t&:hover, &.active {\r\n\t\t\t\t\toutline: none;\r\n\t\t\t\t\tborder-color: $light-blue;\r\n\t\t\t\t\ttransition: $transition;\r\n\t\t\t\t}\r\n\t\t\t\t\r\n\t\t\t\t&:hover {\r\n\t\t\t\t\ttransform: scale(1.1);\r\n\t\t\t\t}\r\n\t\t\t}\r\n\r\n\t\t\tinput {\r\n\t\t\t\tmargin-left: 10px;\r\n\t\t\t\tcolor: $black;\r\n\t\t\t\tfont-weight: 500;\r\n\t\t\t\tfont-family: $noto;\r\n\t\t\t\tpadding: 10px 13px;\r\n\t\t\t\tborder: 1px solid #E7E7E7;\r\n\t\t\t\tborder-radius: 4px;\r\n\t\t\t\t&:focus {\r\n\t\t\t\t\toutline: none;\r\n\t\t\t\t\tborder-color: $light-blue;\r\n\t\t\t\t\ttransition: $transition;\r\n\t\t\t\t}\r\n\t\t\t}\r\n\t\t}\r\n\t}\r\n}\r\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ __webpack_exports__["default"] = (___CSS_LOADER_EXPORT___);
 
@@ -16478,7 +16478,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_pnpm_css_loader_5_0_1_webpack_4_44_2_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()(_node_modules_pnpm_css_loader_5_0_1_webpack_4_44_2_node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0___default.a);
 // Module
-___CSS_LOADER_EXPORT___.push([module.i, ".logo-showcase.logo-maker-container {\n  max-width: 1470px;\n  margin: 15px auto;\n  font-family: \"Noto Sans\", sans-serif;\n}\n@media (max-width: 1440px) {\n  .logo-showcase.logo-maker-container {\n    max-width: 90%;\n  }\n}\n@media (max-width: 600px) {\n  .logo-showcase.logo-maker-container {\n    max-width: 100%;\n    margin: 15px 15px;\n  }\n}\n.logo-showcase .top-section {\n  position: relative;\n  text-align: center;\n}\n.logo-showcase .top-section .back {\n  display: inline-block;\n  position: absolute;\n  left: 0;\n  visibility: visible;\n}\n.logo-showcase .top-section .back a {\n  display: inline-flex;\n  align-items: center;\n  text-decoration: none;\n}\n.logo-showcase .top-section .back a p {\n  color: #585858;\n  text-transform: uppercase;\n  font-size: 14px;\n  font-weight: 600;\n  margin-left: 13px;\n  padding-bottom: 0px;\n  margin-bottom: 0px;\n  margin-top: 0px;\n}\n@media (max-width: 600px) {\n  .logo-showcase .top-section .back {\n    visibility: hidden;\n  }\n}\n.logo-showcase .top-section .logo-holder {\n  display: inline-flex;\n}\n.logo-showcase .top-section .logo-holder img {\n  max-width: 134px;\n  max-height: 44px;\n}\n.logo-showcase .top-section .logo-holder a {\n  max-height: 44px;\n}\n.logo-showcase .top-section .logo-holder .logo-maker-name {\n  margin-top: 2.5px;\n  height: 44px;\n  line-height: 24.52px;\n  display: inline-grid;\n  align-content: center;\n  font-size: 18px;\n  font-weight: 700;\n  color: #FF7F66;\n  margin: 1px 0 0 4px;\n}\n@media (max-width: 600px) {\n  .logo-showcase .top-section {\n    text-align: left;\n  }\n}\n.logo-showcase .content-section {\n  margin-top: 115px;\n}\n.logo-showcase .content-section .titles {\n  text-align: center;\n}\n.logo-showcase .content-section .titles h1 {\n  color: #32456B;\n  font-size: 36px;\n  font-weight: 700;\n  line-height: 49.03px;\n  margin: 0 0 8px;\n}\n@media (max-width: 600px) {\n  .logo-showcase .content-section .titles h1 {\n    line-height: 32.69px;\n  }\n}\n.logo-showcase .content-section .titles p {\n  color: #939393;\n  font-size: 18px;\n  font-weight: 500;\n  line-height: 24.52px;\n  margin: 0;\n}\n@media (max-width: 600px) {\n  .logo-showcase .content-section {\n    margin-top: 60px;\n  }\n  .logo-showcase .content-section .titles {\n    text-align: left;\n  }\n  .logo-showcase .content-section .titles h1 {\n    font-size: 24px;\n  }\n  .logo-showcase .content-section .titles p {\n    font-size: 16px;\n    color: #393939;\n  }\n}\n.logo-showcase .content-section .content {\n  margin: 50px auto 100px;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  justify-content: center;\n}\n.logo-showcase .content-section .content .logos-container {\n  display: flex;\n  flex-wrap: wrap;\n  justify-content: center;\n}\n.logo-showcase .content-section .content .logos-container .logo {\n  padding: 0;\n  margin: 10px;\n  border: none;\n  background: transparent;\n  transition: all 0.2s ease-in-out;\n}\n.logo-showcase .content-section .content .logos-container .logo svg {\n  border-radius: 10px;\n  border: 4px solid transparent;\n}\n@media (max-width: 600px) {\n  .logo-showcase .content-section .content .logos-container .logo svg {\n    border-radius: 1.8px;\n  }\n}\n.logo-showcase .content-section .content .logos-container .logo svg.active, .logo-showcase .content-section .content .logos-container .logo svg:hover {\n  border-color: #43C2D1;\n}\n.logo-showcase .content-section .content .logos-container .logo:focus {\n  outline: none;\n}\n.logo-showcase .content-section .content .logos-container .logo.active, .logo-showcase .content-section .content .logos-container .logo:hover {\n  transform: scale(1.03);\n}\n.logo-showcase .next {\n  text-align: center;\n  position: fixed;\n  bottom: 0;\n  width: 100%;\n  left: 0;\n  background: #fff;\n  padding: 25px 0;\n  z-index: 100;\n}\n.logo-showcase .next a {\n  color: #fff;\n  background-color: #43C2D1;\n  text-decoration: none;\n  text-transform: uppercase;\n  font-size: 14px;\n  font-weight: 700;\n  line-height: 36px;\n  padding: 14px 80px;\n  border-radius: 4px;\n}\n@media (max-width: 600px) {\n  .logo-showcase .next a {\n    display: block;\n    padding: 7px;\n  }\n}\n@media (max-width: 600px) {\n  .logo-showcase .next {\n    padding: 25px 30px;\n  }\n}\n\n@media (max-width: 811px) {\n  .logo-showcase .content-section .content .logos-container .logo svg {\n    max-width: 250px;\n    height: auto;\n  }\n}\n@media (max-width: 600px) {\n  .logo-showcase .content-section .content {\n    margin-top: 20px;\n  }\n  .logo-showcase .content-section .content .logos-container .logo {\n    margin: 5px;\n  }\n  .logo-showcase .content-section .content .logos-container .logo svg {\n    max-width: 200px;\n    height: auto;\n  }\n}\n@media (max-width: 480px) {\n  .logo-showcase .content-section .content .logos-container .logo svg {\n    max-width: 300px;\n    height: auto;\n  }\n}", "",{"version":3,"sources":["webpack://./src/assets/styles/Showcase/showcase.scss","webpack://./src/assets/styles/common.scss","webpack://./src/assets/styles/_constants.scss"],"names":[],"mappings":"AAII;ECDH,iBAAA;EACA,iBAAA;EACA,oCCLM;AFIP;ACEC;EDFG;ICGF,cAAA;EDCA;AACF;ACAC;EDLG;ICMF,eAAA;IACA,iBAAA;EDGA;AACF;AARI;EC+EH,kBAAA;EACA,kBAAA;ADpED;ACqEC;EAxEA,qBAAA;EACA,kBAAA;EACA,OAAA;EACA,mBAAA;ADMD;ACLC;EACC,oBAAA;EACA,mBAAA;EACA,qBAAA;ADOF;ACNE;EACC,cAAA;EACA,yBAAA;EACA,eAAA;EACA,gBAAA;EACA,iBAAA;EACA,mBAAA;EACA,kBAAA;EACA,eAAA;ADQH;ACLC;EAqDA;IApDC,kBAAA;EDQA;AACF;AC8CC;EA7BA,oBAAA;ADdD;ACeC;EACC,gBAAA;EACA,gBAAA;ADbF;ACgBC;EACC,gBAAA;ADdF;ACiBC;EACC,iBAAA;EACA,YAAA;EACA,oBAAA;EACA,oBAAA;EACA,qBAAA;EACA,eAAA;EACA,gBAAA;EACA,cC9EO;ED+EP,mBAAA;ADfF;AC4BC;EDvFG;ICwFF,gBAAA;EDzBA;AACF;AA7DI;EC0FH,iBAAA;AD1BD;AC2BC;EACC,kBAAA;ADzBF;AC0BE;EACC,cCvGI;EDwGJ,eAAA;EACA,gBAAA;EACA,oBAAA;EACA,eAAA;ADxBH;AC0BG;EAPD;IAQE,oBAAA;EDvBF;AACF;ACyBE;EACC,cAAA;EACA,eAAA;EACA,gBAAA;EACA,oBAAA;EACA,SAAA;ADvBH;AC0BC;EDhHG;ICiHF,gBAAA;EDvBA;ECwBA;IACC,gBAAA;EDtBD;ECuBC;IACC,eAAA;EDrBF;ECuBC;IACC,eAAA;IACA,cAAA;EDrBF;AACF;AAnGE;EACC,uBAAA;EACA,aAAA;EACA,sBAAA;EACA,mBAAA;EACA,uBAAA;AAqGH;AApGG;EACC,aAAA;EACA,eAAA;EACA,uBAAA;AAsGJ;AArGI;EACC,UAAA;EACA,YAAA;EACA,YAAA;EACA,uBAAA;EACA,gCAAA;AAuGL;AAtGK;EACC,mBAAA;EACA,6BAAA;AAwGN;AAtGM;EAJD;IAKE,oBAAA;EAyGL;AACF;AAvGM;EAEC,qBEnCM;AF2Ib;AArGK;EACC,aAAA;AAuGN;AArGK;EAEC,sBAAA;AAsGN;AAhGC;ECXA,kBAAA;EDaC,eAAA;EACA,SAAA;EACA,WAAA;EACA,OAAA;EACA,gBAAA;EACA,eAAA;EACA,YAAA;AAkGF;ACpHC;EACC,WAAA;EACA,yBCzCW;ED0CX,qBAAA;EACA,yBAAA;EACA,eAAA;EACA,gBAAA;EACA,iBAAA;EACA,kBAAA;EACA,kBAAA;ADsHF;ACpHC;EACC;IACC,cAAA;IACA,YAAA;EDsHD;AACF;AAlHE;EATD;IAUE,kBAAA;EAqHD;AACF;;AAjHA;EACC;IACC,gBAAA;IACA,YAAA;EAoHA;AACF;AAjHA;EACC;IACC,gBAAA;EAmHA;EAlHA;IACC,WAAA;EAoHD;EAnHC;IACC,gBAAA;IACA,YAAA;EAqHF;AACF;AAhHA;EACC;IACC,gBAAA;IACA,YAAA;EAkHA;AACF","sourcesContent":["@use \"../common.scss\" as default;\r\n@import \"../constants\";\r\n\r\n.logo-showcase {\r\n    &.logo-maker-container {\r\n\t\t@include default.logo-maker-container;\r\n\t}\r\n    .top-section {\r\n\t\t@include default.top-section;\r\n    }\r\n    .content-section {\r\n        @include default.content-section-titles;\r\n\t\t.content {\r\n\t\t\tmargin: 50px auto 100px;\r\n\t\t\tdisplay: flex;\r\n\t\t\tflex-direction: column;\r\n\t\t\talign-items: center;\r\n\t\t\tjustify-content: center;\r\n\t\t\t.logos-container {\r\n\t\t\t\tdisplay: flex;\r\n\t\t\t\tflex-wrap: wrap;\r\n\t\t\t\tjustify-content: center;\r\n\t\t\t\t.logo {\r\n\t\t\t\t\tpadding: 0;\r\n\t\t\t\t\tmargin: 10px;\r\n\t\t\t\t\tborder: none;\r\n\t\t\t\t\tbackground: transparent;\r\n\t\t\t\t\ttransition: all .2s ease-in-out;\r\n\t\t\t\t\tsvg {\r\n\t\t\t\t\t\tborder-radius: 10px;\r\n\t\t\t\t\t\tborder: 4px solid transparent;\r\n\r\n\t\t\t\t\t\t@media (max-width: 600px) {\r\n\t\t\t\t\t\t\tborder-radius: 1.8px;\r\n\t\t\t\t\t\t}\r\n\r\n\t\t\t\t\t\t&.active,\r\n\t\t\t\t\t\t&:hover {\r\n\t\t\t\t\t\t\tborder-color: $light-blue;\r\n\t\t\t\t\t\t}\r\n\t\t\t\t\t}\r\n\t\t\t\t\t&:focus {\r\n\t\t\t\t\t\toutline: none;\r\n\t\t\t\t\t}\r\n\t\t\t\t\t&.active,\r\n\t\t\t\t\t&:hover {\r\n\t\t\t\t\t\ttransform: scale(1.03);\r\n\t\t\t\t\t}\r\n\t\t\t\t}\r\n\t\t\t}\r\n\t\t}\r\n    }\r\n\t.next {\r\n\t\t@include default.next;\r\n\t\tposition: fixed;\r\n\t\tbottom: 0;\r\n\t\twidth: 100%;\r\n\t\tleft: 0;\r\n\t\tbackground: #fff;\r\n\t\tpadding: 25px 0;\r\n\t\tz-index: 100;\r\n\t\t@media (max-width: 600px) {\r\n\t\t\tpadding: 25px 30px;\r\n\t\t}\r\n\t}\r\n}\r\n\r\n@media (max-width: 811px) {\r\n\t.logo-showcase .content-section .content .logos-container .logo svg  {\r\n\t\tmax-width: 250px;\r\n\t\theight: auto;\r\n\t}\r\n}\r\n\r\n@media (max-width: 600px) {\r\n\t.logo-showcase .content-section .content {\r\n\t\tmargin-top: 20px;\r\n\t\t.logos-container .logo {\r\n\t\t\tmargin: 5px;\r\n\t\t\tsvg {\r\n\t\t\t\tmax-width: 200px;\r\n\t\t\t\theight: auto;\r\n\t\t\t}\r\n\t\t}\r\n\t}\r\n}\r\n\r\n@media (max-width: 480px) {\r\n\t.logo-showcase .content-section .content .logos-container .logo svg  {\r\n\t\tmax-width: 300px;\r\n\t\theight: auto;\r\n\t}\r\n}\r\n","@import \"constants\";\r\n\r\n@mixin logo-maker-container {\r\n\tmax-width: 1470px;\r\n\tmargin: 15px auto;\r\n\tfont-family: $noto;\r\n\t@media (max-width: 1440px) {\r\n\t\tmax-width: 90%;\r\n\t}\r\n\t@media (max-width: 600px) {\r\n\t\tmax-width: 100%;\r\n\t\tmargin: 15px 15px;\r\n\t}\r\n}\r\n\r\n@mixin back {\r\n\tdisplay: inline-block;\r\n\tposition: absolute;\r\n\tleft: 0;\r\n\tvisibility: visible;\r\n\ta {\r\n\t\tdisplay: inline-flex;\r\n\t\talign-items: center;\r\n\t\ttext-decoration: none;\r\n\t\tp {\r\n\t\t\tcolor: #585858;\r\n\t\t\ttext-transform: uppercase;\r\n\t\t\tfont-size: 14px;\r\n\t\t\tfont-weight: 600;\r\n\t\t\tmargin-left: 13px;\r\n\t\t\tpadding-bottom: 0px;\r\n\t\t\tmargin-bottom: 0px;\r\n\t\t\tmargin-top: 0px;\r\n\t\t}\r\n\t}\r\n\t@media(max-width: 600px) {\r\n\t\tvisibility: hidden;\r\n\t}\r\n}\r\n\r\n@mixin next {\r\n\ttext-align: center;\r\n\ta {\r\n\t\tcolor: #fff;\r\n\t\tbackground-color: $light-blue;\r\n\t\ttext-decoration: none;\r\n\t\ttext-transform: uppercase;\r\n\t\tfont-size: 14px;\r\n\t\tfont-weight: 700;\r\n\t\tline-height: 36px;\r\n\t\tpadding: 14px 80px;\r\n\t\tborder-radius: 4px;\r\n\t}\r\n\t@media (max-width: 600px) {\r\n\t\ta {\r\n\t\t\tdisplay: block;\r\n\t\t\tpadding: 7px;\r\n\t\t}\r\n\t}\r\n}\r\n\r\n@mixin logo-holder {\r\n\tdisplay: inline-flex;\r\n\timg {\r\n\t\tmax-width: 134px;\r\n\t\tmax-height: 44px;\r\n\t}\r\n\r\n\ta {\r\n\t\tmax-height: 44px;\r\n\t}\r\n\r\n\t.logo-maker-name {\r\n\t\tmargin-top: 2.5px;\r\n\t\theight: 44px;\r\n\t\tline-height: 24.52px;\r\n\t\tdisplay: inline-grid;\r\n\t\talign-content: center;\r\n\t\tfont-size: 18px;\r\n\t\tfont-weight: 700;\r\n\t\tcolor: $orange;\r\n\t\tmargin: 1px 0 0 4px;\r\n\t}\r\n}\r\n\r\n@mixin top-section {\r\n\tposition: relative;\r\n\ttext-align: center;\r\n\t.back {\r\n\t\t@include back;\r\n\t}\r\n\t.logo-holder {\r\n\t\t@include logo-holder;\r\n\t}\r\n\t@media (max-width: 600px) {\r\n\t\ttext-align: left;\r\n\t}\r\n}\r\n\r\n@mixin content-section-titles {\r\n\tmargin-top: 115px;\r\n\t.titles {\r\n\t\ttext-align: center;\r\n\t\th1 {\r\n\t\t\tcolor: $blue;\r\n\t\t\tfont-size: 36px;\r\n\t\t\tfont-weight: 700;\r\n\t\t\tline-height: 49.03px;\r\n\t\t\tmargin: 0 0 8px;\r\n\r\n\t\t\t@media (max-width: 600px) {\r\n\t\t\t\tline-height: 32.69px;\r\n\t\t\t}\r\n\t\t}\r\n\t\tp {\r\n\t\t\tcolor: #939393;\r\n\t\t\tfont-size: 18px;\r\n\t\t\tfont-weight: 500;\r\n\t\t\tline-height: 24.52px;\r\n\t\t\tmargin: 0;\r\n\t\t}\r\n\t}\r\n\t@media (max-width: 600px) {\r\n\t\tmargin-top: 60px;\r\n\t\t.titles {\r\n\t\t\ttext-align: left;\r\n\t\t\th1 {\r\n\t\t\t\tfont-size: 24px;\r\n\t\t\t}\r\n\t\t\tp {\r\n\t\t\t\tfont-size: 16px;\r\n\t\t\t\tcolor: #393939;\r\n\t\t\t}\r\n\t\t}\r\n\t}\r\n}\r\n","$noto: 'Noto Sans', sans-serif;\n$blue: #32456B;\n$orange: #FF7F66;\n$light-blue: #43C2D1;\n$black: #393939;\n$transition: .3s ease all;\n"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.i, ".logo-showcase.logo-maker-container {\n  max-width: 1470px;\n  margin: 15px auto;\n  font-family: \"Noto Sans\", sans-serif;\n}\n@media (max-width: 1440px) {\n  .logo-showcase.logo-maker-container {\n    max-width: 90%;\n  }\n}\n@media (max-width: 600px) {\n  .logo-showcase.logo-maker-container {\n    max-width: 100%;\n    margin: 15px 15px;\n  }\n}\n.logo-showcase .top-section {\n  position: relative;\n  text-align: center;\n}\n.logo-showcase .top-section .back {\n  display: inline-block;\n  position: absolute;\n  left: 0;\n  visibility: visible;\n}\n.logo-showcase .top-section .back a {\n  display: inline-flex;\n  align-items: center;\n  text-decoration: none;\n}\n.logo-showcase .top-section .back a p {\n  color: #585858;\n  text-transform: uppercase;\n  font-size: 14px;\n  font-weight: 600;\n  margin-left: 13px;\n  padding-bottom: 0px;\n  margin-bottom: 0px;\n  margin-top: 0px;\n}\n@media (max-width: 600px) {\n  .logo-showcase .top-section .back {\n    visibility: hidden;\n  }\n}\n.logo-showcase .top-section .logo-holder {\n  display: inline-flex;\n}\n.logo-showcase .top-section .logo-holder img {\n  max-width: 134px;\n  max-height: 44px;\n}\n.logo-showcase .top-section .logo-holder a {\n  max-height: 44px;\n}\n.logo-showcase .top-section .logo-holder .logo-maker-name {\n  margin-top: 2.5px;\n  height: 44px;\n  line-height: 24.52px;\n  display: inline-grid;\n  align-content: center;\n  font-size: 18px;\n  font-weight: 700;\n  color: #FF7F66;\n  margin: 1px 0 0 4px;\n}\n@media (max-width: 600px) {\n  .logo-showcase .top-section {\n    text-align: left;\n  }\n}\n.logo-showcase .content-section {\n  margin-top: 115px;\n}\n.logo-showcase .content-section .titles {\n  text-align: center;\n}\n.logo-showcase .content-section .titles h1 {\n  color: #32456B;\n  font-size: 36px;\n  font-weight: 700;\n  line-height: 49.03px;\n  margin: 0 0 8px;\n}\n@media (max-width: 600px) {\n  .logo-showcase .content-section .titles h1 {\n    line-height: 32.69px;\n  }\n}\n.logo-showcase .content-section .titles p {\n  color: #939393;\n  font-size: 18px;\n  font-weight: 500;\n  line-height: 24.52px;\n  margin: 0;\n}\n@media (max-width: 600px) {\n  .logo-showcase .content-section {\n    margin-top: 60px;\n  }\n  .logo-showcase .content-section .titles {\n    text-align: left;\n  }\n  .logo-showcase .content-section .titles h1 {\n    font-size: 24px;\n  }\n  .logo-showcase .content-section .titles p {\n    font-size: 16px;\n    color: #393939;\n  }\n}\n.logo-showcase .content-section .content {\n  margin: 50px auto 100px;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  justify-content: center;\n}\n.logo-showcase .content-section .content .logos-container {\n  display: flex;\n  flex-wrap: wrap;\n  justify-content: center;\n  /* Safari */\n}\n.logo-showcase .content-section .content .logos-container .content-loader {\n  border: 16px solid #f3f3f3;\n  border-radius: 50%;\n  border-top: 16px solid #3498db;\n  border-bottom: 16px solid #3498db;\n  width: 120px;\n  height: 120px;\n  -webkit-animation: spin 2s linear infinite;\n  /* Safari */\n  animation: spin 2s linear infinite;\n}\n@-webkit-keyframes spin {\n  0% {\n    -webkit-transform: rotate(0deg);\n  }\n  100% {\n    -webkit-transform: rotate(360deg);\n  }\n}\n@keyframes spin {\n  0% {\n    transform: rotate(0deg);\n  }\n  100% {\n    transform: rotate(360deg);\n  }\n}\n.logo-showcase .content-section .content .logos-container .logo {\n  padding: 0;\n  margin: 10px;\n  border: none;\n  background: transparent;\n  transition: all 0.2s ease-in-out;\n}\n.logo-showcase .content-section .content .logos-container .logo svg {\n  border-radius: 10px;\n  border: 4px solid transparent;\n}\n@media (max-width: 600px) {\n  .logo-showcase .content-section .content .logos-container .logo svg {\n    border-radius: 1.8px;\n  }\n}\n.logo-showcase .content-section .content .logos-container .logo svg.active, .logo-showcase .content-section .content .logos-container .logo svg:hover {\n  border-color: #43C2D1;\n}\n.logo-showcase .content-section .content .logos-container .logo:focus {\n  outline: none;\n}\n.logo-showcase .content-section .content .logos-container .logo.active, .logo-showcase .content-section .content .logos-container .logo:hover {\n  transform: scale(1.03);\n}\n.logo-showcase .next {\n  text-align: center;\n  position: fixed;\n  bottom: 0;\n  width: 100%;\n  left: 0;\n  background: #fff;\n  padding: 25px 0;\n  z-index: 100;\n}\n.logo-showcase .next a {\n  color: #fff;\n  background-color: #43C2D1;\n  text-decoration: none;\n  text-transform: uppercase;\n  font-size: 14px;\n  font-weight: 700;\n  line-height: 36px;\n  padding: 14px 80px;\n  border-radius: 4px;\n}\n@media (max-width: 600px) {\n  .logo-showcase .next a {\n    display: block;\n    padding: 7px;\n  }\n}\n@media (max-width: 600px) {\n  .logo-showcase .next {\n    padding: 25px 30px;\n  }\n}\n\n@media (max-width: 811px) {\n  .logo-showcase .content-section .content .logos-container .logo svg {\n    max-width: 250px;\n    height: auto;\n  }\n}\n@media (max-width: 600px) {\n  .logo-showcase .content-section .content {\n    margin-top: 20px;\n  }\n  .logo-showcase .content-section .content .logos-container .logo {\n    margin: 5px;\n  }\n  .logo-showcase .content-section .content .logos-container .logo svg {\n    max-width: 200px;\n    height: auto;\n  }\n}\n@media (max-width: 480px) {\n  .logo-showcase .content-section .content .logos-container .logo svg {\n    max-width: 300px;\n    height: auto;\n  }\n}", "",{"version":3,"sources":["webpack://./src/assets/styles/Showcase/showcase.scss","webpack://./src/assets/styles/common.scss","webpack://./src/assets/styles/_constants.scss"],"names":[],"mappings":"AAII;ECDH,iBAAA;EACA,iBAAA;EACA,oCCLM;AFIP;ACEC;EDFG;ICGF,cAAA;EDCA;AACF;ACAC;EDLG;ICMF,eAAA;IACA,iBAAA;EDGA;AACF;AARI;EC+EH,kBAAA;EACA,kBAAA;ADpED;ACqEC;EAxEA,qBAAA;EACA,kBAAA;EACA,OAAA;EACA,mBAAA;ADMD;ACLC;EACC,oBAAA;EACA,mBAAA;EACA,qBAAA;ADOF;ACNE;EACC,cAAA;EACA,yBAAA;EACA,eAAA;EACA,gBAAA;EACA,iBAAA;EACA,mBAAA;EACA,kBAAA;EACA,eAAA;ADQH;ACLC;EAqDA;IApDC,kBAAA;EDQA;AACF;AC8CC;EA7BA,oBAAA;ADdD;ACeC;EACC,gBAAA;EACA,gBAAA;ADbF;ACgBC;EACC,gBAAA;ADdF;ACiBC;EACC,iBAAA;EACA,YAAA;EACA,oBAAA;EACA,oBAAA;EACA,qBAAA;EACA,eAAA;EACA,gBAAA;EACA,cC9EO;ED+EP,mBAAA;ADfF;AC4BC;EDvFG;ICwFF,gBAAA;EDzBA;AACF;AA7DI;EC0FH,iBAAA;AD1BD;AC2BC;EACC,kBAAA;ADzBF;AC0BE;EACC,cCvGI;EDwGJ,eAAA;EACA,gBAAA;EACA,oBAAA;EACA,eAAA;ADxBH;AC0BG;EAPD;IAQE,oBAAA;EDvBF;AACF;ACyBE;EACC,cAAA;EACA,eAAA;EACA,gBAAA;EACA,oBAAA;EACA,SAAA;ADvBH;AC0BC;EDhHG;ICiHF,gBAAA;EDvBA;ECwBA;IACC,gBAAA;EDtBD;ECuBC;IACC,eAAA;EDrBF;ECuBC;IACC,eAAA;IACA,cAAA;EDrBF;AACF;AAnGE;EACC,uBAAA;EACA,aAAA;EACA,sBAAA;EACA,mBAAA;EACA,uBAAA;AAqGH;AApGG;EACC,aAAA;EACA,eAAA;EACA,uBAAA;EAaA,WAAA;AA0FJ;AArGI;EACC,0BAAA;EACA,kBAAA;EACA,8BAAA;EACA,iCAAA;EACA,YAAA;EACA,aAAA;EACA,0CAAA;EAA4C,WAAA;EAC5C,kCAAA;AAwGL;AApGI;EACC;IAAK,+BAAA;EAuGR;EAtGG;IAAO,iCAAA;EAyGV;AACF;AAvGI;EACC;IAAK,uBAAA;EA0GR;EAzGG;IAAO,yBAAA;EA4GV;AACF;AA1GI;EACC,UAAA;EACA,YAAA;EACA,YAAA;EACA,uBAAA;EACA,gCAAA;AA4GL;AA3GK;EACC,mBAAA;EACA,6BAAA;AA6GN;AA3GM;EAJD;IAKE,oBAAA;EA8GL;AACF;AA5GM;EAEC,qBE1DM;AFuKb;AA1GK;EACC,aAAA;AA4GN;AA1GK;EAEC,sBAAA;AA2GN;AArGC;EClCA,kBAAA;EDoCC,eAAA;EACA,SAAA;EACA,WAAA;EACA,OAAA;EACA,gBAAA;EACA,eAAA;EACA,YAAA;AAuGF;AChJC;EACC,WAAA;EACA,yBCzCW;ED0CX,qBAAA;EACA,yBAAA;EACA,eAAA;EACA,gBAAA;EACA,iBAAA;EACA,kBAAA;EACA,kBAAA;ADkJF;AChJC;EACC;IACC,cAAA;IACA,YAAA;EDkJD;AACF;AAvHE;EATD;IAUE,kBAAA;EA0HD;AACF;;AAtHA;EACC;IACC,gBAAA;IACA,YAAA;EAyHA;AACF;AAtHA;EACC;IACC,gBAAA;EAwHA;EAvHA;IACC,WAAA;EAyHD;EAxHC;IACC,gBAAA;IACA,YAAA;EA0HF;AACF;AArHA;EACC;IACC,gBAAA;IACA,YAAA;EAuHA;AACF","sourcesContent":["@use \"../common.scss\" as default;\r\n@import \"../constants\";\r\n\r\n.logo-showcase {\r\n    &.logo-maker-container {\r\n\t\t@include default.logo-maker-container;\r\n\t}\r\n    .top-section {\r\n\t\t@include default.top-section;\r\n    }\r\n    .content-section {\r\n        @include default.content-section-titles;\r\n\t\t.content {\r\n\t\t\tmargin: 50px auto 100px;\r\n\t\t\tdisplay: flex;\r\n\t\t\tflex-direction: column;\r\n\t\t\talign-items: center;\r\n\t\t\tjustify-content: center;\r\n\t\t\t.logos-container {\r\n\t\t\t\tdisplay: flex;\r\n\t\t\t\tflex-wrap: wrap;\r\n\t\t\t\tjustify-content: center;\r\n\r\n\t\t\t\t.content-loader {\r\n\t\t\t\t\tborder: 16px solid #f3f3f3;\r\n\t\t\t\t\tborder-radius: 50%;\r\n\t\t\t\t\tborder-top: 16px solid #3498db;\r\n\t\t\t\t\tborder-bottom: 16px solid #3498db;\r\n\t\t\t\t\twidth: 120px;\r\n\t\t\t\t\theight: 120px;\r\n\t\t\t\t\t-webkit-animation: spin 2s linear infinite; /* Safari */\r\n\t\t\t\t\tanimation: spin 2s linear infinite;\r\n\t\t\t\t}\r\n\r\n\t\t\t\t/* Safari */\r\n\t\t\t\t@-webkit-keyframes spin {\r\n\t\t\t\t\t0% { -webkit-transform: rotate(0deg); }\r\n\t\t\t\t\t100% { -webkit-transform: rotate(360deg); }\r\n\t\t\t\t}\r\n\t\t\t\t\r\n\t\t\t\t@keyframes spin {\r\n\t\t\t\t\t0% { transform: rotate(0deg); }\r\n\t\t\t\t\t100% { transform: rotate(360deg); }\r\n\t\t\t\t}\r\n\r\n\t\t\t\t.logo {\r\n\t\t\t\t\tpadding: 0;\r\n\t\t\t\t\tmargin: 10px;\r\n\t\t\t\t\tborder: none;\r\n\t\t\t\t\tbackground: transparent;\r\n\t\t\t\t\ttransition: all .2s ease-in-out;\r\n\t\t\t\t\tsvg {\r\n\t\t\t\t\t\tborder-radius: 10px;\r\n\t\t\t\t\t\tborder: 4px solid transparent;\r\n\r\n\t\t\t\t\t\t@media (max-width: 600px) {\r\n\t\t\t\t\t\t\tborder-radius: 1.8px;\r\n\t\t\t\t\t\t}\r\n\r\n\t\t\t\t\t\t&.active,\r\n\t\t\t\t\t\t&:hover {\r\n\t\t\t\t\t\t\tborder-color: $light-blue;\r\n\t\t\t\t\t\t}\r\n\t\t\t\t\t}\r\n\t\t\t\t\t&:focus {\r\n\t\t\t\t\t\toutline: none;\r\n\t\t\t\t\t}\r\n\t\t\t\t\t&.active,\r\n\t\t\t\t\t&:hover {\r\n\t\t\t\t\t\ttransform: scale(1.03);\r\n\t\t\t\t\t}\r\n\t\t\t\t}\r\n\t\t\t}\r\n\t\t}\r\n    }\r\n\t.next {\r\n\t\t@include default.next;\r\n\t\tposition: fixed;\r\n\t\tbottom: 0;\r\n\t\twidth: 100%;\r\n\t\tleft: 0;\r\n\t\tbackground: #fff;\r\n\t\tpadding: 25px 0;\r\n\t\tz-index: 100;\r\n\t\t@media (max-width: 600px) {\r\n\t\t\tpadding: 25px 30px;\r\n\t\t}\r\n\t}\r\n}\r\n\r\n@media (max-width: 811px) {\r\n\t.logo-showcase .content-section .content .logos-container .logo svg  {\r\n\t\tmax-width: 250px;\r\n\t\theight: auto;\r\n\t}\r\n}\r\n\r\n@media (max-width: 600px) {\r\n\t.logo-showcase .content-section .content {\r\n\t\tmargin-top: 20px;\r\n\t\t.logos-container .logo {\r\n\t\t\tmargin: 5px;\r\n\t\t\tsvg {\r\n\t\t\t\tmax-width: 200px;\r\n\t\t\t\theight: auto;\r\n\t\t\t}\r\n\t\t}\r\n\t}\r\n}\r\n\r\n@media (max-width: 480px) {\r\n\t.logo-showcase .content-section .content .logos-container .logo svg  {\r\n\t\tmax-width: 300px;\r\n\t\theight: auto;\r\n\t}\r\n}\r\n","@import \"constants\";\r\n\r\n@mixin logo-maker-container {\r\n\tmax-width: 1470px;\r\n\tmargin: 15px auto;\r\n\tfont-family: $noto;\r\n\t@media (max-width: 1440px) {\r\n\t\tmax-width: 90%;\r\n\t}\r\n\t@media (max-width: 600px) {\r\n\t\tmax-width: 100%;\r\n\t\tmargin: 15px 15px;\r\n\t}\r\n}\r\n\r\n@mixin back {\r\n\tdisplay: inline-block;\r\n\tposition: absolute;\r\n\tleft: 0;\r\n\tvisibility: visible;\r\n\ta {\r\n\t\tdisplay: inline-flex;\r\n\t\talign-items: center;\r\n\t\ttext-decoration: none;\r\n\t\tp {\r\n\t\t\tcolor: #585858;\r\n\t\t\ttext-transform: uppercase;\r\n\t\t\tfont-size: 14px;\r\n\t\t\tfont-weight: 600;\r\n\t\t\tmargin-left: 13px;\r\n\t\t\tpadding-bottom: 0px;\r\n\t\t\tmargin-bottom: 0px;\r\n\t\t\tmargin-top: 0px;\r\n\t\t}\r\n\t}\r\n\t@media(max-width: 600px) {\r\n\t\tvisibility: hidden;\r\n\t}\r\n}\r\n\r\n@mixin next {\r\n\ttext-align: center;\r\n\ta {\r\n\t\tcolor: #fff;\r\n\t\tbackground-color: $light-blue;\r\n\t\ttext-decoration: none;\r\n\t\ttext-transform: uppercase;\r\n\t\tfont-size: 14px;\r\n\t\tfont-weight: 700;\r\n\t\tline-height: 36px;\r\n\t\tpadding: 14px 80px;\r\n\t\tborder-radius: 4px;\r\n\t}\r\n\t@media (max-width: 600px) {\r\n\t\ta {\r\n\t\t\tdisplay: block;\r\n\t\t\tpadding: 7px;\r\n\t\t}\r\n\t}\r\n}\r\n\r\n@mixin logo-holder {\r\n\tdisplay: inline-flex;\r\n\timg {\r\n\t\tmax-width: 134px;\r\n\t\tmax-height: 44px;\r\n\t}\r\n\r\n\ta {\r\n\t\tmax-height: 44px;\r\n\t}\r\n\r\n\t.logo-maker-name {\r\n\t\tmargin-top: 2.5px;\r\n\t\theight: 44px;\r\n\t\tline-height: 24.52px;\r\n\t\tdisplay: inline-grid;\r\n\t\talign-content: center;\r\n\t\tfont-size: 18px;\r\n\t\tfont-weight: 700;\r\n\t\tcolor: $orange;\r\n\t\tmargin: 1px 0 0 4px;\r\n\t}\r\n}\r\n\r\n@mixin top-section {\r\n\tposition: relative;\r\n\ttext-align: center;\r\n\t.back {\r\n\t\t@include back;\r\n\t}\r\n\t.logo-holder {\r\n\t\t@include logo-holder;\r\n\t}\r\n\t@media (max-width: 600px) {\r\n\t\ttext-align: left;\r\n\t}\r\n}\r\n\r\n@mixin content-section-titles {\r\n\tmargin-top: 115px;\r\n\t.titles {\r\n\t\ttext-align: center;\r\n\t\th1 {\r\n\t\t\tcolor: $blue;\r\n\t\t\tfont-size: 36px;\r\n\t\t\tfont-weight: 700;\r\n\t\t\tline-height: 49.03px;\r\n\t\t\tmargin: 0 0 8px;\r\n\r\n\t\t\t@media (max-width: 600px) {\r\n\t\t\t\tline-height: 32.69px;\r\n\t\t\t}\r\n\t\t}\r\n\t\tp {\r\n\t\t\tcolor: #939393;\r\n\t\t\tfont-size: 18px;\r\n\t\t\tfont-weight: 500;\r\n\t\t\tline-height: 24.52px;\r\n\t\t\tmargin: 0;\r\n\t\t}\r\n\t}\r\n\t@media (max-width: 600px) {\r\n\t\tmargin-top: 60px;\r\n\t\t.titles {\r\n\t\t\ttext-align: left;\r\n\t\t\th1 {\r\n\t\t\t\tfont-size: 24px;\r\n\t\t\t}\r\n\t\t\tp {\r\n\t\t\t\tfont-size: 16px;\r\n\t\t\t\tcolor: #393939;\r\n\t\t\t}\r\n\t\t}\r\n\t}\r\n}\r\n","$noto: 'Noto Sans', sans-serif;\n$blue: #32456B;\n$orange: #FF7F66;\n$light-blue: #43C2D1;\n$black: #393939;\n$transition: .3s ease all;\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ __webpack_exports__["default"] = (___CSS_LOADER_EXPORT___);
 
@@ -16736,23 +16736,6 @@ module.exports = function equal(a, b) {
   return a!==a && b!==b;
 };
 
-
-/***/ }),
-
-/***/ "./node_modules/.pnpm/file-saver@2.0.5/node_modules/file-saver/dist/FileSaver.min.js":
-/*!*******************************************************************************************!*\
-  !*** ./node_modules/.pnpm/file-saver@2.0.5/node_modules/file-saver/dist/FileSaver.min.js ***!
-  \*******************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-/* WEBPACK VAR INJECTION */(function(global) {var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;(function(a,b){if(true)!(__WEBPACK_AMD_DEFINE_ARRAY__ = [], __WEBPACK_AMD_DEFINE_FACTORY__ = (b),
-				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
-				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
-				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));else {}})(this,function(){"use strict";function b(a,b){return"undefined"==typeof b?b={autoBom:!1}:"object"!=typeof b&&(console.warn("Deprecated: Expected third argument to be a object"),b={autoBom:!b}),b.autoBom&&/^\s*(?:text\/\S*|application\/xml|\S*\/\S*\+xml)\s*;.*charset\s*=\s*utf-8/i.test(a.type)?new Blob(["\uFEFF",a],{type:a.type}):a}function c(a,b,c){var d=new XMLHttpRequest;d.open("GET",a),d.responseType="blob",d.onload=function(){g(d.response,b,c)},d.onerror=function(){console.error("could not download file")},d.send()}function d(a){var b=new XMLHttpRequest;b.open("HEAD",a,!1);try{b.send()}catch(a){}return 200<=b.status&&299>=b.status}function e(a){try{a.dispatchEvent(new MouseEvent("click"))}catch(c){var b=document.createEvent("MouseEvents");b.initMouseEvent("click",!0,!0,window,0,0,0,80,20,!1,!1,!1,!1,0,null),a.dispatchEvent(b)}}var f="object"==typeof window&&window.window===window?window:"object"==typeof self&&self.self===self?self:"object"==typeof global&&global.global===global?global:void 0,a=f.navigator&&/Macintosh/.test(navigator.userAgent)&&/AppleWebKit/.test(navigator.userAgent)&&!/Safari/.test(navigator.userAgent),g=f.saveAs||("object"!=typeof window||window!==f?function(){}:"download"in HTMLAnchorElement.prototype&&!a?function(b,g,h){var i=f.URL||f.webkitURL,j=document.createElement("a");g=g||b.name||"download",j.download=g,j.rel="noopener","string"==typeof b?(j.href=b,j.origin===location.origin?e(j):d(j.href)?c(b,g,h):e(j,j.target="_blank")):(j.href=i.createObjectURL(b),setTimeout(function(){i.revokeObjectURL(j.href)},4E4),setTimeout(function(){e(j)},0))}:"msSaveOrOpenBlob"in navigator?function(f,g,h){if(g=g||f.name||"download","string"!=typeof f)navigator.msSaveOrOpenBlob(b(f,h),g);else if(d(f))c(f,g,h);else{var i=document.createElement("a");i.href=f,i.target="_blank",setTimeout(function(){e(i)})}}:function(b,d,e,g){if(g=g||open("","_blank"),g&&(g.document.title=g.document.body.innerText="downloading..."),"string"==typeof b)return c(b,d,e);var h="application/octet-stream"===b.type,i=/constructor/i.test(f.HTMLElement)||f.safari,j=/CriOS\/[\d]+/.test(navigator.userAgent);if((j||h&&i||a)&&"undefined"!=typeof FileReader){var k=new FileReader;k.onloadend=function(){var a=k.result;a=j?a:a.replace(/^data:[^;]*;/,"data:attachment/file;"),g?g.location.href=a:location=a,g=null},k.readAsDataURL(b)}else{var l=f.URL||f.webkitURL,m=l.createObjectURL(b);g?g.location=m:location.href=m,g=null,setTimeout(function(){l.revokeObjectURL(m)},4E4)}});f.saveAs=g.saveAs=g, true&&(module.exports=g)});
-
-
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../../../webpack@4.44.2_webpack-cli@4.2.0/node_modules/webpack/buildin/global.js */ "./node_modules/.pnpm/webpack@4.44.2_webpack-cli@4.2.0/node_modules/webpack/buildin/global.js")))
 
 /***/ }),
 
@@ -45105,34 +45088,29 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router-dom */ "./node_modules/.pnpm/react-router-dom@5.2.0_react@17.0.1/node_modules/react-router-dom/esm/react-router-dom.js");
-/* harmony import */ var _assets_fonts__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./assets/fonts */ "./src/assets/fonts/index.ts");
-/* harmony import */ var _assets_fonts_fonts__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./assets/fonts/fonts */ "./src/assets/fonts/fonts.ts");
-/* harmony import */ var _assets_styles_index_scss__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./assets/styles/index.scss */ "./src/assets/styles/index.scss");
-/* harmony import */ var _Creator__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./Creator */ "./src/Creator.tsx");
-/* harmony import */ var _engine_googleFonts__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./engine/googleFonts */ "./src/engine/googleFonts.ts");
-/* harmony import */ var _Showcase__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./Showcase */ "./src/Showcase.tsx");
-/* harmony import */ var _Start__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./Start */ "./src/Start.tsx");
-/* harmony import */ var _stores_AssetsStore__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./stores/AssetsStore */ "./src/stores/AssetsStore.ts");
-/* harmony import */ var react_ga__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! react-ga */ "./node_modules/.pnpm/react-ga@3.3.0_react@17.0.1/node_modules/react-ga/dist/esm/index.js");
-
-
-
-
-
-// import "./index.css"
-// import "./assets/scss/style.scss"
+/* harmony import */ var _assets_styles_index_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./assets/styles/index.scss */ "./src/assets/styles/index.scss");
+/* harmony import */ var _Creator__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Creator */ "./src/Creator.tsx");
+/* harmony import */ var _Showcase__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./Showcase */ "./src/Showcase.tsx");
+/* harmony import */ var _Start__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./Start */ "./src/Start.tsx");
+/* harmony import */ var react_ga__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react-ga */ "./node_modules/.pnpm/react-ga@3.3.0_react@17.0.1/node_modules/react-ga/dist/esm/index.js");
 
 
 
 
 
 
+
+/**
+ * This is the main entry point of the application
+ *
+ * This component also initializes the Google Analytics library using the global object `window.logomaker.googleAnalyticsCode`
+ */
 const Application = () => {
     react__WEBPACK_IMPORTED_MODULE_0__["useEffect"](() => {
-        var _a, _b;
+        var _a;
         if ((_a = window.logomaker) === null || _a === void 0 ? void 0 : _a.googleAnalyticsCode) {
-            react_ga__WEBPACK_IMPORTED_MODULE_10__["default"].initialize(window.logomaker.googleAnalyticsCode);
-            react_ga__WEBPACK_IMPORTED_MODULE_10__["default"].set({ anonymizeIp: true });
+            react_ga__WEBPACK_IMPORTED_MODULE_6__["default"].initialize(window.logomaker.googleAnalyticsCode);
+            react_ga__WEBPACK_IMPORTED_MODULE_6__["default"].set({ anonymizeIp: true });
         }
         // WebFont.load({
         //     google: {
@@ -45159,36 +45137,36 @@ const Application = () => {
         //         })
         //     },
         // })
-        const googleFontsLink = document.createElement("link");
-        googleFontsLink.rel = "stylesheet";
-        googleFontsLink.type = "text/css";
-        googleFontsLink.href = Object(_engine_googleFonts__WEBPACK_IMPORTED_MODULE_6__["generateUrlForFonts"])(_assets_fonts_fonts__WEBPACK_IMPORTED_MODULE_3__["default"]);
-        googleFontsLink.onerror = () => {
-            console.log("An error occurred loading the Google's fonts stylesheet!");
-        };
-        (_b = document.querySelector("head")) === null || _b === void 0 ? void 0 : _b.appendChild(googleFontsLink);
-        document.fonts.ready.then(() => {
-            // const fontSet = new Set<string>()
-            // // document.fonts.forEach(f => {
-            // //     fontSet.add(f.family)
-            // // });
-            // for (const f of document.fonts) {
-            //     fontSet.add(f.family)
-            // }
-            _stores_AssetsStore__WEBPACK_IMPORTED_MODULE_9__["AssetsStore"].update((s) => {
-                s.fonts.activeFonts = _assets_fonts__WEBPACK_IMPORTED_MODULE_2__["fontsList"]; // Array.from(fontSet)
-            });
-        });
+        // const googleFontsLink = document.createElement("link")
+        // googleFontsLink.rel = "stylesheet"
+        // googleFontsLink.type = "text/css"
+        // googleFontsLink.href = generateUrlForFonts(fonts)
+        // googleFontsLink.onerror = () => {
+        //     console.log("An error occurred loading the Google's fonts stylesheet!")
+        // }
+        // document.querySelector("head")?.appendChild(googleFontsLink)
+        // document.fonts.ready.then(() => {
+        //     // const fontSet = new Set<string>()
+        //     // // document.fonts.forEach(f => {
+        //     // //     fontSet.add(f.family)
+        //     // // });
+        //     // for (const f of document.fonts) {
+        //     //     fontSet.add(f.family)
+        //     // }
+        //     AssetsStore.update((s) => {
+        //         s.fonts.activeFonts = fontsList // Array.from(fontSet)
+        //     })
+        // })
     }, []);
     return (react__WEBPACK_IMPORTED_MODULE_0__["createElement"](react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null,
         react__WEBPACK_IMPORTED_MODULE_0__["createElement"](react_router_dom__WEBPACK_IMPORTED_MODULE_1__["HashRouter"], null,
             react__WEBPACK_IMPORTED_MODULE_0__["createElement"](react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Switch"], null,
                 react__WEBPACK_IMPORTED_MODULE_0__["createElement"](react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], { path: "/creator" },
-                    react__WEBPACK_IMPORTED_MODULE_0__["createElement"](_Creator__WEBPACK_IMPORTED_MODULE_5__["default"], null)),
+                    react__WEBPACK_IMPORTED_MODULE_0__["createElement"](_Creator__WEBPACK_IMPORTED_MODULE_3__["default"], null)),
                 react__WEBPACK_IMPORTED_MODULE_0__["createElement"](react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], { path: "/showcase" },
-                    react__WEBPACK_IMPORTED_MODULE_0__["createElement"](_Showcase__WEBPACK_IMPORTED_MODULE_7__["default"], null)),
+                    react__WEBPACK_IMPORTED_MODULE_0__["createElement"](_Showcase__WEBPACK_IMPORTED_MODULE_4__["default"], null)),
                 react__WEBPACK_IMPORTED_MODULE_0__["createElement"](react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], { path: "/" },
-                    react__WEBPACK_IMPORTED_MODULE_0__["createElement"](_Start__WEBPACK_IMPORTED_MODULE_8__["default"], null))))));
+                    react__WEBPACK_IMPORTED_MODULE_0__["createElement"](_Start__WEBPACK_IMPORTED_MODULE_5__["default"], null))))));
 };
 /* harmony default export */ __webpack_exports__["default"] = (Application);
 
@@ -45239,14 +45217,13 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-// import { fontsForSvg, fontsList as fL } from "./assets/fonts/index"
 
 
 
 const Creator = () => {
     const [menuOption, setMenuOption] = react__WEBPACK_IMPORTED_MODULE_0__["useState"]("logo");
     const [downloadLink, setDownloadLink] = react__WEBPACK_IMPORTED_MODULE_0__["useState"]("");
-    let store = _stores_UIStore__WEBPACK_IMPORTED_MODULE_15__["default"].useState();
+    const store = _stores_UIStore__WEBPACK_IMPORTED_MODULE_15__["default"].useState();
     const renderRightSidePanel = () => {
         switch (menuOption) {
             case "logo":
@@ -45262,18 +45239,6 @@ const Creator = () => {
     react__WEBPACK_IMPORTED_MODULE_0__["useEffect"](() => {
         react_ga__WEBPACK_IMPORTED_MODULE_16__["default"].pageview(window.location.pathname + window.location.hash + window.location.search);
     }, []);
-    // React.useEffect(() => {
-    //     // after creating a new link, destroy the previouse one
-    //     const unsubscribeFromRemovingOldURL = ExportStore.subscribe(
-    //         (s) => s.downloadLink,
-    //         (currentLink, states, oldLink) => {
-    //             URL.revokeObjectURL(oldLink) // destroy the previous link or it might fill up the memory
-    //         }
-    //     )
-    //     return () => {
-    //         unsubscribeFromRemovingOldURL()
-    //     }
-    // }, [])
     react__WEBPACK_IMPORTED_MODULE_0__["useEffect"](() => {
         async function createLink() {
             var _a;
@@ -45288,9 +45253,8 @@ const Creator = () => {
             }
         }
         createLink();
-    }, [store]);
+    }, [downloadLink]);
     react__WEBPACK_IMPORTED_MODULE_0__["useEffect"](() => {
-        console.log("Set session");
         sessionStorage.setItem("logo-maker-themeisle", JSON.stringify(store));
     }, [store]);
     return (react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("div", { className: "logo-creator logo-maker-container" },
@@ -45391,56 +45355,36 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-const defaultFontsList = new Array(_assets_logos_index__WEBPACK_IMPORTED_MODULE_2__["default"].length).fill("sans-serif");
+function fillArrayWithRepeat(array, desiredLength, filter) {
+    const _array = [];
+    let index = 0;
+    if (filter === undefined) {
+        // if the filter is not defined, assign a function that will pass anything
+        filter = () => true;
+    }
+    while (_array.length < desiredLength) {
+        if (filter(array[index])) {
+            _array.push(array[index]);
+        }
+        if (index < array.length - 1) {
+            index++;
+        }
+        else {
+            index = 0;
+        }
+    }
+    return _array;
+}
 const Showcase = () => {
     const store = _stores_UIStore__WEBPACK_IMPORTED_MODULE_4__["default"].useState((s) => s);
     const [option, setOption] = react__WEBPACK_IMPORTED_MODULE_0__["useState"](0);
     const [colors, setColors] = react__WEBPACK_IMPORTED_MODULE_0__["useState"]([]);
     const [aligns, setAligns] = react__WEBPACK_IMPORTED_MODULE_0__["useState"]([]);
-    const [fontsList, setFontsList] = react__WEBPACK_IMPORTED_MODULE_0__["useState"](defaultFontsList);
+    const [fontsList, setFontsList] = react__WEBPACK_IMPORTED_MODULE_0__["useState"]([]);
     react__WEBPACK_IMPORTED_MODULE_0__["useEffect"](() => {
         react_ga__WEBPACK_IMPORTED_MODULE_11__["default"].pageview(window.location.pathname + window.location.hash + window.location.search);
-        // Generate the colors
-        const generateColors = () => {
-            // const scm = new ColorScheme()
-            // const colorsNum = new Set()
-            // const step = 360 / logos.length
-            // for (let i = 0; i < logos.length; ++i) {
-            //     colorsNum.add(step * i)
-            // }
-            // const colors: string[] = []
-            // colorsNum.forEach((x) => {
-            //     scm.from_hue(x).scheme("triade").distance(0.8).variation("hard").web_safe(true)
-            //     colors.push("#" + scm.colors()[1])
-            // })
-            const colors = [];
-            let index = 0;
-            while (colors.length < _assets_logos_index__WEBPACK_IMPORTED_MODULE_2__["default"].length) {
-                if (_assets_colors__WEBPACK_IMPORTED_MODULE_9__["default"][index] !== "#fff") {
-                    colors.push(_assets_colors__WEBPACK_IMPORTED_MODULE_9__["default"][index]);
-                }
-                index++;
-                if (index >= _assets_colors__WEBPACK_IMPORTED_MODULE_9__["default"].length) {
-                    index = 0;
-                }
-            }
-            // console.log(presetColors, colors)
-            return colors;
-        };
-        setColors(generateColors());
-        const generateFonts = () => {
-            const list = [];
-            let index = 0;
-            while (list.length < _assets_logos_index__WEBPACK_IMPORTED_MODULE_2__["default"].length) {
-                list.push(_assets_fonts_index__WEBPACK_IMPORTED_MODULE_5__["presets"][index]);
-                index++;
-                if (index >= _assets_fonts_index__WEBPACK_IMPORTED_MODULE_5__["presets"].length) {
-                    index = 0;
-                }
-            }
-            return list;
-        };
-        setFontsList(generateFonts());
+        setColors(fillArrayWithRepeat(_assets_colors__WEBPACK_IMPORTED_MODULE_9__["default"], _assets_logos_index__WEBPACK_IMPORTED_MODULE_2__["default"].length, (x) => x !== "#fff"));
+        setFontsList(fillArrayWithRepeat(_assets_fonts_index__WEBPACK_IMPORTED_MODULE_5__["presets"], _assets_logos_index__WEBPACK_IMPORTED_MODULE_2__["default"].length));
         const generateAlignsOption = () => {
             const list = [];
             for (let i = 0; i < _assets_logos_index__WEBPACK_IMPORTED_MODULE_2__["default"].length; ++i) {
@@ -45471,8 +45415,8 @@ const Showcase = () => {
         });
     };
     const renderLogoList = () => {
-        if (!colors.length) {
-            return;
+        if (!colors.length && !fontsList.length && !aligns.length) {
+            return react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("div", { className: "content-loader" });
         }
         const result = _assets_logos_index__WEBPACK_IMPORTED_MODULE_2__["default"].map((logoSRC, index) => {
             return (react__WEBPACK_IMPORTED_MODULE_0__["createElement"](react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], { to: "/creator", className: classnames__WEBPACK_IMPORTED_MODULE_8___default()("logo"), key: logoSRC.id, onClick: () => {
@@ -45564,6 +45508,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _src_assets_styles_Start_start_scss__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../src/assets/styles/Start/start.scss */ "./src/assets/styles/Start/start.scss");
 /* harmony import */ var _assets_ui_BackUI__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./assets/ui/BackUI */ "./src/assets/ui/BackUI.tsx");
 /* harmony import */ var react_ga__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react-ga */ "./node_modules/.pnpm/react-ga@3.3.0_react@17.0.1/node_modules/react-ga/dist/esm/index.js");
+/**
+ * @packageDocumentation
+ */
 
 
 
@@ -45571,8 +45518,17 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+/**
+ * This is the main component for the Start page
+ *
+ * It use the global object `window.logomaker.parentLink` as link for the `Back` button
+ */
 const Start = () => {
     var _a, _b;
+    /**
+     *
+     * @param value The Title Text
+     */
     const setTitleText = (value) => {
         _stores_UIStore__WEBPACK_IMPORTED_MODULE_3__["default"].update((s) => {
             s.title.text = value;
@@ -45640,7 +45596,7 @@ const colors = [
     "#926900",
     "#0A4447",
     "#5D5B6A",
-    "#292929"
+    "#292929",
 ];
 /* harmony default export */ __webpack_exports__["default"] = (colors);
 
@@ -45661,118 +45617,6 @@ const cursiveFonts = ["Brush Script MT"];
 /* harmony default export */ __webpack_exports__["default"] = (cursiveFonts.sort().map((f) => {
     return { family: f, fallback: "cursive" };
 }));
-
-
-/***/ }),
-
-/***/ "./src/assets/fonts/fonts.ts":
-/*!***********************************!*\
-  !*** ./src/assets/fonts/fonts.ts ***!
-  \***********************************/
-/*! exports provided: presets, default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "presets", function() { return presets; });
-const fonts = [
-    "Times New Romans",
-    "Helvetica",
-    "Open Sans",
-    "Roboto",
-    "Dancing Script",
-    "Henny Penny",
-    "Pacifico",
-    "Amatic SC",
-    "Alfa Slab One",
-    "Oswald",
-    "Anton",
-    "Permanent Marker",
-    "Cinzel Decorative",
-    "Lato",
-    "Karla",
-    "Montserrat",
-    "Libre Baskerville",
-    "Bebas Neue",
-    "IBM Plex Serif",
-    "Fira Sans",
-    "Caveat",
-    "Tinos",
-    "Play",
-    "Crete Round",
-    "Rajdhani",
-    "Satisfy",
-    "Arial",
-    "Consolas",
-    "Georgia",
-    "Lobster Two",
-    "Orbitron",
-    "Parisienne",
-];
-const presets = [
-    {
-        title: "Open Sans",
-        slogan: "Roboto",
-    },
-    {
-        title: "Alfa Slab One",
-        slogan: "Roboto",
-    },
-    {
-        title: "Dancing Script",
-        slogan: "Roboto",
-    },
-    {
-        title: "Henny Penny",
-        slogan: "Open Sans",
-    },
-    {
-        title: "Pacifico",
-        slogan: "Open Sans",
-    },
-    {
-        title: "Amatic SC",
-        slogan: "Open Sans",
-    },
-    {
-        title: "Oswald",
-        slogan: "Open Sans",
-    },
-    {
-        title: "Anton",
-        slogan: "Roboto",
-    },
-    {
-        title: "Permanent Marker",
-        slogan: "Roboto",
-    },
-    {
-        title: "Cinzel Decorative",
-        slogan: "Lato",
-    },
-    {
-        title: "Karla",
-        slogan: "Montserrat",
-    },
-    {
-        title: "Libre Baskerville",
-        slogan: "Open Sans",
-    },
-    {
-        title: "Lobster Two",
-        slogan: "Open Sans",
-    },
-    {
-        title: "Orbitron",
-        slogan: "Open Sans",
-    },
-    {
-        title: "Parisienne",
-        slogan: "Open Sans",
-    },
-];
-fonts.sort();
-/* harmony default export */ __webpack_exports__["default"] = (fonts);
 
 
 /***/ }),
@@ -46380,7 +46224,18 @@ __webpack_require__.r(__webpack_exports__);
 // Export a obejct with all the logos
 // Useful for importing only some specific logos
 
-const logosObj = { Logo11: _logo11__WEBPACK_IMPORTED_MODULE_0__["default"], Logo12: _logo12__WEBPACK_IMPORTED_MODULE_1__["default"], Logo13: _logo13__WEBPACK_IMPORTED_MODULE_2__["default"], Logo14: _logo14__WEBPACK_IMPORTED_MODULE_3__["default"], Logo15: _logo15__WEBPACK_IMPORTED_MODULE_4__["default"], Logo16: _logo16__WEBPACK_IMPORTED_MODULE_5__["default"], Logo17: _logo17__WEBPACK_IMPORTED_MODULE_6__["default"], Logo18: _logo18__WEBPACK_IMPORTED_MODULE_7__["default"], Logo19: _logo19__WEBPACK_IMPORTED_MODULE_8__["default"], Logo20: _logo20__WEBPACK_IMPORTED_MODULE_9__["default"] };
+const logosObj = {
+    Logo11: _logo11__WEBPACK_IMPORTED_MODULE_0__["default"],
+    Logo12: _logo12__WEBPACK_IMPORTED_MODULE_1__["default"],
+    Logo13: _logo13__WEBPACK_IMPORTED_MODULE_2__["default"],
+    Logo14: _logo14__WEBPACK_IMPORTED_MODULE_3__["default"],
+    Logo15: _logo15__WEBPACK_IMPORTED_MODULE_4__["default"],
+    Logo16: _logo16__WEBPACK_IMPORTED_MODULE_5__["default"],
+    Logo17: _logo17__WEBPACK_IMPORTED_MODULE_6__["default"],
+    Logo18: _logo18__WEBPACK_IMPORTED_MODULE_7__["default"],
+    Logo19: _logo19__WEBPACK_IMPORTED_MODULE_8__["default"],
+    Logo20: _logo20__WEBPACK_IMPORTED_MODULE_9__["default"],
+};
 // Export a list with all the logos
 // Useful for rendering a select input or a preview with all the logos available
 /* harmony default export */ __webpack_exports__["default"] = ([_logo11__WEBPACK_IMPORTED_MODULE_0__["default"], _logo12__WEBPACK_IMPORTED_MODULE_1__["default"], _logo13__WEBPACK_IMPORTED_MODULE_2__["default"], _logo14__WEBPACK_IMPORTED_MODULE_3__["default"], _logo15__WEBPACK_IMPORTED_MODULE_4__["default"], _logo16__WEBPACK_IMPORTED_MODULE_5__["default"], _logo17__WEBPACK_IMPORTED_MODULE_6__["default"], _logo18__WEBPACK_IMPORTED_MODULE_7__["default"], _logo19__WEBPACK_IMPORTED_MODULE_8__["default"], _logo20__WEBPACK_IMPORTED_MODULE_9__["default"]]);
@@ -47854,8 +47709,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _svgdotjs_svg_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @svgdotjs/svg.js */ "./node_modules/.pnpm/@svgdotjs/svg.js@3.0.16/node_modules/@svgdotjs/svg.js/dist/svg.esm.js");
-/* harmony import */ var _engine_utility__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../engine/utility */ "./src/engine/utility.ts");
-/* harmony import */ var _engine_alignFunctions__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../engine/alignFunctions */ "./src/engine/alignFunctions.ts");
+/* harmony import */ var _engine_shapesAligner__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../engine/shapesAligner */ "./src/engine/shapesAligner.ts");
+/* harmony import */ var _engine_shapesBuilder__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../engine/shapesBuilder */ "./src/engine/shapesBuilder.ts");
 /* harmony import */ var uuid__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! uuid */ "./node_modules/.pnpm/uuid@8.3.1/node_modules/uuid/dist/esm-browser/index.js");
 
 
@@ -47880,20 +47735,44 @@ const CreateLogo = (props) => {
                 .viewbox(vb.x, vb.y, vb.width, vb.height)
                 .css("background-color", container.style.color)
                 .addClass((props === null || props === void 0 ? void 0 : props.className) || "");
-            const getAlignedLogo = () => {
-                switch (props.logoProps.container.align) {
-                    case "align-top":
-                        return Object(_engine_alignFunctions__WEBPACK_IMPORTED_MODULE_3__["alignLogoTop"])(props.logoProps, draw);
-                    case "align-left":
-                        return Object(_engine_alignFunctions__WEBPACK_IMPORTED_MODULE_3__["alignLogoLeft"])(props.logoProps, draw);
-                    case "align-right":
-                        return Object(_engine_alignFunctions__WEBPACK_IMPORTED_MODULE_3__["alignLogoRight"])(props.logoProps, draw);
-                    default:
-                        console.log("Invalid Type. The logo will be aligned top as a fallback option!");
-                        return Object(_engine_alignFunctions__WEBPACK_IMPORTED_MODULE_3__["alignLogoTop"])(props.logoProps, draw);
-                }
-            };
-            Object(_engine_utility__WEBPACK_IMPORTED_MODULE_2__["moveToCenter"])(draw, container.viewbox, getAlignedLogo());
+            // const getAlignedLogo = () => {
+            //     switch (props.logoProps.container.align) {
+            //         case "align-top":
+            //             return alignLogoTop(props.logoProps, draw)
+            //         case "align-left":
+            //             return alignLogoLeft(props.logoProps, draw)
+            //         case "align-right":
+            //             return alignLogoRight(props.logoProps, draw)
+            //         default:
+            //             console.log(
+            //                 "Invalid Type. The logo will be aligned top as a fallback option!"
+            //             )
+            //             return alignLogoTop(props.logoProps, draw)
+            //     }
+            // }
+            // moveToCenter(draw, container.viewbox, getAlignedLogo())
+            let shapes;
+            let alignerProps;
+            switch (props.logoProps.container.align) {
+                case "align-top":
+                    shapes = Object(_engine_shapesBuilder__WEBPACK_IMPORTED_MODULE_3__["buildDefaultShapes"])(draw, props.logoProps);
+                    alignerProps = Object(_engine_shapesAligner__WEBPACK_IMPORTED_MODULE_2__["alignLogoTop"])(shapes);
+                    break;
+                case "align-left":
+                    shapes = Object(_engine_shapesBuilder__WEBPACK_IMPORTED_MODULE_3__["buildDefaultShapes"])(draw, props.logoProps);
+                    alignerProps = Object(_engine_shapesAligner__WEBPACK_IMPORTED_MODULE_2__["alignLogoLeft"])(shapes);
+                    break;
+                case "align-right":
+                    shapes = Object(_engine_shapesBuilder__WEBPACK_IMPORTED_MODULE_3__["buildDefaultShapes"])(draw, props.logoProps);
+                    alignerProps = Object(_engine_shapesAligner__WEBPACK_IMPORTED_MODULE_2__["alignLogoRight"])(shapes);
+                    break;
+                default:
+                    console.log("Invalid Type. The logo will be aligned top as a fallback option!");
+                    shapes = Object(_engine_shapesBuilder__WEBPACK_IMPORTED_MODULE_3__["buildDefaultShapes"])(draw, props.logoProps);
+                    alignerProps = Object(_engine_shapesAligner__WEBPACK_IMPORTED_MODULE_2__["alignLogoTop"])(shapes);
+            }
+            Object(_engine_shapesAligner__WEBPACK_IMPORTED_MODULE_2__["autoscallingBaseShapes"])(draw, alignerProps.containerWidth, alignerProps.containerHeight);
+            Object(_engine_shapesAligner__WEBPACK_IMPORTED_MODULE_2__["alignShapesToCenter"])(draw, shapes, alignerProps);
             // addEmbeddedFont(draw, props.logoProps.title.style.fontFamily)
         }
     }, [props === null || props === void 0 ? void 0 : props.className, props.logoProps]);
@@ -47922,54 +47801,6 @@ __webpack_require__.r(__webpack_exports__);
 
 
 const DownloadButton = (props) => {
-    // const fonts = [
-    //     UIStore.useState((s) => s.title.style.fontFamily),
-    //     UIStore.useState((s) => s.slogan.style.fontFamily),
-    // ]
-    // const downloadSVGasPNG = () => {
-    //     const svg = document.querySelector("#image-logo")?.childNodes[0]
-    //     if (!svg) {
-    //         return
-    //     }
-    //     const xml = new XMLSerializer().serializeToString(svg)
-    //     const svg64 = btoa(xml)
-    //     const image = "data:image/svg+xml;base64," + svg64
-    //     const element = document.createElement("a")
-    //     const sourceImage = new Image()
-    //     sourceImage.onload = () => {
-    //         console.log("Load")
-    //         const canvas = document.createElement("canvas")
-    //         canvas.height = 280
-    //         canvas.width = 300
-    //         const ctx = canvas.getContext("2d")
-    //         ctx?.drawImage(sourceImage, 0, 0, 280, 300)
-    //         element.download = "logo.png"
-    //         element.href = canvas.toDataURL("image/png")
-    //         element.click()
-    //         element.remove()
-    //     }
-    //     sourceImage.src = image
-    // }
-    // const downloadSVG = () => {
-    //     const node = document.querySelector("#image-logo")?.cloneNode(true)
-    //     if (!node) {
-    //         return
-    //     }
-    //     // const defs = document.createElement("defs")
-    //     // const style = document.createElement("style")
-    //     // style.innerHTML = `
-    //     //         @import url("${generateUrlForFont(fonts[0])}");
-    //     //         @import url("${generateUrlForFont(fonts[1])}");
-    //     // `
-    //     // node.firstChild?.appendChild(style)
-    //     const svg = (node as Element).innerHTML
-    //     const blob = new Blob([svg.toString()])
-    //     const element = document.createElement("a")
-    //     element.download = "logo.svg"
-    //     element.href = window.URL.createObjectURL(blob)
-    //     element.click()
-    //     element.remove()
-    // }
     return (react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("div", { className: classnames__WEBPACK_IMPORTED_MODULE_1___default()("download-button", props === null || props === void 0 ? void 0 : props.className) },
         react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("button", { onClick: () => {
                 if (props.downloadLink) {
@@ -47979,7 +47810,6 @@ const DownloadButton = (props) => {
                     a.download = "logo.zip";
                     document.body.appendChild(a);
                     a.click();
-                    alert("Download Completed.");
                     react_ga__WEBPACK_IMPORTED_MODULE_2__["default"].event({
                         category: "Logo Maker Creator",
                         action: "Click to download",
@@ -47991,6 +47821,76 @@ const DownloadButton = (props) => {
             react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("span", null, "Download"))));
 };
 /* harmony default export */ __webpack_exports__["default"] = (DownloadButton);
+// const fonts = [
+//     UIStore.useState((s) => s.title.style.fontFamily),
+//     UIStore.useState((s) => s.slogan.style.fontFamily),
+// ]
+// const downloadSVGasPNG = () => {
+//     const svg = document.querySelector("#image-logo")?.childNodes[0]
+//     if (!svg) {
+//         return
+//     }
+//     const xml = new XMLSerializer().serializeToString(svg)
+//     const svg64 = btoa(xml)
+//     const image = "data:image/svg+xml;base64," + svg64
+//     const element = document.createElement("a")
+//     const sourceImage = new Image()
+//     sourceImage.onload = () => {
+//         console.log("Load")
+//         const canvas = document.createElement("canvas")
+//         canvas.height = 280
+//         canvas.width = 300
+//         const ctx = canvas.getContext("2d")
+//         ctx?.drawImage(sourceImage, 0, 0, 280, 300)
+//         element.download = "logo.png"
+//         element.href = canvas.toDataURL("image/png")
+//         element.click()
+//         element.remove()
+//     }
+//     sourceImage.src = image
+// }
+// const downloadSVG = () => {
+//     const node = document.querySelector("#image-logo")?.cloneNode(true)
+//     if (!node) {
+//         return
+//     }
+//     // const defs = document.createElement("defs")
+//     // const style = document.createElement("style")
+//     // style.innerHTML = `
+//     //         @import url("${generateUrlForFont(fonts[0])}");
+//     //         @import url("${generateUrlForFont(fonts[1])}");
+//     // `
+//     // node.firstChild?.appendChild(style)
+//     const svg = (node as Element).innerHTML
+//     const blob = new Blob([svg.toString()])
+//     const element = document.createElement("a")
+//     element.download = "logo.svg"
+//     element.href = window.URL.createObjectURL(blob)
+//     element.click()
+//     element.remove()
+// }
+/* <a
+                target="_blank"
+                rel="noreferrer"
+                download="LogoMakerExport.zip"
+                href={props.downloadLink || " "}
+                onClick={() => {
+                    const logoSVG = document
+                        .querySelector("#image-logo svg")
+                        ?.cloneNode(true) as SVGElement
+                    if (logoSVG) {
+                        // downloadAsZipFromSVGviaClick(logoSVG, ["png"], true)
+                        ReactGA.event({
+                            category: "Logo Maker Creator",
+                            action: "Click to download",
+                            label: "Download",
+                            value: 1,
+                        })
+                    }
+                }}
+            >
+                <span>Download</span>
+            </a> */
 
 
 /***/ }),
@@ -48103,7 +48003,7 @@ const SelectColor = () => {
                 });
                 break;
         }
-        // before send it to store, check if the value is a valid hex color
+        // before send it to the store, check if the value is a valid hex color
         // reference: https://stackoverflow.com/questions/8027423/how-to-check-if-a-string-is-a-valid-hex-color-representation/8027444
         // check it on: https://regexr.com/
         if (/^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$/i.test(value)) {
@@ -48325,23 +48225,23 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+const fontOptions = _assets_fonts_index__WEBPACK_IMPORTED_MODULE_2__["fontsList"].map((font) => ({
+    value: font,
+    label: font,
+}));
+const titleSizeOptions = [...Array(35).keys()]
+    .map((size) => size + 20)
+    .map((size) => ({
+    value: size,
+    label: size.toString(),
+}));
+const sloganSizeOptions = [...Array(35).keys()]
+    .map((size) => size + 12)
+    .map((size) => ({
+    value: size,
+    label: size.toString(),
+}));
 const SelectTypography = () => {
-    const fontOptions = _assets_fonts_index__WEBPACK_IMPORTED_MODULE_2__["fontsList"].map((font) => ({
-        value: font,
-        label: font,
-    }));
-    const titleSizeOptions = [...Array(35).keys()]
-        .map((size) => size + 20)
-        .map((size) => ({
-        value: size,
-        label: size.toString(),
-    }));
-    const sloganSizeOptions = [...Array(35).keys()]
-        .map((size) => size + 12)
-        .map((size) => ({
-        value: size,
-        label: size.toString(),
-    }));
     const onTitleTextChange = (value) => {
         _stores_UIStore__WEBPACK_IMPORTED_MODULE_3__["default"].update((s) => {
             s.title.text = value;
@@ -48410,399 +48310,22 @@ const SelectTypography = () => {
 
 /***/ }),
 
-/***/ "./src/engine/alignFunctions.ts":
-/*!**************************************!*\
-  !*** ./src/engine/alignFunctions.ts ***!
-  \**************************************/
-/*! exports provided: alignLogoTop, alignLogoLeft, alignLogoRight */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "alignLogoTop", function() { return alignLogoTop; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "alignLogoLeft", function() { return alignLogoLeft; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "alignLogoRight", function() { return alignLogoRight; });
-/* harmony import */ var _svgdotjs_svg_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @svgdotjs/svg.js */ "./node_modules/.pnpm/@svgdotjs/svg.js@3.0.16/node_modules/@svgdotjs/svg.js/dist/svg.esm.js");
-/* harmony import */ var _settings__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./settings */ "./src/engine/settings.ts");
-
-
-const autoScallingFactor = 1.3;
-const marginFactor = 0.7;
-const alignLogoTop = (props, draw) => {
-    const { logo, title, slogan } = props;
-    /*
-          Add the logo's SVG
-    */
-    const logoSVG = Object(_svgdotjs_svg_js__WEBPACK_IMPORTED_MODULE_0__["SVG"])().addTo(draw).svg(logo.src.svg);
-    const svgRawDim = logoSVG.bbox(); // get the natural dimension to calculate the viewbox
-    logoSVG
-        .viewbox(0, 0, svgRawDim.width + 4, svgRawDim.height + 4)
-        .size(logo.width, logo.height)
-        .css("fill", logo.style.fill);
-    const logoDim = {
-        height: _settings__WEBPACK_IMPORTED_MODULE_1__["settings"].logo.margins.top + logo.height + _settings__WEBPACK_IMPORTED_MODULE_1__["settings"].logo.margins.bottom,
-        width: _settings__WEBPACK_IMPORTED_MODULE_1__["settings"].logo.margins.left + logo.width + _settings__WEBPACK_IMPORTED_MODULE_1__["settings"].logo.margins.bottom,
-    };
-    /*
-           Add the title's SVG
-       */
-    const titleSVG = draw
-        .text(title.text)
-        .font({
-        fill: title.style.color,
-        family: title.style.fontFamily,
-        size: title.style.fontSize + "px",
-        weight: "400",
-    })
-        .leading(1)
-        .move(0, 0);
-    // console.log(titleSVG.bbox(), titleSVG.rbox())
-    titleSVG.leading(0);
-    let titleDim;
-    if (props.title.text === "") {
-        titleDim = {
-            width: 0,
-            height: 0,
-        };
-    }
-    else {
-        titleDim = {
-            height: _settings__WEBPACK_IMPORTED_MODULE_1__["settings"].title.margins.top + titleSVG.bbox().height + _settings__WEBPACK_IMPORTED_MODULE_1__["settings"].title.margins.bottom,
-            width: _settings__WEBPACK_IMPORTED_MODULE_1__["settings"].title.margins.left + titleSVG.bbox().width + _settings__WEBPACK_IMPORTED_MODULE_1__["settings"].title.margins.bottom,
-        };
-    }
-    // console.log(titleSVG.bbox())
-    /*
-           Add the slogan's SVG
-       */
-    const sloganSVG = draw
-        .text(slogan.text)
-        .font({
-        fill: slogan.style.color,
-        family: slogan.style.fontFamily,
-        size: slogan.style.fontSize + "px",
-        weight: "400",
-    })
-        .leading(1)
-        .move(0, 0);
-    sloganSVG.leading(0);
-    let sloganDim;
-    if (props.slogan.text === "") {
-        sloganDim = {
-            width: 0,
-            height: 0,
-        };
-    }
-    else {
-        sloganDim = {
-            height: _settings__WEBPACK_IMPORTED_MODULE_1__["settings"].slogan.margins.top +
-                sloganSVG.bbox().height +
-                _settings__WEBPACK_IMPORTED_MODULE_1__["settings"].slogan.margins.bottom,
-            width: _settings__WEBPACK_IMPORTED_MODULE_1__["settings"].slogan.margins.left +
-                sloganSVG.bbox().width +
-                _settings__WEBPACK_IMPORTED_MODULE_1__["settings"].slogan.margins.bottom,
-        };
-    }
-    /*
-           Align the elements
-       */
-    // the elements are vertically stacked,
-    // so the width of the container is equal with the width of the largest element
-    // and the height is the sum of all the element's height
-    const widthContainer = Math.max(logoDim.width, titleDim.width, sloganDim.width);
-    const heightContainer = logoDim.height + titleDim.height + sloganDim.height; // logo.height + titleDim.height + sloganDim.height
-    const cx = widthContainer / 2;
-    const cy = heightContainer / 2;
-    logoSVG.move(cx - logoDim.width / 2, 0);
-    titleSVG.move(cx - titleDim.width / 2, logoDim.height);
-    sloganSVG.move(cx - sloganDim.width / 2, logoDim.height + titleDim.height);
-    const currentViewBox = draw.viewbox();
-    // AUTOSCAllING
-    // check if the current element occupy more than the initial size of the viewbox
-    draw.viewbox(0, 0, currentViewBox.width * marginFactor < widthContainer
-        ? widthContainer * autoScallingFactor
-        : currentViewBox.width, currentViewBox.height * marginFactor < heightContainer
-        ? heightContainer * autoScallingFactor
-        : currentViewBox.height);
-    return {
-        containerPos: {
-            x: 0,
-            y: 0,
-            cx,
-            cy,
-            width: widthContainer,
-            height: heightContainer,
-        },
-        containerElems: {
-            logoSVG,
-            titleSVG,
-            sloganSVG,
-        },
-    };
-};
-const alignLogoLeft = (props, draw) => {
-    const { logo, title, slogan } = props;
-    /*
-          Add the logo's SVG
-    */
-    const logoSVG = Object(_svgdotjs_svg_js__WEBPACK_IMPORTED_MODULE_0__["SVG"])().addTo(draw).svg(logo.src.svg);
-    const svgRawDim = logoSVG.bbox(); // get the natural dimension to calculate the viewbox
-    logoSVG
-        .viewbox(0, 0, svgRawDim.width + 4, svgRawDim.height + 4)
-        .size(logo.width, logo.height)
-        .css("fill", logo.style.fill);
-    const logoDim = {
-        height: _settings__WEBPACK_IMPORTED_MODULE_1__["settings"].logo.margins.top + logo.height + _settings__WEBPACK_IMPORTED_MODULE_1__["settings"].logo.margins.bottom,
-        width: _settings__WEBPACK_IMPORTED_MODULE_1__["settings"].logo.margins.left + logo.width + _settings__WEBPACK_IMPORTED_MODULE_1__["settings"].logo.margins.bottom,
-    };
-    /*
-          Add the title's SVG
-      */
-    const titleSVG = draw
-        .text(title.text)
-        .font({
-        fill: title.style.color,
-        family: title.style.fontFamily,
-        size: title.style.fontSize,
-        weight: "400",
-    })
-        .leading(1)
-        .move(0, 0);
-    titleSVG.leading(0);
-    let titleDim;
-    if (props.title.text === "") {
-        titleDim = {
-            width: 0,
-            height: 0,
-        };
-    }
-    else {
-        titleDim = {
-            height: _settings__WEBPACK_IMPORTED_MODULE_1__["settings"].title.margins.top + titleSVG.bbox().height + _settings__WEBPACK_IMPORTED_MODULE_1__["settings"].title.margins.bottom,
-            width: _settings__WEBPACK_IMPORTED_MODULE_1__["settings"].title.margins.left + titleSVG.bbox().width + _settings__WEBPACK_IMPORTED_MODULE_1__["settings"].title.margins.bottom,
-        };
-    }
-    /*
-           Add the slogan's SVG
-       */
-    const sloganSVG = draw
-        .text(slogan.text)
-        .font({
-        fill: slogan.style.color,
-        family: slogan.style.fontFamily,
-        size: slogan.style.fontSize + "px",
-        weight: "400",
-    })
-        .leading(1)
-        .move(0, 0);
-    sloganSVG.leading(0);
-    let sloganDim;
-    if (props.slogan.text === "") {
-        sloganDim = {
-            width: 0,
-            height: 0,
-        };
-    }
-    else {
-        sloganDim = {
-            height: _settings__WEBPACK_IMPORTED_MODULE_1__["settings"].slogan.margins.top +
-                sloganSVG.bbox().height +
-                _settings__WEBPACK_IMPORTED_MODULE_1__["settings"].slogan.margins.bottom,
-            width: _settings__WEBPACK_IMPORTED_MODULE_1__["settings"].slogan.margins.left +
-                sloganSVG.bbox().width +
-                _settings__WEBPACK_IMPORTED_MODULE_1__["settings"].slogan.margins.bottom,
-        };
-    }
-    // the elements are vertically stacked,
-    // so the width of the container is equal with the width of the largest element
-    // and the height is the sum of all the element's height
-    const widthContainer = logo.width + Math.max(titleDim.width, sloganDim.width);
-    const heightContainer = Math.max(logo.height, titleDim.height + sloganDim.height);
-    const cx = widthContainer / 2;
-    const cy = heightContainer / 2;
-    // Calculate the dimension for the box that contains the title and the slogan
-    const textContainerWidth = Math.max(titleDim.width, sloganDim.width) +
-        _settings__WEBPACK_IMPORTED_MODULE_1__["settings"].textContainer.margins.left +
-        _settings__WEBPACK_IMPORTED_MODULE_1__["settings"].textContainer.margins.right;
-    // const textContainerHeight =
-    //     titleDim.height +
-    //     sloganDim.height +
-    //     settings.textContainer.margins.top +
-    //     settings.textContainer.margins.bottom
-    const ctx = textContainerWidth / 2;
-    // const cty = textContainerHeight / 2
-    // Move elements to their position
-    logoSVG.move(0, cy - logoDim.height / 2);
-    titleSVG.move(logoDim.width + ctx - titleDim.width / 2, cy - titleDim.height / 2);
-    sloganSVG.move(logoDim.width + ctx - sloganDim.width / 2, cy + titleDim.height / 2 // + sloganDim.height / 2
-    );
-    // AUTOSCAllING
-    // check if the current element occupy more than the initial size of the viewbox
-    const currentViewBox = draw.viewbox();
-    draw.viewbox(0, 0, currentViewBox.width * marginFactor < widthContainer
-        ? widthContainer * autoScallingFactor
-        : currentViewBox.width, currentViewBox.height * marginFactor < heightContainer
-        ? heightContainer * autoScallingFactor
-        : currentViewBox.height);
-    return {
-        containerPos: {
-            x: 0,
-            y: 0,
-            cx,
-            cy,
-            width: widthContainer,
-            height: heightContainer,
-        },
-        containerElems: {
-            logoSVG,
-            titleSVG,
-            sloganSVG,
-        },
-    };
-};
-const alignLogoRight = (props, draw) => {
-    const { logo, title, slogan } = props;
-    /*
-          Add the logo's SVG
-    */
-    const logoSVG = Object(_svgdotjs_svg_js__WEBPACK_IMPORTED_MODULE_0__["SVG"])().addTo(draw).svg(logo.src.svg);
-    const svgRawDim = logoSVG.bbox(); // get the natural dimension to calculate the viewbox
-    logoSVG
-        .viewbox(0, 0, svgRawDim.width + 4, svgRawDim.height + 4)
-        .size(logo.width, logo.height)
-        .css("fill", logo.style.fill);
-    const logoDim = {
-        height: _settings__WEBPACK_IMPORTED_MODULE_1__["settings"].logo.margins.top + logo.height + _settings__WEBPACK_IMPORTED_MODULE_1__["settings"].logo.margins.bottom,
-        width: _settings__WEBPACK_IMPORTED_MODULE_1__["settings"].logo.margins.left + logo.width + _settings__WEBPACK_IMPORTED_MODULE_1__["settings"].logo.margins.bottom,
-    };
-    /*
-          Add the title's SVG
-      */
-    const titleSVG = draw
-        .text(title.text)
-        .font({
-        fill: title.style.color,
-        family: title.style.fontFamily,
-        size: title.style.fontSize,
-        weight: "400",
-    })
-        .leading(1)
-        .move(0, 0);
-    titleSVG.leading(0);
-    let titleDim;
-    if (props.title.text === "") {
-        titleDim = {
-            width: 0,
-            height: 0,
-        };
-    }
-    else {
-        titleDim = {
-            height: _settings__WEBPACK_IMPORTED_MODULE_1__["settings"].title.margins.top + titleSVG.bbox().height + _settings__WEBPACK_IMPORTED_MODULE_1__["settings"].title.margins.bottom,
-            width: _settings__WEBPACK_IMPORTED_MODULE_1__["settings"].title.margins.left + titleSVG.bbox().width + _settings__WEBPACK_IMPORTED_MODULE_1__["settings"].title.margins.bottom,
-        };
-    }
-    /*
-           Add the slogan's SVG
-       */
-    const sloganSVG = draw
-        .text(slogan.text)
-        .font({
-        fill: slogan.style.color,
-        family: slogan.style.fontFamily,
-        size: slogan.style.fontSize + "px",
-        weight: "400",
-    })
-        .leading(1)
-        .move(0, 0);
-    sloganSVG.leading(0);
-    let sloganDim;
-    if (props.slogan.text === "") {
-        sloganDim = {
-            width: 0,
-            height: 0,
-        };
-    }
-    else {
-        sloganDim = {
-            height: _settings__WEBPACK_IMPORTED_MODULE_1__["settings"].slogan.margins.top +
-                sloganSVG.bbox().height +
-                _settings__WEBPACK_IMPORTED_MODULE_1__["settings"].slogan.margins.bottom,
-            width: _settings__WEBPACK_IMPORTED_MODULE_1__["settings"].slogan.margins.left +
-                sloganSVG.bbox().width +
-                _settings__WEBPACK_IMPORTED_MODULE_1__["settings"].slogan.margins.bottom,
-        };
-    }
-    // the elements are vertically stacked,
-    // so the width of the container is equal with the width of the largest element
-    // and the height is the sum of all the element's height
-    const widthContainer = logo.width + Math.max(titleDim.width, sloganDim.width);
-    const heightContainer = Math.max(logoDim.height, titleDim.height + sloganDim.height);
-    const cx = widthContainer / 2;
-    const cy = heightContainer / 2;
-    const textContainerWidth = Math.max(titleDim.width, sloganDim.width) +
-        _settings__WEBPACK_IMPORTED_MODULE_1__["settings"].textContainer.margins.left +
-        _settings__WEBPACK_IMPORTED_MODULE_1__["settings"].textContainer.margins.right;
-    // const textContainerHeight =
-    //     titleDim.height +
-    //     sloganDim.height +
-    //     settings.textContainer.margins.top +
-    //     settings.textContainer.margins.bottom
-    const ctx = textContainerWidth / 2;
-    // const cty = textContainerHeight / 2
-    logoSVG.move(textContainerWidth, cy - logoDim.height / 2);
-    titleSVG.move(ctx - titleDim.width / 2, cy - titleDim.height / 2);
-    sloganSVG.move(ctx - sloganDim.width / 2, cy + titleDim.height / 2); // + sloganDim.height / 2)
-    const currentViewBox = draw.viewbox();
-    // AUTOSCAllING
-    // check if the current element occupy more than the initial size of the viewbox
-    draw.viewbox(0, 0, currentViewBox.width * marginFactor < widthContainer
-        ? widthContainer * autoScallingFactor
-        : currentViewBox.width, currentViewBox.height * marginFactor < heightContainer
-        ? heightContainer * autoScallingFactor
-        : currentViewBox.height);
-    return {
-        containerPos: {
-            x: 0,
-            y: 0,
-            cx,
-            cy,
-            width: widthContainer,
-            height: heightContainer,
-        },
-        containerElems: {
-            logoSVG,
-            titleSVG,
-            sloganSVG,
-        },
-    };
-};
-
-
-/***/ }),
-
 /***/ "./src/engine/export.ts":
 /*!******************************!*\
   !*** ./src/engine/export.ts ***!
   \******************************/
-/*! exports provided: exportAsSVGfromDOMviaLink, generateCanvasFromSVG, exportImagesfromCANVAS, addToZipFromSVG, createZipWithPresets, downloadAsZipFromSVGviaLink, downloadAsZipFromSVGviaClick, downloadAsZipFromSVGviaLinkBlob */
+/*! exports provided: exportAsSVGfromDOMviaLink, generateCanvasFromSVG, addToZipFromSVG, createZipWithPresets, downloadAsZipFromSVGviaLinkBlob */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "exportAsSVGfromDOMviaLink", function() { return exportAsSVGfromDOMviaLink; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "generateCanvasFromSVG", function() { return generateCanvasFromSVG; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "exportImagesfromCANVAS", function() { return exportImagesfromCANVAS; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "addToZipFromSVG", function() { return addToZipFromSVG; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "createZipWithPresets", function() { return createZipWithPresets; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "downloadAsZipFromSVGviaLink", function() { return downloadAsZipFromSVGviaLink; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "downloadAsZipFromSVGviaClick", function() { return downloadAsZipFromSVGviaClick; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "downloadAsZipFromSVGviaLinkBlob", function() { return downloadAsZipFromSVGviaLinkBlob; });
 /* harmony import */ var jszip__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jszip */ "./node_modules/.pnpm/jszip@3.5.0/node_modules/jszip/dist/jszip.min.js");
 /* harmony import */ var jszip__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jszip__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var file_saver__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! file-saver */ "./node_modules/.pnpm/file-saver@2.0.5/node_modules/file-saver/dist/FileSaver.min.js");
-/* harmony import */ var file_saver__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(file_saver__WEBPACK_IMPORTED_MODULE_1__);
-
 
 function exportAsSVGfromDOMviaLink(svg) {
     const blob = new Blob([svg.outerHTML], { type: "image/svg+xml;charset=utf-8" });
@@ -48826,15 +48349,12 @@ function generateCanvasFromSVG(svg) {
         };
         img.onerror = (ev) => {
             console.log("Image not found", ev);
-            // This will work even in Safari for Mac
+            // This will work even in Safari for Mac & iOS
             img.src = "data:image/svg+xml," + svg.outerHTML;
         };
         img.src = exportAsSVGfromDOMviaLink(svg);
     });
     // return canvas
-}
-function exportImagesfromCANVAS(canvas, format) {
-    return canvas.toDataURL(`image/${format}`);
 }
 function getBase64String(dataURL) {
     const idx = dataURL.indexOf("base64,") + "base64,".length;
@@ -48845,7 +48365,7 @@ async function addToZipFromSVG(svg, zip, formats, includeSVG) {
     const canvas = await generateCanvasFromSVG(svg);
     const imgs = formats.map((f) => ({
         ext: f,
-        dataURL: exportImagesfromCANVAS(canvas, f),
+        dataURL: canvas.toDataURL(`image/${f}`),
     }));
     imgs.forEach((img) => {
         zip === null || zip === void 0 ? void 0 : zip.file(`${svg.getAttribute("name") || "logo"}.${img.ext}`, getBase64String(img.dataURL), { base64: true });
@@ -48855,17 +48375,6 @@ async function addToZipFromSVG(svg, zip, formats, includeSVG) {
     }
     return zip;
 }
-// export async function exportAsZipFromSVGviaLink(
-//     svg: SVGElement,
-//     formats: ("png" | "jpg" | "webp")[],
-//     includeSVG?: boolean
-// ): Promise<string> {
-//     const zip = await addToZipFromSVG(svg, new JSZip(), formats, includeSVG)
-//     const link = await zip.generateAsync({ type: "blob" }).then((content) => {
-//         return URL.createObjectURL(content)
-//     })
-//     return link
-// }
 const presetsFormat = [
     {
         name: "default_765x625",
@@ -48921,9 +48430,24 @@ const presetsFormat = [
         height: 32,
     },
     {
-        name: "instagram_profile_1000x1000",
-        width: 1000,
-        height: 1000,
+        name: "instagram_portrait_1080x1350",
+        width: 1080,
+        height: 1350,
+    },
+    {
+        name: "instagram_photo_1080x1080",
+        width: 1080,
+        height: 1080,
+    },
+    {
+        name: "instagram_landscape_1080x608",
+        width: 1080,
+        height: 608,
+    },
+    {
+        name: "instagram_stories_1080x1920",
+        width: 1080,
+        height: 1920,
     },
     {
         name: "linkedin_profile_1000x1000",
@@ -48980,53 +48504,42 @@ async function createZipWithPresets(svg, formats, includeSVG) {
     }
     return zip;
 }
-async function downloadAsZipFromSVGviaLink(svg, formats, includeSVG) {
-    const zip = await createZipWithPresets(svg, formats, includeSVG);
-    const content = await zip.generateAsync({ type: "base64", mimeType: "application/zip" });
-    return "data:application/zip; Content-disposition: attachment; base64," + content;
-}
-async function downloadAsZipFromSVGviaClick(svg, formats, includeSVG) {
-    // addToZipFromSVG(svg, new JSZip(), formats, includeSVG).then((zip) =>
-    //     zip.generateAsync({ type: "blob" }).then((content) => {
-    //         FileSaver.saveAs(content, "logos")
-    //     })
-    // )
-    const zip = await createZipWithPresets(svg, formats, includeSVG);
-    zip.generateAsync({ type: "blob", mimeType: "application/zip" }).then((content) => {
-        file_saver__WEBPACK_IMPORTED_MODULE_1___default.a.saveAs(content, "LogoMakerExport");
-    });
-}
 async function downloadAsZipFromSVGviaLinkBlob(svg, formats, includeSVG) {
     const zip = await createZipWithPresets(svg, formats, includeSVG);
     const blob = await zip.generateAsync({ type: "blob", mimeType: "application/zip" });
     return URL.createObjectURL(blob);
 }
-
-
-/***/ }),
-
-/***/ "./src/engine/googleFonts.ts":
-/*!***********************************!*\
-  !*** ./src/engine/googleFonts.ts ***!
-  \***********************************/
-/*! exports provided: generateUrlForFonts, generateUrlForFont */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "generateUrlForFonts", function() { return generateUrlForFonts; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "generateUrlForFont", function() { return generateUrlForFont; });
-// used for importing the fonts with a HTML link 
-function generateUrlForFonts(fonts) {
-    fonts.sort();
-    const formatFont = fonts.map(f => `family=${f.split(" ").join("+")}`);
-    return `https://fonts.googleapis.com/css2?${formatFont.join("&")}&display=swap`;
-}
-// used for link embedded in the SVG
-function generateUrlForFont(font) {
-    const formatFont = `family=${font.split(" ").join("+")}`;
-    return `https://fonts.googleapis.com/css2?${formatFont}`;
-}
+// Legacy & For reference
+// export async function exportAsZipFromSVGviaLink(
+//     svg: SVGElement,
+//     formats: ("png" | "jpg" | "webp")[],
+//     includeSVG?: boolean
+// ): Promise<string> {
+//     const zip = await addToZipFromSVG(svg, new JSZip(), formats, includeSVG)
+//     const link = await zip.generateAsync({ type: "blob" }).then((content) => {
+//         return URL.createObjectURL(content)
+//     })
+//     return link
+// }
+// export async function downloadAsZipFromSVGviaLink(
+//     svg: SVGElement,
+//     formats: ("png" | "jpg" | "webp")[],
+//     includeSVG?: boolean
+// ): Promise<string> {
+//     const zip = await createZipWithPresets(svg, formats, includeSVG)
+//     const content = await zip.generateAsync({ type: "base64", mimeType: "application/zip" })
+//     return "data:application/zip; Content-disposition: attachment; base64," + content
+// }
+// export async function downloadAsZipFromSVGviaClick(
+//     svg: SVGElement,
+//     formats: ("png" | "jpg" | "webp")[],
+//     includeSVG?: boolean
+// ): Promise<void> {
+//     const zip = await createZipWithPresets(svg, formats, includeSVG)
+//     zip.generateAsync({ type: "blob", mimeType: "application/zip" }).then((content) => {
+//         FileSaver.saveAs(content, "LogoMakerExport")
+//     })
+// }
 
 
 /***/ }),
@@ -49079,34 +48592,202 @@ const settings = {
 
 /***/ }),
 
-/***/ "./src/engine/utility.ts":
-/*!*******************************!*\
-  !*** ./src/engine/utility.ts ***!
-  \*******************************/
-/*! exports provided: moveToCenter */
+/***/ "./src/engine/shapesAligner.ts":
+/*!*************************************!*\
+  !*** ./src/engine/shapesAligner.ts ***!
+  \*************************************/
+/*! exports provided: autoscallingBaseShapes, alignLogoTop, alignLogoLeft, alignLogoRight, alignShapesToCenter */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "moveToCenter", function() { return moveToCenter; });
-const moveToCenter = (draw, viewbox, container) => {
-    // Compute the center
-    const { logoSVG, titleSVG, sloganSVG } = container.containerElems;
-    // check if the svg has scaled
-    const currentViewBox = draw.viewbox();
-    const viewboxWidth = currentViewBox.width; // Math.max(viewbox.width, currentViewBox.width)
-    const viewboxHeight = currentViewBox.height; // Math.max(viewbox.height, currentViewBox.height)
-    const xOffsetToCenter = viewboxWidth / 2 - container.containerPos.cx;
-    const yOffsetToCenter = viewboxHeight / 2 - container.containerPos.cy;
-    // Apply the relocation
-    logoSVG.center(logoSVG.cx() + xOffsetToCenter, logoSVG.cy() + yOffsetToCenter);
-    titleSVG.center(titleSVG.cx() + xOffsetToCenter, titleSVG.cy() + yOffsetToCenter);
-    sloganSVG.center(sloganSVG.cx() + xOffsetToCenter, sloganSVG.cy() + yOffsetToCenter);
-    return container.containerElems;
-};
-// export const addEmbeddedFont = (draw: Svg, font: string): void => {
-//     draw.font(font,`url("${generateUrlForFonts([font])}")`)
-// }
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "autoscallingBaseShapes", function() { return autoscallingBaseShapes; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "alignLogoTop", function() { return alignLogoTop; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "alignLogoLeft", function() { return alignLogoLeft; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "alignLogoRight", function() { return alignLogoRight; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "alignShapesToCenter", function() { return alignShapesToCenter; });
+/* harmony import */ var _settings__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./settings */ "./src/engine/settings.ts");
+
+function calculateDimesionsForBaseShape(shapes) {
+    const { logo, title, slogan } = shapes;
+    // Calculate the dimensions for the shapes, including the settings
+    const logoDim = {
+        height: _settings__WEBPACK_IMPORTED_MODULE_0__["settings"].logo.margins.top + logo.height() + _settings__WEBPACK_IMPORTED_MODULE_0__["settings"].logo.margins.bottom,
+        width: _settings__WEBPACK_IMPORTED_MODULE_0__["settings"].logo.margins.left + logo.width() + _settings__WEBPACK_IMPORTED_MODULE_0__["settings"].logo.margins.bottom,
+    };
+    let titleDim;
+    if (title.length() > 0) {
+        titleDim = {
+            height: _settings__WEBPACK_IMPORTED_MODULE_0__["settings"].title.margins.top + title.bbox().height + _settings__WEBPACK_IMPORTED_MODULE_0__["settings"].title.margins.bottom,
+            width: _settings__WEBPACK_IMPORTED_MODULE_0__["settings"].title.margins.left + title.bbox().width + _settings__WEBPACK_IMPORTED_MODULE_0__["settings"].title.margins.bottom,
+        };
+    }
+    else {
+        titleDim = {
+            width: 0,
+            height: 0,
+        };
+    }
+    let sloganDim;
+    if (slogan.length() > 0) {
+        sloganDim = {
+            height: _settings__WEBPACK_IMPORTED_MODULE_0__["settings"].slogan.margins.top + slogan.bbox().height + _settings__WEBPACK_IMPORTED_MODULE_0__["settings"].slogan.margins.bottom,
+            width: _settings__WEBPACK_IMPORTED_MODULE_0__["settings"].slogan.margins.left + slogan.bbox().width + _settings__WEBPACK_IMPORTED_MODULE_0__["settings"].slogan.margins.bottom,
+        };
+    }
+    else {
+        sloganDim = {
+            width: 0,
+            height: 0,
+        };
+    }
+    return {
+        logoDim,
+        titleDim,
+        sloganDim,
+    };
+}
+function autoscallingBaseShapes(parent, containerWidth, containerHeight) {
+    const marginSize = 0.2; // percentage
+    const currentViewBox = parent.viewbox();
+    parent.viewbox(0, 0, Math.max(currentViewBox.width * (1 + marginSize), containerWidth * (1 + marginSize)), Math.max(currentViewBox.height * (1 + marginSize), containerHeight * (1 + marginSize)));
+}
+function alignLogoTop(shapes) {
+    const { logo, title, slogan } = shapes;
+    const { logoDim, titleDim, sloganDim } = calculateDimesionsForBaseShape(shapes);
+    // the elements are vertically stacked,
+    // so the width of the container is equal with the width of the largest element
+    // and the height is the sum of all the element's height
+    const containerWidth = Math.max(logoDim.width, titleDim.width, sloganDim.width);
+    const containerHeight = logoDim.height + titleDim.height + sloganDim.height; // logo.height + titleDim.height + sloganDim.height
+    const cx = containerWidth / 2;
+    // const cy = containerHeight / 2
+    logo.move(cx - logoDim.width / 2, 0);
+    title.move(cx - titleDim.width / 2, logoDim.height);
+    slogan.move(cx - sloganDim.width / 2, logoDim.height + titleDim.height);
+    return {
+        containerHeight,
+        containerWidth,
+    };
+}
+function alignLogoLeft(shapes) {
+    const { logo, title, slogan } = shapes;
+    const { logoDim, titleDim, sloganDim } = calculateDimesionsForBaseShape(shapes);
+    // Calculate the dimension for the box that contains the title and the slogan
+    const textContainerWidth = Math.max(titleDim.width, sloganDim.width) +
+        _settings__WEBPACK_IMPORTED_MODULE_0__["settings"].textContainer.margins.left +
+        _settings__WEBPACK_IMPORTED_MODULE_0__["settings"].textContainer.margins.right;
+    const textContainerHeight = titleDim.height +
+        sloganDim.height +
+        _settings__WEBPACK_IMPORTED_MODULE_0__["settings"].textContainer.margins.top +
+        _settings__WEBPACK_IMPORTED_MODULE_0__["settings"].textContainer.margins.bottom;
+    // the elements are vertically stacked,
+    // so the width of the container is equal with the width of the largest element
+    // and the height is the sum of all the element's height
+    const containerHeight = Math.max(logoDim.height, textContainerHeight);
+    const containerWidth = logoDim.width + textContainerWidth;
+    // const cx = containerWidth / 2
+    const cy = containerHeight / 2;
+    const ctx = textContainerWidth / 2;
+    // const cty = textContainerHeight / 2
+    // Move elements to their position
+    logo.move(0, cy - logoDim.height / 2);
+    title.move(logoDim.width + ctx - titleDim.width / 2, cy - titleDim.height / 2);
+    slogan.move(logoDim.width + ctx - sloganDim.width / 2, cy + titleDim.height / 2 // + sloganDim.height / 2
+    );
+    return {
+        containerHeight,
+        containerWidth,
+    };
+}
+function alignLogoRight(shapes) {
+    const { logo, title, slogan } = shapes;
+    const { logoDim, titleDim, sloganDim } = calculateDimesionsForBaseShape(shapes);
+    // Calculate the dimension for the box that contains the title and the slogan
+    const textContainerWidth = Math.max(titleDim.width, sloganDim.width) +
+        _settings__WEBPACK_IMPORTED_MODULE_0__["settings"].textContainer.margins.left +
+        _settings__WEBPACK_IMPORTED_MODULE_0__["settings"].textContainer.margins.right;
+    const textContainerHeight = titleDim.height +
+        sloganDim.height +
+        _settings__WEBPACK_IMPORTED_MODULE_0__["settings"].textContainer.margins.top +
+        _settings__WEBPACK_IMPORTED_MODULE_0__["settings"].textContainer.margins.bottom;
+    // the elements are vertically stacked,
+    // so the width of the container is equal with the width of the largest element
+    // and the height is the sum of all the element's height
+    const containerHeight = Math.max(logoDim.height, textContainerHeight);
+    const containerWidth = logoDim.width + textContainerWidth;
+    // const cx = containerWidth / 2
+    const cy = containerHeight / 2;
+    const ctx = textContainerWidth / 2;
+    // const cty = textContainerHeight / 2
+    logo.move(textContainerWidth, cy - logoDim.height / 2);
+    title.move(ctx - titleDim.width / 2, cy - titleDim.height / 2);
+    slogan.move(ctx - sloganDim.width / 2, cy + titleDim.height / 2); // + sloganDim.height / 2)
+    return {
+        containerHeight,
+        containerWidth,
+    };
+}
+function alignShapesToCenter(parent, shapes, properties) {
+    const { logo, title, slogan } = shapes;
+    const currentViewBox = parent.viewbox();
+    const xOffsetToCenter = currentViewBox.width / 2 - properties.containerWidth / 2;
+    const yOffsetToCenter = currentViewBox.height / 2 - properties.containerHeight / 2;
+    logo.center(logo.cx() + xOffsetToCenter, logo.cy() + yOffsetToCenter);
+    title.center(title.cx() + xOffsetToCenter, title.cy() + yOffsetToCenter);
+    slogan.center(slogan.cx() + xOffsetToCenter, slogan.cy() + yOffsetToCenter);
+}
+
+
+/***/ }),
+
+/***/ "./src/engine/shapesBuilder.ts":
+/*!*************************************!*\
+  !*** ./src/engine/shapesBuilder.ts ***!
+  \*************************************/
+/*! exports provided: buildDefaultShapes */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "buildDefaultShapes", function() { return buildDefaultShapes; });
+/* harmony import */ var _svgdotjs_svg_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @svgdotjs/svg.js */ "./node_modules/.pnpm/@svgdotjs/svg.js@3.0.16/node_modules/@svgdotjs/svg.js/dist/svg.esm.js");
+
+function buildDefaultShapes(parent, componentsProps) {
+    const { logo: pLogo, title: pTitle, slogan: pSlogan } = componentsProps;
+    // Create SVGs
+    const logo = Object(_svgdotjs_svg_js__WEBPACK_IMPORTED_MODULE_0__["SVG"])().addTo(parent).svg(pLogo.src.svg);
+    const title = parent.text(pTitle.text);
+    const slogan = parent.text(pSlogan.text);
+    // Apply other properties
+    logo.viewbox(0, 0, logo.bbox().width, logo.bbox().height + 5)
+        .size(pLogo.width, pLogo.height)
+        .css("fill", pLogo.style.fill);
+    title
+        .font({
+        fill: pTitle.style.color,
+        family: pTitle.style.fontFamily,
+        size: pTitle.style.fontSize + "px",
+        weight: "400",
+    })
+        .leading(0);
+    slogan
+        .font({
+        fill: pSlogan.style.color,
+        family: pSlogan.style.fontFamily,
+        size: pSlogan.style.fontSize + "px",
+        weight: "400",
+    })
+        .leading(0);
+    // Move to an arbitrary position (Optional)
+    title.move(0, 0);
+    slogan.move(0, 0);
+    return {
+        logo,
+        title,
+        slogan,
+    };
+}
 
 
 /***/ }),
@@ -49130,28 +48811,6 @@ __webpack_require__.r(__webpack_exports__);
 
 window.addEventListener("load", () => {
     Object(react_dom__WEBPACK_IMPORTED_MODULE_1__["render"])(react__WEBPACK_IMPORTED_MODULE_0__["createElement"](_Application__WEBPACK_IMPORTED_MODULE_2__["default"], null), document.querySelector("#themeisle-logo-maker-root"));
-});
-
-
-/***/ }),
-
-/***/ "./src/stores/AssetsStore.ts":
-/*!***********************************!*\
-  !*** ./src/stores/AssetsStore.ts ***!
-  \***********************************/
-/*! exports provided: AssetsStore */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AssetsStore", function() { return AssetsStore; });
-/* harmony import */ var pullstate__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! pullstate */ "./node_modules/.pnpm/pullstate@1.20.3_react@17.0.1/node_modules/pullstate/dist/index.es.js");
-
-const AssetsStore = new pullstate__WEBPACK_IMPORTED_MODULE_0__["Store"]({
-    fonts: {
-        fontsStatus: "inactive",
-        activeFonts: [],
-    },
 });
 
 
