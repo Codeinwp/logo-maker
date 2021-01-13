@@ -73,6 +73,7 @@
 							<h3>Functions</h3>
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-function tsd-parent-kind-module"><a href="engine_export.html#addtozipfromsvg" class="tsd-kind-icon">add<wbr>ToZip<wbr>FromSVG</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-module"><a href="engine_export.html#createsvgswithpreset" class="tsd-kind-icon">createSVGs<wbr>With<wbr>Preset</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-module"><a href="engine_export.html#createzipwithpresets" class="tsd-kind-icon">create<wbr>Zip<wbr>With<wbr>Presets</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-module"><a href="engine_export.html#downloadaszipfromsvgvialinkblob" class="tsd-kind-icon">download<wbr>AsZip<wbr>FromSVGvia<wbr>Link<wbr>Blob</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-module"><a href="engine_export.html#exportassvgfromdomvialink" class="tsd-kind-icon">export<wbr>AsSVGfromDOMvia<wbr>Link</a></li>
@@ -88,28 +89,45 @@
 					<a name="addtozipfromsvg" class="tsd-anchor"></a>
 					<h3>add<wbr>ToZip<wbr>FromSVG</h3>
 					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
-						<li class="tsd-signature tsd-kind-icon">add<wbr>ToZip<wbr>FromSVG<span class="tsd-signature-symbol">(</span>svg<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">SVGElement</span>, zip<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">JSZip</span>, formats<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-type">&quot;png&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;jpg&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;webp&quot;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">[]</span>, includeSVG<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">JSZip</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">add<wbr>ToZip<wbr>FromSVG<span class="tsd-signature-symbol">(</span>svg<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">SVGElement</span>, zip<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">JSZip</span>, extensions<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-type">&quot;png&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;jpg&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;webp&quot;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">[]</span>, includeSVG<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">JSZip</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/Codeinwp/logo-maker/blob/93e99e2/src/engine/export.ts#L47">engine/export.ts:47</a></li>
+									<li>Defined in <a href="https://github.com/Codeinwp/logo-maker/blob/2b08989/src/engine/export.ts#L66">engine/export.ts:66</a></li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>This function will add to an <code>zip</code> object the images generated from Svg based on the extensions provided</p>
+								</div>
+							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5>svg: <span class="tsd-signature-type">SVGElement</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The svg that is going to be exported</p>
+									</div>
 								</li>
 								<li>
 									<h5>zip: <span class="tsd-signature-type">JSZip</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The zip element that will containe the generated images</p>
+									</div>
 								</li>
 								<li>
-									<h5>formats: <span class="tsd-signature-symbol">(</span><span class="tsd-signature-type">&quot;png&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;jpg&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;webp&quot;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">[]</span></h5>
+									<h5>extensions: <span class="tsd-signature-symbol">(</span><span class="tsd-signature-type">&quot;png&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;jpg&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;webp&quot;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">[]</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The extensions that will be used to generate the images</p>
+									</div>
 								</li>
 								<li>
 									<h5><span class="tsd-flag ts-flagOptional">Optional</span> includeSVG: <span class="tsd-signature-type">boolean</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Add the svg element to the zip file</p>
+									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">JSZip</span><span class="tsd-signature-symbol">&gt;</span></h4>
@@ -117,28 +135,73 @@
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
-					<a name="createzipwithpresets" class="tsd-anchor"></a>
-					<h3>create<wbr>Zip<wbr>With<wbr>Presets</h3>
+					<a name="createsvgswithpreset" class="tsd-anchor"></a>
+					<h3>createSVGs<wbr>With<wbr>Preset</h3>
 					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
-						<li class="tsd-signature tsd-kind-icon">create<wbr>Zip<wbr>With<wbr>Presets<span class="tsd-signature-symbol">(</span>svg<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">SVGElement</span>, formats<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-type">&quot;png&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;jpg&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;webp&quot;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">[]</span>, includeSVG<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">JSZip</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">createSVGs<wbr>With<wbr>Preset<span class="tsd-signature-symbol">(</span>svg<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">SVGElement</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">SVGElement</span><span class="tsd-signature-symbol">[]</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/Codeinwp/logo-maker/blob/93e99e2/src/engine/export.ts#L202">engine/export.ts:202</a></li>
+									<li>Defined in <a href="https://github.com/Codeinwp/logo-maker/blob/2b08989/src/engine/export.ts#L208">engine/export.ts:208</a></li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>This functions will create variants of proviede Svg based on the internal presets.</p>
+								</div>
+							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5>svg: <span class="tsd-signature-type">SVGElement</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The svg that is going to be exported</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">SVGElement</span><span class="tsd-signature-symbol">[]</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
+					<a name="createzipwithpresets" class="tsd-anchor"></a>
+					<h3>create<wbr>Zip<wbr>With<wbr>Presets</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
+						<li class="tsd-signature tsd-kind-icon">create<wbr>Zip<wbr>With<wbr>Presets<span class="tsd-signature-symbol">(</span>svg<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">SVGElement</span>, extensions<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-type">&quot;png&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;jpg&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;webp&quot;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">[]</span>, includeSVG<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">JSZip</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/Codeinwp/logo-maker/blob/2b08989/src/engine/export.ts#L233">engine/export.ts:233</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>This function will create a <code>zip</code> file that will include all the images generated from pressets with the provided Svg and extensions</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>svg: <span class="tsd-signature-type">SVGElement</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The svg that is going to be exported</p>
+									</div>
 								</li>
 								<li>
-									<h5>formats: <span class="tsd-signature-symbol">(</span><span class="tsd-signature-type">&quot;png&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;jpg&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;webp&quot;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">[]</span></h5>
+									<h5>extensions: <span class="tsd-signature-symbol">(</span><span class="tsd-signature-type">&quot;png&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;jpg&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;webp&quot;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">[]</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The extensions that will be used to generate the images</p>
+									</div>
 								</li>
 								<li>
 									<h5><span class="tsd-flag ts-flagOptional">Optional</span> includeSVG: <span class="tsd-signature-type">boolean</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Add the svg element to the zip file</p>
+									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">JSZip</span><span class="tsd-signature-symbol">&gt;</span></h4>
@@ -149,25 +212,39 @@
 					<a name="downloadaszipfromsvgvialinkblob" class="tsd-anchor"></a>
 					<h3>download<wbr>AsZip<wbr>FromSVGvia<wbr>Link<wbr>Blob</h3>
 					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
-						<li class="tsd-signature tsd-kind-icon">download<wbr>AsZip<wbr>FromSVGvia<wbr>Link<wbr>Blob<span class="tsd-signature-symbol">(</span>svg<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">SVGElement</span>, formats<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-type">&quot;png&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;jpg&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;webp&quot;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">[]</span>, includeSVG<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">download<wbr>AsZip<wbr>FromSVGvia<wbr>Link<wbr>Blob<span class="tsd-signature-symbol">(</span>svg<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">SVGElement</span>, extensions<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-type">&quot;png&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;jpg&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;webp&quot;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">[]</span>, includeSVG<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/Codeinwp/logo-maker/blob/93e99e2/src/engine/export.ts#L223">engine/export.ts:223</a></li>
+									<li>Defined in <a href="https://github.com/Codeinwp/logo-maker/blob/2b08989/src/engine/export.ts#L261">engine/export.ts:261</a></li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>This function will generate an <code>URL</code> to the zip that containts the generated images from the provided Svg and extensions</p>
+								</div>
+							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5>svg: <span class="tsd-signature-type">SVGElement</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The svg that is going to be exported</p>
+									</div>
 								</li>
 								<li>
-									<h5>formats: <span class="tsd-signature-symbol">(</span><span class="tsd-signature-type">&quot;png&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;jpg&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;webp&quot;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">[]</span></h5>
+									<h5>extensions: <span class="tsd-signature-symbol">(</span><span class="tsd-signature-type">&quot;png&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;jpg&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;webp&quot;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">[]</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The extensions that will be used to generate the images</p>
+									</div>
 								</li>
 								<li>
 									<h5><span class="tsd-flag ts-flagOptional">Optional</span> includeSVG: <span class="tsd-signature-type">boolean</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Add the svg element to the zip file</p>
+									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></h4>
@@ -184,16 +261,25 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/Codeinwp/logo-maker/blob/93e99e2/src/engine/export.ts#L3">engine/export.ts:3</a></li>
+									<li>Defined in <a href="https://github.com/Codeinwp/logo-maker/blob/2b08989/src/engine/export.ts#L9">engine/export.ts:9</a></li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>This function creates and URL for the <code>Blob</code> builded from the provided Svg</p>
+								</div>
+							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5>svg: <span class="tsd-signature-type">SVGElement</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The svg that is going to be exported</p>
+									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
+							<p>And URL to the Svg</p>
 						</li>
 					</ul>
 				</section>
@@ -207,13 +293,21 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/Codeinwp/logo-maker/blob/93e99e2/src/engine/export.ts#L8">engine/export.ts:8</a></li>
+									<li>Defined in <a href="https://github.com/Codeinwp/logo-maker/blob/2b08989/src/engine/export.ts#L19">engine/export.ts:19</a></li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>This function will generate and image of the provided Svg using <code>canvas</code></p>
+								</div>
+							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5>svg: <span class="tsd-signature-type">SVGElement</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The svg that is going to be exported</p>
+									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">HTMLCanvasElement</span><span class="tsd-signature-symbol">&gt;</span></h4>
@@ -300,6 +394,9 @@
 				<ul class="before-current">
 					<li class=" tsd-kind-function tsd-parent-kind-module">
 						<a href="engine_export.html#addtozipfromsvg" class="tsd-kind-icon">add<wbr>ToZip<wbr>FromSVG</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-module">
+						<a href="engine_export.html#createsvgswithpreset" class="tsd-kind-icon">createSVGs<wbr>With<wbr>Preset</a>
 					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-module">
 						<a href="engine_export.html#createzipwithpresets" class="tsd-kind-icon">create<wbr>Zip<wbr>With<wbr>Presets</a>

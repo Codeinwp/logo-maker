@@ -15,6 +15,14 @@ import { LogoAlignOptions } from "./components/ui/SelectLayout"
 
 import ReactGA from "react-ga"
 
+/**
+ * This function will create another array based on the given length. If the lenght is greater that the lenght of the input array, it will repeats its values until reach the desired length. It also applis a filter function when generating the values. If the filter is not provided, the indentity function will be used as a provider.
+ * 
+ * @param array The reference array
+ * @param desiredLength The length of the returned array
+ * @param filter A function for filtering unwanted elements from the given array
+ * @returns An array with repeteated ( & filtered) values from the given array
+ */
 function fillArrayWithRepeat<T>(
     array: T[],
     desiredLength: number,
@@ -43,6 +51,9 @@ function fillArrayWithRepeat<T>(
     return _array
 }
 
+/**
+ * This function will crate the main component for the Showcase page
+ */
 const Showcase: React.FunctionComponent<unknown> = () => {
     const store = UIStore.useState((s) => s)
 
@@ -51,6 +62,9 @@ const Showcase: React.FunctionComponent<unknown> = () => {
     const [aligns, setAligns] = React.useState<LogoAlignOptions[]>([])
     const [fontsList, setFontsList] = React.useState<{ title: string; slogan: string }[]>([])
 
+    /**
+     * Create the templates
+     */
     React.useEffect(() => {
         ReactGA.pageview(window.location.pathname + window.location.hash + window.location.search)
 
@@ -79,6 +93,11 @@ const Showcase: React.FunctionComponent<unknown> = () => {
         setAligns(generateAlignsOption())
     }, [])
 
+    /**
+     * Set the current values of the templet to the user interface store
+     * 
+     * @param index The index of templet
+     */
     const setTemplate = (index: number) => {
         UIStore.update((s) => {
             s.logo.src = logos[index]
@@ -89,6 +108,9 @@ const Showcase: React.FunctionComponent<unknown> = () => {
         })
     }
 
+    /**
+     * Render the template. Render a spiner, if the templates are not initialize  
+     */
     const renderLogoList = () => {
         if (!colors.length && !fontsList.length && !aligns.length) {
             return <div className="content-loader"></div>
@@ -113,7 +135,7 @@ const Showcase: React.FunctionComponent<unknown> = () => {
                             container: {
                                 ...store.container,
                                 width: 345,
-                                height: 280,
+                                height: 281,
                                 align: aligns[index],
                                 viewbox: {
                                     x: 0,

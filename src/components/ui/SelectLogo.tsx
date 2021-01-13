@@ -3,15 +3,26 @@ import logos, { LogoSVGImport } from "../../assets/logos/index"
 import LogoItem from "./LogoItem"
 import store from "../../stores/UIStore"
 
+/**
+ * This function will generate the `Select Logo Meniu` from design
+ */
 const SelectLogo: React.FunctionComponent<unknown> = () => {
     const selectedLogoID = store.useState((s) => s.logo.src.id)
 
+    /**
+     * Updated logo source of the user interface store
+     * 
+     * @param logo The logo's Svg source
+     */
     const setLogo = (logo: LogoSVGImport) => {
         store.update((s) => {
             s.logo.src = logo
         })
     }
 
+    /**
+     * Render the logos for the menu
+     */
     const renderLogos = () => {
         return logos.map((logo) => (
             <LogoItem

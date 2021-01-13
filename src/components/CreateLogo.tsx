@@ -11,17 +11,29 @@ import { buildDefaultShapes } from "../engine/shapesBuilder"
 import { v4 as uuidv4 } from "uuid"
 import { TLogo, TLogoContainer, TSlogan, TTitle } from "~/src/stores/UIStore"
 
-type CreateLogoPropsComponent = {
+export type CreateLogoPropsComponent = {
+    /** The id of the parent element */
     id?: string
+    /** The CSS class */
     className?: string
+    /** The props necessary for creating the logo */
     logoProps: {
+        /** The props of the container */
         container: TLogoContainer
+        /** The props of the logo */
         logo: TLogo
+        /** The props of the title */
         title: TTitle
+        /** The props of the slogan */
         slogan: TSlogan
     }
 }
 
+/**
+ * This function will generate the logo as a `react` component
+ * 
+ * @param props The properties necessary for rendering the the logo
+ */
 const CreateLogo: React.FunctionComponent<CreateLogoPropsComponent> = (
     props: CreateLogoPropsComponent
 ) => {
@@ -31,10 +43,10 @@ const CreateLogo: React.FunctionComponent<CreateLogoPropsComponent> = (
     React.useEffect(() => {
         // console.log(props.logoProps)
         if (divRef.current && props.logoProps) {
-            /*
-                Create the SVG parent
-                */
 
+            /**
+             * Create the SVG parent
+             */
             const container = props.logoProps.container
             divRef.current.textContent = ""
 
@@ -46,24 +58,11 @@ const CreateLogo: React.FunctionComponent<CreateLogoPropsComponent> = (
                 .css("background-color", container.style.color)
                 .addClass(props?.className || "")
 
-            // const getAlignedLogo = () => {
-            //     switch (props.logoProps.container.align) {
-            //         case "align-top":
-            //             return alignLogoTop(props.logoProps, draw)
-            //         case "align-left":
-            //             return alignLogoLeft(props.logoProps, draw)
-            //         case "align-right":
-            //             return alignLogoRight(props.logoProps, draw)
-            //         default:
-            //             console.log(
-            //                 "Invalid Type. The logo will be aligned top as a fallback option!"
-            //             )
-            //             return alignLogoTop(props.logoProps, draw)
-            //     }
-            // }
+            
 
-            // moveToCenter(draw, container.viewbox, getAlignedLogo())
-
+            /**
+             * Create the base shapes & align them
+             */    
             let shapes
             let alignerProps
 
@@ -86,10 +85,13 @@ const CreateLogo: React.FunctionComponent<CreateLogoPropsComponent> = (
                     alignerProps = alignLogoTop(shapes)
             }
 
+            /**
+             * Additional transformations
+             */
             autoscallingBaseShapes(draw, alignerProps.containerWidth, alignerProps.containerHeight)
             alignShapesToCenter(draw, shapes, alignerProps)
 
-            // addEmbeddedFont(draw, props.logoProps.title.style.fontFamily)
+            
         }
     }, [props?.className, props.logoProps])
 
@@ -97,3 +99,24 @@ const CreateLogo: React.FunctionComponent<CreateLogoPropsComponent> = (
 }
 
 export default CreateLogo
+
+// Legacy & For reference
+
+// const getAlignedLogo = () => {
+            //     switch (props.logoProps.container.align) {
+            //         case "align-top":
+            //             return alignLogoTop(props.logoProps, draw)
+            //         case "align-left":
+            //             return alignLogoLeft(props.logoProps, draw)
+            //         case "align-right":
+            //             return alignLogoRight(props.logoProps, draw)
+            //         default:
+            //             console.log(
+            //                 "Invalid Type. The logo will be aligned top as a fallback option!"
+            //             )
+            //             return alignLogoTop(props.logoProps, draw)
+            //     }
+            // }
+
+            // moveToCenter(draw, container.viewbox, getAlignedLogo())
+            // addEmbeddedFont(draw, props.logoProps.title.style.fontFamily)

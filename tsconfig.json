@@ -40,7 +40,7 @@
   "typedocOptions": {
     "entryPoints": ["./src"],
     "exclude": "./src/assets",
-    "out": "docs"
+    "out": "docs",
   },
   "include": [
     "src",

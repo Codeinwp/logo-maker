@@ -4,6 +4,9 @@ import UIStore from "../../stores/UIStore"
 import presetColors from "../../assets/colors/index"
 import classnames from "classnames"
 
+/**
+ * This function will generate the `Select Coloros Meniu` from design
+ */
 const SelectColor: React.FunctionComponent<unknown> = () => {
     const [isColorEditorOpen, toggleColorEditor] = React.useState({
         background: false,
@@ -28,10 +31,18 @@ const SelectColor: React.FunctionComponent<unknown> = () => {
         ...colors,
     })
 
+    /**
+     * This function will handle inputs by updating the internal & user interface store values. 
+     * 
+     * @param option The owner of the color
+     * @param value The value of the color
+     */
     const onInputChangeFor = (
         option: "background" | "logo" | "title" | "slogan",
         value: string
     ) => {
+
+        // send the values to the user interface
         switch (option) {
             case "background":
                 setInput({
@@ -104,6 +115,11 @@ const SelectColor: React.FunctionComponent<unknown> = () => {
         }
     }
 
+    /**
+     * This will show/hide the color picker of the element 
+     * 
+     * @param option The element bound to the toggle
+     */
     const toggleColorEditorFor = (option: "background" | "logo" | "title" | "slogan") => {
         switch (option) {
             case "background":

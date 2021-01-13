@@ -3,6 +3,11 @@ import classnames from "classnames"
 
 import ReactGA from "react-ga"
 
+/**
+ * This function will the render the `Download Button` from design.
+ * 
+ * @param props The CSS class and the download link of the `zip` file
+ */
 const DownloadButton: React.FunctionComponent<{
     className?: string
     downloadLink?: string

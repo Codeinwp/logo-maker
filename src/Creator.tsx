@@ -18,13 +18,19 @@ import UIStore from "./stores/UIStore"
 import ReactGA from "react-ga"
 import { downloadAsZipFromSVGviaLinkBlob } from "./engine/export"
 
-type MenuOptions = "logo" | "typography" | "layout" | "colors"
+export type MenuOptions = "logo" | "typography" | "layout" | "colors"
 
+/**
+ * This function will crate the main component for the Creator page
+ */
 const Creator: React.FunctionComponent<unknown> = () => {
     const [menuOption, setMenuOption] = React.useState<MenuOptions>("logo")
     const [downloadLink, setDownloadLink] = React.useState<string>("")
     const store = UIStore.useState()
 
+    /**
+     * Render the right panel based on the option choosed by the user
+     */
     const renderRightSidePanel = () => {
         switch (menuOption) {
             case "logo":
@@ -38,10 +44,16 @@ const Creator: React.FunctionComponent<unknown> = () => {
         }
     }
 
+    /**
+     * Send deta to Google Analytics
+     */
     React.useEffect(() => {
         ReactGA.pageview(window.location.pathname + window.location.hash + window.location.search)
     }, [])
 
+    /**
+     * Generate the download link
+     */
     React.useEffect(() => {
         async function createLink(): Promise<void> {
             const logoSVG = document.querySelector("#image-logo svg")?.cloneNode(true) as SVGElement
@@ -59,6 +71,9 @@ const Creator: React.FunctionComponent<unknown> = () => {
         createLink()
     }, [downloadLink])
 
+    /**
+     * Store the current options in the seesions manager to be keeped during the page refresh.
+     */
     React.useEffect(() => {
         sessionStorage.setItem("logo-maker-themeisle", JSON.stringify(store))
     }, [store])

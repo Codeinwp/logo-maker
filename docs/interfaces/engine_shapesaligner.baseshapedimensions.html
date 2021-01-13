@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>BaseShapheBuilder | undefined</title>
+	<title>BaseShapeDimensions | undefined</title>
 	<meta name="description" content="Documentation for undefined">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -55,13 +55,13 @@
 					<a href="../modules.html">undefined</a>
 				</li>
 				<li>
-					<a href="../modules/engine_shapesbuilder.html">engine/shapesBuilder</a>
+					<a href="../modules/engine_shapesaligner.html">engine/shapesAligner</a>
 				</li>
 				<li>
-					<a href="engine_shapesbuilder.baseshaphebuilder.html">BaseShapheBuilder</a>
+					<a href="engine_shapesaligner.baseshapedimensions.html">BaseShapeDimensions</a>
 				</li>
 			</ul>
-			<h1>Interface BaseShapheBuilder</h1>
+			<h1>Interface BaseShapeDimensions</h1>
 		</div>
 	</div>
 </header>
@@ -71,16 +71,16 @@
 			<section class="tsd-panel tsd-comment">
 				<div class="tsd-comment tsd-typography">
 					<div class="lead">
-						<p>Base interface for creating/building shapes</p>
+						<p>The base interface for the output of the function that calculate the dimensions</p>
 					</div>
-					<p>Extend this inferface when adding functions to build more diverse shapes</p>
+					<p>Extend this inferface when adding functions to build more shapes</p>
 				</div>
 			</section>
 			<section class="tsd-panel tsd-hierarchy">
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
-						<span class="target">BaseShapheBuilder</span>
+						<span class="target">BaseShapeDimensions</span>
 					</li>
 				</ul>
 			</section>
@@ -91,9 +91,9 @@
 						<section class="tsd-index-section ">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="engine_shapesbuilder.baseshaphebuilder.html#logo" class="tsd-kind-icon">logo</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="engine_shapesbuilder.baseshaphebuilder.html#slogan" class="tsd-kind-icon">slogan</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="engine_shapesbuilder.baseshaphebuilder.html#title" class="tsd-kind-icon">title</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="engine_shapesaligner.baseshapedimensions.html#logodim" class="tsd-kind-icon">logo<wbr>Dim</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="engine_shapesaligner.baseshapedimensions.html#slogandim" class="tsd-kind-icon">slogan<wbr>Dim</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="engine_shapesaligner.baseshapedimensions.html#titledim" class="tsd-kind-icon">title<wbr>Dim</a></li>
 							</ul>
 						</section>
 					</div>
@@ -102,48 +102,81 @@
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Properties</h2>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="logo" class="tsd-anchor"></a>
-					<h3>logo</h3>
-					<div class="tsd-signature tsd-kind-icon">logo<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Svg</span></div>
+					<a name="logodim" class="tsd-anchor"></a>
+					<h3>logo<wbr>Dim</h3>
+					<div class="tsd-signature tsd-kind-icon">logo<wbr>Dim<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">{ </span>height<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">; </span>width<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> }</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/Codeinwp/logo-maker/blob/2b08989/src/engine/shapesBuilder.ts#L18">engine/shapesBuilder.ts:18</a></li>
+							<li>Defined in <a href="https://github.com/Codeinwp/logo-maker/blob/2b08989/src/engine/shapesAligner.ts#L17">engine/shapesAligner.ts:17</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
-							<p>The logo SVG object</p>
+							<p>The dimension (height x width) of the logo</p>
 						</div>
+					</div>
+					<div class="tsd-type-declaration">
+						<h4>Type declaration</h4>
+						<ul class="tsd-parameters">
+							<li class="tsd-parameter">
+								<h5>height<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></h5>
+							</li>
+							<li class="tsd-parameter">
+								<h5>width<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></h5>
+							</li>
+						</ul>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="slogan" class="tsd-anchor"></a>
-					<h3>slogan</h3>
-					<div class="tsd-signature tsd-kind-icon">slogan<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Text</span></div>
+					<a name="slogandim" class="tsd-anchor"></a>
+					<h3>slogan<wbr>Dim</h3>
+					<div class="tsd-signature tsd-kind-icon">slogan<wbr>Dim<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">{ </span>height<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">; </span>width<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> }</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/Codeinwp/logo-maker/blob/2b08989/src/engine/shapesBuilder.ts#L28">engine/shapesBuilder.ts:28</a></li>
+							<li>Defined in <a href="https://github.com/Codeinwp/logo-maker/blob/2b08989/src/engine/shapesAligner.ts#L27">engine/shapesAligner.ts:27</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
-							<p>The slogan Text-SVG object</p>
+							<p>The dimension (height x width) of the slogan</p>
 						</div>
+					</div>
+					<div class="tsd-type-declaration">
+						<h4>Type declaration</h4>
+						<ul class="tsd-parameters">
+							<li class="tsd-parameter">
+								<h5>height<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></h5>
+							</li>
+							<li class="tsd-parameter">
+								<h5>width<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></h5>
+							</li>
+						</ul>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="title" class="tsd-anchor"></a>
-					<h3>title</h3>
-					<div class="tsd-signature tsd-kind-icon">title<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Text</span></div>
+					<a name="titledim" class="tsd-anchor"></a>
+					<h3>title<wbr>Dim</h3>
+					<div class="tsd-signature tsd-kind-icon">title<wbr>Dim<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">{ </span>height<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">; </span>width<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> }</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/Codeinwp/logo-maker/blob/2b08989/src/engine/shapesBuilder.ts#L23">engine/shapesBuilder.ts:23</a></li>
+							<li>Defined in <a href="https://github.com/Codeinwp/logo-maker/blob/2b08989/src/engine/shapesAligner.ts#L22">engine/shapesAligner.ts:22</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
-							<p>The title Text-SVG object</p>
+							<p>The dimension (height x width) of the title</p>
 						</div>
+					</div>
+					<div class="tsd-type-declaration">
+						<h4>Type declaration</h4>
+						<ul class="tsd-parameters">
+							<li class="tsd-parameter">
+								<h5>height<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></h5>
+							</li>
+							<li class="tsd-parameter">
+								<h5>width<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></h5>
+							</li>
+						</ul>
 					</div>
 				</section>
 			</section>
@@ -202,10 +235,10 @@
 					<li class=" tsd-kind-module">
 						<a href="../modules/engine_settings.html">engine/settings</a>
 					</li>
-					<li class=" tsd-kind-module">
+					<li class="current tsd-kind-module">
 						<a href="../modules/engine_shapesaligner.html">engine/shapes<wbr>Aligner</a>
 					</li>
-					<li class="current tsd-kind-module">
+					<li class=" tsd-kind-module">
 						<a href="../modules/engine_shapesbuilder.html">engine/shapes<wbr>Builder</a>
 					</li>
 					<li class=" tsd-kind-module">
@@ -224,26 +257,44 @@
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
+					<li class=" tsd-kind-interface tsd-parent-kind-module">
+						<a href="engine_shapesaligner.basealigneroutput.html" class="tsd-kind-icon">Base<wbr>Aligner<wbr>Output</a>
+					</li>
 				</ul>
 				<ul class="current">
 					<li class="current tsd-kind-interface tsd-parent-kind-module">
-						<a href="engine_shapesbuilder.baseshaphebuilder.html" class="tsd-kind-icon">Base<wbr>Shaphe<wbr>Builder</a>
+						<a href="engine_shapesaligner.baseshapedimensions.html" class="tsd-kind-icon">Base<wbr>Shape<wbr>Dimensions</a>
 						<ul>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="engine_shapesbuilder.baseshaphebuilder.html#logo" class="tsd-kind-icon">logo</a>
+								<a href="engine_shapesaligner.baseshapedimensions.html#logodim" class="tsd-kind-icon">logo<wbr>Dim</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="engine_shapesbuilder.baseshaphebuilder.html#slogan" class="tsd-kind-icon">slogan</a>
+								<a href="engine_shapesaligner.baseshapedimensions.html#slogandim" class="tsd-kind-icon">slogan<wbr>Dim</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="engine_shapesbuilder.baseshaphebuilder.html#title" class="tsd-kind-icon">title</a>
+								<a href="engine_shapesaligner.baseshapedimensions.html#titledim" class="tsd-kind-icon">title<wbr>Dim</a>
 							</li>
 						</ul>
 					</li>
 				</ul>
 				<ul class="after-current">
+					<li class=" tsd-kind-function tsd-parent-kind-module tsd-has-type-parameter">
+						<a href="../modules/engine_shapesaligner.html#alignlogoleft" class="tsd-kind-icon">align<wbr>Logo<wbr>Left</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-module tsd-has-type-parameter">
+						<a href="../modules/engine_shapesaligner.html#alignlogoright" class="tsd-kind-icon">align<wbr>Logo<wbr>Right</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-module tsd-has-type-parameter">
+						<a href="../modules/engine_shapesaligner.html#alignlogotop" class="tsd-kind-icon">align<wbr>Logo<wbr>Top</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-module tsd-has-type-parameter">
+						<a href="../modules/engine_shapesaligner.html#alignshapestocenter" class="tsd-kind-icon">align<wbr>Shapes<wbr>ToCenter</a>
+					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-module">
-						<a href="../modules/engine_shapesbuilder.html#builddefaultshapes" class="tsd-kind-icon">build<wbr>Default<wbr>Shapes</a>
+						<a href="../modules/engine_shapesaligner.html#autoscallingbaseshapes" class="tsd-kind-icon">autoscalling<wbr>Base<wbr>Shapes</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-module">
+						<a href="../modules/engine_shapesaligner.html#calculatedimesionsforbaseshape" class="tsd-kind-icon">calculate<wbr>Dimesions<wbr>For<wbr>Base<wbr>Shape</a>
 					</li>
 				</ul>
 			</nav>

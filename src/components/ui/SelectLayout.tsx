@@ -6,6 +6,9 @@ import UIStore from "../../stores/UIStore"
 
 export type LogoAlignOptions = "align-top" | "align-left" | "align-right"
 
+/**
+ * This function will generate the `Select Layout Meniu` from design
+ */
 const SelectLayout: React.FunctionComponent<unknown> = () => {
     const alignOption = UIStore.useState((s) => s.container.align)
 

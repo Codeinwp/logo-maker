@@ -19,10 +19,6 @@ import ReactGA from "react-ga"
 
 const Start: React.FunctionComponent<unknown> = () => {
 
-    /**
-     * 
-     * @param value The Title Text
-     */
     const setTitleText = (value: string) => {
         UIStore.update((s) => {
             s.title.text = value
@@ -35,6 +31,9 @@ const Start: React.FunctionComponent<unknown> = () => {
         })
     }
 
+    /**
+     * Link the back button with the parent page provided by PHP & send data to Google Analytics
+     */
     React.useEffect(() => {
         if (!window.logomaker?.parentLink) {
             console.log(
