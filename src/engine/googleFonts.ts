@@ -5,7 +5,7 @@ export function generateUrlForFonts(fonts: string[]): string {
     return `https://fonts.googleapis.com/css2?${formatFont.join("&")}&display=swap`
 }
 
-// used for link embedded in the SVG
+// used for generating a link for embedding CSS fonts in the SVG
 export function generateUrlForFont(font: string): string {
     const formatFont = `family=${font.split(" ").join("+")}`
     return `https://fonts.googleapis.com/css2?${formatFont}`

@@ -1,8 +1,8 @@
 import JSZip from "jszip"
 
 /**
- * This function creates and URL for the `Blob` builded from the provided Svg 
- * 
+ * This function creates and URL for the `Blob` builded from the provided Svg
+ *
  * @param svg The svg that is going to be exported
  * @returns And URL to the Svg
  */
@@ -13,7 +13,7 @@ export function exportAsSVGfromDOMviaLink(svg: SVGElement): string {
 
 /**
  * This function will generate and image of the provided Svg using `canvas`
- * 
+ *
  * @param svg The svg that is going to be exported
  */
 export function generateCanvasFromSVG(svg: SVGElement): Promise<HTMLCanvasElement> {
@@ -50,6 +50,11 @@ export function generateCanvasFromSVG(svg: SVGElement): Promise<HTMLCanvasElemen
     // return canvas
 }
 
+/**
+ * This function will extract the `base64` from the provided URL
+ *
+ * @param dataURL The URL of the image
+ */
 function getBase64String(dataURL: string): string {
     const idx = dataURL.indexOf("base64,") + "base64,".length
     return dataURL.substring(idx)
@@ -57,9 +62,9 @@ function getBase64String(dataURL: string): string {
 
 /**
  * This function will add to an `zip` object the images generated from Svg based on the extensions provided
- * 
+ *
  * @param svg The svg that is going to be exported
- * @param zip The zip element that will containe the generated images 
+ * @param zip The zip element that will containe the generated images
  * @param extensions The extensions that will be used to generate the images
  * @param includeSVG Add the svg element to the zip file
  */
@@ -76,6 +81,7 @@ export async function addToZipFromSVG(
         dataURL: canvas.toDataURL(`image/${f}`),
     }))
 
+    // Add images to the zip file
     imgs.forEach((img) => {
         zip?.file(
             `${svg.getAttribute("name") || "logo"}.${img.ext}`,
@@ -202,7 +208,7 @@ const presetsFormat: { name: string; width: number; height: number; isTransparen
 
 /**
  * This functions will create variants of proviede Svg based on the internal presets.
- * 
+ *
  * @param svg The svg that is going to be exported
  */
 export function createSVGsWithPreset(svg: SVGElement): SVGElement[] {
@@ -225,7 +231,7 @@ export function createSVGsWithPreset(svg: SVGElement): SVGElement[] {
 
 /**
  * This function will create a `zip` file that will include all the images generated from pressets with the provided Svg and extensions
- * 
+ *
  * @param svg The svg that is going to be exported
  * @param extensions The extensions that will be used to generate the images
  * @param includeSVG Add the svg element to the zip file
@@ -253,7 +259,7 @@ export async function createZipWithPresets(
 
 /**
  * This function will generate an `URL` to the zip that containts the generated images from the provided Svg and extensions
- * 
+ *
  * @param svg The svg that is going to be exported
  * @param extensions The extensions that will be used to generate the images
  * @param includeSVG Add the svg element to the zip file

@@ -15,7 +15,6 @@ const SelectColor: React.FunctionComponent<unknown> = () => {
         slogan: false,
     })
 
-    // used to keep track to the valid hex color
     const [colors, setColors] = React.useState(
         UIStore.useState((s) => {
             return {
