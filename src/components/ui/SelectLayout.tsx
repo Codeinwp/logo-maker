@@ -18,7 +18,7 @@ const SelectLayout: React.FunctionComponent<unknown> = () => {
             <p>Select a symbol for the logo</p>
             <div className="options">
                 <button
-                    className={classnames("box-border", { active: alignOption === "align-top" })}
+                    className={classnames({ active: alignOption === "align-top" })}
                     onClick={() =>
                         UIStore.update((s) => {
                             s.container.align = "align-top"
@@ -26,16 +26,13 @@ const SelectLayout: React.FunctionComponent<unknown> = () => {
                     }
                 >
                     <div className="align-top">
-                        <LogoUIsvg clasName="m-1" isSelected={alignOption === "align-top"} />
-                        <HorizontalLineUIsvg
-                            clasName="m-1"
-                            isSelected={alignOption === "align-top"}
-                        />
+                        <LogoUIsvg isSelected={alignOption === "align-top"} />
+                        <HorizontalLineUIsvg isSelected={alignOption === "align-top"} />
                     </div>
                     <span>Logo TOP</span>
                 </button>
                 <button
-                    className={classnames("box-border", { active: alignOption === "align-left" })}
+                    className={classnames({ active: alignOption === "align-left" })}
                     onClick={() =>
                         UIStore.update((s) => {
                             s.container.align = "align-left"
@@ -43,16 +40,13 @@ const SelectLayout: React.FunctionComponent<unknown> = () => {
                     }
                 >
                     <div className="align-left">
-                        <LogoUIsvg clasName="m-1" isSelected={alignOption === "align-left"} />
-                        <HorizontalLineUIsvg
-                            clasName="m-1"
-                            isSelected={alignOption === "align-left"}
-                        />
+                        <LogoUIsvg isSelected={alignOption === "align-left"} />
+                        <HorizontalLineUIsvg isSelected={alignOption === "align-left"} />
                     </div>
                     <span>Logo LEFT</span>
                 </button>
                 <button
-                    className={classnames("align-right", { active: alignOption === "align-right" })}
+                    className={classnames({ active: alignOption === "align-right" })}
                     onClick={() =>
                         UIStore.update((s) => {
                             s.container.align = "align-right"
