@@ -1,3 +1,7 @@
+/**
+ * @packageDocumentation
+ */
+
 import * as React from "react"
 import { Link } from "react-router-dom"
 import ThemeisleUI from "./assets/ui/ThemeisleUI"
@@ -7,7 +11,14 @@ import BackUI from "./assets/ui/BackUI"
 
 import ReactGA from "react-ga"
 
+/**
+ * This is the main component for the Start page
+ * 
+ * It use the global object `window.logomaker.parentLink` as link for the `Back` button
+ */
+
 const Start: React.FunctionComponent<unknown> = () => {
+
     const setTitleText = (value: string) => {
         UIStore.update((s) => {
             s.title.text = value
@@ -20,6 +31,9 @@ const Start: React.FunctionComponent<unknown> = () => {
         })
     }
 
+    /**
+     * Link the back button with the parent page provided by PHP & send data to Google Analytics
+     */
     React.useEffect(() => {
         if (!window.logomaker?.parentLink) {
             console.log(

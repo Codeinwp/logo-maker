@@ -3,26 +3,38 @@ import Select from "react-select"
 import { fontsList as fonts } from "../../assets/fonts/index"
 import UIStore from "../../stores/UIStore"
 
-const SelectTypography: React.FunctionComponent<unknown> = () => {
-    const fontOptions = fonts.map((font) => ({
-        value: font,
-        label: font,
+/**
+ * Generate the font options
+ */
+const fontOptions = fonts.map((font) => ({
+    value: font,
+    label: font,
+}))
+
+/**
+ * Generate the title size options
+ */
+const titleSizeOptions = [...Array(35).keys()]
+    .map((size) => size + 20)
+    .map((size) => ({
+        value: size,
+        label: size.toString(),
     }))
 
-    const titleSizeOptions = [...Array(35).keys()]
-        .map((size) => size + 20)
-        .map((size) => ({
-            value: size,
-            label: size.toString(),
-        }))
+/**
+ * Generate the slogan size options
+ */
+const sloganSizeOptions = [...Array(35).keys()]
+    .map((size) => size + 12)
+    .map((size) => ({
+        value: size,
+        label: size.toString(),
+    }))
 
-    const sloganSizeOptions = [...Array(35).keys()]
-        .map((size) => size + 12)
-        .map((size) => ({
-            value: size,
-            label: size.toString(),
-        }))
-
+/**
+ * This function will generate the `Select Typography Meniu` from design
+ */
+const SelectTypography: React.FunctionComponent<unknown> = () => {
     const onTitleTextChange = (value: string) => {
         UIStore.update((s) => {
             s.title.text = value

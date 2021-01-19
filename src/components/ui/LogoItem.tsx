@@ -3,12 +3,20 @@ import * as React from "react"
 import { LogoSVGImport } from "../../assets/logos/index"
 import classnames from "classnames"
 
-type SelectLogoProps = {
+export type SelectLogoProps = {
+    /** The logo's SVG source */
     logo: LogoSVGImport
+    /** The flag that indicates if the component is selected in the user interface */
     isSelected?: boolean
+    /** The function that will trigger when the component is preset */
     onClick: (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void
 }
 
+/**
+ * This function will generate the logo representation for the `Select Logo` component
+ * 
+ * @param props The properties necessary for rendering the logo in the menu
+ */
 const LogoItem: React.FunctionComponent<SelectLogoProps> = (props: SelectLogoProps) => {
     const { onClick, logo } = props
     const itemRef = React.useRef<HTMLButtonElement>(null)

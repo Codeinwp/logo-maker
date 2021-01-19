@@ -1,11 +1,21 @@
 import JSZip from "jszip"
-import FileSaver from "file-saver"
 
+/**
+ * This function creates and URL for the `Blob` builded from the provided Svg
+ *
+ * @param svg The svg that is going to be exported
+ * @returns And URL to the Svg
+ */
 export function exportAsSVGfromDOMviaLink(svg: SVGElement): string {
     const blob = new Blob([svg.outerHTML], { type: "image/svg+xml;charset=utf-8" })
     return window.URL.createObjectURL(blob)
 }
 
+/**
+ * This function will generate and image of the provided Svg using `canvas`
+ *
+ * @param svg The svg that is going to be exported
+ */
 export function generateCanvasFromSVG(svg: SVGElement): Promise<HTMLCanvasElement> {
     return new Promise((resolve) => {
         const img = new Image()
@@ -30,42 +40,48 @@ export function generateCanvasFromSVG(svg: SVGElement): Promise<HTMLCanvasElemen
         img.onerror = (ev) => {
             console.log("Image not found", ev)
 
-            // This will work even in Safari for Mac
+            // This will work even in Safari for Mac & iOS
             img.src = "data:image/svg+xml," + svg.outerHTML
         }
 
         img.src = exportAsSVGfromDOMviaLink(svg)
-
     })
 
     // return canvas
 }
 
-export function exportImagesfromCANVAS(
-    canvas: HTMLCanvasElement,
-    format: "png" | "jpg" | "webp"
-): string {
-    return canvas.toDataURL(`image/${format}`)
-}
-
+/**
+ * This function will extract the `base64` from the provided URL
+ *
+ * @param dataURL The URL of the image
+ */
 function getBase64String(dataURL: string): string {
     const idx = dataURL.indexOf("base64,") + "base64,".length
     return dataURL.substring(idx)
 }
 
+/**
+ * This function will add to an `zip` object the images generated from Svg based on the extensions provided
+ *
+ * @param svg The svg that is going to be exported
+ * @param zip The zip element that will containe the generated images
+ * @param extensions The extensions that will be used to generate the images
+ * @param includeSVG Add the svg element to the zip file
+ */
 export async function addToZipFromSVG(
     svg: SVGElement,
     zip: JSZip,
-    formats: ("png" | "jpg" | "webp")[],
+    extensions: ("png" | "jpg" | "webp")[],
     includeSVG?: boolean
 ): Promise<JSZip> {
     // Create images
     const canvas = await generateCanvasFromSVG(svg)
-    const imgs = formats.map((f) => ({
+    const imgs = extensions.map((f) => ({
         ext: f,
-        dataURL: exportImagesfromCANVAS(canvas, f),
+        dataURL: canvas.toDataURL(`image/${f}`),
     }))
 
+    // Add images to the zip file
     imgs.forEach((img) => {
         zip?.file(
             `${svg.getAttribute("name") || "logo"}.${img.ext}`,
@@ -83,20 +99,6 @@ export async function addToZipFromSVG(
 
     return zip
 }
-
-// export async function exportAsZipFromSVGviaLink(
-//     svg: SVGElement,
-//     formats: ("png" | "jpg" | "webp")[],
-//     includeSVG?: boolean
-// ): Promise<string> {
-//     const zip = await addToZipFromSVG(svg, new JSZip(), formats, includeSVG)
-
-//     const link = await zip.generateAsync({ type: "blob" }).then((content) => {
-//         return URL.createObjectURL(content)
-//     })
-
-//     return link
-// }
 
 const presetsFormat: { name: string; width: number; height: number; isTransparent?: boolean }[] = [
     {
@@ -153,9 +155,24 @@ const presetsFormat: { name: string; width: number; height: number; isTransparen
         height: 32,
     },
     {
-        name: "instagram_profile_1000x1000",
-        width: 1000,
-        height: 1000,
+        name: "instagram_portrait_1080x1350",
+        width: 1080,
+        height: 1350,
+    },
+    {
+        name: "instagram_photo_1080x1080",
+        width: 1080,
+        height: 1080,
+    },
+    {
+        name: "instagram_landscape_1080x608",
+        width: 1080,
+        height: 608,
+    },
+    {
+        name: "instagram_stories_1080x1920",
+        width: 1080,
+        height: 1920,
     },
     {
         name: "linkedin_profile_1000x1000",
@@ -189,7 +206,12 @@ const presetsFormat: { name: string; width: number; height: number; isTransparen
     },
 ]
 
-function createSVGsWithPreset(svg: SVGElement): SVGElement[] {
+/**
+ * This functions will create variants of proviede Svg based on the internal presets.
+ *
+ * @param svg The svg that is going to be exported
+ */
+export function createSVGsWithPreset(svg: SVGElement): SVGElement[] {
     return presetsFormat.map((preset) => {
         const _svg = svg.cloneNode(true) as SVGElement
         _svg.removeAttribute("width")
@@ -207,15 +229,22 @@ function createSVGsWithPreset(svg: SVGElement): SVGElement[] {
     })
 }
 
+/**
+ * This function will create a `zip` file that will include all the images generated from pressets with the provided Svg and extensions
+ *
+ * @param svg The svg that is going to be exported
+ * @param extensions The extensions that will be used to generate the images
+ * @param includeSVG Add the svg element to the zip file
+ */
 export async function createZipWithPresets(
     svg: SVGElement,
-    formats: ("png" | "jpg" | "webp")[],
+    extensions: ("png" | "jpg" | "webp")[],
     includeSVG?: boolean
 ): Promise<JSZip> {
     let zip = new JSZip()
 
     for (const _svg of createSVGsWithPreset(svg)) {
-        zip = await addToZipFromSVG(_svg, zip, formats, false)
+        zip = await addToZipFromSVG(_svg, zip, extensions, false)
     }
 
     if (includeSVG) {
@@ -228,43 +257,61 @@ export async function createZipWithPresets(
     return zip
 }
 
-export async function downloadAsZipFromSVGviaLink(
-    svg: SVGElement,
-    formats: ("png" | "jpg" | "webp")[],
-    includeSVG?: boolean
-): Promise<string> {
-    const zip = await createZipWithPresets(svg, formats, includeSVG)
-
-    const content = await zip.generateAsync({ type: "base64", mimeType: "application/zip" })
-
-    return "data:application/zip; Content-disposition: attachment; base64," + content
-}
-
-export async function downloadAsZipFromSVGviaClick(
-    svg: SVGElement,
-    formats: ("png" | "jpg" | "webp")[],
-    includeSVG?: boolean
-): Promise<void> {
-    // addToZipFromSVG(svg, new JSZip(), formats, includeSVG).then((zip) =>
-    //     zip.generateAsync({ type: "blob" }).then((content) => {
-    //         FileSaver.saveAs(content, "logos")
-    //     })
-    // )
-
-    const zip = await createZipWithPresets(svg, formats, includeSVG)
-    zip.generateAsync({ type: "blob", mimeType: "application/zip" }).then((content) => {
-        FileSaver.saveAs(content, "LogoMakerExport")
-    })
-}
-
+/**
+ * This function will generate an `URL` to the zip that containts the generated images from the provided Svg and extensions
+ *
+ * @param svg The svg that is going to be exported
+ * @param extensions The extensions that will be used to generate the images
+ * @param includeSVG Add the svg element to the zip file
+ */
 export async function downloadAsZipFromSVGviaLinkBlob(
     svg: SVGElement,
-    formats: ("png" | "jpg" | "webp")[],
+    extensions: ("png" | "jpg" | "webp")[],
     includeSVG?: boolean
 ): Promise<string> {
-    const zip = await createZipWithPresets(svg, formats, includeSVG)
+    const zip = await createZipWithPresets(svg, extensions, includeSVG)
 
     const blob = await zip.generateAsync({ type: "blob", mimeType: "application/zip" })
 
-    return URL.createObjectURL(blob);
+    return URL.createObjectURL(blob)
 }
+
+// Legacy & For reference
+
+// export async function exportAsZipFromSVGviaLink(
+//     svg: SVGElement,
+//     formats: ("png" | "jpg" | "webp")[],
+//     includeSVG?: boolean
+// ): Promise<string> {
+//     const zip = await addToZipFromSVG(svg, new JSZip(), formats, includeSVG)
+
+//     const link = await zip.generateAsync({ type: "blob" }).then((content) => {
+//         return URL.createObjectURL(content)
+//     })
+
+//     return link
+// }
+
+// export async function downloadAsZipFromSVGviaLink(
+//     svg: SVGElement,
+//     formats: ("png" | "jpg" | "webp")[],
+//     includeSVG?: boolean
+// ): Promise<string> {
+//     const zip = await createZipWithPresets(svg, formats, includeSVG)
+
+//     const content = await zip.generateAsync({ type: "base64", mimeType: "application/zip" })
+
+//     return "data:application/zip; Content-disposition: attachment; base64," + content
+// }
+
+// export async function downloadAsZipFromSVGviaClick(
+//     svg: SVGElement,
+//     formats: ("png" | "jpg" | "webp")[],
+//     includeSVG?: boolean
+// ): Promise<void> {
+
+//     const zip = await createZipWithPresets(svg, formats, includeSVG)
+//     zip.generateAsync({ type: "blob", mimeType: "application/zip" }).then((content) => {
+//         FileSaver.saveAs(content, "LogoMakerExport")
+//     })
+// }

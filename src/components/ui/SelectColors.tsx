@@ -4,6 +4,9 @@ import UIStore from "../../stores/UIStore"
 import presetColors from "../../assets/colors/index"
 import classnames from "classnames"
 
+/**
+ * This function will generate the `Select Coloros Meniu` from design
+ */
 const SelectColor: React.FunctionComponent<unknown> = () => {
     const [isColorEditorOpen, toggleColorEditor] = React.useState({
         background: false,
@@ -12,7 +15,6 @@ const SelectColor: React.FunctionComponent<unknown> = () => {
         slogan: false,
     })
 
-    // used to keep track to the valid hex color
     const [colors, setColors] = React.useState(
         UIStore.useState((s) => {
             return {
@@ -28,10 +30,18 @@ const SelectColor: React.FunctionComponent<unknown> = () => {
         ...colors,
     })
 
+    /**
+     * This function will handle inputs by updating the internal & user interface store values. 
+     * 
+     * @param option The owner of the color
+     * @param value The value of the color
+     */
     const onInputChangeFor = (
         option: "background" | "logo" | "title" | "slogan",
         value: string
     ) => {
+
+        // send the values to the user interface
         switch (option) {
             case "background":
                 setInput({
@@ -59,7 +69,7 @@ const SelectColor: React.FunctionComponent<unknown> = () => {
                 break
         }
 
-        // before send it to store, check if the value is a valid hex color
+        // before send it to the store, check if the value is a valid hex color
         // reference: https://stackoverflow.com/questions/8027423/how-to-check-if-a-string-is-a-valid-hex-color-representation/8027444
         // check it on: https://regexr.com/
         if (/^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$/i.test(value)) {
@@ -104,6 +114,11 @@ const SelectColor: React.FunctionComponent<unknown> = () => {
         }
     }
 
+    /**
+     * This will show/hide the color picker of the element 
+     * 
+     * @param option The element bound to the toggle
+     */
     const toggleColorEditorFor = (option: "background" | "logo" | "title" | "slogan") => {
         switch (option) {
             case "background":

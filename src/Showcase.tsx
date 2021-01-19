@@ -15,69 +15,61 @@ import { LogoAlignOptions } from "./components/ui/SelectLayout"
 
 import ReactGA from "react-ga"
 
-const defaultFontsList = new Array(logos.length).fill("sans-serif")
+/**
+ * This function will create another array based on the given length. If the lenght is greater that the lenght of the input array, it will repeats its values until reach the desired length. It also applis a filter function when generating the values. If the filter is not provided, the indentity function will be used as a provider.
+ * 
+ * @param array The reference array
+ * @param desiredLength The length of the returned array
+ * @param filter A function for filtering unwanted elements from the given array
+ * @returns An array with repeteated ( & filtered) values from the given array
+ */
+function fillArrayWithRepeat<T>(
+    array: T[],
+    desiredLength: number,
+    filter?: (x: T) => boolean
+): T[] {
+    const _array: T[] = []
+    let index = 0
 
+    if (filter === undefined) {
+        // if the filter is not defined, assign a function that will pass anything
+        filter = () => true
+    }
+
+    while (_array.length < desiredLength) {
+        if (filter(array[index])) {
+            _array.push(array[index])
+        }
+
+        if (index < array.length - 1) {
+            index++
+        } else {
+            index = 0
+        }
+    }
+
+    return _array
+}
+
+/**
+ * This function will crate the main component for the Showcase page
+ */
 const Showcase: React.FunctionComponent<unknown> = () => {
     const store = UIStore.useState((s) => s)
 
     const [option, setOption] = React.useState<number>(0)
     const [colors, setColors] = React.useState<string[]>([])
     const [aligns, setAligns] = React.useState<LogoAlignOptions[]>([])
-    const [fontsList, setFontsList] = React.useState<{ title: string; slogan: string }[]>(
-        defaultFontsList
-    )
+    const [fontsList, setFontsList] = React.useState<{ title: string; slogan: string }[]>([])
 
+    /**
+     * Create the templates
+     */
     React.useEffect(() => {
         ReactGA.pageview(window.location.pathname + window.location.hash + window.location.search)
 
-        // Generate the colors
-        const generateColors = () => {
-            // const scm = new ColorScheme()
-            // const colorsNum = new Set()
-
-            // const step = 360 / logos.length
-            // for (let i = 0; i < logos.length; ++i) {
-            //     colorsNum.add(step * i)
-            // }
-
-            // const colors: string[] = []
-            // colorsNum.forEach((x) => {
-            //     scm.from_hue(x).scheme("triade").distance(0.8).variation("hard").web_safe(true)
-
-            //     colors.push("#" + scm.colors()[1])
-            // })
-            const colors: string[] = []
-            let index = 0
-            while (colors.length < logos.length) {
-                if (presetColors[index] !== "#fff") {
-                    colors.push(presetColors[index])
-                }
-                index++
-                if (index >= presetColors.length) {
-                    index = 0
-                }
-            }
-            // console.log(presetColors, colors)
-            return colors
-        }
-        setColors(generateColors())
-
-        const generateFonts = () => {
-            const list = []
-
-            let index = 0
-            while (list.length < logos.length) {
-                list.push(presets[index])
-                index++
-                if (index >= presets.length) {
-                    index = 0
-                }
-            }
-
-            return list
-        }
-
-        setFontsList(generateFonts())
+        setColors(fillArrayWithRepeat(presetColors, logos.length, (x) => x !== "#fff"))
+        setFontsList(fillArrayWithRepeat(presets, logos.length))
 
         const generateAlignsOption = () => {
             const list: LogoAlignOptions[] = []
@@ -101,6 +93,11 @@ const Showcase: React.FunctionComponent<unknown> = () => {
         setAligns(generateAlignsOption())
     }, [])
 
+    /**
+     * Set the current values of the templet to the user interface store
+     * 
+     * @param index The index of templet
+     */
     const setTemplate = (index: number) => {
         UIStore.update((s) => {
             s.logo.src = logos[index]
@@ -111,9 +108,12 @@ const Showcase: React.FunctionComponent<unknown> = () => {
         })
     }
 
+    /**
+     * Render the template. Render a spiner, if the templates are not initialize  
+     */
     const renderLogoList = () => {
-        if (!colors.length) {
-            return
+        if (!colors.length && !fontsList.length && !aligns.length) {
+            return <div className="content-loader"></div>
         }
 
         const result = logos.map((logoSRC, index) => {
@@ -135,7 +135,7 @@ const Showcase: React.FunctionComponent<unknown> = () => {
                             container: {
                                 ...store.container,
                                 width: 345,
-                                height: 280,
+                                height: 281,
                                 align: aligns[index],
                                 viewbox: {
                                     x: 0,

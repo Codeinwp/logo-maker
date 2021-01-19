@@ -37,6 +37,11 @@
     "resolveJsonModule": true,
     "skipLibCheck": true,
   },
+  "typedocOptions": {
+    "entryPoints": ["./src"],
+    "exclude": "./src/assets",
+    "out": "docs",
+  },
   "include": [
     "src",
     "types",
