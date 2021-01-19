@@ -45220,10 +45220,16 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+/**
+ * This function will crate the main component for the Creator page
+ */
 const Creator = () => {
     const [menuOption, setMenuOption] = react__WEBPACK_IMPORTED_MODULE_0__["useState"]("logo");
     const [downloadLink, setDownloadLink] = react__WEBPACK_IMPORTED_MODULE_0__["useState"]("");
     const store = _stores_UIStore__WEBPACK_IMPORTED_MODULE_15__["default"].useState();
+    /**
+     * Render the right panel based on the option choosed by the user
+     */
     const renderRightSidePanel = () => {
         switch (menuOption) {
             case "logo":
@@ -45236,9 +45242,15 @@ const Creator = () => {
                 return react__WEBPACK_IMPORTED_MODULE_0__["createElement"](_components_ui_SelectColors__WEBPACK_IMPORTED_MODULE_9__["default"], null);
         }
     };
+    /**
+     * Send deta to Google Analytics
+     */
     react__WEBPACK_IMPORTED_MODULE_0__["useEffect"](() => {
         react_ga__WEBPACK_IMPORTED_MODULE_16__["default"].pageview(window.location.pathname + window.location.hash + window.location.search);
     }, []);
+    /**
+     * Generate the download link
+     */
     react__WEBPACK_IMPORTED_MODULE_0__["useEffect"](() => {
         async function createLink() {
             var _a;
@@ -45254,6 +45266,9 @@ const Creator = () => {
         }
         createLink();
     }, [downloadLink]);
+    /**
+     * Store the current options in the seesions manager to be keeped during the page refresh.
+     */
     react__WEBPACK_IMPORTED_MODULE_0__["useEffect"](() => {
         sessionStorage.setItem("logo-maker-themeisle", JSON.stringify(store));
     }, [store]);
@@ -45355,6 +45370,14 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+/**
+ * This function will create another array based on the given length. If the lenght is greater that the lenght of the input array, it will repeats its values until reach the desired length. It also applis a filter function when generating the values. If the filter is not provided, the indentity function will be used as a provider.
+ *
+ * @param array The reference array
+ * @param desiredLength The length of the returned array
+ * @param filter A function for filtering unwanted elements from the given array
+ * @returns An array with repeteated ( & filtered) values from the given array
+ */
 function fillArrayWithRepeat(array, desiredLength, filter) {
     const _array = [];
     let index = 0;
@@ -45375,12 +45398,18 @@ function fillArrayWithRepeat(array, desiredLength, filter) {
     }
     return _array;
 }
+/**
+ * This function will crate the main component for the Showcase page
+ */
 const Showcase = () => {
     const store = _stores_UIStore__WEBPACK_IMPORTED_MODULE_4__["default"].useState((s) => s);
     const [option, setOption] = react__WEBPACK_IMPORTED_MODULE_0__["useState"](0);
     const [colors, setColors] = react__WEBPACK_IMPORTED_MODULE_0__["useState"]([]);
     const [aligns, setAligns] = react__WEBPACK_IMPORTED_MODULE_0__["useState"]([]);
     const [fontsList, setFontsList] = react__WEBPACK_IMPORTED_MODULE_0__["useState"]([]);
+    /**
+     * Create the templates
+     */
     react__WEBPACK_IMPORTED_MODULE_0__["useEffect"](() => {
         react_ga__WEBPACK_IMPORTED_MODULE_11__["default"].pageview(window.location.pathname + window.location.hash + window.location.search);
         setColors(fillArrayWithRepeat(_assets_colors__WEBPACK_IMPORTED_MODULE_9__["default"], _assets_logos_index__WEBPACK_IMPORTED_MODULE_2__["default"].length, (x) => x !== "#fff"));
@@ -45405,6 +45434,11 @@ const Showcase = () => {
         };
         setAligns(generateAlignsOption());
     }, []);
+    /**
+     * Set the current values of the templet to the user interface store
+     *
+     * @param index The index of templet
+     */
     const setTemplate = (index) => {
         _stores_UIStore__WEBPACK_IMPORTED_MODULE_4__["default"].update((s) => {
             s.logo.src = _assets_logos_index__WEBPACK_IMPORTED_MODULE_2__["default"][index];
@@ -45414,6 +45448,9 @@ const Showcase = () => {
             s.slogan.style.fontFamily = fontsList[index].slogan;
         });
     };
+    /**
+     * Render the template. Render a spiner, if the templates are not initialize
+     */
     const renderLogoList = () => {
         if (!colors.length && !fontsList.length && !aligns.length) {
             return react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("div", { className: "content-loader" });
@@ -45433,7 +45470,7 @@ const Showcase = () => {
                         container: {
                             ...store.container,
                             width: 345,
-                            height: 280,
+                            height: 281,
                             align: aligns[index],
                             viewbox: {
                                 x: 0,
@@ -45525,10 +45562,6 @@ __webpack_require__.r(__webpack_exports__);
  */
 const Start = () => {
     var _a, _b;
-    /**
-     *
-     * @param value The Title Text
-     */
     const setTitleText = (value) => {
         _stores_UIStore__WEBPACK_IMPORTED_MODULE_3__["default"].update((s) => {
             s.title.text = value;
@@ -45539,6 +45572,9 @@ const Start = () => {
             s.slogan.text = value;
         });
     };
+    /**
+     * Link the back button with the parent page provided by PHP & send data to Google Analytics
+     */
     react__WEBPACK_IMPORTED_MODULE_0__["useEffect"](() => {
         var _a;
         if (!((_a = window.logomaker) === null || _a === void 0 ? void 0 : _a.parentLink)) {
@@ -47717,15 +47753,20 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+/**
+ * This function will generate the logo as a `react` component
+ *
+ * @param props The properties necessary for rendering the the logo
+ */
 const CreateLogo = (props) => {
     const divRef = react__WEBPACK_IMPORTED_MODULE_0__["useRef"](null);
     const ID = props.id || `image-logo-${Object(uuid__WEBPACK_IMPORTED_MODULE_4__["v4"])()}`;
     react__WEBPACK_IMPORTED_MODULE_0__["useEffect"](() => {
         // console.log(props.logoProps)
         if (divRef.current && props.logoProps) {
-            /*
-                Create the SVG parent
-                */
+            /**
+             * Create the SVG parent
+             */
             const container = props.logoProps.container;
             divRef.current.textContent = "";
             const vb = container.viewbox;
@@ -47735,22 +47776,9 @@ const CreateLogo = (props) => {
                 .viewbox(vb.x, vb.y, vb.width, vb.height)
                 .css("background-color", container.style.color)
                 .addClass((props === null || props === void 0 ? void 0 : props.className) || "");
-            // const getAlignedLogo = () => {
-            //     switch (props.logoProps.container.align) {
-            //         case "align-top":
-            //             return alignLogoTop(props.logoProps, draw)
-            //         case "align-left":
-            //             return alignLogoLeft(props.logoProps, draw)
-            //         case "align-right":
-            //             return alignLogoRight(props.logoProps, draw)
-            //         default:
-            //             console.log(
-            //                 "Invalid Type. The logo will be aligned top as a fallback option!"
-            //             )
-            //             return alignLogoTop(props.logoProps, draw)
-            //     }
-            // }
-            // moveToCenter(draw, container.viewbox, getAlignedLogo())
+            /**
+             * Create the base shapes & align them
+             */
             let shapes;
             let alignerProps;
             switch (props.logoProps.container.align) {
@@ -47771,14 +47799,34 @@ const CreateLogo = (props) => {
                     shapes = Object(_engine_shapesBuilder__WEBPACK_IMPORTED_MODULE_3__["buildDefaultShapes"])(draw, props.logoProps);
                     alignerProps = Object(_engine_shapesAligner__WEBPACK_IMPORTED_MODULE_2__["alignLogoTop"])(shapes);
             }
+            /**
+             * Additional transformations
+             */
             Object(_engine_shapesAligner__WEBPACK_IMPORTED_MODULE_2__["autoscallingBaseShapes"])(draw, alignerProps.containerWidth, alignerProps.containerHeight);
             Object(_engine_shapesAligner__WEBPACK_IMPORTED_MODULE_2__["alignShapesToCenter"])(draw, shapes, alignerProps);
-            // addEmbeddedFont(draw, props.logoProps.title.style.fontFamily)
         }
     }, [props === null || props === void 0 ? void 0 : props.className, props.logoProps]);
     return react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("div", { id: ID, ref: divRef });
 };
 /* harmony default export */ __webpack_exports__["default"] = (CreateLogo);
+// Legacy & For reference
+// const getAlignedLogo = () => {
+//     switch (props.logoProps.container.align) {
+//         case "align-top":
+//             return alignLogoTop(props.logoProps, draw)
+//         case "align-left":
+//             return alignLogoLeft(props.logoProps, draw)
+//         case "align-right":
+//             return alignLogoRight(props.logoProps, draw)
+//         default:
+//             console.log(
+//                 "Invalid Type. The logo will be aligned top as a fallback option!"
+//             )
+//             return alignLogoTop(props.logoProps, draw)
+//     }
+// }
+// moveToCenter(draw, container.viewbox, getAlignedLogo())
+// addEmbeddedFont(draw, props.logoProps.title.style.fontFamily)
 
 
 /***/ }),
@@ -47800,6 +47848,11 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+/**
+ * This function will the render the `Download Button` from design.
+ *
+ * @param props The CSS class and the download link of the `zip` file
+ */
 const DownloadButton = (props) => {
     return (react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("div", { className: classnames__WEBPACK_IMPORTED_MODULE_1___default()("download-button", props === null || props === void 0 ? void 0 : props.className) },
         react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("button", { onClick: () => {
@@ -47912,6 +47965,11 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+/**
+ * This function will generate the logo representation for the `Select Logo` component
+ *
+ * @param props The properties necessary for rendering the logo in the menu
+ */
 const LogoItem = (props) => {
     const { onClick, logo } = props;
     const itemRef = react__WEBPACK_IMPORTED_MODULE_1__["useRef"](null);
@@ -47957,6 +48015,9 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+/**
+ * This function will generate the `Select Coloros Meniu` from design
+ */
 const SelectColor = () => {
     const [isColorEditorOpen, toggleColorEditor] = react__WEBPACK_IMPORTED_MODULE_0__["useState"]({
         background: false,
@@ -47964,7 +48025,6 @@ const SelectColor = () => {
         title: false,
         slogan: false,
     });
-    // used to keep track to the valid hex color
     const [colors, setColors] = react__WEBPACK_IMPORTED_MODULE_0__["useState"](_stores_UIStore__WEBPACK_IMPORTED_MODULE_2__["default"].useState((s) => {
         return {
             background: s.container.style.color,
@@ -47976,7 +48036,14 @@ const SelectColor = () => {
     const [inputValues, setInput] = react__WEBPACK_IMPORTED_MODULE_0__["useState"]({
         ...colors,
     });
+    /**
+     * This function will handle inputs by updating the internal & user interface store values.
+     *
+     * @param option The owner of the color
+     * @param value The value of the color
+     */
     const onInputChangeFor = (option, value) => {
+        // send the values to the user interface
         switch (option) {
             case "background":
                 setInput({
@@ -48047,6 +48114,11 @@ const SelectColor = () => {
             }
         }
     };
+    /**
+     * This will show/hide the color picker of the element
+     *
+     * @param option The element bound to the toggle
+     */
     const toggleColorEditorFor = (option) => {
         switch (option) {
             case "background":
@@ -48136,27 +48208,30 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+/**
+ * This function will generate the `Select Layout Meniu` from design
+ */
 const SelectLayout = () => {
     const alignOption = _stores_UIStore__WEBPACK_IMPORTED_MODULE_4__["default"].useState((s) => s.container.align);
     return (react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("div", { className: "select-layout" },
         react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("h1", null, "LOGO OPTIONS"),
         react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("p", null, "Select a symbol for the logo"),
         react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("div", { className: "options" },
-            react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("button", { className: classnames__WEBPACK_IMPORTED_MODULE_1___default()("box-border", { active: alignOption === "align-top" }), onClick: () => _stores_UIStore__WEBPACK_IMPORTED_MODULE_4__["default"].update((s) => {
+            react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("button", { className: classnames__WEBPACK_IMPORTED_MODULE_1___default()({ active: alignOption === "align-top" }), onClick: () => _stores_UIStore__WEBPACK_IMPORTED_MODULE_4__["default"].update((s) => {
                     s.container.align = "align-top";
                 }) },
                 react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("div", { className: "align-top" },
-                    react__WEBPACK_IMPORTED_MODULE_0__["createElement"](_assets_ui_LogoUIsvg__WEBPACK_IMPORTED_MODULE_3__["default"], { clasName: "m-1", isSelected: alignOption === "align-top" }),
-                    react__WEBPACK_IMPORTED_MODULE_0__["createElement"](_assets_ui_HorizontalLineUIsvg__WEBPACK_IMPORTED_MODULE_2__["default"], { clasName: "m-1", isSelected: alignOption === "align-top" })),
+                    react__WEBPACK_IMPORTED_MODULE_0__["createElement"](_assets_ui_LogoUIsvg__WEBPACK_IMPORTED_MODULE_3__["default"], { isSelected: alignOption === "align-top" }),
+                    react__WEBPACK_IMPORTED_MODULE_0__["createElement"](_assets_ui_HorizontalLineUIsvg__WEBPACK_IMPORTED_MODULE_2__["default"], { isSelected: alignOption === "align-top" })),
                 react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("span", null, "Logo TOP")),
-            react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("button", { className: classnames__WEBPACK_IMPORTED_MODULE_1___default()("box-border", { active: alignOption === "align-left" }), onClick: () => _stores_UIStore__WEBPACK_IMPORTED_MODULE_4__["default"].update((s) => {
+            react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("button", { className: classnames__WEBPACK_IMPORTED_MODULE_1___default()({ active: alignOption === "align-left" }), onClick: () => _stores_UIStore__WEBPACK_IMPORTED_MODULE_4__["default"].update((s) => {
                     s.container.align = "align-left";
                 }) },
                 react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("div", { className: "align-left" },
-                    react__WEBPACK_IMPORTED_MODULE_0__["createElement"](_assets_ui_LogoUIsvg__WEBPACK_IMPORTED_MODULE_3__["default"], { clasName: "m-1", isSelected: alignOption === "align-left" }),
-                    react__WEBPACK_IMPORTED_MODULE_0__["createElement"](_assets_ui_HorizontalLineUIsvg__WEBPACK_IMPORTED_MODULE_2__["default"], { clasName: "m-1", isSelected: alignOption === "align-left" })),
+                    react__WEBPACK_IMPORTED_MODULE_0__["createElement"](_assets_ui_LogoUIsvg__WEBPACK_IMPORTED_MODULE_3__["default"], { isSelected: alignOption === "align-left" }),
+                    react__WEBPACK_IMPORTED_MODULE_0__["createElement"](_assets_ui_HorizontalLineUIsvg__WEBPACK_IMPORTED_MODULE_2__["default"], { isSelected: alignOption === "align-left" })),
                 react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("span", null, "Logo LEFT")),
-            react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("button", { className: classnames__WEBPACK_IMPORTED_MODULE_1___default()("align-right", { active: alignOption === "align-right" }), onClick: () => _stores_UIStore__WEBPACK_IMPORTED_MODULE_4__["default"].update((s) => {
+            react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("button", { className: classnames__WEBPACK_IMPORTED_MODULE_1___default()({ active: alignOption === "align-right" }), onClick: () => _stores_UIStore__WEBPACK_IMPORTED_MODULE_4__["default"].update((s) => {
                     s.container.align = "align-right";
                 }) },
                 react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("div", { className: "align-right" },
@@ -48187,13 +48262,24 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+/**
+ * This function will generate the `Select Logo Meniu` from design
+ */
 const SelectLogo = () => {
     const selectedLogoID = _stores_UIStore__WEBPACK_IMPORTED_MODULE_3__["default"].useState((s) => s.logo.src.id);
+    /**
+     * Updated logo source of the user interface store
+     *
+     * @param logo The logo's Svg source
+     */
     const setLogo = (logo) => {
         _stores_UIStore__WEBPACK_IMPORTED_MODULE_3__["default"].update((s) => {
             s.logo.src = logo;
         });
     };
+    /**
+     * Render the logos for the menu
+     */
     const renderLogos = () => {
         return _assets_logos_index__WEBPACK_IMPORTED_MODULE_1__["default"].map((logo) => (react__WEBPACK_IMPORTED_MODULE_0__["createElement"](_LogoItem__WEBPACK_IMPORTED_MODULE_2__["default"], { onClick: () => setLogo(logo), key: logo.id, logo: logo, isSelected: selectedLogoID === logo.id })));
     };
@@ -48225,22 +48311,34 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+/**
+ * Generate the font options
+ */
 const fontOptions = _assets_fonts_index__WEBPACK_IMPORTED_MODULE_2__["fontsList"].map((font) => ({
     value: font,
     label: font,
 }));
+/**
+ * Generate the title size options
+ */
 const titleSizeOptions = [...Array(35).keys()]
     .map((size) => size + 20)
     .map((size) => ({
     value: size,
     label: size.toString(),
 }));
+/**
+ * Generate the slogan size options
+ */
 const sloganSizeOptions = [...Array(35).keys()]
     .map((size) => size + 12)
     .map((size) => ({
     value: size,
     label: size.toString(),
 }));
+/**
+ * This function will generate the `Select Typography Meniu` from design
+ */
 const SelectTypography = () => {
     const onTitleTextChange = (value) => {
         _stores_UIStore__WEBPACK_IMPORTED_MODULE_3__["default"].update((s) => {
@@ -48314,7 +48412,7 @@ const SelectTypography = () => {
 /*!******************************!*\
   !*** ./src/engine/export.ts ***!
   \******************************/
-/*! exports provided: exportAsSVGfromDOMviaLink, generateCanvasFromSVG, addToZipFromSVG, createZipWithPresets, downloadAsZipFromSVGviaLinkBlob */
+/*! exports provided: exportAsSVGfromDOMviaLink, generateCanvasFromSVG, addToZipFromSVG, createSVGsWithPreset, createZipWithPresets, downloadAsZipFromSVGviaLinkBlob */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -48322,15 +48420,27 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "exportAsSVGfromDOMviaLink", function() { return exportAsSVGfromDOMviaLink; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "generateCanvasFromSVG", function() { return generateCanvasFromSVG; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "addToZipFromSVG", function() { return addToZipFromSVG; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "createSVGsWithPreset", function() { return createSVGsWithPreset; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "createZipWithPresets", function() { return createZipWithPresets; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "downloadAsZipFromSVGviaLinkBlob", function() { return downloadAsZipFromSVGviaLinkBlob; });
 /* harmony import */ var jszip__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jszip */ "./node_modules/.pnpm/jszip@3.5.0/node_modules/jszip/dist/jszip.min.js");
 /* harmony import */ var jszip__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jszip__WEBPACK_IMPORTED_MODULE_0__);
 
+/**
+ * This function creates and URL for the `Blob` builded from the provided Svg
+ *
+ * @param svg The svg that is going to be exported
+ * @returns And URL to the Svg
+ */
 function exportAsSVGfromDOMviaLink(svg) {
     const blob = new Blob([svg.outerHTML], { type: "image/svg+xml;charset=utf-8" });
     return window.URL.createObjectURL(blob);
 }
+/**
+ * This function will generate and image of the provided Svg using `canvas`
+ *
+ * @param svg The svg that is going to be exported
+ */
 function generateCanvasFromSVG(svg) {
     return new Promise((resolve) => {
         const img = new Image();
@@ -48356,17 +48466,31 @@ function generateCanvasFromSVG(svg) {
     });
     // return canvas
 }
+/**
+ * This function will extract the `base64` from the provided URL
+ *
+ * @param dataURL The URL of the image
+ */
 function getBase64String(dataURL) {
     const idx = dataURL.indexOf("base64,") + "base64,".length;
     return dataURL.substring(idx);
 }
-async function addToZipFromSVG(svg, zip, formats, includeSVG) {
+/**
+ * This function will add to an `zip` object the images generated from Svg based on the extensions provided
+ *
+ * @param svg The svg that is going to be exported
+ * @param zip The zip element that will containe the generated images
+ * @param extensions The extensions that will be used to generate the images
+ * @param includeSVG Add the svg element to the zip file
+ */
+async function addToZipFromSVG(svg, zip, extensions, includeSVG) {
     // Create images
     const canvas = await generateCanvasFromSVG(svg);
-    const imgs = formats.map((f) => ({
+    const imgs = extensions.map((f) => ({
         ext: f,
         dataURL: canvas.toDataURL(`image/${f}`),
     }));
+    // Add images to the zip file
     imgs.forEach((img) => {
         zip === null || zip === void 0 ? void 0 : zip.file(`${svg.getAttribute("name") || "logo"}.${img.ext}`, getBase64String(img.dataURL), { base64: true });
     });
@@ -48480,6 +48604,11 @@ const presetsFormat = [
         height: 1080,
     },
 ];
+/**
+ * This functions will create variants of proviede Svg based on the internal presets.
+ *
+ * @param svg The svg that is going to be exported
+ */
 function createSVGsWithPreset(svg) {
     return presetsFormat.map((preset) => {
         const _svg = svg.cloneNode(true);
@@ -48494,18 +48623,32 @@ function createSVGsWithPreset(svg) {
         return _svg;
     });
 }
-async function createZipWithPresets(svg, formats, includeSVG) {
+/**
+ * This function will create a `zip` file that will include all the images generated from pressets with the provided Svg and extensions
+ *
+ * @param svg The svg that is going to be exported
+ * @param extensions The extensions that will be used to generate the images
+ * @param includeSVG Add the svg element to the zip file
+ */
+async function createZipWithPresets(svg, extensions, includeSVG) {
     let zip = new jszip__WEBPACK_IMPORTED_MODULE_0___default.a();
     for (const _svg of createSVGsWithPreset(svg)) {
-        zip = await addToZipFromSVG(_svg, zip, formats, false);
+        zip = await addToZipFromSVG(_svg, zip, extensions, false);
     }
     if (includeSVG) {
         zip === null || zip === void 0 ? void 0 : zip.file(`${"logo-svg"}.svg`, new Blob([svg.outerHTML], { type: "image/svg+xml;charset=utf-8" }));
     }
     return zip;
 }
-async function downloadAsZipFromSVGviaLinkBlob(svg, formats, includeSVG) {
-    const zip = await createZipWithPresets(svg, formats, includeSVG);
+/**
+ * This function will generate an `URL` to the zip that containts the generated images from the provided Svg and extensions
+ *
+ * @param svg The svg that is going to be exported
+ * @param extensions The extensions that will be used to generate the images
+ * @param includeSVG Add the svg element to the zip file
+ */
+async function downloadAsZipFromSVGviaLinkBlob(svg, extensions, includeSVG) {
+    const zip = await createZipWithPresets(svg, extensions, includeSVG);
     const blob = await zip.generateAsync({ type: "blob", mimeType: "application/zip" });
     return URL.createObjectURL(blob);
 }
@@ -48596,18 +48739,27 @@ const settings = {
 /*!*************************************!*\
   !*** ./src/engine/shapesAligner.ts ***!
   \*************************************/
-/*! exports provided: autoscallingBaseShapes, alignLogoTop, alignLogoLeft, alignLogoRight, alignShapesToCenter */
+/*! exports provided: calculateDimesionsForBaseShape, autoscallingBaseShapes, alignLogoTop, alignLogoLeft, alignLogoRight, alignShapesToCenter */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "calculateDimesionsForBaseShape", function() { return calculateDimesionsForBaseShape; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "autoscallingBaseShapes", function() { return autoscallingBaseShapes; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "alignLogoTop", function() { return alignLogoTop; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "alignLogoLeft", function() { return alignLogoLeft; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "alignLogoRight", function() { return alignLogoRight; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "alignShapesToCenter", function() { return alignShapesToCenter; });
 /* harmony import */ var _settings__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./settings */ "./src/engine/settings.ts");
+/**
+ * This file should contains only the function that allign the shapes and their helpers
+ */
 
+/**
+ * This function will calculate the dimensions (width & height) based on their computed size (from `bbox()`) and settings for the shapes provided.
+ *
+ * @param shapes The default shapes: logo, title, slogan
+ */
 function calculateDimesionsForBaseShape(shapes) {
     const { logo, title, slogan } = shapes;
     // Calculate the dimensions for the shapes, including the settings
@@ -48647,11 +48799,25 @@ function calculateDimesionsForBaseShape(shapes) {
         sloganDim,
     };
 }
+/**
+ * This function will compare the size of the current viewbox of the parent to the provided width and height of the container.
+ *
+ * The function contains an internal parameter for calculating the size of container's margins.
+ *
+ * @param parent The Svg element that serves as parent
+ * @param containerWidth The width of the container, usually calculated by the allignment fuction
+ * @param containerHeight The height of the container, usually calculated by the allignment fuction
+ */
 function autoscallingBaseShapes(parent, containerWidth, containerHeight) {
     const marginSize = 0.2; // percentage
     const currentViewBox = parent.viewbox();
     parent.viewbox(0, 0, Math.max(currentViewBox.width * (1 + marginSize), containerWidth * (1 + marginSize)), Math.max(currentViewBox.height * (1 + marginSize), containerHeight * (1 + marginSize)));
 }
+/**
+ * This function will allgin the shapes based on Top Logo pattern from design
+ *
+ * @param shapes The shapes to be alligned
+ */
 function alignLogoTop(shapes) {
     const { logo, title, slogan } = shapes;
     const { logoDim, titleDim, sloganDim } = calculateDimesionsForBaseShape(shapes);
@@ -48670,6 +48836,11 @@ function alignLogoTop(shapes) {
         containerWidth,
     };
 }
+/**
+ * This function will allgin the shapes based on Left Logo pattern from design
+ *
+ * @param shapes The shapes to be alligned
+ */
 function alignLogoLeft(shapes) {
     const { logo, title, slogan } = shapes;
     const { logoDim, titleDim, sloganDim } = calculateDimesionsForBaseShape(shapes);
@@ -48700,6 +48871,11 @@ function alignLogoLeft(shapes) {
         containerWidth,
     };
 }
+/**
+ * This function will allgin the shapes based on Right Logo pattern from design
+ *
+ * @param shapes The shapes to be alligned
+ */
 function alignLogoRight(shapes) {
     const { logo, title, slogan } = shapes;
     const { logoDim, titleDim, sloganDim } = calculateDimesionsForBaseShape(shapes);
@@ -48728,6 +48904,15 @@ function alignLogoRight(shapes) {
         containerWidth,
     };
 }
+/**
+ * This function will allign the shapes to the center of the Svg parent.
+ *
+ * Use this after using an allign function.
+ *
+ * @param parent The Svg element that serves as parent
+ * @param shapes The saphes to be moved to the center of the container
+ * @param properties The output of the function that alligned the shapes
+ */
 function alignShapesToCenter(parent, shapes, properties) {
     const { logo, title, slogan } = shapes;
     const currentViewBox = parent.viewbox();
@@ -48752,7 +48937,16 @@ function alignShapesToCenter(parent, shapes, properties) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "buildDefaultShapes", function() { return buildDefaultShapes; });
 /* harmony import */ var _svgdotjs_svg_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @svgdotjs/svg.js */ "./node_modules/.pnpm/@svgdotjs/svg.js@3.0.16/node_modules/@svgdotjs/svg.js/dist/svg.esm.js");
+/**
+ * This file should contains only the function that create/build the shapes and their helpers.
+ */
 
+/**
+ * Create/Build the default shapes (logo, title, slogan) using the data/properties provided by the user interface
+ *
+ * @param parent The svg that will serve as a parent for the shapes
+ * @param componentsProps The propierties provided by the store of the user interface
+ */
 function buildDefaultShapes(parent, componentsProps) {
     const { logo: pLogo, title: pTitle, slogan: pSlogan } = componentsProps;
     // Create SVGs
@@ -48830,6 +49024,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var pullstate__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! pullstate */ "./node_modules/.pnpm/pullstate@1.20.3_react@17.0.1/node_modules/pullstate/dist/index.es.js");
 
 
+/**
+ * The store used for the user interface.
+ *
+ * It checks the session storage for preserving the options during the page refresh
+ */
 const UIStore = new pullstate__WEBPACK_IMPORTED_MODULE_1__["Store"](JSON.parse(sessionStorage.getItem("logo-maker-themeisle") || "null") || {
     container: {
         width: 765,
