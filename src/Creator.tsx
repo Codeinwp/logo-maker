@@ -20,12 +20,52 @@ import { downloadAsZipFromSVGviaLinkBlob } from "./engine/export"
 
 export type MenuOptions = "logo" | "typography" | "layout" | "colors"
 
+export type DownLoadLinkState = {
+    status: "loading" | "ready"
+    url: string
+}
+
+export type DownLoadLinkAction = {
+    type: "create" | "delete"
+    value?: string
+}
+
+function downloadLinkReducer(prevState: DownLoadLinkState, action: DownLoadLinkAction): DownLoadLinkState {
+    // console.log("Download Link")
+    switch (action.type) {
+        case "create":
+            URL.revokeObjectURL(prevState.url)
+            return {
+                status: "ready",
+                url: action.value || "#",
+            }
+        case "delete":
+            URL.revokeObjectURL(prevState.url)
+            return {
+                status: "loading",
+                url: "",
+            }
+        default:
+            console.log("Action is not registered")
+            return {
+                status: "loading",
+                url: "",
+            }
+    }
+}
+
 /**
  * This function will crate the main component for the Creator page
  */
 const Creator: React.FunctionComponent<unknown> = () => {
     const [menuOption, setMenuOption] = React.useState<MenuOptions>("logo")
-    const [downloadLink, setDownloadLink] = React.useState<string>("")
+    const [downloadLink, dispatchDownloadLink] = React.useReducer<React.Reducer<DownLoadLinkState, DownLoadLinkAction>>(
+        downloadLinkReducer,
+        {
+            status: "loading",
+            url: "",
+        }
+    )
     const store = UIStore.useState()
 
     /**
@@ -57,19 +97,14 @@ const Creator: React.FunctionComponent<unknown> = () => {
     React.useEffect(() => {
         async function createLink(): Promise<void> {
             const logoSVG = document.querySelector("#image-logo svg")?.cloneNode(true) as SVGElement
-            if (logoSVG) {
+            if (logoSVG && store) {
                 const link = await downloadAsZipFromSVGviaLinkBlob(logoSVG, ["png"], true)
-
-                // clean the old link
-                if (downloadLink) {
-                    URL.revokeObjectURL(downloadLink)
-                }
-
-                setDownloadLink(link)
+                dispatchDownloadLink({ type: "create", value: link })
             }
         }
+        dispatchDownloadLink({ type: "delete" })
         createLink()
-    }, [downloadLink])
+    }, [store])
 
     /**
      * Store the current options in the seesions manager to be keeped during the page refresh.
@@ -101,9 +136,7 @@ const Creator: React.FunctionComponent<unknown> = () => {
                                             console.log(window.innerHeight)
                                             window.scrollTo(
                                                 0,
-                                                document.querySelector<HTMLDivElement>(
-                                                    "#right-menu"
-                                                )?.offsetTop || 0
+                                                document.querySelector<HTMLDivElement>("#right-menu")?.offsetTop || 0
                                             )
                                         }
                                         setMenuOption("logo")
@@ -120,9 +153,7 @@ const Creator: React.FunctionComponent<unknown> = () => {
                                         if (window.innerHeight <= 812) {
                                             window.scrollTo(
                                                 0,
-                                                document.querySelector<HTMLDivElement>(
-                                                    "#right-menu"
-                                                )?.offsetTop || 0
+                                                document.querySelector<HTMLDivElement>("#right-menu")?.offsetTop || 0
                                             )
                                         }
                                         setMenuOption("typography")
@@ -139,9 +170,7 @@ const Creator: React.FunctionComponent<unknown> = () => {
                                         if (window.innerHeight <= 812) {
                                             window.scrollTo(
                                                 0,
-                                                document.querySelector<HTMLDivElement>(
-                                                    "#right-menu"
-                                                )?.offsetTop || 0
+                                                document.querySelector<HTMLDivElement>("#right-menu")?.offsetTop || 0
                                             )
                                         }
                                         setMenuOption("layout")
@@ -158,9 +187,7 @@ const Creator: React.FunctionComponent<unknown> = () => {
                                         if (window.innerHeight <= 812) {
                                             window.scrollTo(
                                                 0,
-                                                document.querySelector<HTMLDivElement>(
-                                                    "#right-menu"
-                                                )?.offsetTop || 0
+                                                document.querySelector<HTMLDivElement>("#right-menu")?.offsetTop || 0
                                             )
                                         }
                                         setMenuOption("colors")

@@ -2,25 +2,26 @@ import * as React from "react"
 import classnames from "classnames"
 
 import ReactGA from "react-ga"
+import { DownLoadLinkState } from "~/src/Creator"
 
 /**
  * This function will the render the `Download Button` from design.
- * 
+ *
  * @param props The CSS class and the download link of the `zip` file
  */
 const DownloadButton: React.FunctionComponent<{
     className?: string
-    downloadLink?: string
-}> = (props: { className?: string; downloadLink?: string }) => {
+    downloadLink?: DownLoadLinkState
+}> = (props: { className?: string; downloadLink?: DownLoadLinkState }) => {
     return (
         <div className={classnames("download-button", props?.className)}>
             <button
                 onClick={() => {
-                    if (props.downloadLink) {
+                    if (props.downloadLink?.status === "ready") {
                         const a = document.createElement("a")
 
                         a.style.display = "none"
-                        a.href = props.downloadLink
+                        a.href = props.downloadLink.url
                         a.download = "logo.zip"
 
                         document.body.appendChild(a)
@@ -35,7 +36,11 @@ const DownloadButton: React.FunctionComponent<{
                     }
                 }}
             >
-                <span>Download</span>
+                {props.downloadLink?.status === "ready" ? (
+                    <span>Download</span>
+                ) : (
+                    <div className="content-loader"></div>
+                )}
             </button>
         </div>
     )

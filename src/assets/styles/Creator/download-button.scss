@@ -17,6 +17,21 @@
 		&:focus {
 			outline: none;
 		}
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		.content-loader {
+			border: 3px solid #f3f3f3;
+			border-radius: 50%;
+			border-top: 3px solid #FF7F66;
+			border-bottom: 3px solid #FF7F66;
+			-webkit-animation: spin 2s linear infinite; /* Safari */
+			animation: spin 2s linear infinite;
+			padding: 15px;
+			margin-left: 12px;
+			margin-right: 12px;
+		}
 
 		span {
 			cursor: pointer;
