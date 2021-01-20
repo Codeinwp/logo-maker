@@ -27,6 +27,10 @@ const DownloadButton: React.FunctionComponent<{
                         document.body.appendChild(a)
                         a.click()
 
+                        // fetch(props.downloadLink.url)
+                        //     .then((res) => console.log(res))
+                        //     .catch((err) => console.log(err))
+
                         ReactGA.event({
                             category: "Logo Maker Creator",
                             action: "Click to download",

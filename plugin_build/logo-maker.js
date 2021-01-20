@@ -47888,6 +47888,9 @@ const DownloadButton = (props) => {
                     a.download = "logo.zip";
                     document.body.appendChild(a);
                     a.click();
+                    // fetch(props.downloadLink.url)
+                    //     .then((res) => console.log(res))
+                    //     .catch((err) => console.log(err))
                     react_ga__WEBPACK_IMPORTED_MODULE_2__["default"].event({
                         category: "Logo Maker Creator",
                         action: "Click to download",
