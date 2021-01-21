@@ -1,8 +1,7 @@
 import * as React from "react"
 import classnames from "classnames"
 
-import ReactGA from "react-ga"
-import { DownLoadLinkState } from "~/src/Creator"
+import { DownLoadLinkAction, DownLoadLinkState } from "./../../Creator"
 
 /**
  * This function will the render the `Download Button` from design.
@@ -12,38 +11,25 @@ import { DownLoadLinkState } from "~/src/Creator"
 const DownloadButton: React.FunctionComponent<{
     className?: string
     downloadLink?: DownLoadLinkState
-}> = (props: { className?: string; downloadLink?: DownLoadLinkState }) => {
+    dispatch: React.Dispatch<DownLoadLinkAction>
+}> = (props: {
+    className?: string
+    downloadLink?: DownLoadLinkState
+    dispatch?: React.Dispatch<DownLoadLinkAction>
+}) => {
     return (
         <div className={classnames("download-button", props?.className)}>
             <button
                 onClick={() => {
-                    if (props.downloadLink?.status === "ready") {
-                        const a = document.createElement("a")
-
-                        a.style.display = "none"
-                        a.href = props.downloadLink.url
-                        a.download = "logo.zip"
-
-                        document.body.appendChild(a)
-                        a.click()
-
-                        // fetch(props.downloadLink.url)
-                        //     .then((res) => console.log(res))
-                        //     .catch((err) => console.log(err))
-
-                        ReactGA.event({
-                            category: "Logo Maker Creator",
-                            action: "Click to download",
-                            label: "Download",
-                            value: 1,
-                        })
+                    if (props.downloadLink?.status !== "loading") {
+                        props.dispatch?.({ type: "create" })
                     }
                 }}
             >
-                {props.downloadLink?.status === "ready" ? (
-                    <span>Download</span>
-                ) : (
+                {props.downloadLink?.status === "loading" ? (
                     <div className="content-loader"></div>
+                ) : (
+                    <span>Download</span>
                 )}
             </button>
         </div>

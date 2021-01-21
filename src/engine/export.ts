@@ -1,4 +1,5 @@
 import JSZip from "jszip"
+import { DownLoadLinkAction } from "../Creator"
 
 /**
  * This function creates and URL for the `Blob` builded from the provided Svg
@@ -83,11 +84,7 @@ export async function addToZipFromSVG(
 
     // Add images to the zip file
     imgs.forEach((img) => {
-        zip?.file(
-            `${svg.getAttribute("name") || "logo"}.${img.ext}`,
-            getBase64String(img.dataURL),
-            { base64: true }
-        )
+        zip?.file(`${svg.getAttribute("name") || "logo"}.${img.ext}`, getBase64String(img.dataURL), { base64: true })
     })
 
     if (includeSVG) {
@@ -248,10 +245,7 @@ export async function createZipWithPresets(
     }
 
     if (includeSVG) {
-        zip?.file(
-            `${"logo-svg"}.svg`,
-            new Blob([svg.outerHTML], { type: "image/svg+xml;charset=utf-8" })
-        )
+        zip?.file(`${"logo-svg"}.svg`, new Blob([svg.outerHTML], { type: "image/svg+xml;charset=utf-8" }))
     }
 
     return zip
@@ -274,6 +268,29 @@ export async function downloadAsZipFromSVGviaLinkBlob(
     const blob = await zip.generateAsync({ type: "blob", mimeType: "application/zip" })
 
     return URL.createObjectURL(blob)
+}
+
+export async function createDownloadLinkPipeline(
+    dispatch: React.Dispatch<DownLoadLinkAction>,
+    svg: SVGElement
+): Promise<void> {
+    const link = await downloadAsZipFromSVGviaLinkBlob(svg, ["png"], true)
+    dispatch({ type: "publish", value: link })
+}
+
+export function downloadZip(downloadLink: string): void {
+    const a = document.createElement("a")
+
+    a.style.display = "none"
+    a.href = downloadLink
+    a.download = "logo.zip"
+
+    document.body.appendChild(a)
+    a.click()
+
+    // fetch(props.downloadLink.url)
+    //     .then((res) => console.log(res))
+    //     .catch((err) => console.log(err))
 }
 
 // Legacy & For reference

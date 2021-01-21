@@ -16,19 +16,16 @@ import "../src/assets/styles/Creator/creator.scss"
 
 import UIStore from "./stores/UIStore"
 import ReactGA from "react-ga"
-import { downloadAsZipFromSVGviaLinkBlob } from "./engine/export"
+import { downloadAsZipFromSVGviaLinkBlob, downloadZip } from "./engine/export"
 
 export type MenuOptions = "logo" | "typography" | "layout" | "colors"
 
 export type DownLoadLinkState = {
-    status: "loading" | "ready"
+    status: "loading" | "ready" | "idle"
     url: string
 }
 
-export type DownLoadLinkAction = {
-    type: "create" | "delete"
-    value?: string
-}
+export type DownLoadLinkAction = { type: "create" } | { type: "delete" } | { type: "publish"; value: string }
 
 function downloadLinkReducer(prevState: DownLoadLinkState, action: DownLoadLinkAction): DownLoadLinkState {
     // console.log("Download Link")
@@ -36,19 +33,31 @@ function downloadLinkReducer(prevState: DownLoadLinkState, action: DownLoadLinkA
         case "create":
             URL.revokeObjectURL(prevState.url)
             return {
-                status: "ready",
-                url: action.value || "#",
+                status: "loading",
+                url: "",
             }
         case "delete":
             URL.revokeObjectURL(prevState.url)
             return {
-                status: "loading",
+                status: "idle",
                 url: "",
+            }
+        case "publish":
+            downloadZip(action.value)
+            ReactGA.event({
+                category: "Logo Maker Creator",
+                action: "Click to download",
+                label: "Download",
+                value: 1,
+            })
+            return {
+                status: "ready",
+                url: action.value,
             }
         default:
             console.log("Action is not registered")
             return {
-                status: "loading",
+                status: "idle",
                 url: "",
             }
     }
@@ -62,7 +71,7 @@ const Creator: React.FunctionComponent<unknown> = () => {
     const [downloadLink, dispatchDownloadLink] = React.useReducer<React.Reducer<DownLoadLinkState, DownLoadLinkAction>>(
         downloadLinkReducer,
         {
-            status: "loading",
+            status: "idle",
             url: "",
         }
     )
@@ -97,14 +106,20 @@ const Creator: React.FunctionComponent<unknown> = () => {
     React.useEffect(() => {
         async function createLink(): Promise<void> {
             const logoSVG = document.querySelector("#image-logo svg")?.cloneNode(true) as SVGElement
-            if (logoSVG && store) {
+            if (logoSVG) {
                 const link = await downloadAsZipFromSVGviaLinkBlob(logoSVG, ["png"], true)
-                dispatchDownloadLink({ type: "create", value: link })
+                dispatchDownloadLink({ type: "publish", value: link })
             }
         }
-        dispatchDownloadLink({ type: "delete" })
-        createLink()
-    }, [store])
+
+        switch (downloadLink.status) {
+            case "loading":
+                createLink()
+                break
+            default:
+                break
+        }
+    }, [downloadLink.status])
 
     /**
      * Store the current options in the seesions manager to be keeped during the page refresh.
@@ -119,7 +134,7 @@ const Creator: React.FunctionComponent<unknown> = () => {
                 <BackUI to="/showcase" />
                 <ThemeisleUI />
                 <div className="download-section">
-                    <DownloadButton downloadLink={downloadLink} />
+                    <DownloadButton downloadLink={downloadLink} dispatch={dispatchDownloadLink} />
                 </div>
             </div>
             <div className="main-section">
