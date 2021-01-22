@@ -1,0 +1,20 @@
+name: Deploy on staging
+
+on:
+    push:
+        branches: [main]
+
+jobs:
+    echo:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout source code
+              uses: actions/checkout@v2
+            - name: Add NodeJs
+              uses: actions/setup-node@v1
+              with:
+                  node-version: "12"
+            - name: Install pmpm
+              run: npm add -g pnpm
+            - run: pnpm install
+            - run: npm run plugin-build
