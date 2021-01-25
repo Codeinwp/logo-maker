@@ -1,0 +1,24 @@
+name: Deploy on staging
+
+on:
+    pull_request:
+        branches: [main]
+
+jobs:
+    deploy:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout source code
+              uses: actions/checkout@v2
+            - name: Add NodeJs
+              uses: actions/setup-node@v1
+              with:
+                  node-version: "12"
+            - name: Install pmpm & node_module
+              run: |
+                  npm add -g pnpm
+                  pnpm install
+            - name: EsLint for Typescript
+              run: npm run lint
+            - name: Build the project
+              run: npm run plugin-build
