@@ -23,7 +23,7 @@ jobs:
             - name: Install pmpm
               run: npm add -g pnpm
             - name: Build the project
-            - run: |
+              run: |
                   pnpm install
                   npm run plugin-build
             - name: Add SSH Key
