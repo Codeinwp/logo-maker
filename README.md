@@ -50,11 +50,11 @@ yarn install
 
 ## Npm Commmands
 
-`npm run start` - start the development server using Snowpack - it's fast and run separatly from WordPress - use it for prototyping and quick testing
+`npm run start` - start the development server using Snowpack - it's fast and run separatly from WordPress - use it for development
 
 `npm run start-plugin` - start the development server in WordPress using Webpack - the project must be in `plugin` folder and activated - use it for testing the app as block in WordPress
 
-`npm run plugin-build` - created an optimased version for the app as a WordPress block
+`npm run plugin-build` - created an optimised version for the app as a WordPress block
 
 `npm run linux:make-zip` - this will start the `plugin-build` and pack it in a zip file in `./development` folder - use the zip to install the plugin on stagging site for testing - this will work on system that supports linux environment and command - **must run `./delopment/linux_setup.sh` for installing the zip command**
 
