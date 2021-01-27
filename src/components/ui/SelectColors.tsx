@@ -31,16 +31,12 @@ const SelectColor: React.FunctionComponent<unknown> = () => {
     })
 
     /**
-     * This function will handle inputs by updating the internal & user interface store values. 
-     * 
+     * This function will handle inputs by updating the internal & user interface store values.
+     *
      * @param option The owner of the color
      * @param value The value of the color
      */
-    const onInputChangeFor = (
-        option: "background" | "logo" | "title" | "slogan",
-        value: string
-    ) => {
-
+    const onInputChangeFor = (option: "background" | "logo" | "title" | "slogan", value: string) => {
         // send the values to the user interface
         switch (option) {
             case "background":
@@ -115,8 +111,8 @@ const SelectColor: React.FunctionComponent<unknown> = () => {
     }
 
     /**
-     * This will show/hide the color picker of the element 
-     * 
+     * This will show/hide the color picker of the element
+     *
      * @param option The element bound to the toggle
      */
     const toggleColorEditorFor = (option: "background" | "logo" | "title" | "slogan") => {
@@ -162,6 +158,7 @@ const SelectColor: React.FunctionComponent<unknown> = () => {
                         onClick={() => toggleColorEditorFor("background")}
                     />
                     <input
+                        id="input-color-background"
                         value={inputValues.background}
                         onChange={(e) => onInputChangeFor("background", e.target.value)}
                     />
@@ -187,6 +184,7 @@ const SelectColor: React.FunctionComponent<unknown> = () => {
                         onClick={() => toggleColorEditorFor("logo")}
                     />
                     <input
+                        id="input-color-logo"
                         value={inputValues.logo}
                         onChange={(e) => onInputChangeFor("logo", e.target.value)}
                     />
@@ -213,6 +211,7 @@ const SelectColor: React.FunctionComponent<unknown> = () => {
                         onClick={() => toggleColorEditorFor("title")}
                     />
                     <input
+                        id="input-color-title"
                         value={inputValues.title}
                         placeholder="Add a color in HEX format."
                         onChange={(e) => onInputChangeFor("title", e.target.value)}
@@ -239,6 +238,7 @@ const SelectColor: React.FunctionComponent<unknown> = () => {
                         onClick={() => toggleColorEditorFor("slogan")}
                     />
                     <input
+                        id="input-color-slogan"
                         value={inputValues.slogan}
                         onChange={(e) => onInputChangeFor("slogan", e.target.value)}
                     />

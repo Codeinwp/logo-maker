@@ -143,10 +143,8 @@ const Creator: React.FunctionComponent<unknown> = () => {
                         <div className="options">
                             <div className="option">
                                 <a
+                                    id="btn-select-logo"
                                     onClick={() => {
-                                        // document
-                                        //     .querySelector<HTMLDivElement>("#right-menu")
-                                        //     ?.scrollTo()
                                         if (window.innerHeight <= 812) {
                                             console.log(window.innerHeight)
                                             window.scrollTo(
@@ -164,6 +162,7 @@ const Creator: React.FunctionComponent<unknown> = () => {
                             </div>
                             <div className="option">
                                 <a
+                                    id="btn-select-typography"
                                     onClick={() => {
                                         if (window.innerHeight <= 812) {
                                             window.scrollTo(
@@ -181,6 +180,7 @@ const Creator: React.FunctionComponent<unknown> = () => {
                             </div>
                             <div className="option">
                                 <a
+                                    id="btn-select-layout"
                                     onClick={() => {
                                         if (window.innerHeight <= 812) {
                                             window.scrollTo(
@@ -198,6 +198,7 @@ const Creator: React.FunctionComponent<unknown> = () => {
                             </div>
                             <div className="option">
                                 <a
+                                    id="btn-select-colors"
                                     onClick={() => {
                                         if (window.innerHeight <= 812) {
                                             window.scrollTo(

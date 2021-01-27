@@ -95,6 +95,7 @@ const SelectTypography: React.FunctionComponent<unknown> = () => {
                 <h1>LOGO</h1>
                 <label htmlFor="select-title-text">Text</label>
                 <input
+                    id="input-typography-text"
                     value={UIStore.useState((s) => s.title.text)}
                     onChange={(e) => onTitleTextChange(e.target.value)}
                 />
@@ -103,9 +104,7 @@ const SelectTypography: React.FunctionComponent<unknown> = () => {
                     id="select-title-font-family"
                     className="font-select"
                     isSearchable={false}
-                    defaultValue={
-                        fontOptions.filter(({ value }) => value === defaultTitleFontFamily)[0]
-                    }
+                    defaultValue={fontOptions.filter(({ value }) => value === defaultTitleFontFamily)[0]}
                     onChange={onTitleFontFamilyChange}
                     options={fontOptions}
                     styles={disableBoxShadow}
@@ -115,9 +114,7 @@ const SelectTypography: React.FunctionComponent<unknown> = () => {
                     id="select-title-font-size"
                     className="font-select"
                     isSearchable={false}
-                    defaultValue={titleSizeOptions.filter(
-                        ({ value }) => value === defaultTitleFontSize
-                    )}
+                    defaultValue={titleSizeOptions.filter(({ value }) => value === defaultTitleFontSize)}
                     options={titleSizeOptions}
                     onChange={onTitleFontSizeChange}
                     styles={disableBoxShadow}
@@ -127,6 +124,7 @@ const SelectTypography: React.FunctionComponent<unknown> = () => {
                 <h1>SLOGAN (Optional)</h1>
                 <label htmlFor="select-slogan-text">Text</label>
                 <input
+                    id="input-typography-slogan"
                     value={UIStore.useState((s) => s.slogan.text)}
                     onChange={(e) => onSloganTextChange(e.target.value)}
                 />
@@ -135,9 +133,7 @@ const SelectTypography: React.FunctionComponent<unknown> = () => {
                     id="select-slogan-font-family"
                     className="font-select"
                     isSearchable={false}
-                    defaultValue={fontOptions.filter(
-                        ({ value }) => value === defaultSloganFontFamily
-                    )}
+                    defaultValue={fontOptions.filter(({ value }) => value === defaultSloganFontFamily)}
                     onChange={onSloganFontFamilyChange}
                     options={fontOptions}
                     styles={disableBoxShadow}
@@ -147,9 +143,7 @@ const SelectTypography: React.FunctionComponent<unknown> = () => {
                     id="select-slogan-font-size"
                     className="font-select"
                     isSearchable={false}
-                    defaultValue={sloganSizeOptions.filter(
-                        ({ value }) => value === defaultSloganFontSize
-                    )}
+                    defaultValue={sloganSizeOptions.filter(({ value }) => value === defaultSloganFontSize)}
                     options={sloganSizeOptions}
                     onChange={onSloganFontSizeChange}
                     styles={disableBoxShadow}

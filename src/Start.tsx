@@ -13,12 +13,11 @@ import ReactGA from "react-ga"
 
 /**
  * This is the main component for the Start page
- * 
+ *
  * It use the global object `window.logomaker.parentLink` as link for the `Back` button
  */
 
 const Start: React.FunctionComponent<unknown> = () => {
-
     const setTitleText = (value: string) => {
         UIStore.update((s) => {
             s.title.text = value
@@ -83,14 +82,14 @@ const Start: React.FunctionComponent<unknown> = () => {
                     <label>Logo Text</label>
                     <input
                         type="text"
-                        id="logo-text-input"
+                        id="input-logo-text"
                         value={UIStore.useState((s) => s.title.text)}
                         onChange={(e) => setTitleText(e.target.value)}
                     />
                     <label>Slogan text (Optional)</label>
                     <input
                         type="text"
-                        id="slogan-text-input"
+                        id="input-logo-slogan"
                         value={UIStore.useState((s) => s.slogan.text)}
                         onChange={(e) => setSloganText(e.target.value)}
                     />
