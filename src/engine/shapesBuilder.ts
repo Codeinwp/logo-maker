@@ -1,15 +1,22 @@
 /**
  * This file should contains only the function that create/build the shapes and their helpers.
+ *
+ * There two kins of shapes: essential and extra.
+ *
+ * The esstial shapes form the base - which is a foundation of the final logo, so almost every generated logo will contains the shapes from the base
+ * The extras form the extended - those shapes appaer only in some pattters
+ *
  */
-
 
 import { SVG, Svg, Text } from "@svgdotjs/svg.js"
 import { LogoProps } from "./alignFunctions"
 
 /**
  * Base interface for creating/building shapes
- * 
- * Extend this inferface when adding functions to build more diverse shapes
+ *
+ * Extend this inferface when adding essential shapes. Essential shapes are the shapes that appears on every logo.
+ * If you want to make a customizer for the logo to add shapes like stars, circles, and they appaers only on some patters;
+ * use `extendBaseShapes` function to add an extra property where you can store them, like 'extras'.
  */
 export interface BaseShapheBuilder {
     /**
@@ -23,14 +30,31 @@ export interface BaseShapheBuilder {
     title: Text
 
     /**
-    * The slogan Text-SVG object
-    */
+     * The slogan Text-SVG object
+     */
     slogan: Text
 }
 
 /**
+ * Additional shapes used in the exteneded version of the base
+ */
+export type ExtraShape = {
+    /** It is used for identification */
+    kind: string
+    /** The svg that is going to be added to the final logo */
+    svg: Svg
+}
+
+/**
+ * The interface for the extend version of a base where you can store additional shapes that are used in some patters
+ */
+export interface ExtendedShapeBuilder extends BaseShapheBuilder {
+    extras: ExtraShape[]
+}
+
+/**
  * Create/Build the default shapes (logo, title, slogan) using the data/properties provided by the user interface
- * 
+ *
  * @param parent The svg that will serve as a parent for the shapes
  * @param componentsProps The propierties provided by the store of the user interface
  */
@@ -73,5 +97,16 @@ export function buildDefaultShapes(parent: Svg, componentsProps: LogoProps): Bas
         logo,
         title,
         slogan,
+    }
+}
+/**
+ * Use this function to extend a base for adding additional Svgs on the logo.
+ *
+ * @param base An object that containts the esentials Svgs, like: logo, title, slogan. Also suport derivate from it.
+ */
+export function extendBaseShapes<S extends BaseShapheBuilder>(base: S): ExtendedShapeBuilder {
+    return {
+        ...base,
+        extras: [],
     }
 }
