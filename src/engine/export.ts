@@ -1,5 +1,6 @@
 import JSZip from "jszip"
 import { DownLoadLinkAction } from "../Creator"
+import { PipelineOptions } from "./pipeline"
 
 /**
  * This function creates and URL for the `Blob` builded from the provided Svg
@@ -24,6 +25,8 @@ export function generateCanvasFromSVG(svg: SVGElement): Promise<HTMLCanvasElemen
         const context = canvas.getContext("2d")
         const width = Number(svg.getAttribute("width")) || 765
         const height = Number(svg.getAttribute("height")) || 625
+        let safariWasUsed = false
+        
 
         // const {width, height} = svg.getBoundingClientRect() - not working
 
@@ -42,7 +45,10 @@ export function generateCanvasFromSVG(svg: SVGElement): Promise<HTMLCanvasElemen
             console.log("Image not found", ev)
 
             // This will work even in Safari for Mac & iOS
-            img.src = "data:image/svg+xml," + svg.outerHTML
+            if (! safariWasUsed) {
+                img.src = "data:image/svg+xml," + svg.outerHTML
+                safariWasUsed = true
+            }
         }
 
         img.src = exportAsSVGfromDOMviaLink(svg)
@@ -101,7 +107,7 @@ export async function addToZipFromSVG(
 /**
  * Definition of a file structure from the zip file
  */
-type FileFormat = { name: string; width: number; height: number; isTransparent?: boolean }
+type FileFormat = { name: string; width: number; height: number; isTransparent?: boolean; pipeline?: PipelineOptions}
 /**
  * Definition of the folder strucure from the zip file
  */
@@ -265,6 +271,14 @@ const folderStructure: Folder = {
             name: "favicon_32x32",
             width: 32,
             height: 32,
+            pipeline: "favicon"
+        },
+        {
+            name: "favicon_transparent_32x32",
+            width: 32,
+            height: 32,
+            isTransparent: true,
+            pipeline: "favicon"
         },
         {
             name: "wallpaper_1920x1080",
@@ -274,28 +288,10 @@ const folderStructure: Folder = {
     ]
 }
 
-/**
- * This functions will create variants of proviede Svg based on the internal presets.
- *
- * @param svg The svg that is going to be exported
- */
-// export function createSVGsWithPreset(svg: SVGElement): SVGElement[] {
-//     return presetsFormat.map((preset) => {
-//         const _svg = svg.cloneNode(true) as SVGElement
-//         _svg.removeAttribute("width")
-//         _svg.removeAttribute("height")
-
-//         _svg.setAttribute("height", preset.height.toString())
-//         _svg.setAttribute("width", preset.width.toString())
-//         _svg.setAttribute("name", preset.name)
-
-//         if (preset.isTransparent) {
-//             _svg.style.backgroundColor = "transparent"
-//         }
-
-//         return _svg
-//     })
-// }
+export type InputSVG = {
+    svg: SVGElement,
+    pipeline: PipelineOptions
+}
 
 /**
  * This function will create a `zip` file that will include all the images generated from the folder structure with the provided Svg and extensions
@@ -305,7 +301,7 @@ const folderStructure: Folder = {
  * @param includeSVG Add the svg element to the zip file
  */
 export async function createZipWithPresets(
-    svg: SVGElement,
+    input: InputSVG[],
     extensions: ("png" | "jpg" | "webp")[],
     includeSVG?: boolean
 ): Promise<JSZip> {
@@ -318,6 +314,12 @@ export async function createZipWithPresets(
      * @param file The data necessary for generating the image
      */
     const createFile = async(zip: JSZip, file: FileFormat): Promise<JSZip> => {
+        const svg = (input.find( ({ pipeline }) => pipeline === file.pipeline ) || input.find( ({ pipeline }) => pipeline === "editor" ))?.svg
+
+        if( ! svg ) {
+            return zip
+        }
+
         const _svg = svg.cloneNode(true) as SVGElement
         _svg.removeAttribute("width")
         _svg.removeAttribute("height")
@@ -373,7 +375,9 @@ export async function createZipWithPresets(
     await createFolder(zipRoot, folderStructure)
 
     if (includeSVG) {
-        zipRoot?.file(`${"logo-svg"}.svg`, new Blob([svg.outerHTML], { type: "image/svg+xml;charset=utf-8" }))
+        input.forEach( ({ svg, pipeline }) => {
+            zipRoot?.file(`logo-${pipeline}.svg`, new Blob([svg.outerHTML], { type: "image/svg+xml;charset=utf-8" }))
+        } )
     }
 
     return zipRoot
@@ -387,11 +391,11 @@ export async function createZipWithPresets(
  * @param includeSVG Add the svg element to the zip file
  */
 export async function downloadAsZipFromSVGviaLinkBlob(
-    svg: SVGElement,
+    input: InputSVG[],
     extensions: ("png" | "jpg" | "webp")[],
     includeSVG?: boolean
 ): Promise<string> {
-    const zip = await createZipWithPresets(svg, extensions, includeSVG)
+    const zip = await createZipWithPresets(input, extensions, includeSVG)
 
     const blob = await zip.generateAsync({ type: "blob", mimeType: "application/zip" })
 
@@ -400,9 +404,9 @@ export async function downloadAsZipFromSVGviaLinkBlob(
 
 export async function createDownloadLinkPipeline(
     dispatch: React.Dispatch<DownLoadLinkAction>,
-    svg: SVGElement
+    input: InputSVG[]
 ): Promise<void> {
-    const link = await downloadAsZipFromSVGviaLinkBlob(svg, ["png"], true)
+    const link = await downloadAsZipFromSVGviaLinkBlob(input, ["png"], true)
     dispatch({ type: "publish", value: link })
 }
 
@@ -423,6 +427,28 @@ export function downloadZip(downloadLink: string): void {
 
 // Legacy & For reference
 
+/**
+ * This functions will create variants of proviede Svg based on the internal presets.
+ *
+ * @param svg The svg that is going to be exported
+ */
+// export function createSVGsWithPreset(svg: SVGElement): SVGElement[] {
+//     return presetsFormat.map((preset) => {
+//         const _svg = svg.cloneNode(true) as SVGElement
+//         _svg.removeAttribute("width")
+//         _svg.removeAttribute("height")
+
+//         _svg.setAttribute("height", preset.height.toString())
+//         _svg.setAttribute("width", preset.width.toString())
+//         _svg.setAttribute("name", preset.name)
+
+//         if (preset.isTransparent) {
+//             _svg.style.backgroundColor = "transparent"
+//         }
+
+//         return _svg
+//     })
+// }
 // export async function exportAsZipFromSVGviaLink(
 //     svg: SVGElement,
 //     formats: ("png" | "jpg" | "webp")[],

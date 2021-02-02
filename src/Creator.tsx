@@ -17,6 +17,7 @@ import "../src/assets/styles/Creator/creator.scss"
 import UIStore from "./stores/UIStore"
 import ReactGA from "react-ga"
 import { downloadAsZipFromSVGviaLinkBlob, downloadZip } from "./engine/export"
+import { buildPipelines } from "./engine/pipeline"
 
 export type MenuOptions = "logo" | "typography" | "layout" | "colors"
 
@@ -108,8 +109,14 @@ const Creator: React.FunctionComponent<unknown> = () => {
     React.useEffect(() => {
         async function createLink(): Promise<void> {
             const logoSVG = document.querySelector("#image-logo svg")?.cloneNode(true) as SVGElement
+            const favIconRef = document.querySelector("#rendering") as HTMLDivElement
+
+            buildPipelines(store).createFavicon(favIconRef)
+            const favIconSVG = document.querySelector("#rendering svg")?.cloneNode(true) as SVGElement
+            favIconRef.innerHTML = ''
+
             if (logoSVG) {
-                const link = await downloadAsZipFromSVGviaLinkBlob(logoSVG, ["png"], true)
+                const link = await downloadAsZipFromSVGviaLinkBlob([{ pipeline: "editor", svg: logoSVG}, { pipeline: "favicon", svg: favIconSVG}], ["png"], true)
                 dispatchDownloadLink({ type: "publish", value: link })
             }
         }
@@ -121,7 +128,7 @@ const Creator: React.FunctionComponent<unknown> = () => {
             default:
                 break
         }
-    }, [downloadLink.status])
+    }, [downloadLink.status, store])
 
     /**
      * Store the current options in the seesions manager to be keeped during the page refresh.
@@ -225,6 +232,9 @@ const Creator: React.FunctionComponent<unknown> = () => {
                         {renderRightSidePanel()}
                     </div>
                 </div>
+            </div>
+            <div id="rendering" className="rendering-section favicon">
+
             </div>
         </div>
     )
