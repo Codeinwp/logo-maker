@@ -97,134 +97,205 @@ export async function addToZipFromSVG(
     return zip
 }
 
-const presetsFormat: { name: string; width: number; height: number; isTransparent?: boolean }[] = [
-    {
-        name: "default_765x625",
-        width: 765,
-        height: 625,
-    },
-    {
-        name: "default_transparent_765x625",
-        width: 765,
-        height: 625,
-        isTransparent: true,
-    },
-    {
-        name: "default_transparent_1000x1000",
-        width: 1000,
-        height: 1000,
-        isTransparent: true,
-    },
-    {
-        name: "wordpress_logo_512x512",
-        width: 512,
-        height: 512,
-    },
-    {
-        name: "wordpress_logo_transparent_512x512",
-        width: 512,
-        height: 512,
-        isTransparent: true,
-    },
-    {
-        name: "facebook_profile_1000x1000",
-        width: 1000,
-        height: 1000,
-    },
-    {
-        name: "facebook_cover_1640x624",
-        width: 1640,
-        height: 624,
-    },
-    {
-        name: "twitter_profile_1000x1000",
-        width: 1000,
-        height: 1000,
-    },
-    {
-        name: "twitter_header_1500x500",
-        width: 1500,
-        height: 500,
-    },
-    {
-        name: "favicon_32x32",
-        width: 32,
-        height: 32,
-    },
-    {
-        name: "instagram_portrait_1080x1350",
-        width: 1080,
-        height: 1350,
-    },
-    {
-        name: "instagram_photo_1080x1080",
-        width: 1080,
-        height: 1080,
-    },
-    {
-        name: "instagram_landscape_1080x608",
-        width: 1080,
-        height: 608,
-    },
-    {
-        name: "instagram_stories_1080x1920",
-        width: 1080,
-        height: 1920,
-    },
-    {
-        name: "linkedin_profile_1000x1000",
-        width: 1000,
-        height: 1000,
-    },
-    {
-        name: "linkedin_banner_1536x768",
-        width: 1536,
-        height: 768,
-    },
-    {
-        name: "youtube_profile_800x800",
-        width: 800,
-        height: 800,
-    },
-    {
-        name: "pinterest_profile_330x330",
-        width: 330,
-        height: 330,
-    },
-    {
-        name: "pinterest_board_800x800",
-        width: 800,
-        height: 800,
-    },
-    {
-        name: "wallpaper_1920x1080",
-        width: 1920,
-        height: 1080,
-    },
-]
+
+/**
+ * Definition of a file structure from the zip file
+ */
+type FileFormat = { name: string; width: number; height: number; isTransparent?: boolean }
+/**
+ * Definition of the folder strucure from the zip file
+ */
+type Folder = {
+    name: string
+    children: (Folder | FileFormat)[]
+}
+
+const folderStructure: Folder = {
+    name: 'LogoMakerByThemeisle',
+    children: [
+        {
+            name: 'WordPress',
+            children: [
+                {
+                    name: "wordpress_logo_512x512",
+                    width: 512,
+                    height: 512,
+                },
+                {
+                    name: "wordpress_logo_transparent_512x512",
+                    width: 512,
+                    height: 512,
+                    isTransparent: true,
+                },
+            ]
+        },
+        {
+            name: 'Facebook',
+            children: [
+                {
+                    name: "facebook_profile_1000x1000",
+                    width: 1000,
+                    height: 1000,
+                },
+                {
+                    name: "facebook_cover_1640x624",
+                    width: 1640,
+                    height: 624,
+                },
+                {
+                    name: "facebook_image_post_1200x630",
+                    width: 1200,
+                    height: 630,
+                },
+                {
+                    name: "facebook_ad_1200x628",
+                    width: 1200,
+                    height: 624,
+                },
+                {
+                    name: "facebook_story_1080x1920",
+                    width: 1080,
+                    height: 1920,
+                },
+            ]
+        },
+        {
+            name: 'Instagram',
+            children: [
+                {
+                    name: "instagram_portrait_1080x1350",
+                    width: 1080,
+                    height: 1350,
+                },
+                {
+                    name: "instagram_photo_1080x1080",
+                    width: 1080,
+                    height: 1080,
+                },
+                {
+                    name: "instagram_landscape_1080x608",
+                    width: 1080,
+                    height: 608,
+                },
+                {
+                    name: "instagram_stories_1080x1920",
+                    width: 1080,
+                    height: 1920,
+                },
+            ]
+        },
+        {
+            name: 'Linkedin',
+            children: [
+                {
+                    name: "linkedin_profile_1000x1000",
+                    width: 1000,
+                    height: 1000,
+                },
+                {
+                    name: "linkedin_banner_1536x768",
+                    width: 1536,
+                    height: 768,
+                },
+            ]
+        },
+        {
+            name: 'GoogleApps',
+            children: [
+                {
+                    name: "youtube_profile_800x800",
+                    width: 800,
+                    height: 800,
+                },
+                {
+                    name: "gmail_profile_400x400",
+                    width: 400,
+                    height: 400
+                }
+            ]
+        },
+        {
+            name: 'Twitter',
+            children: [
+                {
+                    name: "twitter_profile_1000x1000",
+                    width: 1000,
+                    height: 1000,
+                },
+                {
+                    name: "twitter_header_1500x500",
+                    width: 1500,
+                    height: 500,
+                },
+            ]
+        },
+        {
+            name: 'Pinterest',
+            children: [
+                {
+                    name: "pinterest_profile_330x330",
+                    width: 330,
+                    height: 330,
+                },
+                {
+                    name: "pinterest_board_800x800",
+                    width: 800,
+                    height: 800,
+                },
+            ]
+        },
+        {
+            name: "default_765x625",
+            width: 765,
+            height: 625,
+        },
+        {
+            name: "default_transparent_765x625",
+            width: 765,
+            height: 625,
+            isTransparent: true,
+        },
+        {
+            name: "default_transparent_1000x1000",
+            width: 1000,
+            height: 1000,
+            isTransparent: true,
+        },
+        {
+            name: "favicon_32x32",
+            width: 32,
+            height: 32,
+        },
+        {
+            name: "wallpaper_1920x1080",
+            width: 1920,
+            height: 1080,
+        },
+    ]
+}
 
 /**
  * This functions will create variants of proviede Svg based on the internal presets.
  *
  * @param svg The svg that is going to be exported
  */
-export function createSVGsWithPreset(svg: SVGElement): SVGElement[] {
-    return presetsFormat.map((preset) => {
-        const _svg = svg.cloneNode(true) as SVGElement
-        _svg.removeAttribute("width")
-        _svg.removeAttribute("height")
+// export function createSVGsWithPreset(svg: SVGElement): SVGElement[] {
+//     return presetsFormat.map((preset) => {
+//         const _svg = svg.cloneNode(true) as SVGElement
+//         _svg.removeAttribute("width")
+//         _svg.removeAttribute("height")
 
-        _svg.setAttribute("height", preset.height.toString())
-        _svg.setAttribute("width", preset.width.toString())
-        _svg.setAttribute("name", preset.name)
+//         _svg.setAttribute("height", preset.height.toString())
+//         _svg.setAttribute("width", preset.width.toString())
+//         _svg.setAttribute("name", preset.name)
 
-        if (preset.isTransparent) {
-            _svg.style.backgroundColor = "transparent"
-        }
+//         if (preset.isTransparent) {
+//             _svg.style.backgroundColor = "transparent"
+//         }
 
-        return _svg
-    })
-}
+//         return _svg
+//     })
+// }
 
 /**
  * This function will create a `zip` file that will include all the images generated from pressets with the provided Svg and extensions
@@ -238,17 +309,60 @@ export async function createZipWithPresets(
     extensions: ("png" | "jpg" | "webp")[],
     includeSVG?: boolean
 ): Promise<JSZip> {
-    let zip = new JSZip()
+    const zipRoot = new JSZip()
 
-    for (const _svg of createSVGsWithPreset(svg)) {
+    const createFile = async(zip: JSZip, file: FileFormat): Promise<JSZip> => {
+        const _svg = svg.cloneNode(true) as SVGElement
+        _svg.removeAttribute("width")
+        _svg.removeAttribute("height")
+
+        _svg.setAttribute("height", file.height.toString())
+        _svg.setAttribute("width", file.width.toString())
+        _svg.setAttribute("name", file.name)
+
+        if (file.isTransparent) {
+            _svg.style.backgroundColor = "transparent"
+        }
+
         zip = await addToZipFromSVG(_svg, zip, extensions, false)
+
+        return zip
     }
+    
+    const createFolder = async(zip: JSZip, folder: Folder): Promise<void> => {
+        const zipWithFolder = zip.folder(folder.name)
+
+        if ( ! zipWithFolder ) {
+            console.warn('Cannot create folder with name: ' + folder.name)
+           return
+        }
+
+        // Build in sequence
+        // for( const fileOrFolder of folder.children) {
+        //     if ('width' in fileOrFolder && 'height' in fileOrFolder) {
+        //         await createFile(zipWithFolder, fileOrFolder)
+        //     } else {
+        //         await createFolder(zipWithFolder, fileOrFolder)
+        //     }
+        // }
+
+        // Build in parallel
+        await Promise.all(folder.children.map( async(fileOrFolder) => {
+            if ('width' in fileOrFolder && 'height' in fileOrFolder) {
+                await createFile(zipWithFolder, fileOrFolder)
+            } else {
+                createFolder(zipWithFolder, fileOrFolder)
+            }
+        }))
+    }
+
+    await createFolder(zipRoot, folderStructure)
 
     if (includeSVG) {
-        zip?.file(`${"logo-svg"}.svg`, new Blob([svg.outerHTML], { type: "image/svg+xml;charset=utf-8" }))
+        zipRoot?.file(`${"logo-svg"}.svg`, new Blob([svg.outerHTML], { type: "image/svg+xml;charset=utf-8" }))
     }
 
-    return zip
+    return zipRoot
 }
 
 /**

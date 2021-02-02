@@ -32,6 +32,7 @@ function downloadLinkReducer(prevState: DownLoadLinkState, action: DownLoadLinkA
     switch (action.type) {
         case "create":
             URL.revokeObjectURL(prevState.url)
+            console.time('build-time')
             return {
                 status: "loading",
                 url: "",
@@ -43,6 +44,7 @@ function downloadLinkReducer(prevState: DownLoadLinkState, action: DownLoadLinkA
                 url: "",
             }
         case "publish":
+            console.timeEnd('build-time')
             downloadZip(action.value)
             ReactGA.event({
                 category: "Logo Maker Creator",
