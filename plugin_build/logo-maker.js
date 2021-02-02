@@ -45225,6 +45225,7 @@ function downloadLinkReducer(prevState, action) {
     switch (action.type) {
         case "create":
             URL.revokeObjectURL(prevState.url);
+            console.time('build-time');
             return {
                 status: "loading",
                 url: "",
@@ -45236,6 +45237,7 @@ function downloadLinkReducer(prevState, action) {
                 url: "",
             };
         case "publish":
+            console.timeEnd('build-time');
             Object(_engine_export__WEBPACK_IMPORTED_MODULE_17__["downloadZip"])(action.value);
             react_ga__WEBPACK_IMPORTED_MODULE_16__["default"].event({
                 category: "Logo Maker Creator",
@@ -45323,11 +45325,8 @@ const Creator = () => {
                 react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("div", { className: "left-menu" },
                     react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("div", { className: "options" },
                         react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("div", { className: "option" },
-                            react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("a", { onClick: () => {
+                            react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("a", { id: "btn-select-logo", onClick: () => {
                                     var _a;
-                                    // document
-                                    //     .querySelector<HTMLDivElement>("#right-menu")
-                                    //     ?.scrollTo()
                                     if (window.innerHeight <= 812) {
                                         console.log(window.innerHeight);
                                         window.scrollTo(0, ((_a = document.querySelector("#right-menu")) === null || _a === void 0 ? void 0 : _a.offsetTop) || 0);
@@ -45337,7 +45336,7 @@ const Creator = () => {
                                 react__WEBPACK_IMPORTED_MODULE_0__["createElement"](_assets_ui_LogoUIsvg__WEBPACK_IMPORTED_MODULE_4__["default"], { isSelected: menuOption === "logo" }),
                                 "Logo")),
                         react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("div", { className: "option" },
-                            react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("a", { onClick: () => {
+                            react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("a", { id: "btn-select-typography", onClick: () => {
                                     var _a;
                                     if (window.innerHeight <= 812) {
                                         window.scrollTo(0, ((_a = document.querySelector("#right-menu")) === null || _a === void 0 ? void 0 : _a.offsetTop) || 0);
@@ -45347,7 +45346,7 @@ const Creator = () => {
                                 react__WEBPACK_IMPORTED_MODULE_0__["createElement"](_assets_ui_TypographyUIsvg__WEBPACK_IMPORTED_MODULE_6__["default"], { isSelected: menuOption === "typography" }),
                                 "Typography")),
                         react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("div", { className: "option" },
-                            react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("a", { onClick: () => {
+                            react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("a", { id: "btn-select-layout", onClick: () => {
                                     var _a;
                                     if (window.innerHeight <= 812) {
                                         window.scrollTo(0, ((_a = document.querySelector("#right-menu")) === null || _a === void 0 ? void 0 : _a.offsetTop) || 0);
@@ -45357,7 +45356,7 @@ const Creator = () => {
                                 react__WEBPACK_IMPORTED_MODULE_0__["createElement"](_assets_ui_LayoutUIsvg__WEBPACK_IMPORTED_MODULE_3__["default"], { isSelected: menuOption === "layout" }),
                                 "Layout")),
                         react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("div", { className: "option" },
-                            react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("a", { onClick: () => {
+                            react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("a", { id: "btn-select-colors", onClick: () => {
                                     var _a;
                                     if (window.innerHeight <= 812) {
                                         window.scrollTo(0, ((_a = document.querySelector("#right-menu")) === null || _a === void 0 ? void 0 : _a.offsetTop) || 0);
@@ -45633,9 +45632,9 @@ const Start = () => {
                 react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("p", null, "You can change this information after you designs have been created")),
             react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("div", { className: "step1" },
                 react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("label", null, "Logo Text"),
-                react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("input", { type: "text", id: "logo-text-input", value: _stores_UIStore__WEBPACK_IMPORTED_MODULE_3__["default"].useState((s) => s.title.text), onChange: (e) => setTitleText(e.target.value) }),
+                react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("input", { type: "text", id: "input-logo-text", value: _stores_UIStore__WEBPACK_IMPORTED_MODULE_3__["default"].useState((s) => s.title.text), onChange: (e) => setTitleText(e.target.value) }),
                 react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("label", null, "Slogan text (Optional)"),
-                react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("input", { type: "text", id: "slogan-text-input", value: _stores_UIStore__WEBPACK_IMPORTED_MODULE_3__["default"].useState((s) => s.slogan.text), onChange: (e) => setSloganText(e.target.value) })),
+                react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("input", { type: "text", id: "input-logo-slogan", value: _stores_UIStore__WEBPACK_IMPORTED_MODULE_3__["default"].useState((s) => s.slogan.text), onChange: (e) => setSloganText(e.target.value) })),
             react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("div", { className: "next" },
                 react__WEBPACK_IMPORTED_MODULE_0__["createElement"](react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], { to: "/showcase" }, "Next")))));
 };
@@ -47816,24 +47815,23 @@ const CreateLogo = (props) => {
             /**
              * Create the base shapes & align them
              */
-            let shapes;
+            const shapes = Object(_engine_shapesBuilder__WEBPACK_IMPORTED_MODULE_3__["buildDefaultShapes"])(draw, props.logoProps);
+            /**
+             * TODO: refactor this switch, make it a separate function
+             */
             let alignerProps;
             switch (props.logoProps.container.align) {
                 case "align-top":
-                    shapes = Object(_engine_shapesBuilder__WEBPACK_IMPORTED_MODULE_3__["buildDefaultShapes"])(draw, props.logoProps);
                     alignerProps = Object(_engine_shapesAligner__WEBPACK_IMPORTED_MODULE_2__["alignLogoTop"])(shapes);
                     break;
                 case "align-left":
-                    shapes = Object(_engine_shapesBuilder__WEBPACK_IMPORTED_MODULE_3__["buildDefaultShapes"])(draw, props.logoProps);
                     alignerProps = Object(_engine_shapesAligner__WEBPACK_IMPORTED_MODULE_2__["alignLogoLeft"])(shapes);
                     break;
                 case "align-right":
-                    shapes = Object(_engine_shapesBuilder__WEBPACK_IMPORTED_MODULE_3__["buildDefaultShapes"])(draw, props.logoProps);
                     alignerProps = Object(_engine_shapesAligner__WEBPACK_IMPORTED_MODULE_2__["alignLogoRight"])(shapes);
                     break;
                 default:
                     console.log("Invalid Type. The logo will be aligned top as a fallback option!");
-                    shapes = Object(_engine_shapesBuilder__WEBPACK_IMPORTED_MODULE_3__["buildDefaultShapes"])(draw, props.logoProps);
                     alignerProps = Object(_engine_shapesAligner__WEBPACK_IMPORTED_MODULE_2__["alignLogoTop"])(shapes);
             }
             /**
@@ -48180,7 +48178,7 @@ const SelectColor = () => {
                 react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("button", { className: classnames__WEBPACK_IMPORTED_MODULE_4___default()({ active: isColorEditorOpen.background }), style: {
                         backgroundColor: colors.background,
                     }, onClick: () => toggleColorEditorFor("background") }),
-                react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("input", { value: inputValues.background, onChange: (e) => onInputChangeFor("background", e.target.value) })),
+                react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("input", { id: "input-color-background", value: inputValues.background, onChange: (e) => onInputChangeFor("background", e.target.value) })),
             isColorEditorOpen.background && (react__WEBPACK_IMPORTED_MODULE_0__["createElement"](react_color__WEBPACK_IMPORTED_MODULE_1__["SketchPicker"], { color: colors.background, presetColors: _assets_colors_index__WEBPACK_IMPORTED_MODULE_3__["default"], onChange: (c) => onInputChangeFor("background", c.hex), disableAlpha: true }))),
         react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("p", null, "Logo Color"),
         react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("div", { className: "container" },
@@ -48188,7 +48186,7 @@ const SelectColor = () => {
                 react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("button", { className: classnames__WEBPACK_IMPORTED_MODULE_4___default()({ active: isColorEditorOpen.logo }), style: {
                         backgroundColor: colors.logo,
                     }, onClick: () => toggleColorEditorFor("logo") }),
-                react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("input", { value: inputValues.logo, onChange: (e) => onInputChangeFor("logo", e.target.value) })),
+                react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("input", { id: "input-color-logo", value: inputValues.logo, onChange: (e) => onInputChangeFor("logo", e.target.value) })),
             isColorEditorOpen.logo && (react__WEBPACK_IMPORTED_MODULE_0__["createElement"](react_color__WEBPACK_IMPORTED_MODULE_1__["SketchPicker"], { color: colors.logo, presetColors: _assets_colors_index__WEBPACK_IMPORTED_MODULE_3__["default"], onChange: (c) => onInputChangeFor("logo", c.hex), disableAlpha: true }))),
         react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("p", null, "Title Color"),
         react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("div", { className: "container" },
@@ -48196,7 +48194,7 @@ const SelectColor = () => {
                 react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("button", { className: classnames__WEBPACK_IMPORTED_MODULE_4___default()({ active: isColorEditorOpen.title }), style: {
                         backgroundColor: colors.title,
                     }, onClick: () => toggleColorEditorFor("title") }),
-                react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("input", { value: inputValues.title, placeholder: "Add a color in HEX format.", onChange: (e) => onInputChangeFor("title", e.target.value) })),
+                react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("input", { id: "input-color-title", value: inputValues.title, placeholder: "Add a color in HEX format.", onChange: (e) => onInputChangeFor("title", e.target.value) })),
             isColorEditorOpen.title && (react__WEBPACK_IMPORTED_MODULE_0__["createElement"](react_color__WEBPACK_IMPORTED_MODULE_1__["SketchPicker"], { color: colors.title, presetColors: _assets_colors_index__WEBPACK_IMPORTED_MODULE_3__["default"], onChange: (c) => onInputChangeFor("title", c.hex), disableAlpha: true }))),
         react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("p", null, "Slogan Color"),
         react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("div", { className: "container" },
@@ -48204,7 +48202,7 @@ const SelectColor = () => {
                 react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("button", { className: classnames__WEBPACK_IMPORTED_MODULE_4___default()({ active: isColorEditorOpen.slogan }), style: {
                         backgroundColor: colors.slogan,
                     }, onClick: () => toggleColorEditorFor("slogan") }),
-                react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("input", { value: inputValues.slogan, onChange: (e) => onInputChangeFor("slogan", e.target.value) })),
+                react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("input", { id: "input-color-slogan", value: inputValues.slogan, onChange: (e) => onInputChangeFor("slogan", e.target.value) })),
             isColorEditorOpen.slogan && (react__WEBPACK_IMPORTED_MODULE_0__["createElement"](react_color__WEBPACK_IMPORTED_MODULE_1__["SketchPicker"], { color: colors.slogan, presetColors: _assets_colors_index__WEBPACK_IMPORTED_MODULE_3__["default"], onChange: (c) => onInputChangeFor("slogan", c.hex), disableAlpha: true })))));
 };
 /* harmony default export */ __webpack_exports__["default"] = (SelectColor);
@@ -48414,7 +48412,7 @@ const SelectTypography = () => {
         react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("div", { className: "title-options" },
             react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("h1", null, "LOGO"),
             react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("label", { htmlFor: "select-title-text" }, "Text"),
-            react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("input", { value: _stores_UIStore__WEBPACK_IMPORTED_MODULE_3__["default"].useState((s) => s.title.text), onChange: (e) => onTitleTextChange(e.target.value) }),
+            react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("input", { id: "input-typography-text", value: _stores_UIStore__WEBPACK_IMPORTED_MODULE_3__["default"].useState((s) => s.title.text), onChange: (e) => onTitleTextChange(e.target.value) }),
             react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("label", { htmlFor: "select-title-font-family" }, "Font Family"),
             react__WEBPACK_IMPORTED_MODULE_0__["createElement"](react_select__WEBPACK_IMPORTED_MODULE_1__["default"], { id: "select-title-font-family", className: "font-select", isSearchable: false, defaultValue: fontOptions.filter(({ value }) => value === defaultTitleFontFamily)[0], onChange: onTitleFontFamilyChange, options: fontOptions, styles: disableBoxShadow }),
             react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("label", { htmlFor: "select-title-font-size" }, "Font Size"),
@@ -48422,7 +48420,7 @@ const SelectTypography = () => {
         react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("div", { className: "slogan-options" },
             react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("h1", null, "SLOGAN (Optional)"),
             react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("label", { htmlFor: "select-slogan-text" }, "Text"),
-            react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("input", { value: _stores_UIStore__WEBPACK_IMPORTED_MODULE_3__["default"].useState((s) => s.slogan.text), onChange: (e) => onSloganTextChange(e.target.value) }),
+            react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("input", { id: "input-typography-slogan", value: _stores_UIStore__WEBPACK_IMPORTED_MODULE_3__["default"].useState((s) => s.slogan.text), onChange: (e) => onSloganTextChange(e.target.value) }),
             react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("label", { htmlFor: "select-slogan-font-family" }, "Font Family"),
             react__WEBPACK_IMPORTED_MODULE_0__["createElement"](react_select__WEBPACK_IMPORTED_MODULE_1__["default"], { id: "select-slogan-font-family", className: "font-select", isSearchable: false, defaultValue: fontOptions.filter(({ value }) => value === defaultSloganFontFamily), onChange: onSloganFontFamilyChange, options: fontOptions, styles: disableBoxShadow }),
             react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("label", { htmlFor: "select-slogan-font-size" }, "Font Size"),
@@ -48437,7 +48435,7 @@ const SelectTypography = () => {
 /*!******************************!*\
   !*** ./src/engine/export.ts ***!
   \******************************/
-/*! exports provided: exportAsSVGfromDOMviaLink, generateCanvasFromSVG, addToZipFromSVG, createSVGsWithPreset, createZipWithPresets, downloadAsZipFromSVGviaLinkBlob, createDownloadLinkPipeline, downloadZip */
+/*! exports provided: exportAsSVGfromDOMviaLink, generateCanvasFromSVG, addToZipFromSVG, createZipWithPresets, downloadAsZipFromSVGviaLinkBlob, createDownloadLinkPipeline, downloadZip */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -48445,7 +48443,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "exportAsSVGfromDOMviaLink", function() { return exportAsSVGfromDOMviaLink; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "generateCanvasFromSVG", function() { return generateCanvasFromSVG; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "addToZipFromSVG", function() { return addToZipFromSVG; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "createSVGsWithPreset", function() { return createSVGsWithPreset; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "createZipWithPresets", function() { return createZipWithPresets; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "downloadAsZipFromSVGviaLinkBlob", function() { return downloadAsZipFromSVGviaLinkBlob; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "createDownloadLinkPipeline", function() { return createDownloadLinkPipeline; });
@@ -48526,130 +48523,188 @@ async function addToZipFromSVG(svg, zip, extensions, includeSVG) {
     }
     return zip;
 }
-const presetsFormat = [
-    {
-        name: "default_765x625",
-        width: 765,
-        height: 625,
-    },
-    {
-        name: "default_transparent_765x625",
-        width: 765,
-        height: 625,
-        isTransparent: true,
-    },
-    {
-        name: "default_transparent_1000x1000",
-        width: 1000,
-        height: 1000,
-        isTransparent: true,
-    },
-    {
-        name: "wordpress_logo_512x512",
-        width: 512,
-        height: 512,
-    },
-    {
-        name: "wordpress_logo_transparent_512x512",
-        width: 512,
-        height: 512,
-        isTransparent: true,
-    },
-    {
-        name: "facebook_profile_1000x1000",
-        width: 1000,
-        height: 1000,
-    },
-    {
-        name: "facebook_cover_1640x624",
-        width: 1640,
-        height: 624,
-    },
-    {
-        name: "twitter_profile_1000x1000",
-        width: 1000,
-        height: 1000,
-    },
-    {
-        name: "twitter_header_1500x500",
-        width: 1500,
-        height: 500,
-    },
-    {
-        name: "favicon_32x32",
-        width: 32,
-        height: 32,
-    },
-    {
-        name: "instagram_portrait_1080x1350",
-        width: 1080,
-        height: 1350,
-    },
-    {
-        name: "instagram_photo_1080x1080",
-        width: 1080,
-        height: 1080,
-    },
-    {
-        name: "instagram_landscape_1080x608",
-        width: 1080,
-        height: 608,
-    },
-    {
-        name: "instagram_stories_1080x1920",
-        width: 1080,
-        height: 1920,
-    },
-    {
-        name: "linkedin_profile_1000x1000",
-        width: 1000,
-        height: 1000,
-    },
-    {
-        name: "linkedin_banner_1536x768",
-        width: 1536,
-        height: 768,
-    },
-    {
-        name: "youtube_profile_800x800",
-        width: 800,
-        height: 800,
-    },
-    {
-        name: "pinterest_profile_330x330",
-        width: 330,
-        height: 330,
-    },
-    {
-        name: "pinterest_board_800x800",
-        width: 800,
-        height: 800,
-    },
-    {
-        name: "wallpaper_1920x1080",
-        width: 1920,
-        height: 1080,
-    },
-];
+const folderStructure = {
+    name: 'LogoMakerByThemeisle',
+    children: [
+        {
+            name: 'WordPress',
+            children: [
+                {
+                    name: "wordpress_logo_512x512",
+                    width: 512,
+                    height: 512,
+                },
+                {
+                    name: "wordpress_logo_transparent_512x512",
+                    width: 512,
+                    height: 512,
+                    isTransparent: true,
+                },
+            ]
+        },
+        {
+            name: 'Facebook',
+            children: [
+                {
+                    name: "facebook_profile_1000x1000",
+                    width: 1000,
+                    height: 1000,
+                },
+                {
+                    name: "facebook_cover_1640x624",
+                    width: 1640,
+                    height: 624,
+                },
+                {
+                    name: "facebook_image_post_1200x630",
+                    width: 1200,
+                    height: 630,
+                },
+                {
+                    name: "facebook_ad_1200x628",
+                    width: 1200,
+                    height: 624,
+                },
+                {
+                    name: "facebook_story_1080x1920",
+                    width: 1080,
+                    height: 1920,
+                },
+            ]
+        },
+        {
+            name: 'Instagram',
+            children: [
+                {
+                    name: "instagram_portrait_1080x1350",
+                    width: 1080,
+                    height: 1350,
+                },
+                {
+                    name: "instagram_photo_1080x1080",
+                    width: 1080,
+                    height: 1080,
+                },
+                {
+                    name: "instagram_landscape_1080x608",
+                    width: 1080,
+                    height: 608,
+                },
+                {
+                    name: "instagram_stories_1080x1920",
+                    width: 1080,
+                    height: 1920,
+                },
+            ]
+        },
+        {
+            name: 'Linkedin',
+            children: [
+                {
+                    name: "linkedin_profile_1000x1000",
+                    width: 1000,
+                    height: 1000,
+                },
+                {
+                    name: "linkedin_banner_1536x768",
+                    width: 1536,
+                    height: 768,
+                },
+            ]
+        },
+        {
+            name: 'GoogleApps',
+            children: [
+                {
+                    name: "youtube_profile_800x800",
+                    width: 800,
+                    height: 800,
+                },
+                {
+                    name: "gmail_profile_400x400",
+                    width: 400,
+                    height: 400
+                }
+            ]
+        },
+        {
+            name: 'Twitter',
+            children: [
+                {
+                    name: "twitter_profile_1000x1000",
+                    width: 1000,
+                    height: 1000,
+                },
+                {
+                    name: "twitter_header_1500x500",
+                    width: 1500,
+                    height: 500,
+                },
+            ]
+        },
+        {
+            name: 'Pinterest',
+            children: [
+                {
+                    name: "pinterest_profile_330x330",
+                    width: 330,
+                    height: 330,
+                },
+                {
+                    name: "pinterest_board_800x800",
+                    width: 800,
+                    height: 800,
+                },
+            ]
+        },
+        {
+            name: "default_765x625",
+            width: 765,
+            height: 625,
+        },
+        {
+            name: "default_transparent_765x625",
+            width: 765,
+            height: 625,
+            isTransparent: true,
+        },
+        {
+            name: "default_transparent_1000x1000",
+            width: 1000,
+            height: 1000,
+            isTransparent: true,
+        },
+        {
+            name: "favicon_32x32",
+            width: 32,
+            height: 32,
+        },
+        {
+            name: "wallpaper_1920x1080",
+            width: 1920,
+            height: 1080,
+        },
+    ]
+};
 /**
  * This functions will create variants of proviede Svg based on the internal presets.
  *
  * @param svg The svg that is going to be exported
  */
-function createSVGsWithPreset(svg) {
-    return presetsFormat.map((preset) => {
-        const _svg = svg.cloneNode(true);
-        _svg.removeAttribute("width");
-        _svg.removeAttribute("height");
-        _svg.setAttribute("height", preset.height.toString());
-        _svg.setAttribute("width", preset.width.toString());
-        _svg.setAttribute("name", preset.name);
-        if (preset.isTransparent) {
-            _svg.style.backgroundColor = "transparent";
-        }
-        return _svg;
-    });
-}
+// export function createSVGsWithPreset(svg: SVGElement): SVGElement[] {
+//     return presetsFormat.map((preset) => {
+//         const _svg = svg.cloneNode(true) as SVGElement
+//         _svg.removeAttribute("width")
+//         _svg.removeAttribute("height")
+//         _svg.setAttribute("height", preset.height.toString())
+//         _svg.setAttribute("width", preset.width.toString())
+//         _svg.setAttribute("name", preset.name)
+//         if (preset.isTransparent) {
+//             _svg.style.backgroundColor = "transparent"
+//         }
+//         return _svg
+//     })
+// }
 /**
  * This function will create a `zip` file that will include all the images generated from pressets with the provided Svg and extensions
  *
@@ -48658,14 +48713,49 @@ function createSVGsWithPreset(svg) {
  * @param includeSVG Add the svg element to the zip file
  */
 async function createZipWithPresets(svg, extensions, includeSVG) {
-    let zip = new jszip__WEBPACK_IMPORTED_MODULE_0___default.a();
-    for (const _svg of createSVGsWithPreset(svg)) {
+    const zipRoot = new jszip__WEBPACK_IMPORTED_MODULE_0___default.a();
+    const createFile = async (zip, file) => {
+        const _svg = svg.cloneNode(true);
+        _svg.removeAttribute("width");
+        _svg.removeAttribute("height");
+        _svg.setAttribute("height", file.height.toString());
+        _svg.setAttribute("width", file.width.toString());
+        _svg.setAttribute("name", file.name);
+        if (file.isTransparent) {
+            _svg.style.backgroundColor = "transparent";
+        }
         zip = await addToZipFromSVG(_svg, zip, extensions, false);
-    }
+        return zip;
+    };
+    const createFolder = async (zip, folder) => {
+        const zipWithFolder = zip.folder(folder.name);
+        if (!zipWithFolder) {
+            console.warn('Cannot create folder with name: ' + folder.name);
+            return;
+        }
+        // Build in sequence
+        // for( const fileOrFolder of folder.children) {
+        //     if ('width' in fileOrFolder && 'height' in fileOrFolder) {
+        //         await createFile(zipWithFolder, fileOrFolder)
+        //     } else {
+        //         await createFolder(zipWithFolder, fileOrFolder)
+        //     }
+        // }
+        // Build in parallel
+        await Promise.all(folder.children.map(async (fileOrFolder) => {
+            if ('width' in fileOrFolder && 'height' in fileOrFolder) {
+                await createFile(zipWithFolder, fileOrFolder);
+            }
+            else {
+                createFolder(zipWithFolder, fileOrFolder);
+            }
+        }));
+    };
+    await createFolder(zipRoot, folderStructure);
     if (includeSVG) {
-        zip === null || zip === void 0 ? void 0 : zip.file(`${"logo-svg"}.svg`, new Blob([svg.outerHTML], { type: "image/svg+xml;charset=utf-8" }));
+        zipRoot === null || zipRoot === void 0 ? void 0 : zipRoot.file(`${"logo-svg"}.svg`, new Blob([svg.outerHTML], { type: "image/svg+xml;charset=utf-8" }));
     }
-    return zip;
+    return zipRoot;
 }
 /**
  * This function will generate an `URL` to the zip that containts the generated images from the provided Svg and extensions
@@ -48972,15 +49062,22 @@ function alignShapesToCenter(parent, shapes, properties) {
 /*!*************************************!*\
   !*** ./src/engine/shapesBuilder.ts ***!
   \*************************************/
-/*! exports provided: buildDefaultShapes */
+/*! exports provided: buildDefaultShapes, extendBaseShapes */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "buildDefaultShapes", function() { return buildDefaultShapes; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "extendBaseShapes", function() { return extendBaseShapes; });
 /* harmony import */ var _svgdotjs_svg_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @svgdotjs/svg.js */ "./node_modules/.pnpm/@svgdotjs/svg.js@3.0.16/node_modules/@svgdotjs/svg.js/dist/svg.esm.js");
 /**
  * This file should contains only the function that create/build the shapes and their helpers.
+ *
+ * There two kins of shapes: essential and extra.
+ *
+ * The esstial shapes form the base - which is a foundation of the final logo, so almost every generated logo will contains the shapes from the base
+ * The extras form the extended - those shapes appaer only in some pattters
+ *
  */
 
 /**
@@ -49022,6 +49119,17 @@ function buildDefaultShapes(parent, componentsProps) {
         logo,
         title,
         slogan,
+    };
+}
+/**
+ * Use this function to extend a base for adding additional Svgs on the logo.
+ *
+ * @param base An object that containts the esentials Svgs, like: logo, title, slogan. Also suport derivate from it.
+ */
+function extendBaseShapes(base) {
+    return {
+        ...base,
+        extras: [],
     };
 }
 
