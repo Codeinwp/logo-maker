@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>BaseShapheBuilder | logo-maker-plugin</title>
+	<title>ExtendedShapeBuilder | logo-maker-plugin</title>
 	<meta name="description" content="Documentation for logo-maker-plugin">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -58,10 +58,10 @@
 					<a href="../modules/engine_shapesbuilder.html">engine/shapesBuilder</a>
 				</li>
 				<li>
-					<a href="engine_shapesbuilder.baseshaphebuilder.html">BaseShapheBuilder</a>
+					<a href="engine_shapesbuilder.extendedshapebuilder.html">ExtendedShapeBuilder</a>
 				</li>
 			</ul>
-			<h1>Interface BaseShapheBuilder</h1>
+			<h1>Interface ExtendedShapeBuilder</h1>
 		</div>
 	</div>
 </header>
@@ -71,21 +71,18 @@
 			<section class="tsd-panel tsd-comment">
 				<div class="tsd-comment tsd-typography">
 					<div class="lead">
-						<p>Base interface for creating/building shapes</p>
+						<p>The interface for the extend version of a base where you can store additional shapes that are used in some patters</p>
 					</div>
-					<p>Extend this inferface when adding essential shapes. Essential shapes are the shapes that appears on every logo.
-						If you want to make a customizer for the logo to add shapes like stars, circles, and they appaers only on some patters;
-					use <code>extendBaseShapes</code> function to add an extra property where you can store them, like &#39;extras&#39;.</p>
 				</div>
 			</section>
 			<section class="tsd-panel tsd-hierarchy">
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
-						<span class="target">BaseShapheBuilder</span>
+						<a href="engine_shapesbuilder.baseshaphebuilder.html" class="tsd-signature-type" data-tsd-kind="Interface">BaseShapheBuilder</a>
 						<ul class="tsd-hierarchy">
 							<li>
-								<a href="engine_shapesbuilder.extendedshapebuilder.html" class="tsd-signature-type" data-tsd-kind="Interface">ExtendedShapeBuilder</a>
+								<span class="target">ExtendedShapeBuilder</span>
 							</li>
 						</ul>
 					</li>
@@ -98,9 +95,10 @@
 						<section class="tsd-index-section ">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="engine_shapesbuilder.baseshaphebuilder.html#logo" class="tsd-kind-icon">logo</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="engine_shapesbuilder.baseshaphebuilder.html#slogan" class="tsd-kind-icon">slogan</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="engine_shapesbuilder.baseshaphebuilder.html#title" class="tsd-kind-icon">title</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="engine_shapesbuilder.extendedshapebuilder.html#extras" class="tsd-kind-icon">extras</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="engine_shapesbuilder.extendedshapebuilder.html#logo" class="tsd-kind-icon">logo</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="engine_shapesbuilder.extendedshapebuilder.html#slogan" class="tsd-kind-icon">slogan</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="engine_shapesbuilder.extendedshapebuilder.html#title" class="tsd-kind-icon">title</a></li>
 							</ul>
 						</section>
 					</div>
@@ -109,10 +107,21 @@
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Properties</h2>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="extras" class="tsd-anchor"></a>
+					<h3>extras</h3>
+					<div class="tsd-signature tsd-kind-icon">extras<span class="tsd-signature-symbol">:</span> <a href="../modules/engine_shapesbuilder.html#extrashape" class="tsd-signature-type" data-tsd-kind="Type alias">ExtraShape</a><span class="tsd-signature-symbol">[]</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/Codeinwp/logo-maker/blob/2c60815/src/engine/shapesBuilder.ts#L52">engine/shapesBuilder.ts:52</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
 					<a name="logo" class="tsd-anchor"></a>
 					<h3>logo</h3>
 					<div class="tsd-signature tsd-kind-icon">logo<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Svg</span></div>
 					<aside class="tsd-sources">
+						<p>Inherited from <a href="engine_shapesbuilder.baseshaphebuilder.html">BaseShapheBuilder</a>.<a href="engine_shapesbuilder.baseshaphebuilder.html#logo">logo</a></p>
 						<ul>
 							<li>Defined in <a href="https://github.com/Codeinwp/logo-maker/blob/2c60815/src/engine/shapesBuilder.ts#L25">engine/shapesBuilder.ts:25</a></li>
 						</ul>
@@ -123,11 +132,12 @@
 						</div>
 					</div>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
 					<a name="slogan" class="tsd-anchor"></a>
 					<h3>slogan</h3>
 					<div class="tsd-signature tsd-kind-icon">slogan<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Text</span></div>
 					<aside class="tsd-sources">
+						<p>Inherited from <a href="engine_shapesbuilder.baseshaphebuilder.html">BaseShapheBuilder</a>.<a href="engine_shapesbuilder.baseshaphebuilder.html#slogan">slogan</a></p>
 						<ul>
 							<li>Defined in <a href="https://github.com/Codeinwp/logo-maker/blob/2c60815/src/engine/shapesBuilder.ts#L35">engine/shapesBuilder.ts:35</a></li>
 						</ul>
@@ -138,11 +148,12 @@
 						</div>
 					</div>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
 					<a name="title" class="tsd-anchor"></a>
 					<h3>title</h3>
 					<div class="tsd-signature tsd-kind-icon">title<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Text</span></div>
 					<aside class="tsd-sources">
+						<p>Inherited from <a href="engine_shapesbuilder.baseshaphebuilder.html">BaseShapheBuilder</a>.<a href="engine_shapesbuilder.baseshaphebuilder.html#title">title</a></p>
 						<ul>
 							<li>Defined in <a href="https://github.com/Codeinwp/logo-maker/blob/2c60815/src/engine/shapesBuilder.ts#L30">engine/shapesBuilder.ts:30</a></li>
 						</ul>
@@ -231,27 +242,30 @@
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
+					<li class=" tsd-kind-interface tsd-parent-kind-module">
+						<a href="engine_shapesbuilder.baseshaphebuilder.html" class="tsd-kind-icon">Base<wbr>Shaphe<wbr>Builder</a>
+					</li>
 				</ul>
 				<ul class="current">
 					<li class="current tsd-kind-interface tsd-parent-kind-module">
-						<a href="engine_shapesbuilder.baseshaphebuilder.html" class="tsd-kind-icon">Base<wbr>Shaphe<wbr>Builder</a>
+						<a href="engine_shapesbuilder.extendedshapebuilder.html" class="tsd-kind-icon">Extended<wbr>Shape<wbr>Builder</a>
 						<ul>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="engine_shapesbuilder.baseshaphebuilder.html#logo" class="tsd-kind-icon">logo</a>
+								<a href="engine_shapesbuilder.extendedshapebuilder.html#extras" class="tsd-kind-icon">extras</a>
 							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="engine_shapesbuilder.baseshaphebuilder.html#slogan" class="tsd-kind-icon">slogan</a>
+							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+								<a href="engine_shapesbuilder.extendedshapebuilder.html#logo" class="tsd-kind-icon">logo</a>
 							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="engine_shapesbuilder.baseshaphebuilder.html#title" class="tsd-kind-icon">title</a>
+							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+								<a href="engine_shapesbuilder.extendedshapebuilder.html#slogan" class="tsd-kind-icon">slogan</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+								<a href="engine_shapesbuilder.extendedshapebuilder.html#title" class="tsd-kind-icon">title</a>
 							</li>
 						</ul>
 					</li>
 				</ul>
 				<ul class="after-current">
-					<li class=" tsd-kind-interface tsd-parent-kind-module">
-						<a href="engine_shapesbuilder.extendedshapebuilder.html" class="tsd-kind-icon">Extended<wbr>Shape<wbr>Builder</a>
-					</li>
 					<li class=" tsd-kind-type-alias tsd-parent-kind-module">
 						<a href="../modules/engine_shapesbuilder.html#extrashape" class="tsd-kind-icon">Extra<wbr>Shape</a>
 					</li>

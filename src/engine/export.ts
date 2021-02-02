@@ -298,7 +298,7 @@ const folderStructure: Folder = {
 // }
 
 /**
- * This function will create a `zip` file that will include all the images generated from pressets with the provided Svg and extensions
+ * This function will create a `zip` file that will include all the images generated from the folder structure with the provided Svg and extensions
  *
  * @param svg The svg that is going to be exported
  * @param extensions The extensions that will be used to generate the images
@@ -311,6 +311,12 @@ export async function createZipWithPresets(
 ): Promise<JSZip> {
     const zipRoot = new JSZip()
 
+    /**
+     * This function generate an image and add it to the zip file which might be a subfolder  
+     * 
+     * @param zip The zip object with folder in which the file will be added
+     * @param file The data necessary for generating the image
+     */
     const createFile = async(zip: JSZip, file: FileFormat): Promise<JSZip> => {
         const _svg = svg.cloneNode(true) as SVGElement
         _svg.removeAttribute("width")
@@ -329,11 +335,19 @@ export async function createZipWithPresets(
         return zip
     }
     
+    /**
+     * This function will create a folder in the zip object.
+     * If the children is a folder, then it calls itself with that folder
+     * If the children is a file, then it calls the `createFile` function and it wait to generate the image
+     * 
+     * @param zip The zip object with folder in which the file or a folder will be added
+     * @param folder The data necessary for generating the folder
+     */
     const createFolder = async(zip: JSZip, folder: Folder): Promise<void> => {
         const zipWithFolder = zip.folder(folder.name)
 
         if ( ! zipWithFolder ) {
-            console.warn('Cannot create folder with name: ' + folder.name)
+            console.warn('Cannot create folder with name: ' + folder.name + ' because the zip object is null!')
            return
         }
 

@@ -3,8 +3,8 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>engine/shapesBuilder | undefined</title>
-	<meta name="description" content="Documentation for undefined">
+	<title>engine/shapesBuilder | logo-maker-plugin</title>
+	<meta name="description" content="Documentation for logo-maker-plugin">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
 	<script async src="../assets/js/search.js" id="search-script"></script>
@@ -23,7 +23,7 @@
 						<li class="state loading">Preparing search index...</li>
 						<li class="state failure">The search index is not available</li>
 					</ul>
-					<a href="../index.html" class="title">undefined</a>
+					<a href="../index.html" class="title">logo-maker-plugin</a>
 				</div>
 				<div class="table-cell" id="tsd-widgets">
 					<div id="tsd-filter">
@@ -52,7 +52,7 @@
 		<div class="container">
 			<ul class="tsd-breadcrumb">
 				<li>
-					<a href="../modules.html">undefined</a>
+					<a href="../modules.html">logo-maker-plugin</a>
 				</li>
 				<li>
 					<a href="engine_shapesbuilder.html">engine/shapesBuilder</a>
@@ -73,14 +73,61 @@
 							<h3>Interfaces</h3>
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-interface tsd-parent-kind-module"><a href="../interfaces/engine_shapesbuilder.baseshaphebuilder.html" class="tsd-kind-icon">Base<wbr>Shaphe<wbr>Builder</a></li>
+								<li class="tsd-kind-interface tsd-parent-kind-module"><a href="../interfaces/engine_shapesbuilder.extendedshapebuilder.html" class="tsd-kind-icon">Extended<wbr>Shape<wbr>Builder</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
+							<h3>Type aliases</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-type-alias tsd-parent-kind-module"><a href="engine_shapesbuilder.html#extrashape" class="tsd-kind-icon">Extra<wbr>Shape</a></li>
 							</ul>
 						</section>
 						<section class="tsd-index-section ">
 							<h3>Functions</h3>
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-function tsd-parent-kind-module"><a href="engine_shapesbuilder.html#builddefaultshapes" class="tsd-kind-icon">build<wbr>Default<wbr>Shapes</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-module tsd-has-type-parameter"><a href="engine_shapesbuilder.html#extendbaseshapes" class="tsd-kind-icon">extend<wbr>Base<wbr>Shapes</a></li>
 							</ul>
 						</section>
+					</div>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Type aliases</h2>
+				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-module">
+					<a name="extrashape" class="tsd-anchor"></a>
+					<h3>Extra<wbr>Shape</h3>
+					<div class="tsd-signature tsd-kind-icon">Extra<wbr>Shape<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">{ </span>kind<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>svg<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Svg</span><span class="tsd-signature-symbol"> }</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/Codeinwp/logo-maker/blob/2c60815/src/engine/shapesBuilder.ts#L41">engine/shapesBuilder.ts:41</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Additional shapes used in the exteneded version of the base</p>
+						</div>
+					</div>
+					<div class="tsd-type-declaration">
+						<h4>Type declaration</h4>
+						<ul class="tsd-parameters">
+							<li class="tsd-parameter">
+								<h5>kind<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></h5>
+								<div class="tsd-comment tsd-typography">
+									<div class="lead">
+										<p>It is used for identification</p>
+									</div>
+								</div>
+							</li>
+							<li class="tsd-parameter">
+								<h5>svg<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Svg</span></h5>
+								<div class="tsd-comment tsd-typography">
+									<div class="lead">
+										<p>The svg that is going to be added to the final logo</p>
+									</div>
+								</div>
+							</li>
+						</ul>
 					</div>
 				</section>
 			</section>
@@ -96,7 +143,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/Codeinwp/logo-maker/blob/3461946/src/engine/shapesBuilder.ts#L37">engine/shapesBuilder.ts:37</a></li>
+									<li>Defined in <a href="https://github.com/Codeinwp/logo-maker/blob/2c60815/src/engine/shapesBuilder.ts#L61">engine/shapesBuilder.ts:61</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -120,6 +167,43 @@
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <a href="../interfaces/engine_shapesbuilder.baseshaphebuilder.html" class="tsd-signature-type" data-tsd-kind="Interface">BaseShapheBuilder</a></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module tsd-has-type-parameter">
+					<a name="extendbaseshapes" class="tsd-anchor"></a>
+					<h3>extend<wbr>Base<wbr>Shapes</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module tsd-has-type-parameter">
+						<li class="tsd-signature tsd-kind-icon">extend<wbr>Base<wbr>Shapes&lt;S&gt;<span class="tsd-signature-symbol">(</span>base<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">S</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../interfaces/engine_shapesbuilder.extendedshapebuilder.html" class="tsd-signature-type" data-tsd-kind="Interface">ExtendedShapeBuilder</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/Codeinwp/logo-maker/blob/2c60815/src/engine/shapesBuilder.ts#L107">engine/shapesBuilder.ts:107</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Use this function to extend a base for adding additional Svgs on the logo.</p>
+								</div>
+							</div>
+							<h4 class="tsd-type-parameters-title">Type parameters</h4>
+							<ul class="tsd-type-parameters">
+								<li>
+									<h4>S<span class="tsd-signature-symbol">: </span><a href="../interfaces/engine_shapesbuilder.baseshaphebuilder.html" class="tsd-signature-type" data-tsd-kind="Interface">BaseShapheBuilder</a></h4>
+								</li>
+							</ul>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>base: <span class="tsd-signature-type">S</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>An object that containts the esentials Svgs, like: logo, title, slogan. Also suport derivate from it.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="../interfaces/engine_shapesbuilder.extendedshapebuilder.html" class="tsd-signature-type" data-tsd-kind="Interface">ExtendedShapeBuilder</a></h4>
 						</li>
 					</ul>
 				</section>
@@ -204,8 +288,17 @@
 					<li class=" tsd-kind-interface tsd-parent-kind-module">
 						<a href="../interfaces/engine_shapesbuilder.baseshaphebuilder.html" class="tsd-kind-icon">Base<wbr>Shaphe<wbr>Builder</a>
 					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-module">
+						<a href="../interfaces/engine_shapesbuilder.extendedshapebuilder.html" class="tsd-kind-icon">Extended<wbr>Shape<wbr>Builder</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-parent-kind-module">
+						<a href="engine_shapesbuilder.html#extrashape" class="tsd-kind-icon">Extra<wbr>Shape</a>
+					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-module">
 						<a href="engine_shapesbuilder.html#builddefaultshapes" class="tsd-kind-icon">build<wbr>Default<wbr>Shapes</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-module tsd-has-type-parameter">
+						<a href="engine_shapesbuilder.html#extendbaseshapes" class="tsd-kind-icon">extend<wbr>Base<wbr>Shapes</a>
 					</li>
 				</ul>
 			</nav>
