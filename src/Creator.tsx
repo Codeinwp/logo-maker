@@ -33,7 +33,7 @@ function downloadLinkReducer(prevState: DownLoadLinkState, action: DownLoadLinkA
     switch (action.type) {
         case "create":
             URL.revokeObjectURL(prevState.url)
-            console.time('build-time')
+            console.time("build-time")
             return {
                 status: "loading",
                 url: "",
@@ -45,7 +45,7 @@ function downloadLinkReducer(prevState: DownLoadLinkState, action: DownLoadLinkA
                 url: "",
             }
         case "publish":
-            console.timeEnd('build-time')
+            console.timeEnd("build-time")
             downloadZip(action.value)
             ReactGA.event({
                 category: "Logo Maker Creator",
@@ -113,10 +113,17 @@ const Creator: React.FunctionComponent<unknown> = () => {
 
             buildPipelines(store).createFavicon(favIconRef)
             const favIconSVG = document.querySelector("#rendering svg")?.cloneNode(true) as SVGElement
-            favIconRef.innerHTML = ''
+            favIconRef.innerHTML = ""
 
             if (logoSVG) {
-                const link = await downloadAsZipFromSVGviaLinkBlob([{ pipeline: "editor", svg: logoSVG}, { pipeline: "favicon", svg: favIconSVG}], ["png"], true)
+                const link = await downloadAsZipFromSVGviaLinkBlob(
+                    [
+                        { pipeline: "editor", svg: logoSVG },
+                        { pipeline: "favicon", svg: favIconSVG },
+                    ],
+                    ["png"],
+                    true
+                )
                 dispatchDownloadLink({ type: "publish", value: link })
             }
         }
@@ -233,9 +240,7 @@ const Creator: React.FunctionComponent<unknown> = () => {
                     </div>
                 </div>
             </div>
-            <div id="rendering" className="rendering-section favicon">
-
-            </div>
+            <div id="rendering" className="rendering-section favicon"></div>
         </div>
     )
 }

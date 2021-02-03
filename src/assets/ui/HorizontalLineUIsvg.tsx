@@ -13,20 +13,8 @@ const HorizontalLineUIsvg: React.FunctionComponent<{
             xmlns="http://www.w3.org/2000/svg"
             className={props?.clasName}
         >
-            <line
-                y1="1.25"
-                x2="58"
-                y2="1.25"
-                stroke={props?.isSelected ? "#43C2D1" : "#8B8B9C"}
-                strokeWidth="1.5"
-            />
-            <line
-                y1="8.25"
-                x2="58"
-                y2="8.25"
-                stroke={props?.isSelected ? "#43C2D1" : "#8B8B9C"}
-                strokeWidth="1.5"
-            />
+            <line y1="1.25" x2="58" y2="1.25" stroke={props?.isSelected ? "#43C2D1" : "#8B8B9C"} strokeWidth="1.5" />
+            <line y1="8.25" x2="58" y2="8.25" stroke={props?.isSelected ? "#43C2D1" : "#8B8B9C"} strokeWidth="1.5" />
         </svg>
     )
 }

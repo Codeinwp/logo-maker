@@ -14,7 +14,7 @@ export type SelectLogoProps = {
 
 /**
  * This function will generate the logo representation for the `Select Logo` component
- * 
+ *
  * @param props The properties necessary for rendering the logo in the menu
  */
 const LogoItem: React.FunctionComponent<SelectLogoProps> = (props: SelectLogoProps) => {
@@ -28,10 +28,7 @@ const LogoItem: React.FunctionComponent<SelectLogoProps> = (props: SelectLogoPro
 
             const logoSVG = svgItem.first().node as SVGElement
             logoSVG.removeAttribute("viewBox")
-            logoSVG.setAttribute(
-                "viewBox",
-                `-7 -7 0${svgItem.bbox().width + 13} ${svgItem.bbox().height + 13}`
-            )
+            logoSVG.setAttribute("viewBox", `-7 -7 0${svgItem.bbox().width + 13} ${svgItem.bbox().height + 13}`)
             svgItem
                 .viewbox(0, 0, svgItem.bbox().width + 16, svgItem.bbox().height + 16)
                 .size(77, 77)

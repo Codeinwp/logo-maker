@@ -8,7 +8,7 @@ import ReactGA from "react-ga"
 
 /**
  * This is the main entry point of the application
- * 
+ *
  * This component also initializes the Google Analytics library using the global object `window.logomaker.googleAnalyticsCode`
  */
 

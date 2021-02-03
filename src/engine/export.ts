@@ -26,7 +26,6 @@ export function generateCanvasFromSVG(svg: SVGElement): Promise<HTMLCanvasElemen
         const width = Number(svg.getAttribute("width")) || 765
         const height = Number(svg.getAttribute("height")) || 625
         let safariWasUsed = false
-        
 
         // const {width, height} = svg.getBoundingClientRect() - not working
 
@@ -45,7 +44,7 @@ export function generateCanvasFromSVG(svg: SVGElement): Promise<HTMLCanvasElemen
             console.log("Image not found", ev)
 
             // This will work even in Safari for Mac & iOS
-            if (! safariWasUsed) {
+            if (!safariWasUsed) {
                 img.src = "data:image/svg+xml," + svg.outerHTML
                 safariWasUsed = true
             }
@@ -103,11 +102,10 @@ export async function addToZipFromSVG(
     return zip
 }
 
-
 /**
  * Definition of a file structure from the zip file
  */
-type FileFormat = { name: string; width: number; height: number; isTransparent?: boolean; pipeline?: PipelineOptions}
+type FileFormat = { name: string; width: number; height: number; isTransparent?: boolean; pipeline?: PipelineOptions }
 /**
  * Definition of the folder strucure from the zip file
  */
@@ -117,10 +115,10 @@ type Folder = {
 }
 
 const folderStructure: Folder = {
-    name: 'LogoMakerByThemeisle',
+    name: "LogoMakerByThemeisle",
     children: [
         {
-            name: 'WordPress',
+            name: "WordPress",
             children: [
                 {
                     name: "wordpress_logo_512x512",
@@ -133,10 +131,10 @@ const folderStructure: Folder = {
                     height: 512,
                     isTransparent: true,
                 },
-            ]
+            ],
         },
         {
-            name: 'Facebook',
+            name: "Facebook",
             children: [
                 {
                     name: "facebook_profile_1000x1000",
@@ -163,10 +161,10 @@ const folderStructure: Folder = {
                     width: 1080,
                     height: 1920,
                 },
-            ]
+            ],
         },
         {
-            name: 'Instagram',
+            name: "Instagram",
             children: [
                 {
                     name: "instagram_portrait_1080x1350",
@@ -188,10 +186,10 @@ const folderStructure: Folder = {
                     width: 1080,
                     height: 1920,
                 },
-            ]
+            ],
         },
         {
-            name: 'Linkedin',
+            name: "Linkedin",
             children: [
                 {
                     name: "linkedin_profile_1000x1000",
@@ -203,10 +201,10 @@ const folderStructure: Folder = {
                     width: 1536,
                     height: 768,
                 },
-            ]
+            ],
         },
         {
-            name: 'GoogleApps',
+            name: "GoogleApps",
             children: [
                 {
                     name: "youtube_profile_800x800",
@@ -216,12 +214,12 @@ const folderStructure: Folder = {
                 {
                     name: "gmail_profile_400x400",
                     width: 400,
-                    height: 400
-                }
-            ]
+                    height: 400,
+                },
+            ],
         },
         {
-            name: 'Twitter',
+            name: "Twitter",
             children: [
                 {
                     name: "twitter_profile_1000x1000",
@@ -233,10 +231,10 @@ const folderStructure: Folder = {
                     width: 1500,
                     height: 500,
                 },
-            ]
+            ],
         },
         {
-            name: 'Pinterest',
+            name: "Pinterest",
             children: [
                 {
                     name: "pinterest_profile_330x330",
@@ -248,7 +246,7 @@ const folderStructure: Folder = {
                     width: 800,
                     height: 800,
                 },
-            ]
+            ],
         },
         {
             name: "default_765x625",
@@ -271,25 +269,25 @@ const folderStructure: Folder = {
             name: "favicon_32x32",
             width: 32,
             height: 32,
-            pipeline: "favicon"
+            pipeline: "favicon",
         },
         {
             name: "favicon_transparent_32x32",
             width: 32,
             height: 32,
             isTransparent: true,
-            pipeline: "favicon"
+            pipeline: "favicon",
         },
         {
             name: "wallpaper_1920x1080",
             width: 1920,
             height: 1080,
         },
-    ]
+    ],
 }
 
 export type InputSVG = {
-    svg: SVGElement,
+    svg: SVGElement
     pipeline: PipelineOptions
 }
 
@@ -308,15 +306,18 @@ export async function createZipWithPresets(
     const zipRoot = new JSZip()
 
     /**
-     * This function generate an image and add it to the zip file which might be a subfolder  
-     * 
+     * This function generate an image and add it to the zip file which might be a subfolder
+     *
      * @param zip The zip object with folder in which the file will be added
      * @param file The data necessary for generating the image
      */
-    const createFile = async(zip: JSZip, file: FileFormat): Promise<JSZip> => {
-        const svg = (input.find( ({ pipeline }) => pipeline === file.pipeline ) || input.find( ({ pipeline }) => pipeline === "editor" ))?.svg
+    const createFile = async (zip: JSZip, file: FileFormat): Promise<JSZip> => {
+        const svg = (
+            input.find(({ pipeline }) => pipeline === file.pipeline) ||
+            input.find(({ pipeline }) => pipeline === "editor")
+        )?.svg
 
-        if( ! svg ) {
+        if (!svg) {
             return zip
         }
 
@@ -336,21 +337,21 @@ export async function createZipWithPresets(
 
         return zip
     }
-    
+
     /**
      * This function will create a folder in the zip object.
      * If the children is a folder, then it calls itself with that folder
      * If the children is a file, then it calls the `createFile` function and it wait to generate the image
-     * 
+     *
      * @param zip The zip object with folder in which the file or a folder will be added
      * @param folder The data necessary for generating the folder
      */
-    const createFolder = async(zip: JSZip, folder: Folder): Promise<void> => {
+    const createFolder = async (zip: JSZip, folder: Folder): Promise<void> => {
         const zipWithFolder = zip.folder(folder.name)
 
-        if ( ! zipWithFolder ) {
-            console.warn('Cannot create folder with name: ' + folder.name + ' because the zip object is null!')
-           return
+        if (!zipWithFolder) {
+            console.warn("Cannot create folder with name: " + folder.name + " because the zip object is null!")
+            return
         }
 
         // Build in sequence
@@ -363,21 +364,23 @@ export async function createZipWithPresets(
         // }
 
         // Build in parallel
-        await Promise.all(folder.children.map( async(fileOrFolder) => {
-            if ('width' in fileOrFolder && 'height' in fileOrFolder) {
-                await createFile(zipWithFolder, fileOrFolder)
-            } else {
-                createFolder(zipWithFolder, fileOrFolder)
-            }
-        }))
+        await Promise.all(
+            folder.children.map(async (fileOrFolder) => {
+                if ("width" in fileOrFolder && "height" in fileOrFolder) {
+                    await createFile(zipWithFolder, fileOrFolder)
+                } else {
+                    createFolder(zipWithFolder, fileOrFolder)
+                }
+            })
+        )
     }
 
     await createFolder(zipRoot, folderStructure)
 
     if (includeSVG) {
-        input.forEach( ({ svg, pipeline }) => {
+        input.forEach(({ svg, pipeline }) => {
             zipRoot?.file(`logo-${pipeline}.svg`, new Blob([svg.outerHTML], { type: "image/svg+xml;charset=utf-8" }))
-        } )
+        })
     }
 
     return zipRoot

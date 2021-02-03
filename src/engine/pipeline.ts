@@ -1,7 +1,7 @@
 /**
- * What is pipeline? The pipeline is a proces for rendering the final logo's SVG
+ * What is a pipeline? A pipeline is a process for rendering the final logo's SVG
  * The default pipeline is rendering the logo in the editor on the user interface.
- * Another pipeline might be rendering a favicon which is build only using the logo 
+ * Another pipeline might be rendering a favicon, which builds only the logo, without title or slogan.
  */
 import { Svg, SVG } from "@svgdotjs/svg.js"
 import { StoreProps } from "../stores/UIStore"
@@ -17,17 +17,17 @@ import { buildDefaultShapes } from "./shapesBuilder"
 export type PipelineOptions = "editor" | "favicon"
 
 export interface PipelinesOutput {
-    editor: (parent: HTMLDivElement) => Svg,
+    createEditor: (parent: HTMLDivElement) => Svg
     createFavicon: (parent: HTMLDivElement) => Svg
 }
 
-export function buildPipelines( _props: StoreProps ): PipelinesOutput {
+export function buildPipelines(_props: StoreProps): PipelinesOutput {
     return {
-        editor: (parent: HTMLDivElement): Svg => {
+        createEditor: (parent: HTMLDivElement): Svg => {
             /**
              * Create the SVG parent
              */
-            const props = {..._props}
+            const props = { ..._props }
             const container = props.container
             const vb = container.viewbox
             const draw = SVG()
@@ -35,7 +35,6 @@ export function buildPipelines( _props: StoreProps ): PipelinesOutput {
                 .size(container.width, container.height)
                 .viewbox(vb.x, vb.y, vb.width, vb.height)
                 .css("background-color", container.style.color)
-                
 
             /**
              * Create the base shapes & align them
@@ -72,48 +71,46 @@ export function buildPipelines( _props: StoreProps ): PipelinesOutput {
         createFavicon: (parent: HTMLDivElement): Svg => {
             // Eliminate title and slogan
             const props: StoreProps = {
-                    ..._props,
-                    container: {
-                        ..._props.container,
-                        align: "align-top",
-                        width: 345,
-                        height: 281,
-                        viewbox: {
-                            x: 0,
-                            y: 0,
-                            width: 100,
-                            height: 100,
-                        },
+                ..._props,
+                container: {
+                    ..._props.container,
+                    align: "align-top",
+                    width: 345,
+                    height: 281,
+                    viewbox: {
+                        x: 0,
+                        y: 0,
+                        width: 100,
+                        height: 100,
                     },
-                    title: {
-                        ..._props.title,
-                        text: ""
-                    },
-                    slogan: {
-                        ..._props.slogan,
-                        text: ""
-                    },
-                }
+                },
+                title: {
+                    ..._props.title,
+                    text: "",
+                },
+                slogan: {
+                    ..._props.slogan,
+                    text: "",
+                },
+            }
 
             /**
              * Create the SVG parent
              */
             const container = props.container
-            console.log(container)
             const vb = container.viewbox
             const draw = SVG()
                 .addTo(parent)
                 .size(container.width, container.height)
                 .viewbox(vb.x, vb.y, vb.width, vb.height)
                 .css("background-color", container.style.color)
-                
 
             /**
              * Create the base shapes & align them
              */
             const shapes = buildDefaultShapes(draw, props)
             const alignerProps = alignLogoTop(shapes)
-                 
+
             /**
              * Additional transformations
              */
@@ -121,6 +118,6 @@ export function buildPipelines( _props: StoreProps ): PipelinesOutput {
             alignShapesToCenter(draw, shapes, alignerProps)
 
             return draw
-        }
+        },
     }
 }

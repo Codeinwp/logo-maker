@@ -1,26 +1,26 @@
 # Logo Maker
 
-Logo Maker is a react app build with [Typescript](https://www.typescriptlang.org/) created for designing simple logos.
+Logo Maker is a react app built with [Typescript](https://www.typescriptlang.org/) created for designing simple logos.
 
 ![Main Build](https://github.com/Codeinwp/logo-maker/workflows/Deploy%20on%20staging/badge.svg)
 
-## Instalation on Wordpress
+## Installation on WordPress
 
-The easy way: go to `/development` and download the zip file, then upload it on the `wp-admin/plugins.php`
+The easy way: go to `/development` and download the zip file, then upload it on the website in `wp-admin/plugins.php`
 
-The hard way: go to plugin folder of the WordPress and then `git clone https://github.com/Codeinwp/logo-maker.git`
+The hard way: go to the plugin folder of the WordPress and then `git clone https://github.com/Codeinwp/logo-maker.git`
 
-**In order to make the `back button` on the Start page to work you need to assing in WordPrees a parent page to the page that host the Logo Maker.**
+** To make the `back button` on the Start page work, you need to assign in WordPress a parent page to the page that host the Logo Maker.**
 
-**Make sure that the page that host the Logo Maker is empty.**
+**Make sure that the page that hosts the Logo Maker is empty.**
 
 ## Getting starter on development
 
-Before you venture in the development of the Logo Maker, you need to have:
+Before you venture into the development of the Logo Maker, you need to have:
 
 -   [Node Js](https://nodejs.org/en/) with npm & npx
 -   [Git](https://git-scm.com/)
--   Text Editor / IDE (see Recomended Tools)
+-   Text Editor / IDE (see Recommended Tools)
 
 ## Installation
 
@@ -50,13 +50,13 @@ yarn install
 
 ## Npm Commmands
 
-`npm run start` - start the development server using Snowpack - it's fast and run separatly from WordPress - use it for development
+`npm run start` - start the development server using Snowpack - it's fast and run separately from WordPress - use it for development.
 
-`npm run start-plugin` - start the development server in WordPress using Webpack - the project must be in `plugin` folder and activated - use it for testing the app as block in WordPress
+`npm run start-plugin` - start the development server in WordPress using Webpack - the project must be in `plugin` folder and activated - use it for testing the app as a block in WordPress.
 
-`npm run plugin-build` - created an optimised version for the app as a WordPress block
+`npm run plugin-build` - created an optimized version for the app as a WordPress block.
 
-`npm run linux:make-zip` - this will start the `plugin-build` and pack it in a zip file in `./development` folder - use the zip to install the plugin on stagging site for testing - this will work on system that supports linux environment and command - **must run `./delopment/linux_setup.sh` for installing the zip command**
+`npm run linux:make-zip` - this will start the `plugin-build` and pack it in a zip file in `./development` folder - use the zip to install the plugin on stagging site for testing - this will work on a system that supports Linux environment and command - **must run `./delopment/linux_setup.sh` for installing the zip command**.
 
 `npm run gen-docs` - generate the docs
 
@@ -64,7 +64,7 @@ yarn install
 
 `npm run lint` - check for issues in the Typescript file in `./src` folder using EsLint
 
-## Recomended Tools
+## Recommended Tools
 
 The coding style is enforced using [ESLint](https://eslint.org/) with [Standard](https://standardjs.com/) as base rules and adjusted to [Typescript](https://www.typescriptlang.org/).
 

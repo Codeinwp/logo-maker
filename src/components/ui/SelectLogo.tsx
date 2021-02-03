@@ -11,7 +11,7 @@ const SelectLogo: React.FunctionComponent<unknown> = () => {
 
     /**
      * Updated logo source of the user interface store
-     * 
+     *
      * @param logo The logo's Svg source
      */
     const setLogo = (logo: LogoSVGImport) => {
@@ -25,12 +25,7 @@ const SelectLogo: React.FunctionComponent<unknown> = () => {
      */
     const renderLogos = () => {
         return logos.map((logo) => (
-            <LogoItem
-                onClick={() => setLogo(logo)}
-                key={logo.id}
-                logo={logo}
-                isSelected={selectedLogoID === logo.id}
-            />
+            <LogoItem onClick={() => setLogo(logo)} key={logo.id} logo={logo} isSelected={selectedLogoID === logo.id} />
         ))
     }
 

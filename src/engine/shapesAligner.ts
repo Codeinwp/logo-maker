@@ -9,7 +9,7 @@ import { settings } from "./settings"
 
 /**
  * The base interface for the output of the function that calculate the dimensions
- * 
+ *
  * Extend this inferface when adding functions to build more shapes
  */
 export interface BaseShapeDimensions {
@@ -32,7 +32,7 @@ export interface BaseShapeDimensions {
 
 /**
  * This function will calculate the dimensions (width & height) based on their computed size (from `bbox()`) and settings for the shapes provided.
- * 
+ *
  * @param shapes The default shapes: logo, title, slogan
  */
 export function calculateDimesionsForBaseShape(shapes: BaseShapheBuilder): BaseShapeDimensions {
@@ -47,8 +47,7 @@ export function calculateDimesionsForBaseShape(shapes: BaseShapheBuilder): BaseS
     let titleDim
     if (title.length() > 0) {
         titleDim = {
-            height:
-                settings.title.margins.top + title.bbox().height + settings.title.margins.bottom,
+            height: settings.title.margins.top + title.bbox().height + settings.title.margins.bottom,
             width: settings.title.margins.left + title.bbox().width + settings.title.margins.bottom,
         }
     } else {
@@ -61,10 +60,8 @@ export function calculateDimesionsForBaseShape(shapes: BaseShapheBuilder): BaseS
     let sloganDim
     if (slogan.length() > 0) {
         sloganDim = {
-            height:
-                settings.slogan.margins.top + slogan.bbox().height + settings.slogan.margins.bottom,
-            width:
-                settings.slogan.margins.left + slogan.bbox().width + settings.slogan.margins.bottom,
+            height: settings.slogan.margins.top + slogan.bbox().height + settings.slogan.margins.bottom,
+            width: settings.slogan.margins.left + slogan.bbox().width + settings.slogan.margins.bottom,
         }
     } else {
         sloganDim = {
@@ -82,18 +79,14 @@ export function calculateDimesionsForBaseShape(shapes: BaseShapheBuilder): BaseS
 
 /**
  * This function will compare the size of the current viewbox of the parent to the provided width and height of the container.
- * 
+ *
  * The function contains an internal parameter for calculating the size of container's margins.
- * 
+ *
  * @param parent The Svg element that serves as parent
  * @param containerWidth The width of the container, usually calculated by the allignment fuction
  * @param containerHeight The height of the container, usually calculated by the allignment fuction
  */
-export function autoscallingBaseShapes(
-    parent: Svg,
-    containerWidth: number,
-    containerHeight: number
-): void {
+export function autoscallingBaseShapes(parent: Svg, containerWidth: number, containerHeight: number): void {
     const marginSize = 0.2 // percentage
 
     const currentViewBox = parent.viewbox()
@@ -108,7 +101,7 @@ export function autoscallingBaseShapes(
 
 /**
  * The base interface for the output of the function that calculate the dimensions
- * 
+ *
  * Extend this inferface when adding functions to align more shapes
  */
 export interface BaseAlignerOutput {
@@ -120,7 +113,7 @@ export interface BaseAlignerOutput {
 
 /**
  * This function will allgin the shapes based on Top Logo pattern from design
- * 
+ *
  * @param shapes The shapes to be alligned
  */
 export function alignLogoTop<S extends BaseShapheBuilder>(shapes: S): BaseAlignerOutput {
@@ -147,7 +140,7 @@ export function alignLogoTop<S extends BaseShapheBuilder>(shapes: S): BaseAligne
 
 /**
  * This function will allgin the shapes based on Left Logo pattern from design
- * 
+ *
  * @param shapes The shapes to be alligned
  */
 export function alignLogoLeft<S extends BaseShapheBuilder>(shapes: S): BaseAlignerOutput {
@@ -160,10 +153,7 @@ export function alignLogoLeft<S extends BaseShapheBuilder>(shapes: S): BaseAlign
         settings.textContainer.margins.left +
         settings.textContainer.margins.right
     const textContainerHeight =
-        titleDim.height +
-        sloganDim.height +
-        settings.textContainer.margins.top +
-        settings.textContainer.margins.bottom
+        titleDim.height + sloganDim.height + settings.textContainer.margins.top + settings.textContainer.margins.bottom
 
     // the elements are vertically stacked,
     // so the width of the container is equal with the width of the largest element
@@ -194,7 +184,7 @@ export function alignLogoLeft<S extends BaseShapheBuilder>(shapes: S): BaseAlign
 
 /**
  * This function will allgin the shapes based on Right Logo pattern from design
- * 
+ *
  * @param shapes The shapes to be alligned
  */
 export function alignLogoRight<S extends BaseShapheBuilder>(shapes: S): BaseAlignerOutput {
@@ -207,10 +197,7 @@ export function alignLogoRight<S extends BaseShapheBuilder>(shapes: S): BaseAlig
         settings.textContainer.margins.left +
         settings.textContainer.margins.right
     const textContainerHeight =
-        titleDim.height +
-        sloganDim.height +
-        settings.textContainer.margins.top +
-        settings.textContainer.margins.bottom
+        titleDim.height + sloganDim.height + settings.textContainer.margins.top + settings.textContainer.margins.bottom
 
     // the elements are vertically stacked,
     // so the width of the container is equal with the width of the largest element
@@ -237,9 +224,9 @@ export function alignLogoRight<S extends BaseShapheBuilder>(shapes: S): BaseAlig
 
 /**
  * This function will allign the shapes to the center of the Svg parent.
- * 
+ *
  * Use this after using an allign function.
- * 
+ *
  * @param parent The Svg element that serves as parent
  * @param shapes The saphes to be moved to the center of the container
  * @param properties The output of the function that alligned the shapes

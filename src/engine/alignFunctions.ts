@@ -70,10 +70,8 @@ export const alignLogoTop = (props: LogoProps, draw: Svg): ContainerData => {
         }
     } else {
         titleDim = {
-            height:
-                settings.title.margins.top + titleSVG.bbox().height + settings.title.margins.bottom,
-            width:
-                settings.title.margins.left + titleSVG.bbox().width + settings.title.margins.bottom,
+            height: settings.title.margins.top + titleSVG.bbox().height + settings.title.margins.bottom,
+            width: settings.title.margins.left + titleSVG.bbox().width + settings.title.margins.bottom,
         }
     }
 
@@ -102,14 +100,8 @@ export const alignLogoTop = (props: LogoProps, draw: Svg): ContainerData => {
         }
     } else {
         sloganDim = {
-            height:
-                settings.slogan.margins.top +
-                sloganSVG.bbox().height +
-                settings.slogan.margins.bottom,
-            width:
-                settings.slogan.margins.left +
-                sloganSVG.bbox().width +
-                settings.slogan.margins.bottom,
+            height: settings.slogan.margins.top + sloganSVG.bbox().height + settings.slogan.margins.bottom,
+            width: settings.slogan.margins.left + sloganSVG.bbox().width + settings.slogan.margins.bottom,
         }
     }
 
@@ -202,10 +194,8 @@ export const alignLogoLeft = (props: LogoProps, draw: Svg): ContainerData => {
         }
     } else {
         titleDim = {
-            height:
-                settings.title.margins.top + titleSVG.bbox().height + settings.title.margins.bottom,
-            width:
-                settings.title.margins.left + titleSVG.bbox().width + settings.title.margins.bottom,
+            height: settings.title.margins.top + titleSVG.bbox().height + settings.title.margins.bottom,
+            width: settings.title.margins.left + titleSVG.bbox().width + settings.title.margins.bottom,
         }
     }
 
@@ -232,14 +222,8 @@ export const alignLogoLeft = (props: LogoProps, draw: Svg): ContainerData => {
         }
     } else {
         sloganDim = {
-            height:
-                settings.slogan.margins.top +
-                sloganSVG.bbox().height +
-                settings.slogan.margins.bottom,
-            width:
-                settings.slogan.margins.left +
-                sloganSVG.bbox().width +
-                settings.slogan.margins.bottom,
+            height: settings.slogan.margins.top + sloganSVG.bbox().height + settings.slogan.margins.bottom,
+            width: settings.slogan.margins.left + sloganSVG.bbox().width + settings.slogan.margins.bottom,
         }
     }
 
@@ -344,10 +328,8 @@ export const alignLogoRight = (props: LogoProps, draw: Svg): ContainerData => {
         }
     } else {
         titleDim = {
-            height:
-                settings.title.margins.top + titleSVG.bbox().height + settings.title.margins.bottom,
-            width:
-                settings.title.margins.left + titleSVG.bbox().width + settings.title.margins.bottom,
+            height: settings.title.margins.top + titleSVG.bbox().height + settings.title.margins.bottom,
+            width: settings.title.margins.left + titleSVG.bbox().width + settings.title.margins.bottom,
         }
     }
 
@@ -374,14 +356,8 @@ export const alignLogoRight = (props: LogoProps, draw: Svg): ContainerData => {
         }
     } else {
         sloganDim = {
-            height:
-                settings.slogan.margins.top +
-                sloganSVG.bbox().height +
-                settings.slogan.margins.bottom,
-            width:
-                settings.slogan.margins.left +
-                sloganSVG.bbox().width +
-                settings.slogan.margins.bottom,
+            height: settings.slogan.margins.top + sloganSVG.bbox().height + settings.slogan.margins.bottom,
+            width: settings.slogan.margins.left + sloganSVG.bbox().width + settings.slogan.margins.bottom,
         }
     }
 

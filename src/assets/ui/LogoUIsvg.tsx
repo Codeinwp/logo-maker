@@ -37,20 +37,8 @@ const LogoUIsvg: React.FunctionComponent<{
                 strokeLinecap="round"
                 strokeLinejoin="round"
             />
-            <path
-                d="M18 18V3"
-                stroke="white"
-                strokeWidth="1.5"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-            />
-            <path
-                d="M18 18V33"
-                stroke="white"
-                strokeWidth="1.5"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-            />
+            <path d="M18 18V3" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+            <path d="M18 18V33" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
             <path
                 d="M18.0001 18L4.93506 10.455"
                 stroke="white"

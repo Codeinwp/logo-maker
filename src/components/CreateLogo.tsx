@@ -1,13 +1,4 @@
 import * as React from "react"
-// import { SVG } from "@svgdotjs/svg.js"
-// import {
-//     alignLogoLeft,
-//     alignLogoRight,
-//     alignLogoTop,
-//     autoscallingBaseShapes,
-//     alignShapesToCenter,
-// } from "../engine/shapesAligner"
-// import { buildDefaultShapes } from "../engine/shapesBuilder"
 import { v4 as uuidv4 } from "uuid"
 import { StoreProps, TLogo, TLogoContainer, TSlogan, TTitle } from "~/src/stores/UIStore"
 import { buildPipelines } from "../engine/pipeline"
@@ -43,49 +34,12 @@ const CreateLogo: React.FunctionComponent<CreateLogoPropsComponent> = (props: Cr
         // console.log(props.logoProps)
         if (divRef.current && props.logoProps) {
             /**
-             * Create the SVG parent
+             * Create the final logo
              */
-            // const container = props.logoProps.container
-            divRef.current.textContent = ""
-            buildPipelines(props.logoProps as StoreProps).editor(divRef.current).addClass(props?.className || "")
-            
-            // const vb = container.viewbox
-            // const draw = SVG()
-            //     .addTo(divRef.current)
-            //     .size(container.width, container.height)
-            //     .viewbox(vb.x, vb.y, vb.width, vb.height)
-            //     .css("background-color", container.style.color)
-            //     .addClass(props?.className || "")
-
-            // /**
-            //  * Create the base shapes & align them
-            //  */
-            // const shapes = buildDefaultShapes(draw, props.logoProps)
-
-            // /**
-            //  * TODO: refactor this switch, make it a separate function
-            //  */
-            // let alignerProps
-            // switch (props.logoProps.container.align) {
-            //     case "align-top":
-            //         alignerProps = alignLogoTop(shapes)
-            //         break
-            //     case "align-left":
-            //         alignerProps = alignLogoLeft(shapes)
-            //         break
-            //     case "align-right":
-            //         alignerProps = alignLogoRight(shapes)
-            //         break
-            //     default:
-            //         console.log("Invalid Type. The logo will be aligned top as a fallback option!")
-            //         alignerProps = alignLogoTop(shapes)
-            // }
-
-            // /**
-            //  * Additional transformations
-            //  */
-            // autoscallingBaseShapes(draw, alignerProps.containerWidth, alignerProps.containerHeight)
-            // alignShapesToCenter(draw, shapes, alignerProps)
+            divRef.current.textContent = "" // clear the old logo
+            buildPipelines(props.logoProps as StoreProps)
+                .createEditor(divRef.current)
+                .addClass(props?.className || "")
         }
     }, [props, props?.className, props.logoProps])
 
