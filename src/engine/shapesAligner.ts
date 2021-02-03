@@ -6,6 +6,7 @@ import { Svg } from "@svgdotjs/svg.js"
 
 import { BaseShapheBuilder } from "./shapesBuilder"
 import { settings } from "./settings"
+import { LogoAlignOptions } from "../components/ui/SelectLayout"
 
 /**
  * The base interface for the output of the function that calculate the dimensions
@@ -245,4 +246,21 @@ export function alignShapesToCenter<S extends BaseShapheBuilder>(
     logo.center(logo.cx() + xOffsetToCenter, logo.cy() + yOffsetToCenter)
     title.center(title.cx() + xOffsetToCenter, title.cy() + yOffsetToCenter)
     slogan.center(slogan.cx() + xOffsetToCenter, slogan.cy() + yOffsetToCenter)
+}
+
+export function alignShapesWithOption<S extends BaseShapheBuilder>(
+    option: LogoAlignOptions,
+    shapes: S
+): BaseAlignerOutput {
+    switch (option) {
+        case "align-top":
+            return alignLogoTop(shapes)
+        case "align-left":
+            return alignLogoLeft(shapes)
+        case "align-right":
+            return alignLogoRight(shapes)
+        default:
+            console.warn("Invalid Type. The logo will be aligned top as a fallback option!")
+            return alignLogoTop(shapes)
+    }
 }

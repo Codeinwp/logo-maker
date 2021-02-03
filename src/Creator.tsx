@@ -240,7 +240,7 @@ const Creator: React.FunctionComponent<unknown> = () => {
                     </div>
                 </div>
             </div>
-            <div id="rendering" className="rendering-section favicon"></div>
+            <div id="rendering" className="rendering-section"></div>
         </div>
     )
 }

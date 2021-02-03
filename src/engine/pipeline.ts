@@ -5,13 +5,7 @@
  */
 import { Svg, SVG } from "@svgdotjs/svg.js"
 import { StoreProps } from "../stores/UIStore"
-import {
-    alignLogoLeft,
-    alignLogoRight,
-    alignLogoTop,
-    autoscallingBaseShapes,
-    alignShapesToCenter,
-} from "./shapesAligner"
+import { autoscallingBaseShapes, alignShapesToCenter, alignShapesWithOption } from "./shapesAligner"
 import { buildDefaultShapes } from "./shapesBuilder"
 
 export type PipelineOptions = "editor" | "favicon"
@@ -40,25 +34,7 @@ export function buildPipelines(_props: StoreProps): PipelinesOutput {
              * Create the base shapes & align them
              */
             const shapes = buildDefaultShapes(draw, props)
-
-            /**
-             * TODO: refactor this switch, make it a separate function
-             */
-            let alignerProps
-            switch (props.container.align) {
-                case "align-top":
-                    alignerProps = alignLogoTop(shapes)
-                    break
-                case "align-left":
-                    alignerProps = alignLogoLeft(shapes)
-                    break
-                case "align-right":
-                    alignerProps = alignLogoRight(shapes)
-                    break
-                default:
-                    console.log("Invalid Type. The logo will be aligned top as a fallback option!")
-                    alignerProps = alignLogoTop(shapes)
-            }
+            const alignerProps = alignShapesWithOption(props.container.align, shapes)
 
             /**
              * Additional transformations
@@ -74,7 +50,6 @@ export function buildPipelines(_props: StoreProps): PipelinesOutput {
                 ..._props,
                 container: {
                     ..._props.container,
-                    align: "align-top",
                     width: 345,
                     height: 281,
                     viewbox: {
@@ -109,7 +84,7 @@ export function buildPipelines(_props: StoreProps): PipelinesOutput {
              * Create the base shapes & align them
              */
             const shapes = buildDefaultShapes(draw, props)
-            const alignerProps = alignLogoTop(shapes)
+            const alignerProps = alignShapesWithOption("align-top", shapes)
 
             /**
              * Additional transformations
