@@ -160,7 +160,7 @@ const SelectColor: React.FunctionComponent<unknown> = () => {
                     <input
                         id="input-color-background"
                         value={inputValues.background}
-                        onChange={(e) => onInputChangeFor("background", e.target.value)}
+                        onChange={(e) => onInputChangeFor("background", (e?.target as HTMLInputElement).value)}
                     />
                 </div>
                 {isColorEditorOpen.background && (
@@ -186,7 +186,7 @@ const SelectColor: React.FunctionComponent<unknown> = () => {
                     <input
                         id="input-color-logo"
                         value={inputValues.logo}
-                        onChange={(e) => onInputChangeFor("logo", e.target.value)}
+                        onChange={(e) => onInputChangeFor("logo", (e?.target as HTMLInputElement).value)}
                     />
                 </div>
                 {isColorEditorOpen.logo && (
@@ -214,7 +214,7 @@ const SelectColor: React.FunctionComponent<unknown> = () => {
                         id="input-color-title"
                         value={inputValues.title}
                         placeholder="Add a color in HEX format."
-                        onChange={(e) => onInputChangeFor("title", e.target.value)}
+                        onChange={(e) => onInputChangeFor("title", (e?.target as HTMLInputElement).value)}
                     />
                 </div>
                 {isColorEditorOpen.title && (
@@ -240,7 +240,7 @@ const SelectColor: React.FunctionComponent<unknown> = () => {
                     <input
                         id="input-color-slogan"
                         value={inputValues.slogan}
-                        onChange={(e) => onInputChangeFor("slogan", e.target.value)}
+                        onChange={(e) => onInputChangeFor("slogan", (e?.target as HTMLInputElement).value)}
                     />
                 </div>
                 {isColorEditorOpen.slogan && (

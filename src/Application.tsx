@@ -73,7 +73,7 @@ export const Application: React.FunctionComponent<unknown> = () => {
     }, [])
 
     return (
-        <React.Fragment>
+        <>
             <Router>
                 <Switch>
                     <Route path="/creator">
@@ -87,7 +87,7 @@ export const Application: React.FunctionComponent<unknown> = () => {
                     </Route>
                 </Switch>
             </Router>
-        </React.Fragment>
+        </>
     )
 }
 

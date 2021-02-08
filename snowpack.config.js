@@ -34,5 +34,7 @@ module.exports = {
   },
   alias: {
     /* ... */
+    "react": "preact/compat",
+    "react-dom": "preact/compat"
   },
 };

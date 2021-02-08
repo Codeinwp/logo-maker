@@ -9,7 +9,7 @@ export type SelectLogoProps = {
     /** The flag that indicates if the component is selected in the user interface */
     isSelected?: boolean
     /** The function that will trigger when the component is preset */
-    onClick: (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void
+    onClick: (event: MouseEvent) => void
 }
 
 /**
@@ -37,7 +37,7 @@ const LogoItem: React.FunctionComponent<SelectLogoProps> = (props: SelectLogoPro
         }
     }, [logo.svg, props?.isSelected])
 
-    return <button onClick={onClick} ref={itemRef}></button>
+    return <button onClick={ onClick } ref={itemRef}></button>
 }
 
 export default LogoItem

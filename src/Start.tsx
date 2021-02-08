@@ -84,14 +84,14 @@ const Start: React.FunctionComponent<unknown> = () => {
                         type="text"
                         id="input-logo-text"
                         value={UIStore.useState((s) => s.title.text)}
-                        onChange={(e) => setTitleText(e.target.value)}
+                        onChange={(e) => setTitleText((e?.target as HTMLInputElement).value)}
                     />
                     <label>Slogan text (Optional)</label>
                     <input
                         type="text"
                         id="input-logo-slogan"
                         value={UIStore.useState((s) => s.slogan.text)}
-                        onChange={(e) => setSloganText(e.target.value)}
+                        onChange={(e) => setSloganText((e?.target as HTMLInputElement).value)}
                     />
                 </div>
                 <div className="next">

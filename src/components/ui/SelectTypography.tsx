@@ -97,7 +97,7 @@ const SelectTypography: React.FunctionComponent<unknown> = () => {
                 <input
                     id="input-typography-text"
                     value={UIStore.useState((s) => s.title.text)}
-                    onChange={(e) => onTitleTextChange(e.target.value)}
+                    onChange={(e) => onTitleTextChange((e?.target as HTMLInputElement).value)}
                 />
                 <label htmlFor="select-title-font-family">Font Family</label>
                 <Select
@@ -126,7 +126,7 @@ const SelectTypography: React.FunctionComponent<unknown> = () => {
                 <input
                     id="input-typography-slogan"
                     value={UIStore.useState((s) => s.slogan.text)}
-                    onChange={(e) => onSloganTextChange(e.target.value)}
+                    onChange={(e) => onSloganTextChange((e?.target as HTMLInputElement).value)}
                 />
                 <label htmlFor="select-slogan-font-family">Font Family</label>
                 <Select
