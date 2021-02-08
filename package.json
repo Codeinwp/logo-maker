@@ -5,7 +5,7 @@
   "scripts": {
     "start": "snowpack dev",
     "start-plugin": "webpack --watch --mode development",
-    "plugin-build": "webpack",
+    "plugin-build": "webpack --mode production",
     "linux:make-zip": "npm run plugin-build && zip -r logo_maker_plugin.zip index.php plugin_build && mv logo_maker_plugin.zip development/",
     "gen-docs": "npx typedoc",
     "format": "prettier --write \"src/**/*.{js,jsx,ts,tsx}\"",
