@@ -97,10 +97,15 @@ const Showcase: React.FunctionComponent<unknown> = () => {
     const setTemplate = (index: number) => {
         UIStore.update((s) => {
             s.logo.src = logos[index]
+
             s.container.style.color = colors[index]
             s.container.align = aligns[index]
+
             s.title.style.fontFamily = fontsList[index].title
+            s.title.style.fontSize = 32
+
             s.slogan.style.fontFamily = fontsList[index].slogan
+            s.slogan.style.fontSize = 16
         })
     }
 
@@ -152,7 +157,7 @@ const Showcase: React.FunctionComponent<unknown> = () => {
                                 style: {
                                     ...store.title.style,
                                     fontFamily: fontsList[index].title,
-                                    fontSize: 24,
+                                    fontSize: 32,
                                 },
                             },
                             slogan: {
@@ -160,7 +165,7 @@ const Showcase: React.FunctionComponent<unknown> = () => {
                                 style: {
                                     ...store.slogan.style,
                                     fontFamily: fontsList[index].slogan,
-                                    fontSize: 12,
+                                    fontSize: 16,
                                 },
                             },
                         }}
