@@ -6,8 +6,8 @@ import UIStore from "./stores/UIStore"
 
 import { presets } from "./assets/fonts/index"
 
-import BackUI from "./assets/ui/BackUI"
-import ThemeisleUI from "./assets/ui/ThemeisleUI"
+import BackUI from "./components/ui/common/BackUI"
+import ThemeisleUI from "./components/ui/common/ThemeisleUI"
 import classnames from "classnames"
 import presetColors from "./assets/colors"
 import "../src/assets/styles/Showcase/showcase.scss"

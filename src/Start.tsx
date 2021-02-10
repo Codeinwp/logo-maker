@@ -4,10 +4,10 @@
 
 import * as React from "react"
 import { Link } from "react-router-dom"
-import ThemeisleUI from "./assets/ui/ThemeisleUI"
+import ThemeisleUI from "./components/ui/common/ThemeisleUI"
 import UIStore from "./stores/UIStore"
 import "../src/assets/styles/Start/start.scss"
-import BackUI from "./assets/ui/BackUI"
+import BackUI from "./components/ui/common/BackUI"
 
 import ReactGA from "react-ga"
 

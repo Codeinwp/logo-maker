@@ -1,7 +1,7 @@
 import * as React from "react"
 import classnames from "classnames"
-import HorizontalLineUIsvg from "../../assets/ui/HorizontalLineUIsvg"
-import LogoUIsvg from "../../assets/ui/LogoUIsvg"
+import HorizontalLineUIsvg from "./common/HorizontalLineUIsvg"
+import LogoUIsvg from "./common/LogoUIsvg"
 import UIStore from "../../stores/UIStore"
 
 export type LogoAlignOptions = "align-top" | "align-left" | "align-right"
