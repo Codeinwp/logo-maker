@@ -2,7 +2,7 @@
 
 ## A tale of two brothers.
 
-### For the moment, there two main parts: the user interface and the rendering engine ( and the backend, maybe in the future).
+### For the moment, there are two main parts: the user interface and the rendering engine ( and the backend, maybe in the future).
 
 The user interface includes all the components that the user can see. Every page has its own React component. E.g.: `/#/showcase/` -> `Showcase.tsx`. The building blocks for these components are in `assets` and `components` on the `src` folder. For passing data through components, we use a state manager similar to React's hooks - see the `store` folder.
 
