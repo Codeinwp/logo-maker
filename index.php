@@ -71,7 +71,7 @@ function logo_maker_assets()
         }
 
         if (!defined('BLOGNAME_GA_CODE')) {
-            define('BLOGNAME_GA_CODE', 'UA-46661241-4');
+            define('BLOGNAME_GA_CODE', 'UA-185452427-2');
         }
 
         wp_localize_script('logo-maker-asset', 'logomaker', array(
