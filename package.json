@@ -1,7 +1,7 @@
 {
   "name": "logo-maker-plugin",
   "description": "A simple editor for creating logos - with support for WordPress.",
-  "version": "1.7.0",
+  "version": "1.7.1",
   "scripts": {
     "start": "snowpack dev",
     "start-plugin": "webpack --watch --mode development",
