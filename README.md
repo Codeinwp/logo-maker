@@ -2,7 +2,8 @@
 
 Logo Maker is a react app built with [Typescript](https://www.typescriptlang.org/) created for designing simple logos.
 
-![Main Build](https://github.com/Codeinwp/logo-maker/workflows/Deploy%20on%20staging/badge.svg)
+![Live Build](https://github.com/Codeinwp/logo-maker/workflows/Deploy%20on%20live/badge.svg)
+![Staging Build](https://github.com/Codeinwp/logo-maker/workflows/Deploy%20on%20staging/badge.svg)
 
 ## Installation on WordPress
 

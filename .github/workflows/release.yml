@@ -1,4 +1,4 @@
-name: Deploy on staging
+name: Deploy on live
 
 on:
     release:
