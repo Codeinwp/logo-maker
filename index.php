@@ -4,7 +4,7 @@
  * Plugin Name: Logo Maker WordPress Plugin
  * Plugin URI: https://github.com/Codeinwp/logo-maker
  * Description: Logo Maker as plugin for WordPress
- * Version: 1.7.1
+ * Version: 1.7.3
  * Author: Soare Robert Daniel
  *
  * @package logo-maker
