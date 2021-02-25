@@ -10,4 +10,8 @@ The star of this application is the rendering engine. The engine has two main jo
 
 ## Overview
 
+The application has two separate build pipelines: the WordPress block and the LogoMaker app. The LogoMaker can run separately from WordPress; all you need to this to make sure that `logo-maker.js` is on the page and has a root parent ("#themeisle-logo-maker-root").
+
+If you want to extend the WordPress plugin, you work in `./wordpress` using webpack with the command `npm run start-plugin`. For developing LogoMaker, you have `./src` and the command `npm run start` for running without WordPress using SnowPack.
+
 ![Overview](development/Overview.png)
