@@ -15,24 +15,9 @@ module.exports = {
     // ],
     // ["@snowpack/plugin-webpack"],
   ],
-  install: [
-    /* ... */
-  ],
-  installOptions: {
-    /* ... */
-  },
-  devOptions: {
-    /* ... */
-  },
   buildOptions: {
     /* ... */
     baseUrl: '/logo-maker-editor',
     clean: true
-  },
-  proxy: {
-    /* ... */
-  },
-  alias: {
-    /* ... */
   },
 };

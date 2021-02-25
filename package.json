@@ -79,7 +79,7 @@
     "prettier": "^2.2.1",
     "sass": "^1.32.8",
     "sass-loader": "^10.1.1",
-    "snowpack": "^2.18.5",
+    "snowpack": "^3.0.0",
     "style-loader": "^2.0.0",
     "ts-loader": "^8.0.17",
     "typedoc": "^0.20.28",

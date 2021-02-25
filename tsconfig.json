@@ -18,14 +18,14 @@
     "strict": true,
     /* Specify module resolution strategy */
     "moduleResolution": "node",
-    /* Base directory to resolve non-absolute module names */
-    "baseUrl": "./",
-    /* Maps imports to locations - e.g. ~models will go to ./src/models */
-    "paths": {
-      "~/*": [
-        "./*"
-      ]
-    },
+    // /* Base directory to resolve non-absolute module names */
+    // "baseUrl": "./",
+    // /* Maps imports to locations - e.g. ~models will go to ./src/models */
+    // "paths": {
+    //   "~/*": [
+    //     "./*"
+    //   ]
+    // },
     /* List of folders to include type definitions from */
     "typeRoots": [
       "node_modules/@types"
