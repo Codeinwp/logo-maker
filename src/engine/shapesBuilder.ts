@@ -3,7 +3,7 @@
  *
  * There two kins of shapes: essential and extra.
  *
- * The esstial shapes form the base - which is a foundation of the final logo, so almost every generated logo will contains the shapes from the base
+ * The essential shapes form the base - which is a foundation of the final logo, so almost every generated logo will contains the shapes from the base
  * The extras form the extended - those shapes appaer only in some pattters
  *
  */

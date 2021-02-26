@@ -104,7 +104,7 @@ const SelectTypography: React.FunctionComponent<unknown> = () => {
                     id="select-title-font-family"
                     className="font-select"
                     isSearchable={false}
-                    defaultValue={fontOptions.filter(({ value }) => value === defaultTitleFontFamily)[0]}
+                    defaultValue={fontOptions.filter(({ value }) => value === defaultTitleFontFamily)[0] || {value: 'Arial', label: 'Arial'}}
                     onChange={onTitleFontFamilyChange}
                     options={fontOptions}
                     styles={disableBoxShadow}
@@ -114,7 +114,7 @@ const SelectTypography: React.FunctionComponent<unknown> = () => {
                     id="select-title-font-size"
                     className="font-select"
                     isSearchable={false}
-                    defaultValue={titleSizeOptions.filter(({ value }) => value === defaultTitleFontSize)}
+                    defaultValue={titleSizeOptions.filter(({ value }) => value === defaultTitleFontSize)[0] || {value: 53, label: '53'}}
                     options={titleSizeOptions}
                     onChange={onTitleFontSizeChange}
                     styles={disableBoxShadow}
@@ -133,7 +133,7 @@ const SelectTypography: React.FunctionComponent<unknown> = () => {
                     id="select-slogan-font-family"
                     className="font-select"
                     isSearchable={false}
-                    defaultValue={fontOptions.filter(({ value }) => value === defaultSloganFontFamily)}
+                    defaultValue={fontOptions.filter(({ value }) => value === defaultSloganFontFamily)[0] || {value: 'Arial', label: 'Arial'}}
                     onChange={onSloganFontFamilyChange}
                     options={fontOptions}
                     styles={disableBoxShadow}
@@ -143,7 +143,7 @@ const SelectTypography: React.FunctionComponent<unknown> = () => {
                     id="select-slogan-font-size"
                     className="font-select"
                     isSearchable={false}
-                    defaultValue={sloganSizeOptions.filter(({ value }) => value === defaultSloganFontSize)}
+                    defaultValue={sloganSizeOptions.filter(({ value }) => value === defaultSloganFontSize)[0] || {value: 24, label: '24'}}
                     options={sloganSizeOptions}
                     onChange={onSloganFontSizeChange}
                     styles={disableBoxShadow}

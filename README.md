@@ -17,6 +17,9 @@ The hard way: go to the plugin folder of the WordPress and then `git clone https
 
 ## Getting starter on development
 
+**Don't forget to read the Architecture to see details about the code.**
+**For developing in the plugin mod, you need to have a WordPress site installed on the computer or in a container.**
+
 Before you venture into the development of the Logo Maker, you need to have:
 
 -   [Node Js](https://nodejs.org/en/) with npm & npx
@@ -81,10 +84,12 @@ The coding style is enforced using [ESLint](https://eslint.org/) with [Standard]
         -   ESLint
         -   Prettier
         -   Git Graphs
+        -   Git Lens
         -   Gruvbox Minor
         -   Path Intellisense
         -   vscode-icons
         -   Visual Studio IntelliCode
+        -   Docker
 
 -   WebStorm
 
