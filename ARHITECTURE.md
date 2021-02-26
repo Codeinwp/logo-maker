@@ -28,12 +28,16 @@ The jewelry of this project is the engine for rendering the final logo. The user
 
 **For the math part, I recommend looking at some basics linear algebra on youtube. It is enough for this stage of the project.**
 
-### Code arhitecture
+### Code flow and arhitecture
 
-Developers who can keep a clean and maintainable code architecture are worth their weight in gold. At the moment of the writing of this paragraph, the LogoMaker has 50 logos and three options for alignment. Since it is not significant, the general structure of code use function composition and higher-order function - named 'the pipeline.'. The general flow of the code act as a pipeline: data comes from the store -> create the essential shapes -> create the extra shapes -> align the shapes -> return the SVG -> export the SVG to formats like PNG, WEBP, JPEG in a zip file.
+Developers who can keep a clean and maintainable code architecture are worth their weight in gold. At the moment of the writing of this paragraph, the LogoMaker has 50 logos and three options for alignment. Since it is not significant, the general structure of code use function composition and higher-order function - named 'the great pipeline.'. The general flow of the code act as a pipeline: data comes from the store -> create the essential shapes -> create the extra shapes -> align the shapes -> move, resize, rescale -> return the SVG -> export the SVG to formats like PNG, WEBP, JPEG in a zip file.
 
 The great pipeline has two main parts: the render pipelines and the exporter.
 
-The render pipeline has the job of producing the SVGs that are going to the exporter. They are in the `\engine\pipeline.ts` and formed from builders and aligners. The types provided by TypeScript dictate the order of the functions - to use an aligner, you need to give the necessary shapes
+The render pipeline has the job of producing the SVGs that are going to the exporter. They are in the `\engine\pipeline.ts` and formed from builders and aligners. The types provided by TypeScript dictate the order of the functions - to use an aligner, you need to give the necessary shapesm, and so on. At this moment, there are two render pipelines: the one that produces the final logo named `createEditor` and one specialized for favicon named `createFavicon`
 
 The exporter has the job of producing images that are going to be downloaded by the user after finishing the logo's design. The developer must be aware of creating images from SVG in Javascript in different browsers ( the most notable being Safari ).
+
+### Extending
+
+In the future, the LogoMaker might be problematic with multiple alignment options, shapes, settings, etc. There are different paradigms for dealing with the code's structure; you might opt for a functional or an OOP paradigm. **In any of these cases, you must be aware of the [cargo cult](https://en.wikipedia.org/wiki/Cargo_cult_programming).** Take time to plan and sketch the new structure of 'the great pipeline'.
