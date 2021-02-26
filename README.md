@@ -22,11 +22,24 @@ The hard way: go to the plugin folder of the WordPress and then `git clone https
 
 Before you venture into the development of the Logo Maker, you need to have:
 
--   [Node Js](https://nodejs.org/en/) with npm & npx
--   [Git](https://git-scm.com/)
+-   [Node Js](https://nodejs.org/en/) with npm & npx - available in the docker container
+-   [Git](https://git-scm.com/) - available in the docker container
 -   Text Editor / IDE (see Recommended Tools)
 
+### Developing in containers
+
+With Docker, you can develop the app in standalone and plugin mode. Docker will create two containers: a WordPress server and a database server by running `docker-compose up`. For working in these containers, you need to have tools that work remotely. Visual Studio Code can give you a seamless experience with the (Docker plugin)[https://code.visualstudio.com/docs/containers/overview] - with one click; you can start developing.
+
+#### Connecting with terminal
+
+```bash
+docker exec -it otter-blocks_wordpress_1 bash # enter in the WordPress server and acces the bash shell
+cd /var/www/html/wp-content/plugins/logo-maker # go the location of the project
+```
+
 ## Installation
+
+**If you are using the Docker compose file in this project, skip the download part and install the npm packages.**
 
 Using npm
 
