@@ -49,14 +49,13 @@ function logo_maker_assets()
 
         if (!file_exists($script_asset_path)) {
             throw new Error(
-                'You need to run `npm start` or `npm run build` for the "plugins/qr-code-generator-block" block first.'
+                'You need to run `npm run start-build` or `npm run plugin-build` to generate the assets file.'
             );
         }
-        $index_js     = 'plugin_build/index.js';
-        $script_asset = require($script_asset_path);
 
+        $script_asset = require($script_asset_path);
         $logo_maker_js = "plugin_build/logo-maker.js";
-        $source_map = "plugin_build/logo-maker.js.map";
+        // $source_map = "plugin_build/logo-maker.js.map";
 
         wp_enqueue_script(
             "logo-maker-asset",
