@@ -2,7 +2,6 @@
 const path = require("path");
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 const DependencyExtractionWebpackPlugin = require( '@wordpress/dependency-extraction-webpack-plugin' );
-const CompressionPlugin = require("compression-webpack-plugin");
 
 module.exports = {
 	entry: {
@@ -33,11 +32,11 @@ module.exports = {
 		// ...defaultConfig.output,
 		filename: "[name].js",
 		path: path.resolve(__dirname, "plugin_build"),
+		clean: true
 	},
 
 	plugins: [
 		new DependencyExtractionWebpackPlugin(),
-		new BundleAnalyzerPlugin(),
-		new CompressionPlugin()
+		new BundleAnalyzerPlugin()
 	]
 };

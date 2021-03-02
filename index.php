@@ -54,7 +54,7 @@ function logo_maker_assets()
         }
 
         $script_asset = require($script_asset_path);
-        $logo_maker_js = "plugin_build/logo-maker.js.gz";
+        $logo_maker_js = "plugin_build/logo-maker.js";
         // $source_map = "plugin_build/logo-maker.js.map";
 
         wp_enqueue_script(
