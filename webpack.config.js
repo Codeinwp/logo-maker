@@ -3,27 +3,7 @@ const path = require("path");
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 const DependencyExtractionWebpackPlugin = require( '@wordpress/dependency-extraction-webpack-plugin' );
 const GoogleFontsPlugin = require("@beyonk/google-fonts-webpack-plugin")
-
-const webpackFonts = [
-    {
-        family: "Open Sans"
-    },
-    {
-        family: "Roboto"
-    },
-    {
-        family: "Dancing Script"
-    },
-    {
-        family: "Oswald"
-    },
-    {
-        family: "Montserrat"
-    },
-    {
-        family: "Permanent Marker"
-    },
-]
+const webpackFonts = require("./webpack.fonts")
 
 module.exports = {
 	entry: {

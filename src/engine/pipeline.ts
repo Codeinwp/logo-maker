@@ -15,7 +15,7 @@ export interface PipelinesOutput {
     createFavicon: (parent: HTMLDivElement) => Svg
 }
 
-export function buildPipelines(_props: StoreProps): PipelinesOutput {
+export function buildPipelines(_props: StoreProps ): PipelinesOutput {
     return {
         createEditor: (parent: HTMLDivElement): Svg => {
             /**
@@ -29,11 +29,37 @@ export function buildPipelines(_props: StoreProps): PipelinesOutput {
                 .size(container.width, container.height)
                 .viewbox(vb.x, vb.y, vb.width, vb.height)
                 .css("background-color", container.style.color)
+                // .css("opacity", 0)
+                .addClass("svg-animations")
 
             /**
              * Create the base shapes & align them
              */
             const shapes = buildDefaultShapes(draw, props)
+
+            /**
+             * For fonts that are not native to the browser
+             * we need to redo the alingment, 
+             * because the browser it might a fallback font before it loads the actual font
+             * and cause an eror in the positions since we do not use the actual font
+             */
+            setTimeout( () => {
+                /**
+                 * Align the shapes
+                 */
+                const alignerProps = alignShapesWithOption(props.container.align, shapes)
+
+                /**
+                 * Additional transformations
+                 */
+                // autoscallingBaseShapes(draw, alignerProps.containerWidth, alignerProps.containerHeight)
+                alignShapesToCenter(draw, shapes, alignerProps)
+                draw.css("opacity", 1)
+            }, 100)
+
+            /**
+             * Align the shapes
+             */
             const alignerProps = alignShapesWithOption(props.container.align, shapes)
 
             /**

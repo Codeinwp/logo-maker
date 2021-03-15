@@ -76,7 +76,6 @@ export function buildDefaultShapes(parent: Svg, componentsProps: LogoProps): Bas
             fill: pTitle.style.color,
             family: pTitle.style.fontFamily,
             size: pTitle.style.fontSize + "px",
-            weight: "400",
         })
         .leading(0)
 
@@ -85,7 +84,7 @@ export function buildDefaultShapes(parent: Svg, componentsProps: LogoProps): Bas
             fill: pSlogan.style.color,
             family: pSlogan.style.fontFamily,
             size: pSlogan.style.fontSize + "px",
-            weight: "400",
+
         })
         .leading(0)
 

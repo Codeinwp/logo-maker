@@ -66,7 +66,7 @@ function logo_maker_assets()
 
         wp_enqueue_style(
             'logo-maker-asset-fonts',
-            plugins_url( '/build/fonts.css', __FILE__ ),
+            plugins_url( '/plugin_build/fonts.css', __FILE__ ),
             [],
             $script_asset['version']
         );

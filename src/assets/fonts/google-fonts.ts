@@ -1,5 +1,4 @@
 const fonts = [
-    "Times New Romans",
     "Helvetica",
     "Open Sans",
     "Roboto",

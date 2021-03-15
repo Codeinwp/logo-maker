@@ -5,6 +5,7 @@ import Creator from "./Creator"
 import Showcase from "./Showcase"
 import Start from "./Start"
 import ReactGA from "react-ga"
+import { AssetsStore } from "./stores/AssetsStore"
 
 /**
  * This is the main entry point of the application
@@ -70,6 +71,18 @@ export const Application: React.FunctionComponent<unknown> = () => {
         //         s.fonts.activeFonts = fontsList // Array.from(fontSet)
         //     })
         // })
+
+        document.fonts.ready.then(() => {
+            const fontSet = new Set<string>()
+
+            document.fonts.forEach((f) => {
+                fontSet.add(f.family)
+            })
+
+            AssetsStore.update((s) => {
+                s.fonts.activeFonts = [ ...fontSet ]
+            })
+        })
     }, [])
 
     return (

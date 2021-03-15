@@ -1,6 +1,7 @@
 dependencies:
   '@beyonk/google-fonts-webpack-plugin': 1.5.0_webpack@5.25.1
   '@svgdotjs/svg.js': 3.0.16
+  '@types/css-font-loading-module': 0.0.4
   classnames: 2.2.6
   constants: 0.0.2
   core-js: 3.9.1
@@ -1320,6 +1321,10 @@ packages:
     dev: true
     resolution:
       integrity: sha512-2koNhpWm3DgWRp5tpkiJ8JGc1xTn2q0l+jUNUE7oMKXUf5NpI9AIdC4kbjGNFBdHtcxBD18LAksoudAVhFKCjw==
+  /@types/css-font-loading-module/0.0.4:
+    dev: false
+    resolution:
+      integrity: sha512-ENdXf7MW4m9HeDojB2Ukbi7lYMIuQNBHVf98dbzaiG4EEJREBd6oleVAjrLRCrp7dm6CK1mmdmU9tcgF61acbw==
   /@types/eslint-scope/3.7.0:
     dependencies:
       '@types/eslint': 7.2.7
@@ -9591,6 +9596,7 @@ specifiers:
   '@svgdotjs/svg.js': ^3.0.16
   '@types/chai': ^4.2.15
   '@types/classnames': ^2.2.11
+  '@types/css-font-loading-module': ^0.0.4
   '@types/file-saver': ^2.0.1
   '@types/react': ^16.14.5
   '@types/react-color': ^3.0.4

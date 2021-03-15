@@ -3,7 +3,7 @@
   "description": "A simple editor for creating logos - with support for WordPress.",
   "version": "1.7.3",
   "scripts": {
-    "start": "snowpack dev",
+    "start": "snowpack dev --polyfill-node",
     "start-plugin": "webpack --watch --mode development",
     "plugin-build": "webpack --mode production",
     "linux:make-zip": "npm run plugin-build && zip -r logo_maker_plugin.zip index.php plugin_build && mv logo_maker_plugin.zip development/",
@@ -14,6 +14,7 @@
   "dependencies": {
     "@beyonk/google-fonts-webpack-plugin": "^1.5.0",
     "@svgdotjs/svg.js": "^3.0.16",
+    "@types/css-font-loading-module": "^0.0.4",
     "classnames": "^2.2.6",
     "constants": "0.0.2",
     "core-js": "^3.9.1",
