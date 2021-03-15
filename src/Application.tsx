@@ -1,5 +1,5 @@
 import * as React from "react"
-import { HashRouter as Router, Switch, Route } from "react-router-dom"
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom"
 import "./assets/styles/index.scss"
 import Creator from "./Creator"
 import Showcase from "./Showcase"

@@ -33,7 +33,36 @@ const fonts = [
     "Parisienne",
 ]
 
-export const presets = [
+type WebpackFont = {
+    family: string,
+    variants?: string[]
+    subsets?: string[]
+    formats?: string[]
+    display?: string
+}
+
+export const webpackFonts: WebpackFont[] = [
+    {
+        family: "Open Sans"
+    },
+    {
+        family: "Roboto"
+    },
+    {
+        family: "Dancing Script"
+    },
+    {
+        family: "Oswald"
+    },
+    {
+        family: "Montserrat"
+    },
+    {
+        family: "Permanent Marker"
+    },
+]
+
+export const googleFontsPresets = [
     {
         title: "Open Sans",
         slogan: "Roboto",
@@ -97,4 +126,9 @@ export const presets = [
 ]
 
 fonts.sort()
+
+export const isFontFromGoogle = (font: string): boolean => {
+    return fonts.includes(font)
+} 
+
 export default fonts
