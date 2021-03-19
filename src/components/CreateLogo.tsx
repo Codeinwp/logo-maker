@@ -3,6 +3,7 @@ import { v4 as uuidv4 } from "uuid"
 import { StoreProps, TLogo, TLogoContainer, TSlogan, TTitle } from "../stores/UIStore"
 import { buildPipelines } from "../engine/pipeline"
 import { Svg } from "@svgdotjs/svg.js"
+import { AssetsStore } from "../stores/AssetsStore"
 
 export type CreateLogoPropsComponent = {
     /** The id of the parent element */
@@ -31,6 +32,7 @@ const CreateLogo: React.FunctionComponent<CreateLogoPropsComponent> = (props: Cr
     const divRef = React.useRef<HTMLDivElement>(null)
     const ID = props.id || `image-logo-${uuidv4()}`
     const [, setResult] = React.useState<Svg>()
+    const fontRenderers = AssetsStore.useState( s => s.fonts.fontRenderers)
 
     React.useEffect(() => {
         // console.log(props.logoProps)
@@ -40,14 +42,15 @@ const CreateLogo: React.FunctionComponent<CreateLogoPropsComponent> = (props: Cr
              */
             divRef.current.textContent = "" // clear the old logo
             const svg = buildPipelines(
-                    props.logoProps as StoreProps
+                    props.logoProps as StoreProps,
+                    fontRenderers
                 )
                 .createEditor(divRef.current)
                 .addClass(props?.className || "")
             setResult( svg )
             
         }
-    }, [props?.className, props.logoProps])
+    }, [props?.className, props.logoProps, fontRenderers])
 
     return <div id={ID} ref={divRef}></div>
 }

@@ -84,6 +84,7 @@ function logo_maker_assets()
         wp_localize_script('logo-maker-asset', 'logomaker', array(
             'parentLink'           => $parent_link,
             'googleAnalyticsCode'  => BLOGNAME_GA_CODE,
+            'pluginURL'            => plugin_dir_url(__FILE__)
             //If we are logged in, nonce is invalid unless we pass X-WP-Nonce,
             // which is problematic on cached environment. For now we use a hardcoded token.
         ));

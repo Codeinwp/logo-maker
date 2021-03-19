@@ -1,9 +1,9 @@
 // LEGACY
 
 import { SVG, Svg } from "@svgdotjs/svg.js"
-import { TLogo, TLogoContainer, TSlogan, TTitle } from "../stores/UIStore"
+import { TLogo, TLogoContainer, TSlogan, TTitle } from "../../stores/UIStore"
 import { settings } from "./settings"
-import { Elements } from "./utility"
+import { Elements } from "../utility"
 
 const autoScallingFactor = 1.3
 const marginFactor = 0.7

@@ -73,6 +73,7 @@ declare module "color-scheme" {
 type LogoMaker = {
     parentLink?: string
     googleAnalyticsCode?: string
+    pluginURL?: string
 }
 
 // declare const logomaker: LogoMaker | undefined

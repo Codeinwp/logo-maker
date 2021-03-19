@@ -1,7 +1,7 @@
 // LEGACY
 
 import { Svg, Text } from "@svgdotjs/svg.js"
-import { ContainerData } from "./alignFunctions"
+import { ContainerData } from "./render/alignFunctions"
 
 export type Elements = {
     logoSVG: Svg
@@ -35,6 +35,15 @@ export const moveToCenter = (
     sloganSVG.center(sloganSVG.cx() + xOffsetToCenter, sloganSVG.cy() + yOffsetToCenter)
 
     return container.containerElems
+}
+
+export function buildFontSourceFileURL(font: string): string | null {
+    if( window.logomaker.pluginURL ) {
+        const fileName = font.split(' ').join('') + '-Regular.ttf'
+        return window.logomaker.pluginURL + 'plugin_build/font/' + fileName;
+    }
+
+    return null
 }
 
 // export const addEmbeddedFont = (draw: Svg, font: string): void => {

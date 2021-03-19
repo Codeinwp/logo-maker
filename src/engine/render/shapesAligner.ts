@@ -6,7 +6,7 @@ import { Svg } from "@svgdotjs/svg.js"
 
 import { BaseShapheBuilder } from "./shapesBuilder"
 import { settings } from "./settings"
-import { LogoAlignOptions } from "../components/ui/SelectLayout"
+import { LogoAlignOptions } from "../../components/ui/SelectLayout"
 
 /**
  * The base interface for the output of the function that calculate the dimensions
@@ -45,31 +45,38 @@ export function calculateDimesionsForBaseShape(shapes: BaseShapheBuilder): BaseS
         width: settings.logo.margins.left + logo.width() + settings.logo.margins.bottom,
     }
 
-    let titleDim
-    if (title.length() > 0) {
-        titleDim = {
-            height: settings.title.margins.top + title.bbox().height + settings.title.margins.bottom,
-            width: settings.title.margins.left + title.bbox().width + settings.title.margins.bottom,
-        }
-    } else {
-        titleDim = {
-            width: 0,
-            height: 0,
-        }
-    }
+    // console.log(title.bbox() )
+    const titleDim = {
+        height: settings.title.margins.top + title.bbox().height + settings.title.margins.bottom,
+        width: settings.title.margins.left + title.bbox().width + settings.title.margins.bottom,
+    };
+    // if ((title as Text)?.length() > 0) {
+    //     titleDim = {
+    //         height: settings.title.margins.top + title.bbox().height + settings.title.margins.bottom,
+    //         width: settings.title.margins.left + title.bbox().width + settings.title.margins.bottom,
+    //     }
+    // } else {
+    //     titleDim = {
+    //         width: 0,
+    //         height: 0,
+    //     }
+    // }
 
-    let sloganDim
-    if (slogan.length() > 0) {
-        sloganDim = {
-            height: settings.slogan.margins.top + slogan.bbox().height + settings.slogan.margins.bottom,
-            width: settings.slogan.margins.left + slogan.bbox().width + settings.slogan.margins.bottom,
-        }
-    } else {
-        sloganDim = {
-            width: 0,
-            height: 0,
-        }
+    const sloganDim = {
+        height: settings.slogan.margins.top + slogan.bbox().height + settings.slogan.margins.bottom,
+        width: settings.slogan.margins.left + slogan.bbox().width + settings.slogan.margins.bottom,
     }
+    // if (slogan.length() > 0) {
+    //     sloganDim = {
+    //         height: settings.slogan.margins.top + slogan.bbox().height + settings.slogan.margins.bottom,
+    //         width: settings.slogan.margins.left + slogan.bbox().width + settings.slogan.margins.bottom,
+    //     }
+    // } else {
+    //     sloganDim = {
+    //         width: 0,
+    //         height: 0,
+    //     }
+    // }
 
     return {
         logoDim,
@@ -133,6 +140,8 @@ export function alignLogoTop<S extends BaseShapheBuilder>(shapes: S): BaseAligne
     title.move(cx - titleDim.width / 2, logoDim.height)
     slogan.move(cx - sloganDim.width / 2, logoDim.height + titleDim.height)
 
+    console.log(cx - titleDim.width / 2, logoDim.height, cx)
+
     return {
         containerHeight,
         containerWidth,
@@ -176,6 +185,7 @@ export function alignLogoLeft<S extends BaseShapheBuilder>(shapes: S): BaseAlign
         logoDim.width + ctx - sloganDim.width / 2,
         cy + titleDim.height / 2 // + sloganDim.height / 2
     )
+
 
     return {
         containerHeight,

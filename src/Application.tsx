@@ -5,7 +5,11 @@ import Creator from "./Creator"
 import Showcase from "./Showcase"
 import Start from "./Start"
 import ReactGA from "react-ga"
-import { AssetsStore } from "./stores/AssetsStore"
+import { AssetsStore, FontRenderers } from "./stores/AssetsStore"
+import { buildFontSourceFileURL } from "./engine/utility"
+import { isFontFromGoogle } from "./assets/fonts/google-fonts"
+import opentype from "opentype.js"
+import { transformTextToSVG } from "./engine/render/textToSVG"
 
 /**
  * This is the main entry point of the application
@@ -76,12 +80,52 @@ export const Application: React.FunctionComponent<unknown> = () => {
             const fontSet = new Set<string>()
 
             document.fonts.forEach((f) => {
-                fontSet.add(f.family)
+                if (isFontFromGoogle(f.family)) {
+                    fontSet.add(f.family)
+                    const fileURL = buildFontSourceFileURL(f.family)
+                    if (fileURL) {
+                        fetch(fileURL, {
+                            method: "HEAD",
+                            mode: "cors",
+                        }).then((resp) => {
+                            if (resp.ok) {
+                                return f.family
+                            }
+                            return null
+                        })
+                    }
+                }
             })
 
-            AssetsStore.update((s) => {
-                s.fonts.activeFonts = [ ...fontSet ]
+            const fontPaths = Array.from(fontSet).map((font) => {
+                return {
+                    font: font,
+                    path: buildFontSourceFileURL(font),
+                }
             })
+
+            const fontRequets = fontPaths
+                .filter((fontPath) => fontPath.path)
+                .map(async (font) => {
+                    const renderer = await opentype.load( font.path || '' )
+                    return {
+                        font: font.font,
+                        renderer: renderer
+                    }
+                })
+            
+            Promise.all(fontRequets).then( fontRenderers => {
+                console.log( fontRenderers )
+                // transformTextToSVG(fontRenderers[0].renderer, 'Hey', 52)
+                AssetsStore.update((s) => {
+                    s.fonts.fontRenderers = fontRenderers.reduce( (fontRenderers: FontRenderers, font): FontRenderers => {
+                        fontRenderers[font.font] = font.renderer
+                        return fontRenderers 
+                    }, {})
+                    s.fonts.activeFonts = fontRenderers.map( ({font}) => font)
+                })
+            })
+            
         })
     }, [])
 
