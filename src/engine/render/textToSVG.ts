@@ -4,7 +4,7 @@ import { FontRenderers } from '../../stores/AssetsStore'
 import { TSlogan, TTitle } from '../../stores/UIStore'
 
 export function transformTextToSVG(parent: Svg, font: opentype.Font,text: string, fontSize: number): Svg {
-    const path = font.getPath(text, 0, Math.round( fontSize * 0.75 ), fontSize)
+    const path = font.getPath(text, 0, Math.round( fontSize * 0.8 ), fontSize)
     // console.log(SVG().svg(path.toSVG(2)))
 
     return SVG().addTo(parent).svg(path.toSVG(2))

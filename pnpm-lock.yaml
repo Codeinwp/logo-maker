@@ -1,5 +1,6 @@
 dependencies:
   '@beyonk/google-fonts-webpack-plugin': 1.5.0_webpack@5.25.1
+  '@loadable/component': 5.14.1_react@17.0.1
   '@svgdotjs/svg.js': 3.0.16
   '@types/css-font-loading-module': 0.0.4
   classnames: 2.2.6
@@ -30,6 +31,7 @@ devDependencies:
   '@types/chai': 4.2.15
   '@types/classnames': 2.2.11
   '@types/file-saver': 2.0.1
+  '@types/loadable__component': 5.13.3
   '@types/opentype.js': 1.3.1
   '@types/react': 16.14.5
   '@types/react-color': 3.0.4
@@ -1187,6 +1189,19 @@ packages:
       react: '*'
     resolution:
       integrity: sha512-QPcGmICAPbGLGb6F/yNf/KzKqvFx8z5qx3D1yFqVAjoFmXK35EgyW+cJ57Te3CNsmzblwtzakLGFqHPqrfb4Tw==
+  /@loadable/component/5.14.1_react@17.0.1:
+    dependencies:
+      '@babel/runtime': 7.13.10
+      hoist-non-react-statics: 3.3.2
+      react: 17.0.1
+      react-is: 16.13.1
+    dev: false
+    engines:
+      node: '>=8'
+    peerDependencies:
+      react: '>=16.3.0'
+    resolution:
+      integrity: sha512-UQBZfZrp1FLTf8RNhljXNHFNY4QhAA1L2+GOEeABBFre9TD0aFyQh3Sai5QxcOfy+FTbjIfti5iHaNRR7yUzEQ==
   /@nodelib/fs.scandir/2.1.4:
     dependencies:
       '@nodelib/fs.stat': 2.0.4
@@ -1361,6 +1376,12 @@ packages:
     dev: true
     resolution:
       integrity: sha1-7ihweulOEdK4J7y+UnC86n8+ce4=
+  /@types/loadable__component/5.13.3:
+    dependencies:
+      '@types/react': 16.14.5
+    dev: true
+    resolution:
+      integrity: sha512-nkRRYpKxspH9yiYGSvyfM7GX1m57B9AVMrVEWY7Hlv9ueK2XCu39M5QyBTDHXcj5qixdD+MyAmNgoy2dEDxGLQ==
   /@types/node/14.14.34:
     dev: true
     resolution:
@@ -9611,6 +9632,7 @@ specifiers:
   '@babel/preset-react': ^7.12.13
   '@babel/runtime': ^7.13.10
   '@beyonk/google-fonts-webpack-plugin': ^1.5.0
+  '@loadable/component': ^5.14.1
   '@snowpack/plugin-build-script': ^2.1.0
   '@snowpack/plugin-dotenv': ^2.0.5
   '@snowpack/plugin-react-refresh': ^2.4.0
@@ -9622,6 +9644,7 @@ specifiers:
   '@types/classnames': ^2.2.11
   '@types/css-font-loading-module': ^0.0.4
   '@types/file-saver': ^2.0.1
+  '@types/loadable__component': ^5.13.3
   '@types/opentype.js': ^1.3.1
   '@types/react': ^16.14.5
   '@types/react-color': ^3.0.4
