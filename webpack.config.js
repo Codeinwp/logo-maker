@@ -39,7 +39,9 @@ module.exports = {
 
 	plugins: [
 		new DependencyExtractionWebpackPlugin(),
-		new BundleAnalyzerPlugin(),
+		new BundleAnalyzerPlugin({
+			analyzerMode: 'static'
+		}),
 		new GoogleFontsPlugin({
 			fonts: webpackFonts
 			/* ...options */
