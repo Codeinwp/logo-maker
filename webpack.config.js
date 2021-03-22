@@ -3,7 +3,7 @@ const path = require("path");
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 const DependencyExtractionWebpackPlugin = require( '@wordpress/dependency-extraction-webpack-plugin' );
 const GoogleFontsPlugin = require("@beyonk/google-fonts-webpack-plugin")
-const webpackFonts = require("./webpack.fonts")
+const webpackFonts = require("./webpack.fonts.json")
 
 module.exports = {
 	entry: {
@@ -36,7 +36,6 @@ module.exports = {
 		path: path.resolve(__dirname, "plugin_build"),
 		clean: true
 	},
-
 	plugins: [
 		new DependencyExtractionWebpackPlugin(),
 		new BundleAnalyzerPlugin({

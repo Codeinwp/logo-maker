@@ -83,6 +83,13 @@ const SelectTypography: React.FunctionComponent<unknown> = () => {
             ...base,
             boxShadow: "none",
         }),
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        option: (styles: Record<string, any>, { data } : { data: { label: string, value: string }}) => {
+            return {
+                ...styles,
+                fontFamily: ! Number.isInteger(Number.parseInt(data.value)) ? data.value : 'Nato Sans'
+            }
+        }
     }
 
     const defaultTitleFontFamily = UIStore.useState((s) => s.title.style.fontFamily)
