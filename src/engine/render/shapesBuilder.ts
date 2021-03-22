@@ -69,7 +69,6 @@ export function buildDefaultShapes(parent: Svg, componentsProps: LogoProps, font
     const title = isFontFromGoogle(pTitle.style.fontFamily) && fontRenderers ? buildTextToSVG(parent, pTitle, fontRenderers) || parent.text(pTitle.text)  : parent.text(pTitle.text)
     const slogan = isFontFromGoogle(pSlogan.style.fontFamily) && fontRenderers ? buildTextToSVG(parent, pSlogan, fontRenderers) || parent.text(pSlogan.text)  : parent.text(pSlogan.text)
 
-    console.log(isFontFromGoogle(pSlogan.style.fontFamily))
     // Apply other properties
     logo.viewbox(0, 0, logo.bbox().width, logo.bbox().height + 5)
         .size(pLogo.width, pLogo.height)

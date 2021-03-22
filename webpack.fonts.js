@@ -63,6 +63,36 @@ const familyFonts = [
     {
         family: "Noto Serif"
     },
+    {
+        family: "Noto Sans"
+    },
+    {
+        family: "Anton"
+    },
+    {
+        family: "Lora"
+    },
+    {
+        family: "Rajdhani"
+    },
+    {
+        family: "Ubuntu"
+    },
+    {
+        family: "Lemonada"
+    },
+    {
+        family: "Source Serif Pro"
+    },
+    {
+        family: "Oleo Script Swash Caps"
+    },
+    {
+        family: "Creepster"
+    },
+    {
+        family: "UnifrakturMaguntia"
+    }
 ]
 
 module.exports = familyFonts
