@@ -32,7 +32,7 @@ const SelectTypography: React.FunctionComponent<unknown> = () => {
     /**
      * Generate the font options
      */
-    const fontOptions = [...fonts, ...(AssetsStore.useState((s) => s.fonts.activeFonts).filter( font => isFontFromGoogle(font)))].map((font) => ({
+    const fontOptions = [...fonts, ...(AssetsStore.useState((s) => s.fonts.activeFonts).filter( font => isFontFromGoogle(font)))].sort().map((font) => ({
         value: font,
         label: font,
     }))

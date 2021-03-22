@@ -45,38 +45,17 @@ export function calculateDimesionsForBaseShape(shapes: BaseShapheBuilder): BaseS
         width: settings.logo.margins.left + logo.width() + settings.logo.margins.bottom,
     }
 
-    // console.log(title.bbox() )
     const titleDim = {
-        height: settings.title.margins.top + title.bbox().height + settings.title.margins.bottom,
-        width: settings.title.margins.left + title.bbox().width + settings.title.margins.bottom,
+        height: title.bbox().height + ( (title.bbox().height > 0) ? settings.title.margins.top  + settings.title.margins.bottom : 0 ) ,
+        width: title.bbox().width + ((title.bbox().width > 0)  ?  settings.title.margins.left  + settings.title.margins.bottom : 0 ) ,
     };
-    // if ((title as Text)?.length() > 0) {
-    //     titleDim = {
-    //         height: settings.title.margins.top + title.bbox().height + settings.title.margins.bottom,
-    //         width: settings.title.margins.left + title.bbox().width + settings.title.margins.bottom,
-    //     }
-    // } else {
-    //     titleDim = {
-    //         width: 0,
-    //         height: 0,
-    //     }
-    // }
 
     const sloganDim = {
-        height: settings.slogan.margins.top + slogan.bbox().height + settings.slogan.margins.bottom,
-        width: settings.slogan.margins.left + slogan.bbox().width + settings.slogan.margins.bottom,
+        height: slogan.bbox().height + ((slogan.bbox().height > 0) ? settings.slogan.margins.top  + settings.slogan.margins.bottom : 0),
+        width: slogan.bbox().width + ((slogan.bbox().width > 0) ? settings.slogan.margins.left  + settings.slogan.margins.bottom : 0),
     }
-    // if (slogan.length() > 0) {
-    //     sloganDim = {
-    //         height: settings.slogan.margins.top + slogan.bbox().height + settings.slogan.margins.bottom,
-    //         width: settings.slogan.margins.left + slogan.bbox().width + settings.slogan.margins.bottom,
-    //     }
-    // } else {
-    //     sloganDim = {
-    //         width: 0,
-    //         height: 0,
-    //     }
-    // }
+
+    // console.log('DIM',titleDim, sloganDim)
 
     return {
         logoDim,
@@ -140,7 +119,7 @@ export function alignLogoTop<S extends BaseShapheBuilder>(shapes: S): BaseAligne
     title.move(cx - titleDim.width / 2, logoDim.height)
     slogan.move(cx - sloganDim.width / 2, logoDim.height + titleDim.height)
 
-    console.log(cx - titleDim.width / 2, logoDim.height, cx)
+    // console.log(cx - titleDim.width / 2, logoDim.height, cx)
 
     return {
         containerHeight,

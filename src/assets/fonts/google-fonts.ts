@@ -1,6 +1,7 @@
 const fonts = [
     "Helvetica",
     "Open Sans",
+    "Bangers",
     "Roboto",
     "Dancing Script",
     "Henny Penny",
@@ -30,6 +31,8 @@ const fonts = [
     "Lobster Two",
     "Orbitron",
     "Parisienne",
+    "Playball",
+    "Noto Serif"
 ]
 
 type WebpackFont = {
