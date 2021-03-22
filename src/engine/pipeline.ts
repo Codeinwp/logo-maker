@@ -4,9 +4,10 @@
  * Another pipeline might be rendering a favicon, which builds only the logo, without title or slogan.
  */
 import { Svg, SVG } from "@svgdotjs/svg.js"
+import { FontRenderers } from "../stores/AssetsStore"
 import { StoreProps } from "../stores/UIStore"
-import { autoscallingBaseShapes, alignShapesToCenter, alignShapesWithOption } from "./shapesAligner"
-import { buildDefaultShapes } from "./shapesBuilder"
+import { autoscallingBaseShapes, alignShapesToCenter, alignShapesWithOption } from "./render/shapesAligner"
+import { buildDefaultShapes } from "./render/shapesBuilder"
 
 export type PipelineOptions = "editor" | "favicon"
 
@@ -15,7 +16,7 @@ export interface PipelinesOutput {
     createFavicon: (parent: HTMLDivElement) => Svg
 }
 
-export function buildPipelines(_props: StoreProps): PipelinesOutput {
+export function buildPipelines(_props: StoreProps, _fontRenderers?: FontRenderers ): PipelinesOutput {
     return {
         createEditor: (parent: HTMLDivElement): Svg => {
             /**
@@ -29,11 +30,37 @@ export function buildPipelines(_props: StoreProps): PipelinesOutput {
                 .size(container.width, container.height)
                 .viewbox(vb.x, vb.y, vb.width, vb.height)
                 .css("background-color", container.style.color)
+                // .css("opacity", 0)
+                .addClass("svg-animations")
 
             /**
              * Create the base shapes & align them
              */
-            const shapes = buildDefaultShapes(draw, props)
+            const shapes = buildDefaultShapes(draw, props,  _fontRenderers)
+
+            // /**
+            //  * For fonts that are not native to the browser
+            //  * we need to redo the alingment, 
+            //  * because the browser it might a fallback font before it loads the actual font
+            //  * and cause an eror in the positions since we do not use the actual font
+            //  */
+            // setTimeout( () => {
+            //     /**
+            //      * Align the shapes
+            //      */
+            //     const alignerProps = alignShapesWithOption(props.container.align, shapes)
+
+            //     /**
+            //      * Additional transformations
+            //      */
+            //     // autoscallingBaseShapes(draw, alignerProps.containerWidth, alignerProps.containerHeight)
+            //     alignShapesToCenter(draw, shapes, alignerProps)
+            //     draw.css("opacity", 1)
+            // }, 100)
+
+            /**
+             * Align the shapes
+             */
             const alignerProps = alignShapesWithOption(props.container.align, shapes)
 
             /**
@@ -83,7 +110,7 @@ export function buildPipelines(_props: StoreProps): PipelinesOutput {
             /**
              * Create the base shapes & align them
              */
-            const shapes = buildDefaultShapes(draw, props)
+            const shapes = buildDefaultShapes(draw, props,  _fontRenderers)
             const alignerProps = alignShapesWithOption("align-top", shapes)
 
             /**

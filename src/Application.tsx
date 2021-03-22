@@ -1,10 +1,15 @@
 import * as React from "react"
-import { HashRouter as Router, Switch, Route } from "react-router-dom"
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom"
 import "./assets/styles/index.scss"
 import Creator from "./Creator"
 import Showcase from "./Showcase"
 import Start from "./Start"
 import ReactGA from "react-ga"
+import { AssetsStore, FontRenderers } from "./stores/AssetsStore"
+import { buildFontSourceFileURL } from "./engine/utility"
+import { isFontFromGoogle } from "./assets/fonts/google-fonts"
+import opentype from "opentype.js"
+import { transformTextToSVG } from "./engine/render/textToSVG"
 
 /**
  * This is the main entry point of the application
@@ -70,6 +75,58 @@ export const Application: React.FunctionComponent<unknown> = () => {
         //         s.fonts.activeFonts = fontsList // Array.from(fontSet)
         //     })
         // })
+
+        document.fonts.ready.then(() => {
+            const fontSet = new Set<string>()
+
+            document.fonts.forEach((f) => {
+                if (isFontFromGoogle(f.family)) {
+                    fontSet.add(f.family)
+                    const fileURL = buildFontSourceFileURL(f.family)
+                    if (fileURL) {
+                        fetch(fileURL, {
+                            method: "HEAD",
+                            mode: "cors",
+                        }).then((resp) => {
+                            if (resp.ok) {
+                                return f.family
+                            }
+                            return null
+                        })
+                    }
+                }
+            })
+
+            const fontPaths = Array.from(fontSet).map((font) => {
+                return {
+                    font: font,
+                    path: buildFontSourceFileURL(font),
+                }
+            })
+
+            const fontRequets = fontPaths
+                .filter((fontPath) => fontPath.path)
+                .map(async (font) => {
+                    const renderer = await opentype.load( font.path || '' )
+                    return {
+                        font: font.font,
+                        renderer: renderer
+                    }
+                })
+            
+            Promise.all(fontRequets).then( fontRenderers => {
+                console.log( fontRenderers )
+                // transformTextToSVG(fontRenderers[0].renderer, 'Hey', 52)
+                AssetsStore.update((s) => {
+                    s.fonts.fontRenderers = fontRenderers.reduce( (fontRenderers: FontRenderers, font): FontRenderers => {
+                        fontRenderers[font.font] = font.renderer
+                        return fontRenderers 
+                    }, {})
+                    s.fonts.activeFonts = fontRenderers.map( ({font}) => font)
+                })
+            })
+            
+        })
     }, [])
 
     return (

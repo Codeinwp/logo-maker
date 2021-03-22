@@ -1,15 +1,9 @@
 import * as React from "react"
 import Select from "react-select"
 import { fontsList as fonts } from "../../assets/fonts/index"
+import { AssetsStore } from "../../stores/AssetsStore"
 import UIStore from "../../stores/UIStore"
-
-/**
- * Generate the font options
- */
-const fontOptions = fonts.map((font) => ({
-    value: font,
-    label: font,
-}))
+import { isFontFromGoogle } from "../../assets/fonts/google-fonts"
 
 /**
  * Generate the title size options
@@ -35,6 +29,14 @@ const sloganSizeOptions = [...Array(35).keys()]
  * This function will generate the `Select Typography Meniu` from design
  */
 const SelectTypography: React.FunctionComponent<unknown> = () => {
+    /**
+     * Generate the font options
+     */
+    const fontOptions = [...fonts, ...(AssetsStore.useState((s) => s.fonts.activeFonts).filter( font => isFontFromGoogle(font)))].map((font) => ({
+        value: font,
+        label: font,
+    }))
+
     const onTitleTextChange = (value: string) => {
         UIStore.update((s) => {
             s.title.text = value
@@ -104,7 +106,12 @@ const SelectTypography: React.FunctionComponent<unknown> = () => {
                     id="select-title-font-family"
                     className="font-select"
                     isSearchable={false}
-                    defaultValue={fontOptions.filter(({ value }) => value === defaultTitleFontFamily)[0] || {value: 'Arial', label: 'Arial'}}
+                    defaultValue={
+                        fontOptions.filter(({ value }) => value === defaultTitleFontFamily)[0] || {
+                            value: "Arial",
+                            label: "Arial",
+                        }
+                    }
                     onChange={onTitleFontFamilyChange}
                     options={fontOptions}
                     styles={disableBoxShadow}
@@ -114,7 +121,12 @@ const SelectTypography: React.FunctionComponent<unknown> = () => {
                     id="select-title-font-size"
                     className="font-select"
                     isSearchable={false}
-                    defaultValue={titleSizeOptions.filter(({ value }) => value === defaultTitleFontSize)[0] || {value: 53, label: '53'}}
+                    defaultValue={
+                        titleSizeOptions.filter(({ value }) => value === defaultTitleFontSize)[0] || {
+                            value: 53,
+                            label: "53",
+                        }
+                    }
                     options={titleSizeOptions}
                     onChange={onTitleFontSizeChange}
                     styles={disableBoxShadow}
@@ -133,7 +145,12 @@ const SelectTypography: React.FunctionComponent<unknown> = () => {
                     id="select-slogan-font-family"
                     className="font-select"
                     isSearchable={false}
-                    defaultValue={fontOptions.filter(({ value }) => value === defaultSloganFontFamily)[0] || {value: 'Arial', label: 'Arial'}}
+                    defaultValue={
+                        fontOptions.filter(({ value }) => value === defaultSloganFontFamily)[0] || {
+                            value: "Arial",
+                            label: "Arial",
+                        }
+                    }
                     onChange={onSloganFontFamilyChange}
                     options={fontOptions}
                     styles={disableBoxShadow}
@@ -143,7 +160,12 @@ const SelectTypography: React.FunctionComponent<unknown> = () => {
                     id="select-slogan-font-size"
                     className="font-select"
                     isSearchable={false}
-                    defaultValue={sloganSizeOptions.filter(({ value }) => value === defaultSloganFontSize)[0] || {value: 24, label: '24'}}
+                    defaultValue={
+                        sloganSizeOptions.filter(({ value }) => value === defaultSloganFontSize)[0] || {
+                            value: 24,
+                            label: "24",
+                        }
+                    }
                     options={sloganSizeOptions}
                     onChange={onSloganFontSizeChange}
                     styles={disableBoxShadow}

@@ -63,6 +63,14 @@ function logo_maker_assets()
             $script_asset['dependencies'],
             $script_asset['version']
         );
+
+        wp_enqueue_style(
+            'logo-maker-asset-fonts',
+            plugins_url( '/plugin_build/fonts.css', __FILE__ ),
+            [],
+            $script_asset['version']
+        );
+
         //  wp_enqueue_script("logo-maker-asset-map", plugins_url($source_map, __FILE__), null, null, true);
         $parent_link = "";
         if ($post->post_parent) {
@@ -76,6 +84,7 @@ function logo_maker_assets()
         wp_localize_script('logo-maker-asset', 'logomaker', array(
             'parentLink'           => $parent_link,
             'googleAnalyticsCode'  => BLOGNAME_GA_CODE,
+            'pluginURL'            => plugin_dir_url(__FILE__)
             //If we are logged in, nonce is invalid unless we pass X-WP-Nonce,
             // which is problematic on cached environment. For now we use a hardcoded token.
         ));
