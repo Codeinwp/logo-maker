@@ -1,5 +1,4 @@
 import fonts from './fonts.json'
-console.log(fonts)
 // const fonts = [
 //     "Helvetica",
 //     "Open Sans",
