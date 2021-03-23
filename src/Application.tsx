@@ -32,16 +32,18 @@ export const Application: React.FunctionComponent<unknown> = () => {
             const fontSet = new Set<string>()
 
             document.fonts.forEach((f) => {
-                if (isFontFromGoogle(f.family)) {
-                    fontSet.add(f.family)
-                    const fileURL = buildFontSourceFileURL(f.family)
+                const cleanedFontFamily = f.family.replace(/"/g, '')
+                // console.log(cleanedFontFamily)
+                if (isFontFromGoogle(cleanedFontFamily)) {
+                    fontSet.add(cleanedFontFamily)
+                    const fileURL = buildFontSourceFileURL(cleanedFontFamily)
                     if (fileURL) {
                         fetch(fileURL, {
                             method: "HEAD",
                             mode: "cors",
                         }).then((resp) => {
                             if (resp.ok) {
-                                return f.family
+                                return cleanedFontFamily
                             }
                             return null
                         })
@@ -56,9 +58,12 @@ export const Application: React.FunctionComponent<unknown> = () => {
                 }
             })
 
+            // console.log(fontPaths)
+
             const fontRequets = fontPaths
                 .filter((fontPath) => fontPath.path)
                 .map(async (font) => {
+                    // console.log(font.path)
                     const renderer = await opentype.load(font.path || "")
                     return {
                         font: font.font,
@@ -67,7 +72,7 @@ export const Application: React.FunctionComponent<unknown> = () => {
                 })
 
             Promise.all(fontRequets).then((fontRenderers) => {
-                console.log(fontRenderers)
+                // console.log(fontRenderers)
                 // transformTextToSVG(fontRenderers[0].renderer, 'Hey', 52)
                 AssetsStore.update((s) => {
                     s.fonts.fontRenderers = fontRenderers.reduce(
