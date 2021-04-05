@@ -69,7 +69,7 @@ const SelectLogo: React.FunctionComponent<unknown> = () => {
                             {children}
                         </div>
                     )}
-                    renderThumb={({ props }) => (
+                    renderThumb={({ props, isDragged }) => (
                         <div
                             {...props}
                             style={{
@@ -99,6 +99,13 @@ const SelectLogo: React.FunctionComponent<unknown> = () => {
                             >
                                 {`${scaleLogo.toFixed(1)}x`}
                             </div>
+                            <div
+                                style={{
+                                    height: "16px",
+                                    width: "5px",
+                                    backgroundColor: isDragged ? "#548BF4" : "#CCC",
+                                }}
+                            />
                         </div>
                     )}
                 />
