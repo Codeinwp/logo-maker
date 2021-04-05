@@ -71,7 +71,7 @@ export function buildDefaultShapes(parent: Svg, componentsProps: LogoProps, font
 
     // Apply other properties
     logo.viewbox(0, 0, logo.bbox().width, logo.bbox().height + 5)
-        .size(pLogo.width, pLogo.height)
+        .size(pLogo.width * pLogo.scale, pLogo.height * pLogo.scale)
         .css("fill", pLogo.style.fill);
 
     if( (title as Text).font !== undefined ) {

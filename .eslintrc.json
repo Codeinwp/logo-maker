@@ -9,10 +9,7 @@
         "plugin:react/recommended",
         "plugin:@typescript-eslint/recommended",
         "standard",
-        "prettier",
-        "prettier/@typescript-eslint",
-        "prettier/react",
-        "prettier/standard"
+        "prettier"
     ],
     "rules": {
         "react-hooks/rules-of-hooks": "error",
