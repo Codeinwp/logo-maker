@@ -37,6 +37,8 @@ export type TLogo = {
     style: {
         fill: string
     }
+    /** Scale */
+    scale: number
 }
 
 /** The title props */
@@ -100,6 +102,7 @@ export const UIStore = new Store<StoreProps>(
             style: {
                 fill: "#FFFFFF",
             },
+            scale: 1
         },
 
         title: {
