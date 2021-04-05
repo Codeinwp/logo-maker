@@ -11,7 +11,7 @@ The easy way: go to `/development` and download the zip file, then upload it on 
 
 The hard way: go to the plugin folder of the WordPress and then `git clone https://github.com/Codeinwp/logo-maker.git`
 
-** To make the `back button` on the Start page work, you need to assign in WordPress a parent page to the page that host the Logo Maker.**
+**To make the `back button` on the Start page work, you need to assign in WordPress a parent page to the page that host the Logo Maker.**
 
 **Make sure that the page that hosts the Logo Maker is empty.**
 
