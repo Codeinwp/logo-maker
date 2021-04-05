@@ -95,6 +95,7 @@ const SelectLogo: React.FunctionComponent<unknown> = () => {
                                     padding: "4px",
                                     borderRadius: "4px",
                                     backgroundColor: "#548BF4",
+                                    lineHeight: "1.2",
                                 }}
                             >
                                 {`${scaleLogo.toFixed(1)}x`}
