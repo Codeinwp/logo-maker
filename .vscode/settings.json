@@ -1,3 +1,5 @@
 {
-    "emmet.showAbbreviationSuggestions": false
+    "emmet.showAbbreviationSuggestions": false,
+    "editor.formatOnSave": true,
+    "vsintellicode.features.python.deepLearning": "enabled"
 }
