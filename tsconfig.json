@@ -28,7 +28,8 @@
     // },
     /* List of folders to include type definitions from */
     "typeRoots": [
-      "node_modules/@types"
+      "node_modules/@types",
+      "types"
     ],
     /* allow import React instead of import * as React */
     "allowSyntheticDefaultImports": true,
@@ -36,6 +37,7 @@
     "esModuleInterop": true,
     "resolveJsonModule": true,
     "skipLibCheck": true,
+    "noImplicitAny": true
   },
   "typedocOptions": {
     "entryPoints": ["./src"],
@@ -44,7 +46,7 @@
   },
   "include": [
     "src",
-    "types",
+    "types/**/*",
     "wordpress"
   ]
 }

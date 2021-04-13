@@ -17,6 +17,7 @@
     "@loadable/component": "^5.14.1",
     "@svgdotjs/svg.js": "^3.0.16",
     "@types/css-font-loading-module": "^0.0.4",
+    "body-scroll-lock": "^3.1.5",
     "classnames": "^2.3.1",
     "constants": "0.0.2",
     "core-js": "^3.10.0",

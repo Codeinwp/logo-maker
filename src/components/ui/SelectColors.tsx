@@ -3,11 +3,13 @@ import { SketchPicker } from "react-color"
 import UIStore from "../../stores/UIStore"
 import presetColors from "../../assets/colors/index"
 import classnames from "classnames"
+import { disableBodyScroll, enableBodyScroll } from 'body-scroll-lock';
 
 /**
  * This function will generate the `Select Coloros Meniu` from design
  */
 const SelectColor: React.FunctionComponent<unknown> = () => {
+
     const [isColorEditorOpen, toggleColorEditor] = React.useState({
         background: false,
         logo: false,
@@ -144,6 +146,15 @@ const SelectColor: React.FunctionComponent<unknown> = () => {
         }
     }
 
+    React.useEffect(() => {
+        const colorPickers = document.querySelectorAll(".sketch-picker")
+
+        colorPickers.forEach((picker) => {
+            picker.addEventListener('touchstart', () => disableBodyScroll(picker as HTMLElement))
+            picker.addEventListener('touchend', () => enableBodyScroll(picker as HTMLElement))
+        })
+    }, [isColorEditorOpen])
+
     return (
         <div className="select-colors">
             <h1>COLOR PALETTE</h1>
@@ -167,7 +178,10 @@ const SelectColor: React.FunctionComponent<unknown> = () => {
                     <SketchPicker
                         color={colors.background}
                         presetColors={presetColors}
-                        onChange={(c) => onInputChangeFor("background", c.hex)}
+                        onChange={(c, event) => {
+                            event.stopPropagation()
+                            onInputChangeFor("background", c.hex)
+                        }}
                         disableAlpha={true}
                     />
                 )}
@@ -193,7 +207,10 @@ const SelectColor: React.FunctionComponent<unknown> = () => {
                     <SketchPicker
                         color={colors.logo}
                         presetColors={presetColors}
-                        onChange={(c) => onInputChangeFor("logo", c.hex)}
+                        onChange={(c, event) => {
+                            event.preventDefault()
+                            onInputChangeFor("logo", c.hex)
+                        }}
                         disableAlpha={true}
                     />
                 )}
@@ -221,7 +238,10 @@ const SelectColor: React.FunctionComponent<unknown> = () => {
                     <SketchPicker
                         color={colors.title}
                         presetColors={presetColors}
-                        onChange={(c) => onInputChangeFor("title", c.hex)}
+                        onChange={(c, event) => {
+                            event.stopPropagation()
+                            onInputChangeFor("title", c.hex)
+                        }}
                         disableAlpha={true}
                     />
                 )}
@@ -245,9 +265,15 @@ const SelectColor: React.FunctionComponent<unknown> = () => {
                 </div>
                 {isColorEditorOpen.slogan && (
                     <SketchPicker
+                        onSwatchHover={(c, event) => {
+                            event.preventDefault()
+                        }}
                         color={colors.slogan}
                         presetColors={presetColors}
-                        onChange={(c) => onInputChangeFor("slogan", c.hex)}
+                        onChange={(c, event) => {
+                            event.stopPropagation()
+                            onInputChangeFor("slogan", c.hex)
+                        }}
                         disableAlpha={true}
                     />
                 )}
