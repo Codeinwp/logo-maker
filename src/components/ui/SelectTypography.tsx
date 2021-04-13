@@ -32,7 +32,7 @@ const SelectTypography: React.FunctionComponent<unknown> = () => {
     /**
      * Generate the font options
      */
-    const fontOptions = [...fonts, ...(AssetsStore.useState((s) => s.fonts.activeFonts).filter( font => isFontFromGoogle(font)))].sort().map((font) => ({
+    const fontOptions = [...fonts, ...(AssetsStore.useState((s) => s.fonts.activeFonts).filter(font => isFontFromGoogle(font)))].sort().map((font) => ({
         value: font,
         label: font,
     }))
@@ -84,10 +84,10 @@ const SelectTypography: React.FunctionComponent<unknown> = () => {
             boxShadow: "none",
         }),
         // eslint-disable-next-line @typescript-eslint/no-explicit-any
-        option: (styles: Record<string, any>, { data } : { data: { label: string, value: string }}) => {
+        option: (styles: Record<string, any>, { data }: { data: { label: string, value: string } }) => {
             return {
                 ...styles,
-                fontFamily: ! Number.isInteger(Number.parseInt(data.value)) ? data.value : 'Nato Sans'
+                fontFamily: !Number.isInteger(Number.parseInt(data.value)) ? data.value : 'Noto Sans'
             }
         }
     }
