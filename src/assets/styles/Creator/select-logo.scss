@@ -23,11 +23,11 @@
 		margin: 5px 0px;
 		
 		.slider {
-			min-width: 250px;
+			min-width: 230px;
 			-webkit-appearance: none;  /* Override default CSS styles */
 			appearance: none;
 			width: 100%; /* Full-width */
-			height: 20px; /* Specified height */
+			height: 15px; /* Specified height */
 			background: #d3d3d3; /* Grey background */
 			outline: none; /* Remove outline */
 			opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
@@ -43,31 +43,32 @@
 		  .slider::-webkit-slider-thumb {
 			-webkit-appearance: none;
 			appearance: none;
-			width: 30px;
-			height: 30px;
+			width: 26px;
+			height: 26px;
 			background: #43C2D1;
 			cursor: pointer;
 			border-radius: 50%;
 		  }
 		  
 		  .slider::-moz-range-thumb {
-			width: 30px;
-			height: 30px;
+			width: 26px;
+			height: 26px;
 			background: #43C2D1;
 			cursor: pointer;
 			border-radius: 50%;
 		  }
 
 		label {
-			font-family: monospace;
+			font-family: 'Courier New', Courier, monospace;
 			margin: 4px;
 			padding: 5px 10px;
-			min-width: 60px;
 			background-color: #43C2D1;
 			color: white;
 			border-radius: 5px;
 			text-align: center;
-			font-size: larger;
+			font-size: 18px;
+			line-height: 1;
+			font-weight: 500;
 		}
 	}
 
