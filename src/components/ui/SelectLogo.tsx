@@ -43,6 +43,7 @@ const SelectLogo: React.FunctionComponent<unknown> = () => {
 
             <div className="size-range">
                 <input
+                    className="slider"
                     type="range"
                     id="size"
                     name="size"
@@ -59,7 +60,7 @@ const SelectLogo: React.FunctionComponent<unknown> = () => {
             <p>Select a symbol for the logo</p>
             <div
                 className="logo-list"
-                // style={{ maxHeight: 150 + "px", overflow: "auto" }}
+            // style={{ maxHeight: 150 + "px", overflow: "auto" }}
             >
                 {renderLogos()}
             </div>
