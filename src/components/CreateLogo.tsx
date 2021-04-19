@@ -32,7 +32,7 @@ const CreateLogo: React.FunctionComponent<CreateLogoPropsComponent> = (props: Cr
     const divRef = React.useRef<HTMLDivElement>(null)
     const ID = props.id || `image-logo-${uuidv4()}`
     const [, setResult] = React.useState<Svg>()
-    const fontRenderers = AssetsStore.useState( s => s.fonts.fontRenderers)
+    const fontRenderers = AssetsStore.useState((s) => s.fonts.fontRenderers)
 
     React.useEffect(() => {
         // console.log(props.logoProps)
@@ -41,14 +41,10 @@ const CreateLogo: React.FunctionComponent<CreateLogoPropsComponent> = (props: Cr
              * Create the final logo
              */
             divRef.current.textContent = "" // clear the old logo
-            const svg = buildPipelines(
-                    props.logoProps as StoreProps,
-                    fontRenderers
-                )
+            const svg = buildPipelines(props.logoProps as StoreProps, fontRenderers)
                 .createEditor(divRef.current)
                 .addClass(props?.className || "")
-            setResult( svg )
-            
+            setResult(svg)
         }
     }, [props?.className, props.logoProps, fontRenderers])
 

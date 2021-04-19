@@ -102,7 +102,7 @@ export const UIStore = new Store<StoreProps>(
             style: {
                 fill: "#FFFFFF",
             },
-            scale: 1
+            scale: 1,
         },
 
         title: {

@@ -3,13 +3,12 @@ import { SketchPicker } from "react-color"
 import UIStore from "../../stores/UIStore"
 import presetColors from "../../assets/colors/index"
 import classnames from "classnames"
-import { disableBodyScroll, enableBodyScroll } from 'body-scroll-lock';
+import { disableBodyScroll, enableBodyScroll } from "body-scroll-lock"
 
 /**
  * This function will generate the `Select Coloros Meniu` from design
  */
 const SelectColor: React.FunctionComponent<unknown> = () => {
-
     const [isColorEditorOpen, toggleColorEditor] = React.useState({
         background: false,
         logo: false,
@@ -150,8 +149,8 @@ const SelectColor: React.FunctionComponent<unknown> = () => {
         const colorPickers = document.querySelectorAll(".sketch-picker")
 
         colorPickers.forEach((picker) => {
-            picker.addEventListener('touchstart', () => disableBodyScroll(picker as HTMLElement))
-            picker.addEventListener('touchend', () => enableBodyScroll(picker as HTMLElement))
+            picker.addEventListener("touchstart", () => disableBodyScroll(picker as HTMLElement))
+            picker.addEventListener("touchend", () => enableBodyScroll(picker as HTMLElement))
         })
     }, [isColorEditorOpen])
 

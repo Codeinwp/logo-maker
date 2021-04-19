@@ -61,46 +61,50 @@ export interface ExtendedShapeBuilder extends BaseShapheBuilder {
  * @param parent The svg that will serve as a parent for the shapes
  * @param componentsProps The propierties provided by the store of the user interface
  */
-export function buildDefaultShapes(parent: Svg, componentsProps: LogoProps, fontRenderers?: FontRenderers): BaseShapheBuilder {
+export function buildDefaultShapes(
+    parent: Svg,
+    componentsProps: LogoProps,
+    fontRenderers?: FontRenderers
+): BaseShapheBuilder {
     const { logo: pLogo, title: pTitle, slogan: pSlogan } = componentsProps
 
     // Create SVGs
     const logo = SVG().addTo(parent).svg(pLogo.src.svg)
-    const title = isFontFromGoogle(pTitle.style.fontFamily) && fontRenderers ? buildTextToSVG(parent, pTitle, fontRenderers) || parent.text(pTitle.text)  : parent.text(pTitle.text)
-    const slogan = isFontFromGoogle(pSlogan.style.fontFamily) && fontRenderers ? buildTextToSVG(parent, pSlogan, fontRenderers) || parent.text(pSlogan.text)  : parent.text(pSlogan.text)
+    const title =
+        isFontFromGoogle(pTitle.style.fontFamily) && fontRenderers
+            ? buildTextToSVG(parent, pTitle, fontRenderers) || parent.text(pTitle.text)
+            : parent.text(pTitle.text)
+    const slogan =
+        isFontFromGoogle(pSlogan.style.fontFamily) && fontRenderers
+            ? buildTextToSVG(parent, pSlogan, fontRenderers) || parent.text(pSlogan.text)
+            : parent.text(pSlogan.text)
 
     // Apply other properties
     logo.viewbox(0, 0, logo.bbox().width, logo.bbox().height + 5)
         .size(pLogo.width * pLogo.scale, pLogo.height * pLogo.scale)
-        .css("fill", pLogo.style.fill);
+        .css("fill", pLogo.style.fill)
 
-    if( (title as Text).font !== undefined ) {
-        (title as Text)
-            ?.font({
-                fill: pTitle.style.color,
-                family: pTitle.style.fontFamily,
-                size: pTitle.style.fontSize + "px",
-            });
-            // ?.leading(0);
-        (title as Text)?.move(0, 0);
+    if ((title as Text).font !== undefined) {
+        ;(title as Text)?.font({
+            fill: pTitle.style.color,
+            family: pTitle.style.fontFamily,
+            size: pTitle.style.fontSize + "px",
+        })
+        // ?.leading(0);
+        ;(title as Text)?.move(0, 0)
     }
-   
-    if( (slogan as Text).font !== undefined ) {
-        (slogan as Text)
-        ?.font({
+
+    if ((slogan as Text).font !== undefined) {
+        ;(slogan as Text)?.font({
             fill: pSlogan.style.color,
             family: pSlogan.style.fontFamily,
             size: pSlogan.style.fontSize + "px",
-
-        });
+        })
         // ?.leading(0);
-        (slogan as Text).move(0, 0);
+        ;(slogan as Text).move(0, 0)
     }
 
-   
-
     // Move to an arbitrary position (Optional)
-    
 
     return {
         logo,

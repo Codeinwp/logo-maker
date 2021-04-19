@@ -16,7 +16,7 @@ export interface PipelinesOutput {
     createFavicon: (parent: HTMLDivElement) => Svg
 }
 
-export function buildPipelines(_props: StoreProps, _fontRenderers?: FontRenderers ): PipelinesOutput {
+export function buildPipelines(_props: StoreProps, _fontRenderers?: FontRenderers): PipelinesOutput {
     return {
         createEditor: (parent: HTMLDivElement): Svg => {
             /**
@@ -36,11 +36,11 @@ export function buildPipelines(_props: StoreProps, _fontRenderers?: FontRenderer
             /**
              * Create the base shapes & align them
              */
-            const shapes = buildDefaultShapes(draw, props,  _fontRenderers)
+            const shapes = buildDefaultShapes(draw, props, _fontRenderers)
 
             // /**
             //  * For fonts that are not native to the browser
-            //  * we need to redo the alingment, 
+            //  * we need to redo the alingment,
             //  * because the browser it might a fallback font before it loads the actual font
             //  * and cause an eror in the positions since we do not use the actual font
             //  */
@@ -110,7 +110,7 @@ export function buildPipelines(_props: StoreProps, _fontRenderers?: FontRenderer
             /**
              * Create the base shapes & align them
              */
-            const shapes = buildDefaultShapes(draw, props,  _fontRenderers)
+            const shapes = buildDefaultShapes(draw, props, _fontRenderers)
             const alignerProps = alignShapesWithOption("align-top", shapes)
 
             /**
