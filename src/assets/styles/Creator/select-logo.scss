@@ -20,9 +20,43 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		input {
+		margin: 5px 0px;
+		
+		.slider {
 			min-width: 250px;
+			-webkit-appearance: none;  /* Override default CSS styles */
+			appearance: none;
+			width: 100%; /* Full-width */
+			height: 20px; /* Specified height */
+			background: #d3d3d3; /* Grey background */
+			outline: none; /* Remove outline */
+			opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+			-webkit-transition: .2s; /* 0.2 seconds transition on hover */
+			transition: opacity .2s;
+			border-radius: 10px;
 		}
+
+		.slider:hover {
+			opacity: 1;
+		  }
+		  
+		  .slider::-webkit-slider-thumb {
+			-webkit-appearance: none;
+			appearance: none;
+			width: 30px;
+			height: 30px;
+			background: #43C2D1;
+			cursor: pointer;
+			border-radius: 50%;
+		  }
+		  
+		  .slider::-moz-range-thumb {
+			width: 30px;
+			height: 30px;
+			background: #43C2D1;
+			cursor: pointer;
+			border-radius: 50%;
+		  }
 
 		label {
 			font-family: monospace;
