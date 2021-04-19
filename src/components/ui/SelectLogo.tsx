@@ -50,6 +50,7 @@ const SelectLogo: React.FunctionComponent<unknown> = () => {
                     min="0.5"
                     max="2"
                     step="0.1"
+                    value={scaleLogo}
                     onChange={(e) => {
                         setScale(parseFloat(e.target.value))
                     }}
