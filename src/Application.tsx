@@ -9,11 +9,11 @@ import { AssetsStore, FontRenderers } from "./stores/AssetsStore"
 import { buildFontSourceFileURL } from "./engine/utility"
 import { isFontFromGoogle } from "./assets/fonts/google-fonts"
 import opentype from "opentype.js"
-import loadable from '@loadable/component'
+import loadable from "@loadable/component"
 import Fallback from "./components/Fallback"
 
-const Creator = loadable( () => import('./Creator'), { fallback: <Fallback /> } )
-const Showcase = loadable( () => import('./Showcase'), { fallback: <Fallback /> } )
+const Creator = loadable(() => import("./Creator"), { fallback: <Fallback /> })
+const Showcase = loadable(() => import("./Showcase"), { fallback: <Fallback /> })
 
 /**
  * This is the main entry point of the application
@@ -32,7 +32,7 @@ export const Application: React.FunctionComponent<unknown> = () => {
             const fontSet = new Set<string>()
 
             document.fonts.forEach((f) => {
-                const cleanedFontFamily = f.family.replace(/"/g, '')
+                const cleanedFontFamily = f.family.replace(/"/g, "")
                 // console.log(cleanedFontFamily)
                 if (isFontFromGoogle(cleanedFontFamily)) {
                     fontSet.add(cleanedFontFamily)

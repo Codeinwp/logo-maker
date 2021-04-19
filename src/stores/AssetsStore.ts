@@ -14,6 +14,6 @@ export const AssetsStore = new Store<AssetsStoreProps>({
     fonts: {
         fontsStatus: "inactive",
         activeFonts: [],
-        fontRenderers: {}
-    }
+        fontRenderers: {},
+    },
 })

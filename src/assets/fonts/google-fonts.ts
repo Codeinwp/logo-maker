@@ -1,4 +1,4 @@
-import fonts from './fonts.json'
+import fonts from "./fonts.json"
 // const fonts = [
 //     "Helvetica",
 //     "Open Sans",
@@ -43,7 +43,7 @@ import fonts from './fonts.json'
 // ]
 
 type WebpackFont = {
-    family: string,
+    family: string
     variants?: string[]
     subsets?: string[]
     formats?: string[]
@@ -52,22 +52,22 @@ type WebpackFont = {
 
 export const webpackFonts: WebpackFont[] = [
     {
-        family: "Open Sans"
+        family: "Open Sans",
     },
     {
-        family: "Roboto"
+        family: "Roboto",
     },
     {
-        family: "Dancing Script"
+        family: "Dancing Script",
     },
     {
-        family: "Oswald"
+        family: "Oswald",
     },
     {
-        family: "Montserrat"
+        family: "Montserrat",
     },
     {
-        family: "Permanent Marker"
+        family: "Permanent Marker",
     },
 ]
 
@@ -138,6 +138,6 @@ fonts.sort()
 
 export const isFontFromGoogle = (font: string): boolean => {
     return fonts.includes(font)
-} 
+}
 
 export default fonts

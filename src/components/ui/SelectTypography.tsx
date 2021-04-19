@@ -32,10 +32,15 @@ const SelectTypography: React.FunctionComponent<unknown> = () => {
     /**
      * Generate the font options
      */
-    const fontOptions = [...fonts, ...(AssetsStore.useState((s) => s.fonts.activeFonts).filter(font => isFontFromGoogle(font)))].sort().map((font) => ({
-        value: font,
-        label: font,
-    }))
+    const fontOptions = [
+        ...fonts,
+        ...AssetsStore.useState((s) => s.fonts.activeFonts).filter((font) => isFontFromGoogle(font)),
+    ]
+        .sort()
+        .map((font) => ({
+            value: font,
+            label: font,
+        }))
 
     const onTitleTextChange = (value: string) => {
         UIStore.update((s) => {
@@ -84,12 +89,12 @@ const SelectTypography: React.FunctionComponent<unknown> = () => {
             boxShadow: "none",
         }),
         // eslint-disable-next-line @typescript-eslint/no-explicit-any
-        option: (styles: Record<string, any>, { data }: { data: { label: string, value: string } }) => {
+        option: (styles: Record<string, any>, { data }: { data: { label: string; value: string } }) => {
             return {
                 ...styles,
-                fontFamily: !Number.isInteger(Number.parseInt(data.value)) ? data.value : 'Noto Sans'
+                fontFamily: !Number.isInteger(Number.parseInt(data.value)) ? data.value : "Noto Sans",
             }
-        }
+        },
     }
 
     const defaultTitleFontFamily = UIStore.useState((s) => s.title.style.fontFamily)

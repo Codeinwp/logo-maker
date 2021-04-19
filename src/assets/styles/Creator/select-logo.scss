@@ -16,6 +16,27 @@
 		margin: 0 0 12px;
 	}
 
+	.size-range {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		input {
+			min-width: 250px;
+		}
+
+		label {
+			font-family: monospace;
+			margin: 4px;
+			padding: 5px 10px;
+			min-width: 60px;
+			background-color: #43C2D1;
+			color: white;
+			border-radius: 5px;
+			text-align: center;
+			font-size: larger;
+		}
+	}
+
 	.logo-list {
 		//max-height: 690px;
 		max-height: 200px;
@@ -50,6 +71,11 @@
 
 		@media(min-width: 1024px) {
 			max-height: 596px;
+
+			.size-range {
+				display: flex;
+				justify-content: inherit;
+			}
 		}
 	}
 }

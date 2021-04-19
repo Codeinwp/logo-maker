@@ -46,13 +46,21 @@ export function calculateDimesionsForBaseShape(shapes: BaseShapheBuilder): BaseS
     }
 
     const titleDim = {
-        height: title.bbox().height + ( (title.bbox().height > 0) ? settings.title.margins.top  + settings.title.margins.bottom : 0 ) ,
-        width: title.bbox().width + ((title.bbox().width > 0)  ?  settings.title.margins.left  + settings.title.margins.bottom : 0 ) ,
-    };
+        height:
+            title.bbox().height +
+            (title.bbox().height > 0 ? settings.title.margins.top + settings.title.margins.bottom : 0),
+        width:
+            title.bbox().width +
+            (title.bbox().width > 0 ? settings.title.margins.left + settings.title.margins.bottom : 0),
+    }
 
     const sloganDim = {
-        height: slogan.bbox().height + ((slogan.bbox().height > 0) ? settings.slogan.margins.top  + settings.slogan.margins.bottom : 0),
-        width: slogan.bbox().width + ((slogan.bbox().width > 0) ? settings.slogan.margins.left  + settings.slogan.margins.bottom : 0),
+        height:
+            slogan.bbox().height +
+            (slogan.bbox().height > 0 ? settings.slogan.margins.top + settings.slogan.margins.bottom : 0),
+        width:
+            slogan.bbox().width +
+            (slogan.bbox().width > 0 ? settings.slogan.margins.left + settings.slogan.margins.bottom : 0),
     }
 
     // console.log('DIM',titleDim, sloganDim)
@@ -164,7 +172,6 @@ export function alignLogoLeft<S extends BaseShapheBuilder>(shapes: S): BaseAlign
         logoDim.width + ctx - sloganDim.width / 2,
         cy + titleDim.height / 2 // + sloganDim.height / 2
     )
-
 
     return {
         containerHeight,

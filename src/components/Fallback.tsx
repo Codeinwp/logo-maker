@@ -1,5 +1,5 @@
-import * as React from 'react'
-import '../assets/styles/fallback.scss'
+import * as React from "react"
+import "../assets/styles/fallback.scss"
 
 const Fallback: React.FunctionComponent<unknown> = () => {
     return (
