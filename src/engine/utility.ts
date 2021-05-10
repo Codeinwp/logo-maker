@@ -12,7 +12,7 @@ export type Elements = {
 export function buildFontSourceFileURL(font: string): string | null {
     if (window.logomaker.pluginURL) {
         const fileName = font.split(" ").join("") + "-Regular.ttf"
-        return window.logomaker.pluginURL + "plugin_build/font/" + fileName
+        return window.logomaker.pluginURL + "fonts/" + fileName
     }
 
     return null

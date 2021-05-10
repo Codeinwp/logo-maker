@@ -1,101 +1,92 @@
 [
     {
-        "family": "Open Sans"
-    },
-    {
-        "family": "Bangers"
-    },
-    {
-        "family": "Roboto"
-    },
-    {
-        "family": "Dancing Script"
-    },
-    {
-        "family": "Henny Penny"
-    },
-    {
         "family": "Alfa Slab One"
-    },
-    {
-        "family": "Oswald"
     },
     {
         "family": "Anton"
     },
     {
-        "family": "Permanent Marker"
-    },
-    {
-        "family": "Cinzel Decorative"
-    },
-    {
-        "family": "Lato"
-    },
-    {
-        "family": "Karla"
-    },
-    {
-        "family": "Montserrat"
-    },
-    {
-        "family": "Libre Baskerville"
+        "family": "Bangers"
     },
     {
         "family": "Bebas Neue"
     },
     {
-        "family": "Fira Sans"
+        "family": "Cinzel Decorative"
     },
     {
-        "family": "Play"
+        "family": "Creepster"
     },
     {
         "family": "Crete Round"
     },
     {
-        "family": "Rajdhani"
+        "family": "Dancing Script"
     },
     {
-        "family": "Satisfy"
+        "family": "Fira Sans"
+    },
+    {
+        "family": "Henny Penny"
+    },
+    {
+        "family": "Karla"
+    },
+    {
+        "family": "Lato"
+    },
+    {
+        "family": "Lemonada"
+    },
+    {
+        "family": "Libre Baskerville"
     },
     {
         "family": "Lobster Two"
     },
     {
-        "family": "Orbitron"
+        "family": "Lora"
     },
     {
-        "family": "Parisienne"
-    },
-    {
-        "family": "Playball"
+        "family": "Montserrat"
     },
     {
         "family": "Noto Serif"
     },
     {
-        "family": "Noto Sans"
+        "family": "Oleo Script Swash Caps"
     },
     {
-        "family": "Lora"
+        "family": "Orbitron"
+    },
+    {
+        "family": "Oswald"
+    },
+    {
+        "family": "Parisienne"
+    },
+    {
+        "family": "Permanent Marker"
+    },
+    {
+        "family": "Play"
+    },
+    {
+        "family": "Playball"
+    },
+    {
+        "family": "Rajdhani"
+    },
+    {
+        "family": "Roboto"
+    },
+    {
+        "family": "Satisfy"
     },
     {
         "family": "Source Serif Pro"
     },
     {
         "family": "Ubuntu"
-    },
-    {
-        "family": "Lemonada"
-    },
-    {
-        "family": "UnifrakturMaguntia"
-    },
-    {
-        "family": "Oleo Script Swash Caps"
-    },
-    {
-        "family": "Creepster"
     }
 ]

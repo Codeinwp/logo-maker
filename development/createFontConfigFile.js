@@ -17,6 +17,7 @@ file.on('line', (line) => {
 
 file.on('close', () => {
     console.log(`Total Fonts: ${fonts.length} :`,fonts )
+
     fs.writeFileSync( './src/assets/fonts/fonts.json', JSON.stringify(fonts, {}, 4), function(err) {
         if (err) throw err;
         console.log('Fonts JSON file created');
@@ -27,8 +28,10 @@ file.on('close', () => {
             family: font
         }
     })
+
     fs.writeFileSync( './webpack.fonts.json', JSON.stringify(webpackFonts, {}, 4), function(err) {
         if (err) throw err;
         console.log('Webpack Fonts JSON file created');
     } )
 })
+

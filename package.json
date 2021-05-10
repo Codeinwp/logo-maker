@@ -7,7 +7,9 @@
     "start-plugin": "webpack --watch --mode development",
     "plugin-build": "webpack --mode production",
     "linux:make-zip": "npm run plugin-build && zip -r logo_maker_plugin.zip index.php plugin_build && mv logo_maker_plugin.zip development/",
-    "create:font:config": "node development/createFontConfigFile.js",
+    "font:all": "npm run font:config && npm run font:download",
+    "font:config": "node development/createFontConfigFile.js",
+    "font:download": "node development/downloadFonts.js",
     "gen-docs": "npx typedoc",
     "format": "prettier --write \"src/**/*.{js,jsx,ts,tsx}\"",
     "lint": "eslint \"src/**/*.{js,jsx,ts,tsx}\""
