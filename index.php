@@ -64,13 +64,6 @@ function logo_maker_assets()
             $script_asset['version']
         );
 
-        wp_enqueue_style(
-            'logo-maker-asset-fonts',
-            plugins_url( '/plugin_build/fonts.css', __FILE__ ),
-            [],
-            $script_asset['version']
-        );
-
         //  wp_enqueue_script("logo-maker-asset-map", plugins_url($source_map, __FILE__), null, null, true);
         $parent_link = "";
         if ($post->post_parent) {
