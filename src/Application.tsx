@@ -6,7 +6,7 @@ import "./assets/styles/index.scss"
 import Start from "./Start"
 import ReactGA from "react-ga"
 import { AssetsStore, FontRenderers } from "./stores/AssetsStore"
-import { buildFontSourceFileURL } from "./engine/utility"
+import { buildFontSourceFileURL, getFontsFromServer } from "./engine/utility"
 import { isFontFromGoogle } from "./assets/fonts/google-fonts"
 import opentype from "opentype.js"
 import loadable from "@loadable/component"
@@ -28,64 +28,68 @@ export const Application: React.FunctionComponent<unknown> = () => {
             ReactGA.set({ anonymizeIp: true })
         }
 
-        document.fonts.ready.then(() => {
-            const fontSet = new Set<string>()
+        if (window.logomaker?.pluginURL) {
+            getFontsFromServer()
+        }
 
-            document.fonts.forEach((f) => {
-                const cleanedFontFamily = f.family.replace(/"/g, "")
-                // console.log(cleanedFontFamily)
-                if (isFontFromGoogle(cleanedFontFamily)) {
-                    fontSet.add(cleanedFontFamily)
-                    const fileURL = buildFontSourceFileURL(cleanedFontFamily)
-                    if (fileURL) {
-                        fetch(fileURL, {
-                            method: "HEAD",
-                            mode: "cors",
-                        }).then((resp) => {
-                            if (resp.ok) {
-                                return cleanedFontFamily
-                            }
-                            return null
-                        })
-                    }
-                }
-            })
+        // document.fonts.ready.then(() => {
+        //     const fontSet = new Set<string>()
 
-            const fontPaths = Array.from(fontSet).map((font) => {
-                return {
-                    font: font,
-                    path: buildFontSourceFileURL(font),
-                }
-            })
+        //     document.fonts.forEach((f) => {
+        //         const cleanedFontFamily = f.family.replace(/"/g, "")
+        //         // console.log(cleanedFontFamily)
+        //         if (isFontFromGoogle(cleanedFontFamily)) {
+        //             fontSet.add(cleanedFontFamily)
+        //             const fileURL = buildFontSourceFileURL(cleanedFontFamily)
+        //             if (fileURL) {
+        //                 fetch(fileURL, {
+        //                     method: "HEAD",
+        //                     mode: "cors",
+        //                 }).then((resp) => {
+        //                     if (resp.ok) {
+        //                         return cleanedFontFamily
+        //                     }
+        //                     return null
+        //                 })
+        //             }
+        //         }
+        //     })
 
-            // console.log(fontPaths)
+        //     const fontPaths = Array.from(fontSet).map((font) => {
+        //         return {
+        //             font: font,
+        //             path: buildFontSourceFileURL(font),
+        //         }
+        //     })
 
-            const fontRequets = fontPaths
-                .filter((fontPath) => fontPath.path)
-                .map(async (font) => {
-                    // console.log(font.path)
-                    const renderer = await opentype.load(font.path || "")
-                    return {
-                        font: font.font,
-                        renderer: renderer,
-                    }
-                })
+        //     // console.log(fontPaths)
 
-            Promise.all(fontRequets).then((fontRenderers) => {
-                // console.log(fontRenderers)
-                // transformTextToSVG(fontRenderers[0].renderer, 'Hey', 52)
-                AssetsStore.update((s) => {
-                    s.fonts.fontRenderers = fontRenderers.reduce(
-                        (fontRenderers: FontRenderers, font): FontRenderers => {
-                            fontRenderers[font.font] = font.renderer
-                            return fontRenderers
-                        },
-                        {}
-                    )
-                    s.fonts.activeFonts = fontRenderers.map(({ font }) => font)
-                })
-            })
-        })
+        //     const fontRequets = fontPaths
+        //         .filter((fontPath) => fontPath.path)
+        //         .map(async (font) => {
+        //             // console.log(font.path)
+        //             const renderer = await opentype.load(font.path || "")
+        //             return {
+        //                 font: font.font,
+        //                 renderer: renderer,
+        //             }
+        //         })
+
+        //     Promise.all(fontRequets).then((fontRenderers) => {
+        //         // console.log(fontRenderers)
+        //         // transformTextToSVG(fontRenderers[0].renderer, 'Hey', 52)
+        //         AssetsStore.update((s) => {
+        //             s.fonts.fontRenderers = fontRenderers.reduce(
+        //                 (fontRenderers: FontRenderers, font): FontRenderers => {
+        //                     fontRenderers[font.font] = font.renderer
+        //                     return fontRenderers
+        //                 },
+        //                 {}
+        //             )
+        //             s.fonts.activeFonts = fontRenderers.map(({ font }) => font)
+        //         })
+        //     })
+        // })
     }, [])
 
     return (

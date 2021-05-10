@@ -1,0 +1,494 @@
+/* === Alfa Slab One - regular */
+@font-face {
+	font-family: 'Alfa Slab One';
+	font-style: normal;
+	font-weight: 400;
+	font-display: swap;
+	src: url("./font/AlfaSlabOne-Regular.eot");
+	src: local('Alfa Slab One'),
+		url("./font/AlfaSlabOne-Regular.eot") format("embedded-opentype"),
+		url("./font/AlfaSlabOne-Regular.woff2") format("woff2"),
+		url("./font/AlfaSlabOne-Regular.woff") format("woff"),
+		url("./font/AlfaSlabOne-Regular.ttf") format("truetype"),
+		url("./font/AlfaSlabOne-Regular.svg") format("svg");
+}
+
+/* === Anton - regular */
+@font-face {
+	font-family: 'Anton';
+	font-style: normal;
+	font-weight: 400;
+	font-display: swap;
+	src: url("./font/Anton-Regular.eot");
+	src: local('Anton'),
+		url("./font/Anton-Regular.eot") format("embedded-opentype"),
+		url("./font/Anton-Regular.woff2") format("woff2"),
+		url("./font/Anton-Regular.woff") format("woff"),
+		url("./font/Anton-Regular.ttf") format("truetype"),
+		url("./font/Anton-Regular.svg") format("svg");
+}
+
+/* === Bangers - regular */
+@font-face {
+	font-family: 'Bangers';
+	font-style: normal;
+	font-weight: 400;
+	font-display: swap;
+	src: url("./font/Bangers-Regular.eot");
+	src: local('Bangers'),
+		url("./font/Bangers-Regular.eot") format("embedded-opentype"),
+		url("./font/Bangers-Regular.woff2") format("woff2"),
+		url("./font/Bangers-Regular.woff") format("woff"),
+		url("./font/Bangers-Regular.ttf") format("truetype"),
+		url("./font/Bangers-Regular.svg") format("svg");
+}
+
+/* === Bebas Neue - regular */
+@font-face {
+	font-family: 'Bebas Neue';
+	font-style: normal;
+	font-weight: 400;
+	font-display: swap;
+	src: url("./font/BebasNeue-Regular.eot");
+	src: local('Bebas Neue'),
+		url("./font/BebasNeue-Regular.eot") format("embedded-opentype"),
+		url("./font/BebasNeue-Regular.woff2") format("woff2"),
+		url("./font/BebasNeue-Regular.woff") format("woff"),
+		url("./font/BebasNeue-Regular.ttf") format("truetype"),
+		url("./font/BebasNeue-Regular.svg") format("svg");
+}
+
+/* === Cinzel Decorative - regular */
+@font-face {
+	font-family: 'Cinzel Decorative';
+	font-style: normal;
+	font-weight: 400;
+	font-display: swap;
+	src: url("./font/CinzelDecorative-Regular.eot");
+	src: local('Cinzel Decorative'),
+		url("./font/CinzelDecorative-Regular.eot") format("embedded-opentype"),
+		url("./font/CinzelDecorative-Regular.woff2") format("woff2"),
+		url("./font/CinzelDecorative-Regular.woff") format("woff"),
+		url("./font/CinzelDecorative-Regular.ttf") format("truetype"),
+		url("./font/CinzelDecorative-Regular.svg") format("svg");
+}
+
+/* === Creepster - regular */
+@font-face {
+	font-family: 'Creepster';
+	font-style: normal;
+	font-weight: 400;
+	font-display: swap;
+	src: url("./font/Creepster-Regular.eot");
+	src: local('Creepster'),
+		url("./font/Creepster-Regular.eot") format("embedded-opentype"),
+		url("./font/Creepster-Regular.woff2") format("woff2"),
+		url("./font/Creepster-Regular.woff") format("woff"),
+		url("./font/Creepster-Regular.ttf") format("truetype"),
+		url("./font/Creepster-Regular.svg") format("svg");
+}
+
+/* === Crete Round - regular */
+@font-face {
+	font-family: 'Crete Round';
+	font-style: normal;
+	font-weight: 400;
+	font-display: swap;
+	src: url("./font/CreteRound-Regular.eot");
+	src: local('Crete Round'),
+		url("./font/CreteRound-Regular.eot") format("embedded-opentype"),
+		url("./font/CreteRound-Regular.woff2") format("woff2"),
+		url("./font/CreteRound-Regular.woff") format("woff"),
+		url("./font/CreteRound-Regular.ttf") format("truetype"),
+		url("./font/CreteRound-Regular.svg") format("svg");
+}
+
+/* === Dancing Script - regular */
+@font-face {
+	font-family: 'Dancing Script';
+	font-style: normal;
+	font-weight: 400;
+	font-display: swap;
+	src: url("./font/DancingScript-Regular.eot");
+	src: local('Dancing Script'),
+		url("./font/DancingScript-Regular.eot") format("embedded-opentype"),
+		url("./font/DancingScript-Regular.woff2") format("woff2"),
+		url("./font/DancingScript-Regular.woff") format("woff"),
+		url("./font/DancingScript-Regular.ttf") format("truetype"),
+		url("./font/DancingScript-Regular.svg") format("svg");
+}
+
+/* === Fira Sans - regular */
+@font-face {
+	font-family: 'Fira Sans';
+	font-style: normal;
+	font-weight: 400;
+	font-display: swap;
+	src: url("./font/FiraSans-Regular.eot");
+	src: local('Fira Sans'),
+		url("./font/FiraSans-Regular.eot") format("embedded-opentype"),
+		url("./font/FiraSans-Regular.woff2") format("woff2"),
+		url("./font/FiraSans-Regular.woff") format("woff"),
+		url("./font/FiraSans-Regular.ttf") format("truetype"),
+		url("./font/FiraSans-Regular.svg") format("svg");
+}
+
+/* === Henny Penny - regular */
+@font-face {
+	font-family: 'Henny Penny';
+	font-style: normal;
+	font-weight: 400;
+	font-display: swap;
+	src: url("./font/HennyPenny-Regular.eot");
+	src: local('Henny Penny'),
+		url("./font/HennyPenny-Regular.eot") format("embedded-opentype"),
+		url("./font/HennyPenny-Regular.woff2") format("woff2"),
+		url("./font/HennyPenny-Regular.woff") format("woff"),
+		url("./font/HennyPenny-Regular.ttf") format("truetype"),
+		url("./font/HennyPenny-Regular.svg") format("svg");
+}
+
+/* === Karla - regular */
+@font-face {
+	font-family: 'Karla';
+	font-style: normal;
+	font-weight: 400;
+	font-display: swap;
+	src: url("./font/Karla-Regular.eot");
+	src: local('Karla'),
+		url("./font/Karla-Regular.eot") format("embedded-opentype"),
+		url("./font/Karla-Regular.woff2") format("woff2"),
+		url("./font/Karla-Regular.woff") format("woff"),
+		url("./font/Karla-Regular.ttf") format("truetype"),
+		url("./font/Karla-Regular.svg") format("svg");
+}
+
+/* === Lato - regular */
+@font-face {
+	font-family: 'Lato';
+	font-style: normal;
+	font-weight: 400;
+	font-display: swap;
+	src: url("./font/Lato-Regular.eot");
+	src: local('Lato'),
+		url("./font/Lato-Regular.eot") format("embedded-opentype"),
+		url("./font/Lato-Regular.woff2") format("woff2"),
+		url("./font/Lato-Regular.woff") format("woff"),
+		url("./font/Lato-Regular.ttf") format("truetype"),
+		url("./font/Lato-Regular.svg") format("svg");
+}
+
+/* === Lemonada - regular */
+@font-face {
+	font-family: 'Lemonada';
+	font-style: normal;
+	font-weight: 400;
+	font-display: swap;
+	src: url("./font/Lemonada-Regular.eot");
+	src: local('Lemonada'),
+		url("./font/Lemonada-Regular.eot") format("embedded-opentype"),
+		url("./font/Lemonada-Regular.woff2") format("woff2"),
+		url("./font/Lemonada-Regular.woff") format("woff"),
+		url("./font/Lemonada-Regular.ttf") format("truetype"),
+		url("./font/Lemonada-Regular.svg") format("svg");
+}
+
+/* === Libre Baskerville - regular */
+@font-face {
+	font-family: 'Libre Baskerville';
+	font-style: normal;
+	font-weight: 400;
+	font-display: swap;
+	src: url("./font/LibreBaskerville-Regular.eot");
+	src: local('Libre Baskerville'),
+		url("./font/LibreBaskerville-Regular.eot") format("embedded-opentype"),
+		url("./font/LibreBaskerville-Regular.woff2") format("woff2"),
+		url("./font/LibreBaskerville-Regular.woff") format("woff"),
+		url("./font/LibreBaskerville-Regular.ttf") format("truetype"),
+		url("./font/LibreBaskerville-Regular.svg") format("svg");
+}
+
+/* === Lobster Two - regular */
+@font-face {
+	font-family: 'Lobster Two';
+	font-style: normal;
+	font-weight: 400;
+	font-display: swap;
+	src: url("./font/LobsterTwo-Regular.eot");
+	src: local('Lobster Two'),
+		url("./font/LobsterTwo-Regular.eot") format("embedded-opentype"),
+		url("./font/LobsterTwo-Regular.woff2") format("woff2"),
+		url("./font/LobsterTwo-Regular.woff") format("woff"),
+		url("./font/LobsterTwo-Regular.ttf") format("truetype"),
+		url("./font/LobsterTwo-Regular.svg") format("svg");
+}
+
+/* === Lora - regular */
+@font-face {
+	font-family: 'Lora';
+	font-style: normal;
+	font-weight: 400;
+	font-display: swap;
+	src: url("./font/Lora-Regular.eot");
+	src: local('Lora'),
+		url("./font/Lora-Regular.eot") format("embedded-opentype"),
+		url("./font/Lora-Regular.woff2") format("woff2"),
+		url("./font/Lora-Regular.woff") format("woff"),
+		url("./font/Lora-Regular.ttf") format("truetype"),
+		url("./font/Lora-Regular.svg") format("svg");
+}
+
+/* === Montserrat - regular */
+@font-face {
+	font-family: 'Montserrat';
+	font-style: normal;
+	font-weight: 400;
+	font-display: swap;
+	src: url("./font/Montserrat-Regular.eot");
+	src: local('Montserrat'),
+		url("./font/Montserrat-Regular.eot") format("embedded-opentype"),
+		url("./font/Montserrat-Regular.woff2") format("woff2"),
+		url("./font/Montserrat-Regular.woff") format("woff"),
+		url("./font/Montserrat-Regular.ttf") format("truetype"),
+		url("./font/Montserrat-Regular.svg") format("svg");
+}
+
+/* === Noto Sans - regular */
+@font-face {
+	font-family: 'Noto Sans';
+	font-style: normal;
+	font-weight: 400;
+	font-display: swap;
+	src: url("./font/NotoSans-Regular.eot");
+	src: local('Noto Sans'),
+		url("./font/NotoSans-Regular.eot") format("embedded-opentype"),
+		url("./font/NotoSans-Regular.woff2") format("woff2"),
+		url("./font/NotoSans-Regular.woff") format("woff"),
+		url("./font/NotoSans-Regular.ttf") format("truetype"),
+		url("./font/NotoSans-Regular.svg") format("svg");
+}
+
+/* === Noto Serif - regular */
+@font-face {
+	font-family: 'Noto Serif';
+	font-style: normal;
+	font-weight: 400;
+	font-display: swap;
+	src: url("./font/NotoSerif-Regular.eot");
+	src: local('Noto Serif'),
+		url("./font/NotoSerif-Regular.eot") format("embedded-opentype"),
+		url("./font/NotoSerif-Regular.woff2") format("woff2"),
+		url("./font/NotoSerif-Regular.woff") format("woff"),
+		url("./font/NotoSerif-Regular.ttf") format("truetype"),
+		url("./font/NotoSerif-Regular.svg") format("svg");
+}
+
+/* === Oleo Script Swash Caps - regular */
+@font-face {
+	font-family: 'Oleo Script Swash Caps';
+	font-style: normal;
+	font-weight: 400;
+	font-display: swap;
+	src: url("./font/OleoScriptSwashCaps-Regular.eot");
+	src: local('Oleo Script Swash Caps'),
+		url("./font/OleoScriptSwashCaps-Regular.eot") format("embedded-opentype"),
+		url("./font/OleoScriptSwashCaps-Regular.woff2") format("woff2"),
+		url("./font/OleoScriptSwashCaps-Regular.woff") format("woff"),
+		url("./font/OleoScriptSwashCaps-Regular.ttf") format("truetype"),
+		url("./font/OleoScriptSwashCaps-Regular.svg") format("svg");
+}
+
+/* === Open Sans - regular */
+@font-face {
+	font-family: 'Open Sans';
+	font-style: normal;
+	font-weight: 400;
+	font-display: swap;
+	src: url("./font/OpenSans-Regular.eot");
+	src: local('Open Sans'),
+		url("./font/OpenSans-Regular.eot") format("embedded-opentype"),
+		url("./font/OpenSans-Regular.woff2") format("woff2"),
+		url("./font/OpenSans-Regular.woff") format("woff"),
+		url("./font/OpenSans-Regular.ttf") format("truetype"),
+		url("./font/OpenSans-Regular.svg") format("svg");
+}
+
+/* === Orbitron - regular */
+@font-face {
+	font-family: 'Orbitron';
+	font-style: normal;
+	font-weight: 400;
+	font-display: swap;
+	src: url("./font/Orbitron-Regular.eot");
+	src: local('Orbitron'),
+		url("./font/Orbitron-Regular.eot") format("embedded-opentype"),
+		url("./font/Orbitron-Regular.woff2") format("woff2"),
+		url("./font/Orbitron-Regular.woff") format("woff"),
+		url("./font/Orbitron-Regular.ttf") format("truetype"),
+		url("./font/Orbitron-Regular.svg") format("svg");
+}
+
+/* === Oswald - regular */
+@font-face {
+	font-family: 'Oswald';
+	font-style: normal;
+	font-weight: 400;
+	font-display: swap;
+	src: url("./font/Oswald-Regular.eot");
+	src: local('Oswald'),
+		url("./font/Oswald-Regular.eot") format("embedded-opentype"),
+		url("./font/Oswald-Regular.woff2") format("woff2"),
+		url("./font/Oswald-Regular.woff") format("woff"),
+		url("./font/Oswald-Regular.ttf") format("truetype"),
+		url("./font/Oswald-Regular.svg") format("svg");
+}
+
+/* === Parisienne - regular */
+@font-face {
+	font-family: 'Parisienne';
+	font-style: normal;
+	font-weight: 400;
+	font-display: swap;
+	src: url("./font/Parisienne-Regular.eot");
+	src: local('Parisienne'),
+		url("./font/Parisienne-Regular.eot") format("embedded-opentype"),
+		url("./font/Parisienne-Regular.woff2") format("woff2"),
+		url("./font/Parisienne-Regular.woff") format("woff"),
+		url("./font/Parisienne-Regular.ttf") format("truetype"),
+		url("./font/Parisienne-Regular.svg") format("svg");
+}
+
+/* === Permanent Marker - regular */
+@font-face {
+	font-family: 'Permanent Marker';
+	font-style: normal;
+	font-weight: 400;
+	font-display: swap;
+	src: url("./font/PermanentMarker-Regular.eot");
+	src: local('Permanent Marker'),
+		url("./font/PermanentMarker-Regular.eot") format("embedded-opentype"),
+		url("./font/PermanentMarker-Regular.woff2") format("woff2"),
+		url("./font/PermanentMarker-Regular.woff") format("woff"),
+		url("./font/PermanentMarker-Regular.ttf") format("truetype"),
+		url("./font/PermanentMarker-Regular.svg") format("svg");
+}
+
+/* === Play - regular */
+@font-face {
+	font-family: 'Play';
+	font-style: normal;
+	font-weight: 400;
+	font-display: swap;
+	src: url("./font/Play-Regular.eot");
+	src: local('Play'),
+		url("./font/Play-Regular.eot") format("embedded-opentype"),
+		url("./font/Play-Regular.woff2") format("woff2"),
+		url("./font/Play-Regular.woff") format("woff"),
+		url("./font/Play-Regular.ttf") format("truetype"),
+		url("./font/Play-Regular.svg") format("svg");
+}
+
+/* === Playball - regular */
+@font-face {
+	font-family: 'Playball';
+	font-style: normal;
+	font-weight: 400;
+	font-display: swap;
+	src: url("./font/Playball-Regular.eot");
+	src: local('Playball'),
+		url("./font/Playball-Regular.eot") format("embedded-opentype"),
+		url("./font/Playball-Regular.woff2") format("woff2"),
+		url("./font/Playball-Regular.woff") format("woff"),
+		url("./font/Playball-Regular.ttf") format("truetype"),
+		url("./font/Playball-Regular.svg") format("svg");
+}
+
+/* === Rajdhani - regular */
+@font-face {
+	font-family: 'Rajdhani';
+	font-style: normal;
+	font-weight: 400;
+	font-display: swap;
+	src: url("./font/Rajdhani-Regular.eot");
+	src: local('Rajdhani'),
+		url("./font/Rajdhani-Regular.eot") format("embedded-opentype"),
+		url("./font/Rajdhani-Regular.woff2") format("woff2"),
+		url("./font/Rajdhani-Regular.woff") format("woff"),
+		url("./font/Rajdhani-Regular.ttf") format("truetype"),
+		url("./font/Rajdhani-Regular.svg") format("svg");
+}
+
+/* === Roboto - regular */
+@font-face {
+	font-family: 'Roboto';
+	font-style: normal;
+	font-weight: 400;
+	font-display: swap;
+	src: url("./font/Roboto-Regular.eot");
+	src: local('Roboto'),
+		url("./font/Roboto-Regular.eot") format("embedded-opentype"),
+		url("./font/Roboto-Regular.woff2") format("woff2"),
+		url("./font/Roboto-Regular.woff") format("woff"),
+		url("./font/Roboto-Regular.ttf") format("truetype"),
+		url("./font/Roboto-Regular.svg") format("svg");
+}
+
+/* === Satisfy - regular */
+@font-face {
+	font-family: 'Satisfy';
+	font-style: normal;
+	font-weight: 400;
+	font-display: swap;
+	src: url("./font/Satisfy-Regular.eot");
+	src: local('Satisfy'),
+		url("./font/Satisfy-Regular.eot") format("embedded-opentype"),
+		url("./font/Satisfy-Regular.woff2") format("woff2"),
+		url("./font/Satisfy-Regular.woff") format("woff"),
+		url("./font/Satisfy-Regular.ttf") format("truetype"),
+		url("./font/Satisfy-Regular.svg") format("svg");
+}
+
+/* === Source Serif Pro - regular */
+@font-face {
+	font-family: 'Source Serif Pro';
+	font-style: normal;
+	font-weight: 400;
+	font-display: swap;
+	src: url("./font/SourceSerifPro-Regular.eot");
+	src: local('Source Serif Pro'),
+		url("./font/SourceSerifPro-Regular.eot") format("embedded-opentype"),
+		url("./font/SourceSerifPro-Regular.woff2") format("woff2"),
+		url("./font/SourceSerifPro-Regular.woff") format("woff"),
+		url("./font/SourceSerifPro-Regular.ttf") format("truetype"),
+		url("./font/SourceSerifPro-Regular.svg") format("svg");
+}
+
+/* === Ubuntu - regular */
+@font-face {
+	font-family: 'Ubuntu';
+	font-style: normal;
+	font-weight: 400;
+	font-display: swap;
+	src: url("./font/Ubuntu-Regular.eot");
+	src: local('Ubuntu'),
+		url("./font/Ubuntu-Regular.eot") format("embedded-opentype"),
+		url("./font/Ubuntu-Regular.woff2") format("woff2"),
+		url("./font/Ubuntu-Regular.woff") format("woff"),
+		url("./font/Ubuntu-Regular.ttf") format("truetype"),
+		url("./font/Ubuntu-Regular.svg") format("svg");
+}
+
+/* === UnifrakturMaguntia - regular */
+@font-face {
+	font-family: 'UnifrakturMaguntia';
+	font-style: normal;
+	font-weight: 400;
+	font-display: swap;
+	src: url("./font/UnifrakturMaguntia-Regular.eot");
+	src: local('UnifrakturMaguntia'),
+		url("./font/UnifrakturMaguntia-Regular.eot") format("embedded-opentype"),
+		url("./font/UnifrakturMaguntia-Regular.woff2") format("woff2"),
+		url("./font/UnifrakturMaguntia-Regular.woff") format("woff"),
+		url("./font/UnifrakturMaguntia-Regular.ttf") format("truetype"),
+		url("./font/UnifrakturMaguntia-Regular.svg") format("svg");
+}
