@@ -120,6 +120,12 @@ const Creator: React.FunctionComponent<unknown> = () => {
                     ["png"],
                     true
                 )
+                ReactGA.event({
+                    category: "Logo Maker Creator",
+                    action: "Logo Choosed Final",
+                    label: `Logo ID: ${store.logo.src.id}`,
+                    value: 1,
+                })
                 dispatchDownloadLink({ type: "publish", value: link })
             }
         }

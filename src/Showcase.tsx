@@ -99,8 +99,8 @@ const Showcase: React.FunctionComponent<unknown> = () => {
     const setTemplate = (index: number) => {
         if (window.logomaker?.googleAnalyticsCode) {
             ReactGA.event({
-                category: "Logo Maker Creator",
-                action: "Choose logo",
+                category: "Logo Maker Showcase",
+                action: "Logo Choosed",
                 label: `Logo ID: ${logos[index].id}`,
                 value: 1,
             })

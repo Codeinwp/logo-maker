@@ -47,9 +47,7 @@ const Start: React.FunctionComponent<unknown> = () => {
     return (
         <div className="logo-maker logo-maker-container">
             <div className="top-section">
-                {window.logomaker?.parentLink && (
-                    <BackUI url={window.logomaker?.parentLink} />
-                )}
+                {window.logomaker?.parentLink && <BackUI url={window.logomaker?.parentLink} />}
 
                 <ThemeisleUI />
             </div>

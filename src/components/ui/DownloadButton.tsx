@@ -18,33 +18,33 @@ const DownloadButton: React.FunctionComponent<{
     downloadLink?: DownLoadLinkState
     dispatch?: React.Dispatch<DownLoadLinkAction>
 }) => {
-        return (
-            <div className={classnames("download-button", props?.className)}>
-                <button
-                    onClick={() => {
-                        if (props.downloadLink?.status !== "loading") {
-                            if (window.logomaker?.googleAnalyticsCode) {
-                                ReactGA.event({
-                                    category: "Logo Maker Creator",
-                                    action: "Click to download",
-                                    label: "Download",
-                                    value: 1,
-                                })
-                            }
-
-                            props.dispatch?.({ type: "create" })
+    return (
+        <div className={classnames("download-button", props?.className)}>
+            <button
+                onClick={() => {
+                    if (props.downloadLink?.status !== "loading") {
+                        if (window.logomaker?.googleAnalyticsCode) {
+                            ReactGA.event({
+                                category: "Logo Maker Creator",
+                                action: "Click to download",
+                                label: "Download",
+                                value: 1,
+                            })
                         }
-                    }}
-                >
-                    {props.downloadLink?.status === "loading" ? (
-                        <div className="content-loader"></div>
-                    ) : (
-                        <span>Download</span>
-                    )}
-                </button>
-            </div>
-        )
-    }
+
+                        props.dispatch?.({ type: "create" })
+                    }
+                }}
+            >
+                {props.downloadLink?.status === "loading" ? (
+                    <div className="content-loader"></div>
+                ) : (
+                    <span>Download</span>
+                )}
+            </button>
+        </div>
+    )
+}
 
 export default DownloadButton
 
