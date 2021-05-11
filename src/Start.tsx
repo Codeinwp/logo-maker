@@ -45,30 +45,8 @@ const Start: React.FunctionComponent<unknown> = () => {
     return (
         <div className="logo-maker logo-maker-container">
             <div className="top-section">
-                {!window.logomaker?.parentLink ? (
-                    <BackUI />
-                ) : (
-                    <div className="back">
-                        <a href={window.logomaker?.parentLink}>
-                            <svg
-                                width="42"
-                                height="42"
-                                viewBox="0 0 42 42"
-                                fill="none"
-                                xmlns="http://www.w3.org/2000/svg"
-                            >
-                                <circle cx="21" cy="21" r="20.5" fill="white" stroke="#E7E7E7" />
-                                <path
-                                    d="M23 17L19 21L23 25"
-                                    stroke="#585858"
-                                    strokeWidth="1.5"
-                                    strokeLinecap="round"
-                                    strokeLinejoin="round"
-                                />
-                            </svg>
-                            <p>Back</p>
-                        </a>
-                    </div>
+                {window.logomaker?.parentLink && (
+                    <BackUI url={window.logomaker?.parentLink} />
                 )}
 
                 <ThemeisleUI />

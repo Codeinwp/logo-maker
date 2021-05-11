@@ -1,6 +1,7 @@
 .build
 build
-plugin_build/
+plugin_build/font
+plugin_build/report
 web_modules
 node_modules
 package-lock.json
