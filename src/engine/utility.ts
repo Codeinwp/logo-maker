@@ -28,23 +28,7 @@ type Optional<T> =
           error: string
       }
 
-export async function makeFontRequest(url: string): Promise<Optional<ArrayBuffer>> {
-    // const request = new XMLHttpRequest();
-    // request.open('get', url, true);
-    // request.responseType = 'arraybuffer';
-    // request.onload = function() {
-    //     if (request.response) {
-    //         return callback(null, request.response);
-    //     } else {
-    //         return callback('Font could not be loaded: ' + request.statusText);
-    //     }
-    // };
-
-    // request.onerror = function () {
-    //     callback('Font could not be loaded');
-    // };
-
-    // request.send();
+async function makeFontRequest(url: string): Promise<Optional<ArrayBuffer>> {
     const resp = await fetch(url)
 
     if (resp.ok) {
