@@ -5,12 +5,9 @@ import "./assets/styles/index.scss"
 // import Showcase from "./Showcase"
 import Start from "./Start"
 import ReactGA from "react-ga"
-import { AssetsStore, FontRenderers } from "./stores/AssetsStore"
-import { buildFontSourceFileURL, getFontsFromServer } from "./engine/utility"
-import { isFontFromGoogle } from "./assets/fonts/google-fonts"
-import opentype from "opentype.js"
 import loadable from "@loadable/component"
 import Fallback from "./components/Fallback"
+import { getFontsFromServer } from "./engine/utility"
 
 const Creator = loadable(() => import("./Creator"), { fallback: <Fallback /> })
 const Showcase = loadable(() => import("./Showcase"), { fallback: <Fallback /> })
