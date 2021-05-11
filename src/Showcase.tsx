@@ -62,7 +62,9 @@ const Showcase: React.FunctionComponent<unknown> = () => {
      * Create the templates
      */
     React.useEffect(() => {
-        ReactGA.pageview(window.location.pathname + window.location.hash + window.location.search)
+        if (window.logomaker?.googleAnalyticsCode) {
+            ReactGA.pageview(window.location.pathname + window.location.hash + window.location.search)
+        }
 
         setColors(fillArrayWithRepeat(presetColors, logos.length, (x) => x !== "#fff"))
         setFontsList(fillArrayWithRepeat(presets, logos.length))
@@ -95,6 +97,14 @@ const Showcase: React.FunctionComponent<unknown> = () => {
      * @param index The index of templet
      */
     const setTemplate = (index: number) => {
+        if (window.logomaker?.googleAnalyticsCode) {
+            ReactGA.event({
+                category: "Logo Maker Creator",
+                action: "Choose logo",
+                label: `Logo ID: ${logos[index].id}`,
+                value: 1,
+            })
+        }
         UIStore.update((s) => {
             s.logo.src = logos[index]
 

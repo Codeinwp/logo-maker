@@ -1,5 +1,6 @@
 import * as React from "react"
 import classnames from "classnames"
+import ReactGA from "react-ga"
 
 import { DownLoadLinkAction, DownLoadLinkState } from "./../../Creator"
 
@@ -17,24 +18,33 @@ const DownloadButton: React.FunctionComponent<{
     downloadLink?: DownLoadLinkState
     dispatch?: React.Dispatch<DownLoadLinkAction>
 }) => {
-    return (
-        <div className={classnames("download-button", props?.className)}>
-            <button
-                onClick={() => {
-                    if (props.downloadLink?.status !== "loading") {
-                        props.dispatch?.({ type: "create" })
-                    }
-                }}
-            >
-                {props.downloadLink?.status === "loading" ? (
-                    <div className="content-loader"></div>
-                ) : (
-                    <span>Download</span>
-                )}
-            </button>
-        </div>
-    )
-}
+        return (
+            <div className={classnames("download-button", props?.className)}>
+                <button
+                    onClick={() => {
+                        if (props.downloadLink?.status !== "loading") {
+                            if (window.logomaker?.googleAnalyticsCode) {
+                                ReactGA.event({
+                                    category: "Logo Maker Creator",
+                                    action: "Click to download",
+                                    label: "Download",
+                                    value: 1,
+                                })
+                            }
+
+                            props.dispatch?.({ type: "create" })
+                        }
+                    }}
+                >
+                    {props.downloadLink?.status === "loading" ? (
+                        <div className="content-loader"></div>
+                    ) : (
+                        <span>Download</span>
+                    )}
+                </button>
+            </div>
+        )
+    }
 
 export default DownloadButton
 
