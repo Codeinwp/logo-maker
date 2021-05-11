@@ -1,12 +1,12 @@
 import * as React from "react"
 import { HashRouter as Router, Switch, Route } from "react-router-dom"
 import "./assets/styles/index.scss"
-import Start from "./Start"
 import ReactGA from "react-ga"
 import loadable from "@loadable/component"
 import Fallback from "./components/Fallback"
 import { getFontsFromServer } from "./engine/utility"
 
+const Start = loadable(() => import("./Start"), { fallback: <Fallback /> })
 const Creator = loadable(() => import("./Creator"), { fallback: <Fallback /> })
 const Showcase = loadable(() => import("./Showcase"), { fallback: <Fallback /> })
 
