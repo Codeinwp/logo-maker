@@ -9,6 +9,11 @@ export type Elements = {
     sloganSVG: Text & Svg
 }
 
+/**
+ * Build the url for downlading the source file of a given font
+ * @param font Fonst name
+ * @returns Return the url from which the font source file can be downloaded
+ */
 export function buildFontSourceFileURL(font: string): string | null {
     if (window.logomaker.pluginURL) {
         const fileName = font.split(" ").join("") + "-Regular.ttf"
@@ -27,7 +32,11 @@ type Optional<T> =
           ok?: never
           error: string
       }
-
+/**
+ * Download the source file of the font as binary data
+ * @param url The location of the font source file
+ * @returns An optional result which can be the binary data (ok) OR an error (error)
+ */
 async function makeFontRequest(url: string): Promise<Optional<ArrayBuffer>> {
     const resp = await fetch(url)
 
@@ -42,6 +51,9 @@ async function makeFontRequest(url: string): Promise<Optional<ArrayBuffer>> {
     }
 }
 
+/**
+ * Download all the font from the config file and then upload them to the page and parser
+ */
 export function getFontsFromServer(): void {
     const fontPaths = googleFontList.map((fontName) => {
         return {
