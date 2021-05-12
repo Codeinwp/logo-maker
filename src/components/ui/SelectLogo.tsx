@@ -2,6 +2,7 @@ import * as React from "react"
 import logos, { LogoSVGImport } from "../../assets/logos/index"
 import LogoItem from "./LogoItem"
 import store from "../../stores/UIStore"
+import ReactGA from "react-ga"
 
 /**
  * This function will generate the `Select Logo Meniu` from design
@@ -16,6 +17,12 @@ const SelectLogo: React.FunctionComponent<unknown> = () => {
      * @param logo The logo's Svg source
      */
     const setLogo = (logo: LogoSVGImport) => {
+        ReactGA.event({
+            category: "Logo Maker Creator",
+            action: "Logo Choosed",
+            label: `Logo ID: ${logo.id}`,
+            value: 1,
+        })
         store.update((s) => {
             s.logo.src = logo
         })
@@ -61,7 +68,7 @@ const SelectLogo: React.FunctionComponent<unknown> = () => {
             <p>Select a symbol for the logo</p>
             <div
                 className="logo-list"
-            // style={{ maxHeight: 150 + "px", overflow: "auto" }}
+                // style={{ maxHeight: 150 + "px", overflow: "auto" }}
             >
                 {renderLogos()}
             </div>

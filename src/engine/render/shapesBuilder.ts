@@ -13,7 +13,6 @@ import { FontRenderers } from "../../stores/AssetsStore"
 import { TLogo, TLogoContainer, TSlogan, TTitle } from "../../stores/UIStore"
 import { buildText } from "./textBuilder"
 
-
 export type LogoProps = {
     container: TLogoContainer
     logo: TLogo
@@ -77,8 +76,8 @@ export function buildDefaultShapes(
 
     // Create SVGs
     const logo = SVG().addTo(parent).svg(pLogo.src.svg)
-    const title = buildText(parent, pTitle, 'auto', fontRenderers)
-    const slogan = buildText(parent, pSlogan, 'auto', fontRenderers)
+    const title = buildText(parent, pTitle, "auto", fontRenderers)
+    const slogan = buildText(parent, pSlogan, "auto", fontRenderers)
 
     // Apply other properties
     logo.viewbox(0, 0, logo.bbox().width, logo.bbox().height + 5)
@@ -86,7 +85,6 @@ export function buildDefaultShapes(
         .css("fill", pLogo.style.fill)
     title.move(0, 0)
     slogan.move(0, 0)
-    
 
     // Move to an arbitrary position (Optional)
 

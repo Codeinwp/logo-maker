@@ -1,5 +1,6 @@
 import * as React from "react"
 import classnames from "classnames"
+import ReactGA from "react-ga"
 
 import { DownLoadLinkAction, DownLoadLinkState } from "./../../Creator"
 
@@ -22,6 +23,15 @@ const DownloadButton: React.FunctionComponent<{
             <button
                 onClick={() => {
                     if (props.downloadLink?.status !== "loading") {
+                        if (window.logomaker?.googleAnalyticsCode) {
+                            ReactGA.event({
+                                category: "Logo Maker Creator",
+                                action: "Click to download",
+                                label: "Download",
+                                value: 1,
+                            })
+                        }
+
                         props.dispatch?.({ type: "create" })
                     }
                 }}

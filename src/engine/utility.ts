@@ -9,6 +9,11 @@ export type Elements = {
     sloganSVG: Text & Svg
 }
 
+/**
+ * Build the url for downlading the source file of a given font
+ * @param font Fonst name
+ * @returns Return the url from which the font source file can be downloaded
+ */
 export function buildFontSourceFileURL(font: string): string | null {
     if (window.logomaker.pluginURL) {
         const fileName = font.split(" ").join("") + "-Regular.ttf"
@@ -18,6 +23,37 @@ export function buildFontSourceFileURL(font: string): string | null {
     return null
 }
 
+type Optional<T> =
+    | {
+          ok: T
+          error?: never
+      }
+    | {
+          ok?: never
+          error: string
+      }
+/**
+ * Download the source file of the font as binary data
+ * @param url The location of the font source file
+ * @returns An optional result which can be the binary data (ok) OR an error (error)
+ */
+async function makeFontRequest(url: string): Promise<Optional<ArrayBuffer>> {
+    const resp = await fetch(url)
+
+    if (resp.ok) {
+        return {
+            ok: await resp.arrayBuffer(),
+        }
+    }
+
+    return {
+        error: "Font could not be loaded: " + resp.statusText,
+    }
+}
+
+/**
+ * Download all the font from the config file and then upload them to the page and parser
+ */
 export function getFontsFromServer(): void {
     const fontPaths = googleFontList.map((fontName) => {
         return {
@@ -26,32 +62,36 @@ export function getFontsFromServer(): void {
         }
     })
 
-    // Also add the font to the page
-    fontPaths.forEach(async (font) => {
-        const externalFont = new FontFace(font.font, `url(${font.path || ""})`)
-        await externalFont.load()
-        document.fonts.add(externalFont)
-    })
-
     const fontRequets = fontPaths
         .filter((fontPath) => fontPath.path)
         .map(async (font) => {
-            const renderer = await opentype.load(font.path || "")
-            return {
-                font: font.font,
-                renderer: renderer,
+            const result = await makeFontRequest(font.path || "")
+            if (result.ok) {
+                const renderer = opentype.parse(result.ok)
+
+                // Also add the font to the page
+                const externalFont = new FontFace(font.font, result.ok)
+                await externalFont.load()
+                document.fonts.add(externalFont)
+
+                return {
+                    font: font.font,
+                    renderer: renderer,
+                }
+            } else {
+                console.log(result.error)
             }
         })
 
     Promise.all(fontRequets).then((fontRenderers) => {
-        // console.log(fontRenderers)
-        // transformTextToSVG(fontRenderers[0].renderer, 'Hey', 52)
         AssetsStore.update((s) => {
             s.fonts.fontRenderers = fontRenderers.reduce((fontRenderers: FontRenderers, font): FontRenderers => {
-                fontRenderers[font.font] = font.renderer
+                if (font) {
+                    fontRenderers[font.font] = font.renderer
+                }
                 return fontRenderers
             }, {})
-            s.fonts.activeFonts = fontRenderers.map(({ font }) => font)
+            s.fonts.activeFonts = fontRenderers.filter((font) => font !== undefined).map((font) => font?.font || "")
         })
     })
 }

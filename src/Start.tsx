@@ -39,15 +39,15 @@ const Start: React.FunctionComponent<unknown> = () => {
                 "Parent link was not provided by WordPress. The back button from the start page will point to itself as default behaviour!"
             )
         }
-        ReactGA.pageview(window.location.pathname + window.location.hash + window.location.search)
+        if (window.logomaker?.googleAnalyticsCode) {
+            ReactGA.pageview(window.location.pathname + window.location.hash + window.location.search)
+        }
     }, [])
 
     return (
         <div className="logo-maker logo-maker-container">
             <div className="top-section">
-                {window.logomaker?.parentLink && (
-                    <BackUI url={window.logomaker?.parentLink} />
-                )}
+                {window.logomaker?.parentLink && <BackUI url={window.logomaker?.parentLink} />}
 
                 <ThemeisleUI />
             </div>

@@ -47,12 +47,6 @@ function downloadLinkReducer(prevState: DownLoadLinkState, action: DownLoadLinkA
         case "publish":
             console.timeEnd("build-time")
             downloadZip(action.value)
-            ReactGA.event({
-                category: "Logo Maker Creator",
-                action: "Click to download",
-                label: "Download",
-                value: 1,
-            })
             return {
                 status: "ready",
                 url: action.value,
@@ -100,7 +94,9 @@ const Creator: React.FunctionComponent<unknown> = () => {
      * Send deta to Google Analytics
      */
     React.useEffect(() => {
-        ReactGA.pageview(window.location.pathname + window.location.hash + window.location.search)
+        if (window.logomaker?.googleAnalyticsCode) {
+            ReactGA.pageview(window.location.pathname + window.location.hash + window.location.search)
+        }
     }, [])
 
     /**
@@ -124,6 +120,12 @@ const Creator: React.FunctionComponent<unknown> = () => {
                     ["png"],
                     true
                 )
+                ReactGA.event({
+                    category: "Logo Maker Creator",
+                    action: "Logo Choosed Final",
+                    label: `Logo ID: ${store.logo.src.id}`,
+                    value: 1,
+                })
                 dispatchDownloadLink({ type: "publish", value: link })
             }
         }

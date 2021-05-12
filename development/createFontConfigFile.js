@@ -23,15 +23,15 @@ file.on('close', () => {
         console.log('Fonts JSON file created');
     } )
 
-    const webpackFonts = fonts.map( function(font){
-        return {
-            family: font
-        }
-    })
+    // const webpackFonts = fonts.map( function(font){
+    //     return {
+    //         family: font
+    //     }
+    // })
 
-    fs.writeFileSync( './webpack.fonts.json', JSON.stringify(webpackFonts, {}, 4), function(err) {
-        if (err) throw err;
-        console.log('Webpack Fonts JSON file created');
-    } )
+    // fs.writeFileSync( './webpack.fonts.json', JSON.stringify(webpackFonts, {}, 4), function(err) {
+    //     if (err) throw err;
+    //     console.log('Webpack Fonts JSON file created');
+    // } )
 })
 

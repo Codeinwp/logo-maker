@@ -1,14 +1,12 @@
 import * as React from "react"
 import { HashRouter as Router, Switch, Route } from "react-router-dom"
 import "./assets/styles/index.scss"
-// import Creator from "./Creator"
-// import Showcase from "./Showcase"
-import Start from "./Start"
 import ReactGA from "react-ga"
 import loadable from "@loadable/component"
 import Fallback from "./components/Fallback"
 import { getFontsFromServer } from "./engine/utility"
 
+const Start = loadable(() => import("./Start"), { fallback: <Fallback /> })
 const Creator = loadable(() => import("./Creator"), { fallback: <Fallback /> })
 const Showcase = loadable(() => import("./Showcase"), { fallback: <Fallback /> })
 
@@ -17,7 +15,6 @@ const Showcase = loadable(() => import("./Showcase"), { fallback: <Fallback /> }
  *
  * This component also initializes the Google Analytics library using the global object `window.logomaker.googleAnalyticsCode`
  */
-
 export const Application: React.FunctionComponent<unknown> = () => {
     React.useEffect(() => {
         if (window.logomaker?.googleAnalyticsCode) {
@@ -28,65 +25,6 @@ export const Application: React.FunctionComponent<unknown> = () => {
         if (window.logomaker?.pluginURL) {
             getFontsFromServer()
         }
-
-        // document.fonts.ready.then(() => {
-        //     const fontSet = new Set<string>()
-
-        //     document.fonts.forEach((f) => {
-        //         const cleanedFontFamily = f.family.replace(/"/g, "")
-        //         // console.log(cleanedFontFamily)
-        //         if (isFontFromGoogle(cleanedFontFamily)) {
-        //             fontSet.add(cleanedFontFamily)
-        //             const fileURL = buildFontSourceFileURL(cleanedFontFamily)
-        //             if (fileURL) {
-        //                 fetch(fileURL, {
-        //                     method: "HEAD",
-        //                     mode: "cors",
-        //                 }).then((resp) => {
-        //                     if (resp.ok) {
-        //                         return cleanedFontFamily
-        //                     }
-        //                     return null
-        //                 })
-        //             }
-        //         }
-        //     })
-
-        //     const fontPaths = Array.from(fontSet).map((font) => {
-        //         return {
-        //             font: font,
-        //             path: buildFontSourceFileURL(font),
-        //         }
-        //     })
-
-        //     // console.log(fontPaths)
-
-        //     const fontRequets = fontPaths
-        //         .filter((fontPath) => fontPath.path)
-        //         .map(async (font) => {
-        //             // console.log(font.path)
-        //             const renderer = await opentype.load(font.path || "")
-        //             return {
-        //                 font: font.font,
-        //                 renderer: renderer,
-        //             }
-        //         })
-
-        //     Promise.all(fontRequets).then((fontRenderers) => {
-        //         // console.log(fontRenderers)
-        //         // transformTextToSVG(fontRenderers[0].renderer, 'Hey', 52)
-        //         AssetsStore.update((s) => {
-        //             s.fonts.fontRenderers = fontRenderers.reduce(
-        //                 (fontRenderers: FontRenderers, font): FontRenderers => {
-        //                     fontRenderers[font.font] = font.renderer
-        //                     return fontRenderers
-        //                 },
-        //                 {}
-        //             )
-        //             s.fonts.activeFonts = fontRenderers.map(({ font }) => font)
-        //         })
-        //     })
-        // })
     }, [])
 
     return (
