@@ -1,9 +1,10 @@
 import * as React from "react"
-import { SketchPicker } from "react-color"
+import { SliderPicker } from "react-color"
 import UIStore from "../../stores/UIStore"
-import presetColors from "../../assets/colors/index"
+// import presetColors from "../../assets/colors/index"
 import classnames from "classnames"
-import { disableBodyScroll, enableBodyScroll } from "body-scroll-lock"
+import { disableBodyScroll, enableBodyScroll, clearAllBodyScrollLocks } from "body-scroll-lock"
+import ColorPicker from "./common/ColorPicker"
 
 /**
  * This function will generate the `Select Coloros Meniu` from design
@@ -145,18 +146,22 @@ const SelectColor: React.FunctionComponent<unknown> = () => {
         }
     }
 
+    /**
+     * Clear all the lock when the component is destroyed.
+     */
     React.useEffect(() => {
-        const colorPickers = document.querySelectorAll(".sketch-picker")
-
-        colorPickers.forEach((picker) => {
-            picker.addEventListener("touchstart", () => disableBodyScroll(picker as HTMLElement))
-            picker.addEventListener("touchend", () => enableBodyScroll(picker as HTMLElement))
-        })
-    }, [isColorEditorOpen])
+        return () => {
+            console.log('Clear All Locks')
+            clearAllBodyScrollLocks()
+        }
+    }, [])
 
     return (
         <div className="select-colors">
             <h1>COLOR PALETTE</h1>
+            <span>
+                Press on the square to toggle the color picker.
+            </span>
             <p>Background Color</p>
             <div className="container">
                 <div className="input-field">
@@ -174,14 +179,26 @@ const SelectColor: React.FunctionComponent<unknown> = () => {
                     />
                 </div>
                 {isColorEditorOpen.background && (
-                    <SketchPicker
+                    // <SliderPicker
+                    //     color={colors.background}
+                    //     // presetColors={presetColors}
+                    //     onChange={(c, event) => {
+                    //         event.stopPropagation()
+                    //         onInputChangeFor("background", c.hex)
+                    //         disableBodyScroll(document.body)
+                    //     }}
+                    //     onChangeComplete={(c, event) => {
+                    //         event.stopPropagation()
+                    //         enableBodyScroll(document.body)
+                    //     }}
+
+                    // // disableAlpha={true}
+                    // />
+                    <ColorPicker
                         color={colors.background}
-                        presetColors={presetColors}
-                        onChange={(c, event) => {
-                            event.stopPropagation()
+                        onChange={(c) => {
                             onInputChangeFor("background", c.hex)
                         }}
-                        disableAlpha={true}
                     />
                 )}
             </div>
@@ -203,14 +220,25 @@ const SelectColor: React.FunctionComponent<unknown> = () => {
                     />
                 </div>
                 {isColorEditorOpen.logo && (
-                    <SketchPicker
+                    // <SliderPicker
+                    //     color={colors.logo}
+                    //     // presetColors={presetColors}
+                    //     onChange={(c, event) => {
+                    //         event.stopPropagation()
+                    //         onInputChangeFor("logo", c.hex)
+                    //         disableBodyScroll(document.body)
+                    //     }}
+                    //     onChangeComplete={(c, event) => {
+                    //         event.stopPropagation()
+                    //         enableBodyScroll(document.body)
+                    //     }}
+                    // // disableAlpha={true}
+                    // />
+                    <ColorPicker
                         color={colors.logo}
-                        presetColors={presetColors}
-                        onChange={(c, event) => {
-                            event.preventDefault()
+                        onChange={(c) => {
                             onInputChangeFor("logo", c.hex)
                         }}
-                        disableAlpha={true}
                     />
                 )}
             </div>
@@ -234,14 +262,25 @@ const SelectColor: React.FunctionComponent<unknown> = () => {
                     />
                 </div>
                 {isColorEditorOpen.title && (
-                    <SketchPicker
+                    // <SliderPicker
+                    //     color={colors.title}
+                    //     // presetColors={presetColors}
+                    //     onChange={(c, event) => {
+                    //         event.stopPropagation()
+                    //         onInputChangeFor("title", c.hex)
+                    //         disableBodyScroll(document.body)
+                    //     }}
+                    //     onChangeComplete={(c, event) => {
+                    //         event.stopPropagation()
+                    //         enableBodyScroll(document.body)
+                    //     }}
+                    // // disableAlpha={true}
+                    // />
+                    <ColorPicker
                         color={colors.title}
-                        presetColors={presetColors}
-                        onChange={(c, event) => {
-                            event.stopPropagation()
+                        onChange={(c) => {
                             onInputChangeFor("title", c.hex)
                         }}
-                        disableAlpha={true}
                     />
                 )}
             </div>
@@ -263,17 +302,28 @@ const SelectColor: React.FunctionComponent<unknown> = () => {
                     />
                 </div>
                 {isColorEditorOpen.slogan && (
-                    <SketchPicker
-                        onSwatchHover={(c, event) => {
-                            event.preventDefault()
-                        }}
+                    // <SliderPicker
+                    //     // onSwatchHover={(c, event) => {
+                    //     //     event.stopPropagation()
+                    //     // }}
+                    //     color={colors.slogan}
+                    //     // presetColors={presetColors}
+                    //     onChange={(c, event) => {
+                    //         event.stopPropagation()
+                    //         onInputChangeFor("slogan", c.hex)
+                    //         disableBodyScroll(document.body)
+                    //     }}
+                    //     onChangeComplete={(c, event) => {
+                    //         event.stopPropagation()
+                    //         enableBodyScroll(document.body)
+                    //     }}
+                    // // disableAlpha={true}
+                    // />
+                    <ColorPicker
                         color={colors.slogan}
-                        presetColors={presetColors}
-                        onChange={(c, event) => {
-                            event.stopPropagation()
+                        onChange={(c) => {
                             onInputChangeFor("slogan", c.hex)
                         }}
-                        disableAlpha={true}
                     />
                 )}
             </div>
