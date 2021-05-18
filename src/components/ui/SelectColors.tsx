@@ -1,9 +1,7 @@
 import * as React from "react"
-import { SliderPicker } from "react-color"
 import UIStore from "../../stores/UIStore"
 // import presetColors from "../../assets/colors/index"
 import classnames from "classnames"
-import { disableBodyScroll, enableBodyScroll, clearAllBodyScrollLocks } from "body-scroll-lock"
 import ColorPicker from "./common/ColorPicker"
 
 /**
@@ -145,16 +143,6 @@ const SelectColor: React.FunctionComponent<unknown> = () => {
                 break
         }
     }
-
-    /**
-     * Clear all the lock when the component is destroyed.
-     */
-    React.useEffect(() => {
-        return () => {
-            console.log('Clear All Locks')
-            clearAllBodyScrollLocks()
-        }
-    }, [])
 
     return (
         <div className="select-colors">

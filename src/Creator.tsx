@@ -16,7 +16,7 @@ import "../src/assets/styles/Creator/creator.scss"
 
 import UIStore from "./stores/UIStore"
 import ReactGA from "react-ga"
-import { downloadAsZipFromSVGviaLinkBlob, downloadZip } from "./engine/export"
+import { download, createDownloadLinkPipeline } from "./engine/export"
 import { buildPipelines } from "./engine/pipeline"
 
 export type MenuOptions = "logo" | "typography" | "layout" | "colors"
@@ -24,9 +24,10 @@ export type MenuOptions = "logo" | "typography" | "layout" | "colors"
 export type DownLoadLinkState = {
     status: "loading" | "ready" | "idle"
     url: string
+    downloadType?: "zip" | "png" | "svg"
 }
 
-export type DownLoadLinkAction = { type: "create" } | { type: "delete" } | { type: "publish"; value: string }
+export type DownLoadLinkAction = { type: "create"; value: "zip" | "png" | "svg" } | { type: "delete" } | { type: "publish"; value: string }
 
 function downloadLinkReducer(prevState: DownLoadLinkState, action: DownLoadLinkAction): DownLoadLinkState {
     // console.log("Download Link")
@@ -37,6 +38,7 @@ function downloadLinkReducer(prevState: DownLoadLinkState, action: DownLoadLinkA
             return {
                 status: "loading",
                 url: "",
+                downloadType: action.value
             }
         case "delete":
             URL.revokeObjectURL(prevState.url)
@@ -46,14 +48,15 @@ function downloadLinkReducer(prevState: DownLoadLinkState, action: DownLoadLinkA
             }
         case "publish":
             console.timeEnd("build-time")
-            downloadZip(action.value)
+            download(action.value, prevState.downloadType)
             return {
+                ...prevState,
                 status: "ready",
                 url: action.value,
             }
         default:
-            console.log("Action is not registered")
             return {
+                ...prevState,
                 status: "idle",
                 url: "",
             }
@@ -112,21 +115,25 @@ const Creator: React.FunctionComponent<unknown> = () => {
             favIconRef.innerHTML = ""
 
             if (logoSVG) {
-                const link = await downloadAsZipFromSVGviaLinkBlob(
-                    [
-                        { pipeline: "editor", svg: logoSVG },
-                        { pipeline: "favicon", svg: favIconSVG },
-                    ],
-                    ["png"],
-                    true
-                )
+                // const link = await downloadAsZipFromSVGviaLinkBlob(
+                //     [
+                //         { pipeline: "editor", svg: logoSVG },
+                //         { pipeline: "favicon", svg: favIconSVG },
+                //     ],
+                //     ["png"],
+                //     true
+                // )
                 ReactGA.event({
                     category: "Logo Maker Creator",
                     action: "Logo Choosed Final",
                     label: `Logo ID: ${store.logo.src.id}`,
                     value: 1,
                 })
-                dispatchDownloadLink({ type: "publish", value: link })
+                // dispatchDownloadLink({ type: "publish", value: link })
+                createDownloadLinkPipeline(dispatchDownloadLink, [
+                    { pipeline: "editor", svg: logoSVG },
+                    { pipeline: "favicon", svg: favIconSVG },
+                ], downloadLink.downloadType || 'zip')
             }
         }
 
@@ -137,7 +144,7 @@ const Creator: React.FunctionComponent<unknown> = () => {
             default:
                 break
         }
-    }, [downloadLink.status, store])
+    }, [downloadLink.downloadType, downloadLink.status, store])
 
     /**
      * Store the current options in the seesions manager to be keeped during the page refresh.

@@ -1,7 +1,35 @@
+@import "../constants";
+
 @mixin download-button {
 	box-sizing: border-box;
 	display: flex;
 	justify-content: center;
+	max-height: 100px;
+
+	&.expanded {
+		.btn-group {
+			display: flex;
+			flex-direction: row;
+
+			button {
+				border-radius: 0px;
+				cursor: pointer;
+				border-right: 3px solid white;
+				width: 90px;
+				height: 50px;
+
+				&:first-child {
+					border-radius: 10px 0px 0px 10px;
+				}
+
+				&:last-child {
+					border-right: none;
+					border-radius: 0px 10px 10px 0px;
+				}
+			}
+		}
+	}
+
 	button {
 		background-color: #FF7F66;
 		color: white;
@@ -23,6 +51,12 @@
 
 		width: 123px;
 		height: 50px;
+
+		animation: fadeIn 2s;
+		-webkit-animation: fadeIn 2s;
+		-moz-animation: fadeIn 2s;
+		-o-animation: fadeIn 2s;
+		-ms-animation: fadeIn 2s;
 
 		.content-loader {
 			border: 3px solid #f3f3f3;
@@ -62,4 +96,29 @@
 			filter: grayscale(0.1);;
 		}
 	}
+
+	@keyframes fadeIn {
+		0% {opacity:0;}
+		100% {opacity:1;}
+	  };
+	  
+	@-moz-keyframes fadeIn {
+	0% {opacity:0;}
+	100% {opacity:1;}
+	};
+	
+	@-webkit-keyframes fadeIn {
+	0% {opacity:0;}
+	100% {opacity:1;}
+	};
+	
+	@-o-keyframes fadeIn {
+	0% {opacity:0;}
+	100% {opacity:1;}
+	};
+	
+	@-ms-keyframes fadeIn {
+	0% {opacity:0;}
+	100% {opacity:1;}
+	};
 }
