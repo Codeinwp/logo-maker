@@ -18,33 +18,74 @@ const DownloadButton: React.FunctionComponent<{
     downloadLink?: DownLoadLinkState
     dispatch?: React.Dispatch<DownLoadLinkAction>
 }) => {
-    return (
-        <div className={classnames("download-button", props?.className)}>
-            <button
-                onClick={() => {
-                    if (props.downloadLink?.status !== "loading") {
-                        if (window.logomaker?.googleAnalyticsCode) {
-                            ReactGA.event({
-                                category: "Logo Maker Creator",
-                                action: "Click to download",
-                                label: "Download",
-                                value: 1,
-                            })
-                        }
+        const [status, setStatus] = React.useState<'normal' | 'expanded'>('normal')
+        const download = (type: "zip" | "png" | "svg") => {
+            if (props.downloadLink?.status !== "loading") {
+                if (window.logomaker?.googleAnalyticsCode) {
+                    ReactGA.event({
+                        category: "Logo Maker Creator",
+                        action: "Click to download",
+                        label: "Download",
+                        value: 1,
+                    })
+                }
 
-                        props.dispatch?.({ type: "create" })
-                    }
-                }}
-            >
-                {props.downloadLink?.status === "loading" ? (
-                    <div className="content-loader"></div>
-                ) : (
-                    <span>Download</span>
-                )}
-            </button>
-        </div>
-    )
-}
+                props.dispatch?.({ type: "create", value: type })
+            }
+        }
+
+        return (
+            (<div className={classnames("download-button", props?.className, status)}>
+                {
+                    status === 'normal' ? (
+                        <button
+                            onClick={() => {
+                                setStatus('expanded')
+                            }}
+                        >
+                            {props.downloadLink?.status === "loading" ? (
+                                <div className="content-loader"></div>
+                            ) : (
+                                <span>Download</span>
+                            )}
+                        </button>
+                    ) : (
+                        <React.Fragment>
+                            <div className="btn-group">
+                                <button onClick={
+                                    () => {
+                                        download('png')
+                                        setStatus('normal')
+                                    }
+                                }>
+                                    <span>PNG</span>
+                                </button>
+                                <button onClick={
+                                    () => {
+                                        download('zip')
+                                        setStatus('normal')
+                                    }
+                                }>
+                                    <span>BUNDLE</span>
+                                </button>
+                                <button onClick={
+                                    () => {
+                                        download('svg')
+                                        setStatus('normal')
+                                    }
+                                }>
+                                    <span>SVG</span>
+                                </button>
+                            </div>
+
+                        </React.Fragment>
+                    )
+                }
+
+            </div>)
+
+        )
+    }
 
 export default DownloadButton
 
