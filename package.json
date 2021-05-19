@@ -1,11 +1,11 @@
 {
   "name": "logo-maker-plugin",
   "description": "A simple editor for creating logos - with support for WordPress.",
-  "version": "1.10.0",
+  "version": "1.10.2",
   "scripts": {
     "start": "snowpack dev --polyfill-node",
     "start-plugin": "webpack --watch --mode development",
-    "plugin-build": "webpack --mode production",
+    "plugin-build": "webpack --mode development",
     "linux:make-zip": "npm run plugin-build && zip -r logo_maker_plugin.zip index.php plugin_build && mv logo_maker_plugin.zip development/",
     "font:all": "npm run font:config && npm run font:download",
     "font:config": "node development/createFontConfigFile.js",
