@@ -313,7 +313,6 @@ export async function createZipWithPresets(
      * @param file The data necessary for generating the image
      */
     const createFile = async (zip: JSZip, file: FileFormat): Promise<JSZip> => {
-        console.log(file)
         const svg = (
             input.find(({ pipeline }) => pipeline === file.pipeline) ||
             input.find(({ pipeline }) => pipeline === "editor")
@@ -414,8 +413,6 @@ export async function createDownloadLinkPipeline(
 ): Promise<void> {
     let link = ""
 
-    dispatch({ type: "publish", value: link })
-
     switch (type) {
         case "zip":
             link = await downloadAsZipFromSVGviaLinkBlob(input, ["png"], true)
@@ -431,6 +428,10 @@ export async function createDownloadLinkPipeline(
 }
 
 export function download(downloadLink: string, extensions?: string): void {
+    if (downloadLink.length === 0) {
+        return
+    }
+    console.log("Download", downloadLink)
     const a = document.createElement("a")
 
     a.style.display = "none"
@@ -439,6 +440,7 @@ export function download(downloadLink: string, extensions?: string): void {
 
     document.body.appendChild(a)
     a.click()
+    document.body.removeChild(a)
 
     // fetch(props.downloadLink.url)
     //     .then((res) => console.log(res))
