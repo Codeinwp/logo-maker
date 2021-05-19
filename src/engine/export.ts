@@ -313,6 +313,7 @@ export async function createZipWithPresets(
      * @param file The data necessary for generating the image
      */
     const createFile = async (zip: JSZip, file: FileFormat): Promise<JSZip> => {
+        console.log(file)
         const svg = (
             input.find(({ pipeline }) => pipeline === file.pipeline) ||
             input.find(({ pipeline }) => pipeline === "editor")
