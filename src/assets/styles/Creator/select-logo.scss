@@ -82,6 +82,8 @@
 		scrollbar-width: thin;
 		display: flex;
 		flex-wrap: wrap;
+		--primaryBtnColor: #000;
+		
 		button {
 			flex-grow: 1;
 			background: transparent;
