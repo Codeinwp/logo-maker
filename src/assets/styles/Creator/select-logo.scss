@@ -82,13 +82,13 @@
 		scrollbar-width: thin;
 		display: flex;
 		flex-wrap: wrap;
-		--primaryBtnColor: #000;
 		
 		button {
 			flex-grow: 1;
 			background: transparent;
 			border: none;
 			padding: 5px;
+			color: black;
 			&:focus {
 				outline: none;
 			}
