@@ -14,11 +14,7 @@ jobs:
               uses: actions/setup-node@v1
               with:
                   node-version: "12"
-            - name: Install pmpm & node_module
-              run: |
-                  npm add -g pnpm
-                  pnpm install
-            - name: EsLint for Typescript
-              run: npm run lint
+            - name: Installnode_module
+              run: npm ci
             - name: Build the project
               run: npm run plugin-build

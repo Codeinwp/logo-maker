@@ -67,7 +67,7 @@ yarn install
 
 ## Npm Commmands
 
-`npm run start` - start the development server using Snowpack - it's fast and run separately from WordPress - use it for development.
+~~`npm run start` - start the development server using Snowpack - it's fast and run separately from WordPress - use it for development.~~
 
 `npm run start-plugin` - start the development server in WordPress using Webpack - the project must be in `plugin` folder and activated - use it for testing the app as a block in WordPress.
 
@@ -77,9 +77,9 @@ yarn install
 
 `npm run gen-docs` - generate the docs
 
-`npm run format` - format the Typescript file in `./src` folder using Prettier
+~~`npm run format` - format the Typescript file in `./src` folder using Prettier~~
 
-`npm run lint` - check for issues in the Typescript file in `./src` folder using EsLint
+~~`npm run lint` - check for issues in the Typescript file in `./src` folder using EsLint~~
 
 ## Recommended Tools
 

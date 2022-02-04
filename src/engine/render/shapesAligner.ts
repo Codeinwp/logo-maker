@@ -41,8 +41,8 @@ export function calculateDimesionsForBaseShape(shapes: BaseShapheBuilder): BaseS
 
     // Calculate the dimensions for the shapes, including the settings
     const logoDim = {
-        height: settings.logo.margins.top + logo.height() + settings.logo.margins.bottom,
-        width: settings.logo.margins.left + logo.width() + settings.logo.margins.bottom,
+        height: settings.logo.margins.top + (logo.height() as number) + settings.logo.margins.bottom,
+        width: settings.logo.margins.left + (logo.width() as number) + settings.logo.margins.bottom,
     }
 
     const titleDim = {
