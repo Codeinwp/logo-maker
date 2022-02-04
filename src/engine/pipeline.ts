@@ -29,9 +29,7 @@ export function buildPipelines(_props: StoreProps, _fontRenderers?: FontRenderer
                 .addTo(parent)
                 .size(container.width, container.height)
                 .viewbox(vb.x, vb.y, vb.width, vb.height)
-                .css( {backgroundColor: container.style.color})
-                .attr('fill', container.style.color)
-                // .css("opacity", 0)
+                .css('background', container.style.color )
                 .addClass("svg-animations")
 
             /**
@@ -106,8 +104,7 @@ export function buildPipelines(_props: StoreProps, _fontRenderers?: FontRenderer
                 .addTo(parent)
                 .size(container.width, container.height)
                 .viewbox(vb.x, vb.y, vb.width, vb.height)
-                .css({ backgroundColor: container.style.color})
-                .attr('fill', container.style.color)
+                .css('background', container.style.color )
 
             /**
              * Create the base shapes & align them
