@@ -18,7 +18,7 @@ export function buildText(
                 fill: props.style.color,
                 family: props.style.fontFamily,
                 size: props.style.fontSize + "px",
-            })
+            }).attr('fill', props.style.color)
         case "auto":
             return isFontFromGoogle(props.style.fontFamily) && fontRenderes
                 ? buildText(parent, props, "svg", fontRenderes)

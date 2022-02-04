@@ -82,7 +82,7 @@ export function buildDefaultShapes(
     // Apply other properties
     logo.viewbox(0, 0, logo.bbox().width, logo.bbox().height + 5)
         .size(pLogo.width * pLogo.scale, pLogo.height * pLogo.scale)
-        .css("fill", pLogo.style.fill)
+        .attr("fill", pLogo.style.fill)
     title.move(0, 0)
     slogan.move(0, 0)
 

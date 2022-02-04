@@ -1,11 +1,11 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
 const path = require("path");
-const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
-const DependencyExtractionWebpackPlugin = require( '@wordpress/dependency-extraction-webpack-plugin' );
+const defaultConfig = require( '@wordpress/scripts/config/webpack.config' );
 // const GoogleFontsPlugin = require("@beyonk/google-fonts-webpack-plugin")
 // const webpackFonts = require("./webpack.fonts.json")
 
 module.exports = {
+	...defaultConfig,
 	entry: {
 		"index": "./wordpress/index.tsx",
 		"logo-maker": "./src/index.tsx"
@@ -36,22 +36,12 @@ module.exports = {
 		],
 	},
 	resolve: {
-		extensions: [".tsx", ".ts", ".js", ".jsx"],
+		extensions: [...defaultConfig.resolve.extensions, ".tsx", ".ts" ],
 	},
 	output: {
 		// ...defaultConfig.output,
 		filename: "[name].js",
 		path: path.resolve(__dirname, "plugin_build"),
 		clean: true
-	},
-	plugins: [
-		new DependencyExtractionWebpackPlugin(),
-		new BundleAnalyzerPlugin({
-			analyzerMode: 'static'
-		}),
-		// new GoogleFontsPlugin({
-		// 	fonts: webpackFonts
-		// 	/* ...options */
-		// })
-	]
+	}
 };

@@ -20,12 +20,10 @@ jobs:
               uses: actions/setup-node@v1
               with:
                   node-version: "12"
-            - name: Install pmpm
-              run: npm add -g pnpm
+            - name: Installnode_module
+              run: npm ci
             - name: Build the project
-              run: |
-                  pnpm install
-                  npm run plugin-build
+              run: npm run plugin-build
             - name: Add SSH Key
               run: |
                   mkdir $HOME/.ssh

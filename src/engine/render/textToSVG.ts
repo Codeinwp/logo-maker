@@ -12,7 +12,7 @@ export function transformTextToSVG(parent: Svg, font: opentype.Font, text: strin
 
 export function buildTextToSVG(parent: Svg, props: TTitle | TSlogan, fontRenderes: FontRenderers): Svg | undefined {
     if (fontRenderes[props.style.fontFamily]) {
-        return transformTextToSVG(parent, fontRenderes[props.style.fontFamily], props.text, props.style.fontSize).css(
+        return transformTextToSVG(parent, fontRenderes[props.style.fontFamily], props.text, props.style.fontSize).attr(
             "fill",
             props.style.color
         )
