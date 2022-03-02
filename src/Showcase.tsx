@@ -127,7 +127,7 @@ const Showcase: React.FunctionComponent<unknown> = () => {
             return <div className="content-loader"></div>
         }
 
-        const result = logos.map((logoSRC, index) => {
+        return logos.map((logoSRC, index) => {
             return (
                 <Link
                     to="/creator"
@@ -183,8 +183,6 @@ const Showcase: React.FunctionComponent<unknown> = () => {
                 </Link>
             )
         })
-
-        return result
     }
 
     return (
