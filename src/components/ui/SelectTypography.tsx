@@ -13,7 +13,7 @@ const titleSizeOptions = [...Array(35).keys()]
     .map((size) => ({
         value: size,
         label: size.toString(),
-    }))
+    }));
 
 /**
  * Generate the slogan size options
@@ -26,7 +26,7 @@ const sloganSizeOptions = [...Array(35).keys()]
     }))
 
 /**
- * This function will generate the `Select Typography Meniu` from design
+ * This function will generate the `Select Typography Menu` from design
  */
 const SelectTypography: React.FunctionComponent<unknown> = () => {
     /**
@@ -103,6 +103,7 @@ const SelectTypography: React.FunctionComponent<unknown> = () => {
     const defaultSloganFontFamily = UIStore.useState((s) => s.slogan.style.fontFamily)
     const defaultSloganFontSize = UIStore.useState((s) => s.slogan.style.fontSize)
 
+
     return (
         <div className="select-typography">
             <div className="title-options">
@@ -133,13 +134,19 @@ const SelectTypography: React.FunctionComponent<unknown> = () => {
                     id="select-title-font-size"
                     className="font-select"
                     isSearchable={false}
+                    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+                    // @ts-ignore
                     defaultValue={
                         titleSizeOptions.filter(({ value }) => value === defaultTitleFontSize)[0] || {
                             value: 53,
                             label: "53",
                         }
                     }
-                    options={titleSizeOptions}
+                    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+                    // @ts-ignore
+                    options={
+                        titleSizeOptions
+                    }
                     onChange={onTitleFontSizeChange}
                     styles={disableBoxShadow}
                 />
@@ -172,12 +179,16 @@ const SelectTypography: React.FunctionComponent<unknown> = () => {
                     id="select-slogan-font-size"
                     className="font-select"
                     isSearchable={false}
+                    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+                    // @ts-ignore
                     defaultValue={
                         sloganSizeOptions.filter(({ value }) => value === defaultSloganFontSize)[0] || {
                             value: 24,
                             label: "24",
                         }
                     }
+                    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+                    // @ts-ignore
                     options={sloganSizeOptions}
                     onChange={onSloganFontSizeChange}
                     styles={disableBoxShadow}

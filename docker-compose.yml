@@ -16,7 +16,7 @@ services:
             - mysql
         image: hardeepasrani/pirate-brewery
         ports:
-            - 8889:80
+            - "8889:80"
         networks:
             - default
         volumes:

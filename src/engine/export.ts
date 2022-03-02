@@ -1,6 +1,7 @@
 import JSZip from "jszip"
 import { DownLoadLinkAction } from "../Creator"
 import { PipelineOptions } from "./pipeline"
+import React from "react"
 
 /**
  * This function creates and URL for the `Blob` builded from the provided Svg

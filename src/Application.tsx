@@ -1,5 +1,5 @@
 import * as React from "react"
-import { HashRouter as Router, Switch, Route } from "react-router-dom"
+import { HashRouter as Router, Routes, Route } from "react-router-dom"
 import "./assets/styles/index.scss"
 import ReactGA from "react-ga"
 import loadable from "@loadable/component"
@@ -30,20 +30,12 @@ export const Application: React.FunctionComponent<unknown> = () => {
     return (
         <React.Fragment>
             <Router>
-                <Switch>
-                    <Route path="/creator">
-                        <Creator />
-                    </Route>
-                    <Route path="/showcase">
-                        <Showcase />
-                    </Route>
-                    <Route path="/fallback">
-                        <Fallback />
-                    </Route>
-                    <Route path="/">
-                        <Start />
-                    </Route>
-                </Switch>
+                <Routes>
+                    <Route path="/creator" element={ <Creator />} />
+                    <Route path="/showcase" element={ <Showcase /> } />
+                    <Route path="/fallback" element={ <Fallback /> } />
+                    <Route path="/" element={ <Start /> } />
+                </Routes>
             </Router>
         </React.Fragment>
     )
