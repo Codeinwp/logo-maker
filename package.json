@@ -4,7 +4,7 @@
   "version": "1.13.1",
   "scripts": {
     "start-plugin": "wp-scripts start",
-    "plugin-build": "NODE_ENV=development wp-scripts build",
+    "plugin-build": "NODE_ENV=production wp-scripts build",
     "linux:make-zip": "npm run plugin-build && zip -r logo_maker_plugin.zip index.php plugin_build && mv logo_maker_plugin.zip development/",
     "font:all": "npm run font:config && npm run font:download",
     "font:config": "node development/createFontConfigFile.js",
