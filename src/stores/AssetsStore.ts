@@ -1,4 +1,5 @@
 import { Store } from "pullstate"
+import opentype from "opentype.js"
 
 export type FontRenderers = Record<string, opentype.Font>
 

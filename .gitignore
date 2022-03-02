@@ -1,5 +1,7 @@
 .build
 build/
-plugin_build/
+plugin_build
+plugin_build/*
+/plugin_build
 web_modules/
 node_modules/

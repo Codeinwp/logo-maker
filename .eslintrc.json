@@ -7,9 +7,7 @@
     "plugins": ["@typescript-eslint", "react-hooks"],
     "extends": [
         "plugin:react/recommended",
-        "plugin:@typescript-eslint/recommended",
-        "standard",
-        "prettier"
+        "plugin:@typescript-eslint/recommended"
     ],
     "rules": {
         "react-hooks/rules-of-hooks": "error",
