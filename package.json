@@ -49,7 +49,7 @@
     "@wordpress/babel-preset-default": "^6.5.1",
     "@wordpress/blocks": "^11.2.2",
     "@wordpress/i18n": "^4.3.1",
-    "@wordpress/scripts": "^22.0.1",
+    "@wordpress/scripts": "^22.5.0",
     "autoprefixer": "^10.4.2",
     "css-loader": "^6.6.0",
     "eslint-plugin-react-hooks": "^4.3.0",
